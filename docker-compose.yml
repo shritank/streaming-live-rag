@@ -1,0 +1,9 @@
+services:
+  streaming-rag:
+    build: .
+    env_file:
+      - .env
+    environment:
+      - LLM_PROVIDER=${LLM_PROVIDER:-fake}
+      - LLM_MODEL=${LLM_MODEL:-fake-model}
+    command: ["--scenarios", "eval/scenarios", "--time-scale", "8", "--reps", "1"]

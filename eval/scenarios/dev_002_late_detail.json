@@ -1,0 +1,21 @@
+{
+  "scenario_id": "dev_002_late_detail",
+  "template": "late_detail",
+  "events": [
+    {"timestamp_ms": 0, "event_type": "session_start", "payload": {"session_id": "s1"}},
+    {"timestamp_ms": 0, "event_type": "transcript_chunk", "payload": {"session_id": "s1", "utterance_id": "u1", "text": "Summarize the travel reimbursement rule for an employee trip in Sales"}},
+    {"timestamp_ms": 2000, "event_type": "utterance_end", "payload": {"session_id": "s1", "utterance_id": "u1"}},
+    {"timestamp_ms": 4000, "event_type": "transcript_chunk", "payload": {"session_id": "s1", "utterance_id": "u2", "text": "Actually, the trip was international and the booking was made after travel."}},
+    {"timestamp_ms": 6000, "event_type": "utterance_end", "payload": {"session_id": "s1", "utterance_id": "u2"}},
+    {"timestamp_ms": 8000, "event_type": "transcript_chunk", "payload": {"session_id": "s1", "utterance_id": "u3", "text": "Please repeat your last answer in two bullets."}},
+    {"timestamp_ms": 9000, "event_type": "utterance_end", "payload": {"session_id": "s1", "utterance_id": "u3"}},
+    {"timestamp_ms": 12000, "event_type": "session_end", "payload": {"session_id": "s1"}}
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {"kind": "new_request"},
+      "u2": {"kind": "refinement", "expect_version": 2, "expect_prior_citations_kept": true},
+      "u3": {"kind": "presentation_only", "expect_no_retrieval": true}
+    }
+  }
+}

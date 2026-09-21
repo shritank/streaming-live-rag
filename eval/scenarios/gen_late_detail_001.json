@@ -1,0 +1,89 @@
+{
+  "scenario_id": "gen_late_detail_001",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Riverside Hall workshop capacity in Bengaluru"
+      }
+    },
+    {
+      "timestamp_ms": 2700,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 4200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "Actually, booking notice period for Riverside"
+      }
+    },
+    {
+      "timestamp_ms": 6600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " Hall in Bengaluru"
+      }
+    },
+    {
+      "timestamp_ms": 8100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 10100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Riverside Hall workshop capacity in Bengaluru"
+        ],
+        "expected_citation_docs": [
+          "Doc_03 \u00a72"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "booking notice period for Riverside Hall in Bengaluru"
+        ],
+        "expected_citation_docs": [
+          "Doc_03 \u00a73"
+        ]
+      }
+    }
+  }
+}

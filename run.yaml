@@ -1,0 +1,31 @@
+# Manifest for the streaming-live-rag engine (the equivalent of the
+# participant kit's submission.yaml). Declares the entry point, python
+# version, dependency lockfile and every environment variable the code
+# reads — values themselves come from .env (git-ignored), never from here.
+
+name: streaming-live-rag
+python_version: ">=3.10,<3.13"
+requirements: requirements.lock
+
+entry_points:
+  replay: "python -m streaming_rag.cli replay <scenario.json> [--time-scale N] [--mode streaming|baseline]"
+  live: "python -m streaming_rag.cli live"
+  eval: "python -m eval.run_all"
+
+env:
+  # provider selection: fake (default, offline, zero-cost) | openai | gemini
+  - name: LLM_PROVIDER
+    required: false
+    default: fake
+  - name: LLM_MODEL
+    required: false
+    default: fake-model
+  - name: SECRET_LLM_API_KEY
+    required: false
+    description: "API key for the selected LLM_PROVIDER; unused when LLM_PROVIDER=fake"
+
+corpus:
+  dev_fixture: fixtures/dev_corpus       # synthetic, format-driven fixture (Task 1)
+  real_sample: data/corpus               # real corpus built from SQuAD v1.1 (CC BY-SA 4.0), see data/build_squad_corpus.py
+  # The official held-out corpus is dropped into data/corpus/ at grading time;
+  # ingestion is format-driven, so no code change is needed to swap it in.

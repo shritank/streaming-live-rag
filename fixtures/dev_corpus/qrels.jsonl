@@ -1,0 +1,156 @@
+{"query": "Venue B workshop capacity in Pune", "relevant": ["Doc_00 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue B in Pune", "relevant": ["Doc_00 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue B Pune", "relevant": ["Doc_00 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue B Pune", "relevant": ["Doc_00 \u00a73"], "kind": "paraphrase"}
+{"query": "Summit Centre workshop capacity in Pune", "relevant": ["Doc_01 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Summit Centre in Pune", "relevant": ["Doc_01 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Summit Centre Pune", "relevant": ["Doc_01 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Summit Centre Pune", "relevant": ["Doc_01 \u00a73"], "kind": "paraphrase"}
+{"query": "Lakeview Rooms workshop capacity in Bengaluru", "relevant": ["Doc_02 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Lakeview Rooms in Bengaluru", "relevant": ["Doc_02 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Lakeview Rooms Bengaluru", "relevant": ["Doc_02 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Lakeview Rooms Bengaluru", "relevant": ["Doc_02 \u00a73"], "kind": "paraphrase"}
+{"query": "Riverside Hall workshop capacity in Bengaluru", "relevant": ["Doc_03 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Riverside Hall in Bengaluru", "relevant": ["Doc_03 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Riverside Hall Bengaluru", "relevant": ["Doc_03 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Riverside Hall Bengaluru", "relevant": ["Doc_03 \u00a73"], "kind": "paraphrase"}
+{"query": "Summit Centre workshop capacity in Hyderabad", "relevant": ["Doc_04 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Summit Centre in Hyderabad", "relevant": ["Doc_04 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Summit Centre Hyderabad", "relevant": ["Doc_04 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Summit Centre Hyderabad", "relevant": ["Doc_04 \u00a73"], "kind": "paraphrase"}
+{"query": "Venue A workshop capacity in Hyderabad", "relevant": ["Doc_05 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue A in Hyderabad", "relevant": ["Doc_05 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue A Hyderabad", "relevant": ["Doc_05 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue A Hyderabad", "relevant": ["Doc_05 \u00a73"], "kind": "paraphrase"}
+{"query": "Venue A workshop capacity in Chennai", "relevant": ["Doc_06 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue A in Chennai", "relevant": ["Doc_06 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue A Chennai", "relevant": ["Doc_06 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue A Chennai", "relevant": ["Doc_06 \u00a73"], "kind": "paraphrase"}
+{"query": "Venue C workshop capacity in Chennai", "relevant": ["Doc_07 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue C in Chennai", "relevant": ["Doc_07 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue C Chennai", "relevant": ["Doc_07 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue C Chennai", "relevant": ["Doc_07 \u00a73"], "kind": "paraphrase"}
+{"query": "Riverside Hall workshop capacity in Jaipur", "relevant": ["Doc_08 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Riverside Hall in Jaipur", "relevant": ["Doc_08 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Riverside Hall Jaipur", "relevant": ["Doc_08 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Riverside Hall Jaipur", "relevant": ["Doc_08 \u00a73"], "kind": "paraphrase"}
+{"query": "Venue B workshop capacity in Jaipur", "relevant": ["Doc_09 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue B in Jaipur", "relevant": ["Doc_09 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue B Jaipur", "relevant": ["Doc_09 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue B Jaipur", "relevant": ["Doc_09 \u00a73"], "kind": "paraphrase"}
+{"query": "Summit Centre workshop capacity in Kochi", "relevant": ["Doc_10 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Summit Centre in Kochi", "relevant": ["Doc_10 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Summit Centre Kochi", "relevant": ["Doc_10 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Summit Centre Kochi", "relevant": ["Doc_10 \u00a73"], "kind": "paraphrase"}
+{"query": "Venue B workshop capacity in Kochi", "relevant": ["Doc_11 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue B in Kochi", "relevant": ["Doc_11 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue B Kochi", "relevant": ["Doc_11 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue B Kochi", "relevant": ["Doc_11 \u00a73"], "kind": "paraphrase"}
+{"query": "Venue A workshop capacity in Indore", "relevant": ["Doc_12 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue A in Indore", "relevant": ["Doc_12 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue A Indore", "relevant": ["Doc_12 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue A Indore", "relevant": ["Doc_12 \u00a73"], "kind": "paraphrase"}
+{"query": "Riverside Hall workshop capacity in Indore", "relevant": ["Doc_13 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Riverside Hall in Indore", "relevant": ["Doc_13 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Riverside Hall Indore", "relevant": ["Doc_13 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Riverside Hall Indore", "relevant": ["Doc_13 \u00a73"], "kind": "paraphrase"}
+{"query": "Lakeview Rooms workshop capacity in Nagpur", "relevant": ["Doc_14 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Lakeview Rooms in Nagpur", "relevant": ["Doc_14 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Lakeview Rooms Nagpur", "relevant": ["Doc_14 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Lakeview Rooms Nagpur", "relevant": ["Doc_14 \u00a73"], "kind": "paraphrase"}
+{"query": "Venue C workshop capacity in Nagpur", "relevant": ["Doc_15 \u00a72"], "kind": "lexical"}
+{"query": "booking notice period for Venue C in Nagpur", "relevant": ["Doc_15 \u00a73"], "kind": "lexical"}
+{"query": "how many people fit in Venue C Nagpur", "relevant": ["Doc_15 \u00a72"], "kind": "paraphrase"}
+{"query": "how far ahead must I reserve Venue C Nagpur", "relevant": ["Doc_15 \u00a73"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Pune", "relevant": ["Doc_16 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Pune booking", "relevant": ["Doc_16 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Pune event", "relevant": ["Doc_16 \u00a72"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Bengaluru", "relevant": ["Doc_17 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Bengaluru booking", "relevant": ["Doc_17 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Bengaluru event", "relevant": ["Doc_17 \u00a72"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Hyderabad", "relevant": ["Doc_18 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Hyderabad booking", "relevant": ["Doc_18 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Hyderabad event", "relevant": ["Doc_18 \u00a72"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Chennai", "relevant": ["Doc_19 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Chennai booking", "relevant": ["Doc_19 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Chennai event", "relevant": ["Doc_19 \u00a72"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Jaipur", "relevant": ["Doc_20 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Jaipur booking", "relevant": ["Doc_20 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Jaipur event", "relevant": ["Doc_20 \u00a72"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Kochi", "relevant": ["Doc_21 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Kochi booking", "relevant": ["Doc_21 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Kochi event", "relevant": ["Doc_21 \u00a72"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Indore", "relevant": ["Doc_22 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Indore booking", "relevant": ["Doc_22 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Indore event", "relevant": ["Doc_22 \u00a72"], "kind": "paraphrase"}
+{"query": "cancellation terms and refund policies Nagpur", "relevant": ["Doc_23 \u00a72"], "kind": "lexical"}
+{"query": "partial refund window for a Nagpur booking", "relevant": ["Doc_23 \u00a73"], "kind": "lexical"}
+{"query": "can I get my money back if I call off the Nagpur event", "relevant": ["Doc_23 \u00a72"], "kind": "paraphrase"}
+{"query": "on-site and external catering options Pune", "relevant": ["Doc_24 \u00a71"], "kind": "lexical"}
+{"query": "catering dietary accommodation in Pune", "relevant": ["Doc_24 \u00a73"], "kind": "lexical"}
+{"query": "who supplies the food for Pune events", "relevant": ["Doc_24 \u00a71"], "kind": "paraphrase"}
+{"query": "vegan and gluten free meals Pune", "relevant": ["Doc_24 \u00a73"], "kind": "paraphrase"}
+{"query": "on-site and external catering options Hyderabad", "relevant": ["Doc_25 \u00a71"], "kind": "lexical"}
+{"query": "catering dietary accommodation in Hyderabad", "relevant": ["Doc_25 \u00a73"], "kind": "lexical"}
+{"query": "who supplies the food for Hyderabad events", "relevant": ["Doc_25 \u00a71"], "kind": "paraphrase"}
+{"query": "vegan and gluten free meals Hyderabad", "relevant": ["Doc_25 \u00a73"], "kind": "paraphrase"}
+{"query": "on-site and external catering options Kochi", "relevant": ["Doc_26 \u00a71"], "kind": "lexical"}
+{"query": "catering dietary accommodation in Kochi", "relevant": ["Doc_26 \u00a73"], "kind": "lexical"}
+{"query": "who supplies the food for Kochi events", "relevant": ["Doc_26 \u00a71"], "kind": "paraphrase"}
+{"query": "vegan and gluten free meals Kochi", "relevant": ["Doc_26 \u00a73"], "kind": "paraphrase"}
+{"query": "on-site and external catering options Jaipur", "relevant": ["Doc_27 \u00a71"], "kind": "lexical"}
+{"query": "catering dietary accommodation in Jaipur", "relevant": ["Doc_27 \u00a73"], "kind": "lexical"}
+{"query": "who supplies the food for Jaipur events", "relevant": ["Doc_27 \u00a71"], "kind": "paraphrase"}
+{"query": "vegan and gluten free meals Jaipur", "relevant": ["Doc_27 \u00a73"], "kind": "paraphrase"}
+{"query": "on-site and external catering options Chennai", "relevant": ["Doc_28 \u00a71"], "kind": "lexical"}
+{"query": "catering dietary accommodation in Chennai", "relevant": ["Doc_28 \u00a73"], "kind": "lexical"}
+{"query": "who supplies the food for Chennai events", "relevant": ["Doc_28 \u00a71"], "kind": "paraphrase"}
+{"query": "vegan and gluten free meals Chennai", "relevant": ["Doc_28 \u00a73"], "kind": "paraphrase"}
+{"query": "on-site and external catering options Indore", "relevant": ["Doc_29 \u00a71"], "kind": "lexical"}
+{"query": "catering dietary accommodation in Indore", "relevant": ["Doc_29 \u00a73"], "kind": "lexical"}
+{"query": "who supplies the food for Indore events", "relevant": ["Doc_29 \u00a71"], "kind": "paraphrase"}
+{"query": "vegan and gluten free meals Indore", "relevant": ["Doc_29 \u00a73"], "kind": "paraphrase"}
+{"query": "travel reimbursement rule for an employee trip in Sales", "relevant": ["Doc_30 \u00a71"], "kind": "lexical"}
+{"query": "international travel approval requirement for Sales", "relevant": ["Doc_30 \u00a73"], "kind": "lexical"}
+{"query": "post-travel booking exception for Sales", "relevant": ["Doc_30 \u00a75"], "kind": "lexical"}
+{"query": "how much money back per day on the road in Sales", "relevant": ["Doc_30 \u00a71"], "kind": "paraphrase"}
+{"query": "going abroad sign off needed Sales", "relevant": ["Doc_30 \u00a73"], "kind": "paraphrase"}
+{"query": "travel reimbursement rule for an employee trip in Engineering", "relevant": ["Doc_31 \u00a71"], "kind": "lexical"}
+{"query": "international travel approval requirement for Engineering", "relevant": ["Doc_31 \u00a73"], "kind": "lexical"}
+{"query": "post-travel booking exception for Engineering", "relevant": ["Doc_31 \u00a75"], "kind": "lexical"}
+{"query": "how much money back per day on the road in Engineering", "relevant": ["Doc_31 \u00a71"], "kind": "paraphrase"}
+{"query": "going abroad sign off needed Engineering", "relevant": ["Doc_31 \u00a73"], "kind": "paraphrase"}
+{"query": "travel reimbursement rule for an employee trip in Customer Success", "relevant": ["Doc_32 \u00a71"], "kind": "lexical"}
+{"query": "international travel approval requirement for Customer Success", "relevant": ["Doc_32 \u00a73"], "kind": "lexical"}
+{"query": "post-travel booking exception for Customer Success", "relevant": ["Doc_32 \u00a75"], "kind": "lexical"}
+{"query": "how much money back per day on the road in Customer Success", "relevant": ["Doc_32 \u00a71"], "kind": "paraphrase"}
+{"query": "going abroad sign off needed Customer Success", "relevant": ["Doc_32 \u00a73"], "kind": "paraphrase"}
+{"query": "travel reimbursement rule for an employee trip in Field Operations", "relevant": ["Doc_33 \u00a71"], "kind": "lexical"}
+{"query": "international travel approval requirement for Field Operations", "relevant": ["Doc_33 \u00a73"], "kind": "lexical"}
+{"query": "post-travel booking exception for Field Operations", "relevant": ["Doc_33 \u00a75"], "kind": "lexical"}
+{"query": "how much money back per day on the road in Field Operations", "relevant": ["Doc_33 \u00a71"], "kind": "paraphrase"}
+{"query": "going abroad sign off needed Field Operations", "relevant": ["Doc_33 \u00a73"], "kind": "paraphrase"}
+{"query": "Standard support response time", "relevant": ["Doc_34 \u00a71"], "kind": "lexical"}
+{"query": "Standard support escalation path", "relevant": ["Doc_34 \u00a73"], "kind": "lexical"}
+{"query": "how quickly does someone reply to a Standard ticket", "relevant": ["Doc_34 \u00a71"], "kind": "paraphrase"}
+{"query": "who takes over a stuck Standard ticket", "relevant": ["Doc_34 \u00a73"], "kind": "paraphrase"}
+{"query": "Priority support response time", "relevant": ["Doc_35 \u00a71"], "kind": "lexical"}
+{"query": "Priority support escalation path", "relevant": ["Doc_35 \u00a73"], "kind": "lexical"}
+{"query": "how quickly does someone reply to a Priority ticket", "relevant": ["Doc_35 \u00a71"], "kind": "paraphrase"}
+{"query": "who takes over a stuck Priority ticket", "relevant": ["Doc_35 \u00a73"], "kind": "paraphrase"}
+{"query": "Critical support response time", "relevant": ["Doc_36 \u00a71"], "kind": "lexical"}
+{"query": "Critical support escalation path", "relevant": ["Doc_36 \u00a73"], "kind": "lexical"}
+{"query": "how quickly does someone reply to a Critical ticket", "relevant": ["Doc_36 \u00a71"], "kind": "paraphrase"}
+{"query": "who takes over a stuck Critical ticket", "relevant": ["Doc_36 \u00a73"], "kind": "paraphrase"}
+{"query": "presentation connection port Nagpur", "relevant": ["Doc_37 \u00a71"], "kind": "lexical"}
+{"query": "meeting room microphone availability in Nagpur", "relevant": ["Doc_37 \u00a72"], "kind": "lexical"}
+{"query": "what cable do I need to plug in my laptop Nagpur", "relevant": ["Doc_37 \u00a71"], "kind": "paraphrase"}
+{"query": "presentation connection port Jaipur", "relevant": ["Doc_38 \u00a71"], "kind": "lexical"}
+{"query": "meeting room microphone availability in Jaipur", "relevant": ["Doc_38 \u00a72"], "kind": "lexical"}
+{"query": "what cable do I need to plug in my laptop Jaipur", "relevant": ["Doc_38 \u00a71"], "kind": "paraphrase"}
+{"query": "presentation connection port Pune", "relevant": ["Doc_39 \u00a71"], "kind": "lexical"}
+{"query": "meeting room microphone availability in Pune", "relevant": ["Doc_39 \u00a72"], "kind": "lexical"}
+{"query": "what cable do I need to plug in my laptop Pune", "relevant": ["Doc_39 \u00a71"], "kind": "paraphrase"}
+{"query": "presentation connection port Bengaluru", "relevant": ["Doc_40 \u00a71"], "kind": "lexical"}
+{"query": "meeting room microphone availability in Bengaluru", "relevant": ["Doc_40 \u00a72"], "kind": "lexical"}
+{"query": "what cable do I need to plug in my laptop Bengaluru", "relevant": ["Doc_40 \u00a71"], "kind": "paraphrase"}

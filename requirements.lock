@@ -1,0 +1,20 @@
+# Pinned runtime + dev dependencies for streaming_rag (Python 3.10-3.12).
+# Regenerate with: pip freeze | grep -f requirements.in > requirements.lock
+# (kept hand-curated here since this environment mixes package managers)
+
+# --- runtime ---
+numpy==2.4.6            # LSA dense encoder (retrieval/embed.py)
+jsonschema==4.26.0       # telemetry schema validation (G6)
+httpx==0.28.1            # optional async HTTP transport for real LLM providers
+
+# --- data / corpus tooling (data/build_squad_corpus.py) ---
+pandas==3.0.5
+pyarrow==25.0.1
+
+# --- optional LLM providers (only needed if LLM_PROVIDER selects them) ---
+# openai>=1.40
+# google-genai>=0.3
+
+# --- dev / test ---
+pytest==9.1.1
+pytest-asyncio==1.4.0

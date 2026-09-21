@@ -1,0 +1,23 @@
+{
+  "scenario_id": "dev_001_multi_intent",
+  "template": "multi_intent",
+  "events": [
+    {"timestamp_ms": 0, "event_type": "session_start", "payload": {"session_id": "s1"}},
+    {"timestamp_ms": 0, "event_type": "transcript_chunk", "payload": {"session_id": "s1", "utterance_id": "u1", "text": "I need to plan a customer workshop in"}},
+    {"timestamp_ms": 800, "event_type": "transcript_chunk", "payload": {"session_id": "s1", "utterance_id": "u1", "text": " Pune for 30 people, and I need"}},
+    {"timestamp_ms": 1600, "event_type": "transcript_chunk", "payload": {"session_id": "s1", "utterance_id": "u1", "text": " the cancellation policy and the catering options."}},
+    {"timestamp_ms": 2100, "event_type": "utterance_end", "payload": {"session_id": "s1", "utterance_id": "u1"}},
+    {"timestamp_ms": 9000, "event_type": "session_end", "payload": {"session_id": "s1"}}
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "retrieval_required": true,
+        "kind": "new_request",
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": ["venue capacity for 30 attendees in Pune", "cancellation terms and refund policies", "catering options"],
+        "expected_citation_docs": ["Doc_12", "Doc_31", "Doc_09"]
+      }
+    }
+  }
+}

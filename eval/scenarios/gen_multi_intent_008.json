@@ -1,0 +1,83 @@
+{
+  "scenario_id": "gen_multi_intent_008",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Riverside Hall workshop capacity in Bengaluru,"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " Lakeview Rooms workshop capacity in Nagpur"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " and how far ahead must I"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " reserve Lakeview Rooms Bengaluru"
+      }
+    },
+    {
+      "timestamp_ms": 9100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 11100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Riverside Hall workshop capacity in Bengaluru",
+          "Lakeview Rooms workshop capacity in Nagpur",
+          "how far ahead must I reserve Lakeview Rooms Bengaluru"
+        ],
+        "expected_citation_docs": [
+          "Doc_03 \u00a72",
+          "Doc_14 \u00a72",
+          "Doc_02 \u00a73"
+        ]
+      }
+    }
+  }
+}

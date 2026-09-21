@@ -1,0 +1,89 @@
+{
+  "scenario_id": "gen_late_detail_007",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "presentation connection port Nagpur"
+      }
+    },
+    {
+      "timestamp_ms": 1900,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 3400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "Wait, one more thing \u2014 meeting"
+      }
+    },
+    {
+      "timestamp_ms": 5800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " room microphone availability in Nagpur"
+      }
+    },
+    {
+      "timestamp_ms": 8100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 10100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "presentation connection port Nagpur"
+        ],
+        "expected_citation_docs": [
+          "Doc_37 \u00a71"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "meeting room microphone availability in Nagpur"
+        ],
+        "expected_citation_docs": [
+          "Doc_37 \u00a72"
+        ]
+      }
+    }
+  }
+}

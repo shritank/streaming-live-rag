@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "streaming_rag telemetry event",
+  "type": "object",
+  "required": ["event", "ts_ms", "wall_ms", "session_id", "component"],
+  "properties": {
+    "event": {
+      "type": "string",
+      "enum": [
+        "session_started", "session_ended", "chunk_received",
+        "controller_decision", "sub_queries_emitted",
+        "retrieval_started", "retrieval_completed", "retrieval_cancelled",
+        "answer_version_created", "grounding_checked", "uncertainty_flagged",
+        "llm_call", "output_emitted", "error"
+      ]
+    },
+    "ts_ms": {"type": ["number", "null"]},
+    "wall_ms": {"type": "number"},
+    "session_id": {"type": ["string", "null"]},
+    "utterance_id": {"type": ["string", "null"]},
+    "component": {"type": "string"}
+  },
+  "allOf": [
+    {"if": {"properties": {"event": {"const": "chunk_received"}}},
+     "then": {"required": ["text_len", "is_final"]}},
+    {"if": {"properties": {"event": {"const": "controller_decision"}}},
+     "then": {"required": ["decision", "turn_kind", "reason", "stability", "n_sub_queries", "decision_latency_ms"]}},
+    {"if": {"properties": {"event": {"const": "sub_queries_emitted"}}},
+     "then": {"required": ["query_ids", "queries", "trigger"]}},
+    {"if": {"properties": {"event": {"const": "retrieval_started"}}},
+     "then": {"required": ["request_id", "query_ids", "mode"]}},
+    {"if": {"properties": {"event": {"const": "retrieval_completed"}}},
+     "then": {"required": ["request_id", "latency_ms", "chunk_ids", "low_confidence_query_ids"]}},
+    {"if": {"properties": {"event": {"const": "retrieval_cancelled"}}},
+     "then": {"required": ["request_id", "query_ids", "reason"]}},
+    {"if": {"properties": {"event": {"const": "answer_version_created"}}},
+     "then": {"required": ["version", "parent_version", "change_kind", "citations", "n_claims", "retriever_calls_for_version"]}},
+    {"if": {"properties": {"event": {"const": "grounding_checked"}}},
+     "then": {"required": ["version", "n_claims", "n_supported", "fabricated_citations"]}},
+    {"if": {"properties": {"event": {"const": "uncertainty_flagged"}}},
+     "then": {"required": ["version", "unsupported_intents"]}},
+    {"if": {"properties": {"event": {"const": "llm_call"}}},
+     "then": {"required": ["purpose", "model", "tokens_in", "tokens_out", "latency_ms", "cost_usd"]}},
+    {"if": {"properties": {"event": {"const": "output_emitted"}}},
+     "then": {"required": ["kind", "version"]}},
+    {"if": {"properties": {"event": {"const": "error"}}},
+     "then": {"required": ["where", "error_type", "message"]}}
+  ]
+}
