@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "Who has design authority over all"
+        "text": "What does AC stand for?, Who"
       }
     },
     {
@@ -24,47 +24,11 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " of the digital satellite receivers that"
+        "text": " was Tesla prejudiced against?"
       }
     },
     {
-      "timestamp_ms": 4800,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " are capable of using their service?,"
-      }
-    },
-    {
-      "timestamp_ms": 7200,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " This network influenced later models of"
-      }
-    },
-    {
-      "timestamp_ms": 9600,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " and How many people would die"
-      }
-    },
-    {
-      "timestamp_ms": 12000,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " of plague in largely populated cities?"
-      }
-    },
-    {
-      "timestamp_ms": 14700,
+      "timestamp_ms": 4300,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -72,7 +36,7 @@
       }
     },
     {
-      "timestamp_ms": 16700,
+      "timestamp_ms": 6300,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -86,14 +50,12 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "Who has design authority over all of the digital satellite receivers that are capable of using their service?",
-          "This network influenced  later models of ",
-          "How many people would die of plague in largely populated cities?"
+          "What does AC stand for?",
+          "Who was Tesla prejudiced against?"
         ],
         "expected_citation_docs": [
-          "Doc_12 \u00a75",
-          "Doc_10 \u00a711",
-          "Doc_01 \u00a718"
+          "Doc_09 \u00a71",
+          "Doc_09 \u00a780"
         ]
       }
     }

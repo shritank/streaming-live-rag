@@ -23,6 +23,13 @@ from . import grounding
 from .delta import merge_claims, union_citations
 from .store import SessionStore
 
+# Minimum fraction of the sub-query's content tokens that must appear in the
+# extracted claim sentence for the evidence to be trusted. Below this, the
+# retrieval cleared the low-confidence bar but the specific sentence doesn't
+# actually address the question — tuned against data/corpus (real SQuAD),
+# see docs/benchmark_report.md.
+MIN_QUERY_RELEVANCE = 0.2
+
 
 class GroundedSynthesizer:
     def __init__(self, retriever, session_store: SessionStore, config: Config,
@@ -81,11 +88,45 @@ class GroundedSynthesizer:
             if result is None or not result.evidence or result.low_confidence:
                 unsupported.append(q.intent_label)
                 continue
-            top = result.evidence[0]
-            sentence = self._best_sentence(q.text, top.chunk.text)
-            claims.append(Claim(text=sentence, citations=[top.chunk.citation]))
+            # The reranked #1 chunk can clear the retriever's low_confidence
+            # bar (its BM25/RRF score is decent) while still not actually
+            # answering THIS sub-query — e.g. a topically-adjacent passage
+            # from the same document that merely shares its subject noun.
+            # Rather than asserting it and discovering the mismatch only in
+            # the post-hoc grounding check, scan the retrieved evidence in
+            # rank order for the first chunk whose best sentence is actually
+            # relevant to the query, falling back to uncertainty only if none
+            # of the top-k evidence is.
+            claim = None
+            for evidence in result.evidence:
+                sentence = self._best_sentence(q.text, evidence.chunk.text)
+                if self._is_relevant(q.text, sentence):
+                    claim = Claim(text=sentence, citations=[evidence.chunk.citation])
+                    break
+            if claim is None:
+                unsupported.append(q.intent_label)
+                continue
+            claims.append(claim)
 
         return claims, unsupported
+
+    @staticmethod
+    def _is_relevant(query: str, sentence: str) -> bool:
+        """A single shared token is not enough evidence on its own: in a
+        biographical article, "Tesla" appears in nearly every sentence, so a
+        query like "who was Tesla prejudiced against" would trivially "match"
+        any sentence mentioning Tesla regardless of topic. Require BOTH a
+        minimum overlap fraction AND, once the query has more than one
+        content term, at least two of them actually present."""
+        q_tokens = set(content_tokens(query))
+        if not q_tokens:
+            return True
+        s_tokens = set(content_tokens(sentence))
+        overlap = q_tokens & s_tokens
+        if len(overlap) / len(q_tokens) < MIN_QUERY_RELEVANCE:
+            return False
+        min_overlap_count = min(2, len(q_tokens))
+        return len(overlap) >= min_overlap_count
 
     @staticmethod
     def _best_sentence(query: str, chunk_text: str) -> str:

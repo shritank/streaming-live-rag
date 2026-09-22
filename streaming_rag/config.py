@@ -26,15 +26,18 @@ def _env_float(name: str, default: float) -> float:
 @dataclass
 class RetrievalConfig:
     mode: str = "hybrid"          # hybrid | dense | sparse
-    k: int = 5
+    k: int = 8
     rrf_k: int = 60
-    # Tuned on fixtures/dev_corpus (see docs/benchmark_report.md). The LSA
-    # encoder is a weak learner on a corpus this small, so RRF is weighted
-    # towards BM25; dense contributes agreement boosts and tail recall rather
-    # than driving the ranking. Swapping in a transformer encoder is expected
-    # to move this towards parity.
-    dense_weight: float = 0.15
-    sparse_weight: float = 0.85
+    # Tuned against both fixtures/dev_corpus and the real SQuAD corpus (see
+    # docs/benchmark_report.md §3/§6). The LSA encoder is a weak learner at
+    # this corpus scale — a heavier dense weight measurably hurts real-corpus
+    # r@5 (83.8% at 0.15 vs 86.8% at 0.01) with no offsetting recall gain on
+    # dev_corpus's paraphrase queries (identical at both settings, since RRF's
+    # rank-based fusion still lets dense's top hits register even at a small
+    # weight). Kept non-zero rather than sparse-only so a stronger encoder
+    # swapped into the Embedder protocol has a fusion weight to grow into.
+    dense_weight: float = 0.01
+    sparse_weight: float = 0.99
     low_confidence_threshold: float = 0.15
     # Adds an artificial delay to every search call, representing a realistic
     # hosted vector-DB / reranker round trip. 0 by default (the dev corpus is

@@ -42,6 +42,14 @@ class BM25Index:
                 scores[i] += idf * (freq * (self.k1 + 1)) / denom
         return scores
 
+    def specific_terms(self, min_idf: float = 2.5) -> frozenset[str]:
+        """Discriminative vocabulary: terms that appear in relatively few
+        documents (high idf), i.e. topic-specific nouns rather than words
+        common across most of the corpus. Used by the controller's weak-anchor
+        heuristic to recognise a real, indexed topic term even before it is
+        capitalised or paired with a number."""
+        return frozenset(term for term, idf in self._idf.items() if idf >= min_idf)
+
     def top_k(self, query: str, k: int) -> list[tuple[int, float]]:
         scores = self.score(query)
         ranked = sorted(range(self._n), key=lambda i: (-scores[i], i))

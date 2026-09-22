@@ -33,6 +33,7 @@ class HybridRetriever:
         self._bm25: BM25Index | None = None
         self._embedder: LsaEmbedder | None = None
         self._ready = False
+        self._specific_vocab: frozenset[str] = frozenset()
 
     async def setup(self) -> None:
         """Cold start: ingest, index and fit the encoder. Off the per-turn clock."""
@@ -47,6 +48,7 @@ class HybridRetriever:
         texts = [self._searchable_text(c) for c in self._chunks]
         self._indexed_texts = texts
         self._bm25 = BM25Index(texts)
+        self._specific_vocab = self._bm25.specific_terms()
         self._embedder = LsaEmbedder().fit(texts)
         self._by_id = {c.chunk_id: c for c in self._chunks}
         self._by_citation = {}
@@ -61,6 +63,12 @@ class HybridRetriever:
 
     def get_chunk(self, chunk_id: str) -> Chunk | None:
         return self._by_id.get(chunk_id)
+
+    @property
+    def specific_vocabulary(self) -> frozenset[str]:
+        """Discriminative corpus terms (see BM25Index.specific_terms), exposed
+        for the controller's weak-anchor heuristic. Empty until setup()."""
+        return self._specific_vocab
 
     def get_chunk_by_citation(self, citation: str) -> Chunk | None:
         """Used by the grounding verifier to prove a cited `Doc_ID §Section`

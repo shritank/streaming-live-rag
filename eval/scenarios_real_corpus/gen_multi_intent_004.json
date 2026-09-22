@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "What is another term for Tesla's"
+        "text": "How many gold medals did Kenya"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " visualization ability?, What can be seen"
+        "text": " win during the Beijing Olympics?, What"
       }
     },
     {
@@ -33,7 +33,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " between hadrons? and What year did"
+        "text": " year did AGOA take effect? and"
       }
     },
     {
@@ -42,11 +42,20 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " Doctor Who win a Peabody award?"
+        "text": " How much of the GDP was"
       }
     },
     {
-      "timestamp_ms": 9900,
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " agriculture in 2005?"
+      }
+    },
+    {
+      "timestamp_ms": 11100,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -54,7 +63,7 @@
       }
     },
     {
-      "timestamp_ms": 11900,
+      "timestamp_ms": 13100,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -68,14 +77,14 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "What is another term for Tesla's visualization ability?",
-          "What can be seen between hadrons?",
-          "What year did Doctor Who win a Peabody award?"
+          "How many gold medals did Kenya win during the Beijing Olympics?",
+          "What year did AGOA take effect?",
+          "How much of the GDP was agriculture in 2005?"
         ],
         "expected_citation_docs": [
-          "Doc_09 \u00a775",
-          "Doc_04 \u00a733",
-          "Doc_03 \u00a760"
+          "Doc_08 \u00a751",
+          "Doc_08 \u00a733",
+          "Doc_08 \u00a729"
         ]
       }
     }

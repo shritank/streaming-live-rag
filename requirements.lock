@@ -6,6 +6,8 @@
 numpy==2.4.6            # LSA dense encoder (retrieval/embed.py)
 jsonschema==4.26.0       # telemetry schema validation (G6)
 httpx==0.28.1            # optional async HTTP transport for real LLM providers
+spacy==3.8.16            # rule-based sentence segmentation (retrieval/text.py); blank
+                          # pipeline + sentencizer only, no language model download
 
 # --- data / corpus tooling (data/build_squad_corpus.py) ---
 pandas==3.0.5

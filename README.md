@@ -80,9 +80,15 @@ scores are measured against real ground truth, not eyeballed.
 
 ## Results at a glance
 
-See `docs/benchmark_report.md` for full numbers. Summary: all 6 gates (G1–G6) pass on both
-corpora; streaming beats the baseline pipeline on utterance-start→answer p50 latency and
-post-utterance-end latency; 63/63 tests pass; zero fabricated citations across every run.
+See `docs/benchmark_report.md` for full numbers, including a diagnostic-and-tune pass on the
+real SQuAD corpus (§0: sentence-segmentation fix, within-utterance retrieval supersession fix,
+a corpus-vocabulary weak-anchor heuristic, fusion-weight retune, and a query-relevance gate).
+All 6 gates (G1–G6) pass on both corpora under the official `--reps 3` procedure, confirmed
+byte-identical to `--reps 1`; streaming beats the baseline pipeline on utterance-start→answer
+p50 latency and post-utterance-end latency; 63/63 tests pass; **zero fabricated citations across
+every run.** On the real corpus: G2 early retrieval 86.7%→93.3%, G4 grounding 88.9%→~92%,
+hybrid retrieval r@1 62.0%→63.2% and r@5 84.0%→86.8% — all post-tuning numbers measured, not
+projected.
 
 ## What each task owns
 

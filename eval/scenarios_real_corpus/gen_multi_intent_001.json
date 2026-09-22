@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "Who responded to Lindzen's criticisms?, What"
+        "text": "What organization did Tesla serve as"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " is the typical annual cost for"
+        "text": " vice president of? , When did"
       }
     },
     {
@@ -33,11 +33,29 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " an Irish private school?"
+        "text": " Astor provide the money? and Where"
       }
     },
     {
-      "timestamp_ms": 6700,
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " did he claim he would transport"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " energy to?"
+      }
+    },
+    {
+      "timestamp_ms": 10700,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -45,7 +63,7 @@
       }
     },
     {
-      "timestamp_ms": 8700,
+      "timestamp_ms": 12700,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -59,12 +77,14 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "Who responded to Lindzen's criticisms?",
-          "What is the typical annual cost for an Irish private school?"
+          "What organization did Tesla serve as vice president of? ",
+          "When did Astor provide the money?",
+          " Where did he claim he would transport energy to?"
         ],
         "expected_citation_docs": [
-          "Doc_07 \u00a79",
-          "Doc_11 \u00a712"
+          "Doc_09 \u00a729",
+          "Doc_09 \u00a744",
+          "Doc_09 \u00a739"
         ]
       }
     }

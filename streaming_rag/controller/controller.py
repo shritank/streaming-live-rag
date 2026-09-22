@@ -52,17 +52,29 @@ _SYSTEM = (
 
 
 class RetrievalController:
-    def __init__(self, llm: LLMClient | None, telemetry: Telemetry, config: Config | dict):
+    def __init__(self, llm: LLMClient | None, telemetry: Telemetry, config: Config | dict,
+                 corpus_vocab=None):
+        """`corpus_vocab` is an optional zero-arg callable returning the
+        corpus's discriminative-term vocabulary (see
+        HybridRetriever.specific_vocabulary), used only for the weak-anchor
+        heuristic in stability scoring. Kept as an injected callable rather
+        than a Retriever reference so the controller stays decoupled from the
+        Retriever protocol (§6.2 of the project contracts)."""
         self._llm = llm
         self._telemetry = telemetry or NullTelemetry()
         self._config = config if isinstance(config, Config) else Config()
+        self._corpus_vocab = corpus_vocab
         self._accumulated: dict[str, str] = {}
         self._previous: dict[str, str] = {}
         self._covered: dict[str, set[str]] = {}
         self._issued: dict[str, int] = {}
+        # the sub-queries issued by the MOST RECENT retrieve decision for each
+        # utterance, so a growing clause's next (more complete) sub-query can
+        # be linked via parent_query_id to the stale partial one it supersedes
+        self._last_issued: dict[str, list[SubQuery]] = {}
 
     def reset_utterance(self, utterance_id: str) -> None:
-        for d in (self._accumulated, self._previous, self._covered, self._issued):
+        for d in (self._accumulated, self._previous, self._covered, self._issued, self._last_issued):
             d.pop(utterance_id, None)
 
     async def on_chunk(self, chunk: TranscriptChunk, session: SessionView) -> ControllerDecision:
@@ -86,7 +98,8 @@ class RetrievalController:
             return ControllerDecision(Decision.SUPPRESS, TurnKind.PRESENTATION_ONLY,
                                        "presentation_restructure", 1.0)
 
-        confidence = stability.score(utterance, previous, chunk.is_final)
+        known_terms = self._corpus_vocab() if self._corpus_vocab is not None else None
+        confidence = stability.score(utterance, previous, chunk.is_final, known_terms)
         threshold = (self._config.controller.min_stability if chunk.is_final
                       else self._config.controller.provisional_stability)
         if confidence < threshold:
@@ -104,6 +117,19 @@ class RetrievalController:
         if len(candidates) > 1:
             trigger = "refinement" if turn_kind == TurnKind.REFINEMENT else "multi_intent"
             candidates = [_retrigger(q, trigger) for q in candidates]
+
+        # Within-utterance supersession: as a single clause grows across
+        # chunks ("Before which..." -> "...did Chagatai publicly" -> "...
+        # dispute Jochi's paternity?"), decompose() naturally re-emits it each
+        # time new words arrive. Without this, every partial version stays a
+        # live, separate sub-query — the engine never cancels the earlier
+        # (incomplete, sometimes wrong-topic) retrieval, and synthesis ends up
+        # citing stale evidence alongside the final, correct one. Link each
+        # new candidate to the most recent sub-query it overlaps heavily with
+        # from THIS utterance, so the engine cancels the stale one (§ engine.
+        # _dispatch_decision's parent_query_id handling).
+        candidates = self._link_supersession(uid, candidates)
+        self._last_issued[uid] = list(candidates)
 
         for q in candidates:
             covered |= set(content_tokens(q.intent_label)) | set(content_tokens(q.text))
@@ -142,6 +168,31 @@ class RetrievalController:
             return False
         topic = set(content_tokens(session.topic_summary()))
         return bool(topic) and jaccard(tokens, topic) >= 0.12
+
+    def _link_supersession(self, uid: str, candidates: list[SubQuery],
+                            threshold: float = 0.3) -> list[SubQuery]:
+        prior = self._last_issued.get(uid, [])
+        if not prior:
+            return candidates
+        prior_tokens = [set(content_tokens(q.text)) for q in prior]
+        linked = []
+        for q in candidates:
+            if q.parent_query_id:  # already linked (e.g. by _scope_to_delta)
+                linked.append(q)
+                continue
+            tokens = set(content_tokens(q.text))
+            best_idx, best = None, 0.0
+            for i, ptok in enumerate(prior_tokens):
+                overlap = jaccard(tokens, ptok)
+                if overlap > best:
+                    best, best_idx = overlap, i
+            if best_idx is not None and best >= threshold:
+                linked.append(SubQuery(query_id=q.query_id, text=q.text, intent_label=q.intent_label,
+                                        trigger=q.trigger, utterance_id=q.utterance_id,
+                                        parent_query_id=prior[best_idx].query_id))
+            else:
+                linked.append(q)
+        return linked
 
     def _scope_to_delta(self, candidates: list[SubQuery], session: SessionView,
                          covered: set[str]) -> list[SubQuery]:

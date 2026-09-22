@@ -20,7 +20,8 @@ def build_real_components(config: Config, telemetry: Telemetry | None = None,
     session_store = session_store or SessionStore()
     llm = build_llm_client(config, telemetry)
     retriever = HybridRetriever(config, telemetry=telemetry)
-    controller = RetrievalController(llm=llm, telemetry=telemetry, config=config)
+    controller = RetrievalController(llm=llm, telemetry=telemetry, config=config,
+                                      corpus_vocab=lambda: retriever.specific_vocabulary)
     synthesizer = GroundedSynthesizer(retriever, session_store, config, llm=llm, telemetry=telemetry)
     return controller, retriever, synthesizer, llm, session_store
 

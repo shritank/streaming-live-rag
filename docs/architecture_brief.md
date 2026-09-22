@@ -39,10 +39,20 @@ Engine (engine.py) wires 1-4 on one asyncio event loop, emits telemetry, writes 
 The controller scores intent **stability** on every chunk from three structural signals —
 no topic keyword lists, so it survives a re-skinned corpus:
 
-- **anchor**: does the fragment contain a number or a mid-sentence capitalised entity
-  (strong anchor), or at least 4 content words (weak anchor)?
+- **anchor**: does the fragment contain a number, a mid-sentence capitalised entity, or a
+  *discriminative corpus term* (strong/topic anchor — see below), or at least 4 content words
+  (weak anchor)?
 - **closure**: does the fragment end mid-thought (trailing preposition/conjunction/article)?
 - **growth**: did the latest chunk add any new content tokens?
+
+The topic-anchor path (`stability.py::has_topic_anchor`) treats a content token as anchoring
+even without capitalisation or a number, if it's a *discriminative* term in the corpus's own
+vocabulary (high idf — `BM25Index.specific_terms()`, exposed as
+`HybridRetriever.specific_vocabulary`). This catches abstract topic nouns a capitalisation/number
+check alone would miss, without hardcoding any topic list: the controller receives it as an
+injected zero-arg callable (`corpus_vocab`), not a `Retriever` reference, so it stays decoupled
+from the retrieval protocol. Measured effect on the real corpus: G2 early-retrieval rate
+86.7% → 93.3% with no change to the false-trigger rate (see `docs/benchmark_report.md` §0/§7).
 
 A weighted sum against a configurable threshold (`controller.min_stability` for the final
 chunk, `controller.provisional_stability` for partials) yields WAIT or RETRIEVE. Turns are
@@ -74,9 +84,12 @@ policy" against the whole corpus.
   without touching the retriever.
 - **Fusion**: Reciprocal Rank Fusion (`fusion.py`), not score interpolation — BM25 scores and
   cosine similarities are on incomparable scales, so fusing on rank avoids a calibration step
-  that breaks every time the corpus changes. Weighted `sparse=0.85 / dense=0.15` (tuned on the
-  dev corpus, see §7 of the benchmark report — the weak LSA encoder at this corpus scale
-  otherwise displaces true BM25 hits).
+  that breaks every time the corpus changes. Weighted `sparse=0.99 / dense=0.01` — tuned against
+  both `fixtures/dev_corpus` and the real SQuAD corpus (`docs/benchmark_report.md` §0/§3): the
+  weak LSA encoder measurably *hurt* real-corpus r@5 at higher dense weights (83.8% at 0.15 vs
+  86.8% at 0.01) with zero offsetting gain on dev_corpus's paraphrase queries, which score
+  identically at every weight tested. Kept non-zero, not sparse-only, so a stronger encoder
+  dropped into the `Embedder` protocol has a fusion weight to grow into without another retune.
 - **Rerank & dedup** (`rerank.py`): promotes chunks with high query-term coverage and factual
   density (numbers, modal obligations like "must"/"required"), then drops near-duplicate chunks
   by Jaccard similarity so three paraphrases of one sentence don't crowd out a second fact.
@@ -92,9 +105,21 @@ supply facts.
 
 **Grounding** (`grounding.py`): every claim's citation must resolve to a real corpus chunk
 (`retriever.get_chunk_by_citation`) or the claim is dropped and the citation reported as
-fabricated (G4's zero-tolerance check). A surviving claim is further checked for token overlap
-with its cited chunk; below `SUPPORT_THRESHOLD` it's marked unsupported and surfaced as an
-`uncertainty` string rather than presented as fact.
+fabricated (G4's zero-tolerance check) — this catches a citation pointing at a doc/section that
+doesn't exist. It does *not*, by itself, catch a citation that exists but doesn't answer the
+question: because a claim's text is extracted verbatim from the chunk it cites, token-overlap
+support against that same chunk is trivially ~1.0 by construction. That gap is closed one layer
+earlier, in `_claims_from`'s **query-relevance gate** (`_is_relevant`): the extracted sentence
+must share a minimum fraction *and* (once the query has more than one content term) at least two
+of the query's own content tokens — otherwise a chunk that merely mentions the subject (e.g.
+"Tesla" appearing in nearly every sentence of a Tesla biography) doesn't get asserted as an
+answer. The check scans the ranked evidence list for the first chunk that clears it, falling
+back to `uncertainty` only if none do — catching a real answer that was ranked #2 or #3, not
+just #1.
+
+**Corpus-vocabulary anchor** (see §3) and **within-utterance supersession** (see §7) are two
+further legitimacy checks upstream of this: the fewer wrong-topic claims a growing utterance
+produces in the first place, the less the relevance gate has to filter after the fact.
 
 **Refinement, not restart** (`delta.py`): on a refinement turn, the new evidence's claims are
 merged into the prior answer's claims — a new claim *supersedes* a prior one only when they
@@ -116,9 +141,15 @@ envelopes and writes `turn_result` dicts to an output queue. Per chunk: controll
 if RETRIEVE, `asyncio.create_task(retriever.search(...))` — non-blocking, so retrieval overlaps
 with the user still speaking. At `utterance_end`, pending retrievals are awaited, then
 `synthesize`/`refine`/`restructure` is dispatched by `turn_kind`. A sub-query whose
-`parent_query_id` links it to an in-flight one cancels that task and excludes its (possibly
-half-finished) result from synthesis — the stale-cancellation path required by the guide's
-"late-arriving constraint" story.
+`parent_query_id` links it to an earlier one cancels/excludes that earlier one — the
+stale-cancellation path required by the guide's "late-arriving constraint" story, needed in two
+places: cross-turn refinement (`controller/controller.py::_scope_to_delta`) *and*
+within-utterance supersession, where a single clause grows across several chunks
+(`_link_supersession`, added after profiling showed a growing clause was re-triggering a fresh,
+never-cancelled retrieval on every qualifying chunk — see `docs/benchmark_report.md` §7).
+Cancellation itself (`_cancel_task`) cleans up stale evidence even when the superseded retrieval
+had *already completed* by the time it's superseded — the common case for a fast local
+retriever — not only when it's still in flight.
 
 A **virtual clock** (`Engine._now_ms`) is anchored to each envelope's `timestamp_ms` and
 advances by real elapsed time × `--time-scale`, so telemetry numbers are identical whether a

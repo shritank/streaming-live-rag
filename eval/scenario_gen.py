@@ -58,9 +58,28 @@ def _wrap_session(events: list[dict], session_id: str) -> list[dict]:
     )
 
 
+def _doc_of(qrel: dict) -> str:
+    return qrel["relevant"][0].split(" §")[0] if qrel["relevant"] else ""
+
+
 def gen_multi_intent(rng: random.Random, qrels: list[dict], idx: int) -> dict:
+    # A real compound request bundles sub-intents about ONE topic (the
+    # guide's own example: venue capacity + cancellation policy + catering,
+    # all about one workshop). Gluing fully unrelated queries from unrelated
+    # source documents produces ambiguous pronoun references ("this network")
+    # that no retriever could resolve correctly — that's a scenario-quality
+    # bug, not a system bug, so prefer same-document groupings and only fall
+    # back to a cross-document mix when a document doesn't have enough
+    # distinct queries of its own.
     n = rng.choice([2, 3])
-    picked = rng.sample(qrels, min(n, len(qrels)))
+    by_doc: dict[str, list[dict]] = {}
+    for q in qrels:
+        by_doc.setdefault(_doc_of(q), []).append(q)
+    same_doc_options = [group for group in by_doc.values() if len(group) >= n]
+    if same_doc_options:
+        picked = rng.sample(rng.choice(same_doc_options), n)
+    else:
+        picked = rng.sample(qrels, min(n, len(qrels)))
     clauses = [q["query"] for q in picked]
     text = clauses[0] + ", " + " and ".join(clauses[1:])
     events = _events_for_utterance(text, "u1", "s1", 0)
@@ -71,10 +90,6 @@ def gen_multi_intent(rng: random.Random, qrels: list[dict], idx: int) -> dict:
     }}}
     return {"scenario_id": f"gen_multi_intent_{idx:03d}", "template": "multi_intent",
             "events": _wrap_session(events, "s1"), "ground_truth": gt}
-
-
-def _doc_of(qrel: dict) -> str:
-    return qrel["relevant"][0].split(" §")[0] if qrel["relevant"] else ""
 
 
 def gen_late_detail(rng: random.Random, qrels: list[dict], idx: int) -> dict:

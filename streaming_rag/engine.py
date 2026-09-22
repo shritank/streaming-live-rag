@@ -272,13 +272,19 @@ class Engine:
     async def _cancel_task(self, state: _UtteranceState, query_id: str, session_id: str,
                             utterance_id: str, reason: str) -> None:
         task = state.pending.pop(query_id, None)
-        if task is None or task.done():
+        if task is None:
             return
-        task.cancel()
-        try:
-            await task
-        except (asyncio.CancelledError, Exception):
-            pass
+        # "Superseded" means "exclude this evidence from synthesis" — that
+        # still applies even if the retrieval already finished by the time
+        # the next chunk arrived (the common case for a fast mock/local
+        # retriever). Only a still-in-flight task needs an actual cancel();
+        # either way the stale result must not reach the synthesizer.
+        if not task.done():
+            task.cancel()
+            try:
+                await task
+            except (asyncio.CancelledError, Exception):
+                pass
         self._telemetry.emit(
             "retrieval_cancelled", component="engine", session_id=session_id,
             utterance_id=utterance_id, ts_ms=self._now_ms(), request_id=None,

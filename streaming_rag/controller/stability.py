@@ -51,6 +51,22 @@ def has_weak_anchor(text: str) -> bool:
     return len(content_tokens(text)) >= 4
 
 
+def has_topic_anchor(text: str, known_terms: frozenset[str] | None) -> bool:
+    """A content token that is a discriminative term already indexed in the
+    corpus (see HybridRetriever.specific_vocabulary) — an abstract topic noun
+    the controller has no capitalisation/number cue for, but that the corpus
+    itself confirms is specific enough to be worth retrieving on. Requires at
+    least 2 content tokens so a single stray match on a short fragment can't
+    fire alone (keeps the false-trigger rate unchanged on chit-chat-adjacent
+    phrasing, which is filtered separately before stability scoring anyway)."""
+    if not known_terms:
+        return False
+    tokens = content_tokens(text)
+    if len(tokens) < 2:
+        return False
+    return any(t in known_terms for t in tokens)
+
+
 def ends_mid_thought(text: str) -> bool:
     stripped = text.strip().rstrip(",")
     if not stripped:
@@ -63,7 +79,8 @@ def ends_mid_thought(text: str) -> bool:
     return last[-1].lower() in _DANGLING
 
 
-def score(accumulated_text: str, previous_text: str, is_final: bool) -> float:
+def score(accumulated_text: str, previous_text: str, is_final: bool,
+          known_terms: frozenset[str] | None = None) -> float:
     """0..1 confidence that the intent is settled enough to retrieve on."""
     if is_final:
         return 1.0
@@ -72,7 +89,7 @@ def score(accumulated_text: str, previous_text: str, is_final: bool) -> float:
         return 0.0
 
     value = 0.0
-    if has_strong_anchor(text):
+    if has_strong_anchor(text) or has_topic_anchor(text, known_terms):
         value += 0.5
     elif has_weak_anchor(text):
         value += 0.25

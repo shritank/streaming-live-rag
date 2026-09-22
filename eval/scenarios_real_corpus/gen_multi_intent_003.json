@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "How many touchdowns did Manning throw"
+        "text": "What are the wave-particles called that"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " in the game?, Which university did"
+        "text": " mediate all electromagnetic phenomena?, What geometric"
       }
     },
     {
@@ -33,11 +33,29 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " Tesla audit in 1880?"
+        "text": " shape is used in equations to"
       }
     },
     {
-      "timestamp_ms": 6700,
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " determine net force? and How are"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " laboratory measurements of forces determined?"
+      }
+    },
+    {
+      "timestamp_ms": 11900,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -45,7 +63,7 @@
       }
     },
     {
-      "timestamp_ms": 8700,
+      "timestamp_ms": 13900,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -59,12 +77,14 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "How many touchdowns did Manning throw in the game?",
-          "Which university did Tesla audit in 1880?"
+          "What are the wave-particles called that mediate all electromagnetic phenomena?",
+          "What geometric shape is used in equations to determine net force?",
+          "How are laboratory measurements of forces determined?"
         ],
         "expected_citation_docs": [
-          "Doc_13 \u00a753",
-          "Doc_09 \u00a713"
+          "Doc_04 \u00a731",
+          "Doc_04 \u00a713",
+          "Doc_04 \u00a711"
         ]
       }
     }

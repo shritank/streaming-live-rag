@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "Along with non-governmental and nonstate schools,"
+        "text": "Who demonstrated the Egg of Columbus?,"
       }
     },
     {
@@ -24,20 +24,11 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " what is another name for private"
+        "text": " What disease did Tesla catch?"
       }
     },
     {
-      "timestamp_ms": 4800,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " schools?, When are the ashes now?"
-      }
-    },
-    {
-      "timestamp_ms": 7500,
+      "timestamp_ms": 4700,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -45,7 +36,7 @@
       }
     },
     {
-      "timestamp_ms": 9500,
+      "timestamp_ms": 6700,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -59,12 +50,12 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "Along with non-governmental and nonstate schools, what is another name for private schools?",
-          "When are the ashes now?"
+          "Who demonstrated the Egg of Columbus?",
+          "What disease did Tesla catch?"
         ],
         "expected_citation_docs": [
-          "Doc_11 \u00a71",
-          "Doc_09 \u00a768"
+          "Doc_09 \u00a734",
+          "Doc_09 \u00a78"
         ]
       }
     }
