@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "what cable do I need to"
+        "text": "catering dietary accommodation in Kochi, who"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " plug in my laptop Jaipur, how"
+        "text": " supplies the food for Kochi events"
       }
     },
     {
@@ -33,7 +33,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " far ahead must I reserve Riverside"
+        "text": " and on-site and external catering options"
       }
     },
     {
@@ -42,11 +42,11 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " Hall Bengaluru"
+        "text": " Kochi"
       }
     },
     {
-      "timestamp_ms": 8300,
+      "timestamp_ms": 7900,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "timestamp_ms": 10300,
+      "timestamp_ms": 9900,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -68,12 +68,14 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "what cable do I need to plug in my laptop Jaipur",
-          "how far ahead must I reserve Riverside Hall Bengaluru"
+          "catering dietary accommodation in Kochi",
+          "who supplies the food for Kochi events",
+          "on-site and external catering options Kochi"
         ],
         "expected_citation_docs": [
-          "Doc_38 \u00a71",
-          "Doc_03 \u00a73"
+          "Doc_26 \u00a73",
+          "Doc_26 \u00a71",
+          "Doc_26 \u00a71"
         ]
       }
     }

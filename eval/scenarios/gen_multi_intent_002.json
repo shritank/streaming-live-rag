@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "what cable do I need to"
+        "text": "international travel approval requirement for Customer"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " plug in my laptop Jaipur, how"
+        "text": " Success, travel reimbursement rule for an"
       }
     },
     {
@@ -33,29 +33,11 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " many people fit in Riverside Hall"
+        "text": " employee trip in Customer Success"
       }
     },
     {
-      "timestamp_ms": 7200,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " Bengaluru and post-travel booking exception for"
-      }
-    },
-    {
-      "timestamp_ms": 9600,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " Field Operations"
-      }
-    },
-    {
-      "timestamp_ms": 10700,
+      "timestamp_ms": 7100,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -63,7 +45,7 @@
       }
     },
     {
-      "timestamp_ms": 12700,
+      "timestamp_ms": 9100,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -77,14 +59,12 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "what cable do I need to plug in my laptop Jaipur",
-          "how many people fit in Riverside Hall Bengaluru",
-          "post-travel booking exception for Field Operations"
+          "international travel approval requirement for Customer Success",
+          "travel reimbursement rule for an employee trip in Customer Success"
         ],
         "expected_citation_docs": [
-          "Doc_38 \u00a71",
-          "Doc_03 \u00a72",
-          "Doc_33 \u00a75"
+          "Doc_32 \u00a73",
+          "Doc_32 \u00a71"
         ]
       }
     }

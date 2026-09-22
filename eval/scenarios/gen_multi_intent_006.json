@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "presentation connection port Nagpur, how far"
+        "text": "booking notice period for Riverside Hall"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " ahead must I reserve Venue C"
+        "text": " in Bengaluru, Riverside Hall workshop capacity"
       }
     },
     {
@@ -33,11 +33,20 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " Chennai"
+        "text": " in Bengaluru and how many people"
       }
     },
     {
-      "timestamp_ms": 5500,
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " fit in Riverside Hall Bengaluru"
+      }
+    },
+    {
+      "timestamp_ms": 9500,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -45,7 +54,7 @@
       }
     },
     {
-      "timestamp_ms": 7500,
+      "timestamp_ms": 11500,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -59,12 +68,14 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "presentation connection port Nagpur",
-          "how far ahead must I reserve Venue C Chennai"
+          "booking notice period for Riverside Hall in Bengaluru",
+          "Riverside Hall workshop capacity in Bengaluru",
+          "how many people fit in Riverside Hall Bengaluru"
         ],
         "expected_citation_docs": [
-          "Doc_37 \u00a71",
-          "Doc_07 \u00a73"
+          "Doc_03 \u00a73",
+          "Doc_03 \u00a72",
+          "Doc_03 \u00a72"
         ]
       }
     }

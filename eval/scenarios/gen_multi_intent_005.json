@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "Critical support escalation path, on-site and"
+        "text": "Lakeview Rooms workshop capacity in Nagpur,"
       }
     },
     {
@@ -24,11 +24,20 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " external catering options Indore"
+        "text": " how many people fit in Lakeview"
       }
     },
     {
-      "timestamp_ms": 4300,
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " Rooms Nagpur"
+      }
+    },
+    {
+      "timestamp_ms": 5900,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -36,7 +45,7 @@
       }
     },
     {
-      "timestamp_ms": 6300,
+      "timestamp_ms": 7900,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -50,12 +59,12 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "Critical support escalation path",
-          "on-site and external catering options Indore"
+          "Lakeview Rooms workshop capacity in Nagpur",
+          "how many people fit in Lakeview Rooms Nagpur"
         ],
         "expected_citation_docs": [
-          "Doc_36 \u00a73",
-          "Doc_29 \u00a71"
+          "Doc_14 \u00a72",
+          "Doc_14 \u00a72"
         ]
       }
     }

@@ -65,7 +65,7 @@
       "u1": {
         "kind": "new_request",
         "retrieval_required": true,
-        "eligible_for_early_retrieval": true,
+        "eligible_for_early_retrieval": false,
         "gold_sub_intents": [
           "catering dietary accommodation in Jaipur"
         ],

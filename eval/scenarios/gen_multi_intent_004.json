@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "vegan and gluten free meals Chennai,"
+        "text": "how far ahead must I reserve"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " booking notice period for Summit Centre"
+        "text": " Venue A Hyderabad, Venue A workshop"
       }
     },
     {
@@ -33,20 +33,11 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " in Hyderabad and booking notice period"
+        "text": " capacity in Hyderabad"
       }
     },
     {
-      "timestamp_ms": 7200,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " for Venue C in Nagpur"
-      }
-    },
-    {
-      "timestamp_ms": 9500,
+      "timestamp_ms": 6300,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -54,7 +45,7 @@
       }
     },
     {
-      "timestamp_ms": 11500,
+      "timestamp_ms": 8300,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -68,14 +59,12 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "vegan and gluten free meals Chennai",
-          "booking notice period for Summit Centre in Hyderabad",
-          "booking notice period for Venue C in Nagpur"
+          "how far ahead must I reserve Venue A Hyderabad",
+          "Venue A workshop capacity in Hyderabad"
         ],
         "expected_citation_docs": [
-          "Doc_28 \u00a73",
-          "Doc_04 \u00a73",
-          "Doc_15 \u00a73"
+          "Doc_05 \u00a73",
+          "Doc_05 \u00a72"
         ]
       }
     }

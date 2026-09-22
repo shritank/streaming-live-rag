@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "booking notice period for Lakeview Rooms"
+        "text": "vegan and gluten free meals Jaipur,"
       }
     },
     {
@@ -24,20 +24,11 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " in Bengaluru, how many people fit"
+        "text": " on-site and external catering options Jaipur"
       }
     },
     {
-      "timestamp_ms": 4800,
-      "event_type": "transcript_chunk",
-      "payload": {
-        "session_id": "s1",
-        "utterance_id": "u1",
-        "text": " in Venue A Hyderabad"
-      }
-    },
-    {
-      "timestamp_ms": 6700,
+      "timestamp_ms": 5100,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -45,7 +36,7 @@
       }
     },
     {
-      "timestamp_ms": 8700,
+      "timestamp_ms": 7100,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -59,12 +50,12 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
-          "booking notice period for Lakeview Rooms in Bengaluru",
-          "how many people fit in Venue A Hyderabad"
+          "vegan and gluten free meals Jaipur",
+          "on-site and external catering options Jaipur"
         ],
         "expected_citation_docs": [
-          "Doc_02 \u00a73",
-          "Doc_05 \u00a72"
+          "Doc_27 \u00a73",
+          "Doc_27 \u00a71"
         ]
       }
     }

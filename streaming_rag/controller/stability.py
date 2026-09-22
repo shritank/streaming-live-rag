@@ -67,6 +67,19 @@ def has_topic_anchor(text: str, known_terms: frozenset[str] | None) -> bool:
     return any(t in known_terms for t in tokens)
 
 
+def has_bigram_anchor(text: str, low_df_bigrams: frozenset[str] | None) -> bool:
+    """A pair of adjacent content tokens that co-occurs in very few corpus
+    documents (see HybridRetriever.low_df_bigrams / BM25Index.low_df_bigrams)
+    is a sharper anchor than any single term: "military campaign" pins a
+    passage down far more than "military" or "campaign" alone. Trusted as a
+    strong anchor on its own — the bigram itself already carries the >=2
+    content-token specificity `has_topic_anchor` requires explicitly."""
+    if not low_df_bigrams:
+        return False
+    tokens = content_tokens(text)
+    return any(f"{a} {b}" in low_df_bigrams for a, b in zip(tokens, tokens[1:]))
+
+
 def ends_mid_thought(text: str) -> bool:
     stripped = text.strip().rstrip(",")
     if not stripped:
@@ -80,7 +93,8 @@ def ends_mid_thought(text: str) -> bool:
 
 
 def score(accumulated_text: str, previous_text: str, is_final: bool,
-          known_terms: frozenset[str] | None = None) -> float:
+          known_terms: frozenset[str] | None = None,
+          low_df_bigrams: frozenset[str] | None = None) -> float:
     """0..1 confidence that the intent is settled enough to retrieve on."""
     if is_final:
         return 1.0
@@ -89,7 +103,8 @@ def score(accumulated_text: str, previous_text: str, is_final: bool,
         return 0.0
 
     value = 0.0
-    if has_strong_anchor(text) or has_topic_anchor(text, known_terms):
+    if (has_strong_anchor(text) or has_topic_anchor(text, known_terms)
+            or has_bigram_anchor(text, low_df_bigrams)):
         value += 0.5
     elif has_weak_anchor(text):
         value += 0.25

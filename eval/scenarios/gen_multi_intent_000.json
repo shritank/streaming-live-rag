@@ -15,7 +15,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": "how many people fit in Venue"
+        "text": "how far ahead must I reserve"
       }
     },
     {
@@ -24,7 +24,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " B Jaipur, catering dietary accommodation in"
+        "text": " Venue B Jaipur, how many people"
       }
     },
     {
@@ -33,7 +33,7 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " Jaipur and Riverside Hall workshop capacity"
+        "text": " fit in Venue B Jaipur and"
       }
     },
     {
@@ -42,11 +42,11 @@
       "payload": {
         "session_id": "s1",
         "utterance_id": "u1",
-        "text": " in Bengaluru"
+        "text": " Venue B workshop capacity in Jaipur"
       }
     },
     {
-      "timestamp_ms": 8300,
+      "timestamp_ms": 9900,
       "event_type": "utterance_end",
       "payload": {
         "session_id": "s1",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "timestamp_ms": 10300,
+      "timestamp_ms": 11900,
       "event_type": "session_end",
       "payload": {
         "session_id": "s1"
@@ -68,14 +68,14 @@
         "retrieval_required": true,
         "eligible_for_early_retrieval": true,
         "gold_sub_intents": [
+          "how far ahead must I reserve Venue B Jaipur",
           "how many people fit in Venue B Jaipur",
-          "catering dietary accommodation in Jaipur",
-          "Riverside Hall workshop capacity in Bengaluru"
+          "Venue B workshop capacity in Jaipur"
         ],
         "expected_citation_docs": [
+          "Doc_09 \u00a73",
           "Doc_09 \u00a72",
-          "Doc_27 \u00a73",
-          "Doc_03 \u00a72"
+          "Doc_09 \u00a72"
         ]
       }
     }

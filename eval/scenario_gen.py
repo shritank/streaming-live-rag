@@ -49,6 +49,16 @@ def _events_for_utterance(text: str, utterance_id: str, session_id: str, start_m
     return chunk_utterance(text, utterance_id, session_id, start_ms=start_ms)
 
 
+def _has_early_opportunity(text: str, words_per_chunk: int = 6) -> bool:
+    """chunk_utterance groups `words_per_chunk` words per fragment, so an
+    utterance with fewer words than that is delivered as a single chunk
+    immediately followed by the empty is_final chunk — there is no earlier
+    moment at which retrieval COULD have started. Marking such a turn
+    'eligible_for_early_retrieval' in ground truth would penalise G2 for a
+    structural impossibility, not a controller shortcoming."""
+    return len(text.split()) > words_per_chunk
+
+
 def _wrap_session(events: list[dict], session_id: str) -> list[dict]:
     last_ts = events[-1]["timestamp_ms"] if events else 0
     return (
@@ -84,7 +94,8 @@ def gen_multi_intent(rng: random.Random, qrels: list[dict], idx: int) -> dict:
     text = clauses[0] + ", " + " and ".join(clauses[1:])
     events = _events_for_utterance(text, "u1", "s1", 0)
     gt = {"turns": {"u1": {
-        "kind": "new_request", "retrieval_required": True, "eligible_for_early_retrieval": True,
+        "kind": "new_request", "retrieval_required": True,
+        "eligible_for_early_retrieval": _has_early_opportunity(text),
         "gold_sub_intents": clauses,
         "expected_citation_docs": [r for q in picked for r in q["relevant"]],
     }}}
@@ -106,7 +117,8 @@ def gen_late_detail(rng: random.Random, qrels: list[dict], idx: int) -> dict:
     refine_text = f"{lead} {q2['query']}"
     events2 = _events_for_utterance(refine_text, "u2", "s1", last_ts)
     gt = {"turns": {
-        "u1": {"kind": "new_request", "retrieval_required": True, "eligible_for_early_retrieval": True,
+        "u1": {"kind": "new_request", "retrieval_required": True,
+               "eligible_for_early_retrieval": _has_early_opportunity(q1["query"]),
                "gold_sub_intents": [q1["query"]], "expected_citation_docs": q1["relevant"]},
         "u2": {"kind": "refinement", "retrieval_required": True, "eligible_for_early_retrieval": False,
                "gold_sub_intents": [q2["query"]], "expected_citation_docs": q2["relevant"]},
@@ -122,7 +134,8 @@ def gen_suppression(rng: random.Random, qrels: list[dict], idx: int) -> dict:
     ask = rng.choice(_PRESENTATION_ASKS)
     events2 = _events_for_utterance(ask, "u2", "s1", last_ts)
     gt = {"turns": {
-        "u1": {"kind": "new_request", "retrieval_required": True, "eligible_for_early_retrieval": True,
+        "u1": {"kind": "new_request", "retrieval_required": True,
+               "eligible_for_early_retrieval": _has_early_opportunity(q1["query"]),
                "gold_sub_intents": [q1["query"]], "expected_citation_docs": q1["relevant"]},
         "u2": {"kind": "presentation_only", "retrieval_required": False, "eligible_for_early_retrieval": False},
     }}

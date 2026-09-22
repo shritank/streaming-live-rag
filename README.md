@@ -80,15 +80,18 @@ scores are measured against real ground truth, not eyeballed.
 
 ## Results at a glance
 
-See `docs/benchmark_report.md` for full numbers, including a diagnostic-and-tune pass on the
-real SQuAD corpus (§0: sentence-segmentation fix, within-utterance retrieval supersession fix,
-a corpus-vocabulary weak-anchor heuristic, fusion-weight retune, and a query-relevance gate).
-All 6 gates (G1–G6) pass on both corpora under the official `--reps 3` procedure, confirmed
-byte-identical to `--reps 1`; streaming beats the baseline pipeline on utterance-start→answer
-p50 latency and post-utterance-end latency; 63/63 tests pass; **zero fabricated citations across
-every run.** On the real corpus: G2 early retrieval 86.7%→93.3%, G4 grounding 88.9%→~92%,
-hybrid retrieval r@1 62.0%→63.2% and r@5 84.0%→86.8% — all post-tuning numbers measured, not
-projected.
+See `docs/benchmark_report.md` for full numbers, including two diagnostic-and-tune passes on the
+real SQuAD corpus (§0/§0b: sentence-segmentation fix, within-utterance retrieval supersession
+fix, a corpus-vocabulary + bigram-DF weak-anchor heuristic, fusion-weight retune, a dynamic
+query-relevance gate, and a real correctness bug fix — short legitimate utterances like "When are
+the ashes now?" were silently dropped with zero retrieval). All 6 gates (G1–G6) pass on both
+corpora under the official `--reps 3` procedure, confirmed byte-identical to `--reps 1`;
+streaming beats the baseline pipeline on latency; 63/63 tests pass; **zero fabricated citations
+across every run.** On the real corpus: G2 early retrieval 86.7%→**100.0%**, G4 grounding
+88.9%→**92.9%**, hybrid retrieval r@1 62.0%→63.2% and r@5 84.0%→86.8% — every post-tuning number
+measured, not projected. `eval/diagnose.py` root-causes any remaining failure into exactly one
+bucket (retrieval miss / synthesizer over-rejection / late-anchor timing) rather than treating
+gate scores as a black box.
 
 ## What each task owns
 

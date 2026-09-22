@@ -53,17 +53,19 @@ _SYSTEM = (
 
 class RetrievalController:
     def __init__(self, llm: LLMClient | None, telemetry: Telemetry, config: Config | dict,
-                 corpus_vocab=None):
-        """`corpus_vocab` is an optional zero-arg callable returning the
-        corpus's discriminative-term vocabulary (see
-        HybridRetriever.specific_vocabulary), used only for the weak-anchor
-        heuristic in stability scoring. Kept as an injected callable rather
+                 corpus_vocab=None, corpus_bigrams=None):
+        """`corpus_vocab` and `corpus_bigrams` are optional zero-arg callables
+        returning the corpus's discriminative-term vocabulary and low-DF
+        bigrams (see HybridRetriever.specific_vocabulary /
+        HybridRetriever.low_df_bigrams), used only for the weak-anchor
+        heuristic in stability scoring. Kept as injected callables rather
         than a Retriever reference so the controller stays decoupled from the
         Retriever protocol (§6.2 of the project contracts)."""
         self._llm = llm
         self._telemetry = telemetry or NullTelemetry()
         self._config = config if isinstance(config, Config) else Config()
         self._corpus_vocab = corpus_vocab
+        self._corpus_bigrams = corpus_bigrams
         self._accumulated: dict[str, str] = {}
         self._previous: dict[str, str] = {}
         self._covered: dict[str, set[str]] = {}
@@ -99,7 +101,8 @@ class RetrievalController:
                                        "presentation_restructure", 1.0)
 
         known_terms = self._corpus_vocab() if self._corpus_vocab is not None else None
-        confidence = stability.score(utterance, previous, chunk.is_final, known_terms)
+        low_df_bigrams = self._corpus_bigrams() if self._corpus_bigrams is not None else None
+        confidence = stability.score(utterance, previous, chunk.is_final, known_terms, low_df_bigrams)
         threshold = (self._config.controller.min_stability if chunk.is_final
                       else self._config.controller.provisional_stability)
         if confidence < threshold:

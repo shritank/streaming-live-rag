@@ -18,14 +18,17 @@ class BM25Index:
 
         self._tf: list[Counter] = [Counter(t) for t in self._doc_tokens]
         df: Counter = Counter()
+        bigram_df: Counter = Counter()
         for tokens in self._doc_tokens:
             df.update(set(tokens))
+            bigram_df.update({f"{a} {b}" for a, b in zip(tokens, tokens[1:])})
         # BM25 idf with the +0.5 smoothing, floored at a small positive value so
         # very common terms never contribute negative score.
         self._idf = {
             term: max(1e-6, math.log((self._n - count + 0.5) / (count + 0.5) + 1.0))
             for term, count in df.items()
         }
+        self._bigram_df = dict(bigram_df)
 
     def score(self, query: str) -> list[float]:
         q_tokens = content_tokens(query)
@@ -49,6 +52,14 @@ class BM25Index:
         heuristic to recognise a real, indexed topic term even before it is
         capitalised or paired with a number."""
         return frozenset(term for term, idf in self._idf.items() if idf >= min_idf)
+
+    def low_df_bigrams(self, max_df: int = 5) -> frozenset[str]:
+        """Content-token bigrams that co-occur in fewer than `max_df`
+        documents — a strong topical anchor: a bigram like "military
+        campaign" pins down a specific passage far more precisely than either
+        word alone, so it's trusted as an anchor at a much lower document
+        frequency than a single-token specific term needs."""
+        return frozenset(bg for bg, count in self._bigram_df.items() if count < max_df)
 
     def top_k(self, query: str, k: int) -> list[tuple[int, float]]:
         scores = self.score(query)

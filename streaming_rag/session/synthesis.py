@@ -30,6 +30,25 @@ from .store import SessionStore
 # see docs/benchmark_report.md.
 MIN_QUERY_RELEVANCE = 0.2
 
+# A long, highly-specific query's relevant overlap is naturally spread across
+# more tokens than a short one — a genuinely correct paraphrase can validly
+# share a smaller FRACTION of an 8-token query than of a 3-token one, even
+# though it shares just as many or more tokens in absolute terms. Short
+# queries (<=3 content tokens) keep the strict floor unchanged, since that is
+# exactly where a single ubiquitous word (e.g. a person's name) could
+# trivially clear a looser threshold. Floors out at MIN_QUERY_RELEVANCE_FLOOR
+# so a long query still can't pass on a near-zero match.
+MIN_QUERY_RELEVANCE_FLOOR = 0.12
+_RELEVANCE_TAPER_START = 3       # content-token count where relaxation begins
+_RELEVANCE_TAPER_STEP = 0.02     # relaxation per additional content token
+
+
+def _min_relevance_for(n_query_tokens: int) -> float:
+    if n_query_tokens <= _RELEVANCE_TAPER_START:
+        return MIN_QUERY_RELEVANCE
+    relaxed = MIN_QUERY_RELEVANCE - _RELEVANCE_TAPER_STEP * (n_query_tokens - _RELEVANCE_TAPER_START)
+    return max(MIN_QUERY_RELEVANCE_FLOOR, relaxed)
+
 
 class GroundedSynthesizer:
     def __init__(self, retriever, session_store: SessionStore, config: Config,
@@ -100,7 +119,7 @@ class GroundedSynthesizer:
             claim = None
             for evidence in result.evidence:
                 sentence = self._best_sentence(q.text, evidence.chunk.text)
-                if self._is_relevant(q.text, sentence):
+                if self._is_relevant(q.text, sentence, self._specific_terms()):
                     claim = Claim(text=sentence, citations=[evidence.chunk.citation])
                     break
             if claim is None:
@@ -110,23 +129,38 @@ class GroundedSynthesizer:
 
         return claims, unsupported
 
+    def _specific_terms(self) -> frozenset[str] | None:
+        """The corpus's discriminative-term vocabulary (see
+        HybridRetriever.specific_vocabulary), if the configured retriever
+        exposes one. Returns None for a retriever that doesn't (e.g. a mock),
+        in which case _is_relevant falls back to its plain 2-token rule."""
+        return getattr(self._retriever, "specific_vocabulary", None)
+
     @staticmethod
-    def _is_relevant(query: str, sentence: str) -> bool:
-        """A single shared token is not enough evidence on its own: in a
-        biographical article, "Tesla" appears in nearly every sentence, so a
-        query like "who was Tesla prejudiced against" would trivially "match"
-        any sentence mentioning Tesla regardless of topic. Require BOTH a
-        minimum overlap fraction AND, once the query has more than one
-        content term, at least two of them actually present."""
+    def _is_relevant(query: str, sentence: str, specific_terms: frozenset[str] | None = None) -> bool:
+        """A single shared token is not enough evidence on its own in
+        general: in a biographical article, "Tesla" appears in nearly every
+        sentence, so a query like "who was Tesla prejudiced against" would
+        trivially "match" any sentence mentioning Tesla regardless of topic.
+        Require BOTH a minimum overlap fraction (relaxed for longer, more
+        specific queries — see _min_relevance_for) AND, once the query has
+        more than one content term, at least two of them present — UNLESS
+        the single overlapping token is itself a discriminative corpus term
+        (rare across the corpus, e.g. "Astor" vs. the ubiquitous "Tesla"),
+        in which case that one token is strong enough evidence on its own:
+        a genuine paraphrase can legitimately share nothing but a specific
+        name ("did Astor provide the money" -> "Astor invested $100,000")."""
         q_tokens = set(content_tokens(query))
         if not q_tokens:
             return True
         s_tokens = set(content_tokens(sentence))
         overlap = q_tokens & s_tokens
-        if len(overlap) / len(q_tokens) < MIN_QUERY_RELEVANCE:
+        if len(overlap) / len(q_tokens) < _min_relevance_for(len(q_tokens)):
             return False
         min_overlap_count = min(2, len(q_tokens))
-        return len(overlap) >= min_overlap_count
+        if len(overlap) >= min_overlap_count:
+            return True
+        return bool(specific_terms) and bool(overlap) and overlap.issubset(specific_terms)
 
     @staticmethod
     def _best_sentence(query: str, chunk_text: str) -> str:

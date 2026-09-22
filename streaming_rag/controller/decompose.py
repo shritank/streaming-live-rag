@@ -43,7 +43,17 @@ def _clean(clause: str) -> str:
 
 
 def split_clauses(utterance: str) -> list[str]:
-    parts = [_clean(p) for p in _SPLIT_RE.split(utterance)]
+    """The min-content-token filter exists to drop junk fragments produced BY
+    splitting ("and", "also" left over as their own clause) — it must not
+    also reject a short but legitimate single-clause question ("When are the
+    ashes now?" has exactly one content token, "ashes", after stopwording,
+    and was previously dropped entirely, silently producing zero retrieval
+    for an eligible, answerable turn). So the threshold only applies once
+    there is more than one candidate clause to filter between.
+    """
+    parts = [p for p in (_clean(p) for p in _SPLIT_RE.split(utterance)) if p]
+    if len(parts) <= 1:
+        return parts
     return [p for p in parts if len(content_tokens(p)) >= _MIN_CLAUSE_TOKENS]
 
 
