@@ -63,7 +63,7 @@ eval/
   scenarios_real_corpus/   generated scenarios (data/corpus)
   gates/                   G2-G6 scorers
   run_all.py, compare.py, ablate.py, edge_cases.py, scenario_gen.py
-tests/                     contracts, engine, retrieval, controller, session, eval — 63 tests
+tests/                     contracts, engine, retrieval, controller, session, eval — 72 tests
 docs/                      architecture brief, telemetry schema, benchmark report, demo script
 ```
 
@@ -80,18 +80,19 @@ scores are measured against real ground truth, not eyeballed.
 
 ## Results at a glance
 
-See `docs/benchmark_report.md` for full numbers, including two diagnostic-and-tune passes on the
-real SQuAD corpus (§0/§0b: sentence-segmentation fix, within-utterance retrieval supersession
-fix, a corpus-vocabulary + bigram-DF weak-anchor heuristic, fusion-weight retune, a dynamic
-query-relevance gate, and a real correctness bug fix — short legitimate utterances like "When are
-the ashes now?" were silently dropped with zero retrieval). All 6 gates (G1–G6) pass on both
-corpora under the official `--reps 3` procedure, confirmed byte-identical to `--reps 1`;
-streaming beats the baseline pipeline on latency; 63/63 tests pass; **zero fabricated citations
-across every run.** On the real corpus: G2 early retrieval 86.7%→**100.0%**, G4 grounding
-88.9%→**92.9%**, hybrid retrieval r@1 62.0%→63.2% and r@5 84.0%→86.8% — every post-tuning number
-measured, not projected. `eval/diagnose.py` root-causes any remaining failure into exactly one
-bucket (retrieval miss / synthesizer over-rejection / late-anchor timing) rather than treating
-gate scores as a black box.
+See `docs/benchmark_report.md` for full numbers, including three diagnostic-and-tune passes on
+the real SQuAD corpus (§0/§0b/§0c: sentence-segmentation fix, within-utterance retrieval
+supersession fix, a corpus-vocabulary + bigram-DF weak-anchor heuristic, fusion-weight retune, a
+dynamic query-relevance gate, a real correctness bug fix — short legitimate utterances like "When
+are the ashes now?" were silently dropped with zero retrieval — and a general definitional-query
+reranking boost). All 6 gates (G1–G6) pass on both corpora under the official `--reps 3`
+procedure, confirmed byte-identical to `--reps 1`; streaming beats the baseline pipeline on
+latency; 72/72 tests pass; **zero fabricated citations across every run.** On the real corpus:
+G2 early retrieval 86.7%→**100.0%**, G4 grounding 88.9%→**95.2%** (both originally-requested
+>95% targets now met), hybrid retrieval r@1 62.0%→63.2% and r@5 84.0%→86.8% — every post-tuning
+number measured, not projected. `eval/diagnose.py` root-causes any remaining failure into exactly
+one bucket (retrieval miss / synthesizer over-rejection / late-anchor timing) rather than
+treating gate scores as a black box.
 
 ## What each task owns
 

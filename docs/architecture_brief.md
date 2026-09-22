@@ -92,7 +92,13 @@ policy" against the whole corpus.
   dropped into the `Embedder` protocol has a fusion weight to grow into without another retune.
 - **Rerank & dedup** (`rerank.py`): promotes chunks with high query-term coverage and factual
   density (numbers, modal obligations like "must"/"required"), then drops near-duplicate chunks
-  by Jaccard similarity so three paraphrases of one sentence don't crowd out a second fact.
+  by Jaccard similarity so three paraphrases of one sentence don't crowd out a second fact. A
+  **definitional-query boost** (`definitional_target`/`definitional_match`) recognises "what does
+  X stand for" / "what is X" / "define X" query shapes and boosts any chunk containing the
+  conventional "expansion (X)" or "X (expansion)" parenthetical pattern for that term — general
+  and corpus-agnostic (any acronym, any document), not a lookup table. Added after diagnosing a
+  real miss: "AC" recurs throughout a whole biography, so plain term-overlap under-ranked the one
+  sentence that actually defines it (`docs/benchmark_report.md` §0c).
 - Cold-start (ingest + index + fit) happens once in `async setup()`, off the per-turn clock.
 
 ## 6. Session-aware synthesis (session/)
