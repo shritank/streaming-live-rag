@@ -41,6 +41,7 @@ is are was were be been being am do does did doing have has had having i you he 
 me him her us them my your his its our their as so such not no nor can will would should could
 about into over under again further once here there when where why how all any both each few more
 most other some only own same too very s t just don now please need want
+what who which whom whose
 """.split())
 
 
