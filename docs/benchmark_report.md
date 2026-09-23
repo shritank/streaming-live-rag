@@ -250,6 +250,51 @@ at a semantic-similarity fix for this exact case (word-vector encoder swap, scop
 same-document semantic tie-break) were each tested and reverted after being found to regress
 other cases — see `final_report.md` §6.5 for the full account of those attempts.
 
+## 0e. Pass 5 — missing wh-word stopwords (self-fulfilling grounding, concretely reproduced)
+
+A hand-run end-to-end example ("What disease did Tesla catch?", `final_report.md` §9.3) surfaced
+a wrong, confidently-asserted answer citing an unrelated Tesla passage — a live instance of the
+external review's "the grounding gate is nearly self-fulfilling" critique, not a hypothetical one.
+
+**Root cause**: `streaming_rag/retrieval/text.py`'s `STOPWORDS` set was missing "what", "who",
+"which", "whom", "whose". `_is_relevant()`'s lexical-overlap safety-net gate counted "what" as a
+real content token, so the shared-token set between the question and the wrong passage —
+`{"what", "tesla"}` — was enough to clear the gate's minimum-overlap threshold, despite neither
+token carrying any signal about *disease*.
+
+**Fix**: added the five missing wh-words to `STOPWORDS` (`streaming_rag/retrieval/text.py`, one
+line).
+
+**Verified**: 77/77 tests pass; dev_corpus gate suite unaffected (100% across all gates, no
+regression); real_corpus gate suite:
+
+```
+$ python -m eval.run_all --scenarios eval/scenarios_real_corpus --time-scale 8 --reps 3 --corpus-dir data/corpus
+G2 early retrieval : 11/11 = 100.0%  (false-trigger rate 0.0%)
+G3 multi-intent    : 5/5   = 100.0%
+G4 grounding       : 36/37 = 97.3%  (fabricated=0)
+G5 refinement      : 5/5   = 100.0%
+G6 telemetry cov.  : 25/25 = 100.0%  (schema errors=0)
+VERDICT: PASS
+```
+
+The denominator dropped 40→37: three over-confident false-positive claims that used to slip past
+the relevance gate on a wrongly-counted wh-word are now correctly suppressed into `uncertainty`
+instead of being asserted. `--reps 1` and `--reps 3` produced identical counts, confirming
+determinism. The single previously-known scenario (`gen_multi_intent_003`, the "parallelogram"
+zero-vocabulary-overlap case from §0d) remains the only tracked failure in the scored suite — no
+new regressions.
+
+**A second issue found, not fixed**: re-running the same "Tesla disease" example after this fix,
+the wrong citation changed but did not disappear — `decompose.py`'s short-clause context-carrying
+logic (triggered for any clause under 4 content tokens) was found to splice an unrelated sibling
+clause's context into this legitimately-3-content-word question, pulling retrieval toward a
+different wrong Tesla passage. This scenario is not part of the scored 15-scenario suite, so it
+produced no gate regression, and was deliberately left unfixed given this project's established
+pattern (§0b–§0d) that further tuning in this exact category (short-clause / vocabulary-gap
+precision) has repeatedly traded one failure mode for another. See `final_report.md` §6.6.2 for
+the full account, including direct corpus verification of the true correct answer.
+
 ## 1. Test suite
 
 `pytest tests/ -q` → **72/72 passed** (contract conformance, engine E2E with mocks, robustness

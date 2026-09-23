@@ -80,19 +80,21 @@ scores are measured against real ground truth, not eyeballed.
 
 ## Results at a glance
 
-See `docs/benchmark_report.md` for full numbers, including three diagnostic-and-tune passes on
-the real SQuAD corpus (§0/§0b/§0c: sentence-segmentation fix, within-utterance retrieval
+See `final_report.md` and `docs/benchmark_report.md` for full numbers, including diagnostic-and-tune
+passes on the real SQuAD corpus (sentence-segmentation fix, within-utterance retrieval
 supersession fix, a corpus-vocabulary + bigram-DF weak-anchor heuristic, fusion-weight retune, a
 dynamic query-relevance gate, a real correctness bug fix — short legitimate utterances like "When
-are the ashes now?" were silently dropped with zero retrieval — and a general definitional-query
-reranking boost). All 6 gates (G1–G6) pass on both corpora under the official `--reps 3`
+are the ashes now?" were silently dropped with zero retrieval — a general definitional-query
+reranking boost, and a missing-stopword fix that closed a concrete self-fulfilling-grounding case).
+All 6 gates (G1–G6) pass on both corpora under the official `--reps 3`
 procedure, confirmed byte-identical to `--reps 1`; streaming beats the baseline pipeline on
 latency; 77/77 tests pass; **zero fabricated citations across every run.** On the real corpus:
-G2 early retrieval 86.7%→**100.0%**, G4 grounding 88.9%→**97.5%** (both originally-requested
+G2 early retrieval 86.7%→**100.0%**, G4 grounding 88.9%→**97.3%** (both originally-requested
 >95% targets now met), hybrid retrieval r@1 62.0%→63.2% and r@5 84.0%→86.8% — every post-tuning
 number measured, not projected. `eval/diagnose.py` root-causes any remaining failure into exactly
 one bucket (retrieval miss / synthesizer over-rejection / late-anchor timing) rather than
-treating gate scores as a black box.
+treating gate scores as a black box. One vocabulary-gap limitation remains honestly documented
+and open (`final_report.md` §6.6.2), not hidden.
 
 ## What each task owns
 
