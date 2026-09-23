@@ -63,7 +63,7 @@ eval/
   scenarios_real_corpus/   generated scenarios (data/corpus)
   gates/                   G2-G6 scorers
   run_all.py, compare.py, ablate.py, edge_cases.py, scenario_gen.py
-tests/                     contracts, engine, retrieval, controller, session, eval — 72 tests
+tests/                     contracts, engine, retrieval, controller, session, eval — 77 tests
 docs/                      architecture brief, telemetry schema, benchmark report, demo script
 ```
 
@@ -87,8 +87,8 @@ dynamic query-relevance gate, a real correctness bug fix — short legitimate ut
 are the ashes now?" were silently dropped with zero retrieval — and a general definitional-query
 reranking boost). All 6 gates (G1–G6) pass on both corpora under the official `--reps 3`
 procedure, confirmed byte-identical to `--reps 1`; streaming beats the baseline pipeline on
-latency; 72/72 tests pass; **zero fabricated citations across every run.** On the real corpus:
-G2 early retrieval 86.7%→**100.0%**, G4 grounding 88.9%→**95.2%** (both originally-requested
+latency; 77/77 tests pass; **zero fabricated citations across every run.** On the real corpus:
+G2 early retrieval 86.7%→**100.0%**, G4 grounding 88.9%→**97.5%** (both originally-requested
 >95% targets now met), hybrid retrieval r@1 62.0%→63.2% and r@5 84.0%→86.8% — every post-tuning
 number measured, not projected. `eval/diagnose.py` root-causes any remaining failure into exactly
 one bucket (retrieval miss / synthesizer over-rejection / late-anchor timing) rather than

@@ -174,15 +174,24 @@ class RetrievalController:
 
     def _link_supersession(self, uid: str, candidates: list[SubQuery],
                             threshold: float = 0.3) -> list[SubQuery]:
+        """Within-utterance supersession must take priority over any
+        cross-turn `parent_query_id` `_scope_to_delta` already set: they mean
+        different things (a same-utterance stale retrieval to cancel, vs. a
+        cross-turn refinement lineage marker for citation bookkeeping), but
+        share the same single field. `engine.py`'s cancellation check only
+        ever looks the id up in the CURRENT utterance's own pending-task
+        dict, so a cross-turn id is always a harmless no-op there — silently
+        skipping this link whenever `_scope_to_delta` had already set one
+        (the previous behaviour) left a same-utterance stale retrieval
+        uncancelled and its evidence reached the synthesizer regardless.
+        Overriding is therefore always safe: it can only enable a
+        cancellation engine.py would otherwise have silently ignored."""
         prior = self._last_issued.get(uid, [])
         if not prior:
             return candidates
         prior_tokens = [set(content_tokens(q.text)) for q in prior]
         linked = []
         for q in candidates:
-            if q.parent_query_id:  # already linked (e.g. by _scope_to_delta)
-                linked.append(q)
-                continue
             tokens = set(content_tokens(q.text))
             best_idx, best = None, 0.0
             for i, ptok in enumerate(prior_tokens):

@@ -9,7 +9,7 @@ for each pass is in §7, §0b and §0c respectively.
 | Metric | Session-start baseline | Final (Pass 3) | Target | Met? |
 |---|---|---|---|---|
 | G2 early retrieval | 86.7% (13/15) | **100.0%** (11/11) | > 95% (requested) / ≥ 80% (gate) | ✅ both |
-| G4 grounding support | 88.9% (56/63) | **95.2%** (40/42) | > 95% (requested) / ≥ 85% (gate) | ✅ both |
+| G4 grounding support | 88.9% (56/63) | **97.5%** (39/40) | > 95% (requested) / ≥ 85% (gate) | ✅ both |
 | G4 fabricated citations | 0 | **0** | 0 | ✅ |
 | G3 multi-intent | 100% | **100%** | 100% | ✅ |
 | G5 refinement continuity | 100% | **100%** | 100% | ✅ |
@@ -182,7 +182,7 @@ $ python -m eval.run_all --scenarios eval/scenarios_real_corpus --time-scale 8 -
 scenarios run: 15
 G2 early retrieval : 11/11 = 100.0%  (false-trigger rate 0.0%)
 G3 multi-intent    : 5/5 = 100.0%
-G4 grounding       : 40/42 = 95.2%  (fabricated=0)
+G4 grounding       : 39/40 = 97.5%  (fabricated=0)
 G5 refinement      : 5/5 = 100.0%
 G6 telemetry cov.  : 25/25 = 100.0%  (schema errors=0)
 VERDICT: PASS
@@ -190,10 +190,65 @@ VERDICT: PASS
 
 `data/corpus/Doc_09_nikola_tesla.md §1` (the definition passage) now ranks #1 for "What does AC
 stand for?" (previously ranked below three sections that merely mention "AC" more often). Both
-originally-requested targets are now met: **G2 100.0% (>95%) and G4 95.2% (>95%)**, dev_corpus
-suite unchanged at 100% across all gates, 72/72 tests green, zero fabricated citations. The one
-remaining `uncertainty` case (`gen_multi_intent_003`, a genuine cross-terminology paraphrase gap)
-is the honest, correct behavior described in §0b — the system declining rather than guessing.
+originally-requested targets are now met: **G2 100.0% (>95%) and G4 95.2% (>95%)** as of Pass 3.
+
+## 0d. Pass 4 — a real supersession bug, traced and fixed (G4 95.2% → 97.5%)
+
+A later debugging session traced both remaining real-corpus failures end-to-end through the raw
+telemetry rather than re-attempting semantic-similarity fixes. One of the two turned out to be a
+genuine, previously-mischaracterised bug, not the segmentation issue originally attributed to it.
+
+**Symptom**: a refinement turn ("Wait, one more thing — What does stong force act upon?" — a real
+typo in the SQuAD source, "stong" for "strong") produced **two** `retrieval_completed` events for
+what should have been one. The controller re-emits a fresh sub-query on every chunk as a clause
+grows; the first, partial version ("...one more thing — What", four near-content-free words)
+retrieved an essentially random Nikola Tesla biography passage and was never cancelled — its
+wrong-topic evidence reached the final answer alongside the correct one.
+
+**Root cause**: `controller/controller.py` has two supersession mechanisms sharing one field,
+`SubQuery.parent_query_id` — `_scope_to_delta` links a sub-query to a *prior turn's* query (for
+refinement bookkeeping); `_link_supersession` links it to a *stale sibling in the same
+utterance* (for engine-side cancellation, the same mechanism from Pass 2 fix 2 above).
+`_scope_to_delta` runs first and sets `parent_query_id`; `_link_supersession` saw a non-empty
+value and silently deferred to it — even though the two links mean different things, and the
+engine's cancellation check (`engine.py`, `state.pending`) only ever looks up ids within the
+*current* utterance, so a cross-turn id sitting in that field was always a harmless no-op there.
+The Pass-2 fix cancelled stale siblings correctly for `new_request` turns; it never fired for
+`refinement` turns specifically, because `_scope_to_delta` runs only on refinement turns and
+always claims the field first.
+
+**Fix**: `_link_supersession` now always checks for a same-utterance stale sibling and overrides
+any cross-turn link if one is found — verified safe, since overriding a value that was already a
+no-op for cancellation can only enable a cancellation that was previously silently skipped.
+
+**Verified**: `retrieval_cancelled` now fires for the stale partial-query retrieval on this exact
+turn; the Tesla-biography passage no longer reaches the answer; the turn is grounded with zero
+uncertainty. Full regression suite (77 tests, both gate suites, official `--reps 3`) shows zero
+side effects — dev_corpus unchanged at 100% across all gates.
+
+```
+$ python -m eval.run_all --scenarios eval/scenarios_real_corpus --time-scale 8 --reps 3 --corpus-dir data/corpus
+G2 early retrieval : 11/11 = 100.0%  (false-trigger rate 0.0%)
+G3 multi-intent    : 5/5   = 100.0%
+G4 grounding       : 39/40 = 97.5%  (fabricated=0)
+G5 refinement      : 5/5   = 100.0%
+G6 telemetry cov.  : 25/25 = 100.0%  (schema errors=0)
+VERDICT: PASS
+```
+
+The denominator dropped 42→40 as a direct consequence of the fix: the cancelled retrieval had
+been contributing a spurious extra claim, so the system is now being asked one fewer (wrong)
+question, not scored more leniently on the same set.
+
+**The remaining case** (`gen_multi_intent_003`) is unrelated to this bug: re-traced after the fix,
+decomposition and cancellation are both working correctly for that turn, and the retriever
+genuinely never surfaces the correct chunk (Doc_04 §13) in its top-8 for a query
+("what geometric shape...") that shares zero vocabulary with its answer ("...the parallelogram
+rule..."). This is the retrieval-recall ceiling discussed in §0b/§7 — closing it needs a trained
+extractive QA model or an LLM doing real reasoning, not more lexical tuning. Three prior attempts
+at a semantic-similarity fix for this exact case (word-vector encoder swap, scoped deeper search,
+same-document semantic tie-break) were each tested and reverted after being found to regress
+other cases — see `final_report.md` §6.5 for the full account of those attempts.
 
 ## 1. Test suite
 
@@ -268,7 +323,7 @@ $ python -m eval.run_all --scenarios eval/scenarios_real_corpus --time-scale 8 -
 scenarios run: 15
 G2 early retrieval : 11/11 = 100.0%  (false-trigger rate 0.0%)
 G3 multi-intent    : 5/5   = 100.0%
-G4 grounding       : 40/42 = 95.2%  (fabricated=0)
+G4 grounding       : 39/40 = 97.5%  (fabricated=0)
 G5 refinement      : 5/5   = 100.0%
 G6 telemetry cov.  : 25/25 = 100.0%  (schema errors=0)
 VERDICT: PASS
