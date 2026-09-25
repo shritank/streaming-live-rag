@@ -1,0 +1,81 @@
+{
+  "scenario_id": "gen_multi_intent_013_asr",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "what conviction motivated eliot to move"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " towards secularization how many residential dorms"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " house upper class sophomore jr and"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " sr students"
+      }
+    },
+    {
+      "timestamp_ms": 8300,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 10300,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What conviction motivated Eliot to move towards secularization?",
+          "How many residential dorms house upper class, sophomore, Jr, and Sr students?"
+        ],
+        "expected_citation_docs": [
+          "Doc_06 \u00a78",
+          "Doc_06 \u00a711"
+        ]
+      }
+    }
+  }
+}

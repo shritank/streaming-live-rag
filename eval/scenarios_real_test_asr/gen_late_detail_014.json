@@ -1,0 +1,116 @@
+{
+  "scenario_id": "gen_late_detail_014_asr",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "what type of vote must the"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " council pass in order to approve"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " of any changes recommended by parliament"
+      }
+    },
+    {
+      "timestamp_ms": 7500,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 9000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "also which treaty provides that the"
+      }
+    },
+    {
+      "timestamp_ms": 11400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " european union law be applied to"
+      }
+    },
+    {
+      "timestamp_ms": 13800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " metropolitan territories of member states"
+      }
+    },
+    {
+      "timestamp_ms": 16100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 18100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What type of vote must the Council pass in order to approve of any changes recommended by Parliament? "
+        ],
+        "expected_citation_docs": [
+          "Doc_04 \u00a711"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "Which treaty provides that the European Union law be applied to metropolitan territories of member states?"
+        ],
+        "expected_citation_docs": [
+          "Doc_04 \u00a74"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "scenario_id": "gen_multi_intent_012_asr",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "what is the typical annual cost"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " for an irish private school along"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " with sport and art what is"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " a type of talent scholarship and"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " how are erg\u00e4nzungsschulen funded"
+      }
+    },
+    {
+      "timestamp_ms": 11500,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 13500,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What is the typical annual cost for an Irish private school?",
+          "Along with sport and art, what is a type of talent scholarship?",
+          "How are erg\u00e4nzungsschulen funded?"
+        ],
+        "expected_citation_docs": [
+          "Doc_11 \u00a712",
+          "Doc_11 \u00a71",
+          "Doc_11 \u00a79"
+        ]
+      }
+    }
+  }
+}

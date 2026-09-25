@@ -1,0 +1,59 @@
+{
+ "scenario_id": "hey_u_5ad3f846604f3c001a3ffa5f",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "what engines along with decent engines"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " have overtaking steam engines regards proportion"
+   }
+  },
+  {
+   "timestamp_ms": 5100,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7100,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What engines, along with diesel engines, have overtaken steam engines for gas propulsion?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

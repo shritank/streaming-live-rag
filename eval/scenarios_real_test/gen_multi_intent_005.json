@@ -1,0 +1,81 @@
+{
+  "scenario_id": "gen_multi_intent_005",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Along with diesel engines, what engines"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " have overtaken steam engines for marine"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " propulsion?, What is 565 \u00b0C the"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " creep limit of?"
+      }
+    },
+    {
+      "timestamp_ms": 8700,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 10700,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Along with diesel engines, what engines have overtaken steam engines for marine propulsion?",
+          "What is  565 \u00b0C the creep limit of?"
+        ],
+        "expected_citation_docs": [
+          "Doc_13 \u00a723",
+          "Doc_13 \u00a719"
+        ]
+      }
+    }
+  }
+}

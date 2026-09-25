@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_a_572a1ba46aef05140015528e",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What is held outside the formal"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " legal ownership registration system in many"
+   }
+  },
+  {
+   "timestamp_ms": 4800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " developing countries?"
+   }
+  },
+  {
+   "timestamp_ms": 5900,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7900,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What is held outside the formal legal ownership registration system in many developing countries?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

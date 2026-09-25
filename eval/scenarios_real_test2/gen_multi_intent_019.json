@@ -1,0 +1,110 @@
+{
+  "scenario_id": "gen_multi_intent_019",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "What isn't economic growth sufficient for"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " progress on?, If the average U.S."
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " worker were to complete an additional"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " year of school, what amount of"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " growth would be generated over 5"
+      }
+    },
+    {
+      "timestamp_ms": 12000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " years? and How are incomes distributed"
+      }
+    },
+    {
+      "timestamp_ms": 14400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " in Sweden?"
+      }
+    },
+    {
+      "timestamp_ms": 15500,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 17500,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What isn't economic growth sufficient for progress on?",
+          "If the average U.S. worker were to complete an additional year of school, what amount of growth would be generated over 5 years?",
+          "How are incomes distributed in Sweden?"
+        ],
+        "expected_citation_docs": [
+          "Doc_03 \u00a736",
+          "Doc_03 \u00a710",
+          "Doc_03 \u00a723"
+        ]
+      }
+    }
+  }
+}

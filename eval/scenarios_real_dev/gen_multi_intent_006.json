@@ -1,0 +1,101 @@
+{
+  "scenario_id": "gen_multi_intent_006",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "What were the civil wars caused"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " by the Huguenots called?, What was"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " the most important of these cities"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " or towns? and In what city"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " is the last Huguenot congregation in"
+      }
+    },
+    {
+      "timestamp_ms": 12000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " the US?"
+      }
+    },
+    {
+      "timestamp_ms": 13100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 15100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What were the civil wars caused by the Huguenots called?",
+          "What was the most important of these cities or towns?",
+          "In what city is the last Huguenot congregation in the US?"
+        ],
+        "expected_citation_docs": [
+          "Doc_06 \u00a711",
+          "Doc_06 \u00a74",
+          "Doc_06 \u00a723"
+        ]
+      }
+    }
+  }
+}

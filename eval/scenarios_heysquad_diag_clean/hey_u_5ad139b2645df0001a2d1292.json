@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5ad139b2645df0001a2d1292",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Which branch of the EU has"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " had the least amount of influence"
+   }
+  },
+  {
+   "timestamp_ms": 4800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " on the development of Eu law?"
+   }
+  },
+  {
+   "timestamp_ms": 7500,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9500,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which branch of the EU has had the least amount of influence on the development of Eu law?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

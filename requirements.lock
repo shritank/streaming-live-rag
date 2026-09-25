@@ -1,5 +1,8 @@
-# Pinned runtime + dev dependencies for streaming_rag (Python 3.10-3.12).
-# Regenerate with: pip freeze | grep -f requirements.in > requirements.lock
+# Pinned runtime + dev dependencies for streaming_rag (Python 3.11-3.12:
+# numpy 2.4.6 and pandas 3.0.5 require >= 3.11).
+# Top-level packages only: transitive dependencies are resolved by pip at
+# install time and are NOT pinned here. Every pin below was checked to have a
+# Linux x86_64 CPython 3.12 wheel on PyPI (the Docker target).
 # (kept hand-curated here since this environment mixes package managers)
 
 # --- runtime ---
@@ -8,6 +11,9 @@ jsonschema==4.26.0       # telemetry schema validation (G6)
 httpx==0.28.1            # optional async HTTP transport for real LLM providers
 spacy==3.8.16            # rule-based sentence segmentation (retrieval/text.py); blank
                           # pipeline + sentencizer only, no language model download
+onnxruntime==1.20.1      # e5-small-v2 encoder + ms-marco cross-encoder (retrieval/neural.py)
+tokenizers==0.23.2       # their tokenizer.json files; no torch/transformers needed
+huggingface_hub==1.32.0  # one-time pinned-revision model fetch, then offline reads
 
 # --- data / corpus tooling (data/build_squad_corpus.py) ---
 pandas==3.0.5
@@ -20,3 +26,4 @@ pyarrow==25.0.1
 # --- dev / test ---
 pytest==9.1.1
 pytest-asyncio==1.4.0
+pyyaml==6.0.2            # tests/eval/test_reproducibility.py reads run.yaml

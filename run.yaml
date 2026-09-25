@@ -4,7 +4,7 @@
 # reads — values themselves come from .env (git-ignored), never from here.
 
 name: streaming-live-rag
-python_version: ">=3.10,<3.13"
+python_version: ">=3.11,<3.13"   # numpy 2.4.6 / pandas 3.0.5 need >= 3.11
 requirements: requirements.lock
 
 entry_points:
@@ -23,6 +23,20 @@ env:
   - name: SECRET_LLM_API_KEY
     required: false
     description: "API key for the selected LLM_PROVIDER; unused when LLM_PROVIDER=fake"
+  # neural retrieval (streaming_rag/retrieval/neural.py); models are fetched once with
+  # `python -m streaming_rag.retrieval.neural --fetch` and then read offline
+  - name: STREAMING_RAG_CACHE
+    required: false
+    default: .cache/streaming_rag
+    description: "where cached corpus embeddings are written"
+  - name: STREAMING_RAG_ORT_THREADS
+    required: false
+    default: "4"
+    description: "ONNX Runtime intra-op threads for the encoder and cross-encoder"
+  - name: STREAMING_RAG_ORT_PROVIDER
+    required: false
+    default: cpu
+    description: "cpu (verified default) or cuda (optional; needs onnxruntime-gpu and CUDA 12 libraries, falls back to CPU)"
 
 corpus:
   dev_fixture: fixtures/dev_corpus       # synthetic, format-driven fixture (Task 1)

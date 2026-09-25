@@ -1,0 +1,59 @@
+{
+ "scenario_id": "hey_u_5a894a483b2508001a72a5ac",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "what happens to the norm when"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " a number is multiplied by queu"
+   }
+  },
+  {
+   "timestamp_ms": 5100,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7100,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What happens to the norm when a number is multiplied by Q?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5ad243a7d7d075001a428a09",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What is the term that describes"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the indifference between what higher paid"
+   }
+  },
+  {
+   "timestamp_ms": 4800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " and lower paid professionals earn?"
+   }
+  },
+  {
+   "timestamp_ms": 7100,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9100,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What is the term that describes the indifference between what higher paid and lower paid professionals earn?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

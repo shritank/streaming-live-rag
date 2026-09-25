@@ -69,8 +69,9 @@ def _tokens_cost(trace: list[dict]) -> tuple[int, int, float]:
 
 
 async def run_mode(scenarios: list[Path], mode: str, corpus_dir: str | None, impl: str, time_scale: float,
-                    simulated_latency_ms: float = 0.0) -> dict:
-    config = load_config()
+                    simulated_latency_ms: float = 0.0, overrides: list[str] | None = None) -> dict:
+    from .run_quality import apply_overrides
+    config = apply_overrides(load_config(), overrides or [])
     config.engine.mode = mode
     config.retrieval.simulated_latency_ms = simulated_latency_ms
     if corpus_dir:
@@ -142,6 +143,8 @@ def main(argv=None) -> int:
     parser.add_argument("--time-scale", type=float, default=8.0)
     parser.add_argument("--simulated-latency-ms", type=float, default=0.0,
                          help="artificial per-search delay, models a realistic hosted retrieval backend")
+    parser.add_argument("--set", dest="overrides", action="append", default=[],
+                        help="config override by dotted path, e.g. retrieval.reranker=cross-encoder")
     args = parser.parse_args(argv)
 
     scenarios = discover_scenarios(args.scenarios)
@@ -149,7 +152,7 @@ def main(argv=None) -> int:
 
     async def run_all_modes():
         return [await run_mode(scenarios, m, args.corpus_dir, args.impl, args.time_scale,
-                                 args.simulated_latency_ms) for m in modes]
+                                 args.simulated_latency_ms, args.overrides) for m in modes]
 
     rows = asyncio.run(run_all_modes())
     print_table(rows)

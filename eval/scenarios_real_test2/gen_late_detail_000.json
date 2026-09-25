@@ -1,0 +1,116 @@
+{
+  "scenario_id": "gen_late_detail_000",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "What new Medical Drama helped ABC"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " jump to second place in the"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " ratings during the 2004-2005 season?"
+      }
+    },
+    {
+      "timestamp_ms": 7100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 8600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "Wait, one more thing \u2014 What"
+      }
+    },
+    {
+      "timestamp_ms": 11000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " typeface are the letters in the"
+      }
+    },
+    {
+      "timestamp_ms": 13400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " iconic ABC logo reminiscent of?"
+      }
+    },
+    {
+      "timestamp_ms": 15700,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 17700,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What new Medical Drama helped ABC jump to second place in the ratings during the 2004-2005 season?"
+        ],
+        "expected_citation_docs": [
+          "Doc_00 \u00a730"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "What typeface are the letters in the iconic ABC logo reminiscent of?"
+        ],
+        "expected_citation_docs": [
+          "Doc_00 \u00a728"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "scenario_id": "gen_late_detail_011",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "When was the Cretaceous-Paleogen extinction occur?"
+      }
+    },
+    {
+      "timestamp_ms": 2700,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 4200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "Actually, Turtles and jellyfish can eat"
+      }
+    },
+    {
+      "timestamp_ms": 6600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " large quantities of what?"
+      }
+    },
+    {
+      "timestamp_ms": 8500,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 10500,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "When was the Cretaceous-Paleogen extinction occur?"
+        ],
+        "expected_citation_docs": [
+          "Doc_03 \u00a731"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "Turtles and jellyfish can eat large quantities of what?"
+        ],
+        "expected_citation_docs": [
+          "Doc_03 \u00a726"
+        ]
+      }
+    }
+  }
+}

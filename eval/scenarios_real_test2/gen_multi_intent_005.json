@@ -1,0 +1,92 @@
+{
+  "scenario_id": "gen_multi_intent_005",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Why did British operation fail in"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " 1755, 56, 57?, What was the"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " North American portion of War of"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " Austrian Succession? and Who explored Ohio"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " territory in 1750?"
+      }
+    },
+    {
+      "timestamp_ms": 11100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 13100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Why did British operation fail in 1755, 56, 57?",
+          "What was the North American portion of War of Austrian Succession?",
+          "Who explored Ohio territory in 1750?"
+        ],
+        "expected_citation_docs": [
+          "Doc_04 \u00a73",
+          "Doc_04 \u00a717",
+          "Doc_04 \u00a716"
+        ]
+      }
+    }
+  }
+}

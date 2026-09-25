@@ -1,0 +1,185 @@
+{
+ "scenario_id": "hey_a_5729eb34af94a219006aa6ca",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "which book discussed the theory about"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " low populations and the emmas on"
+   }
+  },
+  {
+   "timestamp_ms": 4800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " lanthorn annes onnas on the amazons"
+   }
+  },
+  {
+   "timestamp_ms": 7200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " on account of that low populations"
+   }
+  },
+  {
+   "timestamp_ms": 9600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " which book discussed the theory about"
+   }
+  },
+  {
+   "timestamp_ms": 12000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " low populations which book discussed the"
+   }
+  },
+  {
+   "timestamp_ms": 14400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the theory about low populations which"
+   }
+  },
+  {
+   "timestamp_ms": 16800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " book discussed the the the theory"
+   }
+  },
+  {
+   "timestamp_ms": 19200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " about low populations which book discussed"
+   }
+  },
+  {
+   "timestamp_ms": 21600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the the the the the the"
+   }
+  },
+  {
+   "timestamp_ms": 24000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the the theory about low population"
+   }
+  },
+  {
+   "timestamp_ms": 26400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " about low populations discussed the discussed"
+   }
+  },
+  {
+   "timestamp_ms": 28800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the discussed the the the the"
+   }
+  },
+  {
+   "timestamp_ms": 31200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the the the the the the"
+   }
+  },
+  {
+   "timestamp_ms": 33600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the the the the the the"
+   }
+  },
+  {
+   "timestamp_ms": 36000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " theory about low"
+   }
+  },
+  {
+   "timestamp_ms": 37500,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 39500,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which book discussed the theory about low populations in the Amazon rainforest?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

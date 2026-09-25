@@ -1,0 +1,107 @@
+{
+  "scenario_id": "gen_late_detail_002",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Where was the Archangel Michael shrine"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " located?"
+      }
+    },
+    {
+      "timestamp_ms": 3100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 4600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "It turns out Who was Ralph"
+      }
+    },
+    {
+      "timestamp_ms": 7000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " in charge of being at war"
+      }
+    },
+    {
+      "timestamp_ms": 9400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " with?"
+      }
+    },
+    {
+      "timestamp_ms": 10100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 12100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Where was the Archangel Michael shrine located?"
+        ],
+        "expected_citation_docs": [
+          "Doc_09 \u00a78"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "Who was Ralph in charge of being at war with?"
+        ],
+        "expected_citation_docs": [
+          "Doc_09 \u00a726"
+        ]
+      }
+    }
+  }
+}

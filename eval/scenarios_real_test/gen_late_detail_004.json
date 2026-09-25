@@ -1,0 +1,116 @@
+{
+  "scenario_id": "gen_late_detail_004",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "What type of vote must the"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " Parliament have to either block or"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " suggest changes to the Commission's proposals?"
+      }
+    },
+    {
+      "timestamp_ms": 7500,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 9000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "It turns out Who is the"
+      }
+    },
+    {
+      "timestamp_ms": 11400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " sole governing authority capable of initiating"
+      }
+    },
+    {
+      "timestamp_ms": 13800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " legislative proposals?"
+      }
+    },
+    {
+      "timestamp_ms": 14900,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 16900,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?"
+        ],
+        "expected_citation_docs": [
+          "Doc_04 \u00a711"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "Who is the sole governing authority capable of initiating legislative proposals?"
+        ],
+        "expected_citation_docs": [
+          "Doc_04 \u00a77"
+        ]
+      }
+    }
+  }
+}

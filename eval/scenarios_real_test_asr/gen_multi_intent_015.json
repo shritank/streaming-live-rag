@@ -1,0 +1,101 @@
+{
+  "scenario_id": "gen_multi_intent_015_asr",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "what contains a nearly verbatim of"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " parliamentary debates what are committees in"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " the scottish parliament compared to other"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " systems and when was the final"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " legislative proposals for a scottish assembly"
+      }
+    },
+    {
+      "timestamp_ms": 12000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " passed"
+      }
+    },
+    {
+      "timestamp_ms": 12700,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 14700,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What contains a nearly verbatim of parliamentary debates?",
+          "What are committees in the Scottish Parliament compared to other systems?",
+          "When was the final legislative proposals for a Scottish Assembly passed?"
+        ],
+        "expected_citation_docs": [
+          "Doc_12 \u00a713",
+          "Doc_12 \u00a719",
+          "Doc_12 \u00a73"
+        ]
+      }
+    }
+  }
+}

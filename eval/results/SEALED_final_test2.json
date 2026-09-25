@@ -1,0 +1,5147 @@
+{
+ "scenario_dir": "eval/scenarios_real_test2",
+ "corpus_dir": "data/corpus_test2",
+ "overrides": [],
+ "wall_s": 141.7,
+ "gates": {
+  "g2": [
+   48,
+   48,
+   0,
+   15
+  ],
+  "g3": [
+   20,
+   20
+  ],
+  "g4": [
+   111,
+   111,
+   0
+  ],
+  "g5": [
+   20,
+   20
+  ],
+  "g6": [
+   90,
+   90
+  ]
+ },
+ "latency_post_utterance_ms": {
+  "p50": 796.9999999986612,
+  "p95": 1391.0000000032596,
+  "n": 75
+ },
+ "raw": {
+  "gen_chit_chat_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_late_detail_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What new Medical Drama helped ABC",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What new Medical Drama helped ABC jump to second place in the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What new Medical Drama helped ABC jump to second place in the ratings during the 2004-2005 season?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What new Medical Drama helped ABC",
+      "What new Medical Drama helped ABC jump to second place in the",
+      "What new Medical Drama helped ABC jump to second place in the ratings during the 2004-2005 season?"
+     ],
+     "answer": "However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox.",
+     "citations": [
+      "Doc_00 \u00a730"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.0,
+       "query": "What typeface are the letters in the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.4,
+       "query": "What typeface are the letters in the iconic ABC logo reminiscent of?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What typeface are the letters in the",
+      "What typeface are the letters in the iconic ABC logo reminiscent of?"
+     ],
+     "answer": "However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox. In 1962, graphic designer Paul Rand redesigned the ABC logo into its best-known (and current) form, with the lowercase letters \"abc\" enclosed in a single black circle.",
+     "citations": [
+      "Doc_00 \u00a728",
+      "Doc_00 \u00a730"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox.",
+       "citations": [
+        "Doc_00 \u00a730"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox.",
+       "citations": [
+        "Doc_00 \u00a730"
+       ]
+      },
+      {
+       "text": "In 1962, graphic designer Paul Rand redesigned the ABC logo into its best-known (and current) form, with the lowercase letters \"abc\" enclosed in a single black circle.",
+       "citations": [
+        "Doc_00 \u00a728"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "New broadcast regulations from the FCC",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "New broadcast regulations from the FCC in 1968 allowed companies to own",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio stations?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "New broadcast regulations from the FCC",
+      "New broadcast regulations from the FCC in 1968 allowed companies to own",
+      "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio",
+      "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio stations?"
+     ],
+     "answer": "In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds.",
+     "citations": [
+      "Doc_00 \u00a792"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.4,
+       "query": "Who originally produced Wide World",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.8,
+       "query": "Who originally produced Wide World of Sports for ABC?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Who originally produced Wide World",
+      "Who originally produced Wide World of Sports for ABC?"
+     ],
+     "answer": "In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds. On April 29, 1961, ABC debuted Wide World of Sports, an anthology series created by Edgar Scherick through his company Sports Programs, Inc. and produced by a young Roone Arledge which featured a different sporting event each broadcast.",
+     "citations": [
+      "Doc_00 \u00a771",
+      "Doc_00 \u00a792"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds.",
+       "citations": [
+        "Doc_00 \u00a792"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds.",
+       "citations": [
+        "Doc_00 \u00a792"
+       ]
+      },
+      {
+       "text": "On April 29, 1961, ABC debuted Wide World of Sports, an anthology series created by Edgar Scherick through his company Sports Programs, Inc. and produced by a young Roone Arledge which featured a different sporting event each broadcast.",
+       "citations": [
+        "Doc_00 \u00a771"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Where was the Archangel Michael shrine",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Where was the Archangel Michael shrine located?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Where was the Archangel Michael shrine",
+      "Where was the Archangel Michael shrine located?"
+     ],
+     "answer": "William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did.",
+     "citations": [
+      "Doc_09 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.6,
+       "query": "Who was Ralph",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.0,
+       "query": "Who was Ralph in charge of being at war",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Who was Ralph",
+      "Who was Ralph in charge of being at war"
+     ],
+     "answer": "William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did. Edward the Confessor had set up the aforementioned Ralph as earl of Hereford and charged him with defending the Marches and warring with the Welsh.",
+     "citations": [
+      "Doc_09 \u00a726",
+      "Doc_09 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did.",
+       "citations": [
+        "Doc_09 \u00a78"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did.",
+       "citations": [
+        "Doc_09 \u00a78"
+       ]
+      },
+      {
+       "text": "Edward the Confessor had set up the aforementioned Ralph as earl of Hereford and charged him with defending the Marches and warring with the Welsh.",
+       "citations": [
+        "Doc_09 \u00a726"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "How concentrated do the hydrogen ions",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How concentrated do the hydrogen ions get in the thylakoid space?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "How concentrated do the hydrogen ions",
+      "How concentrated do the hydrogen ions get in the thylakoid space?"
+     ],
+     "answer": "The molecules between the photosystems harness the electrons' energy to pump hydrogen ions into the thylakoid space, creating a concentration gradient, with more hydrogen ions (up to a thousand times as many) inside the thylakoid system than in the stroma.",
+     "citations": [
+      "Doc_01 \u00a751"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.2,
+       "query": "What plant cells",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.6,
+       "query": "What plant cells have chloroplasts in them?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What plant cells",
+      "What plant cells have chloroplasts in them?"
+     ],
+     "answer": "The molecules between the photosystems harness the electrons' energy to pump hydrogen ions into the thylakoid space, creating a concentration gradient, with more hydrogen ions (up to a thousand times as many) inside the thylakoid system than in the stroma. The plant cells which contain chloroplasts are usually parenchyma cells, though chloroplasts can also be found in collenchyma tissue.",
+     "citations": [
+      "Doc_01 \u00a745",
+      "Doc_01 \u00a751"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The molecules between the photosystems harness the electrons' energy to pump hydrogen ions into the thylakoid space, creating a concentration gradient, with more hydrogen ions (up to a thousand times as many) inside the thylakoid system than in the stroma.",
+       "citations": [
+        "Doc_01 \u00a751"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The molecules between the photosystems harness the electrons' energy to pump hydrogen ions into the thylakoid space, creating a concentration gradient, with more hydrogen ions (up to a thousand times as many) inside the thylakoid system than in the stroma.",
+       "citations": [
+        "Doc_01 \u00a751"
+       ]
+      },
+      {
+       "text": "The plant cells which contain chloroplasts are usually parenchyma cells, though chloroplasts can also be found in collenchyma tissue.",
+       "citations": [
+        "Doc_01 \u00a745"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "start of the salary year?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "start of the salary year?"
+     ],
+     "answer": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.)",
+     "citations": [
+      "Doc_13 \u00a749"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.0,
+       "query": "What has risen to be",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.4,
+       "query": "What has risen to be a factor in teaching today?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What has risen to be",
+      "What has risen to be a factor in teaching today?"
+     ],
+     "answer": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.) The increasing use of technology, specifically the rise of the internet over the past decade, has begun to shape the way teachers approach their roles in the classroom.",
+     "citations": [
+      "Doc_13 \u00a710",
+      "Doc_13 \u00a749"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.)",
+       "citations": [
+        "Doc_13 \u00a749"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.)",
+       "citations": [
+        "Doc_13 \u00a749"
+       ]
+      },
+      {
+       "text": "The increasing use of technology, specifically the rise of the internet over the past decade, has begun to shape the way teachers approach their roles in the classroom.",
+       "citations": [
+        "Doc_13 \u00a710"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What did Luther call the consecrated",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What did Luther call the consecrated bread and wine?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What did Luther call the consecrated",
+      "What did Luther call the consecrated bread and wine?"
+     ],
+     "answer": "Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present.",
+     "citations": [
+      "Doc_08 \u00a770"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.4,
+       "query": "What did Luther use as",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.8,
+       "query": "What did Luther use as accompaniment to his hymns?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What did Luther use as",
+      "What did Luther use as accompaniment to his hymns?"
+     ],
+     "answer": "Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present. He often accompanied the sung hymns with a lute, later recreated as the waldzither that became a national instrument of Germany in the 20th century.",
+     "citations": [
+      "Doc_08 \u00a757",
+      "Doc_08 \u00a770"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present.",
+       "citations": [
+        "Doc_08 \u00a770"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present.",
+       "citations": [
+        "Doc_08 \u00a770"
+       ]
+      },
+      {
+       "text": "He often accompanied the sung hymns with a lute, later recreated as the waldzither that became a national instrument of Germany in the 20th century.",
+       "citations": [
+        "Doc_08 \u00a757"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Who was a man studying medicinal",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Who was a man studying medicinal applicants of plants in Ancient Greece?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Who was a man studying medicinal",
+      "Who was a man studying medicinal applicants of plants in Ancient Greece?"
+     ],
+     "answer": "In Ancient Greece, Diocles of Carystus (4th century BC) was one of several men studying the medicinal properties of plants.",
+     "citations": [
+      "Doc_10 \u00a74"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.0,
+       "query": "medieval Esteve Pharmacy used as at",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.4,
+       "query": "medieval Esteve Pharmacy used as at present?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "medieval Esteve Pharmacy used as at",
+      "medieval Esteve Pharmacy used as at present?"
+     ],
+     "answer": "In Ancient Greece, Diocles of Carystus (4th century BC) was one of several men studying the medicinal properties of plants. The medieval Esteve Pharmacy, located in Ll\u00edvia, a Catalan enclave close to Puigcerd\u00e0, also now a museum, dates back to the 15th century, keeping albarellos from the 16th and 17th centuries, old prescription books and antique drugs.",
+     "citations": [
+      "Doc_10 \u00a74",
+      "Doc_10 \u00a77"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In Ancient Greece, Diocles of Carystus (4th century BC) was one of several men studying the medicinal properties of plants.",
+       "citations": [
+        "Doc_10 \u00a74"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In Ancient Greece, Diocles of Carystus (4th century BC) was one of several men studying the medicinal properties of plants.",
+       "citations": [
+        "Doc_10 \u00a74"
+       ]
+      },
+      {
+       "text": "The medieval Esteve Pharmacy, located in Ll\u00edvia, a Catalan enclave close to Puigcerd\u00e0, also now a museum, dates back to the 15th century, keeping albarellos from the 16th and 17th centuries, old prescription books and antique drugs.",
+       "citations": [
+        "Doc_10 \u00a77"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "single Plastoglobuli called?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "single Plastoglobuli called?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"single Plastoglobuli called?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.2,
+       "query": "What might starch grains be",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 6.6,
+       "query": "What might starch grains be a side effect of?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What might starch grains be",
+      "What might starch grains be a side effect of?"
+     ],
+     "answer": "While linked to low photosynthesis rates, the starch grains themselves may not necessarily interfere significantly with the efficiency of photosynthesis, and might simply be a side effect of another photosynthesis-depressing factor.",
+     "citations": [
+      "Doc_01 \u00a754"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"single Plastoglobuli called?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "While linked to low photosynthesis rates, the starch grains themselves may not necessarily interfere significantly with the efficiency of photosynthesis, and might simply be a side effect of another photosynthesis-depressing factor.",
+       "citations": [
+        "Doc_01 \u00a754"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What two radio networks did RCA",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What two radio networks did RCA"
+     ],
+     "answer": "The last was owned by electronics manufacturer Radio Corporation of America (RCA), which owned two radio networks that each ran different varieties of programming, NBC Blue and NBC Red.",
+     "citations": [
+      "Doc_00 \u00a74"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.6,
+       "query": "Which of ABC's",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.0,
+       "query": "Which of ABC's main production facilities is located in",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "Which of ABC's main production facilities is located in Hollywood, CA?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Which of ABC's",
+      "Which of ABC's main production facilities is located in",
+      "Which of ABC's main production facilities is located in Hollywood, CA?"
+     ],
+     "answer": "The last was owned by electronics manufacturer Radio Corporation of America (RCA), which owned two radio networks that each ran different varieties of programming, NBC Blue and NBC Red. Since the 1950s, ABC has had two main production facilities: the ABC Television Center (now The Prospect Studios) on Prospect Avenue in Hollywood, California, shared with the operations of KABC-TV until 1999; and the ABC Television Center, East, a set of studios located throughout the New York City.",
+     "citations": [
+      "Doc_00 \u00a74",
+      "Doc_00 \u00a778"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The last was owned by electronics manufacturer Radio Corporation of America (RCA), which owned two radio networks that each ran different varieties of programming, NBC Blue and NBC Red.",
+       "citations": [
+        "Doc_00 \u00a74"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The last was owned by electronics manufacturer Radio Corporation of America (RCA), which owned two radio networks that each ran different varieties of programming, NBC Blue and NBC Red.",
+       "citations": [
+        "Doc_00 \u00a74"
+       ]
+      },
+      {
+       "text": "Since the 1950s, ABC has had two main production facilities: the ABC Television Center (now The Prospect Studios) on Prospect Avenue in Hollywood, California, shared with the operations of KABC-TV until 1999; and the ABC Television Center, East, a set of studios located throughout the New York City.",
+       "citations": [
+        "Doc_00 \u00a778"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "How did Celeron feel about Native",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How did Celeron feel about Native relations?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "How did Celeron feel about Native",
+      "How did Celeron feel about Native relations?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How did Celeron feel about Native relations?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.0,
+       "query": "Why did British operation fail in 1755",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "Why did British operation fail in 1755, 56, 57?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Why did British operation fail in 1755",
+      "Why did British operation fail in 1755, 56, 57?"
+     ],
+     "answer": "British operations in 1755, 1756 and 1757 in the frontier areas of Pennsylvania and New York all failed, due to a combination of poor management, internal divisions, and effective Canadian scouts, French regular forces, and Indian warrior allies.",
+     "citations": [
+      "Doc_04 \u00a73"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How did Celeron feel about Native relations?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "British operations in 1755, 1756 and 1757 in the frontier areas of Pennsylvania and New York all failed, due to a combination of poor management, internal divisions, and effective Canadian scouts, French regular forces, and Indian warrior allies.",
+       "citations": [
+        "Doc_04 \u00a73"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "important factor contributing",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "important factor contributing to inequality for individuals?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "important factor contributing",
+      "important factor contributing to inequality for individuals?"
+     ],
+     "answer": "An important factor in the creation of inequality is variation in individuals' access to education.",
+     "citations": [
+      "Doc_03 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.8,
+       "query": "Higher",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "Higher rates of health",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "social problems higher rates health",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.6,
+       "query": "social problems are just two of examples of higher rates health",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.0,
+       "query": "Higher rates of health and social problems are just two of examples of effects from what?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Higher",
+      "Higher rates of health",
+      "social problems higher rates health",
+      "social problems are just two of examples of higher rates health",
+      "Higher rates of health and social problems are just two of examples of effects from what?"
+     ],
+     "answer": "An important factor in the creation of inequality is variation in individuals' access to education. Effects of inequality researchers have found include higher rates of health and social problems, and lower rates of social goods, a lower level of economic utility in society from resources devoted on high-end consumption, and even a lower level of economic growth when human capital is neglected for high-end consumption.",
+     "citations": [
+      "Doc_03 \u00a720",
+      "Doc_03 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "An important factor in the creation of inequality is variation in individuals' access to education.",
+       "citations": [
+        "Doc_03 \u00a79"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "An important factor in the creation of inequality is variation in individuals' access to education.",
+       "citations": [
+        "Doc_03 \u00a79"
+       ]
+      },
+      {
+       "text": "Effects of inequality researchers have found include higher rates of health and social problems, and lower rates of social goods, a lower level of economic utility in society from resources devoted on high-end consumption, and even a lower level of economic growth when human capital is neglected for high-end consumption.",
+       "citations": [
+        "Doc_03 \u00a720"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "molecular outputs for",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "molecular outputs for photosynthesis?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "molecular outputs for",
+      "molecular outputs for photosynthesis?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"molecular outputs for photosynthesis?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.6,
+       "query": "How many major chloroplast replication",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.0,
+       "query": "How many major chloroplast replication models have been suggested?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "How many major chloroplast replication",
+      "How many major chloroplast replication models have been suggested?"
+     ],
+     "answer": "The mechanism for chloroplast DNA (cpDNA) replication has not been conclusively determined, but two main models have been proposed.",
+     "citations": [
+      "Doc_01 \u00a723"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"molecular outputs for photosynthesis?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The mechanism for chloroplast DNA (cpDNA) replication has not been conclusively determined, but two main models have been proposed.",
+       "citations": [
+        "Doc_01 \u00a723"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What website are teachers using to",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What website are teachers using to sell their lesson plans?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What website are teachers using to",
+      "What website are teachers using to sell their lesson plans?"
+     ],
+     "answer": "Also, with the advent of the internet, many teachers are now selling their lesson plans to other teachers through the web in order to earn supplemental income, most notably on TeachersPayTeachers.com.",
+     "citations": [
+      "Doc_13 \u00a753"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.2,
+       "query": "What function is a teacher's role similar",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What function is a teacher's role similar"
+     ],
+     "answer": "Also, with the advent of the internet, many teachers are now selling their lesson plans to other teachers through the web in order to earn supplemental income, most notably on TeachersPayTeachers.com. The function of the teacher is to pressure the lazy, inspire the bored, deflate the cocky, encourage the timid, detect and correct individual flaws, and broaden the viewpoint of all.",
+     "citations": [
+      "Doc_13 \u00a712",
+      "Doc_13 \u00a753"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Also, with the advent of the internet, many teachers are now selling their lesson plans to other teachers through the web in order to earn supplemental income, most notably on TeachersPayTeachers.com.",
+       "citations": [
+        "Doc_13 \u00a753"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Also, with the advent of the internet, many teachers are now selling their lesson plans to other teachers through the web in order to earn supplemental income, most notably on TeachersPayTeachers.com.",
+       "citations": [
+        "Doc_13 \u00a753"
+       ]
+      },
+      {
+       "text": "The function of the teacher is to pressure the lazy, inspire the bored, deflate the cocky, encourage the timid, detect and correct individual flaws, and broaden the viewpoint of all.",
+       "citations": [
+        "Doc_13 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What term best describes southern California's",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What term best describes southern California's collection of landscapes?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What term best describes southern California's",
+      "What term best describes southern California's collection of landscapes?"
+     ],
+     "answer": "Southern California consists of one of the more varied collections of geologic, topographic, and natural ecosystem landscapes in a diversity outnumbering other major regions in the state and country.",
+     "citations": [
+      "Doc_12 \u00a718"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.4,
+       "query": "Other than Downtown San Bernardino",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.8,
+       "query": "University Town downtown san bernardino",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "name of another business district in",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 12.6,
+       "query": "Other than Downtown San Bernardino, and University Town, what is the name of another business district in the San Bernardino-Riverside area?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Other than Downtown San Bernardino",
+      "University Town downtown san bernardino",
+      "name of another business district in",
+      "Other than Downtown San Bernardino, and University Town, what is the name of another business district in the San Bernardino-Riverside area?"
+     ],
+     "answer": "Southern California consists of one of the more varied collections of geologic, topographic, and natural ecosystem landscapes in a diversity outnumbering other major regions in the state and country. The San Bernardino-Riverside area maintains the business districts of Downtown San Bernardino, Hospitality Business/Financial Centre, University Town which are in San Bernardino and Downtown Riverside.",
+     "citations": [
+      "Doc_12 \u00a718",
+      "Doc_12 \u00a729"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Southern California consists of one of the more varied collections of geologic, topographic, and natural ecosystem landscapes in a diversity outnumbering other major regions in the state and country.",
+       "citations": [
+        "Doc_12 \u00a718"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Southern California consists of one of the more varied collections of geologic, topographic, and natural ecosystem landscapes in a diversity outnumbering other major regions in the state and country.",
+       "citations": [
+        "Doc_12 \u00a718"
+       ]
+      },
+      {
+       "text": "The San Bernardino-Riverside area maintains the business districts of Downtown San Bernardino, Hospitality Business/Financial Centre, University Town which are in San Bernardino and Downtown Riverside.",
+       "citations": [
+        "Doc_12 \u00a729"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Where did Luther say that the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Where did Luther say that the soul doesn't sleep",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Where did Luther say that the soul doesn't sleep, but rather has visions?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Where did Luther say that the",
+      "Where did Luther say that the soul doesn't sleep",
+      "Where did Luther say that the soul doesn't sleep, but rather has visions?"
+     ],
+     "answer": "Luther's Commentary on Genesis contains a passage which concludes that \"the soul does not sleep (anima non sic dormit), but wakes (sed vigilat) and experiences visions\".",
+     "citations": [
+      "Doc_08 \u00a768"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.0,
+       "query": "Who spoke to Luther about",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "Who spoke to Luther about his books on behalf of the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.8,
+       "query": "Who spoke to Luther about his books on behalf of the Empire?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Who spoke to Luther about",
+      "Who spoke to Luther about his books on behalf of the",
+      "Who spoke to Luther about his books on behalf of the Empire?"
+     ],
+     "answer": "Luther's Commentary on Genesis contains a passage which concludes that \"the soul does not sleep (anima non sic dormit), but wakes (sed vigilat) and experiences visions\". Johann Eck, speaking on behalf of the Empire as assistant of the Archbishop of Trier, presented Luther with copies of his writings laid out on a table and asked him if the books were his, and whether he stood by their contents.",
+     "citations": [
+      "Doc_08 \u00a727",
+      "Doc_08 \u00a768"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Luther's Commentary on Genesis contains a passage which concludes that \"the soul does not sleep (anima non sic dormit), but wakes (sed vigilat) and experiences visions\".",
+       "citations": [
+        "Doc_08 \u00a768"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Luther's Commentary on Genesis contains a passage which concludes that \"the soul does not sleep (anima non sic dormit), but wakes (sed vigilat) and experiences visions\".",
+       "citations": [
+        "Doc_08 \u00a768"
+       ]
+      },
+      {
+       "text": "Johann Eck, speaking on behalf of the Empire as assistant of the Archbishop of Trier, presented Luther with copies of his writings laid out on a table and asked him if the books were his, and whether he stood by their contents.",
+       "citations": [
+        "Doc_08 \u00a727"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What was the significance of British",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What was the significance of British win?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What was the significance of British",
+      "What was the significance of British win?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the significance of British win?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.0,
+       "query": "What was William Johnson's role in British",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "What was William Johnson's role in British military?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What was William Johnson's role in British",
+      "What was William Johnson's role in British military?"
+     ],
+     "answer": "The British Superintendent for Indian Affairs in the New York region and beyond, Johnson was known to the Iroquois as Warraghiggey, meaning \"He who does great things.\"",
+     "citations": [
+      "Doc_04 \u00a720"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the significance of British win?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The British Superintendent for Indian Affairs in the New York region and beyond, Johnson was known to the Iroquois as Warraghiggey, meaning \"He who does great things.\"",
+       "citations": [
+        "Doc_04 \u00a720"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "When was the salary range listed",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "When was the salary range listed valid for (month and year)?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "When was the salary range listed",
+      "When was the salary range listed valid for (month and year)?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"When was the salary range listed valid for (month and year)?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.2,
+       "query": "Who is responsible for education",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.6,
+       "query": "Who is responsible for education in the country of Australia?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Who is responsible for education",
+      "Who is responsible for education in the country of Australia?"
+     ],
+     "answer": "Education in Australia is primarily the responsibility of the individual states and territories.",
+     "citations": [
+      "Doc_13 \u00a740"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"When was the salary range listed valid for (month and year)?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Education in Australia is primarily the responsibility of the individual states and territories.",
+       "citations": [
+        "Doc_13 \u00a740"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "first major bend",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "first major bend in the Rhine called?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "first major bend",
+      "first major bend in the Rhine called?"
+     ],
+     "answer": "In the centre of Basel, the first major city in the course of the stream, is located the \"Rhine knee\"; this is a major bend, where the overall direction of the Rhine changes from West to North.",
+     "citations": [
+      "Doc_11 \u00a710"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.2,
+       "query": "When did the Rhine stop being the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.6,
+       "query": "When did the Rhine stop being the Roman boundary?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "When did the Rhine stop being the",
+      "When did the Rhine stop being the Roman boundary?"
+     ],
+     "answer": "In the centre of Basel, the first major city in the course of the stream, is located the \"Rhine knee\"; this is a major bend, where the overall direction of the Rhine changes from West to North. From the death of Augustus in AD 14 until after AD 70, Rome accepted as her Germanic frontier the water-boundary of the Rhine and upper Danube.",
+     "citations": [
+      "Doc_11 \u00a710",
+      "Doc_11 \u00a737"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In the centre of Basel, the first major city in the course of the stream, is located the \"Rhine knee\"; this is a major bend, where the overall direction of the Rhine changes from West to North.",
+       "citations": [
+        "Doc_11 \u00a710"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In the centre of Basel, the first major city in the course of the stream, is located the \"Rhine knee\"; this is a major bend, where the overall direction of the Rhine changes from West to North.",
+       "citations": [
+        "Doc_11 \u00a710"
+       ]
+      },
+      {
+       "text": "From the death of Augustus in AD 14 until after AD 70, Rome accepted as her Germanic frontier the water-boundary of the Rhine and upper Danube.",
+       "citations": [
+        "Doc_11 \u00a737"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "In 1755 what fort did British",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "In 1755 what fort did British capture?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "In 1755 what fort did British",
+      "In 1755 what fort did British capture?"
+     ],
+     "answer": "In 1755, the British captured Fort Beaus\u00e9jour on the border separating Nova Scotia from Acadia; soon afterward they ordered the expulsion of the Acadians.",
+     "citations": [
+      "Doc_04 \u00a73"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.0,
+       "query": "How many Frenchman won Battle of Carillon?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "How many Frenchman won Battle of Carillon?"
+     ],
+     "answer": "In 1755, the British captured Fort Beaus\u00e9jour on the border separating Nova Scotia from Acadia; soon afterward they ordered the expulsion of the Acadians. The third invasion was stopped with the improbable French victory in the Battle of Carillon, in which 3,600 Frenchmen famously and decisively defeated Abercrombie's force of 18,000 regulars, militia and Native American allies outside the fort the French called Carillon and the British called Ticonderoga.",
+     "citations": [
+      "Doc_04 \u00a73",
+      "Doc_04 \u00a739"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1755, the British captured Fort Beaus\u00e9jour on the border separating Nova Scotia from Acadia; soon afterward they ordered the expulsion of the Acadians.",
+       "citations": [
+        "Doc_04 \u00a73"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1755, the British captured Fort Beaus\u00e9jour on the border separating Nova Scotia from Acadia; soon afterward they ordered the expulsion of the Acadians.",
+       "citations": [
+        "Doc_04 \u00a73"
+       ]
+      },
+      {
+       "text": "The third invasion was stopped with the improbable French victory in the Battle of Carillon, in which 3,600 Frenchmen famously and decisively defeated Abercrombie's force of 18,000 regulars, militia and Native American allies outside the fort the French called Carillon and the British called Ticonderoga.",
+       "citations": [
+        "Doc_04 \u00a739"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "How many base pairs are there",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How many base pairs are there in Synechococcus DNA?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "How many base pairs are there",
+      "How many base pairs are there in Synechococcus DNA?"
+     ],
+     "answer": "Chromatophore DNA is about a million base pairs long, containing around 850 protein encoding genes\u2014far less than the three million base pair Synechococcus genome, but much larger than the approximately 150,000 base pair genome of the more assimilated chloroplast.",
+     "citations": [
+      "Doc_01 \u00a720"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.4,
+       "query": "What did Lepidodinium",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.8,
+       "query": "What did Lepidodinium viride lose?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What did Lepidodinium",
+      "What did Lepidodinium viride lose?"
+     ],
+     "answer": "Chromatophore DNA is about a million base pairs long, containing around 850 protein encoding genes\u2014far less than the three million base pair Synechococcus genome, but much larger than the approximately 150,000 base pair genome of the more assimilated chloroplast. Lepidodinium viride and its close relatives are dinophytes that lost their original peridinin chloroplast and replaced it with a green algal derived chloroplast (more specifically, a prasinophyte).",
+     "citations": [
+      "Doc_01 \u00a719",
+      "Doc_01 \u00a720"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Chromatophore DNA is about a million base pairs long, containing around 850 protein encoding genes\u2014far less than the three million base pair Synechococcus genome, but much larger than the approximately 150,000 base pair genome of the more assimilated chloroplast.",
+       "citations": [
+        "Doc_01 \u00a720"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Chromatophore DNA is about a million base pairs long, containing around 850 protein encoding genes\u2014far less than the three million base pair Synechococcus genome, but much larger than the approximately 150,000 base pair genome of the more assimilated chloroplast.",
+       "citations": [
+        "Doc_01 \u00a720"
+       ]
+      },
+      {
+       "text": "Lepidodinium viride and its close relatives are dinophytes that lost their original peridinin chloroplast and replaced it with a green algal derived chloroplast (more specifically, a prasinophyte).",
+       "citations": [
+        "Doc_01 \u00a719"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_multi_intent_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What contributed to the decreased inequality",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What contributed to the decreased inequality between trained and untrained workers?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What type of outcomes can even stable",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What type of outcomes can even stable markets lead to?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What contributed to the decreased inequality",
+      "What contributed to the decreased inequality between trained and untrained workers?",
+      "What type of outcomes can even stable",
+      "What type of outcomes can even stable markets lead to?"
+     ],
+     "answer": "This decrease in wages caused a period of compression and decreased inequality between skilled and unskilled workers. Markets, by themselves, even when they are stable, often lead to high levels of inequality, outcomes that are widely viewed as unfair.\"",
+     "citations": [
+      "Doc_03 \u00a711",
+      "Doc_03 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "This decrease in wages caused a period of compression and decreased inequality between skilled and unskilled workers.",
+       "citations": [
+        "Doc_03 \u00a711"
+       ]
+      },
+      {
+       "text": "Markets, by themselves, even when they are stable, often lead to high levels of inequality, outcomes that are widely viewed as unfair.\"",
+       "citations": [
+        "Doc_03 \u00a75"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Where was Ralph earl of?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "When did Edward return?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What was the name of the leader ennobled",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What was the name of the leader ennobled by Henry III",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Where was Ralph earl of?",
+      "When did Edward return?",
+      "What was the name of the leader ennobled",
+      "What was the name of the leader ennobled by Henry III"
+     ],
+     "answer": "Edward the Confessor had set up the aforementioned Ralph as earl of Hereford and charged him with defending the Marches and warring with the Welsh. When finally Edward the Confessor returned from his father's refuge in 1041, at the invitation of his half-brother Harthacnut, he brought with him a Norman-educated mind. The Drengot family thereafter attained the principality of Capua, and emperor Henry III legally ennobled the Hauteville leader, Drogo, as \"dux et magister Italiae comesque Normannorum totius Apuliae et Calabriae\" (\"Duke and Master of Italy and Count of the Normans of all Apulia and Calabria\") in 1047.",
+     "citations": [
+      "Doc_09 \u00a720",
+      "Doc_09 \u00a726",
+      "Doc_09 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Edward the Confessor had set up the aforementioned Ralph as earl of Hereford and charged him with defending the Marches and warring with the Welsh.",
+       "citations": [
+        "Doc_09 \u00a726"
+       ]
+      },
+      {
+       "text": "When finally Edward the Confessor returned from his father's refuge in 1041, at the invitation of his half-brother Harthacnut, he brought with him a Norman-educated mind.",
+       "citations": [
+        "Doc_09 \u00a720"
+       ]
+      },
+      {
+       "text": "The Drengot family thereafter attained the principality of Capua, and emperor Henry III legally ennobled the Hauteville leader, Drogo, as \"dux et magister Italiae comesque Normannorum totius Apuliae et Calabriae\" (\"Duke and Master of Italy and Count of the Normans of all Apulia and Calabria\") in 1047.",
+       "citations": [
+        "Doc_09 \u00a79"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What did the NIF try to",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What did the NIF try to unify Islamist opposition against?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What was apolitical Islam?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What did Maududi nif try unify islamist",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What did Maududi believe Muslim society could not be",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "What did Maududi believe Muslim society could not be Islamic in the absence of?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What did the NIF try to",
+      "What did the NIF try to unify Islamist opposition against?",
+      "What was apolitical Islam?",
+      "What did Maududi nif try unify islamist",
+      "What did Maududi believe Muslim society could not be",
+      "What did Maududi believe Muslim society could not be Islamic in the absence of?"
+     ],
+     "answer": "The NIF regime also harbored Osama bin Laden for a time (before 9/11), and worked to unify Islamist opposition to the American attack on Iraq in the 1991 Gulf War. Similarly, a writer for the International Crisis Group maintains that \"the conception of 'political Islam'\" is a creation of Americans to explain the Iranian Islamic Revolution and apolitical Islam was a historical fluke of the \"short-lived era of the heyday of secular Arab nationalism between 1945 and 1970\", and it is quietist/non-political Islam, not Islamism, that requires explanation. Maududi also believed that Muslim society could not be Islamic without Sharia, and Islam required the establishment of an Islamic state.",
+     "citations": [
+      "Doc_07 \u00a713",
+      "Doc_07 \u00a729",
+      "Doc_07 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The NIF regime also harbored Osama bin Laden for a time (before 9/11), and worked to unify Islamist opposition to the American attack on Iraq in the 1991 Gulf War.",
+       "citations": [
+        "Doc_07 \u00a729"
+       ]
+      },
+      {
+       "text": "Similarly, a writer for the International Crisis Group maintains that \"the conception of 'political Islam'\" is a creation of Americans to explain the Iranian Islamic Revolution and apolitical Islam was a historical fluke of the \"short-lived era of the heyday of secular Arab nationalism between 1945 and 1970\", and it is quietist/non-political Islam, not Islamism, that requires explanation.",
+       "citations": [
+        "Doc_07 \u00a75"
+       ]
+      },
+      {
+       "text": "Maududi also believed that Muslim society could not be Islamic without Sharia, and Islam required the establishment of an Islamic state.",
+       "citations": [
+        "Doc_07 \u00a713"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "most important type",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "most important type of Norman art preserved in churches?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What part of France were the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What part of France were the Normans located?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "most important type",
+      "most important type of Norman art preserved in churches?",
+      "What part of France were the",
+      "What part of France were the Normans located?"
+     ],
+     "answer": "Many churches preserve sculptured fonts, capitals, and more importantly mosaics, which were common in Norman Italy and drew heavily on the Greek heritage. The area corresponded to the northern part of present-day Upper Normandy down to the river Seine, but the Duchy would eventually extend west beyond the Seine.",
+     "citations": [
+      "Doc_09 \u00a74",
+      "Doc_09 \u00a743"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Many churches preserve sculptured fonts, capitals, and more importantly mosaics, which were common in Norman Italy and drew heavily on the Greek heritage.",
+       "citations": [
+        "Doc_09 \u00a743"
+       ]
+      },
+      {
+       "text": "The area corresponded to the northern part of present-day Upper Normandy down to the river Seine, but the Duchy would eventually extend west beyond the Seine.",
+       "citations": [
+        "Doc_09 \u00a74"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "exchange of a set of obligations between two or",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "exchange of a set of obligations between two or more parties?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Construction involves the translation exchange set obligations between",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "process of constructing a building or",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "process of constructing a building or infrastructure?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "exchange of a set of obligations between two or",
+      "exchange of a set of obligations between two or more parties?",
+      "Construction involves the translation exchange set obligations between",
+      "process of constructing a building or",
+      "process of constructing a building or infrastructure?"
+     ],
+     "answer": "A contract is the exchange of a set of obligations between two or more parties, but it is not so simple a matter as trying to get the other side to agree to as much as possible in exchange for as little as possible. Construction is the process of constructing a building or infrastructure.",
+     "citations": [
+      "Doc_02 \u00a71",
+      "Doc_02 \u00a715"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Construction involves the translation exchange set obligations between\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Construction involves the translation exchange set obligations between\".",
+     "claims": [
+      {
+       "text": "A contract is the exchange of a set of obligations between two or more parties, but it is not so simple a matter as trying to get the other side to agree to as much as possible in exchange for as little as possible.",
+       "citations": [
+        "Doc_02 \u00a715"
+       ]
+      },
+      {
+       "text": "Construction is the process of constructing a building or infrastructure.",
+       "citations": [
+        "Doc_02 \u00a71"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Why did British operation fail in",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Why did British operation fail in 1755, 56, 57?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What was the North American portion of War of",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What was the North American portion of War of Austrian Succession?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "Who explored Ohio",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "Who explored Ohio territory in 1750?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Why did British operation fail in",
+      "Why did British operation fail in 1755, 56, 57?",
+      "What was the North American portion of War of",
+      "What was the North American portion of War of Austrian Succession?",
+      "Who explored Ohio",
+      "Who explored Ohio territory in 1750?"
+     ],
+     "answer": "British operations in 1755, 1756 and 1757 in the frontier areas of Pennsylvania and New York all failed, due to a combination of poor management, internal divisions, and effective Canadian scouts, French regular forces, and Indian warrior allies. The War of the Austrian Succession (whose North American theater is known as King George's War) formally ended in 1748 with the signing of the Treaty of Aix-la-Chapelle. In 1750 Christopher Gist, acting on behalf of both Virginia and the company, explored the Ohio territory and opened negotiations with the Indian tribes at Logstown.",
+     "citations": [
+      "Doc_04 \u00a716",
+      "Doc_04 \u00a717",
+      "Doc_04 \u00a73"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "British operations in 1755, 1756 and 1757 in the frontier areas of Pennsylvania and New York all failed, due to a combination of poor management, internal divisions, and effective Canadian scouts, French regular forces, and Indian warrior allies.",
+       "citations": [
+        "Doc_04 \u00a73"
+       ]
+      },
+      {
+       "text": "The War of the Austrian Succession (whose North American theater is known as King George's War) formally ended in 1748 with the signing of the Treaty of Aix-la-Chapelle.",
+       "citations": [
+        "Doc_04 \u00a717"
+       ]
+      },
+      {
+       "text": "In 1750 Christopher Gist, acting on behalf of both Virginia and the company, explored the Ohio territory and opened negotiations with the Indian tribes at Logstown.",
+       "citations": [
+        "Doc_04 \u00a716"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "some examples of undesirable",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "some examples of undesirable end results of a project?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "procedure continues until what? examples undesirable end results",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "some examples of undesirable",
+      "some examples of undesirable end results of a project?",
+      "procedure continues until what? examples undesirable end results"
+     ],
+     "answer": "Although building construction projects typically include various common elements, such as design, financial, estimating and legal considerations, many projects of varying sizes reach undesirable end results, such as structural collapse, cost overruns, and/or litigation.",
+     "citations": [
+      "Doc_02 \u00a76"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Although building construction projects typically include various common elements, such as design, financial, estimating and legal considerations, many projects of varying sizes reach undesirable end results, such as structural collapse, cost overruns, and/or litigation.",
+       "citations": [
+        "Doc_02 \u00a76"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "lowest ranking one",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "lowest ranking one of the counties could have in",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "lowest ranking one of the counties could have in terms of most populous counties in",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "lowest ranking one of the counties could have in terms of most populous counties in the United States?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "rugby lowest ranking one counties",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "rugby rapidly becoming with high schools?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "Which organizations most commonly divide and",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "Which organizations most commonly divide and promote the state?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "lowest ranking one",
+      "lowest ranking one of the counties could have in",
+      "lowest ranking one of the counties could have in terms of most populous counties in",
+      "lowest ranking one of the counties could have in terms of most populous counties in the United States?",
+      "rugby lowest ranking one counties",
+      "rugby rapidly becoming with high schools?",
+      "Which organizations most commonly divide and",
+      "Which organizations most commonly divide and promote the state?"
+     ],
+     "answer": "Rugby is also a growing sport in southern California, particularly at the high school level, with increasing numbers of schools adding rugby as an official school sport. The state is most commonly divided and promoted by its regional tourism groups as consisting of northern, central, and southern California regions.",
+     "citations": [
+      "Doc_12 \u00a714",
+      "Doc_12 \u00a739"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"lowest ranking one of the counties could have in terms of most populous counties in the United States?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"lowest ranking one of the counties could have in terms of most populous counties in the United States?\".",
+     "claims": [
+      {
+       "text": "Rugby is also a growing sport in southern California, particularly at the high school level, with increasing numbers of schools adding rugby as an official school sport.",
+       "citations": [
+        "Doc_12 \u00a739"
+       ]
+      },
+      {
+       "text": "The state is most commonly divided and promoted by its regional tourism groups as consisting of northern, central, and southern California regions.",
+       "citations": [
+        "Doc_12 \u00a714"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Who spoke to Luther about his",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Who spoke to Luther about his books on behalf of the Empire?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "How did Der Sturmer describe Luther's",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "How did Der Sturmer describe Luther's On the Jews",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "use of spoke luther books behalf",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "How did Der Sturmer describe Luther's On the Jews and their Lies",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "use of the law by the Holy Spirit?",
+       "trigger": "multi_intent"
+      }
+     ],
+     "sub_queries": [
+      "Who spoke to Luther about his",
+      "Who spoke to Luther about his books on behalf of the Empire?",
+      "How did Der Sturmer describe Luther's",
+      "How did Der Sturmer describe Luther's On the Jews",
+      "use of spoke luther books behalf",
+      "How did Der Sturmer describe Luther's On the Jews and their Lies",
+      "use of the law by the Holy Spirit?"
+     ],
+     "answer": "Johann Eck, speaking on behalf of the Empire as assistant of the Archbishop of Trier, presented Luther with copies of his writings laid out on a table and asked him if the books were his, and whether he stood by their contents. The city of Nuremberg presented a first edition of On the Jews and their Lies to Julius Streicher, editor of the Nazi newspaper Der St\u00fcrmer, on his birthday in 1937; the newspaper described it as the most radically anti-Semitic tract ever published.",
+     "citations": [
+      "Doc_08 \u00a727",
+      "Doc_08 \u00a784"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"use of the law by the Holy Spirit?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "multi_intent"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"use of the law by the Holy Spirit?\".",
+     "claims": [
+      {
+       "text": "Johann Eck, speaking on behalf of the Empire as assistant of the Archbishop of Trier, presented Luther with copies of his writings laid out on a table and asked him if the books were his, and whether he stood by their contents.",
+       "citations": [
+        "Doc_08 \u00a727"
+       ]
+      },
+      {
+       "text": "The city of Nuremberg presented a first edition of On the Jews and their Lies to Julius Streicher, editor of the Nazi newspaper Der St\u00fcrmer, on his birthday in 1937; the newspaper described it as the most radically anti-Semitic tract ever published.",
+       "citations": [
+        "Doc_08 \u00a784"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What native chief travelled to French",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What native chief travelled to French fort and threatened Marin?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Where did British resettle many Acadians?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What native chief travelled to French",
+      "What native chief travelled to French fort and threatened Marin?",
+      "Where did British resettle many Acadians?"
+     ],
+     "answer": "Traveling to Fort Le Boeuf, he threatened the French with military action, which Marin contemptuously dismissed. The British resettled many Acadians throughout its North American provinces, but many went to France, and some went to New Orleans, which they had expected to remain French.",
+     "citations": [
+      "Doc_04 \u00a719",
+      "Doc_04 \u00a744"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Traveling to Fort Le Boeuf, he threatened the French with military action, which Marin contemptuously dismissed.",
+       "citations": [
+        "Doc_04 \u00a719"
+       ]
+      },
+      {
+       "text": "The British resettled many Acadians throughout its North American provinces, but many went to France, and some went to New Orleans, which they had expected to remain French.",
+       "citations": [
+        "Doc_04 \u00a744"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What magnitude was the 1994 Northridge",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What magnitude was the 1994 Northridge earthquake?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "name of magnitude 1994 northridge earthquake",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "name of the border to the south?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What magnitude was the 1994 Northridge",
+      "What magnitude was the 1994 Northridge earthquake?",
+      "name of magnitude 1994 northridge earthquake",
+      "name of the border to the south?"
+     ],
+     "answer": "The magnitude 6.7 1994 Northridge earthquake was particularly destructive, causing a substantial number of deaths, injuries, and structural collapses. To the south is the Mexico\u2013United States border.",
+     "citations": [
+      "Doc_12 \u00a719",
+      "Doc_12 \u00a74"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The magnitude 6.7 1994 Northridge earthquake was particularly destructive, causing a substantial number of deaths, injuries, and structural collapses.",
+       "citations": [
+        "Doc_12 \u00a719"
+       ]
+      },
+      {
+       "text": "To the south is the Mexico\u2013United States border.",
+       "citations": [
+        "Doc_12 \u00a74"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Dutch architect Janjaap Ruijssenaars's performative architecture",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be built when?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "Focus on what is to ameliorate the many problems that dutch architect janjaap ruijssenaars",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "Focus on what is to ameliorate the many problems that arise from the often highly competitive dutch architect janjaap ruijssenaars",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "adversarial practices within the construction dutch architect janjaap ruijssenaars",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "adversarial practices within the construction industry dutch architect janjaap ruijssenaars",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 16.8,
+       "query": "In what year did ENR compile data in nine market dutch architect janjaap ruijssenaars",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 19.2,
+       "query": "Focus on what is to ameliorate the many problems that arise from the often highly competitive and adversarial practices within the construction industry. and In what year did ENR compile data in nine market segments? dutch architect janjaap ruijssenaars",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Dutch architect Janjaap Ruijssenaars's performative architecture",
+      "Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be",
+      "Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be built when?",
+      "Focus on what is to ameliorate the many problems that dutch architect janjaap ruijssenaars",
+      "Focus on what is to ameliorate the many problems that arise from the often highly competitive dutch architect janjaap ruijssenaars",
+      "adversarial practices within the construction dutch architect janjaap ruijssenaars",
+      "adversarial practices within the construction industry dutch architect janjaap ruijssenaars",
+      "In what year did ENR compile data in nine market dutch architect janjaap ruijssenaars",
+      "Focus on what is to ameliorate the many problems that arise from the often highly competitive and adversarial practices within the construction industry. and In what year did ENR compile data in nine market segments? dutch architect janjaap ruijssenaars"
+     ],
+     "answer": "Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be built in 2014. The focus on co-operation is to ameliorate the many problems that arise from the often highly competitive and adversarial practices within the construction industry.",
+     "citations": [
+      "Doc_02 \u00a716",
+      "Doc_02 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be built in 2014.",
+       "citations": [
+        "Doc_02 \u00a78"
+       ]
+      },
+      {
+       "text": "The focus on co-operation is to ameliorate the many problems that arise from the often highly competitive and adversarial practices within the construction industry.",
+       "citations": [
+        "Doc_02 \u00a716"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "common punishment in",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "common punishment in Singapore?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "three major",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "three major traditions present in Christianity?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "common punishment in",
+      "common punishment in Singapore?",
+      "three major",
+      "three major traditions present in Christianity?"
+     ],
+     "answer": "Currently detention is one of the most common punishments in schools in the United States, the UK, Ireland, Singapore and other countries.",
+     "citations": [
+      "Doc_13 \u00a720"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"three major traditions present in Christianity?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"three major traditions present in Christianity?\".",
+     "claims": [
+      {
+       "text": "Currently detention is one of the most common punishments in schools in the United States, the UK, Ireland, Singapore and other countries.",
+       "citations": [
+        "Doc_13 \u00a720"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What can construction projects suffer from?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Construction takes place on location for projects suffer",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What can construction projects suffer from?",
+      "Construction takes place on location for projects suffer"
+     ],
+     "answer": "Construction projects can suffer from preventable financial problems.",
+     "citations": [
+      "Doc_02 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Construction projects can suffer from preventable financial problems.",
+       "citations": [
+        "Doc_02 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What were Isaac's chains made out",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "When did Robert Crispin go",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "When did Robert Crispin go up against the Turks?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "Who was Count of Melfi",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What were Isaac's chains made out",
+      "When did Robert Crispin go",
+      "When did Robert Crispin go up against the Turks?",
+      "Who was Count of Melfi"
+     ],
+     "answer": "Isaac surrendered and was confined with silver chains, because Richard had promised that he would not place him in irons. In the 1060s, Robert Crispin led the Normans of Edessa against the Turks. He promptly awarded their elected leader, William Iron Arm, with the title of count in his capital of Melfi.",
+     "citations": [
+      "Doc_09 \u00a713",
+      "Doc_09 \u00a732",
+      "Doc_09 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Isaac surrendered and was confined with silver chains, because Richard had promised that he would not place him in irons.",
+       "citations": [
+        "Doc_09 \u00a732"
+       ]
+      },
+      {
+       "text": "In the 1060s, Robert Crispin led the Normans of Edessa against the Turks.",
+       "citations": [
+        "Doc_09 \u00a713"
+       ]
+      },
+      {
+       "text": "He promptly awarded their elected leader, William Iron Arm, with the title of count in his capital of Melfi.",
+       "citations": [
+        "Doc_09 \u00a79"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "When was the Last Glacial Maximum?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Where does the Rhine empty?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "When was the Last Glacial Maximum?",
+      "Where does the Rhine empty?"
+     ],
+     "answer": "The last glacial ran from ~74,000 (BP = Before Present), until the end of the Pleistocene (~11,600 BP).",
+     "citations": [
+      "Doc_11 \u00a729"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Where does the Rhine empty?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Where does the Rhine empty?\".",
+     "claims": [
+      {
+       "text": "The last glacial ran from ~74,000 (BP = Before Present), until the end of the Pleistocene (~11,600 BP).",
+       "citations": [
+        "Doc_11 \u00a729"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "In the layered model of the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "In the layered model of the Earth there are seismic discontinuities in",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "In the layered model of the Earth there are seismic discontinuities in which layer?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Which timeline is layered model earth seismic",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "Which timeline is further expanded in the fourth scale?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "In the layered model of the",
+      "In the layered model of the Earth there are seismic discontinuities in",
+      "In the layered model of the Earth there are seismic discontinuities in which layer?",
+      "Which timeline is layered model earth seismic",
+      "Which timeline is further expanded in the fourth scale?"
+     ],
+     "answer": "These advances led to the development of a layered model of the Earth, with a crust and lithosphere on top, the mantle below (separated within itself by seismic discontinuities at 410 and 660 kilometers), and the outer core and inner core below that. The Holocene (the latest epoch) is too small to be shown clearly on the third timeline on the right, another reason for expanding the fourth scale.",
+     "citations": [
+      "Doc_05 \u00a74",
+      "Doc_05 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "These advances led to the development of a layered model of the Earth, with a crust and lithosphere on top, the mantle below (separated within itself by seismic discontinuities at 410 and 660 kilometers), and the outer core and inner core below that.",
+       "citations": [
+        "Doc_05 \u00a74"
+       ]
+      },
+      {
+       "text": "The Holocene (the latest epoch) is too small to be shown clearly on the third timeline on the right, another reason for expanding the fourth scale.",
+       "citations": [
+        "Doc_05 \u00a75"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What did the richest 400 Americans",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What did the richest 400 Americans have as children that helped them",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What did the richest 400 Americans have as children that helped them be successful adults?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What do a number of researchers think a shortage",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "What do a number of researchers think a shortage of is caused in part by",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "What do a number of researchers think a shortage of is caused in part by income inequality?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "In order to be considered in the top percentile richest 400 americans children",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 16.8,
+       "query": "person would need to amass richest 400 americans children",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 19.2,
+       "query": "In order to be considered in the top percentile, a person would need to amass how much money each year? richest 400 americans children",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What did the richest 400 Americans",
+      "What did the richest 400 Americans have as children that helped them",
+      "What did the richest 400 Americans have as children that helped them be successful adults?",
+      "What do a number of researchers think a shortage",
+      "What do a number of researchers think a shortage of is caused in part by",
+      "What do a number of researchers think a shortage of is caused in part by income inequality?",
+      "In order to be considered in the top percentile richest 400 americans children",
+      "person would need to amass richest 400 americans children",
+      "In order to be considered in the top percentile, a person would need to amass how much money each year? richest 400 americans children"
+     ],
+     "answer": "A number of researchers (David Rodda, Jacob Vigdor, and Janna Matlack), argue that a shortage of affordable housing \u2013 at least in the US \u2013 is caused in part by income inequality. In September 2012, according to the Institute for Policy Studies, \"over 60 percent\" of the Forbes richest 400 Americans \"grew up in substantial privilege\".",
+     "citations": [
+      "Doc_03 \u00a72",
+      "Doc_03 \u00a738"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What did the richest 400 Americans have as children that helped them be successful adults?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What did the richest 400 Americans have as children that helped them be successful adults?\".",
+     "claims": [
+      {
+       "text": "A number of researchers (David Rodda, Jacob Vigdor, and Janna Matlack), argue that a shortage of affordable housing \u2013 at least in the US \u2013 is caused in part by income inequality.",
+       "citations": [
+        "Doc_03 \u00a738"
+       ]
+      },
+      {
+       "text": "In September 2012, according to the Institute for Policy Studies, \"over 60 percent\" of the Forbes richest 400 Americans \"grew up in substantial privilege\".",
+       "citations": [
+        "Doc_03 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What type of writings did the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What type of writings did the reading of the Qur'an bring out",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What type of writings did the reading of the Qur'an bring out in Luther?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What did Martin Luther's",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What did Martin Luther's marriage allow?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "Where did Luther go on 17 July 1505?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What type of writings did the",
+      "What type of writings did the reading of the Qur'an bring out",
+      "What type of writings did the reading of the Qur'an bring out in Luther?",
+      "What did Martin Luther's",
+      "What did Martin Luther's marriage allow?",
+      "Where did Luther go on 17 July 1505?"
+     ],
+     "answer": "In 1542, Luther read a Latin translation of the Qur'an. Some priests and former religious had already married, including Andreas Karlstadt and Justus Jonas, but Luther's wedding set the seal of approval on clerical marriage. He left law school, sold his books, and entered a closed Augustinian cloister in Erfurt on 17 July 1505.",
+     "citations": [
+      "Doc_08 \u00a745",
+      "Doc_08 \u00a77",
+      "Doc_08 \u00a775"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1542, Luther read a Latin translation of the Qur'an.",
+       "citations": [
+        "Doc_08 \u00a775"
+       ]
+      },
+      {
+       "text": "Some priests and former religious had already married, including Andreas Karlstadt and Justus Jonas, but Luther's wedding set the seal of approval on clerical marriage.",
+       "citations": [
+        "Doc_08 \u00a745"
+       ]
+      },
+      {
+       "text": "He left law school, sold his books, and entered a closed Augustinian cloister in Erfurt on 17 July 1505.",
+       "citations": [
+        "Doc_08 \u00a77"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What isn't economic growth sufficient for",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What isn't economic growth sufficient for progress on?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "If the average U.S. worker were to complete an additional isn economic growth sufficient",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "If the average U.S. worker were to complete an additional year of school isn economic growth sufficient",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what amount of isn economic growth sufficient",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "what amount of growth would be generated over 5",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "If the average U.S. worker were to complete an additional year of school, what amount of growth would be generated over 5 years? isn economic sufficient",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "How are incomes distributed",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "How are incomes distributed in Sweden?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What isn't economic growth sufficient for",
+      "What isn't economic growth sufficient for progress on?",
+      "If the average U.S. worker were to complete an additional isn economic growth sufficient",
+      "If the average U.S. worker were to complete an additional year of school isn economic growth sufficient",
+      "what amount of isn economic growth sufficient",
+      "what amount of growth would be generated over 5",
+      "If the average U.S. worker were to complete an additional year of school, what amount of growth would be generated over 5 years? isn economic sufficient",
+      "How are incomes distributed",
+      "How are incomes distributed in Sweden?"
+     ],
+     "answer": "In the words of the Secretary General of the United Nations Ban Ki-Moon: \"While economic growth is necessary, it is not sufficient for progress on reducing poverty.\" It estimated that if the average United States worker had completed just one more year of school, it would add an additional $105 billion in growth to the country's economy over five years.",
+     "citations": [
+      "Doc_03 \u00a710",
+      "Doc_03 \u00a736"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How are incomes distributed in Sweden?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How are incomes distributed in Sweden?\".",
+     "claims": [
+      {
+       "text": "In the words of the Secretary General of the United Nations Ban Ki-Moon: \"While economic growth is necessary, it is not sufficient for progress on reducing poverty.\"",
+       "citations": [
+        "Doc_03 \u00a736"
+       ]
+      },
+      {
+       "text": "It estimated that if the average United States worker had completed just one more year of school, it would add an additional $105 billion in growth to the country's economy over five years.",
+       "citations": [
+        "Doc_03 \u00a710"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_suppression_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What new Medical Drama helped ABC",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What new Medical Drama helped ABC jump to second place in the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What new Medical Drama helped ABC jump to second place in the ratings during the 2004-2005 season?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What new Medical Drama helped ABC",
+      "What new Medical Drama helped ABC jump to second place in the",
+      "What new Medical Drama helped ABC jump to second place in the ratings during the 2004-2005 season?"
+     ],
+     "answer": "However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox.",
+     "citations": [
+      "Doc_00 \u00a730"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox. [Doc_00 \u00a730]",
+     "citations": [
+      "Doc_00 \u00a730"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox.",
+       "citations": [
+        "Doc_00 \u00a730"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "However, during the 2004\u201305 season, the network experienced unexpected success with new series such as Desperate Housewives, Lost and Grey's Anatomy as well as reality series Dancing with the Stars, which helped ABC rise to second place, jumping ahead of CBS, but behind a surging Fox.",
+       "citations": [
+        "Doc_00 \u00a730"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "another name for teaching",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "another name for teaching within the family?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "another name for teaching",
+      "another name for teaching within the family?"
+     ],
+     "answer": "Teaching may be carried out informally, within the family, which is called homeschooling, or in the wider community.",
+     "citations": [
+      "Doc_13 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 Teaching may be carried out informally, within the family, which is called homeschooling, or in the wider community. [Doc_13 \u00a75]",
+     "citations": [
+      "Doc_13 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Teaching may be carried out informally, within the family, which is called homeschooling, or in the wider community.",
+       "citations": [
+        "Doc_13 \u00a75"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Teaching may be carried out informally, within the family, which is called homeschooling, or in the wider community.",
+       "citations": [
+        "Doc_13 \u00a75"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "New broadcast regulations from the FCC",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "New broadcast regulations from the FCC in 1968 allowed companies to own",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio stations?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "New broadcast regulations from the FCC",
+      "New broadcast regulations from the FCC in 1968 allowed companies to own",
+      "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio",
+      "New broadcast regulations from the FCC in 1968 allowed companies to own a maximum of how many radio stations?"
+     ],
+     "answer": "In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds.",
+     "citations": [
+      "Doc_00 \u00a792"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds. [Doc_00 \u00a792]",
+     "citations": [
+      "Doc_00 \u00a792"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds.",
+       "citations": [
+        "Doc_00 \u00a792"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1968, ABC took advantage of new FCC ownership regulations that allowed broadcasting companies to own a maximum of seven radio stations nationwide in order to purchase Houston radio stations KXYZ and KXYZ-FM for $1 million in shares and $1.5 million in bonds.",
+       "citations": [
+        "Doc_00 \u00a792"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "French name for",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "French name for the Rhine?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "French name for",
+      "French name for the Rhine?"
+     ],
+     "answer": "The variant forms of the name of the Rhine in modern languages are all derived from the Gaulish name R\u0113nos, which was adapted in Roman-era geography (1st century BC) as Greek \u1fec\u1fc6\u03bd\u03bf\u03c2 (Rh\u0113nos), Latin Rhenus.[note 3] The spelling with Rh- in English Rhine as well as in German Rhein and French Rhin is due to the influence of Greek orthography, while the vocalisation -i- is due to the Proto-Germanic adoption of the Gaulish name as *R\u012bnaz, via Old Frankish giving Old English R\u00edn, Old High German R\u012bn, Dutch Rijn (formerly also spelled Rhijn)).",
+     "citations": [
+      "Doc_11 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "The variant forms of the name of the Rhine in modern languages are all derived from the Gaulish name R\u0113nos, which was adapted in Roman-era geography (1st century BC) as Greek \u1fec\u1fc6\u03bd\u03bf\u03c2 (Rh\u0113nos), Latin Rhenus.[note 3] The spelling with Rh- in English Rhine as well as in German Rhein and French Rhin is due to the influence of Greek orthography, while the vocalisation -i- is due to the Proto-Germanic adoption of the Gaulish name as *R\u012bnaz, via Old Frankish giving Old English R\u00edn, Old High German R\u012bn, Dutch Rijn (formerly also spelled Rhijn)).",
+     "citations": [
+      "Doc_11 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The variant forms of the name of the Rhine in modern languages are all derived from the Gaulish name R\u0113nos, which was adapted in Roman-era geography (1st century BC) as Greek \u1fec\u1fc6\u03bd\u03bf\u03c2 (Rh\u0113nos), Latin Rhenus.[note 3] The spelling with Rh- in English Rhine as well as in German Rhein and French Rhin is due to the influence of Greek orthography, while the vocalisation -i- is due to the Proto-Germanic adoption of the Gaulish name as *R\u012bnaz, via Old Frankish giving Old English R\u00edn, Old High German R\u012bn, Dutch Rijn (formerly also spelled Rhijn)).",
+       "citations": [
+        "Doc_11 \u00a72"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The variant forms of the name of the Rhine in modern languages are all derived from the Gaulish name R\u0113nos, which was adapted in Roman-era geography (1st century BC) as Greek \u1fec\u1fc6\u03bd\u03bf\u03c2 (Rh\u0113nos), Latin Rhenus.[note 3] The spelling with Rh- in English Rhine as well as in German Rhein and French Rhin is due to the influence of Greek orthography, while the vocalisation -i- is due to the Proto-Germanic adoption of the Gaulish name as *R\u012bnaz, via Old Frankish giving Old English R\u00edn, Old High German R\u012bn, Dutch Rijn (formerly also spelled Rhijn)).",
+       "citations": [
+        "Doc_11 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Where was the Archangel Michael shrine",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Where was the Archangel Michael shrine located?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Where was the Archangel Michael shrine",
+      "Where was the Archangel Michael shrine located?"
+     ],
+     "answer": "William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did.",
+     "citations": [
+      "Doc_09 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did. [Doc_09 \u00a78]",
+     "citations": [
+      "Doc_09 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did.",
+       "citations": [
+        "Doc_09 \u00a78"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "William of Apulia tells that, in 1016, Norman pilgrims to the shrine of the Archangel Michael at Monte Gargano were met by Melus of Bari, a Lombard nobleman and rebel, who persuaded them to return with more warriors to help throw off the Byzantine rule, which they did.",
+       "citations": [
+        "Doc_09 \u00a78"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What do radical Islamist organizations reject",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What do radical Islamist organizations reject entirely?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What do radical Islamist organizations reject",
+      "What do radical Islamist organizations reject entirely?"
+     ],
+     "answer": "Radical Islamist organizations like al-Qaeda and the Egyptian Islamic Jihad, and groups such as the Taliban, entirely reject democracy, often declaring as kuffar those Muslims who support it (see takfirism), as well as calling for violent/offensive jihad or urging and conducting attacks on a religious basis.",
+     "citations": [
+      "Doc_07 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 Radical Islamist organizations like al-Qaeda and the Egyptian Islamic Jihad, and groups such as the Taliban, entirely reject democracy, often declaring as kuffar those Muslims who support it (see takfirism), as well as calling for violent/offensive jihad or urging and conducting attacks on a religious basis. [Doc_07 \u00a72]",
+     "citations": [
+      "Doc_07 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Radical Islamist organizations like al-Qaeda and the Egyptian Islamic Jihad, and groups such as the Taliban, entirely reject democracy, often declaring as kuffar those Muslims who support it (see takfirism), as well as calling for violent/offensive jihad or urging and conducting attacks on a religious basis.",
+       "citations": [
+        "Doc_07 \u00a72"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Radical Islamist organizations like al-Qaeda and the Egyptian Islamic Jihad, and groups such as the Taliban, entirely reject democracy, often declaring as kuffar those Muslims who support it (see takfirism), as well as calling for violent/offensive jihad or urging and conducting attacks on a religious basis.",
+       "citations": [
+        "Doc_07 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What did Iqbal's Allahabad address inspire?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What did Iqbal's Allahabad address inspire?"
+     ],
+     "answer": "In his Allahabad Address on 29 December 1930, Iqbal outlined a vision of an independent state for Muslim-majority provinces in northwestern India.",
+     "citations": [
+      "Doc_07 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "In his Allahabad Address on 29 December 1930, Iqbal outlined a vision of an independent state for Muslim-majority provinces in northwestern India.",
+     "citations": [
+      "Doc_07 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In his Allahabad Address on 29 December 1930, Iqbal outlined a vision of an independent state for Muslim-majority provinces in northwestern India.",
+       "citations": [
+        "Doc_07 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In his Allahabad Address on 29 December 1930, Iqbal outlined a vision of an independent state for Muslim-majority provinces in northwestern India.",
+       "citations": [
+        "Doc_07 \u00a711"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "start of the salary year?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "start of the salary year?"
+     ],
+     "answer": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.)",
+     "citations": [
+      "Doc_13 \u00a749"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.) [Doc_13 \u00a749]",
+     "citations": [
+      "Doc_13 \u00a749"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.)",
+       "citations": [
+        "Doc_13 \u00a749"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For the salary year beginning April 2008, unpromoted teachers in Scotland earned from \u00a320,427 for a Probationer, up to \u00a332,583 after 6 years teaching, but could then go on to earn up to \u00a339,942 as they complete the modules to earn Chartered Teacher Status (requiring at least 6 years at up to two modules per year.)",
+       "citations": [
+        "Doc_13 \u00a749"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "New ownership rules by the FCC",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "New ownership rules by the FCC in 1985 allowed broadcasters to own",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "New ownership rules by the FCC in 1985 allowed broadcasters to own a maximum of how many stations?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "New ownership rules by the FCC",
+      "New ownership rules by the FCC in 1985 allowed broadcasters to own",
+      "New ownership rules by the FCC in 1985 allowed broadcasters to own a maximum of how many stations?"
+     ],
+     "answer": "Due to an FCC ban on same-market ownership of television and radio stations by a single company (although the deal would have otherwise complied with new ownership rules implemented by the FCC in January 1985, that allowed broadcasters to own a maximum of 12 television stations), ABC and Capital Cities respectively decided to sell WXYZ-TV and Tampa independent station WFTS-TV to the E. W. Scripps Company (although Capital Cities/ABC originally intended to seek a cross-ownership waiver to retain WXYZ and Capital Cities-owned radio stations WJR and WHYT).",
+     "citations": [
+      "Doc_00 \u00a788"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "Due to an FCC ban on same-market ownership of television and radio stations by a single company (although the deal would have otherwise complied with new ownership rules implemented by the FCC in January 1985, that allowed broadcasters to own a maximum of 12 television stations), ABC and Capital Cities respectively decided to sell WXYZ-TV and Tampa independent station WFTS-TV to the E. W. Scripps Company (although Capital Cities/ABC originally intended to seek a cross-ownership waiver to retain WXYZ and Capital Cities-owned radio stations WJR and WHYT).",
+     "citations": [
+      "Doc_00 \u00a788"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Due to an FCC ban on same-market ownership of television and radio stations by a single company (although the deal would have otherwise complied with new ownership rules implemented by the FCC in January 1985, that allowed broadcasters to own a maximum of 12 television stations), ABC and Capital Cities respectively decided to sell WXYZ-TV and Tampa independent station WFTS-TV to the E. W. Scripps Company (although Capital Cities/ABC originally intended to seek a cross-ownership waiver to retain WXYZ and Capital Cities-owned radio stations WJR and WHYT).",
+       "citations": [
+        "Doc_00 \u00a788"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Due to an FCC ban on same-market ownership of television and radio stations by a single company (although the deal would have otherwise complied with new ownership rules implemented by the FCC in January 1985, that allowed broadcasters to own a maximum of 12 television stations), ABC and Capital Cities respectively decided to sell WXYZ-TV and Tampa independent station WFTS-TV to the E. W. Scripps Company (although Capital Cities/ABC originally intended to seek a cross-ownership waiver to retain WXYZ and Capital Cities-owned radio stations WJR and WHYT).",
+       "citations": [
+        "Doc_00 \u00a788"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What did Luther call the consecrated",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What did Luther call the consecrated bread and wine?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What did Luther call the consecrated",
+      "What did Luther call the consecrated bread and wine?"
+     ],
+     "answer": "Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present.",
+     "citations": [
+      "Doc_08 \u00a770"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present. [Doc_08 \u00a770]",
+     "citations": [
+      "Doc_08 \u00a770"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present.",
+       "citations": [
+        "Doc_08 \u00a770"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Luther insisted on the Real Presence of the body and blood of Christ in the consecrated bread and wine, which he called the sacramental union, while his opponents believed God to be only spiritually or symbolically present.",
+       "citations": [
+        "Doc_08 \u00a770"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_unanswerable_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "parking validation policy",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "parking validation policy for visiting contractors?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "parking validation policy",
+      "parking validation policy for visiting contractors?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "parking validation policy",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "parking validation policy for visiting contractors?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "parking validation policy",
+      "parking validation policy for visiting contractors?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "company's stance on",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "company's stance on interstellar travel expenses?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "company's stance on",
+      "company's stance on interstellar travel expenses?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"company's stance on interstellar travel expenses?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"company's stance on interstellar travel expenses?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "parking validation policy",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "parking validation policy for visiting contractors?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "parking validation policy",
+      "parking validation policy for visiting contractors?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "parking validation policy",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "parking validation policy for visiting contractors?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "parking validation policy",
+      "parking validation policy for visiting contractors?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  }
+ },
+ "quality": {
+  "answer": {
+   "k": 78,
+   "n": 102,
+   "rate": 0.7647058823529411,
+   "ci": [
+    0.6737161802309318,
+    0.8364801886826144
+   ]
+  },
+  "citation": {
+   "k": 83,
+   "n": 102,
+   "rate": 0.8137254901960784,
+   "ci": [
+    0.7272970187923337,
+    0.8773801591792768
+   ]
+  },
+  "claim_correct": {
+   "k": 84,
+   "n": 86,
+   "rate": 0.9767441860465116,
+   "ci": [
+    0.9191182859198535,
+    0.993599207980522
+   ]
+  },
+  "abstention": {
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci": [
+    0.5655085052479191,
+    1.0
+   ]
+  },
+  "split_exact": {
+   "k": 18,
+   "n": 20,
+   "rate": 0.9,
+   "ci": [
+    0.6989617935882066,
+    0.9721341060158468
+   ]
+  },
+  "oversplit": {
+   "k": 0,
+   "n": 35,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.09890426758938868
+   ]
+  },
+  "claim_words": {
+   "mean": 31.313953488372093,
+   "n": 86
+  }
+ },
+ "items": {
+  "answer": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 0,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 1,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 1,
+   "gen_late_detail_004|u1:0": 1,
+   "gen_late_detail_004|u2:0": 1,
+   "gen_late_detail_005|u1:0": 1,
+   "gen_late_detail_005|u2:0": 1,
+   "gen_late_detail_006|u1:0": 1,
+   "gen_late_detail_006|u2:0": 1,
+   "gen_late_detail_007|u1:0": 0,
+   "gen_late_detail_007|u2:0": 1,
+   "gen_late_detail_008|u1:0": 1,
+   "gen_late_detail_008|u2:0": 1,
+   "gen_late_detail_009|u1:0": 0,
+   "gen_late_detail_009|u2:0": 1,
+   "gen_late_detail_010|u1:0": 1,
+   "gen_late_detail_010|u2:0": 1,
+   "gen_late_detail_011|u1:0": 0,
+   "gen_late_detail_011|u2:0": 1,
+   "gen_late_detail_012|u1:0": 1,
+   "gen_late_detail_012|u2:0": 0,
+   "gen_late_detail_013|u1:0": 1,
+   "gen_late_detail_013|u2:0": 1,
+   "gen_late_detail_014|u1:0": 1,
+   "gen_late_detail_014|u2:0": 1,
+   "gen_late_detail_015|u1:0": 0,
+   "gen_late_detail_015|u2:0": 1,
+   "gen_late_detail_016|u1:0": 0,
+   "gen_late_detail_016|u2:0": 1,
+   "gen_late_detail_017|u1:0": 1,
+   "gen_late_detail_017|u2:0": 0,
+   "gen_late_detail_018|u1:0": 1,
+   "gen_late_detail_018|u2:0": 1,
+   "gen_late_detail_019|u1:0": 1,
+   "gen_late_detail_019|u2:0": 1,
+   "gen_multi_intent_000|u1:0": 1,
+   "gen_multi_intent_000|u1:1": 1,
+   "gen_multi_intent_001|u1:0": 1,
+   "gen_multi_intent_001|u1:1": 1,
+   "gen_multi_intent_001|u1:2": 1,
+   "gen_multi_intent_002|u1:0": 1,
+   "gen_multi_intent_002|u1:1": 1,
+   "gen_multi_intent_002|u1:2": 1,
+   "gen_multi_intent_003|u1:0": 1,
+   "gen_multi_intent_003|u1:1": 0,
+   "gen_multi_intent_004|u1:0": 1,
+   "gen_multi_intent_004|u1:1": 0,
+   "gen_multi_intent_004|u1:2": 1,
+   "gen_multi_intent_005|u1:0": 1,
+   "gen_multi_intent_005|u1:1": 1,
+   "gen_multi_intent_005|u1:2": 1,
+   "gen_multi_intent_006|u1:0": 0,
+   "gen_multi_intent_006|u1:1": 1,
+   "gen_multi_intent_006|u1:2": 0,
+   "gen_multi_intent_007|u1:0": 0,
+   "gen_multi_intent_007|u1:1": 1,
+   "gen_multi_intent_007|u1:2": 1,
+   "gen_multi_intent_008|u1:0": 1,
+   "gen_multi_intent_008|u1:1": 1,
+   "gen_multi_intent_008|u1:2": 0,
+   "gen_multi_intent_009|u1:0": 0,
+   "gen_multi_intent_009|u1:1": 1,
+   "gen_multi_intent_010|u1:0": 1,
+   "gen_multi_intent_010|u1:1": 1,
+   "gen_multi_intent_011|u1:0": 1,
+   "gen_multi_intent_011|u1:1": 1,
+   "gen_multi_intent_011|u1:2": 1,
+   "gen_multi_intent_012|u1:0": 1,
+   "gen_multi_intent_012|u1:1": 0,
+   "gen_multi_intent_013|u1:0": 1,
+   "gen_multi_intent_013|u1:1": 0,
+   "gen_multi_intent_014|u1:0": 1,
+   "gen_multi_intent_014|u1:1": 1,
+   "gen_multi_intent_014|u1:2": 1,
+   "gen_multi_intent_015|u1:0": 0,
+   "gen_multi_intent_015|u1:1": 0,
+   "gen_multi_intent_016|u1:0": 1,
+   "gen_multi_intent_016|u1:1": 0,
+   "gen_multi_intent_017|u1:0": 1,
+   "gen_multi_intent_017|u1:1": 1,
+   "gen_multi_intent_017|u1:2": 0,
+   "gen_multi_intent_018|u1:0": 0,
+   "gen_multi_intent_018|u1:1": 1,
+   "gen_multi_intent_018|u1:2": 1,
+   "gen_multi_intent_019|u1:0": 1,
+   "gen_multi_intent_019|u1:1": 1,
+   "gen_multi_intent_019|u1:2": 0,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 1,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 1,
+   "gen_suppression_004|u1:0": 1,
+   "gen_suppression_005|u1:0": 1,
+   "gen_suppression_006|u1:0": 0,
+   "gen_suppression_007|u1:0": 1,
+   "gen_suppression_008|u1:0": 1,
+   "gen_suppression_009|u1:0": 1
+  },
+  "citation": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 1,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 1,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 1,
+   "gen_late_detail_004|u1:0": 1,
+   "gen_late_detail_004|u2:0": 1,
+   "gen_late_detail_005|u1:0": 1,
+   "gen_late_detail_005|u2:0": 1,
+   "gen_late_detail_006|u1:0": 1,
+   "gen_late_detail_006|u2:0": 1,
+   "gen_late_detail_007|u1:0": 0,
+   "gen_late_detail_007|u2:0": 1,
+   "gen_late_detail_008|u1:0": 1,
+   "gen_late_detail_008|u2:0": 1,
+   "gen_late_detail_009|u1:0": 0,
+   "gen_late_detail_009|u2:0": 1,
+   "gen_late_detail_010|u1:0": 1,
+   "gen_late_detail_010|u2:0": 1,
+   "gen_late_detail_011|u1:0": 0,
+   "gen_late_detail_011|u2:0": 1,
+   "gen_late_detail_012|u1:0": 1,
+   "gen_late_detail_012|u2:0": 1,
+   "gen_late_detail_013|u1:0": 1,
+   "gen_late_detail_013|u2:0": 1,
+   "gen_late_detail_014|u1:0": 1,
+   "gen_late_detail_014|u2:0": 1,
+   "gen_late_detail_015|u1:0": 0,
+   "gen_late_detail_015|u2:0": 1,
+   "gen_late_detail_016|u1:0": 0,
+   "gen_late_detail_016|u2:0": 1,
+   "gen_late_detail_017|u1:0": 1,
+   "gen_late_detail_017|u2:0": 1,
+   "gen_late_detail_018|u1:0": 1,
+   "gen_late_detail_018|u2:0": 1,
+   "gen_late_detail_019|u1:0": 1,
+   "gen_late_detail_019|u2:0": 1,
+   "gen_multi_intent_000|u1:0": 1,
+   "gen_multi_intent_000|u1:1": 1,
+   "gen_multi_intent_001|u1:0": 1,
+   "gen_multi_intent_001|u1:1": 1,
+   "gen_multi_intent_001|u1:2": 1,
+   "gen_multi_intent_002|u1:0": 1,
+   "gen_multi_intent_002|u1:1": 1,
+   "gen_multi_intent_002|u1:2": 1,
+   "gen_multi_intent_003|u1:0": 1,
+   "gen_multi_intent_003|u1:1": 0,
+   "gen_multi_intent_004|u1:0": 1,
+   "gen_multi_intent_004|u1:1": 0,
+   "gen_multi_intent_004|u1:2": 1,
+   "gen_multi_intent_005|u1:0": 1,
+   "gen_multi_intent_005|u1:1": 1,
+   "gen_multi_intent_005|u1:2": 1,
+   "gen_multi_intent_006|u1:0": 0,
+   "gen_multi_intent_006|u1:1": 1,
+   "gen_multi_intent_006|u1:2": 0,
+   "gen_multi_intent_007|u1:0": 0,
+   "gen_multi_intent_007|u1:1": 1,
+   "gen_multi_intent_007|u1:2": 1,
+   "gen_multi_intent_008|u1:0": 1,
+   "gen_multi_intent_008|u1:1": 1,
+   "gen_multi_intent_008|u1:2": 0,
+   "gen_multi_intent_009|u1:0": 1,
+   "gen_multi_intent_009|u1:1": 1,
+   "gen_multi_intent_010|u1:0": 1,
+   "gen_multi_intent_010|u1:1": 1,
+   "gen_multi_intent_011|u1:0": 1,
+   "gen_multi_intent_011|u1:1": 1,
+   "gen_multi_intent_011|u1:2": 0,
+   "gen_multi_intent_012|u1:0": 1,
+   "gen_multi_intent_012|u1:1": 0,
+   "gen_multi_intent_013|u1:0": 1,
+   "gen_multi_intent_013|u1:1": 0,
+   "gen_multi_intent_014|u1:0": 1,
+   "gen_multi_intent_014|u1:1": 1,
+   "gen_multi_intent_014|u1:2": 1,
+   "gen_multi_intent_015|u1:0": 0,
+   "gen_multi_intent_015|u1:1": 0,
+   "gen_multi_intent_016|u1:0": 1,
+   "gen_multi_intent_016|u1:1": 1,
+   "gen_multi_intent_017|u1:0": 1,
+   "gen_multi_intent_017|u1:1": 1,
+   "gen_multi_intent_017|u1:2": 0,
+   "gen_multi_intent_018|u1:0": 1,
+   "gen_multi_intent_018|u1:1": 0,
+   "gen_multi_intent_018|u1:2": 1,
+   "gen_multi_intent_019|u1:0": 1,
+   "gen_multi_intent_019|u1:1": 1,
+   "gen_multi_intent_019|u1:2": 0,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 1,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 1,
+   "gen_suppression_004|u1:0": 1,
+   "gen_suppression_005|u1:0": 1,
+   "gen_suppression_006|u1:0": 1,
+   "gen_suppression_007|u1:0": 1,
+   "gen_suppression_008|u1:0": 1,
+   "gen_suppression_009|u1:0": 1
+  },
+  "claim_correct": {
+   "gen_late_detail_000|u1:c0": 1,
+   "gen_late_detail_000|u2:c0": 1,
+   "gen_late_detail_001|u1:c0": 1,
+   "gen_late_detail_001|u2:c0": 1,
+   "gen_late_detail_002|u1:c0": 1,
+   "gen_late_detail_002|u2:c0": 1,
+   "gen_late_detail_003|u1:c0": 1,
+   "gen_late_detail_003|u2:c0": 1,
+   "gen_late_detail_004|u1:c0": 1,
+   "gen_late_detail_004|u2:c0": 1,
+   "gen_late_detail_005|u1:c0": 1,
+   "gen_late_detail_005|u2:c0": 1,
+   "gen_late_detail_006|u1:c0": 1,
+   "gen_late_detail_006|u2:c0": 1,
+   "gen_late_detail_007|u2:c0": 1,
+   "gen_late_detail_008|u1:c0": 1,
+   "gen_late_detail_008|u2:c0": 1,
+   "gen_late_detail_009|u2:c0": 1,
+   "gen_late_detail_010|u1:c0": 1,
+   "gen_late_detail_010|u2:c0": 1,
+   "gen_late_detail_011|u2:c0": 1,
+   "gen_late_detail_012|u1:c0": 1,
+   "gen_late_detail_012|u2:c0": 1,
+   "gen_late_detail_013|u1:c0": 1,
+   "gen_late_detail_013|u2:c0": 1,
+   "gen_late_detail_014|u1:c0": 1,
+   "gen_late_detail_014|u2:c0": 1,
+   "gen_late_detail_015|u2:c0": 1,
+   "gen_late_detail_016|u2:c0": 1,
+   "gen_late_detail_017|u1:c0": 1,
+   "gen_late_detail_017|u2:c0": 1,
+   "gen_late_detail_018|u1:c0": 1,
+   "gen_late_detail_018|u2:c0": 1,
+   "gen_late_detail_019|u1:c0": 1,
+   "gen_late_detail_019|u2:c0": 1,
+   "gen_multi_intent_000|u1:c0": 1,
+   "gen_multi_intent_000|u1:c1": 1,
+   "gen_multi_intent_001|u1:c0": 1,
+   "gen_multi_intent_001|u1:c1": 1,
+   "gen_multi_intent_001|u1:c2": 1,
+   "gen_multi_intent_002|u1:c0": 1,
+   "gen_multi_intent_002|u1:c1": 1,
+   "gen_multi_intent_002|u1:c2": 1,
+   "gen_multi_intent_003|u1:c0": 1,
+   "gen_multi_intent_003|u1:c1": 0,
+   "gen_multi_intent_004|u1:c0": 1,
+   "gen_multi_intent_004|u1:c1": 1,
+   "gen_multi_intent_005|u1:c0": 1,
+   "gen_multi_intent_005|u1:c1": 1,
+   "gen_multi_intent_005|u1:c2": 1,
+   "gen_multi_intent_006|u1:c0": 1,
+   "gen_multi_intent_007|u1:c0": 1,
+   "gen_multi_intent_007|u1:c1": 1,
+   "gen_multi_intent_008|u1:c0": 1,
+   "gen_multi_intent_008|u1:c1": 1,
+   "gen_multi_intent_009|u1:c0": 1,
+   "gen_multi_intent_009|u1:c1": 1,
+   "gen_multi_intent_010|u1:c0": 1,
+   "gen_multi_intent_010|u1:c1": 1,
+   "gen_multi_intent_011|u1:c0": 1,
+   "gen_multi_intent_011|u1:c1": 1,
+   "gen_multi_intent_012|u1:c0": 1,
+   "gen_multi_intent_013|u1:c0": 1,
+   "gen_multi_intent_014|u1:c0": 1,
+   "gen_multi_intent_014|u1:c1": 1,
+   "gen_multi_intent_014|u1:c2": 1,
+   "gen_multi_intent_015|u1:c0": 0,
+   "gen_multi_intent_016|u1:c0": 1,
+   "gen_multi_intent_016|u1:c1": 1,
+   "gen_multi_intent_017|u1:c0": 1,
+   "gen_multi_intent_017|u1:c1": 1,
+   "gen_multi_intent_018|u1:c0": 1,
+   "gen_multi_intent_018|u1:c1": 1,
+   "gen_multi_intent_018|u1:c2": 1,
+   "gen_multi_intent_019|u1:c0": 1,
+   "gen_multi_intent_019|u1:c1": 1,
+   "gen_suppression_000|u1:c0": 1,
+   "gen_suppression_001|u1:c0": 1,
+   "gen_suppression_002|u1:c0": 1,
+   "gen_suppression_003|u1:c0": 1,
+   "gen_suppression_004|u1:c0": 1,
+   "gen_suppression_005|u1:c0": 1,
+   "gen_suppression_006|u1:c0": 1,
+   "gen_suppression_007|u1:c0": 1,
+   "gen_suppression_008|u1:c0": 1,
+   "gen_suppression_009|u1:c0": 1
+  },
+  "abstention": {
+   "gen_unanswerable_000|u1": 1,
+   "gen_unanswerable_001|u1": 1,
+   "gen_unanswerable_002|u1": 1,
+   "gen_unanswerable_003|u1": 1,
+   "gen_unanswerable_004|u1": 1
+  },
+  "split_exact": {
+   "gen_multi_intent_000|u1": 1,
+   "gen_multi_intent_001|u1": 1,
+   "gen_multi_intent_002|u1": 1,
+   "gen_multi_intent_003|u1": 1,
+   "gen_multi_intent_004|u1": 1,
+   "gen_multi_intent_005|u1": 1,
+   "gen_multi_intent_006|u1": 0,
+   "gen_multi_intent_007|u1": 1,
+   "gen_multi_intent_008|u1": 1,
+   "gen_multi_intent_009|u1": 1,
+   "gen_multi_intent_010|u1": 1,
+   "gen_multi_intent_011|u1": 0,
+   "gen_multi_intent_012|u1": 1,
+   "gen_multi_intent_013|u1": 1,
+   "gen_multi_intent_014|u1": 1,
+   "gen_multi_intent_015|u1": 1,
+   "gen_multi_intent_016|u1": 1,
+   "gen_multi_intent_017|u1": 1,
+   "gen_multi_intent_018|u1": 1,
+   "gen_multi_intent_019|u1": 1
+  },
+  "oversplit": {
+   "gen_late_detail_000|u1": 0,
+   "gen_late_detail_001|u1": 0,
+   "gen_late_detail_002|u1": 0,
+   "gen_late_detail_003|u1": 0,
+   "gen_late_detail_004|u1": 0,
+   "gen_late_detail_005|u1": 0,
+   "gen_late_detail_006|u1": 0,
+   "gen_late_detail_007|u1": 0,
+   "gen_late_detail_008|u1": 0,
+   "gen_late_detail_009|u1": 0,
+   "gen_late_detail_010|u1": 0,
+   "gen_late_detail_011|u1": 0,
+   "gen_late_detail_012|u1": 0,
+   "gen_late_detail_013|u1": 0,
+   "gen_late_detail_014|u1": 0,
+   "gen_late_detail_015|u1": 0,
+   "gen_late_detail_016|u1": 0,
+   "gen_late_detail_017|u1": 0,
+   "gen_late_detail_018|u1": 0,
+   "gen_late_detail_019|u1": 0,
+   "gen_suppression_000|u1": 0,
+   "gen_suppression_001|u1": 0,
+   "gen_suppression_002|u1": 0,
+   "gen_suppression_003|u1": 0,
+   "gen_suppression_004|u1": 0,
+   "gen_suppression_005|u1": 0,
+   "gen_suppression_006|u1": 0,
+   "gen_suppression_007|u1": 0,
+   "gen_suppression_008|u1": 0,
+   "gen_suppression_009|u1": 0,
+   "gen_unanswerable_000|u1": 0,
+   "gen_unanswerable_001|u1": 0,
+   "gen_unanswerable_002|u1": 0,
+   "gen_unanswerable_003|u1": 0,
+   "gen_unanswerable_004|u1": 0
+  }
+ },
+ "wrong_claims": [
+  {
+   "scenario": "gen_multi_intent_003",
+   "utterance": "u1",
+   "questions": [
+    "What is the most important type of Norman art preserved in churches?",
+    "What part of France were the Normans located?"
+   ],
+   "claim": "The area corresponded to the northern part of present-day Upper Normandy down to the river Seine, but the Duchy would eventually extend west beyond the Seine.",
+   "citations": [
+    "Doc_09 \u00a74"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_015",
+   "utterance": "u1",
+   "questions": [
+    "When was the Last Glacial Maximum?",
+    "Where does the Rhine empty?"
+   ],
+   "claim": "The last glacial ran from ~74,000 (BP = Before Present), until the end of the Pleistocene (~11,600 BP).",
+   "citations": [
+    "Doc_11 \u00a729"
+   ]
+  }
+ ]
+}

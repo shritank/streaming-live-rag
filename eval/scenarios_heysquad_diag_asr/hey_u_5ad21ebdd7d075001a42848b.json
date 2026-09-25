@@ -1,0 +1,203 @@
+{
+ "scenario_id": "hey_u_5ad21ebdd7d075001a42848b",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "whose experiments with oxygen led to"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the popular theory of combustion and"
+   }
+  },
+  {
+   "timestamp_ms": 4800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " corrosion whose experiments with whose experiments"
+   }
+  },
+  {
+   "timestamp_ms": 7200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " whose experiments with whose experiments with"
+   }
+  },
+  {
+   "timestamp_ms": 9600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " ox whose experiments with oxygen whose"
+   }
+  },
+  {
+   "timestamp_ms": 12000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " experiments with oxygen whose experiments with"
+   }
+  },
+  {
+   "timestamp_ms": 14400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen whose experiments with oxygen whose"
+   }
+  },
+  {
+   "timestamp_ms": 16800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " experiments with oxygen whose experiments with"
+   }
+  },
+  {
+   "timestamp_ms": 19200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen whose experiments with oxygen whose"
+   }
+  },
+  {
+   "timestamp_ms": 21600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " experiments with oxygen whose experiments with"
+   }
+  },
+  {
+   "timestamp_ms": 24000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen led to whose experiments with"
+   }
+  },
+  {
+   "timestamp_ms": 26400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen whose experiments with oxygen led"
+   }
+  },
+  {
+   "timestamp_ms": 28800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " to whose experiments with oxygen whose"
+   }
+  },
+  {
+   "timestamp_ms": 31200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " experiments with oxygen whose whose whose"
+   }
+  },
+  {
+   "timestamp_ms": 33600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " whose whose experiments with oxpiriments with"
+   }
+  },
+  {
+   "timestamp_ms": 36000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen led tous with oxygen led"
+   }
+  },
+  {
+   "timestamp_ms": 38400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " to whose experiments with oxaments with"
+   }
+  },
+  {
+   "timestamp_ms": 40800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen led tous with"
+   }
+  },
+  {
+   "timestamp_ms": 42700,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 44700,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Whose experiments with oxygen led to the popular theory of combustion and corrosion?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

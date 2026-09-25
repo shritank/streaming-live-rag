@@ -41,6 +41,12 @@ class ControllerDecision:
     reason: str                    # snake_case, e.g. "intent_unstable", "presentation_restructure"
     stability: float               # 0..1 confidence that the intent is settled
     sub_queries: tuple[SubQuery, ...] = ()   # non-empty iff decision == RETRIEVE
+    # query_ids of earlier, still-live sub-queries of this utterance whose
+    # clause is now fully contained in one of `sub_queries` but which were
+    # not chosen as that candidate's single supersession parent (a provisional
+    # comma-split can produce more than one stale fragment per growth step;
+    # `parent_query_id` links only one). The engine must cancel these too.
+    superseded_query_ids: tuple[str, ...] = ()
 
 # ---------- retrieval ----------
 @dataclass(frozen=True)

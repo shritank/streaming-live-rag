@@ -1,0 +1,50 @@
+{
+ "scenario_id": "hey_a_573796edc3c5551400e51f35",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "what is the force between nucleons"
+   }
+  },
+  {
+   "timestamp_ms": 2700,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 4700,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": false,
+    "gold_sub_intents": [
+     "What is the force between nucleons?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

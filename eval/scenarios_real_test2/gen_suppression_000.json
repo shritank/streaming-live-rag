@@ -1,0 +1,101 @@
+{
+  "scenario_id": "gen_suppression_000",
+  "template": "suppression",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "What new Medical Drama helped ABC"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " jump to second place in the"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " ratings during the 2004-2005 season?"
+      }
+    },
+    {
+      "timestamp_ms": 7100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 8600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "Please repeat your last answer in"
+      }
+    },
+    {
+      "timestamp_ms": 11000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " two bullets."
+      }
+    },
+    {
+      "timestamp_ms": 12100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 14100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What new Medical Drama helped ABC jump to second place in the ratings during the 2004-2005 season?"
+        ],
+        "expected_citation_docs": [
+          "Doc_00 \u00a730"
+        ]
+      },
+      "u2": {
+        "kind": "presentation_only",
+        "retrieval_required": false,
+        "eligible_for_early_retrieval": false
+      }
+    }
+  }
+}

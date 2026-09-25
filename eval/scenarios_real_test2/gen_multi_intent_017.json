@@ -1,0 +1,128 @@
+{
+  "scenario_id": "gen_multi_intent_017",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "What did the richest 400 Americans"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " have as children that helped them"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " be successful adults?, What do a"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " number of researchers think a shortage"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " of is caused in part by"
+      }
+    },
+    {
+      "timestamp_ms": 12000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " income inequality? and In order to"
+      }
+    },
+    {
+      "timestamp_ms": 14400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " be considered in the top percentile,"
+      }
+    },
+    {
+      "timestamp_ms": 16800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " a person would need to amass"
+      }
+    },
+    {
+      "timestamp_ms": 19200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " how much money each year?"
+      }
+    },
+    {
+      "timestamp_ms": 21500,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 23500,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What did the richest 400 Americans have as children that helped them be successful adults?",
+          "What do a number of researchers think a shortage of is caused in part by income inequality?",
+          "In order to be considered in the top percentile, a person would need to amass how much money each year?"
+        ],
+        "expected_citation_docs": [
+          "Doc_03 \u00a72",
+          "Doc_03 \u00a738",
+          "Doc_03 \u00a71"
+        ]
+      }
+    }
+  }
+}

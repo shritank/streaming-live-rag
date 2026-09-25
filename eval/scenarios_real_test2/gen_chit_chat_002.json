@@ -1,0 +1,46 @@
+{
+  "scenario_id": "gen_chit_chat_002",
+  "template": "chit_chat",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Good morning"
+      }
+    },
+    {
+      "timestamp_ms": 1100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 3100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "chit_chat",
+        "retrieval_required": false,
+        "eligible_for_early_retrieval": false
+      }
+    }
+  }
+}

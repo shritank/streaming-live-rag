@@ -1,0 +1,92 @@
+{
+  "scenario_id": "gen_suppression_008",
+  "template": "suppression",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "What type of behavior in primes"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " is it possible to determine?"
+      }
+    },
+    {
+      "timestamp_ms": 4700,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 6200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "Summarize what you just said as"
+      }
+    },
+    {
+      "timestamp_ms": 8600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " three bullet points."
+      }
+    },
+    {
+      "timestamp_ms": 10100,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 12100,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "What type of behavior in primes is it possible to determine?"
+        ],
+        "expected_citation_docs": [
+          "Doc_11 \u00a73"
+        ]
+      },
+      "u2": {
+        "kind": "presentation_only",
+        "retrieval_required": false,
+        "eligible_for_early_retrieval": false
+      }
+    }
+  }
+}

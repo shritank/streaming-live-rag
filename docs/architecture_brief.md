@@ -1,5 +1,12 @@
 # Streaming Live RAG — Architecture Brief
 
+> **Update (23 Sep 2026):** the retrieval defaults changed after an audit. Dense retrieval is now
+> e5-small-v2 (ONNX) fused with BM25 at equal RRF weight, followed by an ms-marco MiniLM
+> cross-encoder over the top 5 candidates (the LSA encoder and the heuristic reranker below remain
+> available as options — the heuristic reranker was measured to lower r@1). The controller now
+> strips discourse markers and carries topic context only into elliptical clauses, and the engine
+> has a `deferred` control mode. See `final_report.md` §3 and §5 for the evidence.
+
 ## 1. Problem and goal
 
 Standard RAG is turn-by-turn: the user finishes speaking, the system searches, then answers.

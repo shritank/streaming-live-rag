@@ -1,5 +1,15 @@
 # Benchmark & Evaluation Report
 
+> **Status (23 Sep 2026): historical record, superseded by `final_report.md`.** The passes below
+> were all tuned and measured on the same `data/corpus` scenarios, and their headline metric (G4)
+> is the synthesizer grading its own extractive claims — it never compares against gold answers.
+> A later audit found that on a held-out split scored against SQuAD's gold answers, the system
+> documented here answered 65.3% of questions and 29.8% of its asserted claims were wrong; it also
+> found three bugs that affected these numbers (a citation-resolution bug, a licence file indexed
+> as a document, a relevance-gate edge case). See `final_report.md` §2 for the corrections and §5
+> for the current, held-out results. The content below is kept unchanged as the record of what was
+> tried.
+
 ## 0. Optimization pass — before / after (real corpus, SQuAD v1.1)
 
 Three successive diagnostic-and-tune passes were run against `data/corpus` (the real, unseen

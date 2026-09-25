@@ -145,22 +145,24 @@ async def test_query_relevance_gate_rejects_single_shared_generic_word_decoy():
     assert answer.uncertainty is not None
 
 
-async def test_KNOWN_LIMITATION_two_word_generic_phrase_overlap_can_fool_the_gate():
-    """Honestly documents a real, demonstrated boundary of the lexical
+async def test_lexical_selector_KNOWN_LIMITATION_two_word_generic_phrase_can_fool_it():
+    """Honestly documents a real, demonstrated boundary of the LEXICAL
+    (`synthesis.selector="lexical"`, the dependency-free fallback path)
     relevance gate: a decoy sharing a two-word GENERIC PHRASE with the query
     ("approval process") — even from a genuinely different topic (travel
     approval, not catering approval) — clears both the overlap-fraction and
-    the >=2-token absolute-count checks in _is_relevant, and IS currently
-    asserted. This is a real gap, not a hypothetical one: it was found by
-    writing this exact adversarial case, not assumed away. Closing it would
-    need topic/domain discrimination beyond token overlap (e.g. a real
-    semantic or entity-aware signal) — attempts at that during development
-    traded this class of miss for a *worse* one (a completely unrelated
-    document winning a similarity tie-break) and were reverted; see
-    docs/benchmark_report.md §0e for the full account. This test exists so
-    a future fix is verified against a real failing case, and so this
-    boundary is never silently forgotten."""
+    the >=2-token absolute-count checks in _is_relevant, and IS asserted
+    under the lexical selector. This is a real gap, not a hypothetical one:
+    it was found by writing this exact adversarial case, not assumed away.
+    Closing it needs topic/domain discrimination beyond token overlap — a
+    real semantic signal. That signal is exactly what the CROSS-ENCODER
+    selector (the default since final_report.md's audit) adds: see
+    test_cross_encoder_selector_closes_the_two_word_generic_phrase_gap
+    directly below, which is the fix this docstring originally asked for.
+    The lexical path is kept, and this limitation kept documented on it,
+    because it is still the zero-model-download fallback."""
     cfg = load_config()
+    cfg.synthesis.selector = "lexical"
     retriever = HybridRetriever(cfg, chunks=ADVERSARIAL_CHUNKS)
     await retriever.setup()
     store = SessionStore(); store.open("s1")
@@ -171,11 +173,33 @@ async def test_KNOWN_LIMITATION_two_word_generic_phrase_overlap_can_fool_the_gat
     result = _result("q1", ADVERSARIAL_CHUNKS[0])
     answer = await synth.synthesize("s1", "what is the catering approval process", [q], [result])
 
-    # Documents CURRENT behaviour (a false positive) rather than hiding it.
-    # If this assertion ever flips to citations == [], the gate has
-    # genuinely improved — update this test to match, don't just delete it.
+    # Documents CURRENT behaviour of the lexical fallback (a false positive)
+    # rather than hiding it.
     assert answer.citations == ["Doc_02 §1"]
     assert answer.uncertainty is None
+
+
+async def test_cross_encoder_selector_closes_the_two_word_generic_phrase_gap():
+    """The default selector (cross-encoder claim selection + the learned
+    refusal gate, final_report.md §5.3/§5.8) closes the exact gap documented
+    in test_lexical_selector_KNOWN_LIMITATION_... above: on the identical
+    adversarial decoy, a real semantic/relevance signal (the cross-encoder's
+    sentence score and the SQuAD2 reader's answer-vs-no-answer margin) now
+    correctly recognises the decoy is off-topic and refuses it, instead of
+    being fooled by the shared "approval process" phrase."""
+    cfg = load_config()   # default: selector="cross-encoder", refusal_gate="learned"
+    retriever = HybridRetriever(cfg, chunks=ADVERSARIAL_CHUNKS)
+    await retriever.setup()
+    store = SessionStore(); store.open("s1")
+    synth = GroundedSynthesizer(retriever, store, cfg)
+
+    q = SubQuery(query_id="q1", text="what is the catering approval process",
+                 intent_label="catering approval", trigger="final", utterance_id="u1")
+    result = _result("q1", ADVERSARIAL_CHUNKS[0])
+    answer = await synth.synthesize("s1", "what is the catering approval process", [q], [result])
+
+    assert answer.citations == []
+    assert answer.uncertainty is not None
 
 
 async def test_query_relevance_gate_rejects_ubiquitous_entity_without_topic_match():
@@ -231,3 +255,97 @@ async def test_low_confidence_evidence_never_becomes_a_claim():
     answer = await synth.synthesize("s1", "anything", [q], [result])
     assert answer.citations == []
     assert answer.uncertainty is not None
+
+
+def test_speculative_claim_selection_is_reused_not_recomputed():
+    from streaming_rag.config import load_config
+    from streaming_rag.contracts import Chunk, Claim, EvidenceChunk, RetrievalResult, SubQuery
+    from streaming_rag.session.store import SessionStore
+    from streaming_rag.session.synthesis import GroundedSynthesizer
+    cfg = load_config()
+    cfg.synthesis.selector = "cross-encoder"
+    cfg.synthesis.refusal_gate = "none"   # isolate prefetch/caching from the learned gate
+    synth = GroundedSynthesizer(retriever=object(), session_store=SessionStore(), config=cfg)
+    calls = []
+
+    def fake_ce_claim(query, result):
+        calls.append(query)
+        return Claim(text="Tesla contracted cholera.", citations=["Doc_09 §8"])
+    synth._ce_claim = fake_ce_claim
+    q = SubQuery(query_id="u1.q1", text="What disease did Tesla catch?", intent_label="disease",
+                 trigger="final", utterance_id="u1")
+    chunk = Chunk(chunk_id="Doc_09 §8 #1", doc_id="Doc_09", section="8", text="Tesla contracted cholera.", metadata={})
+    result = RetrievalResult(query_id="u1.q1", evidence=(EvidenceChunk(chunk=chunk, score=5.0, query_ids=("u1.q1",)),),
+                             latency_ms=1.0, low_confidence=False)
+    synth.prefetch(q, result)                       # during speech
+    claims, _ = synth._claims_from([q], [result])   # at utterance end
+    assert [c.text for c in claims] == ["Tesla contracted cholera."]
+    assert len(calls) == 1
+
+
+def test_learned_refusal_gate_suppresses_a_low_probability_claim():
+    """_gated_claim must actually consult the fitted model and threshold, not
+    just pass the cross-encoder's own claim through unconditionally."""
+    cfg = load_config()
+    cfg.synthesis.selector = "cross-encoder"
+    cfg.synthesis.refusal_gate = "learned"
+    synth = GroundedSynthesizer(retriever=object(), session_store=SessionStore(), config=cfg)
+    claim = Claim(text="Some sentence.", citations=["Doc_00 §1"])
+    synth._ce_claim = lambda query, result: claim
+    synth._answer_probability = lambda query, result, claim: 0.0   # force "refuse"
+    # >= 2 content tokens: exercises the learned-model branch, not the
+    # short-query lexical fallback (see test_short_query_bypasses_the_learned_model_gate)
+    q = SubQuery(query_id="u1.q1", text="A real question here?", intent_label="q", trigger="final", utterance_id="u1")
+    result = RetrievalResult(query_id="u1.q1", evidence=(), latency_ms=1.0, low_confidence=False)
+    assert synth._gated_claim(q.text, result) is None
+
+    synth._answer_probability = lambda query, result, claim: 1.0   # force "answer"
+    assert synth._gated_claim(q.text, result) is claim
+
+
+def test_refusal_gate_threshold_matches_the_frozen_model_file():
+    from streaming_rag.session.synthesis import _refusal_model
+    model = _refusal_model()
+    assert 0.0 < model["threshold"] < 1.0
+    assert len(model["coef"]) == len(model["features"]) == len(model["scaler_mean"]) == len(model["scaler_scale"])
+
+
+def test_short_query_bypasses_the_learned_model_gate():
+    """A bare keyword sub-query (< 2 content tokens, no real question
+    structure) is out-of-distribution for the reader/cross-encoder features
+    the learned gate was fit on; it must fall back to the lexical relevance
+    check instead of trusting a model score computed on text unlike anything
+    it was calibrated on (see _gated_claim's comment)."""
+    cfg = load_config()
+    cfg.synthesis.selector = "cross-encoder"
+    synth = GroundedSynthesizer(retriever=object(), session_store=SessionStore(), config=cfg)
+    on_topic = Claim(text="Standard reimbursement covers economy airfare and lodging.", citations=["Doc_01 §2"])
+    off_topic = Claim(text="International travel requires senior director approval.", citations=["Doc_01 §1"])
+    synth._answer_probability = lambda *a: 0.0   # would refuse everything if consulted
+    result = RetrievalResult(query_id="q1", evidence=(), latency_ms=1.0, low_confidence=False)
+
+    synth._ce_claim = lambda query, result: on_topic
+    assert synth._gated_claim("reimbursement", result) is on_topic   # 1 content token: lexical fallback, overlaps -> kept
+
+    synth._ce_claim = lambda query, result: off_topic
+    assert synth._gated_claim("reimbursement", result) is None       # 1 content token: no overlap -> refused
+
+
+async def test_uncertainty_note_quotes_the_sub_query_not_a_keyword_label():
+    synth, store, retriever = await _synth()
+    q = SubQuery(query_id="q1", text="what about parking validation", intent_label="parking validation",
+                 trigger="final", utterance_id="u1")
+    result = RetrievalResult(query_id="q1", evidence=(), latency_ms=1.0, low_confidence=True)
+    answer = await synth.synthesize("s1", "what about parking validation", [q], [result])
+    assert '"what about parking validation"' in answer.uncertainty
+
+
+async def test_two_sub_queries_selecting_the_same_sentence_yield_one_claim():
+    synth, store, retriever = await _synth()
+    q1 = SubQuery(query_id="q1", text="reimbursement", intent_label="reimbursement", trigger="final", utterance_id="u1")
+    q2 = SubQuery(query_id="q2", text="reimbursement airfare", intent_label="reimbursement airfare",
+                  trigger="final", utterance_id="u1")
+    answer = await synth.synthesize("s1", "reimbursement and airfare reimbursement",
+                                    [q1, q2], [_result("q1", CHUNKS[1]), _result("q2", CHUNKS[1])])
+    assert len(answer.claims) == 1
+    assert answer.citations == ["Doc_01 §2"]

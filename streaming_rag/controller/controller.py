@@ -70,13 +70,15 @@ class RetrievalController:
         self._previous: dict[str, str] = {}
         self._covered: dict[str, set[str]] = {}
         self._issued: dict[str, int] = {}
-        # the sub-queries issued by the MOST RECENT retrieve decision for each
-        # utterance, so a growing clause's next (more complete) sub-query can
-        # be linked via parent_query_id to the stale partial one it supersedes
-        self._last_issued: dict[str, list[SubQuery]] = {}
+        # every still-live (not yet superseded) sub-query of each utterance,
+        # and the clause each was built from, so a growing clause's next
+        # (more complete) sub-query can be linked via parent_query_id to the
+        # stale partial one it supersedes — whenever that partial was issued
+        self._live: dict[str, list[SubQuery]] = {}
+        self._clauses: dict[str, dict[str, set[str]]] = {}
 
     def reset_utterance(self, utterance_id: str) -> None:
-        for d in (self._accumulated, self._previous, self._covered, self._issued, self._last_issued):
+        for d in (self._accumulated, self._previous, self._covered, self._issued, self._live, self._clauses):
             d.pop(utterance_id, None)
 
     async def on_chunk(self, chunk: TranscriptChunk, session: SessionView) -> ControllerDecision:
@@ -109,7 +111,15 @@ class RetrievalController:
             return ControllerDecision(Decision.WAIT, turn_kind, "intent_unstable", confidence)
 
         trigger = self._trigger_for(turn_kind, chunk.is_final)
-        candidates = decompose(utterance, covered, uid, trigger, self._issued.get(uid, 0))
+        clause_text: dict[str, str] = {}
+        candidates = decompose(utterance, covered, uid, trigger, self._issued.get(uid, 0),
+                               strip_markers=self._config.controller.strip_discourse_markers,
+                               context_carry=self._config.controller.context_carry,
+                               clause_sink=clause_text,
+                               normalize_numbers=self._config.controller.normalize_spoken_numbers,
+                               split_unpunctuated=self._config.controller.split_unpunctuated_questions)
+        clauses = self._clauses.setdefault(uid, {})
+        clauses.update({qid: set(content_tokens(c)) for qid, c in clause_text.items()})
 
         if turn_kind == TurnKind.REFINEMENT:
             candidates = self._scope_to_delta(candidates, session, covered)
@@ -131,8 +141,7 @@ class RetrievalController:
         # new candidate to the most recent sub-query it overlaps heavily with
         # from THIS utterance, so the engine cancels the stale one (§ engine.
         # _dispatch_decision's parent_query_id handling).
-        candidates = self._link_supersession(uid, candidates)
-        self._last_issued[uid] = list(candidates)
+        candidates, extra_superseded = self._link_supersession(uid, candidates)
 
         for q in candidates:
             covered |= set(content_tokens(q.intent_label)) | set(content_tokens(q.text))
@@ -144,6 +153,7 @@ class RetrievalController:
         return ControllerDecision(
             decision=Decision.RETRIEVE, turn_kind=turn_kind, reason=reason,
             stability=confidence, sub_queries=tuple(candidates),
+            superseded_query_ids=tuple(extra_superseded),
         )
 
     def _trigger_for(self, turn_kind: TurnKind, is_final: bool) -> str:
@@ -173,7 +183,7 @@ class RetrievalController:
         return bool(topic) and jaccard(tokens, topic) >= 0.12
 
     def _link_supersession(self, uid: str, candidates: list[SubQuery],
-                            threshold: float = 0.3) -> list[SubQuery]:
+                            threshold: float = 0.8) -> tuple[list[SubQuery], list[str]]:
         """Within-utterance supersession must take priority over any
         cross-turn `parent_query_id` `_scope_to_delta` already set: they mean
         different things (a same-utterance stale retrieval to cancel, vs. a
@@ -185,26 +195,54 @@ class RetrievalController:
         (the previous behaviour) left a same-utterance stale retrieval
         uncancelled and its evidence reached the synthesizer regardless.
         Overriding is therefore always safe: it can only enable a
-        cancellation engine.py would otherwise have silently ignored."""
-        prior = self._last_issued.get(uid, [])
-        if not prior:
-            return candidates
-        prior_tokens = [set(content_tokens(q.text)) for q in prior]
+        cancellation engine.py would otherwise have silently ignored.
+
+        "Supersedes" means the new sub-query's CLAUSE is a grown version of
+        the old one's: the old clause's words are (almost) all contained in
+        the new clause. Two earlier rules failed: a symmetric overlap score
+        (Jaccard >= 0.3) linked different sibling questions that merely
+        shared topic words, so the engine cancelled a legitimate question;
+        and comparing query texts (after topic words from another clause
+        were appended to a partial one) made a stale partial unrecognisable,
+        so it was never cancelled. Every still-live sub-query of the
+        utterance is a candidate predecessor, not just the latest batch."""
+        clauses = self._clauses.get(uid, {})
+        live = self._live.setdefault(uid, [])
         linked = []
         for q in candidates:
-            tokens = set(content_tokens(q.text))
+            tokens = clauses.get(q.query_id) or set(content_tokens(q.text))
             best_idx, best = None, 0.0
-            for i, ptok in enumerate(prior_tokens):
-                overlap = jaccard(tokens, ptok)
+            for i, prior in enumerate(live):
+                ptok = clauses.get(prior.query_id) or set(content_tokens(prior.text))
+                overlap = len(tokens & ptok) / len(ptok) if ptok else 0.0
                 if overlap > best:
                     best, best_idx = overlap, i
             if best_idx is not None and best >= threshold:
+                parent = live.pop(best_idx)
                 linked.append(SubQuery(query_id=q.query_id, text=q.text, intent_label=q.intent_label,
                                         trigger=q.trigger, utterance_id=q.utterance_id,
-                                        parent_query_id=prior[best_idx].query_id))
+                                        parent_query_id=parent.query_id))
             else:
                 linked.append(q)
-        return linked
+        # A provisional comma-split can fragment one still-growing question
+        # into more than one live entry before its "?" arrives (e.g. "Along
+        # with diesel engines" / "what engines" from "Along with diesel
+        # engines, what engines have overtaken..."). The loop above links
+        # each new candidate to at most one prior, so a second, unmatched
+        # fragment of the same question would otherwise survive as an
+        # orphan and reach synthesis alongside the real answer. Any prior
+        # whose own clause is now (almost) fully contained in ANY new
+        # candidate is superseded too, even without its own 1:1 link.
+        extra_superseded = []
+        still_live = []
+        for prior in live:
+            ptok = clauses.get(prior.query_id) or set(content_tokens(prior.text))
+            covered = any((len(ptok & (clauses.get(q.query_id) or set(content_tokens(q.text)))) / len(ptok))
+                          >= threshold for q in candidates) if ptok else False
+            (extra_superseded if covered else still_live).append(prior)
+        live[:] = still_live
+        live.extend(linked)
+        return linked, [q.query_id for q in extra_superseded]
 
     def _scope_to_delta(self, candidates: list[SubQuery], session: SessionView,
                          covered: set[str]) -> list[SubQuery]:

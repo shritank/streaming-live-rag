@@ -1,0 +1,116 @@
+{
+  "scenario_id": "gen_late_detail_013_asr",
+  "template": "late_detail",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "which tv network broadcasted super bowl"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " 50 in spanish"
+      }
+    },
+    {
+      "timestamp_ms": 3900,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 5400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "wait one more thing what"
+      }
+    },
+    {
+      "timestamp_ms": 7800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " is the name of the turf"
+      }
+    },
+    {
+      "timestamp_ms": 10200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " used in levi's stadium for the"
+      }
+    },
+    {
+      "timestamp_ms": 12600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " super bowl"
+      }
+    },
+    {
+      "timestamp_ms": 13700,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 15700,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Which TV network broadcasted Super Bowl 50 in Spanish?"
+        ],
+        "expected_citation_docs": [
+          "Doc_13 \u00a734"
+        ]
+      },
+      "u2": {
+        "kind": "refinement",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": false,
+        "gold_sub_intents": [
+          "What is the name of the turf used in Levi's Stadium for the Super Bowl?"
+        ],
+        "expected_citation_docs": [
+          "Doc_13 \u00a722"
+        ]
+      }
+    }
+  }
+}

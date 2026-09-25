@@ -1,0 +1,5514 @@
+{
+ "scenario_dir": "eval/scenarios_real_dev_asr",
+ "corpus_dir": "data/corpus",
+ "overrides": [],
+ "wall_s": 537.7,
+ "gates": {
+  "g2": [
+   45,
+   45,
+   0,
+   15
+  ],
+  "g3": [
+   20,
+   20
+  ],
+  "g4": [
+   84,
+   118,
+   0
+  ],
+  "g5": [
+   20,
+   20
+  ],
+  "g6": [
+   90,
+   90
+  ]
+ },
+ "latency_post_utterance_ms": {
+  "p50": 30.999999988125637,
+  "p95": 46.999999991385266,
+  "n": 75
+ },
+ "raw": {
+  "gen_chit_chat_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_late_detail_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 1.5,
+       "query": "decnet",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [
+      "decnet"
+     ],
+     "answer": "DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers.",
+     "citations": [
+      "Doc_10 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.0,
+       "query": "also what was report p 2626",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also what was report p 2626"
+     ],
+     "answer": "DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers. Baran developed the concept of distributed adaptive message block switching during his research at the RAND Corporation for the US Air Force into survivable communications networks, first presented to the Air Force in the summer of 1961 as briefing B-265, later published as RAND report P-2626 in 1962, and finally in report RM 3420 in 1964.",
+     "citations": [
+      "Doc_10 \u00a712",
+      "Doc_10 \u00a74"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers.",
+       "citations": [
+        "Doc_10 \u00a712"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers.",
+       "citations": [
+        "Doc_10 \u00a712"
+       ]
+      },
+      {
+       "text": "Baran developed the concept of distributed adaptive message block switching during his research at the RAND Corporation for the US Air Force into survivable communications networks, first presented to the Air Force in the summer of 1961 as briefing B-265, later published as RAND report P-2626 in 1962, and finally in report RM 3420 in 1964.",
+       "citations": [
+        "Doc_10 \u00a74"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "what did tesla do at his old school in 1879",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what did tesla do at his old school in 1879"
+     ],
+     "answer": "During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107.",
+     "citations": [
+      "Doc_09 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.8,
+       "query": "wait one more thing what",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "wait one more thing what year did tesla die",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "wait one more thing what",
+      "wait one more thing what year did tesla die"
+     ],
+     "answer": "During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107. During his second year of study at Graz, Tesla developed a passion for (and became very proficient at) billiards, chess and card-playing, sometimes spending more than 48 hours in a stretch at a gaming table.:43, 301 On one occasion at his laboratory, Tesla worked for a period of 84 hours without sleep or rest.:208 Kenneth Swezey, a journalist whom Tesla had befriended, confirmed that Tesla rarely slept.",
+     "citations": [
+      "Doc_09 \u00a712",
+      "Doc_09 \u00a776"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107.",
+       "citations": [
+        "Doc_09 \u00a712"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107.",
+       "citations": [
+        "Doc_09 \u00a712"
+       ]
+      },
+      {
+       "text": "During his second year of study at Graz, Tesla developed a passion for (and became very proficient at) billiards, chess and card-playing, sometimes spending more than 48 hours in a stretch at a gaming table.:43, 301 On one occasion at his laboratory, Tesla worked for a period of 84 hours without sleep or rest.:208 Kenneth Swezey, a journalist whom Tesla had befriended, confirmed that Tesla rarely slept.",
+       "citations": [
+        "Doc_09 \u00a776"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what body in india provides policy",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what body in india provides policy directions to schools",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what body in india provides policy",
+      "what body in india provides policy directions to schools"
+     ],
+     "answer": "The practice has been for the union government to provide the broad policy directions while the states create their own rules and regulations for the administration of the sector.",
+     "citations": [
+      "Doc_11 \u00a710"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The practice has been for the union gove.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.4,
+       "query": "also what is the german term",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.8,
+       "query": "also what is the german term for segregating students based on their",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "also what is the german term for segregating students based on their parents' wealth",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also what is the german term",
+      "also what is the german term for segregating students based on their",
+      "also what is the german term for segregating students based on their parents' wealth"
+     ],
+     "answer": "The practice has been for the union government to provide the broad policy directions while the states create their own rules and regulations for the administration of the sector. Teachers at Ersatzschulen must have at least the same education and at least the same wages as teachers at public schools, an Ersatzschule must have at least the same academic standards as a public school and Article 7, Paragraph 4 of the Grundgesetz, also forbids segregation of pupils according to the means of their parents (the so-called Sonderungsverbot).",
+     "citations": [
+      "Doc_11 \u00a710",
+      "Doc_11 \u00a78"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The practice has been for the union gove; Teachers at Ersatzschulen must have at l.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: The practice has been for the union gove.",
+     "claims": [
+      {
+       "text": "The practice has been for the union government to provide the broad policy directions while the states create their own rules and regulations for the administration of the sector.",
+       "citations": [
+        "Doc_11 \u00a710"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: The practice has been for the union gove; Teachers at Ersatzschulen must have at l.",
+     "claims": [
+      {
+       "text": "The practice has been for the union government to provide the broad policy directions while the states create their own rules and regulations for the administration of the sector.",
+       "citations": [
+        "Doc_11 \u00a710"
+       ]
+      },
+      {
+       "text": "Teachers at Ersatzschulen must have at least the same education and at least the same wages as teachers at public schools, an Ersatzschule must have at least the same academic standards as a public school and Article 7, Paragraph 4 of the Grundgesetz, also forbids segregation of pupils according to the means of their parents (the so-called Sonderungsverbot).",
+       "citations": [
+        "Doc_11 \u00a78"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "in what year did tesla demonstrate",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "in what year did tesla demonstrate his alternating current system",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "in what year did tesla demonstrate",
+      "in what year did tesla demonstrate his alternating current system"
+     ],
+     "answer": "In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE).",
+     "citations": [
+      "Doc_09 \u00a721"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.8,
+       "query": "wait one more thing what",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "wait one more thing what later invention was tesla's idea similar",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "wait one more thing what",
+      "wait one more thing what later invention was tesla's idea similar"
+     ],
+     "answer": "In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE). Tesla worked every day from 9:00 a.m. until 6:00 p.m. or later, with dinner from exactly 8:10 p.m., at Delmonico's restaurant and later the Waldorf-Astoria Hotel.",
+     "citations": [
+      "Doc_09 \u00a721",
+      "Doc_09 \u00a770"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE).",
+       "citations": [
+        "Doc_09 \u00a721"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE).",
+       "citations": [
+        "Doc_09 \u00a721"
+       ]
+      },
+      {
+       "text": "Tesla worked every day from 9:00 a.m. until 6:00 p.m. or later, with dinner from exactly 8:10 p.m., at Delmonico's restaurant and later the Waldorf-Astoria Hotel.",
+       "citations": [
+        "Doc_09 \u00a770"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what was henry iv known as",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what was henry iv known as before taking the throne",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what was henry iv known as",
+      "what was henry iv known as before taking the throne"
+     ],
+     "answer": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes.",
+     "citations": [
+      "Doc_06 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.8,
+       "query": "actually what industry was centered in",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "actually what industry was centered in bedfordshire",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "actually what industry was centered in",
+      "actually what industry was centered in bedfordshire"
+     ],
+     "answer": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes. Some Huguenots settled in Bedfordshire, one of the main centres of the British lace industry at the time.",
+     "citations": [
+      "Doc_06 \u00a711",
+      "Doc_06 \u00a724"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes.",
+       "citations": [
+        "Doc_06 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes.",
+       "citations": [
+        "Doc_06 \u00a711"
+       ]
+      },
+      {
+       "text": "Some Huguenots settled in Bedfordshire, one of the main centres of the British lace industry at the time.",
+       "citations": [
+        "Doc_06 \u00a724"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "what was the tribe of the woman tem\u00fcjin married when he was",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what was the tribe of the woman tem\u00fcjin married when he was around 16 years old",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what was the tribe of the woman tem\u00fcjin married when he was",
+      "what was the tribe of the woman tem\u00fcjin married when he was around 16 years old"
+     ],
+     "answer": "As previously arranged by his father, Tem\u00fcjin married B\u00f6rte of the Onggirat tribe when he was around 16 in order to cement alliances between their respective tribes.",
+     "citations": [
+      "Doc_05 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.2,
+       "query": "wait one more thing which",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.6,
+       "query": "wait one more thing which battle did tem\u00fcjin lose to jamukha",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.0,
+       "query": "wait one more thing which battle did tem\u00fcjin lose to jamukha shortly after his election as khan",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "wait one more thing which",
+      "wait one more thing which battle did tem\u00fcjin lose to jamukha",
+      "wait one more thing which battle did tem\u00fcjin lose to jamukha shortly after his election as khan"
+     ],
+     "answer": "As previously arranged by his father, Tem\u00fcjin married B\u00f6rte of the Onggirat tribe when he was around 16 in order to cement alliances between their respective tribes. In 1186, Tem\u00fcjin was elected khan of the Mongols.",
+     "citations": [
+      "Doc_05 \u00a711",
+      "Doc_05 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "As previously arranged by his father, Tem\u00fcjin married B\u00f6rte of the Onggirat tribe when he was around 16 in order to cement alliances between their respective tribes.",
+       "citations": [
+        "Doc_05 \u00a78"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "As previously arranged by his father, Tem\u00fcjin married B\u00f6rte of the Onggirat tribe when he was around 16 in order to cement alliances between their respective tribes.",
+       "citations": [
+        "Doc_05 \u00a78"
+       ]
+      },
+      {
+       "text": "In 1186, Tem\u00fcjin was elected khan of the Mongols.",
+       "citations": [
+        "Doc_05 \u00a711"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "expression used to",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "expression used to identify any given series of problems",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "expression used to identify any given series of problems capable of being solved within time",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "expression used to identify any given series of problems capable of being solved within time on a deterministic turing machine",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "expression used to",
+      "expression used to identify any given series of problems",
+      "expression used to identify any given series of problems capable of being solved within time",
+      "expression used to identify any given series of problems capable of being solved within time on a deterministic turing machine"
+     ],
+     "answer": "For a precise definition of what it means to solve a problem using a given amount of time and space, a computational model such as the deterministic Turing machine is used.",
+     "citations": [
+      "Doc_02 \u00a718"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.0,
+       "query": "also resources are constrained by hierarchy",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.4,
+       "query": "also resources are constrained by hierarchy theorems to produce what",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also resources are constrained by hierarchy",
+      "also resources are constrained by hierarchy theorems to produce what"
+     ],
+     "answer": "For a precise definition of what it means to solve a problem using a given amount of time and space, a computational model such as the deterministic Turing machine is used. As Fortnow & Homer (2003) point out, the beginning of systematic studies in computational complexity is attributed to the seminal paper \"On the Computational Complexity of Algorithms\" by Juris Hartmanis and Richard Stearns (1965), which laid out the definitions of time and space complexity and proved the hierarchy theorems.",
+     "citations": [
+      "Doc_02 \u00a718",
+      "Doc_02 \u00a745"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For a precise definition of what it means to solve a problem using a given amount of time and space, a computational model such as the deterministic Turing machine is used.",
+       "citations": [
+        "Doc_02 \u00a718"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For a precise definition of what it means to solve a problem using a given amount of time and space, a computational model such as the deterministic Turing machine is used.",
+       "citations": [
+        "Doc_02 \u00a718"
+       ]
+      },
+      {
+       "text": "As Fortnow & Homer (2003) point out, the beginning of systematic studies in computational complexity is attributed to the seminal paper \"On the Computational Complexity of Algorithms\" by Juris Hartmanis and Richard Stearns (1965), which laid out the definitions of time and space complexity and proved the hierarchy theorems.",
+       "citations": [
+        "Doc_02 \u00a745"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "for what type of music was",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "for what type of music was doctor who considered a pioneer",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "for what type of music was",
+      "for what type of music was doctor who considered a pioneer"
+     ],
+     "answer": "The fourth was released on 4 October 2010 as a two disc special edition and contained music from the 2008\u20132010 specials (The Next Doctor to End of Time Part 2).",
+     "citations": [
+      "Doc_03 \u00a740"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.2,
+       "query": "also what was the name of",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.6,
+       "query": "also what was the name of the doctor who play from the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.0,
+       "query": "also what was the name of the doctor who play from the 1980's",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also what was the name of",
+      "also what was the name of the doctor who play from the",
+      "also what was the name of the doctor who play from the 1980's"
+     ],
+     "answer": "The fourth was released on 4 October 2010 as a two disc special edition and contained music from the 2008\u20132010 specials (The Next Doctor to End of Time Part 2). Versions of the \"Doctor Who Theme\" have also been released as pop music over the years.",
+     "citations": [
+      "Doc_03 \u00a737",
+      "Doc_03 \u00a740"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The fourth was released on 4 October 2010 as a two disc special edition and contained music from the 2008\u20132010 specials (The Next Doctor to End of Time Part 2).",
+       "citations": [
+        "Doc_03 \u00a740"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The fourth was released on 4 October 2010 as a two disc special edition and contained music from the 2008\u20132010 specials (The Next Doctor to End of Time Part 2).",
+       "citations": [
+        "Doc_03 \u00a740"
+       ]
+      },
+      {
+       "text": "Versions of the \"Doctor Who Theme\" have also been released as pop music over the years.",
+       "citations": [
+        "Doc_03 \u00a737"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what didn't newton's mechanics affext",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what didn't newton's mechanics affext"
+     ],
+     "answer": "Newton's laws and Newtonian mechanics in general were first developed to describe how forces affect idealized point particles rather than three-dimensional objects.",
+     "citations": [
+      "Doc_04 \u00a737"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.8,
+       "query": "it turns out what causes pauli",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 6.2,
+       "query": "it turns out what causes pauli repulsion",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "it turns out what causes pauli",
+      "it turns out what causes pauli repulsion"
+     ],
+     "answer": "Newton's laws and Newtonian mechanics in general were first developed to describe how forces affect idealized point particles rather than three-dimensional objects. It is a common misconception to ascribe the stiffness and rigidity of solid matter to the repulsion of like charges under the influence of the electromagnetic force.",
+     "citations": [
+      "Doc_04 \u00a732",
+      "Doc_04 \u00a737"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Newton's laws and Newtonian mechanics in general were first developed to describe how forces affect idealized point particles rather than three-dimensional objects.",
+       "citations": [
+        "Doc_04 \u00a737"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Newton's laws and Newtonian mechanics in general were first developed to describe how forces affect idealized point particles rather than three-dimensional objects.",
+       "citations": [
+        "Doc_04 \u00a737"
+       ]
+      },
+      {
+       "text": "It is a common misconception to ascribe the stiffness and rigidity of solid matter to the repulsion of like charges under the influence of the electromagnetic force.",
+       "citations": [
+        "Doc_04 \u00a732"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what did the kenyan business people",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what did the kenyan business people hope for when meeting with the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what did the kenyan business people hope for when meeting with the chinese",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what did the kenyan business people",
+      "what did the kenyan business people hope for when meeting with the",
+      "what did the kenyan business people hope for when meeting with the chinese"
+     ],
+     "answer": "Kenyatta was \"[a]ccompanied by 60 Kenyan business people [and hoped to] ... gain support from China for a planned $2.5 billion railway from the southern Kenyan port of Mombasa to neighboring Uganda, as well as a nearly $1.8 billion dam\", according to a statement from the president's office also at the time of the trip.",
+     "citations": [
+      "Doc_08 \u00a736"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenyatta was \"[a]ccompanied by 60 Kenyan.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.0,
+       "query": "actually who formed the government in",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "actually who formed the government in kenya",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "actually who formed the government in",
+      "actually who formed the government in kenya"
+     ],
+     "answer": "Kenyatta was \"[a]ccompanied by 60 Kenyan business people [and hoped to] ... gain support from China for a planned $2.5 billion railway from the southern Kenyan port of Mombasa to neighboring Uganda, as well as a nearly $1.8 billion dam\", according to a statement from the president's office also at the time of the trip. The Home Guard formed the core of the government's strategy as it was composed of loyalist Africans, not foreign forces like the British Army and King's African Rifles.",
+     "citations": [
+      "Doc_08 \u00a712",
+      "Doc_08 \u00a736"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenyatta was \"[a]ccompanied by 60 Kenyan.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenyatta was \"[a]ccompanied by 60 Kenyan.",
+     "claims": [
+      {
+       "text": "Kenyatta was \"[a]ccompanied by 60 Kenyan business people [and hoped to] ... gain support from China for a planned $2.5 billion railway from the southern Kenyan port of Mombasa to neighboring Uganda, as well as a nearly $1.8 billion dam\", according to a statement from the president's office also at the time of the trip.",
+       "citations": [
+        "Doc_08 \u00a736"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenyatta was \"[a]ccompanied by 60 Kenyan.",
+     "claims": [
+      {
+       "text": "Kenyatta was \"[a]ccompanied by 60 Kenyan business people [and hoped to] ... gain support from China for a planned $2.5 billion railway from the southern Kenyan port of Mombasa to neighboring Uganda, as well as a nearly $1.8 billion dam\", according to a statement from the president's office also at the time of the trip.",
+       "citations": [
+        "Doc_08 \u00a736"
+       ]
+      },
+      {
+       "text": "The Home Guard formed the core of the government's strategy as it was composed of loyalist Africans, not foreign forces like the British Army and King's African Rifles.",
+       "citations": [
+        "Doc_08 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how many cases of malaria did",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how many cases of malaria did kenya report in 2006",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how many cases of malaria did",
+      "how many cases of malaria did kenya report in 2006"
+     ],
+     "answer": "Kenya had an estimated 15 million cases of malaria in 2006.",
+     "citations": [
+      "Doc_08 \u00a743"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenya had an estimated 15 million cases .",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.8,
+       "query": "also what attracts the tourists to",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "also what attracts the tourists to kenya",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also what attracts the tourists to",
+      "also what attracts the tourists to kenya"
+     ],
+     "answer": "Kenya had an estimated 15 million cases of malaria in 2006. Presently, there are also numerous Shopping Malls in Kenya.",
+     "citations": [
+      "Doc_08 \u00a728",
+      "Doc_08 \u00a743"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenya had an estimated 15 million cases ; Presently, there are also numerous Shopp.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenya had an estimated 15 million cases .",
+     "claims": [
+      {
+       "text": "Kenya had an estimated 15 million cases of malaria in 2006.",
+       "citations": [
+        "Doc_08 \u00a743"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: Kenya had an estimated 15 million cases ; Presently, there are also numerous Shopp.",
+     "claims": [
+      {
+       "text": "Kenya had an estimated 15 million cases of malaria in 2006.",
+       "citations": [
+        "Doc_08 \u00a743"
+       ]
+      },
+      {
+       "text": "Presently, there are also numerous Shopping Malls in Kenya.",
+       "citations": [
+        "Doc_08 \u00a728"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "whwn forces are at right ngles",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "whwn forces are at right ngles to each other what can they be broken down to",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "whwn forces are at right ngles",
+      "whwn forces are at right ngles to each other what can they be broken down to"
+     ],
+     "answer": "Carolina suffered a major setback when Thomas Davis, an 11-year veteran who had already overcome three ACL tears in his career, went down with a broken arm in the NFC Championship Game.",
+     "citations": [
+      "Doc_13 \u00a718"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.2,
+       "query": "also what applies to equally to",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.6,
+       "query": "also what applies to equally to constant velocity motion as it does",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.0,
+       "query": "also what applies to equally to constant velocity motion as it does to rest",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also what applies to equally to",
+      "also what applies to equally to constant velocity motion as it does",
+      "also what applies to equally to constant velocity motion as it does to rest"
+     ],
+     "answer": "Carolina suffered a major setback when Thomas Davis, an 11-year veteran who had already overcome three ACL tears in his career, went down with a broken arm in the NFC Championship Game. Inertia therefore applies equally well to constant velocity motion as it does to rest.",
+     "citations": [
+      "Doc_04 \u00a76",
+      "Doc_13 \u00a718"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Inertia therefore applies equally well t.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Carolina suffered a major setback when Thomas Davis, an 11-year veteran who had already overcome three ACL tears in his career, went down with a broken arm in the NFC Championship Game.",
+       "citations": [
+        "Doc_13 \u00a718"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: Inertia therefore applies equally well t.",
+     "claims": [
+      {
+       "text": "Carolina suffered a major setback when Thomas Davis, an 11-year veteran who had already overcome three ACL tears in his career, went down with a broken arm in the NFC Championship Game.",
+       "citations": [
+        "Doc_13 \u00a718"
+       ]
+      },
+      {
+       "text": "Inertia therefore applies equally well to constant velocity motion as it does to rest.",
+       "citations": [
+        "Doc_04 \u00a76"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "who was the most valuable player",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "who was the most valuable player of super bowl 50",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "who was the most valuable player",
+      "who was the most valuable player of super bowl 50"
+     ],
+     "answer": "The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP).",
+     "citations": [
+      "Doc_13 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.8,
+       "query": "it turns out how many touchdowns",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "it turns out how many touchdowns did brock osweiler throw in the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.6,
+       "query": "it turns out how many touchdowns did brock osweiler throw in the season",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "it turns out how many touchdowns",
+      "it turns out how many touchdowns did brock osweiler throw in the",
+      "it turns out how many touchdowns did brock osweiler throw in the season"
+     ],
+     "answer": "The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP). He set the NFL's all-time record for career passing yards in this game, but was benched after throwing four interceptions in favor of backup quarterback Brock Osweiler, who took over as the starter for most of the remainder of the regular season.",
+     "citations": [
+      "Doc_13 \u00a713",
+      "Doc_13 \u00a72"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: He set the NFL's all-time record for car.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP).",
+       "citations": [
+        "Doc_13 \u00a72"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: He set the NFL's all-time record for car.",
+     "claims": [
+      {
+       "text": "The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP).",
+       "citations": [
+        "Doc_13 \u00a72"
+       ]
+      },
+      {
+       "text": "He set the NFL's all-time record for career passing yards in this game, but was benched after throwing four interceptions in favor of backup quarterback Brock Osweiler, who took over as the starter for most of the remainder of the regular season.",
+       "citations": [
+        "Doc_13 \u00a713"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "which tv network broadcasted super bowl",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "which tv network broadcasted super bowl 50 in spanish",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "which tv network broadcasted super bowl",
+      "which tv network broadcasted super bowl 50 in spanish"
+     ],
+     "answer": "On December 28, 2015, ESPN Deportes announced that they had reached an agreement with CBS and the NFL to be the exclusive Spanish-language broadcaster of the game, marking the third dedicated Spanish-language broadcast of the Super Bowl.",
+     "citations": [
+      "Doc_13 \u00a734"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.4,
+       "query": "wait one more thing what",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.8,
+       "query": "wait one more thing what is the name of the turf",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "wait one more thing what is the name of the turf used in levi's stadium for the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 12.6,
+       "query": "wait one more thing what is the name of the turf used in levi's stadium for the super bowl",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "wait one more thing what",
+      "wait one more thing what is the name of the turf",
+      "wait one more thing what is the name of the turf used in levi's stadium for the",
+      "wait one more thing what is the name of the turf used in levi's stadium for the super bowl"
+     ],
+     "answer": "On December 28, 2015, ESPN Deportes announced that they had reached an agreement with CBS and the NFL to be the exclusive Spanish-language broadcaster of the game, marking the third dedicated Spanish-language broadcast of the Super Bowl. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.",
+     "citations": [
+      "Doc_13 \u00a71",
+      "Doc_13 \u00a734"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "On December 28, 2015, ESPN Deportes announced that they had reached an agreement with CBS and the NFL to be the exclusive Spanish-language broadcaster of the game, marking the third dedicated Spanish-language broadcast of the Super Bowl.",
+       "citations": [
+        "Doc_13 \u00a734"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "On December 28, 2015, ESPN Deportes announced that they had reached an agreement with CBS and the NFL to be the exclusive Spanish-language broadcaster of the game, marking the third dedicated Spanish-language broadcast of the Super Bowl.",
+       "citations": [
+        "Doc_13 \u00a734"
+       ]
+      },
+      {
+       "text": "The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.",
+       "citations": [
+        "Doc_13 \u00a71"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what did kenya reveil in 2030",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what did kenya reveil in 2030"
+     ],
+     "answer": "In 2007, the Kenyan government unveiled Vision 2030, an economic development programme it hopes will put the country in the same league as the Asian Economic Tigers by the year 2030.",
+     "citations": [
+      "Doc_08 \u00a737"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.2,
+       "query": "it turns out what do some",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 6.6,
+       "query": "it turns out what do some believe about this pronunciation",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "it turns out what do some",
+      "it turns out what do some believe about this pronunciation"
+     ],
+     "answer": "In 2007, the Kenyan government unveiled Vision 2030, an economic development programme it hopes will put the country in the same league as the Asian Economic Tigers by the year 2030. Tesla was able to perform integral calculus in his head, which prompted his teachers to believe that he was cheating.",
+     "citations": [
+      "Doc_08 \u00a737",
+      "Doc_09 \u00a77"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 2007, the Kenyan government unveiled Vision 2030, an economic development programme it hopes will put the country in the same league as the Asian Economic Tigers by the year 2030.",
+       "citations": [
+        "Doc_08 \u00a737"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 2007, the Kenyan government unveiled Vision 2030, an economic development programme it hopes will put the country in the same league as the Asian Economic Tigers by the year 2030.",
+       "citations": [
+        "Doc_08 \u00a737"
+       ]
+      },
+      {
+       "text": "Tesla was able to perform integral calculus in his head, which prompted his teachers to believe that he was cheating.",
+       "citations": [
+        "Doc_09 \u00a77"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "who was designated as the home",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "who was designated as the home team in the super bowl",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "who was designated as the home",
+      "who was designated as the home team in the super bowl"
+     ],
+     "answer": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prior.",
+     "citations": [
+      "Doc_13 \u00a723"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The only other AFC champion team to have.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.2,
+       "query": "it turns out which single did",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.6,
+       "query": "it turns out which single did beyonc\u00e9",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.6,
+       "query": "coldplay collaborate on turns out single beyonc",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "it turns out which single did",
+      "it turns out which single did beyonc\u00e9",
+      "coldplay collaborate on turns out single beyonc"
+     ],
+     "answer": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prior. On January 7, 2016, Pepsi confirmed to the Associated Press that Beyonc\u00e9, who headlined the Super Bowl XLVII halftime show and collaborated with Coldplay on the single \"Hymn for the Weekend\", would be making an appearance. On January 7, 2016, Pepsi confirmed to the Associated Press that Beyonc\u00e9, who headlined the Super Bowl XLVII halftime show and collaborated with Coldplay on the single \"Hymn for the Weekend\", would be making an appearance.",
+     "citations": [
+      "Doc_13 \u00a723",
+      "Doc_13 \u00a745"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The only other AFC champion team to have.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: The only other AFC champion team to have.",
+     "claims": [
+      {
+       "text": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prior.",
+       "citations": [
+        "Doc_13 \u00a723"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: The only other AFC champion team to have.",
+     "claims": [
+      {
+       "text": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prior.",
+       "citations": [
+        "Doc_13 \u00a723"
+       ]
+      },
+      {
+       "text": "On January 7, 2016, Pepsi confirmed to the Associated Press that Beyonc\u00e9, who headlined the Super Bowl XLVII halftime show and collaborated with Coldplay on the single \"Hymn for the Weekend\", would be making an appearance.",
+       "citations": [
+        "Doc_13 \u00a745"
+       ]
+      },
+      {
+       "text": "On January 7, 2016, Pepsi confirmed to the Associated Press that Beyonc\u00e9, who headlined the Super Bowl XLVII halftime show and collaborated with Coldplay on the single \"Hymn for the Weekend\", would be making an appearance.",
+       "citations": [
+        "Doc_13 \u00a745"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 2
+   }
+  },
+  "gen_late_detail_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "beginning how many years ago did",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "beginning how many years ago did the amazon rainforest extend 45 degrees",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "beginning how many years ago did the amazon rainforest extend 45 degrees south",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "beginning how many years ago did",
+      "beginning how many years ago did the amazon rainforest extend 45 degrees",
+      "beginning how many years ago did the amazon rainforest extend 45 degrees south"
+     ],
+     "answer": "From 66\u201334 Mya, the rainforest extended as far south as 45\u00b0.",
+     "citations": [
+      "Doc_00 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.0,
+       "query": "wait one more thing how",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "wait one more thing how many tree species are in the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.8,
+       "query": "wait one more thing how many tree species are in the rainforest",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "wait one more thing how",
+      "wait one more thing how many tree species are in the",
+      "wait one more thing how many tree species are in the rainforest"
+     ],
+     "answer": "From 66\u201334 Mya, the rainforest extended as far south as 45\u00b0. The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+     "citations": [
+      "Doc_00 \u00a710",
+      "Doc_00 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "From 66\u201334 Mya, the rainforest extended as far south as 45\u00b0.",
+       "citations": [
+        "Doc_00 \u00a72"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "From 66\u201334 Mya, the rainforest extended as far south as 45\u00b0.",
+       "citations": [
+        "Doc_00 \u00a72"
+       ]
+      },
+      {
+       "text": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+       "citations": [
+        "Doc_00 \u00a710"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "when did he first get out",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "when did he first get out of bed following the accident",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "when did he first get out",
+      "when did he first get out of bed following the accident"
+     ],
+     "answer": "Carolina had two more drives, but failed to get a first down on each one.",
+     "citations": [
+      "Doc_13 \u00a752"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Carolina had two more drives, but failed.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.2,
+       "query": "also where did the family move",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.6,
+       "query": "also where did the family move in 1862",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also where did the family move",
+      "also where did the family move in 1862"
+     ],
+     "answer": "Carolina had two more drives, but failed to get a first down on each one. The move has been followed by staff cuts, increased subscription prices (including 9% in Sky's family package) and the dropping of the 3D channel.",
+     "citations": [
+      "Doc_12 \u00a72",
+      "Doc_13 \u00a752"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Carolina had two more drives, but failed; The move has been followed by staff cuts.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: Carolina had two more drives, but failed.",
+     "claims": [
+      {
+       "text": "Carolina had two more drives, but failed to get a first down on each one.",
+       "citations": [
+        "Doc_13 \u00a752"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: Carolina had two more drives, but failed; The move has been followed by staff cuts.",
+     "claims": [
+      {
+       "text": "Carolina had two more drives, but failed to get a first down on each one.",
+       "citations": [
+        "Doc_13 \u00a752"
+       ]
+      },
+      {
+       "text": "The move has been followed by staff cuts, increased subscription prices (including 9% in Sky's family package) and the dropping of the 3D channel.",
+       "citations": [
+        "Doc_12 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "along with 10 cloverfield lane what",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "along with 10 cloverfield lane what paramount trailer appeared during the super",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "along with 10 cloverfield lane what paramount trailer appeared during the super bowl",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "along with 10 cloverfield lane what",
+      "along with 10 cloverfield lane what paramount trailer appeared during the super",
+      "along with 10 cloverfield lane what paramount trailer appeared during the super bowl"
+     ],
+     "answer": "Fox paid for Deadpool, X-Men: Apocalypse, Independence Day: Resurgence and Eddie the Eagle, Lionsgate paid for Gods of Egypt, Paramount paid for Teenage Mutant Ninja Turtles: Out of the Shadows and 10 Cloverfield Lane, Universal paid for The Secret Life of Pets and the debut trailer for Jason Bourne and Disney paid for Captain America: Civil War, The Jungle Book and Alice Through the Looking Glass.[citation needed]",
+     "citations": [
+      "Doc_13 \u00a739"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.0,
+       "query": "also what team was the afc",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "also what team was the afc champion",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "also what team was the afc",
+      "also what team was the afc champion"
+     ],
+     "answer": "Fox paid for Deadpool, X-Men: Apocalypse, Independence Day: Resurgence and Eddie the Eagle, Lionsgate paid for Gods of Egypt, Paramount paid for Teenage Mutant Ninja Turtles: Out of the Shadows and 10 Cloverfield Lane, Universal paid for The Secret Life of Pets and the debut trailer for Jason Bourne and Disney paid for Captain America: Civil War, The Jungle Book and Alice Through the Looking Glass.[citation needed] The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prior.",
+     "citations": [
+      "Doc_13 \u00a723",
+      "Doc_13 \u00a739"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The only other AFC champion team to have.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Fox paid for Deadpool, X-Men: Apocalypse, Independence Day: Resurgence and Eddie the Eagle, Lionsgate paid for Gods of Egypt, Paramount paid for Teenage Mutant Ninja Turtles: Out of the Shadows and 10 Cloverfield Lane, Universal paid for The Secret Life of Pets and the debut trailer for Jason Bourne and Disney paid for Captain America: Civil War, The Jungle Book and Alice Through the Looking Glass.[citation needed]",
+       "citations": [
+        "Doc_13 \u00a739"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: The only other AFC champion team to have.",
+     "claims": [
+      {
+       "text": "Fox paid for Deadpool, X-Men: Apocalypse, Independence Day: Resurgence and Eddie the Eagle, Lionsgate paid for Gods of Egypt, Paramount paid for Teenage Mutant Ninja Turtles: Out of the Shadows and 10 Cloverfield Lane, Universal paid for The Secret Life of Pets and the debut trailer for Jason Bourne and Disney paid for Captain America: Civil War, The Jungle Book and Alice Through the Looking Glass.[citation needed]",
+       "citations": [
+        "Doc_13 \u00a739"
+       ]
+      },
+      {
+       "text": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prior.",
+       "citations": [
+        "Doc_13 \u00a723"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how many tackles did luke kuechly",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how many tackles did luke kuechly register",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how many tackles did luke kuechly",
+      "how many tackles did luke kuechly register"
+     ],
+     "answer": "Behind them, two of the Panthers three starting linebackers were also selected to play in the Pro Bowl: Thomas Davis and Luke Kuechly.",
+     "citations": [
+      "Doc_13 \u00a712"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Behind them, two of the Panthers three s.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.6,
+       "query": "actually in 2011 who was the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.0,
+       "query": "actually in 2011 who was the first player to be chosen in",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "actually in 2011 who was the first player to be chosen in the nfl draft",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "actually in 2011 who was the",
+      "actually in 2011 who was the first player to be chosen in",
+      "actually in 2011 who was the first player to be chosen in the nfl draft"
+     ],
+     "answer": "Behind them, two of the Panthers three starting linebackers were also selected to play in the Pro Bowl: Thomas Davis and Luke Kuechly. Manning was the #1 selection of the 1998 NFL draft, while Newton was picked first in 2011.",
+     "citations": [
+      "Doc_13 \u00a712",
+      "Doc_13 \u00a720"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Behind them, two of the Panthers three s.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: Behind them, two of the Panthers three s.",
+     "claims": [
+      {
+       "text": "Behind them, two of the Panthers three starting linebackers were also selected to play in the Pro Bowl: Thomas Davis and Luke Kuechly.",
+       "citations": [
+        "Doc_13 \u00a712"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: Behind them, two of the Panthers three s.",
+     "claims": [
+      {
+       "text": "Behind them, two of the Panthers three starting linebackers were also selected to play in the Pro Bowl: Thomas Davis and Luke Kuechly.",
+       "citations": [
+        "Doc_13 \u00a712"
+       ]
+      },
+      {
+       "text": "Manning was the #1 selection of the 1998 NFL draft, while Newton was picked first in 2011.",
+       "citations": [
+        "Doc_13 \u00a720"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_multi_intent_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what came into force after the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what came into force after the new constitution was herald what attracts",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what came into force after the new constitution was herald what attracts the tourists to kenya",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what came into force after the",
+      "what came into force after the new constitution was herald what attracts",
+      "what came into force after the new constitution was herald what attracts the tourists to kenya"
+     ],
+     "answer": "As of that day, the new constitution heralding the Second Republic came into force.",
+     "citations": [
+      "Doc_08 \u00a721"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: As of that day, the new constitution her.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: As of that day, the new constitution her.",
+     "claims": [
+      {
+       "text": "As of that day, the new constitution heralding the Second Republic came into force.",
+       "citations": [
+        "Doc_08 \u00a721"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "service centers",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "service centers are viewed as what things",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "service centers are viewed as what things did the network concentrate on",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "service centers",
+      "service centers are viewed as what things",
+      "service centers are viewed as what things did the network concentrate on"
+     ],
+     "answer": "In 1965, at the instigation of Warner Sinback, a data network based on this voice-phone network was designed to connect GE's four computer sales and service centers (Schenectady, Phoenix, Chicago, and Phoenix) to facilitate a computer time-sharing service, apparently the world's first commercial online service. (",
+     "citations": [
+      "Doc_10 \u00a713"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1965, at the instigation of Warner Sinback, a data network based on this voice-phone network was designed to connect GE's four computer sales and service centers (Schenectady, Phoenix, Chicago, and Phoenix) to facilitate a computer time-sharing service, apparently the world's first commercial online service. (",
+       "citations": [
+        "Doc_10 \u00a713"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "who first showed that newton's theory",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "who first showed that newton's theory of gravity was not as correct",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "who first showed that newton's theory of gravity was not as correct as another theory what are associated",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "who first showed that newton's theory of gravity was not as correct as another theory what are associated with normal forces",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "who first showed that newton's theory",
+      "who first showed that newton's theory of gravity was not as correct",
+      "who first showed that newton's theory of gravity was not as correct as another theory what are associated",
+      "who first showed that newton's theory of gravity was not as correct as another theory what are associated with normal forces"
+     ],
+     "answer": "This was the first time that Newton's Theory of Gravity had been shown to be less correct than an alternative.",
+     "citations": [
+      "Doc_04 \u00a727"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: This was the first time that Newton's Th.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: This was the first time that Newton's Th.",
+     "claims": [
+      {
+       "text": "This was the first time that Newton's Theory of Gravity had been shown to be less correct than an alternative.",
+       "citations": [
+        "Doc_04 \u00a727"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what did the mongols shield themselves",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what did the mongols shield themselves with while attacking samarkand who was",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what did the mongols shield themselves with while attacking samarkand who was the head of the household that",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what did the mongols shield themselves with while attacking samarkand who was the head of the household that tem\u00fcjin joined when he was nine",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "what did the mongols shield themselves with while attacking samarkand who was the head of the household that tem\u00fcjin joined when he was nine years old",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what did the mongols shield themselves",
+      "what did the mongols shield themselves with while attacking samarkand who was",
+      "what did the mongols shield themselves with while attacking samarkand who was the head of the household that",
+      "what did the mongols shield themselves with while attacking samarkand who was the head of the household that tem\u00fcjin joined when he was nine",
+      "what did the mongols shield themselves with while attacking samarkand who was the head of the household that tem\u00fcjin joined when he was nine years old"
+     ],
+     "answer": "Tem\u00fcjin was to live there in service to Dai Setsen, the head of the new household, until he reached the marriageable age of 12.",
+     "citations": [
+      "Doc_05 \u00a74"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Tem\u00fcjin was to live there in service to Dai Setsen, the head of the new household, until he reached the marriageable age of 12.",
+       "citations": [
+        "Doc_05 \u00a74"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how many doctor who christmas specials",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how many doctor who christmas specials have been shown what years did",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "how many doctor who christmas specials have been shown what years did the original doctor who series run",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what canadian cable station started",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "what canadian cable station started showing doctor who in 2009",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how many doctor who christmas specials",
+      "how many doctor who christmas specials have been shown what years did",
+      "how many doctor who christmas specials have been shown what years did the original doctor who series run",
+      "what canadian cable station started",
+      "what canadian cable station started showing doctor who in 2009"
+     ],
+     "answer": "There have since been nine further series in 2006\u20132008 and 2010\u20132015, and Christmas Day specials every year since 2005. The series moved to the Canadian cable channel Space in 2009.[citation needed]",
+     "citations": [
+      "Doc_03 \u00a746",
+      "Doc_03 \u00a79"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The series moved to the Canadian cable c.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: The series moved to the Canadian cable c.",
+     "claims": [
+      {
+       "text": "There have since been nine further series in 2006\u20132008 and 2010\u20132015, and Christmas Day specials every year since 2005.",
+       "citations": [
+        "Doc_03 \u00a79"
+       ]
+      },
+      {
+       "text": "The series moved to the Canadian cable channel Space in 2009.[citation needed]",
+       "citations": [
+        "Doc_03 \u00a746"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "what was the name of the doctor who play from the 1980's",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what was the name of the doctor who play from the 1980's what workshop helped with the creation",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what was the name of the doctor who play from the 1980's what workshop helped with the creation of the doctor who theme and",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "which doctors were featured in the name doctor play 1980",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "which doctors were featured in the four doctors name doctor play 1980",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what was the name of the doctor who play from the 1980's",
+      "what was the name of the doctor who play from the 1980's what workshop helped with the creation",
+      "what was the name of the doctor who play from the 1980's what workshop helped with the creation of the doctor who theme and",
+      "which doctors were featured in the name doctor play 1980",
+      "which doctors were featured in the four doctors name doctor play 1980"
+     ],
+     "answer": "In 2010, Peter Davison, Colin Baker, Sylvester McCoy and Paul McGann came together again to star in the audio drama The Four Doctors.",
+     "citations": [
+      "Doc_03 \u00a725"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 2010, Peter Davison, Colin Baker, Sylvester McCoy and Paul McGann came together again to star in the audio drama The Four Doctors.",
+       "citations": [
+        "Doc_03 \u00a725"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what were the civil wars caused",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what were the civil wars caused by the huguenots called what was",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what were the civil wars caused by the huguenots called what was the most important of these cities",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what were the civil wars caused by the huguenots called what was the most important of these cities or towns",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "in what city is the last huguenot congregation in",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what were the civil wars caused",
+      "what were the civil wars caused by the huguenots called what was",
+      "what were the civil wars caused by the huguenots called what was the most important of these cities",
+      "what were the civil wars caused by the huguenots called what was the most important of these cities or towns",
+      "in what city is the last huguenot congregation in"
+     ],
+     "answer": "The main provincial towns and cities experiencing the Massacre were Aix, Bordeaux, Bourges, Lyons, Meaux, Orleans, Rouen, Toulouse, and Troyes. The last active Huguenot congregation in North America worships in Charleston, South Carolina, at a church that dates to 1844.",
+     "citations": [
+      "Doc_06 \u00a723",
+      "Doc_06 \u00a737"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The main provincial towns and cities experiencing the Massacre were Aix, Bordeaux, Bourges, Lyons, Meaux, Orleans, Rouen, Toulouse, and Troyes.",
+       "citations": [
+        "Doc_06 \u00a737"
+       ]
+      },
+      {
+       "text": "The last active Huguenot congregation in North America worships in Charleston, South Carolina, at a church that dates to 1844.",
+       "citations": [
+        "Doc_06 \u00a723"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how do you determine the acceleration",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how do you determine the acceleration of a rope when two people",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "how do you determine the acceleration of a rope when two people are pulling it what applies to",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "how do you determine the acceleration of a rope when two people are pulling it what applies to equally to constant velocity motion as",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "how do you determine the acceleration of a rope when two people are pulling it what applies to equally to constant velocity motion as it does to rest",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "what do you use to let idea determine acceleration rope two",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "what do you use to let idea strings switch direction",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how do you determine the acceleration",
+      "how do you determine the acceleration of a rope when two people",
+      "how do you determine the acceleration of a rope when two people are pulling it what applies to",
+      "how do you determine the acceleration of a rope when two people are pulling it what applies to equally to constant velocity motion as",
+      "how do you determine the acceleration of a rope when two people are pulling it what applies to equally to constant velocity motion as it does to rest",
+      "what do you use to let idea determine acceleration rope two",
+      "what do you use to let idea strings switch direction"
+     ],
+     "answer": "Inertia therefore applies equally well to constant velocity motion as it does to rest. They can be combined with ideal pulleys, which allow ideal strings to switch physical direction.",
+     "citations": [
+      "Doc_04 \u00a736",
+      "Doc_04 \u00a76"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Inertia therefore applies equally well t.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: Inertia therefore applies equally well t.",
+     "claims": [
+      {
+       "text": "Inertia therefore applies equally well to constant velocity motion as it does to rest.",
+       "citations": [
+        "Doc_04 \u00a76"
+       ]
+      },
+      {
+       "text": "They can be combined with ideal pulleys, which allow ideal strings to switch physical direction.",
+       "citations": [
+        "Doc_04 \u00a736"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what was suggested at the symposium",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what was suggested at the symposium in 1967 x 25 uses what type",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what was suggested at the symposium in 1967 x 25 uses what type network type",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what did nsfnet eventually provide suggested symposium 1967 25",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what was suggested at the symposium",
+      "what was suggested at the symposium in 1967 x 25 uses what type",
+      "what was suggested at the symposium in 1967 x 25 uses what type network type",
+      "what did nsfnet eventually provide suggested symposium 1967 25"
+     ],
+     "answer": "A member of Davies' team (Roger Scantlebury) met Lawrence Roberts at the 1967 ACM Symposium on Operating System Principles and suggested it for use in the ARPANET.",
+     "citations": [
+      "Doc_10 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "A member of Davies' team (Roger Scantlebury) met Lawrence Roberts at the 1967 ACM Symposium on Operating System Principles and suggested it for use in the ARPANET.",
+       "citations": [
+        "Doc_10 \u00a75"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what country showed all three episodes",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what country showed all three episodes of silver nemesis before the bbc",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what country showed all three episodes of silver nemesis before the bbc did in what country was the doctor who film not successful enough",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "what country showed all three episodes of silver nemesis before the bbc did in what country was the doctor who film not successful enough to spawn a series",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "in what years did the show see country showed three episodes",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "in what years did the show see audiences as high as 12 million",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what country showed all three episodes",
+      "what country showed all three episodes of silver nemesis before the bbc",
+      "what country showed all three episodes of silver nemesis before the bbc did in what country was the doctor who film not successful enough",
+      "what country showed all three episodes of silver nemesis before the bbc did in what country was the doctor who film not successful enough to spawn a series",
+      "in what years did the show see country showed three episodes",
+      "in what years did the show see audiences as high as 12 million"
+     ],
+     "answer": "The 1988 story Silver Nemesis was broadcast with all three episodes airing back to back on TVNZ in New Zealand in November, after the first episode had been shown in the UK but before the final two instalments had aired there. Surveys of plague pit remains in France and England indicate the first variant entered Europe through the port of Marseille around November 1347 and spread through France over the next two years, eventually reaching England in the spring of 1349, where it spread through the country in three epidemics. The second was the late 1970s, when Tom Baker occasionally drew audiences of over 12 million.",
+     "citations": [
+      "Doc_01 \u00a712",
+      "Doc_03 \u00a742",
+      "Doc_03 \u00a744"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Surveys of plague pit remains in France ; The second was the late 1970s, when Tom .",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: Surveys of plague pit remains in France ; The second was the late 1970s, when Tom .",
+     "claims": [
+      {
+       "text": "The 1988 story Silver Nemesis was broadcast with all three episodes airing back to back on TVNZ in New Zealand in November, after the first episode had been shown in the UK but before the final two instalments had aired there.",
+       "citations": [
+        "Doc_03 \u00a744"
+       ]
+      },
+      {
+       "text": "Surveys of plague pit remains in France and England indicate the first variant entered Europe through the port of Marseille around November 1347 and spread through France over the next two years, eventually reaching England in the spring of 1349, where it spread through the country in three epidemics.",
+       "citations": [
+        "Doc_01 \u00a712"
+       ]
+      },
+      {
+       "text": "The second was the late 1970s, when Tom Baker occasionally drew audiences of over 12 million.",
+       "citations": [
+        "Doc_03 \u00a742"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how many kilometers of acres of",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how many kilometers of acres of the ecuadorian rainforest is supported analysis",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "how many kilometers of acres of the ecuadorian rainforest is supported analysis of what kind of deposits from",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "how many kilometers of acres of the ecuadorian rainforest is supported analysis of what kind of deposits from the amazon fan indicates a change",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "how many kilometers of acres of the ecuadorian rainforest is supported analysis of what kind of deposits from the amazon fan indicates a change in rainfall in the amazon basin",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "two factors that many kilometers acres ecuadorian",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "two factors that made it difficult for colonists to",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 16.8,
+       "query": "two factors that made it difficult for colonists to the amazon forest to survive",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how many kilometers of acres of",
+      "how many kilometers of acres of the ecuadorian rainforest is supported analysis",
+      "how many kilometers of acres of the ecuadorian rainforest is supported analysis of what kind of deposits from",
+      "how many kilometers of acres of the ecuadorian rainforest is supported analysis of what kind of deposits from the amazon fan indicates a change",
+      "how many kilometers of acres of the ecuadorian rainforest is supported analysis of what kind of deposits from the amazon fan indicates a change in rainfall in the amazon basin",
+      "two factors that many kilometers acres ecuadorian",
+      "two factors that made it difficult for colonists to",
+      "two factors that made it difficult for colonists to the amazon forest to survive"
+     ],
+     "answer": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species. The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species. A July 23, 2006 article in the UK newspaper The Independent reported Woods Hole Research Center results showing that the forest in its present form could survive only three years of drought.",
+     "citations": [
+      "Doc_00 \u00a710",
+      "Doc_00 \u00a720"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+       "citations": [
+        "Doc_00 \u00a710"
+       ]
+      },
+      {
+       "text": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+       "citations": [
+        "Doc_00 \u00a710"
+       ]
+      },
+      {
+       "text": "A July 23, 2006 article in the UK newspaper The Independent reported Woods Hole Research Center results showing that the forest in its present form could survive only three years of drought.",
+       "citations": [
+        "Doc_00 \u00a720"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what was the genghis khan's characteristic",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what was the genghis khan's characteristic approach to religious diversity who did",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what was the genghis khan's characteristic approach to religious diversity who did genghis khan assign as his successor",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what was the genghis khan's characteristic",
+      "what was the genghis khan's characteristic approach to religious diversity who did",
+      "what was the genghis khan's characteristic approach to religious diversity who did genghis khan assign as his successor"
+     ],
+     "answer": "In The Secret History of the Mongols, just before the invasion of the Khwarezmid Empire by Genghis Khan, Chagatai declared before his father and brothers that he would never accept Jochi as Genghis Khan's successor.",
+     "citations": [
+      "Doc_05 \u00a731"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: In The Secret History of the Mongols, ju.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: In The Secret History of the Mongols, ju.",
+     "claims": [
+      {
+       "text": "In The Secret History of the Mongols, just before the invasion of the Khwarezmid Empire by Genghis Khan, Chagatai declared before his father and brothers that he would never accept Jochi as Genghis Khan's successor.",
+       "citations": [
+        "Doc_05 \u00a731"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "typical annual cost",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "typical annual cost for an irish private school along",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "typical annual cost for an irish private school along with sport",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "art what is a type of talent scholarship and",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "how are erg\u00e4nzungsschulen funded typical annual cost irish",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "typical annual cost",
+      "typical annual cost for an irish private school along",
+      "typical annual cost for an irish private school along with sport",
+      "art what is a type of talent scholarship and",
+      "how are erg\u00e4nzungsschulen funded typical annual cost irish"
+     ],
+     "answer": "Private schools, also known as independent schools, non-governmental, or nonstate schools, are not administered by local, state or national governments; thus, they retain the right to select their students and are funded in whole or in part by charging their students tuition, rather than relying on mandatory taxation through public (government) funding; at some private schools students may be able to get a scholarship, which makes the cost cheaper, depending on a talent the student may have (e.g. sport scholarship, art scholarship, academic scholarship), financial need, or tax credit scholarships that might be available. In addition to the bubonic infection, others point to additional septicemic (a type of \"blood poisoning\") and pneumonic (an airborne plague that attacks the lungs before the rest of the body) forms of the plague, which lengthen the duration of outbreaks throughout the seasons and help account for its high mortality rate and additional recorded symptoms. Erg\u00e4nzungsschulen have the freedom to operate outside of government regulation and are funded in whole by charging their students tuition fees.",
+     "citations": [
+      "Doc_01 \u00a717",
+      "Doc_11 \u00a71",
+      "Doc_11 \u00a79"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: In addition to the bubonic infection, ot.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: In addition to the bubonic infection, ot.",
+     "claims": [
+      {
+       "text": "Private schools, also known as independent schools, non-governmental, or nonstate schools, are not administered by local, state or national governments; thus, they retain the right to select their students and are funded in whole or in part by charging their students tuition, rather than relying on mandatory taxation through public (government) funding; at some private schools students may be able to get a scholarship, which makes the cost cheaper, depending on a talent the student may have (e.g. sport scholarship, art scholarship, academic scholarship), financial need, or tax credit scholarships that might be available.",
+       "citations": [
+        "Doc_11 \u00a71"
+       ]
+      },
+      {
+       "text": "In addition to the bubonic infection, others point to additional septicemic (a type of \"blood poisoning\") and pneumonic (an airborne plague that attacks the lungs before the rest of the body) forms of the plague, which lengthen the duration of outbreaks throughout the seasons and help account for its high mortality rate and additional recorded symptoms.",
+       "citations": [
+        "Doc_01 \u00a717"
+       ]
+      },
+      {
+       "text": "Erg\u00e4nzungsschulen have the freedom to operate outside of government regulation and are funded in whole by charging their students tuition fees.",
+       "citations": [
+        "Doc_11 \u00a79"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how many plant species make up",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how many plant species make up the total in the rainforest what",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "how many plant species make up the total in the rainforest what did the analysis from the sediment",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "how many plant species make up the total in the rainforest what did the analysis from the sediment deposits indicate",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how many plant species make up",
+      "how many plant species make up the total in the rainforest what",
+      "how many plant species make up the total in the rainforest what did the analysis from the sediment",
+      "how many plant species make up the total in the rainforest what did the analysis from the sediment deposits indicate"
+     ],
+     "answer": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+     "citations": [
+      "Doc_00 \u00a710"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+       "citations": [
+        "Doc_00 \u00a710"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "when was the last plague outbreak",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "when was the last plague outbreak when did a plague ridden ship land",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "when was the last plague outbreak when did a plague ridden ship land in norway",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "where did scientists find their y pestis sample",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "when was the last plague outbreak",
+      "when was the last plague outbreak when did a plague ridden ship land",
+      "when was the last plague outbreak when did a plague ridden ship land in norway",
+      "where did scientists find their y pestis sample"
+     ],
+     "answer": "The last plague outbreak ravaged Oslo in 1654. The investigation of the pathogen that caused the 19th-century plague was begun by teams of scientists who visited Hong Kong in 1894, among whom was the French-Swiss bacteriologist Alexandre Yersin, after whom the pathogen was named Yersinia pestis.",
+     "citations": [
+      "Doc_01 \u00a721",
+      "Doc_01 \u00a78"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The last plague outbreak ravaged Oslo in.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: The last plague outbreak ravaged Oslo in.",
+     "claims": [
+      {
+       "text": "The last plague outbreak ravaged Oslo in 1654.",
+       "citations": [
+        "Doc_01 \u00a721"
+       ]
+      },
+      {
+       "text": "The investigation of the pathogen that caused the 19th-century plague was begun by teams of scientists who visited Hong Kong in 1894, among whom was the French-Swiss bacteriologist Alexandre Yersin, after whom the pathogen was named Yersinia pestis.",
+       "citations": [
+        "Doc_01 \u00a78"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "purpose of telnet what did",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "purpose of telnet what did decnet originally do",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what was developed for the air force purpose telnet decnet originally",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "purpose of telnet what did",
+      "purpose of telnet what did decnet originally do",
+      "what was developed for the air force purpose telnet decnet originally"
+     ],
+     "answer": "Baran developed the concept of distributed adaptive message block switching during his research at the RAND Corporation for the US Air Force into survivable communications networks, first presented to the Air Force in the summer of 1961 as briefing B-265, later published as RAND report P-2626 in 1962, and finally in report RM 3420 in 1964.",
+     "citations": [
+      "Doc_10 \u00a74"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Baran developed the concept of distributed adaptive message block switching during his research at the RAND Corporation for the US Air Force into survivable communications networks, first presented to the Air Force in the summer of 1961 as briefing B-265, later published as RAND report P-2626 in 1962, and finally in report RM 3420 in 1964.",
+       "citations": [
+        "Doc_10 \u00a74"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what percentage of money raised was",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what percentage of money raised was earmarked for causes in the san",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what percentage of money raised was earmarked for causes in the san francisco area who lost to the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "what percentage of money raised was earmarked for causes in the san francisco area who lost to the broncos in the divisional round and",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "how many nfl teams have had percentage money raised earmarked",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "how many nfl teams have had only one loss by the end",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 14.4,
+       "query": "how many nfl teams have had only one loss by the end of a regular season",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what percentage of money raised was",
+      "what percentage of money raised was earmarked for causes in the san",
+      "what percentage of money raised was earmarked for causes in the san francisco area who lost to the",
+      "what percentage of money raised was earmarked for causes in the san francisco area who lost to the broncos in the divisional round and",
+      "how many nfl teams have had percentage money raised earmarked",
+      "how many nfl teams have had only one loss by the end",
+      "how many nfl teams have had only one loss by the end of a regular season"
+     ],
+     "answer": "The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. The Broncos finished the regular season with a 12\u20134 record, and denied the New England Patriots a chance to defend their title from Super Bowl XLIX by defeating them 20\u201318 in the AFC Championship Game.",
+     "citations": [
+      "Doc_13 \u00a71",
+      "Doc_13 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.",
+       "citations": [
+        "Doc_13 \u00a71"
+       ]
+      },
+      {
+       "text": "The Broncos finished the regular season with a 12\u20134 record, and denied the New England Patriots a chance to defend their title from Super Bowl XLIX by defeating them 20\u201318 in the AFC Championship Game.",
+       "citations": [
+        "Doc_13 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "when did the chinese famine begin",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "when did the chinese famine begin for how long did the plague",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "when did the chinese famine begin for how long did the plague stick around",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "when did the chinese famine begin",
+      "when did the chinese famine begin for how long did the plague",
+      "when did the chinese famine begin for how long did the plague stick around"
+     ],
+     "answer": "In the 1330s a large number of natural disasters and plagues led to widespread famine, starting in 1331, with a deadly plague arriving soon after.",
+     "citations": [
+      "Doc_01 \u00a72"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: In the 1330s a large number of natural d.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: In the 1330s a large number of natural d.",
+     "claims": [
+      {
+       "text": "In the 1330s a large number of natural disasters and plagues led to widespread famine, starting in 1331, with a deadly plague arriving soon after.",
+       "citations": [
+        "Doc_01 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how many kenyans are living below",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how many kenyans are living below the poverty level what is kenya",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "how many kenyans are living below the poverty level what is kenya the home of",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "important catalyst of economic growth",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how many kenyans are living below",
+      "how many kenyans are living below the poverty level what is kenya",
+      "how many kenyans are living below the poverty level what is kenya the home of",
+      "important catalyst of economic growth"
+     ],
+     "answer": "The upper part of Kenya's Eastern Region is home to 10% of the country's Muslims, where they constitute the majority religious group. 22% of GDP still comes from the unreliable agricultural sector which employs 75% of the labour force (a consistent characteristic of under-developed economies that have not attained food security \u2013 an important catalyst of economic growth) A small portion of the population relies on food aid.[citation needed] Industry and manufacturing is the smallest sector, accounting for 16% of GDP.",
+     "citations": [
+      "Doc_08 \u00a727",
+      "Doc_08 \u00a741"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: 22% of GDP still comes from the unreliab.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: 22% of GDP still comes from the unreliab.",
+     "claims": [
+      {
+       "text": "The upper part of Kenya's Eastern Region is home to 10% of the country's Muslims, where they constitute the majority religious group.",
+       "citations": [
+        "Doc_08 \u00a741"
+       ]
+      },
+      {
+       "text": "22% of GDP still comes from the unreliable agricultural sector which employs 75% of the labour force (a consistent characteristic of under-developed economies that have not attained food security \u2013 an important catalyst of economic growth) A small portion of the population relies on food aid.[citation needed] Industry and manufacturing is the smallest sector, accounting for 16% of GDP.",
+       "citations": [
+        "Doc_08 \u00a727"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "csnet the business allowed",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "csnet the business allowed for private companies to do what",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "csnet the business allowed",
+      "csnet the business allowed for private companies to do what"
+     ],
+     "answer": "The business consisted of a large public network that supported dial-up users and a private network business that allowed government agencies and large companies (mostly banks and airlines) to build their own dedicated networks.",
+     "citations": [
+      "Doc_10 \u00a716"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: The business consisted of a large public.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: The business consisted of a large public.",
+     "claims": [
+      {
+       "text": "The business consisted of a large public network that supported dial-up users and a private network business that allowed government agencies and large companies (mostly banks and airlines) to build their own dedicated networks.",
+       "citations": [
+        "Doc_10 \u00a716"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_suppression_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 1.5,
+       "query": "decnet",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [
+      "decnet"
+     ],
+     "answer": "DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers.",
+     "citations": [
+      "Doc_10 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers. [Doc_10 \u00a712]",
+     "citations": [
+      "Doc_10 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers.",
+       "citations": [
+        "Doc_10 \u00a712"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers.",
+       "citations": [
+        "Doc_10 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "what was tesla afraid someone was trying to do with his invention",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what was tesla afraid someone was trying to do with his invention"
+     ],
+     "answer": "Just by hearing the name of an item, he would be able to envision it in realistic detail.:33 Tesla would visualize an invention in his mind with extreme precision, including all dimensions, before moving to the construction stage, a technique sometimes known as picture thinking.",
+     "citations": [
+      "Doc_09 \u00a775"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Just by hearing the name of an item, he .",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "Just by hearing the name of an item, he would be able to envision it in realistic detail.:33 Tesla would visualize an invention in his mind with extreme precision, including all dimensions, before moving to the construction stage, a technique sometimes known as picture thinking.",
+     "citations": [
+      "Doc_09 \u00a775"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: Just by hearing the name of an item, he .",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: Just by hearing the name of an item, he .",
+     "claims": [
+      {
+       "text": "Just by hearing the name of an item, he would be able to envision it in realistic detail.:33 Tesla would visualize an invention in his mind with extreme precision, including all dimensions, before moving to the construction stage, a technique sometimes known as picture thinking.",
+       "citations": [
+        "Doc_09 \u00a775"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: Just by hearing the name of an item, he .",
+     "claims": [
+      {
+       "text": "Just by hearing the name of an item, he would be able to envision it in realistic detail.:33 Tesla would visualize an invention in his mind with extreme precision, including all dimensions, before moving to the construction stage, a technique sometimes known as picture thinking.",
+       "citations": [
+        "Doc_09 \u00a775"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "what did tesla do at his old school in 1879",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what did tesla do at his old school in 1879"
+     ],
+     "answer": "During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107.",
+     "citations": [
+      "Doc_09 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107. [Doc_09 \u00a712]",
+     "citations": [
+      "Doc_09 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107.",
+       "citations": [
+        "Doc_09 \u00a712"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "During that year, Tesla taught a large class of students in his old school, Higher Real Gymnasium, in Gospi\u0107.",
+       "citations": [
+        "Doc_09 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "who won the mvp for the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "who won the mvp for the super bowl",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "who won the mvp for the",
+      "who won the mvp for the super bowl"
+     ],
+     "answer": "They defeated the Arizona Cardinals 49\u201315 in the NFC Championship Game and advanced to their second Super Bowl appearance since the franchise was founded in 1995.",
+     "citations": [
+      "Doc_13 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 They defeated the Arizona Cardinals 49\u201315 in the NFC Championship Game and advanced to their second Super Bowl appearance since the franchise was founded in 1995. [Doc_13 \u00a72]",
+     "citations": [
+      "Doc_13 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "They defeated the Arizona Cardinals 49\u201315 in the NFC Championship Game and advanced to their second Super Bowl appearance since the franchise was founded in 1995.",
+       "citations": [
+        "Doc_13 \u00a72"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "They defeated the Arizona Cardinals 49\u201315 in the NFC Championship Game and advanced to their second Super Bowl appearance since the franchise was founded in 1995.",
+       "citations": [
+        "Doc_13 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what equals the spring reaction force",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what equals the spring reaction force on an object suspended on a",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what equals the spring reaction force on an object suspended on a spring reaction scale",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what equals the spring reaction force",
+      "what equals the spring reaction force on an object suspended on a",
+      "what equals the spring reaction force on an object suspended on a spring reaction scale"
+     ],
+     "answer": "For example, an object suspended on a vertical spring scale experiences the force of gravity acting on the object balanced by a force applied by the \"spring reaction force\", which equals the object's weight.",
+     "citations": [
+      "Doc_04 \u00a716"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 For example, an object suspended on a vertical spring scale experiences the force of gravity acting on the object balanced by a force applied by the \"spring reaction force\", which equals the object's weight. [Doc_04 \u00a716]",
+     "citations": [
+      "Doc_04 \u00a716"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For example, an object suspended on a vertical spring scale experiences the force of gravity acting on the object balanced by a force applied by the \"spring reaction force\", which equals the object's weight.",
+       "citations": [
+        "Doc_04 \u00a716"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "For example, an object suspended on a vertical spring scale experiences the force of gravity acting on the object balanced by a force applied by the \"spring reaction force\", which equals the object's weight.",
+       "citations": [
+        "Doc_04 \u00a716"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what do gravitational forces act between",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what do gravitational forces act between"
+     ],
+     "answer": "The strong and weak forces are nuclear forces that act only at very short distances, and are responsible for the interactions between subatomic particles, including nucleons and compound nuclei.",
+     "citations": [
+      "Doc_04 \u00a722"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "The strong and weak forces are nuclear forces that act only at very short distances, and are responsible for the interactions between subatomic particles, including nucleons and compound nuclei.",
+     "citations": [
+      "Doc_04 \u00a722"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The strong and weak forces are nuclear forces that act only at very short distances, and are responsible for the interactions between subatomic particles, including nucleons and compound nuclei.",
+       "citations": [
+        "Doc_04 \u00a722"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The strong and weak forces are nuclear forces that act only at very short distances, and are responsible for the interactions between subatomic particles, including nucleons and compound nuclei.",
+       "citations": [
+        "Doc_04 \u00a722"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "in what year did tesla demonstrate",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "in what year did tesla demonstrate his alternating current system",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "in what year did tesla demonstrate",
+      "in what year did tesla demonstrate his alternating current system"
+     ],
+     "answer": "In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE).",
+     "citations": [
+      "Doc_09 \u00a721"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE). [Doc_09 \u00a721]",
+     "citations": [
+      "Doc_09 \u00a721"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE).",
+       "citations": [
+        "Doc_09 \u00a721"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1888, the editor of Electrical World magazine, Thomas Commerford Martin (a friend and publicist), arranged for Tesla to demonstrate his alternating current system, including his induction motor, at the American Institute of Electrical Engineers (now IEEE).",
+       "citations": [
+        "Doc_09 \u00a721"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what agency did the spanish version",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what agency did the spanish version of the super bowl",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what agency did the spanish version",
+      "what agency did the spanish version of the super bowl"
+     ],
+     "answer": "An earlier version of EyeVision was last used in Super Bowl XXXV; for Super Bowl 50, the cameras were upgraded to 5K resolution.)",
+     "citations": [
+      "Doc_13 \u00a733"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: An earlier version of EyeVision was last.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 An earlier version of EyeVision was last used in Super Bowl XXXV; for Super Bowl 50, the cameras were upgraded to 5K resolution.) [Doc_13 \u00a733]",
+     "citations": [
+      "Doc_13 \u00a733"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: An earlier version of EyeVision was last.",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: An earlier version of EyeVision was last.",
+     "claims": [
+      {
+       "text": "An earlier version of EyeVision was last used in Super Bowl XXXV; for Super Bowl 50, the cameras were upgraded to 5K resolution.)",
+       "citations": [
+        "Doc_13 \u00a733"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: An earlier version of EyeVision was last.",
+     "claims": [
+      {
+       "text": "An earlier version of EyeVision was last used in Super Bowl XXXV; for Super Bowl 50, the cameras were upgraded to 5K resolution.)",
+       "citations": [
+        "Doc_13 \u00a733"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "what was henry iv known as",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what was henry iv known as before taking the throne",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "what was henry iv known as",
+      "what was henry iv known as before taking the throne"
+     ],
+     "answer": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes.",
+     "citations": [
+      "Doc_06 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes.",
+     "citations": [
+      "Doc_06 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes.",
+       "citations": [
+        "Doc_06 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of Nantes.",
+       "citations": [
+        "Doc_06 \u00a711"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "how many people were lost in",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "how many people were lost in algiers during 1620 21",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "how many people were lost in",
+      "how many people were lost in algiers during 1620 21"
+     ],
+     "answer": "Algiers lost 30 to 50 thousand inhabitants to it in 1620\u201321, and again in 1654\u201357, 1665, 1691, and 1740\u201342.",
+     "citations": [
+      "Doc_01 \u00a723"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "Algiers lost 30 to 50 thousand inhabitants to it in 1620\u201321, and again in 1654\u201357, 1665, 1691, and 1740\u201342.",
+     "citations": [
+      "Doc_01 \u00a723"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Algiers lost 30 to 50 thousand inhabitants to it in 1620\u201321, and again in 1654\u201357, 1665, 1691, and 1740\u201342.",
+       "citations": [
+        "Doc_01 \u00a723"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Algiers lost 30 to 50 thousand inhabitants to it in 1620\u201321, and again in 1654\u201357, 1665, 1691, and 1740\u201342.",
+       "citations": [
+        "Doc_01 \u00a723"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_unanswerable_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "company's stance on",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "company's stance on interstellar travel expenses",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "company's stance on",
+      "company's stance on interstellar travel expenses"
+     ],
+     "answer": "Starting in 1934, the Westinghouse Electric & Manufacturing Company began paying Tesla $125 per month as well as paying his rent at the Hotel New Yorker, expenses the Company would pay for the rest of Tesla's life.",
+     "citations": [
+      "Doc_09 \u00a758"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Starting in 1934, the Westinghouse Electric & Manufacturing Company began paying Tesla $125 per month as well as paying his rent at the Hotel New Yorker, expenses the Company would pay for the rest of Tesla's life.",
+       "citations": [
+        "Doc_09 \u00a758"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "parking validation policy",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "parking validation policy for visiting contractors",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "parking validation policy",
+      "parking validation policy for visiting contractors"
+     ],
+     "answer": "Source: SQuAD v1.1 (validation split), Rajpurkar et al.",
+     "citations": [
+      "SOURCE \u00a71"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Source: SQuAD v1.1 (validation split), Rajpurkar et al.",
+       "citations": [
+        "SOURCE \u00a71"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "company's stance on",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "company's stance on interstellar travel expenses",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "company's stance on",
+      "company's stance on interstellar travel expenses"
+     ],
+     "answer": "Starting in 1934, the Westinghouse Electric & Manufacturing Company began paying Tesla $125 per month as well as paying his rent at the Hotel New Yorker, expenses the Company would pay for the rest of Tesla's life.",
+     "citations": [
+      "Doc_09 \u00a758"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Starting in 1934, the Westinghouse Electric & Manufacturing Company began paying Tesla $125 per month as well as paying his rent at the Hotel New Yorker, expenses the Company would pay for the rest of Tesla's life.",
+       "citations": [
+        "Doc_09 \u00a758"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "office plant watering",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "office plant watering schedule",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "office plant watering",
+      "office plant watering schedule"
+     ],
+     "answer": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+     "citations": [
+      "Doc_00 \u00a710"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+       "citations": [
+        "Doc_00 \u00a710"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "office plant watering",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "office plant watering schedule",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "office plant watering",
+      "office plant watering schedule"
+     ],
+     "answer": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+     "citations": [
+      "Doc_00 \u00a710"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports more than 1,100 tree species.",
+       "citations": [
+        "Doc_00 \u00a710"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  }
+ },
+ "quality": {
+  "answer": {
+   "k": 43,
+   "n": 102,
+   "rate": 0.4215686274509804,
+   "ci": [
+    0.33029432335982445,
+    0.518536382147273
+   ]
+  },
+  "citation": {
+   "k": 50,
+   "n": 102,
+   "rate": 0.49019607843137253,
+   "ci": [
+    0.39531235331103515,
+    0.5857914848773521
+   ]
+  },
+  "claim_correct": {
+   "k": 52,
+   "n": 88,
+   "rate": 0.5909090909090909,
+   "ci": [
+    0.4864789444675971,
+    0.6877340483374065
+   ]
+  },
+  "abstention": {
+   "k": 0,
+   "n": 5,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.43449149475208104
+   ]
+  },
+  "split_exact": {
+   "k": 3,
+   "n": 20,
+   "rate": 0.15,
+   "ci": [
+    0.05236779195949584,
+    0.36042329588695743
+   ]
+  },
+  "oversplit": {
+   "k": 0,
+   "n": 35,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.09890426758938868
+   ]
+  }
+ },
+ "items": {
+  "answer": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 1,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 0,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 0,
+   "gen_late_detail_004|u1:0": 0,
+   "gen_late_detail_004|u2:0": 1,
+   "gen_late_detail_005|u1:0": 1,
+   "gen_late_detail_005|u2:0": 0,
+   "gen_late_detail_006|u1:0": 0,
+   "gen_late_detail_006|u2:0": 0,
+   "gen_late_detail_007|u1:0": 0,
+   "gen_late_detail_007|u2:0": 0,
+   "gen_late_detail_008|u1:0": 1,
+   "gen_late_detail_008|u2:0": 0,
+   "gen_late_detail_009|u1:0": 1,
+   "gen_late_detail_009|u2:0": 0,
+   "gen_late_detail_010|u1:0": 1,
+   "gen_late_detail_010|u2:0": 0,
+   "gen_late_detail_011|u1:0": 0,
+   "gen_late_detail_011|u2:0": 1,
+   "gen_late_detail_012|u1:0": 0,
+   "gen_late_detail_012|u2:0": 0,
+   "gen_late_detail_013|u1:0": 1,
+   "gen_late_detail_013|u2:0": 0,
+   "gen_late_detail_014|u1:0": 1,
+   "gen_late_detail_014|u2:0": 0,
+   "gen_late_detail_015|u1:0": 0,
+   "gen_late_detail_015|u2:0": 1,
+   "gen_late_detail_016|u1:0": 1,
+   "gen_late_detail_016|u2:0": 1,
+   "gen_late_detail_017|u1:0": 0,
+   "gen_late_detail_017|u2:0": 0,
+   "gen_late_detail_018|u1:0": 1,
+   "gen_late_detail_018|u2:0": 0,
+   "gen_late_detail_019|u1:0": 0,
+   "gen_late_detail_019|u2:0": 1,
+   "gen_multi_intent_000|u1:0": 1,
+   "gen_multi_intent_000|u1:1": 0,
+   "gen_multi_intent_001|u1:0": 1,
+   "gen_multi_intent_001|u1:1": 0,
+   "gen_multi_intent_002|u1:0": 0,
+   "gen_multi_intent_002|u1:1": 0,
+   "gen_multi_intent_003|u1:0": 0,
+   "gen_multi_intent_003|u1:1": 1,
+   "gen_multi_intent_004|u1:0": 0,
+   "gen_multi_intent_004|u1:1": 0,
+   "gen_multi_intent_004|u1:2": 1,
+   "gen_multi_intent_005|u1:0": 0,
+   "gen_multi_intent_005|u1:1": 0,
+   "gen_multi_intent_005|u1:2": 1,
+   "gen_multi_intent_006|u1:0": 0,
+   "gen_multi_intent_006|u1:1": 0,
+   "gen_multi_intent_006|u1:2": 1,
+   "gen_multi_intent_007|u1:0": 0,
+   "gen_multi_intent_007|u1:1": 1,
+   "gen_multi_intent_007|u1:2": 1,
+   "gen_multi_intent_008|u1:0": 1,
+   "gen_multi_intent_008|u1:1": 0,
+   "gen_multi_intent_008|u1:2": 0,
+   "gen_multi_intent_009|u1:0": 1,
+   "gen_multi_intent_009|u1:1": 0,
+   "gen_multi_intent_009|u1:2": 1,
+   "gen_multi_intent_010|u1:0": 1,
+   "gen_multi_intent_010|u1:1": 0,
+   "gen_multi_intent_010|u1:2": 0,
+   "gen_multi_intent_011|u1:0": 0,
+   "gen_multi_intent_011|u1:1": 0,
+   "gen_multi_intent_012|u1:0": 0,
+   "gen_multi_intent_012|u1:1": 1,
+   "gen_multi_intent_012|u1:2": 1,
+   "gen_multi_intent_013|u1:0": 0,
+   "gen_multi_intent_013|u1:1": 0,
+   "gen_multi_intent_014|u1:0": 1,
+   "gen_multi_intent_014|u1:1": 0,
+   "gen_multi_intent_014|u1:2": 0,
+   "gen_multi_intent_015|u1:0": 0,
+   "gen_multi_intent_015|u1:1": 0,
+   "gen_multi_intent_015|u1:2": 1,
+   "gen_multi_intent_016|u1:0": 0,
+   "gen_multi_intent_016|u1:1": 0,
+   "gen_multi_intent_016|u1:2": 0,
+   "gen_multi_intent_017|u1:0": 1,
+   "gen_multi_intent_017|u1:1": 0,
+   "gen_multi_intent_018|u1:0": 0,
+   "gen_multi_intent_018|u1:1": 0,
+   "gen_multi_intent_018|u1:2": 1,
+   "gen_multi_intent_019|u1:0": 0,
+   "gen_multi_intent_019|u1:1": 1,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 0,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 0,
+   "gen_suppression_004|u1:0": 1,
+   "gen_suppression_005|u1:0": 0,
+   "gen_suppression_006|u1:0": 1,
+   "gen_suppression_007|u1:0": 0,
+   "gen_suppression_008|u1:0": 0,
+   "gen_suppression_009|u1:0": 1
+  },
+  "citation": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 1,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 0,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 0,
+   "gen_late_detail_004|u1:0": 0,
+   "gen_late_detail_004|u2:0": 1,
+   "gen_late_detail_005|u1:0": 1,
+   "gen_late_detail_005|u2:0": 1,
+   "gen_late_detail_006|u1:0": 1,
+   "gen_late_detail_006|u2:0": 0,
+   "gen_late_detail_007|u1:0": 0,
+   "gen_late_detail_007|u2:0": 0,
+   "gen_late_detail_008|u1:0": 1,
+   "gen_late_detail_008|u2:0": 0,
+   "gen_late_detail_009|u1:0": 1,
+   "gen_late_detail_009|u2:0": 0,
+   "gen_late_detail_010|u1:0": 1,
+   "gen_late_detail_010|u2:0": 1,
+   "gen_late_detail_011|u1:0": 0,
+   "gen_late_detail_011|u2:0": 1,
+   "gen_late_detail_012|u1:0": 0,
+   "gen_late_detail_012|u2:0": 0,
+   "gen_late_detail_013|u1:0": 1,
+   "gen_late_detail_013|u2:0": 0,
+   "gen_late_detail_014|u1:0": 1,
+   "gen_late_detail_014|u2:0": 0,
+   "gen_late_detail_015|u1:0": 1,
+   "gen_late_detail_015|u2:0": 1,
+   "gen_late_detail_016|u1:0": 1,
+   "gen_late_detail_016|u2:0": 1,
+   "gen_late_detail_017|u1:0": 0,
+   "gen_late_detail_017|u2:0": 0,
+   "gen_late_detail_018|u1:0": 1,
+   "gen_late_detail_018|u2:0": 0,
+   "gen_late_detail_019|u1:0": 1,
+   "gen_late_detail_019|u2:0": 1,
+   "gen_multi_intent_000|u1:0": 1,
+   "gen_multi_intent_000|u1:1": 0,
+   "gen_multi_intent_001|u1:0": 1,
+   "gen_multi_intent_001|u1:1": 0,
+   "gen_multi_intent_002|u1:0": 1,
+   "gen_multi_intent_002|u1:1": 0,
+   "gen_multi_intent_003|u1:0": 0,
+   "gen_multi_intent_003|u1:1": 1,
+   "gen_multi_intent_004|u1:0": 0,
+   "gen_multi_intent_004|u1:1": 0,
+   "gen_multi_intent_004|u1:2": 1,
+   "gen_multi_intent_005|u1:0": 0,
+   "gen_multi_intent_005|u1:1": 0,
+   "gen_multi_intent_005|u1:2": 1,
+   "gen_multi_intent_006|u1:0": 0,
+   "gen_multi_intent_006|u1:1": 0,
+   "gen_multi_intent_006|u1:2": 1,
+   "gen_multi_intent_007|u1:0": 0,
+   "gen_multi_intent_007|u1:1": 1,
+   "gen_multi_intent_007|u1:2": 1,
+   "gen_multi_intent_008|u1:0": 1,
+   "gen_multi_intent_008|u1:1": 0,
+   "gen_multi_intent_008|u1:2": 0,
+   "gen_multi_intent_009|u1:0": 1,
+   "gen_multi_intent_009|u1:1": 0,
+   "gen_multi_intent_009|u1:2": 1,
+   "gen_multi_intent_010|u1:0": 1,
+   "gen_multi_intent_010|u1:1": 0,
+   "gen_multi_intent_010|u1:2": 0,
+   "gen_multi_intent_011|u1:0": 0,
+   "gen_multi_intent_011|u1:1": 0,
+   "gen_multi_intent_012|u1:0": 0,
+   "gen_multi_intent_012|u1:1": 1,
+   "gen_multi_intent_012|u1:2": 1,
+   "gen_multi_intent_013|u1:0": 0,
+   "gen_multi_intent_013|u1:1": 0,
+   "gen_multi_intent_014|u1:0": 1,
+   "gen_multi_intent_014|u1:1": 0,
+   "gen_multi_intent_014|u1:2": 0,
+   "gen_multi_intent_015|u1:0": 0,
+   "gen_multi_intent_015|u1:1": 0,
+   "gen_multi_intent_015|u1:2": 1,
+   "gen_multi_intent_016|u1:0": 0,
+   "gen_multi_intent_016|u1:1": 0,
+   "gen_multi_intent_016|u1:2": 0,
+   "gen_multi_intent_017|u1:0": 1,
+   "gen_multi_intent_017|u1:1": 0,
+   "gen_multi_intent_018|u1:0": 0,
+   "gen_multi_intent_018|u1:1": 0,
+   "gen_multi_intent_018|u1:2": 1,
+   "gen_multi_intent_019|u1:0": 0,
+   "gen_multi_intent_019|u1:1": 1,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 0,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 0,
+   "gen_suppression_004|u1:0": 1,
+   "gen_suppression_005|u1:0": 1,
+   "gen_suppression_006|u1:0": 1,
+   "gen_suppression_007|u1:0": 0,
+   "gen_suppression_008|u1:0": 0,
+   "gen_suppression_009|u1:0": 1
+  },
+  "claim_correct": {
+   "gen_late_detail_000|u1:c0": 1,
+   "gen_late_detail_000|u2:c0": 1,
+   "gen_late_detail_001|u1:c0": 1,
+   "gen_late_detail_001|u2:c0": 0,
+   "gen_late_detail_002|u1:c0": 1,
+   "gen_late_detail_002|u2:c0": 1,
+   "gen_late_detail_003|u1:c0": 1,
+   "gen_late_detail_003|u2:c0": 0,
+   "gen_late_detail_004|u1:c0": 0,
+   "gen_late_detail_004|u2:c0": 1,
+   "gen_late_detail_005|u1:c0": 1,
+   "gen_late_detail_005|u2:c0": 1,
+   "gen_late_detail_006|u1:c0": 1,
+   "gen_late_detail_006|u2:c0": 0,
+   "gen_late_detail_007|u1:c0": 0,
+   "gen_late_detail_007|u2:c0": 0,
+   "gen_late_detail_008|u1:c0": 1,
+   "gen_late_detail_008|u2:c0": 0,
+   "gen_late_detail_009|u1:c0": 1,
+   "gen_late_detail_009|u2:c0": 0,
+   "gen_late_detail_010|u1:c0": 1,
+   "gen_late_detail_010|u2:c0": 1,
+   "gen_late_detail_011|u1:c0": 0,
+   "gen_late_detail_011|u2:c0": 1,
+   "gen_late_detail_012|u1:c0": 0,
+   "gen_late_detail_012|u2:c0": 0,
+   "gen_late_detail_013|u1:c0": 1,
+   "gen_late_detail_013|u2:c0": 0,
+   "gen_late_detail_014|u1:c0": 1,
+   "gen_late_detail_014|u2:c0": 0,
+   "gen_late_detail_015|u1:c0": 1,
+   "gen_late_detail_015|u2:c0": 1,
+   "gen_late_detail_015|u2:c1": 1,
+   "gen_late_detail_016|u1:c0": 1,
+   "gen_late_detail_016|u2:c0": 1,
+   "gen_late_detail_017|u1:c0": 0,
+   "gen_late_detail_017|u2:c0": 0,
+   "gen_late_detail_018|u1:c0": 1,
+   "gen_late_detail_018|u2:c0": 0,
+   "gen_late_detail_019|u1:c0": 1,
+   "gen_late_detail_019|u2:c0": 1,
+   "gen_multi_intent_000|u1:c0": 1,
+   "gen_multi_intent_001|u1:c0": 1,
+   "gen_multi_intent_002|u1:c0": 1,
+   "gen_multi_intent_003|u1:c0": 1,
+   "gen_multi_intent_004|u1:c0": 0,
+   "gen_multi_intent_004|u1:c1": 1,
+   "gen_multi_intent_005|u1:c0": 1,
+   "gen_multi_intent_006|u1:c0": 0,
+   "gen_multi_intent_006|u1:c1": 1,
+   "gen_multi_intent_007|u1:c0": 1,
+   "gen_multi_intent_007|u1:c1": 1,
+   "gen_multi_intent_008|u1:c0": 1,
+   "gen_multi_intent_009|u1:c0": 1,
+   "gen_multi_intent_009|u1:c1": 0,
+   "gen_multi_intent_009|u1:c2": 1,
+   "gen_multi_intent_010|u1:c0": 1,
+   "gen_multi_intent_010|u1:c1": 1,
+   "gen_multi_intent_010|u1:c2": 0,
+   "gen_multi_intent_011|u1:c0": 0,
+   "gen_multi_intent_012|u1:c0": 1,
+   "gen_multi_intent_012|u1:c1": 0,
+   "gen_multi_intent_012|u1:c2": 1,
+   "gen_multi_intent_013|u1:c0": 0,
+   "gen_multi_intent_014|u1:c0": 1,
+   "gen_multi_intent_014|u1:c1": 0,
+   "gen_multi_intent_015|u1:c0": 1,
+   "gen_multi_intent_016|u1:c0": 0,
+   "gen_multi_intent_016|u1:c1": 0,
+   "gen_multi_intent_017|u1:c0": 1,
+   "gen_multi_intent_018|u1:c0": 0,
+   "gen_multi_intent_018|u1:c1": 1,
+   "gen_multi_intent_019|u1:c0": 1,
+   "gen_suppression_000|u1:c0": 1,
+   "gen_suppression_001|u1:c0": 0,
+   "gen_suppression_002|u1:c0": 1,
+   "gen_suppression_003|u1:c0": 0,
+   "gen_suppression_004|u1:c0": 1,
+   "gen_suppression_005|u1:c0": 1,
+   "gen_suppression_006|u1:c0": 1,
+   "gen_suppression_007|u1:c0": 0,
+   "gen_suppression_008|u1:c0": 0,
+   "gen_suppression_009|u1:c0": 1,
+   "gen_unanswerable_000|u1:c0": 0,
+   "gen_unanswerable_001|u1:c0": 0,
+   "gen_unanswerable_002|u1:c0": 0,
+   "gen_unanswerable_003|u1:c0": 0,
+   "gen_unanswerable_004|u1:c0": 0
+  },
+  "abstention": {
+   "gen_unanswerable_000|u1": 0,
+   "gen_unanswerable_001|u1": 0,
+   "gen_unanswerable_002|u1": 0,
+   "gen_unanswerable_003|u1": 0,
+   "gen_unanswerable_004|u1": 0
+  },
+  "split_exact": {
+   "gen_multi_intent_000|u1": 0,
+   "gen_multi_intent_001|u1": 0,
+   "gen_multi_intent_002|u1": 0,
+   "gen_multi_intent_003|u1": 0,
+   "gen_multi_intent_004|u1": 0,
+   "gen_multi_intent_005|u1": 0,
+   "gen_multi_intent_006|u1": 0,
+   "gen_multi_intent_007|u1": 0,
+   "gen_multi_intent_008|u1": 0,
+   "gen_multi_intent_009|u1": 1,
+   "gen_multi_intent_010|u1": 1,
+   "gen_multi_intent_011|u1": 0,
+   "gen_multi_intent_012|u1": 1,
+   "gen_multi_intent_013|u1": 0,
+   "gen_multi_intent_014|u1": 0,
+   "gen_multi_intent_015|u1": 0,
+   "gen_multi_intent_016|u1": 0,
+   "gen_multi_intent_017|u1": 0,
+   "gen_multi_intent_018|u1": 0,
+   "gen_multi_intent_019|u1": 0
+  },
+  "oversplit": {
+   "gen_late_detail_000|u1": 0,
+   "gen_late_detail_001|u1": 0,
+   "gen_late_detail_002|u1": 0,
+   "gen_late_detail_003|u1": 0,
+   "gen_late_detail_004|u1": 0,
+   "gen_late_detail_005|u1": 0,
+   "gen_late_detail_006|u1": 0,
+   "gen_late_detail_007|u1": 0,
+   "gen_late_detail_008|u1": 0,
+   "gen_late_detail_009|u1": 0,
+   "gen_late_detail_010|u1": 0,
+   "gen_late_detail_011|u1": 0,
+   "gen_late_detail_012|u1": 0,
+   "gen_late_detail_013|u1": 0,
+   "gen_late_detail_014|u1": 0,
+   "gen_late_detail_015|u1": 0,
+   "gen_late_detail_016|u1": 0,
+   "gen_late_detail_017|u1": 0,
+   "gen_late_detail_018|u1": 0,
+   "gen_late_detail_019|u1": 0,
+   "gen_suppression_000|u1": 0,
+   "gen_suppression_001|u1": 0,
+   "gen_suppression_002|u1": 0,
+   "gen_suppression_003|u1": 0,
+   "gen_suppression_004|u1": 0,
+   "gen_suppression_005|u1": 0,
+   "gen_suppression_006|u1": 0,
+   "gen_suppression_007|u1": 0,
+   "gen_suppression_008|u1": 0,
+   "gen_suppression_009|u1": 0,
+   "gen_unanswerable_000|u1": 0,
+   "gen_unanswerable_001|u1": 0,
+   "gen_unanswerable_002|u1": 0,
+   "gen_unanswerable_003|u1": 0,
+   "gen_unanswerable_004|u1": 0
+  }
+ },
+ "wrong_claims": [
+  {
+   "scenario": "gen_late_detail_001",
+   "utterance": "u2",
+   "questions": [
+    "What year did Tesla die? "
+   ],
+   "claim": "During his second year of study at Graz, Tesla developed a passion for (and became very proficient at) billiards, chess and card-playing, sometimes spending mor",
+   "citations": [
+    "Doc_09 \u00a776"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_003",
+   "utterance": "u2",
+   "questions": [
+    "What later invention was Tesla's idea similar to?"
+   ],
+   "claim": "Tesla worked every day from 9:00 a.m. until 6:00 p.m. or later, with dinner from exactly 8:10 p.m., at Delmonico's restaurant and later the Waldorf-Astoria Hote",
+   "citations": [
+    "Doc_09 \u00a770"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_004",
+   "utterance": "u1",
+   "questions": [
+    "What was Henry IV known as before taking the throne?"
+   ],
+   "claim": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of ",
+   "citations": [
+    "Doc_06 \u00a711"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_006",
+   "utterance": "u2",
+   "questions": [
+    "Resources are constrained by hierarchy theorems to produce what?"
+   ],
+   "claim": "As Fortnow & Homer (2003) point out, the beginning of systematic studies in computational complexity is attributed to the seminal paper \"On the Computational Co",
+   "citations": [
+    "Doc_02 \u00a745"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_007",
+   "utterance": "u1",
+   "questions": [
+    "For what type of music was Doctor Who considered a pioneer?"
+   ],
+   "claim": "The fourth was released on 4 October 2010 as a two disc special edition and contained music from the 2008\u20132010 specials (The Next Doctor to End of Time Part 2).",
+   "citations": [
+    "Doc_03 \u00a740"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_007",
+   "utterance": "u2",
+   "questions": [
+    "What was the name of the Doctor Who play from the 1980's?"
+   ],
+   "claim": "Versions of the \"Doctor Who Theme\" have also been released as pop music over the years.",
+   "citations": [
+    "Doc_03 \u00a737"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_008",
+   "utterance": "u2",
+   "questions": [
+    "What causes Pauli repulsion?"
+   ],
+   "claim": "It is a common misconception to ascribe the stiffness and rigidity of solid matter to the repulsion of like charges under the influence of the electromagnetic f",
+   "citations": [
+    "Doc_04 \u00a732"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_009",
+   "utterance": "u2",
+   "questions": [
+    "Who formed the government in Kenya?"
+   ],
+   "claim": "The Home Guard formed the core of the government's strategy as it was composed of loyalist Africans, not foreign forces like the British Army and King's African",
+   "citations": [
+    "Doc_08 \u00a712"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_011",
+   "utterance": "u1",
+   "questions": [
+    "Whwn forces are at right ngles to each other what can they be broken down to?"
+   ],
+   "claim": "Carolina suffered a major setback when Thomas Davis, an 11-year veteran who had already overcome three ACL tears in his career, went down with a broken arm in t",
+   "citations": [
+    "Doc_13 \u00a718"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_012",
+   "utterance": "u1",
+   "questions": [
+    "Who was the Most Valuable Player of Super Bowl 50?"
+   ],
+   "claim": "The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP).",
+   "citations": [
+    "Doc_13 \u00a72"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_012",
+   "utterance": "u2",
+   "questions": [
+    "How many touchdowns did Brock Osweiler throw in the season?"
+   ],
+   "claim": "He set the NFL's all-time record for career passing yards in this game, but was benched after throwing four interceptions in favor of backup quarterback Brock O",
+   "citations": [
+    "Doc_13 \u00a713"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_013",
+   "utterance": "u2",
+   "questions": [
+    "What is the name of the turf used in Levi's Stadium for the Super Bowl?"
+   ],
+   "claim": "The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.",
+   "citations": [
+    "Doc_13 \u00a71"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_014",
+   "utterance": "u2",
+   "questions": [
+    "What do some believe about this pronunciation?"
+   ],
+   "claim": "Tesla was able to perform integral calculus in his head, which prompted his teachers to believe that he was cheating.",
+   "citations": [
+    "Doc_09 \u00a77"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_017",
+   "utterance": "u1",
+   "questions": [
+    "When did he first get out of bed following the accident?"
+   ],
+   "claim": "Carolina had two more drives, but failed to get a first down on each one.",
+   "citations": [
+    "Doc_13 \u00a752"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_017",
+   "utterance": "u2",
+   "questions": [
+    "Where did the family move in 1862?"
+   ],
+   "claim": "The move has been followed by staff cuts, increased subscription prices (including 9% in Sky's family package) and the dropping of the 3D channel.",
+   "citations": [
+    "Doc_12 \u00a72"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_018",
+   "utterance": "u2",
+   "questions": [
+    "What team was the AFC champion?"
+   ],
+   "claim": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawk",
+   "citations": [
+    "Doc_13 \u00a723"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "questions": [
+    "How many Doctor Who Christmas Specials have been shown?",
+    "What years did the original Doctor Who series run?",
+    "What Canadian cable station started showing Doctor Who in 2009?"
+   ],
+   "claim": "There have since been nine further series in 2006\u20132008 and 2010\u20132015, and Christmas Day specials every year since 2005.",
+   "citations": [
+    "Doc_03 \u00a79"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_006",
+   "utterance": "u1",
+   "questions": [
+    "What were the civil wars caused by the Huguenots called?",
+    "What was the most important of these cities or towns?",
+    "In what city is the last Huguenot congregation in the US?"
+   ],
+   "claim": "The main provincial towns and cities experiencing the Massacre were Aix, Bordeaux, Bourges, Lyons, Meaux, Orleans, Rouen, Toulouse, and Troyes.",
+   "citations": [
+    "Doc_06 \u00a737"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_009",
+   "utterance": "u1",
+   "questions": [
+    "What country showed all three episodes of Silver Nemesis before the BBC did?",
+    "In what country was the Doctor Who film not successful enough to spawn a series?",
+    "In what years did the show see audiences as high as 12 million?"
+   ],
+   "claim": "Surveys of plague pit remains in France and England indicate the first variant entered Europe through the port of Marseille around November 1347 and spread thro",
+   "citations": [
+    "Doc_01 \u00a712"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_010",
+   "utterance": "u1",
+   "questions": [
+    "How many kilometers of acres of the Ecuadorian rainforest is supported?",
+    "Analysis of what kind of deposits from the Amazon Fan indicates a change in rainfall in the Amazon basin?",
+    "What are two factors that made it difficult for colonists to the Amazon forest to survive?"
+   ],
+   "claim": "A July 23, 2006 article in the UK newspaper The Independent reported Woods Hole Research Center results showing that the forest in its present form could surviv",
+   "citations": [
+    "Doc_00 \u00a720"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_011",
+   "utterance": "u1",
+   "questions": [
+    "What was the Genghis Khan's characteristic approach to religious diversity?",
+    "Who did Genghis Khan assign as his successor?"
+   ],
+   "claim": "In The Secret History of the Mongols, just before the invasion of the Khwarezmid Empire by Genghis Khan, Chagatai declared before his father and brothers that h",
+   "citations": [
+    "Doc_05 \u00a731"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_012",
+   "utterance": "u1",
+   "questions": [
+    "What is the typical annual cost for an Irish private school?",
+    "Along with sport and art, what is a type of talent scholarship?",
+    "How are erg\u00e4nzungsschulen funded?"
+   ],
+   "claim": "In addition to the bubonic infection, others point to additional septicemic (a type of \"blood poisoning\") and pneumonic (an airborne plague that attacks the lun",
+   "citations": [
+    "Doc_01 \u00a717"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_013",
+   "utterance": "u1",
+   "questions": [
+    "How many plant species make up the total in the rainforest?",
+    "What did the analysis from the sediment deposits indicate? "
+   ],
+   "claim": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports mo",
+   "citations": [
+    "Doc_00 \u00a710"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_014",
+   "utterance": "u1",
+   "questions": [
+    "When was the last plague outbreak?",
+    "When did a plague-ridden ship land in Norway?",
+    "Where did scientists find their Y. pestis sample? "
+   ],
+   "claim": "The investigation of the pathogen that caused the 19th-century plague was begun by teams of scientists who visited Hong Kong in 1894, among whom was the French-",
+   "citations": [
+    "Doc_01 \u00a78"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_016",
+   "utterance": "u1",
+   "questions": [
+    "What percentage of money raised was earmarked for causes in the San Francisco area?",
+    "Who lost to the Broncos in the divisional round?",
+    "How many NFL teams have had only one loss by the end of a regular season?"
+   ],
+   "claim": "The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.",
+   "citations": [
+    "Doc_13 \u00a71"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_016",
+   "utterance": "u1",
+   "questions": [
+    "What percentage of money raised was earmarked for causes in the San Francisco area?",
+    "Who lost to the Broncos in the divisional round?",
+    "How many NFL teams have had only one loss by the end of a regular season?"
+   ],
+   "claim": "The Broncos finished the regular season with a 12\u20134 record, and denied the New England Patriots a chance to defend their title from Super Bowl XLIX by defeating",
+   "citations": [
+    "Doc_13 \u00a72"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_018",
+   "utterance": "u1",
+   "questions": [
+    "How many Kenyans are living below the poverty level?",
+    "What is Kenya the home of?",
+    "What is an important catalyst of economic growth?"
+   ],
+   "claim": "The upper part of Kenya's Eastern Region is home to 10% of the country's Muslims, where they constitute the majority religious group.",
+   "citations": [
+    "Doc_08 \u00a741"
+   ]
+  },
+  {
+   "scenario": "gen_suppression_001",
+   "utterance": "u1",
+   "questions": [
+    "What was Tesla afraid someone was trying to do with his invention?"
+   ],
+   "claim": "Just by hearing the name of an item, he would be able to envision it in realistic detail.:33 Tesla would visualize an invention in his mind with extreme precisi",
+   "citations": [
+    "Doc_09 \u00a775"
+   ]
+  },
+  {
+   "scenario": "gen_suppression_003",
+   "utterance": "u1",
+   "questions": [
+    "Who won the MVP for the Super Bowl?"
+   ],
+   "claim": "They defeated the Arizona Cardinals 49\u201315 in the NFC Championship Game and advanced to their second Super Bowl appearance since the franchise was founded in 199",
+   "citations": [
+    "Doc_13 \u00a72"
+   ]
+  },
+  {
+   "scenario": "gen_suppression_007",
+   "utterance": "u1",
+   "questions": [
+    "What agency did the Spanish version of the Super Bowl?"
+   ],
+   "claim": "An earlier version of EyeVision was last used in Super Bowl XXXV; for Super Bowl 50, the cameras were upgraded to 5K resolution.)",
+   "citations": [
+    "Doc_13 \u00a733"
+   ]
+  },
+  {
+   "scenario": "gen_suppression_008",
+   "utterance": "u1",
+   "questions": [
+    "What was Henry IV known as before taking the throne?"
+   ],
+   "claim": "The uprising occurred a decade following the death of Henry IV, a Huguenot before converting to Catholicism, who had protected Protestants through the Edict of ",
+   "citations": [
+    "Doc_06 \u00a711"
+   ]
+  },
+  {
+   "scenario": "gen_unanswerable_000",
+   "utterance": "u1",
+   "questions": [
+    "What is the company's stance on interstellar travel expenses?"
+   ],
+   "claim": "Starting in 1934, the Westinghouse Electric & Manufacturing Company began paying Tesla $125 per month as well as paying his rent at the Hotel New Yorker, expens",
+   "citations": [
+    "Doc_09 \u00a758"
+   ]
+  },
+  {
+   "scenario": "gen_unanswerable_001",
+   "utterance": "u1",
+   "questions": [
+    "What is the parking validation policy for visiting contractors?"
+   ],
+   "claim": "Source: SQuAD v1.1 (validation split), Rajpurkar et al.",
+   "citations": [
+    "SOURCE \u00a71"
+   ]
+  },
+  {
+   "scenario": "gen_unanswerable_002",
+   "utterance": "u1",
+   "questions": [
+    "What is the company's stance on interstellar travel expenses?"
+   ],
+   "claim": "Starting in 1934, the Westinghouse Electric & Manufacturing Company began paying Tesla $125 per month as well as paying his rent at the Hotel New Yorker, expens",
+   "citations": [
+    "Doc_09 \u00a758"
+   ]
+  },
+  {
+   "scenario": "gen_unanswerable_003",
+   "utterance": "u1",
+   "questions": [
+    "What is the office plant watering schedule?"
+   ],
+   "claim": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports mo",
+   "citations": [
+    "Doc_00 \u00a710"
+   ]
+  },
+  {
+   "scenario": "gen_unanswerable_004",
+   "utterance": "u1",
+   "questions": [
+    "What is the office plant watering schedule?"
+   ],
+   "claim": "The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest supports mo",
+   "citations": [
+    "Doc_00 \u00a710"
+   ]
+  }
+ ]
+}

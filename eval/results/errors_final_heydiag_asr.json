@@ -1,0 +1,5718 @@
+{
+ "summary": {
+  "n_questions": 219,
+  "correct": 125,
+  "misses": 94,
+  "miss_causes": {
+   "relevance_gate": 41,
+   "decomposition": 27,
+   "refusal": 11,
+   "sentence_selection": 7,
+   "context_selection": 5,
+   "query_formulation": 2,
+   "rerank_depth": 1
+  },
+  "ceilings": {
+   "isolated": 182,
+   "gold_in_evidence": 179,
+   "answer_in_top3": 175
+  },
+  "by_template": {
+   "hey_a": {
+    "n": 219,
+    "correct": 125
+   }
+  },
+  "wrong_claims": {
+   "answered_unanswerable": 62,
+   "wrong_passage": 5,
+   "spurious_subquery": 5
+  }
+ },
+ "records": [
+  {
+   "scenario": "hey_a_57115b2850c2381900b54a83",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who wrote of the Savery water pump in 1751's Philosophical Transactions?",
+   "gold": [
+    "Doc_13 \u00a727"
+   ],
+   "answers": [
+    "John Smeaton"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who wrote of the savoury water pump in the 1750 ones philosophical transactions",
+    "match": 0.5,
+    "evidence": [
+     "Doc_13 \u00a727",
+     "Doc_13 \u00a79",
+     "Doc_13 \u00a734",
+     "Doc_13 \u00a727",
+     "Doc_13 \u00a734"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571a4ead10f8ca1400304fe0",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Philo of Byzantium ____ surmised that air converted to fire",
+   "gold": [
+    "Doc_10 \u00a75"
+   ],
+   "answers": [
+    "incorrectly"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "follow of basantium blank surmise that air converted to fire",
+    "match": 0.3,
+    "sub_queries": [
+     "follow of basantium blank surmise that air converted to fire"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571a50df4faf5e1900b8a961",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Combustion is caused by an oxidant and a fuel. What role does oxygen play in combustion?",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "Oxygen is the oxidant",
+    "the oxidant",
+    "oxidant"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "fuel what rolled is oxygen playing question combustion caused occident",
+    "match": 0.36,
+    "sub_queries": [
+     "combustion is caused by an occident",
+     "fuel what rolled is oxygen playing question combustion caused occident"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571a50df4faf5e1900b8a962",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Peroxides, nitrates and dichromates are examples of what type of compounds?",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "compounds of oxygen with a high oxidative",
+    "compounds of oxygen with a high oxidative potential"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "dikeromades are examples of what type of compounds rocksides nitrates",
+    "match": 0.5,
+    "evidence": [
+     "Doc_10 \u00a739",
+     "Doc_10 \u00a76",
+     "Doc_10 \u00a78",
+     "Doc_10 \u00a72",
+     "Doc_03 \u00a72"
+    ],
+    "top_score": -7.2
+   }
+  },
+  {
+   "scenario": "hey_a_571a50df4faf5e1900b8a963",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Although not a fuel  ___ is the chemical compound the generates the most occurrence of explosions.",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "Oxygen"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "although not a fuel blank is the chemical compound that generates the most occurrences of explosions",
+    "match": 0.67,
+    "evidence": [
+     "Doc_10 \u00a76",
+     "Doc_10 \u00a71",
+     "Doc_10 \u00a715",
+     "Doc_10 \u00a719",
+     "Doc_10 \u00a77"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571c4132dd7acb1400e4c0b1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What did Priestley name the gas his experiment produced?",
+   "gold": [
+    "Doc_10 \u00a74"
+   ],
+   "answers": [
+    "dephlogisticated air",
+    "\"dephlogisticated air"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_571c4132dd7acb1400e4c0b2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "In what year did Priestley publish the findings of his experiments?",
+   "gold": [
+    "Doc_10 \u00a74"
+   ],
+   "answers": [
+    "1775"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571c4132dd7acb1400e4c0b3",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Why is Priestley usually given credit for being first to discover oxygen?",
+   "gold": [
+    "Doc_10 \u00a74"
+   ],
+   "answers": [
+    "published his findings first",
+    "he published his findings first",
+    "Because he published his findings first"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571c4132dd7acb1400e4c0b4",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What effect did breathing Priestley's discovered gas have on the experiment's mouse?",
+   "gold": [
+    "Doc_10 \u00a74"
+   ],
+   "answers": [
+    "active",
+    "more active and lived longer",
+    "was more active and lived longer"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571c7abfdd7acb1400e4c0ba",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What early Greek wrote about experiments on air and combustion?",
+   "gold": [
+    "Doc_10 \u00a75"
+   ],
+   "answers": [
+    "Philo of Byzantium",
+    "Philo"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571c7abfdd7acb1400e4c0bb",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What did Philo incorrectly assume that the air became?",
+   "gold": [
+    "Doc_10 \u00a75"
+   ],
+   "answers": [
+    "fire",
+    "the classical element fire"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571c7abfdd7acb1400e4c0bc",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was the title of Philo's work?",
+   "gold": [
+    "Doc_10 \u00a75"
+   ],
+   "answers": [
+    "Pneumatica"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": false,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "what was the title of filer's work",
+    "match": 0.5,
+    "evidence": [
+     "Doc_10 \u00a712",
+     "Doc_10 \u00a73",
+     "Doc_10 \u00a714",
+     "Doc_10 \u00a75",
+     "Doc_10 \u00a75"
+    ],
+    "top_score": -10.68
+   }
+  },
+  {
+   "scenario": "hey_a_571c7abfdd7acb1400e4c0bd",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What famous artist later further investigated Philo's experiments?",
+   "gold": [
+    "Doc_10 \u00a75"
+   ],
+   "answers": [
+    "Leonardo da Vinci",
+    "da Vinci"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": false,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "what came this artist later further investigated fido's experiments",
+    "match": 0.5,
+    "evidence": [
+     "Doc_10 \u00a75",
+     "Doc_10 \u00a714",
+     "Doc_10 \u00a714",
+     "Doc_10 \u00a712",
+     "Doc_10 \u00a74"
+    ],
+    "top_score": -5.17
+   }
+  },
+  {
+   "scenario": "hey_a_571c7abfdd7acb1400e4c0be",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Of what did da Vinci think a part  was consumed during combustion?",
+   "gold": [
+    "Doc_10 \u00a75"
+   ],
+   "answers": [
+    "air"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "of what did divin g think a part was consumed during combustion",
+    "match": 0.62,
+    "evidence": [
+     "Doc_10 \u00a714",
+     "Doc_10 \u00a75",
+     "Doc_10 \u00a73",
+     "Doc_10 \u00a714",
+     "Doc_10 \u00a76"
+    ],
+    "claim": "From this he surmised that nitroaereus is consumed in both respiration and combustion.",
+    "claim_citation": "Doc_10 \u00a73"
+   }
+  },
+  {
+   "scenario": "hey_a_571cb010dd7acb1400e4c12b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "By what process is singlet oxygen made in the tropophere?",
+   "gold": [
+    "Doc_10 \u00a722"
+   ],
+   "answers": [
+    "photolysis of ozone",
+    "photolysis of ozone by light of short wavelength",
+    "photolysis"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_571cb010dd7acb1400e4c12c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What objects in organisms absorb singlet oxygen to prevent harm?",
+   "gold": [
+    "Doc_10 \u00a722"
+   ],
+   "answers": [
+    "Carotenoids"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571cc3dedd7acb1400e4c14a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What device is used to test the magnetic attractions involved in liquid oxygen?",
+   "gold": [
+    "Doc_10 \u00a725"
+   ],
+   "answers": [
+    "powerful magnet",
+    "a powerful magnet",
+    "magnet"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571cc6f85efbb31900334de7",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What element is used as a coolant in the process of making liquid oxygen?",
+   "gold": [
+    "Doc_10 \u00a727"
+   ],
+   "answers": [
+    "liquid nitrogen",
+    "nitrogen"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571cc6f85efbb31900334de8",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "From what type of materials must liquid oxygen be separated?",
+   "gold": [
+    "Doc_10 \u00a727"
+   ],
+   "answers": [
+    "combustible materials",
+    "combustible"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571cca4add7acb1400e4c154",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did oxygen begin to move from the oceans to the atmosphere?",
+   "gold": [
+    "Doc_10 \u00a729"
+   ],
+   "answers": [
+    "3\u20132.7 billion years ago"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571cd88ddd7acb1400e4c18e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the type of oxygen production for emergency oxygen in airlines?",
+   "gold": [
+    "Doc_10 \u00a737"
+   ],
+   "answers": [
+    "chemical",
+    "chemical oxygen",
+    "chemical oxygen generators"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "type of oxygen production for emergency oxygen in arlines",
+    "match": 0.67,
+    "evidence": [
+     "Doc_10 \u00a737",
+     "Doc_10 \u00a738",
+     "Doc_10 \u00a737",
+     "Doc_10 \u00a743",
+     "Doc_10 \u00a712"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571cd88ddd7acb1400e4c18f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What type of reaction is present in the emergency oxygen generator of an airplane?",
+   "gold": [
+    "Doc_10 \u00a737"
+   ],
+   "answers": [
+    "exothermic",
+    "exothermic reaction"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what type of reaction is present in the emergency oxygen generator of an aeroplane",
+    "match": 0.75,
+    "evidence": [
+     "Doc_10 \u00a737",
+     "Doc_10 \u00a737",
+     "Doc_10 \u00a76",
+     "Doc_10 \u00a716",
+     "Doc_10 \u00a72"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571cd88ddd7acb1400e4c190",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What gas does the airline exothermic reaction produce?",
+   "gold": [
+    "Doc_10 \u00a737"
+   ],
+   "answers": [
+    "oxygen gas",
+    "oxygen"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_571ce7f25efbb31900334e42",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Aside from oxides, what other compounds comprise a large portion of the Earth's crust?",
+   "gold": [
+    "Doc_10 \u00a78"
+   ],
+   "answers": [
+    "complex silicates",
+    "silicates",
+    "silicates (in silicate minerals)"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "beside from oxides what other compounds comprise a large portion of the earth's crust",
+    "match": 0.78,
+    "evidence": [
+     "Doc_10 \u00a78",
+     "Doc_10 \u00a78",
+     "Doc_10 \u00a71",
+     "Doc_10 \u00a719",
+     "Doc_10 \u00a719"
+    ],
+    "claim": "The Earth's crustal rock is composed in large part of oxides of silicon (silica SiO\n2, as found in granite and quartz), aluminium (aluminium oxide Al\n2O\n3, in bauxite and corundum), iron (iron(III) ox",
+    "claim_citation": "Doc_10 \u00a78",
+    "answer_sentence": "The rest of the Earth's crust is also made of oxygen compounds, in particular various complex silicates (in silicate minerals)."
+   }
+  },
+  {
+   "scenario": "hey_a_571cebc05efbb31900334e48",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What can concentrated oxygen produce?",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "rapid combustion"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_571cebc05efbb31900334e49",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is a spark or heat to the progress of a fire?",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "ignition event",
+    "an ignition event"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "spark or heat to the progress of the fire",
+    "match": 1.0,
+    "evidence": [
+     "Doc_10 \u00a76",
+     "Doc_13 \u00a712",
+     "Doc_13 \u00a77",
+     "Doc_01 \u00a737",
+     "Doc_13 \u00a724"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571cebc05efbb31900334e4a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Rather than the fuel, what is oxygen to a fire?",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "oxidant",
+    "the oxidant"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "rather than the fuel was oxygen to a fire",
+    "match": 1.0,
+    "evidence": [
+     "Doc_10 \u00a76",
+     "Doc_10 \u00a77",
+     "Doc_10 \u00a73",
+     "Doc_10 \u00a75",
+     "Doc_01 \u00a737"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_571cebc05efbb31900334e4b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What does oxygen the basis for in combustion?",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "chemical energy",
+    "most of the chemical energy"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "oxygen the basis for incombustion",
+    "match": 0.5,
+    "evidence": [
+     "Doc_10 \u00a730",
+     "Doc_10 \u00a72",
+     "Doc_10 \u00a76",
+     "Doc_10 \u00a725",
+     "Doc_10 \u00a723"
+    ],
+    "top_score": -6.86
+   }
+  },
+  {
+   "scenario": "hey_a_571cebc05efbb31900334e4c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What other sources of high oxidative potential can add to a fire?",
+   "gold": [
+    "Doc_10 \u00a76"
+   ],
+   "answers": [
+    "compounds of oxygen",
+    "peroxides, chlorates, nitrates, perchlorates, and dichromates"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5725bcb6271a42140099d0ee",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How much was the emergency aid to Israel?",
+   "gold": [
+    "Doc_00 \u00a76"
+   ],
+   "answers": [
+    "$2.2 billion"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5725bcb6271a42140099d0ef",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Why did OPEC block oil deliveries to the United States?",
+   "gold": [
+    "Doc_00 \u00a76"
+   ],
+   "answers": [
+    "American aid to Israel",
+    "Nixon requested Congress to appropriate $2.2 billion in emergency aid to Israel",
+    "OAPEC proclaimed the embargo that curbed exports to various countries and blocked all oil deliveries to the US as a \"principal hostile country"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5725c28a271a42140099d14d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is European Union law?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "a body of treaties and legislation",
+    "a body of treaties and legislation, such as Regulations and Directives, which have direct effect or indirect effect on the laws of European Union member states",
+    "a body of treaties and legislation, such as Regulations and Directives"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5725c28a271a42140099d14e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What effect does European Union law have on laws of member states?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "direct effect or indirect effect",
+    "direct effect or indirect effect on the laws of European Union member states"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5725c28a271a42140099d14f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What are the three sources of European Union law?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "primary law, secondary law and supplementary law.",
+    "primary law, secondary law and supplementary law"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5725c28a271a42140099d150",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What are the main legislative bodies of the European Union?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "European Parliament and the Council of the European Union",
+    "the Treaties establishing the European Union"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "main legislative bodies of a european union",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a710",
+     "Doc_04 \u00a77",
+     "Doc_04 \u00a79",
+     "Doc_04 \u00a71",
+     "Doc_04 \u00a73"
+    ],
+    "claim": "The second main legislative body is the Council, which is composed of different ministers of the member states.",
+    "claim_citation": "Doc_04 \u00a710"
+   }
+  },
+  {
+   "scenario": "hey_a_5725c3a9ec44d21400f3d506",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is one supplementary source of European Union law?",
+   "gold": [
+    "Doc_04 \u00a72"
+   ],
+   "answers": [
+    "international law"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57261dab38643c19005ad03a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is one of the reason that underdeveloped nations received aid from the oil income?",
+   "gold": [
+    "Doc_00 \u00a77"
+   ],
+   "answers": [
+    "shrinking Western demand",
+    "economies had been caught between higher oil prices and lower prices for their own export commodities"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57261dab38643c19005ad03b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is a fundamentalist interpretation of Islam called?",
+   "gold": [
+    "Doc_00 \u00a77"
+   ],
+   "answers": [
+    "Wahhabism"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57261f9f271a42140099d4ac",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Interest groups and government agencies that were concerned with energy were no match for who?",
+   "gold": [
+    "Doc_00 \u00a78"
+   ],
+   "answers": [
+    "Kissinger",
+    "Kissinger's"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726431d271a42140099d7f8",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What event was blamed on the introduction of mnemiopsis into The Black Sea?",
+   "gold": [
+    "Doc_03 \u00a74"
+   ],
+   "answers": [
+    "causing fish stocks to collapse"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726431d271a42140099d7f9",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was done to counteract the overpopulation of mnemiopsis in The Black Sea?",
+   "gold": [
+    "Doc_03 \u00a74"
+   ],
+   "answers": [
+    "introduction of Beroe",
+    "accidental introduction of Beroe"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what was done to counteract the over population of nimiopsis in the black sea",
+    "match": 0.5,
+    "evidence": [
+     "Doc_03 \u00a74",
+     "Doc_03 \u00a727",
+     "Doc_03 \u00a74",
+     "Doc_03 \u00a727",
+     "Doc_03 \u00a726"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726487b5951b619008f6ee0",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Harold WInston's supported which country's during its six day war?",
+   "gold": [
+    "Doc_00 \u00a710"
+   ],
+   "answers": [
+    "Israel",
+    "Israelis",
+    "the Israelis"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "harold winston supported which country during its sixth day war",
+    "match": 0.78,
+    "evidence": [
+     "Doc_00 \u00a710",
+     "Doc_00 \u00a710",
+     "Doc_12 \u00a72",
+     "Doc_07 \u00a78",
+     "Doc_07 \u00a732"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726487b5951b619008f6ee1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who wanted Israel to withdraw from its border?",
+   "gold": [
+    "Doc_00 \u00a710"
+   ],
+   "answers": [
+    "Ted Heath"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572649d8f1498d1400e8db3a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which country rationed gasoline and heating gas?",
+   "gold": [
+    "Doc_00 \u00a711"
+   ],
+   "answers": [
+    "Sweden"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "keating gas country ration dassoline",
+    "match": 0.25,
+    "sub_queries": [
+     "which country ration dassoline",
+     "keating gas country ration dassoline"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57264d9edd62a815002e8100",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Why was this short termed organization created?",
+   "gold": [
+    "Doc_00 \u00a713"
+   ],
+   "answers": [
+    "coordinate the response to the embargo",
+    "to coordinate the response to the embargo"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "lyra was a short turn argument in his increminate",
+    "match": 0.12,
+    "sub_queries": [
+     "lyra was a short turn argument in his increminate"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57264d9edd62a815002e8101",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "According to the AAA, what is the percentage of the gas stations that ran out of gasoline?",
+   "gold": [
+    "Doc_00 \u00a713"
+   ],
+   "answers": [
+    "last week of February 1974,",
+    "20%",
+    "20"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "putting in a triple rein to the principal anchorage at the gas station at me another gaffery",
+    "match": 0.06,
+    "sub_queries": [
+     "putting in a triple rein to the principal anchorage at the gas station at me another gaffery"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57264efddd62a815002e8138",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When was the cabinet-level Energy Department created?",
+   "gold": [
+    "Doc_00 \u00a714"
+   ],
+   "answers": [
+    "1977"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57265360dd62a815002e819c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "To force Japan to be more involved in the crisis, what did Saudi and Kuwaiti government do?",
+   "gold": [
+    "Doc_00 \u00a717"
+   ],
+   "answers": [
+    "5% production cut",
+    "declared Japan a \"nonfriendly\" country"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "to force the pan to be more involved in the crisis what did thoughty",
+    "match": 0.33,
+    "sub_queries": [
+     "to force the pan to be more involved in the crisis what did thoughty",
+     "cooedy governments do force pan involved crisis"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57265360dd62a815002e819d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did Japan release a statement to tell Israelis to withdraw from the Palestine?",
+   "gold": [
+    "Doc_00 \u00a717"
+   ],
+   "answers": [
+    "November 22",
+    "November 22,"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57265360dd62a815002e819e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When was Japan accepted as an Arab-friendly state?",
+   "gold": [
+    "Doc_00 \u00a717"
+   ],
+   "answers": [
+    "December 25"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "when was the pan accepted at the arab's friendly state",
+    "match": 0.67,
+    "evidence": [
+     "Doc_00 \u00a717",
+     "Doc_00 \u00a76",
+     "Doc_00 \u00a75",
+     "Doc_00 \u00a717",
+     "Doc_00 \u00a72"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57265526708984140094c2c1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did the Wahhabi seized the Grand Mosque in Mecca?",
+   "gold": [
+    "Doc_00 \u00a718"
+   ],
+   "answers": [
+    "November 1979"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_5726581fdd62a815002e823d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which country's imports became the de facto mass market leaders?",
+   "gold": [
+    "Doc_00 \u00a719"
+   ],
+   "answers": [
+    "Japan",
+    "Japanese"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "ports became the defactor mass market leaders countries",
+    "match": 0.36,
+    "sub_queries": [
+     "which countries",
+     "ports became the defactor mass market leaders countries"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572658435951b619008f7029",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the CJEU's duty?",
+   "gold": [
+    "Doc_04 \u00a712"
+   ],
+   "answers": [
+    "ensure that in the interpretation and application of the Treaties the law is observed",
+    "\"ensure that in the interpretation and application of the Treaties the law is observed\""
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "why is the c j e used duty",
+    "match": 0.33,
+    "sub_queries": [
+     "why is the c j e used duty"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572659535951b619008f7041",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Name an extra that was added to the production of the compacts.",
+   "gold": [
+    "Doc_00 \u00a720"
+   ],
+   "answers": [
+    "power steering",
+    "air conditioning",
+    "power windows"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "name an action that was added to the production of the compacts",
+    "match": 0.67,
+    "evidence": [
+     "Doc_00 \u00a720",
+     "Doc_00 \u00a720",
+     "Doc_13 \u00a724",
+     "Doc_01 \u00a728",
+     "Doc_01 \u00a746"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572659535951b619008f7042",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Name a luxury division of Toyota.",
+   "gold": [
+    "Doc_00 \u00a720"
+   ],
+   "answers": [
+    "Lexus",
+    "Acura"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "name a luxury division at toyotta",
+    "match": 0.6,
+    "evidence": [
+     "Doc_00 \u00a720",
+     "Doc_00 \u00a723",
+     "Doc_00 \u00a722",
+     "Doc_12 \u00a716",
+     "Doc_09 \u00a711"
+    ],
+    "top_score": -9.08
+   }
+  },
+  {
+   "scenario": "hey_a_57265a58dd62a815002e8272",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Mazda, Mitsubishi and Isuzu joined partnership with which American car company?",
+   "gold": [
+    "Doc_00 \u00a721"
+   ],
+   "answers": [
+    "Ford, Chrysler, and GM",
+    "Ford, Chrysler, and GM, respectively",
+    "Ford"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "zeuso joined partnership with which american car company maza miss",
+    "match": 0.45,
+    "sub_queries": [
+     "maza miss a b c",
+     "zeuso joined partnership with which american car company maza miss"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57265a58dd62a815002e8273",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When American car companies rolled out with their domestic replacement cars, which policy ended?",
+   "gold": [
+    "Doc_00 \u00a721"
+   ],
+   "answers": [
+    "captive import policy",
+    "captive import"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57265ceddd62a815002e82ba",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which car shows the DOT's revision of categories?",
+   "gold": [
+    "Doc_00 \u00a723"
+   ],
+   "answers": [
+    "Mustang I",
+    "the 1974 Mustang I",
+    "1974 Mustang I"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "which car shows the de otie's revision of categories",
+    "match": 0.57,
+    "evidence": [
+     "Doc_00 \u00a723",
+     "Doc_00 \u00a719",
+     "Doc_13 \u00a727",
+     "Doc_04 \u00a736",
+     "Doc_04 \u00a733"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572683075951b619008f7517",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Is fertilization  internal or exeternal in most species?",
+   "gold": [
+    "Doc_03 \u00a722"
+   ],
+   "answers": [
+    "external"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572686fc708984140094c8e8",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Do adults or juveniles secretions luminesce brighter?",
+   "gold": [
+    "Doc_03 \u00a724"
+   ],
+   "answers": [
+    "Juveniles will luminesce more brightly",
+    "Juveniles"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_5726887e708984140094c91b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the name of the two-tentacled cydippid that feedsentirely on salps called?",
+   "gold": [
+    "Doc_03 \u00a725"
+   ],
+   "answers": [
+    "Lampea"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_57268b43dd62a815002e88f0",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What are the three main sources of European Union law?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "primary law, secondary law and supplementary law"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268b43dd62a815002e88f1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What are the main sources of primary law?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "Treaties establishing the European Union",
+    "the Treaties establishing the European Union",
+    "primary law, secondary law and supplementary law"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268b43dd62a815002e88f2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the legislature of the European Union comprised of?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "the European Parliament and the Council of the European Union",
+    "European Parliament and the Council of the European Union"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268b43dd62a815002e88f3",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many sources of European Union law are there?",
+   "gold": [
+    "Doc_04 \u00a71"
+   ],
+   "answers": [
+    "three"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268bf9dd62a815002e890a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "By whom is European Law applied by?",
+   "gold": [
+    "Doc_04 \u00a72"
+   ],
+   "answers": [
+    "the courts of member states and the Court of Justice of the European Union"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268bf9dd62a815002e890b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who can enforce European Union law?",
+   "gold": [
+    "Doc_04 \u00a72"
+   ],
+   "answers": [
+    "the courts of member states"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "who can enforce european the union law",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a72",
+     "Doc_04 \u00a73",
+     "Doc_04 \u00a73",
+     "Doc_04 \u00a72",
+     "Doc_04 \u00a74"
+    ],
+    "claim": "The Commission oversees departments and various agencies that execute or enforce EU law.",
+    "claim_citation": "Doc_04 \u00a73"
+   }
+  },
+  {
+   "scenario": "hey_a_57268bf9dd62a815002e890c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the highest court in European Union law?",
+   "gold": [
+    "Doc_04 \u00a72"
+   ],
+   "answers": [
+    "The European Court of Justice"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268bf9dd62a815002e890d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What are some supplementary sources of European Union law?",
+   "gold": [
+    "Doc_04 \u00a72"
+   ],
+   "answers": [
+    "case law by the Court of Justice, international law and general principles of European Union law",
+    "general principles of European Union law",
+    "case law by the Court of Justice"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268d2ddd62a815002e8950",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When do the stated Treaties apply?",
+   "gold": [
+    "Doc_04 \u00a74"
+   ],
+   "answers": [
+    "Treaties apply as soon as they enter into force, unless stated otherwise",
+    "Treaties apply as soon as they enter into force, unless stated otherwise, and are generally concluded for an unlimited period",
+    "as soon as they enter into force"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268d2ddd62a815002e8951",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who is suited to interpret the Treaties?",
+   "gold": [
+    "Doc_04 \u00a74"
+   ],
+   "answers": [
+    "The Court of Justice of the European Union can interpret the Treaties",
+    "The Court of Justice of the European Union"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268e2bf1498d1400e8e3b0",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What caused the need for principal Treaties that ended up forming the EU?",
+   "gold": [
+    "Doc_04 \u00a75"
+   ],
+   "answers": [
+    "common rules for coal and steel, and then atomic energy",
+    "with common rules for coal and steel"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what caused the need for principal treaties that ended up for me",
+    "match": 0.71,
+    "evidence": [
+     "Doc_04 \u00a75",
+     "Doc_04 \u00a75",
+     "Doc_07 \u00a730",
+     "Doc_07 \u00a723",
+     "Doc_12 \u00a72"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57268e2bf1498d1400e8e3b1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When year was the Maastrich Treaty signed?",
+   "gold": [
+    "Doc_04 \u00a75"
+   ],
+   "answers": [
+    "1992"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "when year was the mostrotch trady signed",
+    "match": 0.33,
+    "sub_queries": [
+     "when year was the mostrotch trady signed"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57268e2bf1498d1400e8e3b2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": " When was the Single European Act made?",
+   "gold": [
+    "Doc_04 \u00a75"
+   ],
+   "answers": [
+    "1986"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268e2bf1498d1400e8e3b3",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did Denmark join the EU?",
+   "gold": [
+    "Doc_04 \u00a75"
+   ],
+   "answers": [
+    "1972"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268e2bf1498d1400e8e3b4",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did Greenland sign a Treaty granting them special status?",
+   "gold": [
+    "Doc_04 \u00a75"
+   ],
+   "answers": [
+    "1985"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268f2bf1498d1400e8e3c4",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What reform was attempted following the Nice Treaty?",
+   "gold": [
+    "Doc_04 \u00a76"
+   ],
+   "answers": [
+    "there was an attempt to reform the constitutional law of the European Union and make it more transparent",
+    "an attempt to reform the constitutional law of the European Union and make it more transparent"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268f2bf1498d1400e8e3c5",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was an additional projected effect of the attempted reform?",
+   "gold": [
+    "Doc_04 \u00a76"
+   ],
+   "answers": [
+    "this would have also produced a single constitutional document",
+    "would have also produced a single constitutional document"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "what with an additional projected effect of the attempted reform",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a76",
+     "Doc_08 \u00a713",
+     "Doc_04 \u00a733",
+     "Doc_13 \u00a716",
+     "Doc_13 \u00a716"
+    ],
+    "top_score": -5.52
+   }
+  },
+  {
+   "scenario": "hey_a_57268f2bf1498d1400e8e3c6",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which caused the reform to never come into force?",
+   "gold": [
+    "Doc_04 \u00a76"
+   ],
+   "answers": [
+    "the referendum in France and the referendum in the Netherlands"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57268f2bf1498d1400e8e3c7",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What treaty took the place of constitutional treaty? ",
+   "gold": [
+    "Doc_04 \u00a76"
+   ],
+   "answers": [
+    "the Lisbon Treaty"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "why treaty took the place of constitutional treaty",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a76",
+     "Doc_04 \u00a76",
+     "Doc_04 \u00a713",
+     "Doc_04 \u00a713",
+     "Doc_04 \u00a75"
+    ],
+    "claim": "Following the Nice Treaty, there was an attempt to reform the constitutional law of the European Union and make it more transparent; this would have also produced a single constitutional document.",
+    "claim_citation": "Doc_04 \u00a76",
+    "answer_sentence": "Instead, the Lisbon Treaty was enacted."
+   }
+  },
+  {
+   "scenario": "hey_a_572691545951b619008f76e4",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which country refused to content to changes in the Treaty of Lisbon 2007?",
+   "gold": [
+    "Doc_04 \u00a77"
+   ],
+   "answers": [
+    "Ireland"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572691545951b619008f76e5",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who are the un-elected subordinates of member state governments?",
+   "gold": [
+    "Doc_04 \u00a77"
+   ],
+   "answers": [
+    "Commissioners"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who are the unlimited subordinates of member state governments",
+    "match": 0.57,
+    "evidence": [
+     "Doc_04 \u00a77",
+     "Doc_04 \u00a711",
+     "Doc_04 \u00a74",
+     "Doc_04 \u00a710",
+     "Doc_04 \u00a711"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726926a5951b619008f770c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "The corruption found by the Committee of Independent Experts resulted to the creation of what office?",
+   "gold": [
+    "Doc_04 \u00a78"
+   ],
+   "answers": [
+    "the European Anti-fraud Office"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "corruption found by the committee of independent experts resulted to the creation of white office",
+    "match": 0.89,
+    "evidence": [
+     "Doc_04 \u00a78",
+     "Doc_08 \u00a713",
+     "Doc_04 \u00a78",
+     "Doc_04 \u00a78",
+     "Doc_04 \u00a79"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726926a5951b619008f770d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did the European Anti-Fraud Office investigate John Dalli?",
+   "gold": [
+    "Doc_04 \u00a78"
+   ],
+   "answers": [
+    "2012"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57269424dd62a815002e8a1e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which entity is the secondary legislative body?",
+   "gold": [
+    "Doc_04 \u00a710"
+   ],
+   "answers": [
+    "the Council"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "which apathy theory like a secondary legislative body",
+    "match": 0.43,
+    "sub_queries": [
+     "which apathy theory like a secondary legislative body"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57269424dd62a815002e8a1f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How often does the European Council meet?",
+   "gold": [
+    "Doc_04 \u00a710"
+   ],
+   "answers": [
+    "each six months"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57269424dd62a815002e8a20",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many votes in total does the Council have?",
+   "gold": [
+    "Doc_04 \u00a710"
+   ],
+   "answers": [
+    "352"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "how many books in total does the council have",
+    "match": 0.6,
+    "evidence": [
+     "Doc_09 \u00a728",
+     "Doc_04 \u00a710",
+     "Doc_06 \u00a721",
+     "Doc_04 \u00a78",
+     "Doc_04 \u00a711"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_57269424dd62a815002e8a21",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is defined as the majority vote?",
+   "gold": [
+    "Doc_04 \u00a710"
+   ],
+   "answers": [
+    "at least 55 per cent of the Council members (not votes) representing 65 per cent of the population of the EU",
+    "74 per cent, or 260 of the 352 votes"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": false,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "defined as the majority boat",
+    "match": 0.5,
+    "evidence": [
+     "Doc_02 \u00a77",
+     "Doc_12 \u00a730",
+     "Doc_13 \u00a735",
+     "Doc_13 \u00a726",
+     "Doc_04 \u00a710"
+    ],
+    "top_score": -10.57
+   }
+  },
+  {
+   "scenario": "hey_a_572695285951b619008f774c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What can block a legislation?",
+   "gold": [
+    "Doc_04 \u00a711"
+   ],
+   "answers": [
+    "legislation can be blocked by a majority in Parliament, a minority in the Council, and a majority in the Commission",
+    "unanimity",
+    "a majority in Parliament"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572695285951b619008f774d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which articles state that powers stay with member states unless they've been conferred?",
+   "gold": [
+    "Doc_04 \u00a711"
+   ],
+   "answers": [
+    "TEU articles 4 and 5"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572695285951b619008f774e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What entity is created if the three different institutions cannot come to a consensus at any stage?",
+   "gold": [
+    "Doc_04 \u00a711"
+   ],
+   "answers": [
+    "Conciliation Committee",
+    "a \"Conciliation Committee\""
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726965ef1498d1400e8e484",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How is the judicial branch of the EU an important factor in the development of EU law?",
+   "gold": [
+    "Doc_04 \u00a712"
+   ],
+   "answers": [
+    "by assuming the task of interpreting the treaties, and accelerating economic and political integration",
+    "assuming the task of interpreting the treaties, and accelerating economic and political integration",
+    "has the ability to expand and develop the law according to the principles it deems to be appropriate"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726965ef1498d1400e8e485",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the current main judicial body of the EU?",
+   "gold": [
+    "Doc_04 \u00a712"
+   ],
+   "answers": [
+    "the Court of Justice of the European Union",
+    "the Court of Justice of the European Union (CJEU)"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726965ef1498d1400e8e486",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What entity deals with EU staff issues?",
+   "gold": [
+    "Doc_04 \u00a712"
+   ],
+   "answers": [
+    "Civil Service Tribunal"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what entity deals with e you stop a shoes",
+    "match": 0.29,
+    "sub_queries": [
+     "what entity deals with e you stop a shoes"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726965ef1498d1400e8e487",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How long is one term for an elected president of the CJEU?",
+   "gold": [
+    "Doc_04 \u00a712"
+   ],
+   "answers": [
+    "three years"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726965ef1498d1400e8e488",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the CJEU's duty?",
+   "gold": [
+    "Doc_04 \u00a712"
+   ],
+   "answers": [
+    "ensure that in the interpretation and application of the Treaties the law is observed",
+    "\"ensure that in the interpretation and application of the Treaties the law is observed\""
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "sea j e used duty",
+    "match": 0.25,
+    "sub_queries": [
+     "sea j e used duty"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572699db5951b619008f779d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What does the EU's legitimacy rest on?",
+   "gold": [
+    "Doc_04 \u00a714"
+   ],
+   "answers": [
+    "the ultimate authority of member states, its factual commitment to human rights, and the democratic will of the people.",
+    "the ultimate authority of member states, its factual commitment to human rights, and the democratic will of the people",
+    "the ultimate authority of member states"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what does the e use a legitimate sea rest on",
+    "match": 0.17,
+    "sub_queries": [
+     "what does the e use a legitimate sea rest on"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726a09f708984140094cc3b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which measure must be adopted when there is a choice between several?",
+   "gold": [
+    "Doc_04 \u00a721"
+   ],
+   "answers": [
+    "the least onerous",
+    "the least onerous must be adopted"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726b718dd62a815002e8dc1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "In which case were French vigilantes sabotaging shipments of Spanish Strawberries?",
+   "gold": [
+    "Doc_04 \u00a732"
+   ],
+   "answers": [
+    "Commission v France",
+    "Commission v France French"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "in which case were french the gelonities sabotashen shipments of spinach strawberries",
+    "match": 0.4,
+    "sub_queries": [
+     "in which case were french the gelonities sabotashen shipments of spinach strawberries"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726b718dd62a815002e8dc2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "In Schmidberger v Austria, the Court of Justice came to the conclusion that Austria didn't infringe upon article 34 by failing to ban a what?",
+   "gold": [
+    "Doc_04 \u00a732"
+   ],
+   "answers": [
+    "a protest that blocked heavy traffic",
+    "a protest"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "in schembit burger resists austria the quarter justice came to the conclusion that ashy a dinner infringe upon article 34 by failing to band a what",
+    "match": 0.45,
+    "sub_queries": [
+     "in schembit burger resists austria the quarter justice came to the conclusion that ashy a dinner infringe upon article 34 by failing to band a what"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726bcde708984140094cfc2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What has the Court required to be more accessible?",
+   "gold": [
+    "Doc_04 \u00a737"
+   ],
+   "answers": [
+    "higher education"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5726c3da708984140094d0db",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What did the Court of Justice reason were controlled in all member states in Josemans v Burgemeester van Maastricht?",
+   "gold": [
+    "Doc_04 \u00a740"
+   ],
+   "answers": [
+    "narcotic drugs"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_5726c3da708984140094d0dc",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What did the Dutch health authorities regard as unnecessary in Geraets-Smits v Stichting Ziekenfonds?",
+   "gold": [
+    "Doc_04 \u00a740"
+   ],
+   "answers": [
+    "the treatment",
+    "treatment"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what did the dutch health authorities regard as unnecessary in garrets mits the shifting zconfons",
+    "match": 0.38,
+    "sub_queries": [
+     "what did the dutch health authorities regard as unnecessary in garrets mits the shifting zconfons"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5726c5a9f1498d1400e8eac8",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "In which case did the Court of Justice hold that a German court couldn't deny a Dutch building company the right to enforce a contract based in Germany?",
+   "gold": [
+    "Doc_04 \u00a741"
+   ],
+   "answers": [
+    "\u00dcberseering BV v Nordic Construction GmbH"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "in which case did the court of justice hold that a german court could deny a dutch building company the right to enforce a contract based in german",
+    "match": 0.87,
+    "evidence": [
+     "Doc_04 \u00a741",
+     "Doc_04 \u00a741",
+     "Doc_04 \u00a736",
+     "Doc_04 \u00a716",
+     "Doc_04 \u00a736"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5728d5793acd2414000dffb7",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How was the civil disobedience shown in Antigone?",
+   "gold": [
+    "Doc_02 \u00a72"
+   ],
+   "answers": [
+    "obey her conscience rather than human law",
+    "She gives a stirring speech",
+    "She gives a stirring speech in which she tells him that she must obey her conscience rather than human law"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "how was the civil disobedient shown",
+    "match": 0.4,
+    "sub_queries": [
+     "how was the civil disobedient shown"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5728d63c4b864d1900164f1a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was the principle shown in The Mark of Anarchy?",
+   "gold": [
+    "Doc_02 \u00a73"
+   ],
+   "answers": [
+    "principle of nonviolent protest",
+    "nonviolent protest"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what was the principle shown in the mark of anarchy",
+    "match": 1.0,
+    "evidence": [
+     "Doc_02 \u00a73",
+     "Doc_02 \u00a73",
+     "Doc_02 \u00a711",
+     "Doc_04 \u00a722",
+     "Doc_04 \u00a79"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5728d63c4b864d1900164f1b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which famous Indian practiced civil disobedience?",
+   "gold": [
+    "Doc_02 \u00a73"
+   ],
+   "answers": [
+    "Gandhi"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "which famous indian practised civil disobedience",
+    "match": 0.67,
+    "evidence": [
+     "Doc_02 \u00a73",
+     "Doc_02 \u00a71",
+     "Doc_02 \u00a711",
+     "Doc_02 \u00a71",
+     "Doc_02 \u00a711"
+    ],
+    "claim": "Gandhi's acts have been described as revolutionary civil disobedience.",
+    "claim_citation": "Doc_02 \u00a711"
+   }
+  },
+  {
+   "scenario": "hey_a_5728d63c4b864d1900164f1c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was Ghandi's work called?",
+   "gold": [
+    "Doc_02 \u00a73"
+   ],
+   "answers": [
+    "doctrine of Satyagraha",
+    "Satyagraha"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "query_formulation",
+   "detail": {
+    "best_subquery": "what was gondy's work called",
+    "match": 0.5,
+    "evidence": [
+     "Doc_10 \u00a73",
+     "Doc_10 \u00a714",
+     "Doc_10 \u00a712",
+     "Doc_11 \u00a721",
+     "Doc_10 \u00a75"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5728d6f02ca10214002da912",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What issue has been plaguing the civil disobedience movement.",
+   "gold": [
+    "Doc_02 \u00a74"
+   ],
+   "answers": [
+    "ambiguity"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what issue has been placing the pseudo disobedience movement",
+    "match": 0.43,
+    "sub_queries": [
+     "what issue has been placing the pseudo disobedience movement"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5728dafe3acd2414000e0061",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What did Thoreau claim about the majority?",
+   "gold": [
+    "Doc_02 \u00a77"
+   ],
+   "answers": [
+    "not necessarily right",
+    "may be powerful but it is not necessarily right",
+    "The majority may be powerful but it is not necessarily right"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "what did the rogue claim about the majority",
+    "match": 0.5,
+    "evidence": [
+     "Doc_02 \u00a77",
+     "Doc_12 \u00a737",
+     "Doc_02 \u00a77",
+     "Doc_04 \u00a713",
+     "Doc_04 \u00a719"
+    ],
+    "top_score": -7.21
+   }
+  },
+  {
+   "scenario": "hey_a_5728e3c33acd2414000e0135",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How long did it take for Thoreau's disobedience to be known?",
+   "gold": [
+    "Doc_02 \u00a712"
+   ],
+   "answers": [
+    "until after the end of the Mexican War",
+    "months",
+    "months after it happened"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "how long did it take for throes disobedience to be known",
+    "match": 0.67,
+    "evidence": [
+     "Doc_02 \u00a712",
+     "Doc_02 \u00a712",
+     "Doc_02 \u00a712",
+     "Doc_02 \u00a71",
+     "Doc_02 \u00a79"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5728e5224b864d1900165035",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What type of goals are usually done skirting the law?",
+   "gold": [
+    "Doc_02 \u00a713"
+   ],
+   "answers": [
+    "social goal",
+    "protests toward public policy",
+    "propaganda"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "query_formulation",
+   "detail": {
+    "best_subquery": "what type of golds are usually done skirting the law",
+    "match": 0.71,
+    "evidence": [
+     "Doc_02 \u00a79",
+     "Doc_04 \u00a74",
+     "Doc_04 \u00a712",
+     "Doc_04 \u00a733",
+     "Doc_04 \u00a733"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5728e5224b864d1900165036",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who lived in a tree to prevent it from being cut down as a form of civil disobedience?",
+   "gold": [
+    "Doc_02 \u00a713"
+   ],
+   "answers": [
+    "Julia Butterfly Hill"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5729a26d6aef05140015505a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What happens to the norm when a number is multiplied by p?",
+   "gold": [
+    "Doc_11 \u00a730"
+   ],
+   "answers": [
+    "norm gets smaller",
+    "gets smaller"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5729a26d6aef05140015505b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "To what may general global fields be transferred to or from?",
+   "gold": [
+    "Doc_11 \u00a730"
+   ],
+   "answers": [
+    "completed (or local) fields",
+    "the completed (or local) fields"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "to what may general globle fields be transferred to or from",
+    "match": 0.67,
+    "evidence": [
+     "Doc_11 \u00a730",
+     "Doc_11 \u00a730",
+     "Doc_04 \u00a730",
+     "Doc_11 \u00a729",
+     "Doc_12 \u00a77"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5729a26d6aef05140015505c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Completing Q with respect to what will produce the field of real numbers?",
+   "gold": [
+    "Doc_11 \u00a730"
+   ],
+   "answers": [
+    "the absolute value",
+    "absolute value"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5729a26d6aef05140015505d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What principle highlights the significance of primes in number theory",
+   "gold": [
+    "Doc_11 \u00a730"
+   ],
+   "answers": [
+    "local-global principle",
+    "local-global"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what principle high lights the significance of primes in number theory",
+    "match": 0.62,
+    "evidence": [
+     "Doc_11 \u00a730",
+     "Doc_11 \u00a721",
+     "Doc_11 \u00a71",
+     "Doc_11 \u00a71",
+     "Doc_11 \u00a728"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5729a3716aef05140015506a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which French composer wrote ametrical music using prime numbers?",
+   "gold": [
+    "Doc_11 \u00a731"
+   ],
+   "answers": [
+    "Olivier Messiaen"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5729a3716aef05140015506b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is one work by Olivier Messiaen?",
+   "gold": [
+    "Doc_11 \u00a731"
+   ],
+   "answers": [
+    "La Nativit\u00e9 du Seigneur"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "one work by olivier messian",
+    "match": 0.6,
+    "evidence": [
+     "Doc_11 \u00a731",
+     "Doc_10 \u00a714",
+     "Doc_04 \u00a77",
+     "Doc_11 \u00a77",
+     "Doc_11 \u00a77"
+    ],
+    "claim": "The French composer Olivier Messiaen used prime numbers to create ametrical music through \"natural phenomena\".",
+    "claim_citation": "Doc_11 \u00a731",
+    "answer_sentence": "In works such as La Nativit\u00e9 du Seigneur (1935) and Quatre \u00e9tudes de rythme (1949\u201350), he simultaneously employs motifs with lengths given by different prime numbers to create unpredictable rhythms: t"
+   }
+  },
+  {
+   "scenario": "hey_a_5729a3716aef05140015506c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is another piece created by Olivier Messiaen?",
+   "gold": [
+    "Doc_11 \u00a731"
+   ],
+   "answers": [
+    "Quatre \u00e9tudes de rythme"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "another piece created by olivier mession",
+    "match": 0.67,
+    "evidence": [
+     "Doc_11 \u00a731",
+     "Doc_05 \u00a78",
+     "Doc_06 \u00a722",
+     "Doc_07 \u00a79",
+     "Doc_11 \u00a714"
+    ],
+    "claim": "The French composer Olivier Messiaen used prime numbers to create ametrical music through \"natural phenomena\".",
+    "claim_citation": "Doc_11 \u00a731",
+    "answer_sentence": "In works such as La Nativit\u00e9 du Seigneur (1935) and Quatre \u00e9tudes de rythme (1949\u201350), he simultaneously employs motifs with lengths given by different prime numbers to create unpredictable rhythms: t"
+   }
+  },
+  {
+   "scenario": "hey_a_5729a3716aef05140015506d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "In which etude of Neumes rythmiques do the primes 41, 43, 47 and 53 appear in?",
+   "gold": [
+    "Doc_11 \u00a731"
+   ],
+   "answers": [
+    "the third \u00e9tude",
+    "third"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "in which a tube of nums rhythmics the primes 184 appearance",
+    "match": 0.07,
+    "sub_queries": [
+     "in which a tube of nums rhythmics the primes 184 appearance"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5729a3716aef05140015506e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Messiaen says that composition with prime numbers was inspired by what?",
+   "gold": [
+    "Doc_11 \u00a731"
+   ],
+   "answers": [
+    "the movements of nature",
+    "the movements of nature, movements of free and unequal durations"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fae4b04bcaa1900d76be2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What provided much of the basis for the structure of the Parliament in 1995?",
+   "gold": [
+    "Doc_12 \u00a75"
+   ],
+   "answers": [
+    "blueprint",
+    "the Convention"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572faec7b2c2fd1400568337",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who opened the new Parliament building on October 9, 2004?",
+   "gold": [
+    "Doc_12 \u00a76"
+   ],
+   "answers": [
+    "Queen Elizabeth II"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fb059947a6a140053cb84",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which hall was used as Parliament's principle committee room?",
+   "gold": [
+    "Doc_12 \u00a78"
+   ],
+   "answers": [
+    "main",
+    "the main hall"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fb42904bcaa1900d76c19",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who is responsible for operating the electronic voting equipment and chamber clocks?",
+   "gold": [
+    "Doc_12 \u00a79"
+   ],
+   "answers": [
+    "A vote clerk",
+    "vote clerk"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fbea404bcaa1900d76c5e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many members in the seats of the Scottish Parliament are members of the Scottish Government?",
+   "gold": [
+    "Doc_12 \u00a711"
+   ],
+   "answers": [
+    "2"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fbea404bcaa1900d76c5f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What can the non-elected members from the Scottish Government not do?",
+   "gold": [
+    "Doc_12 \u00a711"
+   ],
+   "answers": [
+    "vote"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what can the non elected members from the scottish government not do",
+    "match": 1.0,
+    "evidence": [
+     "Doc_12 \u00a711",
+     "Doc_12 \u00a736",
+     "Doc_12 \u00a717",
+     "Doc_12 \u00a736",
+     "Doc_12 \u00a730"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fbf21a23a5019007fc93a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who presented the mac to the Scottish Parliament when it was initially opened?",
+   "gold": [
+    "Doc_12 \u00a712"
+   ],
+   "answers": [
+    "the Queen"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_572fbf21a23a5019007fc93b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the mace displayed in?",
+   "gold": [
+    "Doc_12 \u00a712"
+   ],
+   "answers": [
+    "a glass case suspended from the lid",
+    "glass case",
+    "a glass case"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fc41f947a6a140053cc82",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What does the Presiding Officer try to achieve a balance of between speakers?",
+   "gold": [
+    "Doc_12 \u00a715"
+   ],
+   "answers": [
+    "different viewpoints",
+    "different viewpoints and political parties",
+    "a balance between different viewpoints and political parties"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fc41f947a6a140053cc83",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What members typically open debates?",
+   "gold": [
+    "Doc_12 \u00a715"
+   ],
+   "answers": [
+    "ministers or party leaders"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fc41f947a6a140053cc84",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What language other than English has the Scottish Parliament had meetings in?",
+   "gold": [
+    "Doc_12 \u00a715"
+   ],
+   "answers": [
+    "Gaelic",
+    "Scots, Gaelic, or any other language with the agreement of the Presiding Officer"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fc659b2c2fd1400568449",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Why are debates on proposed motions by an MSP conducted?",
+   "gold": [
+    "Doc_12 \u00a718"
+   ],
+   "answers": [
+    "not a Scottish minister",
+    "may be of interest to a particular area such as a member's own constituency",
+    "issues which may be of interest to a particular area such as a member's own constituency"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "wire debates on proposed motions by an m s p conducted",
+    "match": 0.67,
+    "evidence": [
+     "Doc_12 \u00a718",
+     "Doc_12 \u00a716",
+     "Doc_12 \u00a713",
+     "Doc_12 \u00a715",
+     "Doc_12 \u00a715"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fc659b2c2fd140056844a",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who contributes to Members Business in addition to the proposer?",
+   "gold": [
+    "Doc_12 \u00a718"
+   ],
+   "answers": [
+    "other members"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fc659b2c2fd140056844b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What does the minister who was the catalyst of the Members Business do by speaking after everyone else?",
+   "gold": [
+    "Doc_12 \u00a718"
+   ],
+   "answers": [
+    "winds up",
+    "\"winds up\" the debate"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fc80b04bcaa1900d76d13",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Economy, Energy and Tourism is one of the what?",
+   "gold": [
+    "Doc_12 \u00a721"
+   ],
+   "answers": [
+    "current Subject Committees",
+    "Subject Committees"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_572fc80b04bcaa1900d76d14",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the Scottish Parliament currently in the fourth of?",
+   "gold": [
+    "Doc_12 \u00a721"
+   ],
+   "answers": [
+    "Session"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd1c4947a6a140053cd06",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When do members proceed to vote on whether they agree to the principles of the final bill?",
+   "gold": [
+    "Doc_12 \u00a728"
+   ],
+   "answers": [
+    "Decision Time",
+    "After a general debate on the final form of the bill"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd264b2c2fd14005684ab",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the minimum amount of time before a bill can go into law?",
+   "gold": [
+    "Doc_12 \u00a729"
+   ],
+   "answers": [
+    "a 4-week period",
+    "4-week period"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd264b2c2fd14005684ac",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who is a bill referred to for a ruling on whether it's within the powers of the Parliament?",
+   "gold": [
+    "Doc_12 \u00a729"
+   ],
+   "answers": [
+    "Supreme Court of the United Kingdom",
+    "the Supreme Court"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who is a bill referred to for a ruling on weather it's within the powers of the parliament",
+    "match": 0.75,
+    "evidence": [
+     "Doc_12 \u00a729",
+     "Doc_12 \u00a727",
+     "Doc_12 \u00a727",
+     "Doc_12 \u00a726",
+     "Doc_12 \u00a729"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fd264b2c2fd14005684ad",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What does the template for bills passed by the Scottish Parliament include?",
+   "gold": [
+    "Doc_12 \u00a729"
+   ],
+   "answers": [
+    "[Date]",
+    "\"The Bill for this Act of the Scottish Parliament was passed by the Parliament on [Date] and received royal assent on [Date]\"."
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what does the templet for bells passed by the scottish parliament include",
+    "match": 0.5,
+    "evidence": [
+     "Doc_12 \u00a723",
+     "Doc_12 \u00a712",
+     "Doc_12 \u00a729",
+     "Doc_12 \u00a729",
+     "Doc_12 \u00a71"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fd47fa23a5019007fca57",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who is eligible to toss their name in the hat to be First Minister?",
+   "gold": [
+    "Doc_12 \u00a730"
+   ],
+   "answers": [
+    "Any member"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who is eligible to toss their name in the hat to be first minister",
+    "match": 1.0,
+    "evidence": [
+     "Doc_12 \u00a730",
+     "Doc_12 \u00a730",
+     "Doc_12 \u00a730",
+     "Doc_12 \u00a733",
+     "Doc_12 \u00a731"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fd47fa23a5019007fca58",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Other than Scotland's Chief Law Officer, from whence are most ministers drawn from amongst?",
+   "gold": [
+    "Doc_12 \u00a730"
+   ],
+   "answers": [
+    "elected MSPs",
+    "the elected MSPs",
+    "amongst the elected MSPs"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd47fa23a5019007fca59",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who makes formal appointment or dismissal decisions?",
+   "gold": [
+    "Doc_12 \u00a730"
+   ],
+   "answers": [
+    "the Sovereign"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd6aa04bcaa1900d76da1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who may change the date by up to a month, on the proposal of the PO?",
+   "gold": [
+    "Doc_12 \u00a731"
+   ],
+   "answers": [
+    "the Monarch",
+    "Monarch"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who may change the date by up to a month on the proposal of the p o",
+    "match": 0.86,
+    "evidence": [
+     "Doc_12 \u00a731",
+     "Doc_12 \u00a731",
+     "Doc_12 \u00a731",
+     "Doc_12 \u00a731",
+     "Doc_04 \u00a77"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fd6aa04bcaa1900d76da2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many days does the Parliament have to nominate a First Minister after a General Election?",
+   "gold": [
+    "Doc_12 \u00a731"
+   ],
+   "answers": [
+    "28",
+    "28 days"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd6aa04bcaa1900d76da3",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "If an extraordinary election is held within less than six months before the date of an ordinary election, what does it do to the ordinary election?",
+   "gold": [
+    "Doc_12 \u00a731"
+   ],
+   "answers": [
+    "supplant it.",
+    "supplant it",
+    "reverts to the first Thursday in May, a multiple of four years after 1999"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd73e947a6a140053cd33",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who can question statements the First Minister or members of the cabinet make?",
+   "gold": [
+    "Doc_12 \u00a732"
+   ],
+   "answers": [
+    "MSPs",
+    "leaders of the opposition parties and other MSPs"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd73e947a6a140053cd34",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What does the First Minister deliver at the beginning of each parliamentary year?",
+   "gold": [
+    "Doc_12 \u00a732"
+   ],
+   "answers": [
+    "legislative programme for the forthcoming year",
+    "a statement",
+    "a statement to the chamber setting out the Government's legislative programme for the forthcoming year"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd73e947a6a140053cd35",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What do the leaders of the opposition parties and other MSPs question the First Minister about?",
+   "gold": [
+    "Doc_12 \u00a732"
+   ],
+   "answers": [
+    "issues related to the substance of the statement",
+    "issues"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "other m s p's question the first minister about leaders opposition parties",
+    "match": 0.86,
+    "evidence": [
+     "Doc_12 \u00a733",
+     "Doc_12 \u00a732",
+     "Doc_12 \u00a733",
+     "Doc_12 \u00a730",
+     "Doc_12 \u00a730"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fd7b8947a6a140053cd3b",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "On what day does a General Question Time take place?",
+   "gold": [
+    "Doc_12 \u00a733"
+   ],
+   "answers": [
+    "Thursday"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd7b8947a6a140053cd3c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who may members direct questions towards during General Question Time?",
+   "gold": [
+    "Doc_12 \u00a733"
+   ],
+   "answers": [
+    "any member of the Scottish Government",
+    "ministers in departments that are selected for questioning that sitting day"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd7b8947a6a140053cd3d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What may members question the First Minister about directly during First Minister's Question Time?",
+   "gold": [
+    "Doc_12 \u00a733"
+   ],
+   "answers": [
+    "issues under their jurisdiction",
+    "the First Minister"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd7b8947a6a140053cd3e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many general questions are available to opposition leaders?",
+   "gold": [
+    "Doc_12 \u00a733"
+   ],
+   "answers": [
+    "four"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd8efb2c2fd14005684fb",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When was there a reduction in the number of Scottish MPs?",
+   "gold": [
+    "Doc_12 \u00a734"
+   ],
+   "answers": [
+    "2005"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd8efb2c2fd14005684fc",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What is the current number of electors currently in a Scottish Parliament constituency? ",
+   "gold": [
+    "Doc_12 \u00a734"
+   ],
+   "answers": [
+    "55,000"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fd8efb2c2fd14005684fd",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Why do the island archipelagos comprise a smaller number of electors?",
+   "gold": [
+    "Doc_12 \u00a734"
+   ],
+   "answers": [
+    "dispersed population and distance",
+    "their dispersed population and distance from the Scottish Parliament in Edinburgh"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fda6fb2c2fd140056850c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What method is used for tallying votes in the second vote of the ballot?",
+   "gold": [
+    "Doc_12 \u00a735"
+   ],
+   "answers": [
+    "the d'Hondt method",
+    "d'Hondt"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fda6fb2c2fd140056850d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "The party awarded a seat is the one with the highest what?",
+   "gold": [
+    "Doc_12 \u00a735"
+   ],
+   "answers": [
+    "quotient"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fda6fb2c2fd140056850e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What set is a seat added to after being allocated?",
+   "gold": [
+    "Doc_12 \u00a735"
+   ],
+   "answers": [
+    "constituency seats",
+    "constituency",
+    "second"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "what set is a seat added to after being allecated",
+    "match": 0.67,
+    "evidence": [
+     "Doc_12 \u00a735",
+     "Doc_10 \u00a737",
+     "Doc_13 \u00a714",
+     "Doc_10 \u00a734",
+     "Doc_10 \u00a734"
+    ],
+    "top_score": -10.6
+   }
+  },
+  {
+   "scenario": "hey_a_572fda6fb2c2fd140056850f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How is the process of allocating seats repeated until all available seats have been determined?",
+   "gold": [
+    "Doc_12 \u00a735"
+   ],
+   "answers": [
+    "iteratively"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdb17b2c2fd140056851e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When was the British Nationality Act passed?",
+   "gold": [
+    "Doc_12 \u00a736"
+   ],
+   "answers": [
+    "1981"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdb17b2c2fd140056851f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How old most a person be to apply to be an MSP?",
+   "gold": [
+    "Doc_12 \u00a736"
+   ],
+   "answers": [
+    "over the age of 18",
+    "18"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "how old most a person be to apply to be an m",
+    "match": 0.75,
+    "evidence": [
+     "Doc_12 \u00a736",
+     "Doc_12 \u00a736",
+     "Doc_04 \u00a74",
+     "Doc_06 \u00a78",
+     "Doc_00 \u00a712"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fdb17b2c2fd1400568520",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Members of which organizations are disqualified from sitting in the SP as elected MSPs?",
+   "gold": [
+    "Doc_12 \u00a736"
+   ],
+   "answers": [
+    "police and the armed forces",
+    "the police and the armed forces"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "members of which organizations are disqualified from sitting in the s p as elected m s p",
+    "match": 0.71,
+    "evidence": [
+     "Doc_12 \u00a736",
+     "Doc_12 \u00a736",
+     "Doc_12 \u00a711",
+     "Doc_12 \u00a711",
+     "Doc_12 \u00a717"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fdb17b2c2fd1400568521",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What act sets the term for judging the boundaries of sanity to which individuals wishing to sit on the SP must adhere?",
+   "gold": [
+    "Doc_12 \u00a736"
+   ],
+   "answers": [
+    "Mental Health (Care and Treatment) (Scotland) Act 2003"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdbb004bcaa1900d76dda",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who did the SNP obtain 16 seats from?",
+   "gold": [
+    "Doc_12 \u00a737"
+   ],
+   "answers": [
+    "Labour"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdbb004bcaa1900d76ddb",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "By how much did Labour lead Lain Gray retain East Lothian?",
+   "gold": [
+    "Doc_12 \u00a737"
+   ],
+   "answers": [
+    "151 votes"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdbb004bcaa1900d76ddc",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many seats did the SNP take from the Liberal Democrats?",
+   "gold": [
+    "Doc_12 \u00a737"
+   ],
+   "answers": [
+    "eight"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdbb004bcaa1900d76ddd",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What did the result of the SNP majority allow a referendum be held on?",
+   "gold": [
+    "Doc_12 \u00a737"
+   ],
+   "answers": [
+    "Scottish independence"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdc34a23a5019007fca94",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was the seat of former party leader David McLetchie?",
+   "gold": [
+    "Doc_12 \u00a738"
+   ],
+   "answers": [
+    "Edinburgh Pentlands",
+    "former party leader"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdc34a23a5019007fca95",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What net loss did the Conservatives suffer?",
+   "gold": [
+    "Doc_12 \u00a738"
+   ],
+   "answers": [
+    "five seats"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what not loss did the conservatives suffer",
+    "match": 0.75,
+    "evidence": [
+     "Doc_12 \u00a738",
+     "Doc_12 \u00a737",
+     "Doc_06 \u00a715",
+     "Doc_04 \u00a719",
+     "Doc_04 \u00a719"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fdc34a23a5019007fca96",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who announced she would step down as leader of the Conservatives? ",
+   "gold": [
+    "Doc_12 \u00a738"
+   ],
+   "answers": [
+    "Annabel Goldie"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "who announced she would step down as leader of the conservatives",
+    "match": 1.0,
+    "evidence": [
+     "Doc_12 \u00a738",
+     "Doc_12 \u00a737",
+     "Doc_07 \u00a732",
+     "Doc_12 \u00a730",
+     "Doc_00 \u00a710"
+    ],
+    "claim": "Nevertheless, she too announced she would step down as leader of the party.",
+    "claim_citation": "Doc_12 \u00a738",
+    "answer_sentence": "McLetchie was elected on the Lothian regional list and the Conservatives suffered a net loss of five seats, with leader Annabel Goldie claiming that their support had held firm."
+   }
+  },
+  {
+   "scenario": "hey_a_572fdc34a23a5019007fca97",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who congratulated the SNP while vowing to campaign against their referendum?",
+   "gold": [
+    "Doc_12 \u00a738"
+   ],
+   "answers": [
+    "Cameron"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdd03a23a5019007fca9d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What consequence of establishing the Scottish Parliament applies to Scottish MPs sitting in the UK House of Commons?",
+   "gold": [
+    "Doc_12 \u00a739"
+   ],
+   "answers": [
+    "able to vote on domestic legislation that applies only to England, Wales and Northern Ireland",
+    "procedural consequence"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdd03a23a5019007fca9e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What are MPs unable to vote upon?",
+   "gold": [
+    "Doc_12 \u00a739"
+   ],
+   "answers": [
+    "domestic legislation of the Scottish Parliament",
+    "domestic legislation of the Scottish Parliament."
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "m p's unable to vote on",
+    "match": 0.5,
+    "evidence": [
+     "Doc_12 \u00a739",
+     "Doc_12 \u00a711",
+     "Doc_12 \u00a717",
+     "Doc_12 \u00a716",
+     "Doc_12 \u00a725"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_572fdd03a23a5019007fca9f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What phenomenon has led to criticism?",
+   "gold": [
+    "Doc_12 \u00a739"
+   ],
+   "answers": [
+    "West Lothian question",
+    "the West Lothian question"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdd03a23a5019007fcaa0",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What party had a victory in the 2015 UK election?",
+   "gold": [
+    "Doc_12 \u00a739"
+   ],
+   "answers": [
+    "the Conservative",
+    "Conservative"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_572fdd03a23a5019007fcaa1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "MPs representing English constituencies can only veto laws affecting which country? ",
+   "gold": [
+    "Doc_12 \u00a739"
+   ],
+   "answers": [
+    "England"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_57308f6b8ab72b1400f9c584",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "The West saw themselves as what compared to the east?",
+   "gold": [
+    "Doc_07 \u00a711"
+   ],
+   "answers": [
+    "progressive",
+    "rational and progressive"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "where the west saw themselves as a watch compared to the east",
+    "match": 0.83,
+    "evidence": [
+     "Doc_07 \u00a711",
+     "Doc_07 \u00a711",
+     "Doc_07 \u00a711",
+     "Doc_07 \u00a711",
+     "Doc_07 \u00a79"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730ab63396df91900096264",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Germany referred to which area more so than an actual country?",
+   "gold": [
+    "Doc_07 \u00a727"
+   ],
+   "answers": [
+    "central Europe",
+    "amorphous area of central Europe",
+    "an amorphous area of central Europe"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730aef38ab72b1400f9c686",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who influenced Bismark besides his neighbors?",
+   "gold": [
+    "Doc_07 \u00a729"
+   ],
+   "answers": [
+    "Hamburg merchants and traders"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who influenced its mark besides his neighbors",
+    "match": 0.6,
+    "evidence": [
+     "Doc_07 \u00a729",
+     "Doc_02 \u00a73",
+     "Doc_00 \u00a720",
+     "Doc_07 \u00a736",
+     "Doc_02 \u00a73"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b4282461fd1900a9cfc5",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Trotsky thought what was needed for a true Russian revolution.",
+   "gold": [
+    "Doc_07 \u00a732"
+   ],
+   "answers": [
+    "a world revolution",
+    "world revolution",
+    "world revolution."
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b4282461fd1900a9cfc6",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who wrote that imperialism is the highest stage of capitalism?",
+   "gold": [
+    "Doc_07 \u00a732"
+   ],
+   "answers": [
+    "Lenin"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b4282461fd1900a9cfc7",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What policy did Stalin implement shortly after Lenin's Death?",
+   "gold": [
+    "Doc_07 \u00a732"
+   ],
+   "answers": [
+    "socialism in one country",
+    "socialism",
+    "socialism in one country'"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what policy did solomon implement shortly after lenin's death",
+    "match": 0.75,
+    "evidence": [
+     "Doc_07 \u00a732",
+     "Doc_07 \u00a731",
+     "Doc_07 \u00a732",
+     "Doc_07 \u00a719",
+     "Doc_07 \u00a74"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b4282461fd1900a9cfc8",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who was the leader of Russia in the 1960's?",
+   "gold": [
+    "Doc_07 \u00a732"
+   ],
+   "answers": [
+    "Nikita Khrushchev",
+    "Khrushchev"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "who was the leader of russia in the 19 sixties",
+    "match": 0.4,
+    "sub_queries": [
+     "who was the leader of russia in the 19 sixties"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b4282461fd1900a9cfc9",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who argued that the USSR had itself become an imperialist power?",
+   "gold": [
+    "Doc_07 \u00a732"
+   ],
+   "answers": [
+    "Mao Zedong",
+    "Sultan Galiev and Vasyl Shakhrai"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who argued that the u s s s r had itself become an incurious power",
+    "match": 0.57,
+    "evidence": [
+     "Doc_07 \u00a732",
+     "Doc_07 \u00a732",
+     "Doc_07 \u00a720",
+     "Doc_07 \u00a720",
+     "Doc_07 \u00a736"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b541396df919000962c2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was the first British empire based on?",
+   "gold": [
+    "Doc_07 \u00a733"
+   ],
+   "answers": [
+    "mercantilism"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b541396df919000962c3",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did Great Britain lose its colonies in North America?",
+   "gold": [
+    "Doc_07 \u00a733"
+   ],
+   "answers": [
+    "1776"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b541396df919000962c4",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did the Spanish and Portuguese colonies gain their independance.",
+   "gold": [
+    "Doc_07 \u00a733"
+   ],
+   "answers": [
+    "about 1820",
+    "1820"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "portuguese colonies gain their independence spanish",
+    "match": 0.67,
+    "evidence": [
+     "Doc_07 \u00a733",
+     "Doc_07 \u00a726",
+     "Doc_07 \u00a726",
+     "Doc_08 \u00a75",
+     "Doc_07 \u00a725"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b541396df919000962c5",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What policy gave Britain dominance in world trade?",
+   "gold": [
+    "Doc_07 \u00a733"
+   ],
+   "answers": [
+    "free trade"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what policy gaper can dominate in world trade",
+    "match": 0.38,
+    "sub_queries": [
+     "what policy gaper can dominate in world trade"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b541396df919000962c6",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When was the defeat of Napoleonic France?",
+   "gold": [
+    "Doc_07 \u00a733"
+   ],
+   "answers": [
+    "1815"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "when with the deity of the napoleonic france",
+    "match": 0.5,
+    "evidence": [
+     "Doc_07 \u00a733",
+     "Doc_07 \u00a725",
+     "Doc_07 \u00a724",
+     "Doc_08 \u00a75",
+     "Doc_07 \u00a726"
+    ],
+    "top_score": -6.66
+   }
+  },
+  {
+   "scenario": "hey_a_5730b6592461fd1900a9cfcf",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "By the late 19th century, which country had the largest empire ever to exist in the world?",
+   "gold": [
+    "Doc_07 \u00a734"
+   ],
+   "answers": [
+    "The British Empire",
+    "British Empire",
+    "The British"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "by the late nineteenth century which country had the largest empire ever to exist in the world",
+    "match": 0.8,
+    "evidence": [
+     "Doc_07 \u00a734",
+     "Doc_07 \u00a739",
+     "Doc_07 \u00a739",
+     "Doc_07 \u00a728",
+     "Doc_07 \u00a733"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b6592461fd1900a9cfd0",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What kinds of sciences were Social Darwinism and theories of race?",
+   "gold": [
+    "Doc_07 \u00a734"
+   ],
+   "answers": [
+    "pseudo-sciences",
+    "British Empire",
+    "pseudo"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b6592461fd1900a9cfd1",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "In which continent besides Asia were major gains made by the British Empire in the late 19th century?",
+   "gold": [
+    "Doc_07 \u00a734"
+   ],
+   "answers": [
+    "Middle East",
+    "the Middle East",
+    "Africa"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "where major gains me by the british empire in the late nineteenth century",
+    "match": 0.5,
+    "evidence": [
+     "Doc_07 \u00a734",
+     "Doc_07 \u00a733",
+     "Doc_07 \u00a739",
+     "Doc_07 \u00a739",
+     "Doc_07 \u00a716"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b6592461fd1900a9cfd2",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Rudyard Kipling was an influential spokesman for what?",
+   "gold": [
+    "Doc_07 \u00a734"
+   ],
+   "answers": [
+    "The British spirit of imperialism",
+    "imperialism",
+    "Social Darwinism"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "one of the arc kept lean with an influential spokesman for a while",
+    "match": 0.22,
+    "sub_queries": [
+     "one of the arc kept lean with an influential spokesman for a while"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b7ce069b5314008322c3",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How did the United States plan to subdue imperialistic tendencies? ",
+   "gold": [
+    "Doc_07 \u00a735"
+   ],
+   "answers": [
+    "the Monroe Doctrine",
+    "through policies",
+    "policies such as the Monroe Doctrine"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "rerank_depth",
+   "detail": {
+    "best_subquery": "how did the united states plan to subdue in curiositic tendencies",
+    "match": 0.71,
+    "evidence": [
+     "Doc_00 \u00a716",
+     "Doc_00 \u00a716",
+     "Doc_07 \u00a737",
+     "Doc_07 \u00a730",
+     "Doc_02 \u00a723"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b7ce069b5314008322c4",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was the name of Theodore Roosevelt\u2019s policy of imperialism?",
+   "gold": [
+    "Doc_07 \u00a735"
+   ],
+   "answers": [
+    "interventionism",
+    "."
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "what was the name of theodora roosevelt's policy of imperialism",
+    "match": 0.67,
+    "evidence": [
+     "Doc_07 \u00a735",
+     "Doc_07 \u00a71",
+     "Doc_07 \u00a719",
+     "Doc_07 \u00a72",
+     "Doc_07 \u00a719"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b7ce069b5314008322c5",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which country besides the Cuba did the United states try to annex in 1898?",
+   "gold": [
+    "Doc_07 \u00a735"
+   ],
+   "answers": [
+    "the Philippines",
+    "Philippines"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b7ce069b5314008322c6",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What caused the US public to condemn the occupation of the philippines?",
+   "gold": [
+    "Doc_07 \u00a735"
+   ],
+   "answers": [
+    "a war erupted",
+    "war"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b7ce069b5314008322c7",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What did Smedley Butler call US foreign Policy?",
+   "gold": [
+    "Doc_07 \u00a735"
+   ],
+   "answers": [
+    "a \"racket\"",
+    "racket"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what did smithly butler call you a spawn policy",
+    "match": 0.43,
+    "sub_queries": [
+     "what did smithly butler call you a spawn policy"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b8ca8ab72b1400f9c704",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who was the director of the American Geographical Society in 1914?",
+   "gold": [
+    "Doc_07 \u00a736"
+   ],
+   "answers": [
+    "Isiah Bowman"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "here was the director of the american geographical society in 1914",
+    "match": 1.0,
+    "evidence": [
+     "Doc_07 \u00a736",
+     "Doc_07 \u00a78",
+     "Doc_07 \u00a736",
+     "Doc_07 \u00a79",
+     "Doc_01 \u00a735"
+    ],
+    "claim": "Bowman was the director of the American Geographical Society in 1914.",
+    "claim_citation": "Doc_07 \u00a736",
+    "answer_sentence": "One key figure in the plans for what would come to be known as American Empire, was a geographer named Isiah Bowman."
+   }
+  },
+  {
+   "scenario": "hey_a_5730b8ca8ab72b1400f9c705",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When was Isiah Bowman appointed to President Wilson's Inquiry?",
+   "gold": [
+    "Doc_07 \u00a736"
+   ],
+   "answers": [
+    "1917"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730b8ca8ab72b1400f9c706",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who besides Woodrow Wilson himself had the idea for the inquiry?",
+   "gold": [
+    "Doc_07 \u00a736"
+   ],
+   "answers": [
+    "American delegation from the Paris Peace Conference",
+    "the American delegation from the Paris Peace Conference"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who besides rachel wilson himself had the idea for the inquiry",
+    "match": 0.71,
+    "evidence": [
+     "Doc_07 \u00a736",
+     "Doc_07 \u00a736",
+     "Doc_06 \u00a730",
+     "Doc_12 \u00a72",
+     "Doc_00 \u00a710"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b8ca8ab72b1400f9c707",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was the premise of Woodrow Wilson's inquiry?",
+   "gold": [
+    "Doc_07 \u00a736"
+   ],
+   "answers": [
+    "U.S authorship of a 'new world'",
+    "allow for U.S authorship of a 'new world' which was to be characterized by geographical order",
+    "allow for U.S authorship of a 'new world'"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what was the promise of ojo wilson's inquiry",
+    "match": 0.33,
+    "sub_queries": [
+     "what was the promise of ojo wilson's inquiry"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730b8ca8ab72b1400f9c708",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was Isiah Bowman nick name, as known by the public.",
+   "gold": [
+    "Doc_07 \u00a736"
+   ],
+   "answers": [
+    "Wilson's geographer",
+    "Wilson's geographer."
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "what were thy vaguer bowmen nickname as known by the public",
+    "match": 0.2,
+    "sub_queries": [
+     "what were thy vaguer bowmen nickname as known by the public"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730bb522461fd1900a9d011",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Some people describe what between individuals or groups as imperialism or colonialism?",
+   "gold": [
+    "Doc_07 \u00a737"
+   ],
+   "answers": [
+    "internal strife"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "me people describe what between individuals or groups as imperialism or colonialism",
+    "match": 1.0,
+    "evidence": [
+     "Doc_07 \u00a737",
+     "Doc_07 \u00a75",
+     "Doc_07 \u00a76",
+     "Doc_07 \u00a75",
+     "Doc_07 \u00a75"
+    ],
+    "claim": "Imperialism and colonialism have been used in order to describe one's superiority, domination and influence upon a person or group of people.",
+    "claim_citation": "Doc_07 \u00a75"
+   }
+  },
+  {
+   "scenario": "hey_a_5730bb522461fd1900a9d012",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "the US expansion Westward could be viewed as what type of colonialism?",
+   "gold": [
+    "Doc_07 \u00a737"
+   ],
+   "answers": [
+    "\"internal colonialism\"",
+    "internal colonialism",
+    "internal"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "u s expansion westward could be viewed as what type of colonialism",
+    "match": 1.0,
+    "evidence": [
+     "Doc_07 \u00a737",
+     "Doc_07 \u00a737",
+     "Doc_07 \u00a75",
+     "Doc_07 \u00a732",
+     "Doc_07 \u00a75"
+    ],
+    "claim": "Through the treatment of its indigenous peoples during westward expansion, the United States took on the form of an imperial power prior to any attempts at external imperialism.",
+    "claim_citation": "Doc_07 \u00a737",
+    "answer_sentence": "Some have described the internal strife between various people groups as a form of imperialism or colonialism."
+   }
+  },
+  {
+   "scenario": "hey_a_5730bb522461fd1900a9d013",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many Africans were brought into the United States during the slave trade?",
+   "gold": [
+    "Doc_07 \u00a737"
+   ],
+   "answers": [
+    "12 to 15 million"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730bb522461fd1900a9d015",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who does Edward Said say is being attacked by US imperialism?",
+   "gold": [
+    "Doc_07 \u00a737"
+   ],
+   "answers": [
+    "the contemporary Orient",
+    "contemporary Orient",
+    "contemporary Orient, \""
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "who does edward say it saves being attacked by you as imperialism",
+    "match": 0.67,
+    "evidence": [
+     "Doc_07 \u00a737",
+     "Doc_07 \u00a737",
+     "Doc_07 \u00a75",
+     "Doc_07 \u00a79",
+     "Doc_07 \u00a75"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730bc308ab72b1400f9c73c",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When did the Ottoman Empire fall?",
+   "gold": [
+    "Doc_07 \u00a738"
+   ],
+   "answers": [
+    "1923"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730bc308ab72b1400f9c73d",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who reigned over the Ottoman empire when it was at its most powerful.",
+   "gold": [
+    "Doc_07 \u00a738"
+   ],
+   "answers": [
+    "Suleiman the Magnificent",
+    "Suleiman the Magnificent,"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730bc308ab72b1400f9c73e",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "How many provinces did the Ottoman empire contain in the 17th century?",
+   "gold": [
+    "Doc_07 \u00a738"
+   ],
+   "answers": [
+    "32"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  },
+  {
+   "scenario": "hey_a_5730bc308ab72b1400f9c73f",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "The Ottoman empire controlled territory on three continents, Africa, Asia and which other?",
+   "gold": [
+    "Doc_07 \u00a738"
+   ],
+   "answers": [
+    "Europe"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "power controlled territory on three continents apricot asia in",
+    "match": 0.5,
+    "evidence": [
+     "Doc_07 \u00a735",
+     "Doc_07 \u00a738",
+     "Doc_07 \u00a73",
+     "Doc_07 \u00a71",
+     "Doc_07 \u00a721"
+    ],
+    "top_score": -7.87
+   }
+  },
+  {
+   "scenario": "hey_a_5730bc308ab72b1400f9c740",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "When was the Ottoman empire at its height?",
+   "gold": [
+    "Doc_07 \u00a738"
+   ],
+   "answers": [
+    "During the 16th and 17th centuries",
+    "17th century",
+    "the 16th and 17th centuries"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730bd00069b5314008322d7",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What was the capital of the Ottoman empire?",
+   "gold": [
+    "Doc_07 \u00a739"
+   ],
+   "answers": [
+    "Istanbul"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730bd00069b5314008322d9",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Who did the Ottoman empire ally with in WW I?",
+   "gold": [
+    "Doc_07 \u00a739"
+   ],
+   "answers": [
+    "Germany"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "hey_a_5730bd00069b5314008322da",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "Which country today is a remnant of the Ottoman empire?",
+   "gold": [
+    "Doc_07 \u00a739"
+   ],
+   "answers": [
+    "Turkey"
+   ],
+   "correct": false,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "decomposition",
+   "detail": {
+    "best_subquery": "with country to day is the memmae of the ornament empire",
+    "match": 0.25,
+    "sub_queries": [
+     "with country to day is the memmae of the ornament empire"
+    ]
+   }
+  },
+  {
+   "scenario": "hey_a_5730bd00069b5314008322db",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "hey_a",
+   "question": "What ended Turkish imperial Ambitions?",
+   "gold": [
+    "Doc_07 \u00a739"
+   ],
+   "answers": [
+    "World War I",
+    "creation of modern Balkan and Middle Eastern states",
+    "the creation of modern Balkan and Middle Eastern states"
+   ],
+   "correct": true,
+   "isolated": false,
+   "gold_in_evidence": false,
+   "answer_in_top3": false
+  }
+ ],
+ "wrong": [
+  {
+   "scenario": "hey_a_571c7abfdd7acb1400e4c0be",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "of what did divin g think a part was consumed during combustion",
+   "claim": "From this he surmised that nitroaereus is consumed in both respiration and combustion.",
+   "citation": [
+    "Doc_10 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_a_571cb010dd7acb1400e4c12c",
+   "utterance": "u1",
+   "cause": "spurious_subquery",
+   "sub_query": "what objects",
+   "claim": "Prime ideals are the points of algebro-geometric objects, via the notion of the spectrum of a ring.",
+   "citation": [
+    "Doc_11 \u00a729"
+   ]
+  },
+  {
+   "scenario": "hey_a_5725c28a271a42140099d150",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "main legislative bodies of a european union",
+   "claim": "The second main legislative body is the Council, which is composed of different ministers of the member states.",
+   "citation": [
+    "Doc_04 \u00a710"
+   ]
+  },
+  {
+   "scenario": "hey_a_57268bf9dd62a815002e890b",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "who can enforce european the union law",
+   "claim": "The Commission oversees departments and various agencies that execute or enforce EU law.",
+   "citation": [
+    "Doc_04 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_a_5728d5793acd2414000dffb7",
+   "utterance": "u1",
+   "cause": "spurious_subquery",
+   "sub_query": "how was the civil disobedient shown",
+   "claim": "In reviewing the voluminous literature on the subject, the student of civil disobedience rapidly finds himself surrounded by a maze of semantical problems and grammatical niceties.",
+   "citation": [
+    "Doc_02 \u00a75"
+   ]
+  },
+  {
+   "scenario": "hey_a_5728d63c4b864d1900164f1b",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "which famous indian practised civil disobedience",
+   "claim": "Gandhi's acts have been described as revolutionary civil disobedience.",
+   "citation": [
+    "Doc_02 \u00a711"
+   ]
+  },
+  {
+   "scenario": "hey_a_572fbf21a23a5019007fc93a",
+   "utterance": "u1",
+   "cause": "spurious_subquery",
+   "sub_query": "when it was initially opened",
+   "claim": "It was opened in five phases between 1980 and 1984, and was Britain's first urban light rail transit system; two extensions were opened in 1991 and 2002.",
+   "citation": [
+    "Doc_09 \u00a740"
+   ]
+  },
+  {
+   "scenario": "hey_a_572fd73e947a6a140053cd35",
+   "utterance": "u1",
+   "cause": "spurious_subquery",
+   "sub_query": "what do the leaders of the opposition parties",
+   "claim": "Opposition leaders ask a general question of the First Minister and then supplementary questions.",
+   "citation": [
+    "Doc_12 \u00a733"
+   ]
+  },
+  {
+   "scenario": "hey_a_5730b541396df919000962c4",
+   "utterance": "u1",
+   "cause": "spurious_subquery",
+   "sub_query": "when did the spanish",
+   "claim": "On September 20, 1565, a Spanish force from the nearby Spanish settlement of St. Augustine attacked Fort Caroline, and killed nearly all the French soldiers defending it.",
+   "citation": [
+    "Doc_08 \u00a75"
+   ]
+  },
+  {
+   "scenario": "hey_a_5730bb522461fd1900a9d011",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "me people describe what between individuals or groups as imperialism or colonialism",
+   "claim": "Imperialism and colonialism have been used in order to describe one's superiority, domination and influence upon a person or group of people.",
+   "citation": [
+    "Doc_07 \u00a75"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a1c836ab4fb5d0018714639",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what battle involved the confederate cavalry in 1862",
+   "claim": "The Skirmish of the Brick Church in 1862 just outside Jacksonville proper resulted in the first Confederate victory in Florida.",
+   "citation": [
+    "Doc_08 \u00a77"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a1c883cb4fb5d0018714674",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "while was it called in jacksonville's white population moved to the city",
+   "claim": "The city's most populous ethnic group, non-Hispanic white, declined from 75.8% in 1970 to 55.1% by 2010.",
+   "citation": [
+    "Doc_08 \u00a711"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a1c8aedb4fb5d00187146a4",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what river surrounds jacksonville",
+   "claim": "The Trout River, a major tributary of the St. Johns River, is located entirely within Jacksonville.",
+   "citation": [
+    "Doc_08 \u00a715"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a1c8f54b4fb5d00187146db",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "where was the average household size was three point 3",
+   "claim": "The average household size was 3.07.",
+   "citation": [
+    "Doc_05 \u00a723"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a1c8f54b4fb5d00187146dc",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what percentage of married couples had children living with them",
+   "claim": "23.9% of households had children under the age of 18 living with them, 43.8% were married couples, 15.2% had a female householder with no husband present, and 36.4% were non-families.",
+   "citation": [
+    "Doc_08 \u00a721"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a38a8d2a4b263001a8c1877",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what was the price of oil in 1979 before it rose",
+   "claim": "The world price, which had peaked during the 1979 energy crisis at nearly $40 per barrel, decreased during the 1980s to less than $10 per barrel.",
+   "citation": [
+    "Doc_00 \u00a724"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a38bd58a4b263001a8c18ed",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what percentage of american gas ancients were out of fuel in 1973",
+   "claim": "The American Automobile Association reported that in the last week of February 1974, 20% of American gasoline stations had no fuel.",
+   "citation": [
+    "Doc_00 \u00a713"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a38cd93a4b263001a8c192a",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "two cars of the h engines that were more fuel efficient",
+   "claim": "Japanese imports, primarily the Toyota Corona, the Toyota Corolla, the Datsun B210, the Datsun 510, the Honda Civic, the Mitsubishi Galant (a captive import from Chrysler sold as the Dodge Colt), the ",
+   "citation": [
+    "Doc_00 \u00a719"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a38d4b9a4b263001a8c1949",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what was the price of a barrel of oil",
+   "claim": "By the end of the embargo in March 1974, the price of oil had risen from US$3 per barrel to nearly $12 globally; US prices were significantly higher.",
+   "citation": [
+    "Doc_00 \u00a71"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a66413dc2b11c001a425ec9",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "whose occupation did the egyptians resist",
+   "claim": "One of its earliest massive implementations was brought about by Egyptians against the British occupation in the 1919 Revolution.",
+   "citation": [
+    "Doc_02 \u00a71"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a665338846392001a1e1ac8",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what two groups to trade unions think civil disobedience is justified against",
+   "claim": "Brownlee argues that disobedience in opposition to the decisions of non-governmental agencies such as trade unions, banks, and private universities can be justified if it reflects \"a larger challenge ",
+   "citation": [
+    "Doc_02 \u00a78"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a665b56846392001a1e1b21",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "observed act according to julia butterfly example ineffective",
+   "claim": "Julia Butterfly Hill lived in Luna, a 180-foot (55 m)-tall, 600-year-old California Redwood tree for 738 days, successfully preventing it from being cut down.",
+   "citation": [
+    "Doc_02 \u00a713"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a75054b97ca42001a521dd0",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what does it mean for the dollar to float",
+   "claim": "The US abandoned the Gold Exchange Standard whereby the value of the dollar had been pegged to the price of gold and all other currencies were pegged to the dollar, whose value was left to \"float\" (ri",
+   "citation": [
+    "Doc_00 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a75082a97ca42001a521df6",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "who announced it would embark o oil shipments to the u s",
+   "claim": "Libya immediately announced it would embargo oil shipments to the United States.",
+   "citation": [
+    "Doc_00 \u00a76"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a7b064b21c2de001afe9ce6",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what area was renamed pinedale",
+   "claim": "During 1942, Pinedale, in what is now North Fresno, was the site of the Pinedale Assembly Center, an interim facility for the relocation of Fresno area Japanese Americans to internment camps.",
+   "citation": [
+    "Doc_05 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a7b070121c2de001afe9cef",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what year did the bank america become successful",
+   "claim": "In September 1958, Bank of America launched a new product called BankAmericard in Fresno.",
+   "citation": [
+    "Doc_05 \u00a74"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a820ebf31013a001a33516f",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what medical school is located in allston",
+   "claim": "The University is organized into eleven separate academic units\u2014ten faculties and the Radcliffe Institute for Advanced Study\u2014with campuses throughout the Boston metropolitan area: its 209-acre (85 ha)",
+   "citation": [
+    "Doc_06 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a834caae60761001a2eb53d",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "how quickly do plaintant populations grow due to hermaphrodizen",
+   "claim": "The combination of hermaphroditism and early reproduction enables small populations to grow at an explosive rate.",
+   "citation": [
+    "Doc_03 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a834caae60761001a2eb53d",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "how quickly do plaintant populations grow due to hermaphrodizen",
+   "claim": "The combination of hermaphroditism and early reproduction enables small populations to grow at an explosive rate.",
+   "citation": [
+    "Doc_03 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a892e8e3b2508001a72a4fc",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "name of another compelling continuation of the carmical primality test",
+   "claim": "More powerful extensions of the Fermat primality test, such as the Baillie-PSW, Miller-Rabin, and Solovay-Strassen tests, are guaranteed to fail at least some of the time when applied to a composite n",
+   "citation": [
+    "Doc_11 \u00a712"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a8933ed3b2508001a72a51a",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "on what theorem is the formula that frequently generates the number two in all other primes precisely twice based on",
+   "claim": "Another formula is based on Wilson's theorem and generates the number 2 many times and all other primes exactly once.",
+   "citation": [
+    "Doc_11 \u00a715"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a8937553b2508001a72a52c",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what property of the harmonic series one",
+   "claim": "However, the harmonic series 1 + 1/2 + 1/3 + 1/4 + ... diverges (i.e., exceeds any given number), so there must be infinitely many primes.",
+   "citation": [
+    "Doc_11 \u00a717"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a89392f3b2508001a72a538",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what type of zero distribution is characterized about x over a log of x of numbers less than",
+   "claim": "From a mathematical viewpoint, it roughly states that the asymptotic distribution of primes (about x/log x of numbers less than x are primes, the prime number theorem) also holds for much shorter inte",
+   "citation": [
+    "Doc_11 \u00a718"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a894a483b2508001a72a5ad",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "to what may general arithmetic questions be transferred to or from",
+   "claim": "Certain arithmetic questions related to Q or more general global fields may be transferred back and forth to the completed (or local) fields.",
+   "citation": [
+    "Doc_11 \u00a730"
+   ]
+  },
+  {
+   "scenario": "hey_u_5a894b333b2508001a72a5b6",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "which french composer wrote metrical music using prime numbers",
+   "claim": "The French composer Olivier Messiaen used prime numbers to create ametrical music through \"natural phenomena\".",
+   "citation": [
+    "Doc_11 \u00a731"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad02bef77cf76001a686ca5",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "which officer represents the scottish police force at home",
+   "claim": "The Presiding Officer also represents the Scottish Parliament at home and abroad in an official capacity.",
+   "citation": [
+    "Doc_12 \u00a710"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad02ef677cf76001a686d6a",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what was invented in 1880",
+   "claim": "The adoption of compounding was common for industrial units, for road engines and almost universal for marine engines after 1880; it was not universally popular in railway locomotives where it was oft",
+   "citation": [
+    "Doc_13 \u00a732"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad02fdf77cf76001a686d9a",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "posing speakers are given between five",
+   "claim": "Typically, ministers or party leaders open debates, with opening speakers given between 5 and 20 minutes, and succeeding speakers allocated less time.",
+   "citation": [
+    "Doc_12 \u00a715"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad02fdf77cf76001a686d9a",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "posing speakers are given between five",
+   "claim": "Typically, ministers or party leaders open debates, with opening speakers given between 5 and 20 minutes, and succeeding speakers allocated less time.",
+   "citation": [
+    "Doc_12 \u00a715"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad031ef77cf76001a686df4",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "where did france focus its efforts to not rebuild its empire",
+   "claim": "France took control of Algeria in 1830 but began in earnest to rebuild its worldwide empire after 1850, concentrating chiefly in North and West Africa, as well as South-East Asia, with other conquests",
+   "citation": [
+    "Doc_07 \u00a724"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad035bd77cf76001a686e27",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "when did otto von bismarck die",
+   "claim": "After Prussia unified the other states into the second German Empire after the Franco-German War, its long-time Chancellor, Otto von Bismarck (1862\u201390), long opposed colonial acquisitions, arguing tha",
+   "citation": [
+    "Doc_07 \u00a728"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad0383677cf76001a686e3a",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what was the name of the second german settlement",
+   "claim": "After Prussia unified the other states into the second German Empire after the Franco-German War, its long-time Chancellor, Otto von Bismarck (1862\u201390), long opposed colonial acquisitions, arguing tha",
+   "citation": [
+    "Doc_07 \u00a728"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad0383677cf76001a686e3b",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "who influence france besides his neighbors",
+   "claim": "Nearly all of France's colonies gained independence by 1960, but France retained great financial and diplomatic influence.",
+   "citation": [
+    "Doc_07 \u00a726"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad0403c77cf76001a686eed",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "bill is submitted to whom before it is passed",
+   "claim": "Royal assent: After the bill has been passed, the Presiding Officer submits it to the Monarch for royal assent and it becomes an Act of the Scottish Parliament.",
+   "citation": [
+    "Doc_12 \u00a729"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad041c477cf76001a686f0e",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "before the statement is delivered who is questioned",
+   "claim": "After the statement has been delivered, the leaders of the opposition parties and other MSPs question the First Minister on issues related to the substance of the statement.",
+   "citation": [
+    "Doc_12 \u00a732"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad0426c77cf76001a686f1f",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "who asks supplementary questions",
+   "claim": "Opposition leaders ask a general question of the First Minister and then supplementary questions.",
+   "citation": [
+    "Doc_12 \u00a733"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad0431077cf76001a686f30",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "which islands comprise a larger number of electors",
+   "claim": "The island archipelagos of Orkney, Shetland and the Western Isles comprise a much smaller number of electors, due to their dispersed population and distance from the Scottish Parliament in Edinburgh.",
+   "citation": [
+    "Doc_12 \u00a734"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad0431077cf76001a686f31",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "if a constituency m s p is forced from parliament what does it trigger",
+   "claim": "If a Constituency MSP resigns from Parliament, this triggers a by-election in his or her constituency, where a replacement MSP is returned from one of the parties by the plurality system.",
+   "citation": [
+    "Doc_12 \u00a734"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad043a977cf76001a686f38",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what method is used in tallying votes in the first vote of the ballot",
+   "claim": "The total number of seats in the Parliament are allocated to parties proportionally to the number of votes received in the second vote of the ballot using the d'Hondt method.",
+   "citation": [
+    "Doc_12 \u00a735"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad0447f77cf76001a686f51",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "many of whose key figures returned to parliament",
+   "claim": "The SNP took 16 seats from Labour, with many of their key figures not returned to parliament, although Labour leader Iain Gray retained East Lothian by 151 votes.",
+   "citation": [
+    "Doc_12 \u00a737"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad044f977cf76001a686f60",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "for the liberals the main disappointment",
+   "claim": "For the Conservatives, the main disappointment was the loss of Edinburgh Pentlands, the seat of former party leader David McLetchie, to the SNP.",
+   "citation": [
+    "Doc_12 \u00a738"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad10ece645df0001a2d0b9c",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what governing body appoints commissioners and",
+   "claim": "It appoints the Commissioners and the board of the European Central Bank.",
+   "citation": [
+    "Doc_04 \u00a73"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad13b23645df0001a2d12fb",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "which court did not argue that the treaty of rome did not prevent energy nationalism",
+   "claim": "By contrast, the Court of Justice held that ultimately the Treaty of Rome in no way prevented energy nationalisation, and in any case under the Treaty provisions only the Commission could have brought",
+   "citation": [
+    "Doc_04 \u00a713"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad146c0645df0001a2d1507",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what must the adoption of laws",
+   "claim": "The adoption of laws which will have legal effect in the European Union must have a proper legal basis.",
+   "citation": [
+    "Doc_04 \u00a722"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad14966645df0001a2d1581",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "which entities were not originally concerned with preventing violation of human rights",
+   "claim": "At the time the only concern was that member states should be prevented from violating human rights, hence the establishment of the European Convention on Human Rights in 1950 and the establishment of",
+   "citation": [
+    "Doc_04 \u00a724"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad14966645df0001a2d1582",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "when was the european convention of human rights ridden",
+   "claim": "At the time the only concern was that member states should be prevented from violating human rights, hence the establishment of the European Convention on Human Rights in 1950 and the establishment of",
+   "citation": [
+    "Doc_04 \u00a724"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad15170645df0001a2d1737",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what did the treaty not limit",
+   "claim": "The Treaties limit free trade, to prioritise other values such as public health, consumer protection, labour rights, fair competition, and environmental improvement.",
+   "citation": [
+    "Doc_04 \u00a731"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad15289645df0001a2d175e",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what case were french the gelantes helping shipmens of spanish strawberries",
+   "claim": "For instance, in Commission v France French farmer vigilantes were continually sabotaging shipments of Spanish strawberries, and even Belgian tomato imports.",
+   "citation": [
+    "Doc_04 \u00a732"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad15c52645df0001a2d18af",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what did dutch health authorities regard as necessary",
+   "claim": "The Dutch health authorities regarded the treatment unnecessary, so she argued this restricted the freedom (of the German health clinic) to provide services.",
+   "citation": [
+    "Doc_04 \u00a740"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad21ebdd7d075001a428489",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "when did joseph schiller discover oxygen",
+   "claim": "Oxygen was discovered independently by Carl Wilhelm Scheele, in Uppsala, in 1773 or earlier, and Joseph Priestley in Wiltshire, in 1774, but Priestley is often given priority because his work was publ",
+   "citation": [
+    "Doc_10 \u00a712"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad251d6d7d075001a428ce9",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "three main oxygen cycles on earth",
+   "claim": "This biogeochemical cycle describes the movement of oxygen within and between its three main reservoirs on Earth: the atmosphere, the biosphere, and the lithosphere.",
+   "citation": [
+    "Doc_10 \u00a730"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad25f35d7d075001a428f6d",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "who does the compression oxygen sickness occur in",
+   "claim": "Decompression sickness occurs in divers who decompress too quickly after a dive, resulting in bubbles of inert gas, mostly nitrogen and helium, forming in their blood.",
+   "citation": [
+    "Doc_10 \u00a734"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad26105d7d075001a428ff5",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what establishments have been around since 1990",
+   "claim": "Oxygen bars are establishments, found in Japan, California, and Las Vegas, Nevada since the late 1990s that offer higher than normal O\n2 exposure for a fee.",
+   "citation": [
+    "Doc_10 \u00a733"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad266d0d7d075001a4291ef",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what can occur from breathing one",
+   "claim": "Acute oxygen toxicity (causing seizures, its most feared effect for divers) can occur by breathing an air mixture with 21% O\n2 at 66 m or more of depth; the same thing can occur by breathing 100% O\n2 ",
+   "citation": [
+    "Doc_10 \u00a741"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad266d0d7d075001a4291ef",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what can occur from breathing one",
+   "claim": "Acute oxygen toxicity (causing seizures, its most feared effect for divers) can occur by breathing an air mixture with 21% O\n2 at 66 m or more of depth; the same thing can occur by breathing 100% O\n2 ",
+   "citation": [
+    "Doc_10 \u00a741"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad2678ad7d075001a429230",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what candoinate dicomeates to a fire",
+   "claim": "Combustion hazards also apply to compounds of oxygen with a high oxidative potential, such as peroxides, chlorates, nitrates, perchlorates, and dichromates because they can donate oxygen to a fire.",
+   "citation": [
+    "Doc_10 \u00a76"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad2685dd7d075001a429278",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what have the fire killed the apollo one crew",
+   "claim": "The fire that killed the Apollo 1 crew in a launch pad test spread so rapidly because the capsule was pressurized with pure O\n2 but at slightly more than atmospheric pressure, instead of the 1\u20443 norma",
+   "citation": [
+    "Doc_10 \u00a77"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad3bd8f604f3c001a3fef31",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "wet types of engines are solder",
+   "claim": "Evaporative (wet) cooling towers use the rejected heat to evaporate water; this water is kept separate from the condensate, which circulates in a closed system and returns to the boiler.",
+   "citation": [
+    "Doc_13 \u00a730"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad3bf63604f3c001a3fef5c",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what sort of motion did new commons steam engine continuously produce",
+   "claim": "In 1781 James Watt patented a steam engine that produced continuous rotary motion.",
+   "citation": [
+    "Doc_13 \u00a78"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad3cc47604f3c001a3ff147",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "along with electric motors what power sources overtook expansion engines in the twentieth century",
+   "claim": "Steam engines remained the dominant source of power until the early 20th century, when advances in the design of electric motors and internal combustion engines gradually resulted in the replacement o",
+   "citation": [
+    "Doc_13 \u00a710"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad3d3af604f3c001a3ff293",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what devices use represented the last major evolution of the generator",
+   "claim": "The final major evolution of the steam engine design was the use of steam turbines starting in the late part of the 19th century.",
+   "citation": [
+    "Doc_13 \u00a711"
+   ]
+  },
+  {
+   "scenario": "hey_u_5ad415fd604f3c001a40032b",
+   "utterance": "u1",
+   "cause": "answered_unanswerable",
+   "sub_query": "what can the working fluid in a boiler cycle operate as",
+   "claim": "The working fluid in a Rankine cycle can operate as a closed loop system, where the working fluid is recycled continuously, or may be an \"open loop\" system, where the exhaust steam is directly release",
+   "citation": [
+    "Doc_13 \u00a718"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,221 @@
+{
+ "scenario_id": "hey_u_5ad245f9d7d075001a428ac2",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "where is pared oxygen produced where"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " is pared oxygen produced where is"
+   }
+  },
+  {
+   "timestamp_ms": 4800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " pared oxygen where where is pared"
+   }
+  },
+  {
+   "timestamp_ms": 7200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where where where is pared oxygen"
+   }
+  },
+  {
+   "timestamp_ms": 9600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where is pared ox where where"
+   }
+  },
+  {
+   "timestamp_ms": 12000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where is pared oxygen where is"
+   }
+  },
+  {
+   "timestamp_ms": 14400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " pared oxygen where is pared oxygen"
+   }
+  },
+  {
+   "timestamp_ms": 16800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where is pared oxygen where is"
+   }
+  },
+  {
+   "timestamp_ms": 19200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " pared oxygen where is pared oxygen"
+   }
+  },
+  {
+   "timestamp_ms": 21600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where where is pared oxygen where"
+   }
+  },
+  {
+   "timestamp_ms": 24000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " is pared oxygen produced oxygen produc"
+   }
+  },
+  {
+   "timestamp_ms": 26400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where is pared oxygen produced oxygen"
+   }
+  },
+  {
+   "timestamp_ms": 28800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " produc where is pared oxygen produc"
+   }
+  },
+  {
+   "timestamp_ms": 31200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where is pared oxygen where is"
+   }
+  },
+  {
+   "timestamp_ms": 33600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " pared oxygen produc where is pared"
+   }
+  },
+  {
+   "timestamp_ms": 36000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen where is pared oxygen produced"
+   }
+  },
+  {
+   "timestamp_ms": 38400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen produced oxygen produced oxygen produc"
+   }
+  },
+  {
+   "timestamp_ms": 40800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where is pare where is pared"
+   }
+  },
+  {
+   "timestamp_ms": 43200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " ox where is pared oxygen produc"
+   }
+  },
+  {
+   "timestamp_ms": 45600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " where is pared oxygen"
+   }
+  },
+  {
+   "timestamp_ms": 47500,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 49500,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Where is paired oxygen produced?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

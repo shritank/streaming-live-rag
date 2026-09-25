@@ -10,6 +10,7 @@ __pycache__/
 # they are the reproducible output of build_dev_corpus.py / build_squad_corpus.py)
 data/raw/
 generated/
+.cache/
 trace*.jsonl
 trace*.json
 reports/*.md

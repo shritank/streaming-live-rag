@@ -78,3 +78,42 @@ Second section body text here.
     assert chunks[0].section == "1"
     assert chunks[1].section == "2"
     assert chunks[0].citation == "Doc_42 §1"
+
+
+def test_provenance_files_are_not_indexed_as_documents(tmp_path):
+    from streaming_rag.retrieval.ingest import load_corpus
+    (tmp_path / "Doc_01_a.md").write_text("---\ndoc_id: Doc_01\ntitle: A\n---\n## §1 One\n\nReal content.\n",
+                                          encoding="utf-8")
+    (tmp_path / "SOURCE.md").write_text("Source: licence note listing every article title.\n", encoding="utf-8")
+    (tmp_path / "README.txt").write_text("How this corpus was built.\n", encoding="utf-8")
+    assert {c.doc_id for c in load_corpus(tmp_path)} == {"Doc_01"}
+
+
+async def test_citation_resolves_to_whole_section_so_later_chunk_claims_verify(tmp_path):
+    import asyncio
+    from streaming_rag.config import load_config
+    from streaming_rag.contracts import Claim
+    from streaming_rag.retrieval import HybridRetriever
+    from streaming_rag.session.grounding import verify
+    sentences = " ".join(f"Sentence number {i} talks about topic {i} in some detail here." for i in range(30))
+    (tmp_path / "Doc_01_a.md").write_text(f"---\ndoc_id: Doc_01\ntitle: A\n---\n## §1 One\n\n{sentences}\n",
+                                          encoding="utf-8")
+    config = load_config()
+    config.corpus_dir = str(tmp_path)
+    retriever = HybridRetriever(config)
+    await retriever.setup()
+    section_chunks = [c for c in retriever.chunks if c.citation == "Doc_01 §1"]
+    assert len(section_chunks) > 1, "fixture must span several chunks"
+    last_sentence = "Sentence number 29 talks about topic 29 in some detail here."
+    assert last_sentence not in section_chunks[0].text
+    report = verify([Claim(text=last_sentence, citations=["Doc_01 §1"])], retriever.get_chunk_by_citation)
+    assert report.n_supported == 1
+
+
+def test_pinned_model_files_match_their_checksums():
+    import pytest
+    from streaming_rag.retrieval import neural
+    problems = neural.verify()
+    if problems and all("not in the local Hugging Face cache" in p for p in problems):
+        pytest.skip("neural models not fetched on this machine")
+    assert problems == []

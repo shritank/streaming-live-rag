@@ -58,11 +58,12 @@ class Engine:
         self._anchor_wall = time.monotonic()
 
     def _now_ms(self) -> float:
-        """Virtual (scenario) clock. Anchored to the last envelope timestamp and
-        advanced by real elapsed time scaled by --time-scale, so telemetry numbers
-        are identical whether a scenario replays at 1x or 8x."""
-        elapsed = (time.monotonic() - self._anchor_wall) * 1000 * self._config.time_scale
-        return self._anchor_ts_ms + elapsed
+        """Virtual (scenario) clock: anchored to the last envelope's timestamp
+        and advanced by real elapsed processing time. --time-scale compresses
+        the gaps BETWEEN envelopes (speech), never the engine's own work —
+        retrieval and synthesis take the same wall time at any replay speed,
+        so scaling them would overstate latency by the replay factor."""
+        return self._anchor_ts_ms + (time.monotonic() - self._anchor_wall) * 1000
 
     def _anchor_clock(self, ts_ms: int) -> None:
         self._anchor_ts_ms = ts_ms
@@ -170,8 +171,8 @@ class Engine:
         state = self._utterances.setdefault(utterance_id, _UtteranceState(utterance_id=utterance_id, started_ms=ts_ms))
         state.accumulated_text += text
 
-        if self._config.engine.mode == "baseline":
-            return  # baseline waits for utterance_end entirely
+        if self._config.engine.mode in ("baseline", "deferred"):
+            return  # both wait for utterance_end before doing anything
 
         chunk = TranscriptChunk(session_id=session_id, utterance_id=utterance_id,
                                  timestamp_ms=ts_ms, text=text, is_final=False)
@@ -231,6 +232,13 @@ class Engine:
             trigger=decision.sub_queries[0].trigger if decision.sub_queries else None,
         )
 
+        for extra_id in decision.superseded_query_ids:
+            if extra_id in state.pending:
+                await self._cancel_task(state, extra_id, session_id, chunk.utterance_id, reason="superseded")
+            else:
+                state.completed_results.pop(extra_id, None)
+                state.query_by_id.pop(extra_id, None)
+
         for q in decision.sub_queries:
             state.query_by_id[q.query_id] = q
             if q.parent_query_id and q.parent_query_id in state.pending:
@@ -258,9 +266,23 @@ class Engine:
                                   where="retriever.search",
                                   error_type=type(e).__name__, message=str(e))
             return None
-        latency_ms = (time.monotonic() - start) * 1000 * self._config.time_scale
+        latency_ms = (time.monotonic() - start) * 1000
         for r in results:
             state.completed_results[r.query_id] = r
+        prefetch = getattr(self._synthesizer, "prefetch", None)
+        if prefetch is not None:
+            for r in results:
+                q = state.query_by_id.get(r.query_id)
+                if q is not None:
+                    try:
+                        await asyncio.to_thread(prefetch, q, r)
+                    except asyncio.CancelledError:
+                        raise
+                    except Exception as e:  # speculative work must never break the turn
+                        self._telemetry.emit("error", component="synthesizer", session_id=session_id,
+                                              utterance_id=utterance_id, ts_ms=self._now_ms(),
+                                              where="synthesizer.prefetch", error_type=type(e).__name__,
+                                              message=str(e))
         self._telemetry.emit(
             "retrieval_completed", component="retriever", session_id=session_id,
             utterance_id=utterance_id, ts_ms=self._now_ms(), request_id=request_id, latency_ms=latency_ms,
@@ -318,6 +340,13 @@ class Engine:
             await self._finish_turn_baseline(state, session_id, ts_ms, output_queue)
             return
 
+        if self._config.engine.mode == "deferred" and state.accumulated_text:
+            # Same controller, decomposition, refinement and synthesis as
+            # streaming — only the timing differs: the whole utterance is
+            # handed over at once, after the user has stopped speaking.
+            whole = TranscriptChunk(session_id=session_id, utterance_id=state.utterance_id,
+                                     timestamp_ms=ts_ms, text=state.accumulated_text, is_final=False)
+            await self._dispatch_decision(whole, session_id, state, ts_ms)
         final_chunk = TranscriptChunk(session_id=session_id, utterance_id=state.utterance_id,
                                        timestamp_ms=ts_ms, text="", is_final=True)
         await self._dispatch_decision(final_chunk, session_id, state, ts_ms)

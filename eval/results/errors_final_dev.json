@@ -1,0 +1,2475 @@
+{
+ "summary": {
+  "n_questions": 102,
+  "correct": 64,
+  "misses": 38,
+  "miss_causes": {
+   "relevance_gate": 15,
+   "context_selection": 11,
+   "rerank_depth": 4,
+   "sentence_selection": 4,
+   "chunking": 2,
+   "refusal": 1,
+   "first_stage": 1
+  },
+  "ceilings": {
+   "isolated": 102,
+   "gold_in_evidence": 97,
+   "answer_in_top3": 96
+  },
+  "by_template": {
+   "gen_late_detail": {
+    "n": 40,
+    "correct": 26
+   },
+   "gen_multi_intent": {
+    "n": 52,
+    "correct": 31
+   },
+   "gen_suppression": {
+    "n": 10,
+    "correct": 7
+   }
+  },
+  "wrong_claims": {
+   "wrong_passage": 13
+  }
+ },
+ "records": [
+  {
+   "scenario": "gen_late_detail_000",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What is  DECnet",
+   "gold": [
+    "Doc_10 \u00a712"
+   ],
+   "answers": [
+    "a suite of network protocols created by Digital Equipment Corporation",
+    "suite of network protocols created by Digital Equipment Corporation"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_000",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What was report P-2626",
+   "gold": [
+    "Doc_10 \u00a74"
+   ],
+   "answers": [
+    "a general architecture for a large-scale, distributed, survivable communications network",
+    "briefing B-265"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_001",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "what did tesla do at his old school in 1879?",
+   "gold": [
+    "Doc_09 \u00a712"
+   ],
+   "answers": [
+    "taught",
+    "Higher Real Gymnasium",
+    "taught a large class of students"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_001",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What year did Tesla die? ",
+   "gold": [
+    "Doc_09 \u00a74"
+   ],
+   "answers": [
+    "1943"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "rerank_depth",
+   "detail": {
+    "best_subquery": "What year did Tesla die?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_09 \u00a712",
+     "Doc_09 \u00a710",
+     "Doc_09 \u00a728",
+     "Doc_09 \u00a768",
+     "Doc_09 \u00a765"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_late_detail_002",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What body in India provides policy directions to schools?",
+   "gold": [
+    "Doc_11 \u00a710"
+   ],
+   "answers": [
+    "union government",
+    "the union government"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_002",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What is the German term for segregating students based on their parents' wealth?",
+   "gold": [
+    "Doc_11 \u00a78"
+   ],
+   "answers": [
+    "Sonderungsverbot"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "refusal",
+   "detail": {
+    "best_subquery": "German term for segregating students based on their parents' wealth?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_11 \u00a78",
+     "Doc_11 \u00a79",
+     "Doc_11 \u00a720",
+     "Doc_11 \u00a718",
+     "Doc_11 \u00a723"
+    ],
+    "top_score": -8.92
+   }
+  },
+  {
+   "scenario": "gen_late_detail_003",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "In what year did Tesla demonstrate his alternating current system?",
+   "gold": [
+    "Doc_09 \u00a721"
+   ],
+   "answers": [
+    "1888"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_003",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What later invention was Tesla's idea similar to?",
+   "gold": [
+    "Doc_09 \u00a753"
+   ],
+   "answers": [
+    "radar",
+    "modern radar"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "first_stage",
+   "detail": {
+    "best_subquery": "What later invention was Tesla's idea similar",
+    "match": 1.0,
+    "evidence": [
+     "Doc_09 \u00a721",
+     "Doc_09 \u00a730",
+     "Doc_09 \u00a779",
+     "Doc_09 \u00a737",
+     "Doc_09 \u00a775"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_late_detail_004",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What was Henry IV known as before taking the throne?",
+   "gold": [
+    "Doc_06 \u00a719"
+   ],
+   "answers": [
+    "Henry of Navarre"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_004",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What industry was centered in Bedfordshire?",
+   "gold": [
+    "Doc_06 \u00a724"
+   ],
+   "answers": [
+    "lace",
+    "British lace"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_005",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What was the tribe of the woman Tem\u00fcjin married when he was around 16 years old?",
+   "gold": [
+    "Doc_05 \u00a78"
+   ],
+   "answers": [
+    "the Onggirat",
+    "Onggirat",
+    "Onggirat tribe"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_005",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "Which battle did Tem\u00fcjin lose to Jamukha shortly after his election as khan?",
+   "gold": [
+    "Doc_05 \u00a711"
+   ],
+   "answers": [
+    "Battle of Dalan Balzhut",
+    "1187"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "Which battle did Tem\u00fcjin lose to Jamukha shortly after his election as khan?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_05 \u00a711",
+     "Doc_05 \u00a714",
+     "Doc_05 \u00a714",
+     "Doc_05 \u00a711",
+     "Doc_05 \u00a713"
+    ],
+    "claim": "After several battles, Jamukha was finally turned over to Tem\u00fcjin by his own men in 1206.",
+    "claim_citation": "Doc_05 \u00a714"
+   }
+  },
+  {
+   "scenario": "gen_late_detail_006",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What is the expression used to identify any given series of problems capable of being solved within time on a deterministic Turing machine?",
+   "gold": [
+    "Doc_02 \u00a718"
+   ],
+   "answers": [
+    "DTIME(f(n))",
+    "DTIME(f(n))."
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_006",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "Resources are constrained by hierarchy theorems to produce what?",
+   "gold": [
+    "Doc_02 \u00a728"
+   ],
+   "answers": [
+    "a proper hierarchy on the classes defined",
+    "a proper hierarchy on the classes",
+    "a proper hierarchy"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_007",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "For what type of music was Doctor Who considered a pioneer?",
+   "gold": [
+    "Doc_03 \u00a760"
+   ],
+   "answers": [
+    "electronic",
+    "electronic music"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_007",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What was the name of the Doctor Who play from the 1980's?",
+   "gold": [
+    "Doc_03 \u00a749"
+   ],
+   "answers": [
+    "Doctor Who \u2013 The Ultimate Adventure"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_008",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What didn't Newton's mechanics affext?",
+   "gold": [
+    "Doc_04 \u00a737"
+   ],
+   "answers": [
+    "three-dimensional objects"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "What didn't Newton's mechanics affext?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a737",
+     "Doc_04 \u00a724",
+     "Doc_04 \u00a75",
+     "Doc_04 \u00a725",
+     "Doc_04 \u00a723"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_late_detail_008",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What causes Pauli repulsion?",
+   "gold": [
+    "Doc_04 \u00a735"
+   ],
+   "answers": [
+    "fermionic nature of electrons"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_009",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What did the Kenyan business people hope for when meeting with the Chinese?",
+   "gold": [
+    "Doc_08 \u00a736"
+   ],
+   "answers": [
+    "support from China for a planned $2.5 billion railway from the southern Kenyan port of Mombasa to neighboring Uganda",
+    "support from China for a planned $2.5 billion railway"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_009",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "Who formed the government in Kenya?",
+   "gold": [
+    "Doc_08 \u00a713"
+   ],
+   "answers": [
+    "Kenya African National Union (KANU) of Jomo Kenyatta",
+    "Kenya African National Union"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_010",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "How many cases of malaria did Kenya report in 2006?",
+   "gold": [
+    "Doc_08 \u00a743"
+   ],
+   "answers": [
+    "15 million"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_010",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What attracts the tourists to Kenya?",
+   "gold": [
+    "Doc_08 \u00a728"
+   ],
+   "answers": [
+    "the coastal beaches and the game reserves",
+    "coastal beaches and the game reserves,",
+    "coastal beaches and the game reserves"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_011",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "Whwn forces are at right ngles to each other what can they be broken down to?",
+   "gold": [
+    "Doc_04 \u00a714"
+   ],
+   "answers": [
+    "independent components"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_011",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What applies to equally to constant velocity motion as it does to rest.",
+   "gold": [
+    "Doc_04 \u00a76"
+   ],
+   "answers": [
+    "Inertia"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_012",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "Who was the Most Valuable Player of Super Bowl 50?",
+   "gold": [
+    "Doc_13 \u00a73"
+   ],
+   "answers": [
+    "Von Miller"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "Who was the Most Valuable Player of Super Bowl 50?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a743",
+     "Doc_13 \u00a72",
+     "Doc_13 \u00a73",
+     "Doc_13 \u00a732",
+     "Doc_13 \u00a74"
+    ],
+    "claim": "The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP).",
+    "claim_citation": "Doc_13 \u00a72"
+   }
+  },
+  {
+   "scenario": "gen_late_detail_012",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "How many touchdowns did Brock Osweiler throw in the season?",
+   "gold": [
+    "Doc_13 \u00a714"
+   ],
+   "answers": [
+    "10"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_013",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "Which TV network broadcasted Super Bowl 50 in Spanish?",
+   "gold": [
+    "Doc_13 \u00a734"
+   ],
+   "answers": [
+    "CBS",
+    "ESPN Deportes"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_013",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What is the name of the turf used in Levi's Stadium for the Super Bowl?",
+   "gold": [
+    "Doc_13 \u00a722"
+   ],
+   "answers": [
+    "Bermuda 419",
+    "hybrid Bermuda 419"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "name of the turf used in Levi's Stadium for the Super Bowl?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a722",
+     "Doc_13 \u00a722",
+     "Doc_13 \u00a71",
+     "Doc_13 \u00a78",
+     "Doc_13 \u00a76"
+    ],
+    "claim": "Concerns were raised over whether Levi's Stadium's field was of a high enough quality to host a Super Bowl; during the inaugural season, the field had to be re-sodded multiple times due to various iss",
+    "claim_citation": "Doc_13 \u00a722",
+    "answer_sentence": "As is customary for Super Bowl games played at natural grass stadiums, the NFL re-sodded the field with a new playing surface; a hybrid Bermuda 419 turf."
+   }
+  },
+  {
+   "scenario": "gen_late_detail_014",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "What did Kenya reveil in 2030?",
+   "gold": [
+    "Doc_08 \u00a737"
+   ],
+   "answers": [
+    "Vision 2030"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "What did Kenya reveil in 2030?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_08 \u00a737",
+     "Doc_08 \u00a737",
+     "Doc_08 \u00a713",
+     "Doc_08 \u00a734",
+     "Doc_08 \u00a713"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_late_detail_014",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What do some believe about this pronunciation?",
+   "gold": [
+    "Doc_08 \u00a75"
+   ],
+   "answers": [
+    "a very precise notation of a correct African pronunciation",
+    "precise"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "What do some believe about this pronunciation?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_08 \u00a75",
+     "Doc_05 \u00a753",
+     "Doc_06 \u00a735",
+     "Doc_05 \u00a753",
+     "Doc_09 \u00a772"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_late_detail_015",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "Who was designated as the home team in the Super Bowl?",
+   "gold": [
+    "Doc_13 \u00a723"
+   ],
+   "answers": [
+    "Broncos",
+    "the Broncos"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "Who was designated as the home team in the Super Bowl?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a723",
+     "Doc_13 \u00a723",
+     "Doc_13 \u00a723",
+     "Doc_13 \u00a77",
+     "Doc_13 \u00a710"
+    ],
+    "claim": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prio",
+    "claim_citation": "Doc_13 \u00a723",
+    "answer_sentence": "The Broncos' decision to wear white meant the Panthers would wear their standard home uniform: black jerseys with silver pants."
+   }
+  },
+  {
+   "scenario": "gen_late_detail_015",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "Which single did Beyonc\u00e9 and Coldplay collaborate on?",
+   "gold": [
+    "Doc_13 \u00a745"
+   ],
+   "answers": [
+    "Hymn for the Weekend",
+    "Mars"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_016",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "Beginning how many years ago did the amazon rainforest extend 45 degrees south?",
+   "gold": [
+    "Doc_00 \u00a72"
+   ],
+   "answers": [
+    "66\u201334 Mya",
+    "66\u201334"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_016",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "How many tree species are in the rainforest?",
+   "gold": [
+    "Doc_00 \u00a710"
+   ],
+   "answers": [
+    "1,100",
+    "more than 1,100"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "chunking",
+   "detail": {
+    "best_subquery": "How many tree species are in the rainforest?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_00 \u00a710",
+     "Doc_00 \u00a710",
+     "Doc_00 \u00a79",
+     "Doc_00 \u00a71",
+     "Doc_00 \u00a719"
+    ],
+    "claim": "The total number of tree species in the region is estimated at 16,000.",
+    "claim_citation": "Doc_00 \u00a710"
+   }
+  },
+  {
+   "scenario": "gen_late_detail_017",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "When did he first get out of bed following the accident?",
+   "gold": [
+    "Doc_09 \u00a760"
+   ],
+   "answers": [
+    "early 1938",
+    "In early 1938"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "When did he first get out of bed following the accident?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_09 \u00a760",
+     "Doc_09 \u00a760",
+     "Doc_09 \u00a760",
+     "Doc_09 \u00a76",
+     "Doc_03 \u00a711"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_late_detail_017",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "Where did the family move in 1862?",
+   "gold": [
+    "Doc_09 \u00a76"
+   ],
+   "answers": [
+    "Gospi\u0107, Austrian Empire",
+    "Gospi\u0107"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_018",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "Along with 10 Cloverfield Lane, what Paramount trailer appeared during the Super Bowl?",
+   "gold": [
+    "Doc_13 \u00a739"
+   ],
+   "answers": [
+    "Teenage Mutant Ninja Turtles: Out of the Shadows"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_late_detail_018",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "What team was the AFC champion?",
+   "gold": [
+    "Doc_13 \u00a71"
+   ],
+   "answers": [
+    "Denver Broncos"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "What team was the AFC champion?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a723",
+     "Doc_13 \u00a71",
+     "Doc_13 \u00a723",
+     "Doc_13 \u00a717",
+     "Doc_13 \u00a713"
+    ],
+    "claim": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prio",
+    "claim_citation": "Doc_13 \u00a723"
+   }
+  },
+  {
+   "scenario": "gen_late_detail_019",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_late_detail",
+   "question": "How many tackles did Luke Kuechly register?",
+   "gold": [
+    "Doc_13 \u00a712"
+   ],
+   "answers": [
+    "118"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "How many tackles did Luke Kuechly register?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a753",
+     "Doc_13 \u00a712",
+     "Doc_13 \u00a712",
+     "Doc_13 \u00a715",
+     "Doc_13 \u00a753"
+    ],
+    "claim": "Linebacker Luke Kuechly had 11 total tackles, while Thomas Davis had seven, despite playing just two weeks after breaking his right arm in the NFC title game.",
+    "claim_citation": "Doc_13 \u00a753"
+   }
+  },
+  {
+   "scenario": "gen_late_detail_019",
+   "utterance": "u2",
+   "kind": "refinement",
+   "template": "gen_late_detail",
+   "question": "In 2011, who was the first player to be chosen in the NFL draft?",
+   "gold": [
+    "Doc_13 \u00a720"
+   ],
+   "answers": [
+    "Newton"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_000",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What came into force after the new constitution was herald?",
+   "gold": [
+    "Doc_08 \u00a721"
+   ],
+   "answers": [
+    "the Second Republic",
+    "Second Republic"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_000",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What attracts the tourists to Kenya?",
+   "gold": [
+    "Doc_08 \u00a728"
+   ],
+   "answers": [
+    "the coastal beaches and the game reserves",
+    "coastal beaches and the game reserves,",
+    "coastal beaches and the game reserves"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_001",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "The 4 sales and service centers are viewed as ",
+   "gold": [
+    "Doc_10 \u00a713"
+   ],
+   "answers": [
+    "the world's first commercial online service",
+    "world's first commercial online service"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "service centers are viewed as",
+    "match": 0.75,
+    "evidence": [
+     "Doc_10 \u00a713",
+     "Doc_10 \u00a723",
+     "Doc_08 \u00a727",
+     "Doc_10 \u00a719",
+     "Doc_10 \u00a719"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_001",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What  things did the network concentrate on ",
+   "gold": [
+    "Doc_10 \u00a74"
+   ],
+   "answers": [
+    "use of a decentralized network with multiple paths between any two points, dividing user messages into message blocks, later called packets",
+    "large-scale, distributed, survivable communications network",
+    "multiple paths between any two points"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_002",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Who first showed that Newton's Theory of Gravity was not as correct as another theory?",
+   "gold": [
+    "Doc_04 \u00a727"
+   ],
+   "answers": [
+    "Albert Einstein"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "Who first showed that Newton's Theory of Gravity was not as correct as another theory?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a727",
+     "Doc_04 \u00a727",
+     "Doc_04 \u00a74",
+     "Doc_04 \u00a725",
+     "Doc_04 \u00a78"
+    ],
+    "claim": "This was the first time that Newton's Theory of Gravity had been shown to be less correct than an alternative.",
+    "claim_citation": "Doc_04 \u00a727",
+    "answer_sentence": "When Albert Einstein formulated his theory of general relativity (GR) he turned his attention to the problem of Mercury's orbit and found that his theory added a correction, which could account for th"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_002",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What are associated with normal forces?",
+   "gold": [
+    "Doc_04 \u00a738"
+   ],
+   "answers": [
+    "pressure terms",
+    "matrix diagonals of the tensor)"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_003",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What did the Mongols shield themselves with while attacking Samarkand?",
+   "gold": [
+    "Doc_05 \u00a725"
+   ],
+   "answers": [
+    "captured enemies"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_003",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Who was the head of the household that Tem\u00fcjin joined when he was nine years old?",
+   "gold": [
+    "Doc_05 \u00a74"
+   ],
+   "answers": [
+    "Dai Setsen"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "How many Doctor Who Christmas Specials have been shown?",
+   "gold": [
+    "Doc_03 \u00a717"
+   ],
+   "answers": [
+    "eight"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "How many Doctor Who Christmas Specials have been shown?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_03 \u00a717",
+     "Doc_03 \u00a717",
+     "Doc_03 \u00a79",
+     "Doc_03 \u00a740",
+     "Doc_03 \u00a736"
+    ],
+    "claim": "There have since been nine further series in 2006\u20132008 and 2010\u20132015, and Christmas Day specials every year since 2005.",
+    "claim_citation": "Doc_03 \u00a79"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What years did the original Doctor Who series run?",
+   "gold": [
+    "Doc_03 \u00a710"
+   ],
+   "answers": [
+    "1963\u20131989"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "What years did the original Doctor Who series run?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_03 \u00a715",
+     "Doc_03 \u00a710",
+     "Doc_03 \u00a761",
+     "Doc_03 \u00a745",
+     "Doc_03 \u00a760"
+    ],
+    "claim": "Doctor Who originally ran for 26 seasons on BBC One, from 23 November 1963 until 6 December 1989.",
+    "claim_citation": "Doc_03 \u00a715"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What Canadian cable station started showing Doctor Who in 2009?",
+   "gold": [
+    "Doc_03 \u00a746"
+   ],
+   "answers": [
+    "Space"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_005",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What was the name of the Doctor Who play from the 1980's?",
+   "gold": [
+    "Doc_03 \u00a749"
+   ],
+   "answers": [
+    "Doctor Who \u2013 The Ultimate Adventure"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_005",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What workshop helped with the creation of the Doctor Who theme?",
+   "gold": [
+    "Doc_03 \u00a734"
+   ],
+   "answers": [
+    "the BBC Radiophonic Workshop",
+    "BBC Radiophonic Workshop"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_005",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Which Doctors were featured in The Four Doctors?",
+   "gold": [
+    "Doc_03 \u00a725"
+   ],
+   "answers": [
+    "Peter Davison, Colin Baker, Sylvester McCoy and Paul McGann"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_006",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What were the civil wars caused by the Huguenots called?",
+   "gold": [
+    "Doc_06 \u00a711"
+   ],
+   "answers": [
+    "Huguenot rebellions",
+    "the Huguenot rebellions"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_006",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What was the most important of these cities or towns?",
+   "gold": [
+    "Doc_06 \u00a74"
+   ],
+   "answers": [
+    "Montpellier"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "rerank_depth",
+   "detail": {
+    "best_subquery": "What was the most important of these cities or towns?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_08 \u00a79",
+     "Doc_06 \u00a717",
+     "Doc_06 \u00a737",
+     "Doc_05 \u00a743",
+     "Doc_05 \u00a743"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_006",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "In what city is the last Huguenot congregation in the US?",
+   "gold": [
+    "Doc_06 \u00a723"
+   ],
+   "answers": [
+    "Charleston, South Carolina",
+    "Charleston"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "In what city is the last Huguenot congregation in civil wars caused huguenots",
+    "match": 0.5,
+    "evidence": [
+     "Doc_06 \u00a723",
+     "Doc_06 \u00a723",
+     "Doc_06 \u00a711",
+     "Doc_06 \u00a71",
+     "Doc_06 \u00a71"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_007",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "How do you determine the acceleration of a rope when two people are pulling it?",
+   "gold": [
+    "Doc_04 \u00a712"
+   ],
+   "answers": [
+    "Associating forces with vectors",
+    "adding the two force magnitudes or subtracting one from the other",
+    "knowing the direction of the forces"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "How do you determine the acceleration of a rope when two people are pulling it?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a712",
+     "Doc_04 \u00a712",
+     "Doc_04 \u00a724",
+     "Doc_04 \u00a724",
+     "Doc_04 \u00a78"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_007",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What applies to equally to constant velocity motion as it does to rest.",
+   "gold": [
+    "Doc_04 \u00a76"
+   ],
+   "answers": [
+    "Inertia"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_007",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What do you use to let idea strings switch direction?",
+   "gold": [
+    "Doc_04 \u00a736"
+   ],
+   "answers": [
+    "ideal pulleys"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_008",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What was suggested at the Symposium in 1967",
+   "gold": [
+    "Doc_10 \u00a75"
+   ],
+   "answers": [
+    "suggested it for use in the ARPANET",
+    "use in the ARPANET"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_008",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "X.25 uses what type network type ",
+   "gold": [
+    "Doc_10 \u00a79"
+   ],
+   "answers": [
+    "User Datagram Protocol",
+    "the datagram model",
+    "UDP"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "X.25 uses what type network type suggested symposium 1967",
+    "match": 0.57,
+    "evidence": [
+     "Doc_10 \u00a79",
+     "Doc_10 \u00a78",
+     "Doc_10 \u00a78",
+     "Doc_10 \u00a75",
+     "Doc_10 \u00a78"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_008",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What did NSFNET eventually provide",
+   "gold": [
+    "Doc_10 \u00a722"
+   ],
+   "answers": [
+    "it developed into a major part of the Internet backbone",
+    "a major part of the Internet backbone",
+    "major part of the Internet backbone"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "chunking",
+   "detail": {
+    "best_subquery": "What did NSFNET eventually provide",
+    "match": 1.0,
+    "evidence": [
+     "Doc_10 \u00a722",
+     "Doc_10 \u00a722",
+     "Doc_10 \u00a714",
+     "Doc_10 \u00a723",
+     "Doc_10 \u00a717"
+    ],
+    "claim": "The National Science Foundation Network (NSFNET) was a program of coordinated, evolving projects sponsored by the National Science Foundation (NSF) beginning in 1985 to promote advanced research and e",
+    "claim_citation": "Doc_10 \u00a722"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_009",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What country showed all three episodes of Silver Nemesis before the BBC did?",
+   "gold": [
+    "Doc_03 \u00a744"
+   ],
+   "answers": [
+    "New Zealand",
+    "TVNZ"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "What country showed all three episodes of Silver Nemesis before the BBC",
+    "match": 1.0,
+    "evidence": [
+     "Doc_03 \u00a744",
+     "Doc_03 \u00a744",
+     "Doc_03 \u00a711",
+     "Doc_03 \u00a750",
+     "Doc_03 \u00a742"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_009",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "In what country was the Doctor Who film not successful enough to spawn a series?",
+   "gold": [
+    "Doc_03 \u00a78"
+   ],
+   "answers": [
+    "the United States",
+    "United States"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_009",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "In what years did the show see audiences as high as 12 million?",
+   "gold": [
+    "Doc_03 \u00a742"
+   ],
+   "answers": [
+    "the late 1970s"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "In what years did the show see audiences as high as 12 million? country showed three episodes",
+    "match": 0.64,
+    "evidence": [
+     "Doc_03 \u00a742",
+     "Doc_03 \u00a743",
+     "Doc_03 \u00a742",
+     "Doc_01 \u00a720",
+     "Doc_01 \u00a712"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_010",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "How many kilometers of acres of the Ecuadorian rainforest is supported?",
+   "gold": [
+    "Doc_00 \u00a710"
+   ],
+   "answers": [
+    "62 acres",
+    "quarter square",
+    "62"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_010",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Analysis of what kind of deposits from the Amazon Fan indicates a change in rainfall in the Amazon basin?",
+   "gold": [
+    "Doc_00 \u00a74"
+   ],
+   "answers": [
+    "sediment deposits",
+    "sediment"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_010",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What are two factors that made it difficult for colonists to the Amazon forest to survive?",
+   "gold": [
+    "Doc_00 \u00a712"
+   ],
+   "answers": [
+    "loss of soil fertility and weed invasion",
+    "soil fertility and weed invasion"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_011",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What was the Genghis Khan's characteristic approach to religious diversity?",
+   "gold": [
+    "Doc_05 \u00a745"
+   ],
+   "answers": [
+    "tolerant",
+    "tolerant of religions"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "What was the Genghis Khan's characteristic approach to religious diversity?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_05 \u00a738",
+     "Doc_05 \u00a739",
+     "Doc_05 \u00a745",
+     "Doc_05 \u00a748",
+     "Doc_05 \u00a746"
+    ],
+    "claim": "The Mongol Empire practiced religious tolerance because Mongol tradition had long held that religion was a personal concept, and not subject to law or interference.[citation needed] Sometime before th",
+    "claim_citation": "Doc_05 \u00a739"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_011",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Who did Genghis Khan assign as his successor?",
+   "gold": [
+    "Doc_05 \u00a72"
+   ],
+   "answers": [
+    "\u00d6gedei Khan"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": false,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "Who did Genghis Khan assign as his successor?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_05 \u00a732",
+     "Doc_05 \u00a731",
+     "Doc_05 \u00a732",
+     "Doc_05 \u00a717",
+     "Doc_05 \u00a744"
+    ],
+    "claim": "He therefore decided to divide his empire among his sons and make all of them Khan in their own right, while appointing one of his sons as his successor.",
+    "claim_citation": "Doc_05 \u00a732"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_012",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What is the typical annual cost for an Irish private school?",
+   "gold": [
+    "Doc_11 \u00a712"
+   ],
+   "answers": [
+    "\u20ac5,000"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_012",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Along with sport and art, what is a type of talent scholarship?",
+   "gold": [
+    "Doc_11 \u00a71"
+   ],
+   "answers": [
+    "academic"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "type of talent scholarship? and",
+    "match": 0.5,
+    "evidence": [
+     "Doc_11 \u00a71",
+     "Doc_11 \u00a724",
+     "Doc_11 \u00a79",
+     "Doc_11 \u00a78",
+     "Doc_10 \u00a79"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_012",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "How are erg\u00e4nzungsschulen funded?",
+   "gold": [
+    "Doc_11 \u00a79"
+   ],
+   "answers": [
+    "tuition",
+    "tuition fees"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_013",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "How many plant species make up the total in the rainforest?",
+   "gold": [
+    "Doc_00 \u00a79"
+   ],
+   "answers": [
+    "40,000"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_013",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What did the analysis from the sediment deposits indicate? ",
+   "gold": [
+    "Doc_00 \u00a74"
+   ],
+   "answers": [
+    "rainfall in the basin during the LGM was lower than for the present",
+    "rainfall in the basin during the LGM was lower"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_014",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "When was the last plague outbreak?",
+   "gold": [
+    "Doc_01 \u00a721"
+   ],
+   "answers": [
+    "The last plague outbreak ravaged Oslo in 1654.",
+    "1654"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_014",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "When did a plague-ridden ship land in Norway?",
+   "gold": [
+    "Doc_01 \u00a74"
+   ],
+   "answers": [
+    "1349"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_014",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Where did scientists find their Y. pestis sample? ",
+   "gold": [
+    "Doc_01 \u00a711"
+   ],
+   "answers": [
+    "from the tooth sockets in human skeletons",
+    "mass graves in northern, central and southern Europe",
+    "tooth sockets in human skeletons"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_015",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Purpose of Telnet ",
+   "gold": [
+    "Doc_10 \u00a715"
+   ],
+   "answers": [
+    "making ARPANET technology public",
+    "a means of making ARPANET technology public"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "rerank_depth",
+   "detail": {
+    "best_subquery": "Purpose of Telnet",
+    "match": 1.0,
+    "evidence": [
+     "Doc_10 \u00a720",
+     "Doc_10 \u00a719",
+     "Doc_10 \u00a716",
+     "Doc_05 \u00a741",
+     "Doc_11 \u00a710"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_015",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What did DECnet originally do ",
+   "gold": [
+    "Doc_10 \u00a712"
+   ],
+   "answers": [
+    "connect two PDP-11 minicomputers"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_015",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What was developed for the Air Force ",
+   "gold": [
+    "Doc_10 \u00a74"
+   ],
+   "answers": [
+    "survivable communications networks",
+    "the concept of distributed adaptive message block switching"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "What was developed for the Air Force",
+    "match": 1.0,
+    "evidence": [
+     "Doc_10 \u00a74",
+     "Doc_04 \u00a734",
+     "Doc_04 \u00a71",
+     "Doc_04 \u00a73",
+     "Doc_10 \u00a712"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_016",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What percentage of money raised was earmarked for causes in the San Francisco area?",
+   "gold": [
+    "Doc_13 \u00a731"
+   ],
+   "answers": [
+    "25 percent",
+    "25"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "What percentage of money raised was earmarked for causes in the San Francisco area?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a731",
+     "Doc_13 \u00a727",
+     "Doc_13 \u00a78",
+     "Doc_13 \u00a727",
+     "Doc_13 \u00a71"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_016",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "Who lost to the Broncos in the divisional round?",
+   "gold": [
+    "Doc_13 \u00a717"
+   ],
+   "answers": [
+    "Pittsburgh Steelers",
+    "the Pittsburgh Steelers",
+    "Steelers"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "Who lost to the Broncos in the divisional round? and",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a713",
+     "Doc_13 \u00a713",
+     "Doc_13 \u00a717",
+     "Doc_13 \u00a716",
+     "Doc_13 \u00a723"
+    ],
+    "claim": "Following their loss in the divisional round of the previous season's playoffs, the Denver Broncos underwent numerous coaching changes, including a mutual parting with head coach John Fox (who had won",
+    "claim_citation": "Doc_13 \u00a713"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_016",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "How many NFL teams have had only one loss by the end of a regular season?",
+   "gold": [
+    "Doc_13 \u00a79"
+   ],
+   "answers": [
+    "ten"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_017",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "When did the Chinese famine begin?",
+   "gold": [
+    "Doc_01 \u00a72"
+   ],
+   "answers": [
+    "1331"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_017",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "For how long did the plague stick around?",
+   "gold": [
+    "Doc_01 \u00a71"
+   ],
+   "answers": [
+    "until the 19th century",
+    "19th century"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "For how long did the plague stick around? chinese famine begin",
+    "match": 0.57,
+    "evidence": [
+     "Doc_01 \u00a72",
+     "Doc_01 \u00a721",
+     "Doc_01 \u00a71",
+     "Doc_01 \u00a712",
+     "Doc_01 \u00a73"
+    ],
+    "claim": "Epidemics that may have included plague killed an estimated 25 million Chinese and other Asians during the 15 years before it reached Constantinople in 1347.",
+    "claim_citation": "Doc_01 \u00a72"
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_018",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "How many Kenyans are living below the poverty level?",
+   "gold": [
+    "Doc_08 \u00a743"
+   ],
+   "answers": [
+    "Half"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_018",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What is Kenya the home of?",
+   "gold": [
+    "Doc_08 \u00a753"
+   ],
+   "answers": [
+    "the world famous Safari Rally",
+    "Safari Rally",
+    "world famous Safari Rally"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": false,
+   "answer_in_top3": false,
+   "cause": "rerank_depth",
+   "detail": {
+    "best_subquery": "Kenya the home of?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_08 \u00a71",
+     "Doc_08 \u00a741",
+     "Doc_08 \u00a73",
+     "Doc_08 \u00a74",
+     "Doc_08 \u00a741"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_multi_intent_018",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What is an important catalyst of economic growth?",
+   "gold": [
+    "Doc_08 \u00a727"
+   ],
+   "answers": [
+    "food security"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_019",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "What is CSNET",
+   "gold": [
+    "Doc_10 \u00a720"
+   ],
+   "answers": [
+    "The Computer Science Network",
+    "a computer network funded by the U.S. National Science Foundation (NSF)",
+    "Computer Science Network"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_multi_intent_019",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_multi_intent",
+   "question": "The business allowed for private companies to do what ",
+   "gold": [
+    "Doc_10 \u00a716"
+   ],
+   "answers": [
+    "government agencies and large companies (mostly banks and airlines) to build their own dedicated networks",
+    "build their own dedicated networks"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "business allowed for private companies to do what csnet",
+    "match": 0.8,
+    "evidence": [
+     "Doc_10 \u00a716",
+     "Doc_10 \u00a720",
+     "Doc_10 \u00a716",
+     "Doc_11 \u00a716",
+     "Doc_11 \u00a717"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_suppression_000",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "What is  DECnet",
+   "gold": [
+    "Doc_10 \u00a712"
+   ],
+   "answers": [
+    "a suite of network protocols created by Digital Equipment Corporation",
+    "suite of network protocols created by Digital Equipment Corporation"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_suppression_001",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "What was Tesla afraid someone was trying to do with his invention?",
+   "gold": [
+    "Doc_09 \u00a764"
+   ],
+   "answers": [
+    "steal the invention",
+    "steal"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "sentence_selection",
+   "detail": {
+    "best_subquery": "What was Tesla afraid someone was trying to do with his invention?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_09 \u00a764",
+     "Doc_09 \u00a721",
+     "Doc_09 \u00a721",
+     "Doc_09 \u00a730",
+     "Doc_09 \u00a747"
+    ],
+    "claim": "He said that there was no danger that his invention could be stolen, for he had at no time committed any part of it to paper; the blueprint for the teleforce weapon was all in his mind.",
+    "claim_citation": "Doc_09 \u00a764",
+    "answer_sentence": "During the period in which the negotiations were being conducted, Tesla said that efforts had been made to steal the invention."
+   }
+  },
+  {
+   "scenario": "gen_suppression_002",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "what did tesla do at his old school in 1879?",
+   "gold": [
+    "Doc_09 \u00a712"
+   ],
+   "answers": [
+    "taught",
+    "Higher Real Gymnasium",
+    "taught a large class of students"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_suppression_003",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "Who won the MVP for the Super Bowl?",
+   "gold": [
+    "Doc_13 \u00a73"
+   ],
+   "answers": [
+    "Von Miller"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "context_selection",
+   "detail": {
+    "best_subquery": "Who won the MVP for the Super Bowl?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_13 \u00a743",
+     "Doc_13 \u00a73",
+     "Doc_13 \u00a72",
+     "Doc_13 \u00a754",
+     "Doc_13 \u00a754"
+    ],
+    "claim": "Bart Starr (MVP of Super Bowls I and II) and Chuck Howley (MVP of Super Bowl V) appeared via video, while Peyton Manning (MVP of Super Bowl XLI and current Broncos quarterback) was shown in the locker",
+    "claim_citation": "Doc_13 \u00a743"
+   }
+  },
+  {
+   "scenario": "gen_suppression_004",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "What equals the spring reaction force on an object suspended on a spring reaction scale? ",
+   "gold": [
+    "Doc_04 \u00a716"
+   ],
+   "answers": [
+    "gravity",
+    "object's weight",
+    "spring reaction force"
+   ],
+   "correct": false,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true,
+   "cause": "relevance_gate",
+   "detail": {
+    "best_subquery": "What equals the spring reaction force on an object suspended on a spring reaction scale?",
+    "match": 1.0,
+    "evidence": [
+     "Doc_04 \u00a716",
+     "Doc_04 \u00a716",
+     "Doc_04 \u00a79",
+     "Doc_04 \u00a710",
+     "Doc_04 \u00a735"
+    ]
+   }
+  },
+  {
+   "scenario": "gen_suppression_005",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "What do gravitational forces act between?",
+   "gold": [
+    "Doc_04 \u00a722"
+   ],
+   "answers": [
+    "masses"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_suppression_006",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "In what year did Tesla demonstrate his alternating current system?",
+   "gold": [
+    "Doc_09 \u00a721"
+   ],
+   "answers": [
+    "1888"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_suppression_007",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "What agency did the Spanish version of the Super Bowl?",
+   "gold": [
+    "Doc_13 \u00a734"
+   ],
+   "answers": [
+    "ESPN Deportes"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_suppression_008",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "What was Henry IV known as before taking the throne?",
+   "gold": [
+    "Doc_06 \u00a719"
+   ],
+   "answers": [
+    "Henry of Navarre"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  },
+  {
+   "scenario": "gen_suppression_009",
+   "utterance": "u1",
+   "kind": "new_request",
+   "template": "gen_suppression",
+   "question": "How many people were lost in Algiers during 1620-21?",
+   "gold": [
+    "Doc_01 \u00a723"
+   ],
+   "answers": [
+    "30 to 50 thousand inhabitants",
+    "30 to 50 thousand"
+   ],
+   "correct": true,
+   "isolated": true,
+   "gold_in_evidence": true,
+   "answer_in_top3": true
+  }
+ ],
+ "wrong": [
+  {
+   "scenario": "gen_late_detail_001",
+   "utterance": "u2",
+   "cause": "wrong_passage",
+   "sub_query": "What year did Tesla die?",
+   "claim": "On 17 April 1879, Milutin Tesla died at the age of 60 after contracting an unspecified illness (although some sources say that he died of a stroke).",
+   "citation": [
+    "Doc_09 \u00a712"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_003",
+   "utterance": "u2",
+   "cause": "wrong_passage",
+   "sub_query": "What later invention was Tesla's idea similar",
+   "claim": "Westinghouse looked into getting a patent on a similar commutator-less, rotating magnetic field-based induction motor presented in a paper in March 1888 by the Italian physicist Galileo Ferraris, but ",
+   "citation": [
+    "Doc_09 \u00a721"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_005",
+   "utterance": "u2",
+   "cause": "wrong_passage",
+   "sub_query": "Which battle did Tem\u00fcjin lose to Jamukha shortly after his election as khan?",
+   "claim": "After several battles, Jamukha was finally turned over to Tem\u00fcjin by his own men in 1206.",
+   "citation": [
+    "Doc_05 \u00a714"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_012",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "Who was the Most Valuable Player of Super Bowl 50?",
+   "claim": "The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP).",
+   "citation": [
+    "Doc_13 \u00a72"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_018",
+   "utterance": "u2",
+   "cause": "wrong_passage",
+   "sub_query": "What team was the AFC champion?",
+   "claim": "The only other AFC champion team to have worn white as the designated home team in the Super Bowl was the Pittsburgh Steelers; they defeated the Seattle Seahawks 21\u201310 in Super Bowl XL 10 seasons prio",
+   "citation": [
+    "Doc_13 \u00a723"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_019",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "How many tackles did Luke Kuechly register?",
+   "claim": "Linebacker Luke Kuechly had 11 total tackles, while Thomas Davis had seven, despite playing just two weeks after breaking his right arm in the NFC title game.",
+   "citation": [
+    "Doc_13 \u00a753"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "How many Doctor Who Christmas Specials have been shown?",
+   "claim": "There have since been nine further series in 2006\u20132008 and 2010\u20132015, and Christmas Day specials every year since 2005.",
+   "citation": [
+    "Doc_03 \u00a79"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "What years did the original Doctor Who series run?",
+   "claim": "Doctor Who originally ran for 26 seasons on BBC One, from 23 November 1963 until 6 December 1989.",
+   "citation": [
+    "Doc_03 \u00a715"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_011",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "What was the Genghis Khan's characteristic approach to religious diversity?",
+   "claim": "The Mongol Empire practiced religious tolerance because Mongol tradition had long held that religion was a personal concept, and not subject to law or interference.[citation needed] Sometime before th",
+   "citation": [
+    "Doc_05 \u00a739"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_011",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "Who did Genghis Khan assign as his successor?",
+   "claim": "He therefore decided to divide his empire among his sons and make all of them Khan in their own right, while appointing one of his sons as his successor.",
+   "citation": [
+    "Doc_05 \u00a732"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_016",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "Who lost to the Broncos in the divisional round? and",
+   "claim": "Following their loss in the divisional round of the previous season's playoffs, the Denver Broncos underwent numerous coaching changes, including a mutual parting with head coach John Fox (who had won",
+   "citation": [
+    "Doc_13 \u00a713"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_018",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "Kenya the home of?",
+   "claim": "Kenya (/\u02c8k\u025bnj\u0259/; locally [\u02c8k\u025b\u0272a] ( listen)), officially the Republic of Kenya, is a country in Africa and a founding member of the East African Community (EAC).",
+   "citation": [
+    "Doc_08 \u00a71"
+   ]
+  },
+  {
+   "scenario": "gen_suppression_003",
+   "utterance": "u1",
+   "cause": "wrong_passage",
+   "sub_query": "Who won the MVP for the Super Bowl?",
+   "claim": "Bart Starr (MVP of Super Bowls I and II) and Chuck Howley (MVP of Super Bowl V) appeared via video, while Peyton Manning (MVP of Super Bowl XLI and current Broncos quarterback) was shown in the locker",
+   "citation": [
+    "Doc_13 \u00a743"
+   ]
+  }
+ ]
+}

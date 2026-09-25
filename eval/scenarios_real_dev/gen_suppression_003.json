@@ -1,0 +1,92 @@
+{
+  "scenario_id": "gen_suppression_003",
+  "template": "suppression",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Who won the MVP for the"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " Super Bowl?"
+      }
+    },
+    {
+      "timestamp_ms": 3500,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 5000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": "Summarize what you just said as"
+      }
+    },
+    {
+      "timestamp_ms": 7400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2",
+        "text": " three bullet points."
+      }
+    },
+    {
+      "timestamp_ms": 8900,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u2"
+      }
+    },
+    {
+      "timestamp_ms": 10900,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Who won the MVP for the Super Bowl?"
+        ],
+        "expected_citation_docs": [
+          "Doc_13 \u00a73"
+        ]
+      },
+      "u2": {
+        "kind": "presentation_only",
+        "retrieval_required": false,
+        "eligible_for_early_retrieval": false
+      }
+    }
+  }
+}

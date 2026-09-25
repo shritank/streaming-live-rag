@@ -1,0 +1,1541 @@
+{
+ "scenario_dir": "eval/scenarios_real_corpus",
+ "corpus_dir": "data/corpus",
+ "overrides": [],
+ "wall_s": 236.7,
+ "gates": {
+  "g2": [
+   11,
+   11,
+   0,
+   5
+  ],
+  "g3": [
+   5,
+   5
+  ],
+  "g4": [
+   36,
+   37,
+   0
+  ],
+  "g5": [
+   5,
+   5
+  ],
+  "g6": [
+   25,
+   25
+  ]
+ },
+ "latency_post_utterance_ms": {
+  "p50": 31.000000017229468,
+  "p95": 109.99999998603016,
+  "n": 20
+ },
+ "raw": {
+  "gen_late_detail_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "In what way do idea strings",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "In what way do idea strings transmit tesion forces?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "In what way do idea strings",
+      "In what way do idea strings transmit tesion forces?"
+     ],
+     "answer": "Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object.",
+     "citations": [
+      "Doc_04 \u00a736"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.4,
+       "query": "one more thing \u2014 What",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.8,
+       "query": "one more thing \u2014 What does stong force act upon?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "one more thing \u2014 What",
+      "one more thing \u2014 What does stong force act upon?"
+     ],
+     "answer": "Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object. Forces act in a particular direction and have sizes dependent upon how strong the push or pull is.",
+     "citations": [
+      "Doc_04 \u00a712",
+      "Doc_04 \u00a736"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object.",
+       "citations": [
+        "Doc_04 \u00a736"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object.",
+       "citations": [
+        "Doc_04 \u00a736"
+       ]
+      },
+      {
+       "text": "Forces act in a particular direction and have sizes dependent upon how strong the push or pull is.",
+       "citations": [
+        "Doc_04 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Who responded to Lindzen's criticisms?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Who responded to Lindzen's criticisms?"
+     ],
+     "answer": "John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM.",
+     "citations": [
+      "Doc_07 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.8,
+       "query": "It turns out How many Medieval",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 6.2,
+       "query": "It turns out How many Medieval Warm Period reconstructions were used?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "It turns out How many Medieval",
+      "It turns out How many Medieval Warm Period reconstructions were used?"
+     ],
+     "answer": "John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM. In addition, analysis of the Medieval Warm Period cited reconstructions by Crowley & Lowery 2000 (as cited in the TAR) and Osborn & Briffa 2006.",
+     "citations": [
+      "Doc_07 \u00a717",
+      "Doc_07 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM.",
+       "citations": [
+        "Doc_07 \u00a79"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM.",
+       "citations": [
+        "Doc_07 \u00a79"
+       ]
+      },
+      {
+       "text": "In addition, analysis of the Medieval Warm Period cited reconstructions by Crowley & Lowery 2000 (as cited in the TAR) and Osborn & Briffa 2006.",
+       "citations": [
+        "Doc_07 \u00a717"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Who has design authority over all",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Who has design authority over all of the digital satellite receivers that",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Who has design authority over all of the digital satellite receivers that are capable of using their service?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Who has design authority over all",
+      "Who has design authority over all of the digital satellite receivers that",
+      "Who has design authority over all of the digital satellite receivers that are capable of using their service?"
+     ],
+     "answer": "BSkyB has design authority over all digital satellite receivers capable of receiving their service.",
+     "citations": [
+      "Doc_12 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.0,
+       "query": "What did ITV increase their",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.4,
+       "query": "What did ITV increase their yearly offer for control of the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.8,
+       "query": "What did ITV increase their yearly offer for control of the rights to broadcast the Primer League",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What did ITV increase their",
+      "What did ITV increase their yearly offer for control of the",
+      "What did ITV increase their yearly offer for control of the rights to broadcast the Primer League"
+     ],
+     "answer": "BSkyB has design authority over all digital satellite receivers capable of receiving their service. ITV had increased its offer from \u00a318m to \u00a334m per year to keep control of the rights.",
+     "citations": [
+      "Doc_12 \u00a716",
+      "Doc_12 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "BSkyB has design authority over all digital satellite receivers capable of receiving their service.",
+       "citations": [
+        "Doc_12 \u00a75"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "BSkyB has design authority over all digital satellite receivers capable of receiving their service.",
+       "citations": [
+        "Doc_12 \u00a75"
+       ]
+      },
+      {
+       "text": "ITV had increased its offer from \u00a318m to \u00a334m per year to keep control of the rights.",
+       "citations": [
+        "Doc_12 \u00a716"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "As a result of a compromise",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "about how many Chinese schools became",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "about how many Chinese schools became National Type schools?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "As a result of a compromise",
+      "about how many Chinese schools became",
+      "about how many Chinese schools became National Type schools?"
+     ],
+     "answer": "This caused an uproar among the Chinese and a compromise was achieved in that the schools would instead become \"National Type\" schools. Over 60 schools converted to become National Type schools.",
+     "citations": [
+      "Doc_11 \u00a713"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.8,
+       "query": "It turns out Along with sport",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 12.6,
+       "query": "type of talent scholarship? turns out along sport",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "It turns out Along with sport",
+      "type of talent scholarship? turns out along sport"
+     ],
+     "answer": "This caused an uproar among the Chinese and a compromise was achieved in that the schools would instead become \"National Type\" schools. Over 60 schools converted to become National Type schools. Private schools, also known as independent schools, non-governmental, or nonstate schools, are not administered by local, state or national governments; thus, they retain the right to select their students and are funded in whole or in part by charging their students tuition, rather than relying on mandatory taxation through public (government) funding; at some private schools students may be able to get a scholarship, which makes the cost cheaper, depending on a talent the student may have (e.g. sport scholarship, art scholarship, academic scholarship), financial need, or tax credit scholarships that might be available.",
+     "citations": [
+      "Doc_11 \u00a71",
+      "Doc_11 \u00a713"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "This caused an uproar among the Chinese and a compromise was achieved in that the schools would instead become \"National Type\" schools.",
+       "citations": [
+        "Doc_11 \u00a713"
+       ]
+      },
+      {
+       "text": "Over 60 schools converted to become National Type schools.",
+       "citations": [
+        "Doc_11 \u00a713"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "This caused an uproar among the Chinese and a compromise was achieved in that the schools would instead become \"National Type\" schools.",
+       "citations": [
+        "Doc_11 \u00a713"
+       ]
+      },
+      {
+       "text": "Over 60 schools converted to become National Type schools.",
+       "citations": [
+        "Doc_11 \u00a713"
+       ]
+      },
+      {
+       "text": "Private schools, also known as independent schools, non-governmental, or nonstate schools, are not administered by local, state or national governments; thus, they retain the right to select their students and are funded in whole or in part by charging their students tuition, rather than relying on mandatory taxation through public (government) funding; at some private schools students may be able to get a scholarship, which makes the cost cheaper, depending on a talent the student may have (e.g. sport scholarship, art scholarship, academic scholarship), financial need, or tax credit scholarships that might be available.",
+       "citations": [
+        "Doc_11 \u00a71"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "When was Tem\u00fcjin elected khan of",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "When was Tem\u00fcjin elected khan of the Mongols?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "When was Tem\u00fcjin elected khan of",
+      "When was Tem\u00fcjin elected khan of the Mongols?"
+     ],
+     "answer": "In 1186, Tem\u00fcjin was elected khan of the Mongols.",
+     "citations": [
+      "Doc_05 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.0,
+       "query": "one more thing \u2014 Before",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.4,
+       "query": "one more thing \u2014 Before which military campaign did Chagatai publicly",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.8,
+       "query": "one more thing \u2014 Before which military campaign did Chagatai publicly dispute Jochi's paternity?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "one more thing \u2014 Before",
+      "one more thing \u2014 Before which military campaign did Chagatai publicly",
+      "one more thing \u2014 Before which military campaign did Chagatai publicly dispute Jochi's paternity?"
+     ],
+     "answer": "In 1186, Tem\u00fcjin was elected khan of the Mongols. According to traditional historical accounts, the issue over Jochi's paternity was voiced most strongly by Chagatai.",
+     "citations": [
+      "Doc_05 \u00a711",
+      "Doc_05 \u00a731"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1186, Tem\u00fcjin was elected khan of the Mongols.",
+       "citations": [
+        "Doc_05 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1186, Tem\u00fcjin was elected khan of the Mongols.",
+       "citations": [
+        "Doc_05 \u00a711"
+       ]
+      },
+      {
+       "text": "According to traditional historical accounts, the issue over Jochi's paternity was voiced most strongly by Chagatai.",
+       "citations": [
+        "Doc_05 \u00a731"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_multi_intent_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Who demonstrated the Egg of Columbus?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What disease did Tesla catch? demonstrated egg columbus",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Who demonstrated the Egg of Columbus?",
+      "What disease did Tesla catch? demonstrated egg columbus"
+     ],
+     "answer": "On his 50th birthday in 1906, Tesla demonstrated his 200 horsepower (150 kilowatts) 16,000 rpm bladeless turbine.",
+     "citations": [
+      "Doc_09 \u00a749"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "On his 50th birthday in 1906, Tesla demonstrated his 200 horsepower (150 kilowatts) 16,000 rpm bladeless turbine.",
+       "citations": [
+        "Doc_09 \u00a749"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What organization did Tesla serve as",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What organization did Tesla serve as vice president of?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "When did Astor provide the money? organization tesla serve vice",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "Where did he claim he would transport organization tesla serve vice",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "Where did he claim he would transport energy to? organization tesla serve vice",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What organization did Tesla serve as",
+      "What organization did Tesla serve as vice president of?",
+      "When did Astor provide the money? organization tesla serve vice",
+      "Where did he claim he would transport organization tesla serve vice",
+      "Where did he claim he would transport energy to? organization tesla serve vice"
+     ],
+     "answer": "In 1900, Tesla was granted patents for a \"system of transmitting electrical energy\" and \"an electrical transmitter.\"",
+     "citations": [
+      "Doc_09 \u00a738"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1900, Tesla was granted patents for a \"system of transmitting electrical energy\" and \"an electrical transmitter.\"",
+       "citations": [
+        "Doc_09 \u00a738"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What does AC stand for?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Who was Tesla prejudiced against? ac stand",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What does AC stand for?",
+      "Who was Tesla prejudiced against? ac stand"
+     ],
+     "answer": "Tesla's demonstration of his induction motor and Westinghouse's subsequent licensing of the patent, both in 1888, put Tesla firmly on the \"AC\" side of the so-called \"War of Currents,\" an electrical distribution battle being waged between Thomas Edison and George Westinghouse that had been simmering since Westinghouse's first AC system in 1886 and had reached the point of all-out warfare by 1888.",
+     "citations": [
+      "Doc_09 \u00a724"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Tesla's demonstration of his induction motor and Westinghouse's subsequent licensing of the patent, both in 1888, put Tesla firmly on the \"AC\" side of the so-called \"War of Currents,\" an electrical distribution battle being waged between Thomas Edison and George Westinghouse that had been simmering since Westinghouse's first AC system in 1886 and had reached the point of all-out warfare by 1888.",
+       "citations": [
+        "Doc_09 \u00a724"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_multi_intent_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "wave-particles called that",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "wave-particles called that mediate all electromagnetic phenomena?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What geometric shape is used in equations to",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What geometric shape is used in equations to determine net force?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "How are laboratory measurements of forces determined?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "wave-particles called that",
+      "wave-particles called that mediate all electromagnetic phenomena?",
+      "What geometric shape is used in equations to",
+      "What geometric shape is used in equations to determine net force?",
+      "How are laboratory measurements of forces determined?"
+     ],
+     "answer": "This final modification to electromagnetic theory ultimately led to quantum electrodynamics (or QED), which fully describes all electromagnetic phenomena as being mediated by wave\u2013particles known as photons. For example, if you know that two people are pulling on the same rope with known magnitudes of force but you do not know which direction either person is pulling, it is impossible to determine what the acceleration of the rope will be. Through experimentation, it is determined that laboratory measurements of forces are fully consistent with the conceptual definition of force offered by Newtonian mechanics.",
+     "citations": [
+      "Doc_04 \u00a711",
+      "Doc_04 \u00a712",
+      "Doc_04 \u00a731"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: For example, if you know that two people.",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: For example, if you know that two people.",
+     "claims": [
+      {
+       "text": "This final modification to electromagnetic theory ultimately led to quantum electrodynamics (or QED), which fully describes all electromagnetic phenomena as being mediated by wave\u2013particles known as photons.",
+       "citations": [
+        "Doc_04 \u00a731"
+       ]
+      },
+      {
+       "text": "For example, if you know that two people are pulling on the same rope with known magnitudes of force but you do not know which direction either person is pulling, it is impossible to determine what the acceleration of the rope will be.",
+       "citations": [
+        "Doc_04 \u00a712"
+       ]
+      },
+      {
+       "text": "Through experimentation, it is determined that laboratory measurements of forces are fully consistent with the conceptual definition of force offered by Newtonian mechanics.",
+       "citations": [
+        "Doc_04 \u00a711"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "How many gold medals did Kenya",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How many gold medals did Kenya win during the Beijing Olympics?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What year did AGOA take effect? and",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "How much of the GDP was many gold medals kenya",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "How much of the GDP was agriculture in 2005?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "How many gold medals did Kenya",
+      "How many gold medals did Kenya win during the Beijing Olympics?",
+      "What year did AGOA take effect? and",
+      "How much of the GDP was many gold medals kenya",
+      "How much of the GDP was agriculture in 2005?"
+     ],
+     "answer": "Kenya won several medals during the Beijing Olympics, six gold, four silver and four bronze, making it Africa's most successful nation in the 2008 Olympics. Since AGOA took effect in 2000, Kenya's clothing sales to the United States increased from US$44 million to US$270 million (2006).[citation needed] Other initiatives to strengthen manufacturing have been the new government's favourable tax measures, including the removal of duty on capital equipment and other raw materials.[citation needed] contributes 62% of GDP. In 2005 agriculture, including forestry and fishing, accounted for 24% of GDP, as well as for 18% of wage employment and 50% of revenue from exports.",
+     "citations": [
+      "Doc_08 \u00a727",
+      "Doc_08 \u00a729",
+      "Doc_08 \u00a733",
+      "Doc_08 \u00a751"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Kenya won several medals during the Beijing Olympics, six gold, four silver and four bronze, making it Africa's most successful nation in the 2008 Olympics.",
+       "citations": [
+        "Doc_08 \u00a751"
+       ]
+      },
+      {
+       "text": "Since AGOA took effect in 2000, Kenya's clothing sales to the United States increased from US$44 million to US$270 million (2006).[citation needed] Other initiatives to strengthen manufacturing have been the new government's favourable tax measures, including the removal of duty on capital equipment and other raw materials.[citation needed]",
+       "citations": [
+        "Doc_08 \u00a733"
+       ]
+      },
+      {
+       "text": "contributes 62% of GDP.",
+       "citations": [
+        "Doc_08 \u00a727"
+       ]
+      },
+      {
+       "text": "In 2005 agriculture, including forestry and fishing, accounted for 24% of GDP, as well as for 18% of wage employment and 50% of revenue from exports.",
+       "citations": [
+        "Doc_08 \u00a729"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 4
+   }
+  },
+  "gen_suppression_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "In what way do idea strings",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "In what way do idea strings transmit tesion forces?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "In what way do idea strings",
+      "In what way do idea strings transmit tesion forces?"
+     ],
+     "answer": "Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object.",
+     "citations": [
+      "Doc_04 \u00a736"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object. [Doc_04 \u00a736]",
+     "citations": [
+      "Doc_04 \u00a736"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object.",
+       "citations": [
+        "Doc_04 \u00a736"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Ideal strings transmit tension forces instantaneously in action-reaction pairs so that if two objects are connected by an ideal string, any force directed along the string by the first object is accompanied by a force directed along the string in the opposite direction by the second object.",
+       "citations": [
+        "Doc_04 \u00a736"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.3,
+       "query": "When are the ashes now?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [
+      "When are the ashes now?"
+     ],
+     "answer": "In 1952, following pressure from Tesla's nephew, Sava Kosanovi\u0107, Tesla's entire estate was shipped to Belgrade in 80 trunks marked N.T. In 1957, Kosanovi\u0107's secretary Charlotte Muzar transported Tesla's ashes from the United States to Belgrade.",
+     "citations": [
+      "Doc_09 \u00a768"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 In 1952, following pressure from Tesla's nephew, Sava Kosanovi\u0107, Tesla's entire estate was shipped to Belgrade in 80 trunks marked N.T. In 1957, Kosanovi\u0107's secretary Charlotte Muzar transported Tesla's ashes from the United States to Belgrade. [Doc_09 \u00a768]",
+     "citations": [
+      "Doc_09 \u00a768"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1952, following pressure from Tesla's nephew, Sava Kosanovi\u0107, Tesla's entire estate was shipped to Belgrade in 80 trunks marked N.T. In 1957, Kosanovi\u0107's secretary Charlotte Muzar transported Tesla's ashes from the United States to Belgrade.",
+       "citations": [
+        "Doc_09 \u00a768"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1952, following pressure from Tesla's nephew, Sava Kosanovi\u0107, Tesla's entire estate was shipped to Belgrade in 80 trunks marked N.T. In 1957, Kosanovi\u0107's secretary Charlotte Muzar transported Tesla's ashes from the United States to Belgrade.",
+       "citations": [
+        "Doc_09 \u00a768"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Who responded to Lindzen's criticisms?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Who responded to Lindzen's criticisms?"
+     ],
+     "answer": "John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM.",
+     "citations": [
+      "Doc_07 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM. [Doc_07 \u00a79]",
+     "citations": [
+      "Doc_07 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM.",
+       "citations": [
+        "Doc_07 \u00a79"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "John Houghton, who was a co-chair of TAR WGI, has responded to Lindzen's criticisms of the SPM.",
+       "citations": [
+        "Doc_07 \u00a79"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Where was the Continental Edison Company",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Where was the Continental Edison Company located?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Where was the Continental Edison Company",
+      "Where was the Continental Edison Company located?"
+     ],
+     "answer": "In 1882, Tesla began working for the Continental Edison Company in France, designing and making improvements to electrical equipment.",
+     "citations": [
+      "Doc_09 \u00a715"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 In 1882, Tesla began working for the Continental Edison Company in France, designing and making improvements to electrical equipment. [Doc_09 \u00a715]",
+     "citations": [
+      "Doc_09 \u00a715"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1882, Tesla began working for the Continental Edison Company in France, designing and making improvements to electrical equipment.",
+       "citations": [
+        "Doc_09 \u00a715"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1882, Tesla began working for the Continental Edison Company in France, designing and making improvements to electrical equipment.",
+       "citations": [
+        "Doc_09 \u00a715"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "This network influenced later models of",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "This network influenced later models of"
+     ],
+     "answer": "Concepts of this network influenced later ARPANET architecture.",
+     "citations": [
+      "Doc_10 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "\u2022 Concepts of this network influenced later ARPANET architecture. [Doc_10 \u00a711]",
+     "citations": [
+      "Doc_10 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Concepts of this network influenced later ARPANET architecture.",
+       "citations": [
+        "Doc_10 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Concepts of this network influenced later ARPANET architecture.",
+       "citations": [
+        "Doc_10 \u00a711"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  }
+ },
+ "quality": {
+  "answer": {
+   "k": 16,
+   "n": 28,
+   "rate": 0.5714285714285714,
+   "ci": [
+    0.390704789856154,
+    0.7349170381926877
+   ]
+  },
+  "citation": {
+   "k": 19,
+   "n": 28,
+   "rate": 0.6785714285714286,
+   "ci": [
+    0.4933850455563118,
+    0.8206695245657927
+   ]
+  },
+  "claim_correct": {
+   "k": 20,
+   "n": 26,
+   "rate": 0.7692307692307693,
+   "ci": [
+    0.5794807424804321,
+    0.8896630031632332
+   ]
+  },
+  "abstention": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "split_exact": {
+   "k": 1,
+   "n": 5,
+   "rate": 0.2,
+   "ci": [
+    0.03622316096978745,
+    0.6244717358814613
+   ]
+  },
+  "oversplit": {
+   "k": 1,
+   "n": 10,
+   "rate": 0.1,
+   "ci": [
+    0.01787574951572113,
+    0.4041563854975721
+   ]
+  }
+ },
+ "items": {
+  "answer": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 0,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 0,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 1,
+   "gen_late_detail_004|u1:0": 1,
+   "gen_late_detail_004|u2:0": 0,
+   "gen_multi_intent_000|u1:0": 0,
+   "gen_multi_intent_000|u1:1": 0,
+   "gen_multi_intent_001|u1:0": 0,
+   "gen_multi_intent_001|u1:1": 0,
+   "gen_multi_intent_001|u1:2": 0,
+   "gen_multi_intent_002|u1:0": 0,
+   "gen_multi_intent_002|u1:1": 0,
+   "gen_multi_intent_003|u1:0": 1,
+   "gen_multi_intent_003|u1:1": 0,
+   "gen_multi_intent_003|u1:2": 1,
+   "gen_multi_intent_004|u1:0": 1,
+   "gen_multi_intent_004|u1:1": 1,
+   "gen_multi_intent_004|u1:2": 1,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 0,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 1,
+   "gen_suppression_004|u1:0": 1
+  },
+  "citation": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 0,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 1,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 1,
+   "gen_late_detail_004|u1:0": 1,
+   "gen_late_detail_004|u2:0": 1,
+   "gen_multi_intent_000|u1:0": 0,
+   "gen_multi_intent_000|u1:1": 0,
+   "gen_multi_intent_001|u1:0": 0,
+   "gen_multi_intent_001|u1:1": 0,
+   "gen_multi_intent_001|u1:2": 0,
+   "gen_multi_intent_002|u1:0": 0,
+   "gen_multi_intent_002|u1:1": 0,
+   "gen_multi_intent_003|u1:0": 1,
+   "gen_multi_intent_003|u1:1": 0,
+   "gen_multi_intent_003|u1:2": 1,
+   "gen_multi_intent_004|u1:0": 1,
+   "gen_multi_intent_004|u1:1": 1,
+   "gen_multi_intent_004|u1:2": 1,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 1,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 1,
+   "gen_suppression_004|u1:0": 1
+  },
+  "claim_correct": {
+   "gen_late_detail_000|u1:c0": 1,
+   "gen_late_detail_000|u2:c0": 0,
+   "gen_late_detail_001|u1:c0": 1,
+   "gen_late_detail_001|u2:c0": 1,
+   "gen_late_detail_002|u1:c0": 1,
+   "gen_late_detail_002|u2:c0": 1,
+   "gen_late_detail_003|u1:c0": 1,
+   "gen_late_detail_003|u1:c1": 1,
+   "gen_late_detail_003|u2:c0": 1,
+   "gen_late_detail_004|u1:c0": 1,
+   "gen_late_detail_004|u2:c0": 1,
+   "gen_multi_intent_000|u1:c0": 0,
+   "gen_multi_intent_001|u1:c0": 0,
+   "gen_multi_intent_002|u1:c0": 0,
+   "gen_multi_intent_003|u1:c0": 1,
+   "gen_multi_intent_003|u1:c1": 0,
+   "gen_multi_intent_003|u1:c2": 1,
+   "gen_multi_intent_004|u1:c0": 1,
+   "gen_multi_intent_004|u1:c1": 1,
+   "gen_multi_intent_004|u1:c2": 0,
+   "gen_multi_intent_004|u1:c3": 1,
+   "gen_suppression_000|u1:c0": 1,
+   "gen_suppression_001|u1:c0": 1,
+   "gen_suppression_002|u1:c0": 1,
+   "gen_suppression_003|u1:c0": 1,
+   "gen_suppression_004|u1:c0": 1
+  },
+  "abstention": {},
+  "split_exact": {
+   "gen_multi_intent_000|u1": 0,
+   "gen_multi_intent_001|u1": 0,
+   "gen_multi_intent_002|u1": 0,
+   "gen_multi_intent_003|u1": 1,
+   "gen_multi_intent_004|u1": 0
+  },
+  "oversplit": {
+   "gen_late_detail_000|u1": 0,
+   "gen_late_detail_001|u1": 0,
+   "gen_late_detail_002|u1": 0,
+   "gen_late_detail_003|u1": 1,
+   "gen_late_detail_004|u1": 0,
+   "gen_suppression_000|u1": 0,
+   "gen_suppression_001|u1": 0,
+   "gen_suppression_002|u1": 0,
+   "gen_suppression_003|u1": 0,
+   "gen_suppression_004|u1": 0
+  }
+ },
+ "wrong_claims": [
+  {
+   "scenario": "gen_late_detail_000",
+   "utterance": "u2",
+   "questions": [
+    "What does stong force act upon?"
+   ],
+   "claim": "Forces act in a particular direction and have sizes dependent upon how strong the push or pull is.",
+   "citations": [
+    "Doc_04 \u00a712"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_000",
+   "utterance": "u1",
+   "questions": [
+    "Who demonstrated the Egg of Columbus?",
+    "What disease did Tesla catch?"
+   ],
+   "claim": "On his 50th birthday in 1906, Tesla demonstrated his 200 horsepower (150 kilowatts) 16,000 rpm bladeless turbine.",
+   "citations": [
+    "Doc_09 \u00a749"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_001",
+   "utterance": "u1",
+   "questions": [
+    "What organization did Tesla serve as vice president of? ",
+    "When did Astor provide the money?",
+    " Where did he claim he would transport energy to?"
+   ],
+   "claim": "In 1900, Tesla was granted patents for a \"system of transmitting electrical energy\" and \"an electrical transmitter.\"",
+   "citations": [
+    "Doc_09 \u00a738"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_002",
+   "utterance": "u1",
+   "questions": [
+    "What does AC stand for?",
+    "Who was Tesla prejudiced against?"
+   ],
+   "claim": "Tesla's demonstration of his induction motor and Westinghouse's subsequent licensing of the patent, both in 1888, put Tesla firmly on the \"AC\" side of the so-ca",
+   "citations": [
+    "Doc_09 \u00a724"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_003",
+   "utterance": "u1",
+   "questions": [
+    "What are the wave-particles called that mediate all electromagnetic phenomena?",
+    "What geometric shape is used in equations to determine net force?",
+    "How are laboratory measurements of forces determined?"
+   ],
+   "claim": "For example, if you know that two people are pulling on the same rope with known magnitudes of force but you do not know which direction either person is pullin",
+   "citations": [
+    "Doc_04 \u00a712"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "questions": [
+    "How many gold medals did Kenya win during the Beijing Olympics?",
+    "What year did AGOA take effect?",
+    "How much of the GDP was agriculture in 2005?"
+   ],
+   "claim": "contributes 62% of GDP.",
+   "citations": [
+    "Doc_08 \u00a727"
+   ]
+  }
+ ]
+}

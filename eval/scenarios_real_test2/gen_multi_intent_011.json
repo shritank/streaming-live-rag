@@ -1,0 +1,128 @@
+{
+  "scenario_id": "gen_multi_intent_011",
+  "template": "multi_intent",
+  "events": [
+    {
+      "timestamp_ms": 0,
+      "event_type": "session_start",
+      "payload": {
+        "session_id": "s1"
+      }
+    },
+    {
+      "timestamp_ms": 0,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": "Dutch architect Janjaap Ruijssenaars's performative architecture"
+      }
+    },
+    {
+      "timestamp_ms": 2400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " 3D-printed building is scheduled to be"
+      }
+    },
+    {
+      "timestamp_ms": 4800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " built when?, Focus on what is"
+      }
+    },
+    {
+      "timestamp_ms": 7200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " to ameliorate the many problems that"
+      }
+    },
+    {
+      "timestamp_ms": 9600,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " arise from the often highly competitive"
+      }
+    },
+    {
+      "timestamp_ms": 12000,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " and adversarial practices within the construction"
+      }
+    },
+    {
+      "timestamp_ms": 14400,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " industry. and In what year did"
+      }
+    },
+    {
+      "timestamp_ms": 16800,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " ENR compile data in nine market"
+      }
+    },
+    {
+      "timestamp_ms": 19200,
+      "event_type": "transcript_chunk",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1",
+        "text": " segments?"
+      }
+    },
+    {
+      "timestamp_ms": 19900,
+      "event_type": "utterance_end",
+      "payload": {
+        "session_id": "s1",
+        "utterance_id": "u1"
+      }
+    },
+    {
+      "timestamp_ms": 21900,
+      "event_type": "session_end",
+      "payload": {
+        "session_id": "s1"
+      }
+    }
+  ],
+  "ground_truth": {
+    "turns": {
+      "u1": {
+        "kind": "new_request",
+        "retrieval_required": true,
+        "eligible_for_early_retrieval": true,
+        "gold_sub_intents": [
+          "Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be built when?",
+          "Focus on what is to ameliorate the many problems that arise from the often highly competitive and adversarial practices within the construction industry.",
+          "In what year did ENR compile data in nine market segments?"
+        ],
+        "expected_citation_docs": [
+          "Doc_02 \u00a78",
+          "Doc_02 \u00a716",
+          "Doc_02 \u00a74"
+        ]
+      }
+    }
+  }
+}

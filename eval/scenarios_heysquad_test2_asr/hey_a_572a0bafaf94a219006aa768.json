@@ -1,0 +1,284 @@
+{
+ "scenario_id": "hey_a_572a0bafaf94a219006aa768",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "what the marginal utility of wealth"
+   }
+  },
+  {
+   "timestamp_ms": 2400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " per income or person do as"
+   }
+  },
+  {
+   "timestamp_ms": 4800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " that person becomes richer what person"
+   }
+  },
+  {
+   "timestamp_ms": 7200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " becomes richer what what the marginal"
+   }
+  },
+  {
+   "timestamp_ms": 9600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " utility what what what what the"
+   }
+  },
+  {
+   "timestamp_ms": 12000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " marginal utility what what what the"
+   }
+  },
+  {
+   "timestamp_ms": 14400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " marginal utility of what what the"
+   }
+  },
+  {
+   "timestamp_ms": 16800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " marginal utility of what what what"
+   }
+  },
+  {
+   "timestamp_ms": 19200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the marginal utility of wealth what"
+   }
+  },
+  {
+   "timestamp_ms": 21600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the marginal utility of what what"
+   }
+  },
+  {
+   "timestamp_ms": 24000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " what what the marginal utility of"
+   }
+  },
+  {
+   "timestamp_ms": 26400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " utility of wealth what what what"
+   }
+  },
+  {
+   "timestamp_ms": 28800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " what the marginal utility of wealth"
+   }
+  },
+  {
+   "timestamp_ms": 31200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " per in what what the marginal"
+   }
+  },
+  {
+   "timestamp_ms": 33600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " utility of wealth per in what"
+   }
+  },
+  {
+   "timestamp_ms": 36000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the marginal utility of wealth per"
+   }
+  },
+  {
+   "timestamp_ms": 38400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " in wealth per in what the"
+   }
+  },
+  {
+   "timestamp_ms": 40800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " marginal utility of wealth of wealth"
+   }
+  },
+  {
+   "timestamp_ms": 43200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " per in wealth pert what the"
+   }
+  },
+  {
+   "timestamp_ms": 45600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " marginal utilit what what the marginal"
+   }
+  },
+  {
+   "timestamp_ms": 48000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " utilitility of wealth per in what"
+   }
+  },
+  {
+   "timestamp_ms": 50400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the marginal utility of wealth per"
+   }
+  },
+  {
+   "timestamp_ms": 52800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " in health what the marginal utilit"
+   }
+  },
+  {
+   "timestamp_ms": 55200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " what the marginal utilit what the"
+   }
+  },
+  {
+   "timestamp_ms": 57600,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " marginal utility of wealth per in"
+   }
+  },
+  {
+   "timestamp_ms": 60000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " health what the marginal utility of"
+   }
+  },
+  {
+   "timestamp_ms": 62400,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " wealth per in"
+   }
+  },
+  {
+   "timestamp_ms": 63900,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 65900,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What the marginal utility of wealth per income per person do as that person becomes richer?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

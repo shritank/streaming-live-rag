@@ -1,0 +1,50 @@
+{
+ "scenario_id": "hey_a_5733d7cbd058e614000b63ad",
+ "template": "heysquad",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 0,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "where did iroquoise confederation control"
+   }
+  },
+  {
+   "timestamp_ms": 2300,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 4300,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": false,
+    "gold_sub_intents": [
+     "Where did Iroquois Confederation control?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

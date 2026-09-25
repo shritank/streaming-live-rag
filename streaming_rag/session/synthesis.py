@@ -11,6 +11,8 @@ evidence and is discarded if it drifts (see `_phrase`).
 """
 from __future__ import annotations
 
+import math
+import re
 import time
 
 from ..config import Config
@@ -43,6 +45,30 @@ _RELEVANCE_TAPER_START = 3       # content-token count where relaxation begins
 _RELEVANCE_TAPER_STEP = 0.02     # relaxation per additional content token
 
 
+_ANAPHOR_RE = re.compile(r"^(?:it|its|he|his|she|her|they|their|them|this|these|those)\b", re.IGNORECASE)
+
+_REFUSAL_MODEL: dict | None = None
+
+
+def _refusal_model() -> dict:
+    global _REFUSAL_MODEL
+    if _REFUSAL_MODEL is None:
+        import json
+        from pathlib import Path
+        _REFUSAL_MODEL = json.loads((Path(__file__).parent / "refusal_gate.json").read_text(encoding="utf-8"))
+    return _REFUSAL_MODEL
+
+
+def _quoted(q: SubQuery) -> str:
+    # the user's own words, not a keyword label ("didn newton mechanics")
+    return f'"{q.text.strip()}"' if q.text.strip() else q.intent_label
+
+
+def _overlap(question: str, text: str) -> float:
+    q = set(content_tokens(question))
+    return len(q & set(content_tokens(text))) / len(q) if q else 0.0
+
+
 def _min_relevance_for(n_query_tokens: int) -> float:
     if n_query_tokens <= _RELEVANCE_TAPER_START:
         return MIN_QUERY_RELEVANCE
@@ -58,6 +84,67 @@ class GroundedSynthesizer:
         self._config = config
         self._llm = llm
         self._telemetry = telemetry or NullTelemetry()
+        # query_id -> (id of the RetrievalResult it was computed from, claim)
+        self._prefetched: dict[str, tuple[int, Claim | None]] = {}
+
+    def prefetch(self, query: SubQuery, result: RetrievalResult) -> None:
+        """Speculative claim selection (and refusal decision), called by the
+        engine in a worker thread when a retrieval completes during speech.
+        Only the model-based selector is expensive enough to be worth it."""
+        if (self._config.synthesis.selector != "cross-encoder" or not self._config.synthesis.speculative_selection
+                or not result.evidence or result.low_confidence):
+            return
+        claim = self._gated_claim(query.text, result)
+        if len(self._prefetched) > 512:
+            self._prefetched.clear()
+        self._prefetched[query.query_id] = (id(result), claim)
+
+    def _gated_claim(self, query: str, result: RetrievalResult) -> Claim | None:
+        claim = self._ce_claim(query, result)
+        if claim is None or self._config.synthesis.refusal_gate != "learned":
+            return claim
+        # The gate's features (the SQuAD2 reader's answer margin especially)
+        # were fit on well-formed spoken QUESTIONS (HeySQuAD); a bare
+        # keyword-style sub-query ("reimbursement", no verb or wh-word) is
+        # out-of-distribution for the reader and drags its own margin down
+        # for reasons unrelated to whether the retrieved evidence is right.
+        # Below 2 content tokens there usually isn't a real question left to
+        # score, so fall back to the same lexical relevance floor the
+        # non-gated selector already relies on, rather than trust a model
+        # score computed on text it was never calibrated for.
+        if len(content_tokens(query)) < 2:
+            return claim if self._is_relevant(query, claim.text, self._specific_terms()) else None
+        return claim if self._answer_probability(query, result, claim) >= self._refusal_threshold() else None
+
+    def _refusal_threshold(self) -> float:
+        t = self._config.synthesis.refusal_threshold
+        return t if t is not None else _refusal_model()["threshold"]
+
+    def _answer_probability(self, query: str, result: RetrievalResult, claim: Claim) -> float:
+        """P(the claim answers the question correctly), from the logistic
+        model fitted on development data (session/refusal_gate.json). The
+        features are computed exactly as they were for fitting."""
+        from ..retrieval.neural import get_cross_encoder, get_reader
+        model = _refusal_model()
+        evidence = result.evidence
+        top = evidence[0]
+        title = top.chunk.metadata.get("doc_title", "")
+        section = self._resolve_citation(top.chunk.citation)
+        values = {
+            "top": top.score,
+            "sentence": float(get_cross_encoder().score(query, [f"{title}: {claim.text}"])[0]),
+            "overlap_ce": _overlap(query, claim.text),
+            "overlap_section": _overlap(query, section.text) if section is not None else 0.0,
+            "margin": top.score - evidence[1].score if len(evidence) > 1 else 0.0,
+            "reader_margin": get_reader().margin(
+                query, [e.chunk.text for e in evidence[:self._config.synthesis.ce_evidence_chunks]]),
+        }
+        if values["reader_margin"] is None:
+            values["reader_margin"] = -10.0
+        z = model["intercept"]
+        for name, mean, scale, w in zip(model["features"], model["scaler_mean"], model["scaler_scale"], model["coef"]):
+            z += w * (values[name] - mean) / scale
+        return 1.0 / (1.0 + math.exp(-z))
 
     # ---------- Synthesizer protocol ----------
 
@@ -105,7 +192,15 @@ class GroundedSynthesizer:
         for q in sub_queries:
             result = by_query.get(q.query_id)
             if result is None or not result.evidence or result.low_confidence:
-                unsupported.append(q.intent_label)
+                unsupported.append(_quoted(q))
+                continue
+            if self._config.synthesis.selector == "cross-encoder":
+                cached = self._prefetched.pop(q.query_id, None)
+                claim = cached[1] if cached and cached[0] == id(result) else self._gated_claim(q.text, result)
+                if claim is None:
+                    unsupported.append(_quoted(q))
+                else:
+                    claims.append(claim)
                 continue
             # The reranked #1 chunk can clear the retriever's low_confidence
             # bar (its BM25/RRF score is decent) while still not actually
@@ -118,16 +213,89 @@ class GroundedSynthesizer:
             # of the top-k evidence is.
             claim = None
             for evidence in result.evidence:
-                sentence = self._best_sentence(q.text, evidence.chunk.text)
-                if self._is_relevant(q.text, sentence, self._specific_terms()):
-                    claim = Claim(text=sentence, citations=[evidence.chunk.citation])
+                sentences = self._evidence_sentences(evidence)
+                if not sentences:
+                    continue
+                idx = self._best_index(q.text, sentences)
+                if self._is_relevant(q.text, sentences[idx], self._specific_terms()):
+                    claim = Claim(text=self._with_continuation(sentences, idx),
+                                  citations=[evidence.chunk.citation])
                     break
             if claim is None:
-                unsupported.append(q.intent_label)
+                unsupported.append(_quoted(q))
                 continue
             claims.append(claim)
 
         return claims, unsupported
+
+    def _ce_claim(self, query: str, result: RetrievalResult) -> Claim | None:
+        """Learned relevance instead of lexical overlap: the cross-encoder
+        judges whether each candidate sentence answers the query, so a
+        sentence that merely shares the query's words (the self-fulfilling
+        case) scores low. The document title is prepended when scoring
+        because SQuAD-style sentences often refer to their subject by pronoun
+        ("he contracted cholera"); the claim itself stays the verbatim
+        sentence."""
+        from ..retrieval.neural import get_cross_encoder
+        candidates, seen = [], set()
+        for evidence in result.evidence[:self._config.synthesis.ce_evidence_chunks]:
+            title = evidence.chunk.metadata.get("doc_title", "")
+            sentences = self._evidence_sentences(evidence)
+            for idx, sentence in enumerate(sentences):
+                key = (evidence.chunk.citation, sentence)
+                if key in seen or not content_tokens(sentence):
+                    continue
+                seen.add(key)
+                candidates.append((evidence.chunk.citation, sentences, idx,
+                                   f"{title}: {sentence}" if title else sentence))
+        if not candidates:
+            return None
+        scores = get_cross_encoder().score(query, [c[3] for c in candidates])
+        best = int(max(range(len(candidates)), key=lambda i: (scores[i], -i)))
+        if scores[best] < self._config.synthesis.ce_claim_threshold:
+            return None
+        citation, sentences, idx, _ = candidates[best]
+        return Claim(text=self._with_continuation(sentences, idx), citations=[citation])
+
+    def _evidence_sentences(self, evidence) -> list[str]:
+        """Candidate claim sentences for one piece of evidence: its chunk, or
+        (evidence_scope=section) the whole section it belongs to — a long
+        section is split over several chunks and the answer may sit in a
+        neighbouring one."""
+        text = evidence.chunk.text
+        if self._config.synthesis.evidence_scope == "section":
+            section = self._resolve_citation(evidence.chunk.citation)
+            if section is not None:
+                text = section.text
+        out: list[str] = []
+        for s in split_sentences(text):
+            s = s.strip()
+            if s and s not in out:
+                out.append(s)
+        return out
+
+    def _with_continuation(self, sentences: list[str], idx: int) -> str:
+        if (self._config.synthesis.anaphoric_continuation and idx + 1 < len(sentences)
+                and _ANAPHOR_RE.match(sentences[idx + 1])):
+            return f"{sentences[idx]} {sentences[idx + 1]}"
+        return sentences[idx]
+
+    @staticmethod
+    def _best_index(query: str, sentences: list[str]) -> int:
+        """Index of the sentence with the highest query-token coverage (first
+        wins ties) — the same rule as _best_sentence, over a sentence list."""
+        if len(sentences) <= 1:
+            return 0
+        q_tokens = set(content_tokens(query))
+        best, best_score = 0, -1.0
+        for i, s in enumerate(sentences):
+            s_tokens = set(content_tokens(s))
+            if not s_tokens:
+                continue
+            score = len(q_tokens & s_tokens) / len(q_tokens or {1})
+            if score > best_score:
+                best, best_score = i, score
+        return best
 
     def _specific_terms(self) -> frozenset[str] | None:
         """The corpus's discriminative-term vocabulary (see
@@ -152,7 +320,7 @@ class GroundedSynthesizer:
         name ("did Astor provide the money" -> "Astor invested $100,000")."""
         q_tokens = set(content_tokens(query))
         if not q_tokens:
-            return True
+            return False  # nothing to check relevance against: never assert blind
         s_tokens = set(content_tokens(sentence))
         overlap = q_tokens & s_tokens
         if len(overlap) / len(q_tokens) < _min_relevance_for(len(q_tokens)):
@@ -185,6 +353,8 @@ class GroundedSynthesizer:
                    sub_queries: list[SubQuery], results: list[RetrievalResult],
                    parent: AnswerVersion | None, change_kind: str,
                    carried: list[str]) -> AnswerVersion:
+        # an over-split request can select the same sentence for two sub-queries
+        claims = list({(c.text, tuple(c.citations)): c for c in claims}.values())
         if self._config.synthesis.grounding_check:
             report = grounding.verify(claims, self._resolve_citation)
             claims = report.claims

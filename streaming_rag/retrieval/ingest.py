@@ -102,13 +102,19 @@ def _chunk_section(doc_id: str, section: str, heading: str, text: str,
     return chunks
 
 
+# Provenance/licensing notes that ship alongside a corpus are metadata, not
+# content: indexing them lets a query that mentions an article title retrieve
+# (and cite) the licence file instead of the article.
+_METADATA_FILE_RE = re.compile(r"^(readme|license|licence|source|notice)\b", re.IGNORECASE)
+
+
 def load_corpus(corpus_dir: str | Path, max_chars: int = 600) -> list[Chunk]:
     directory = Path(corpus_dir)
     if not directory.is_dir():
         raise FileNotFoundError(f"corpus directory not found: {directory}")
     chunks: list[Chunk] = []
-    for path in sorted(directory.glob("**/*.md")):
-        chunks.extend(parse_document(path, max_chars=max_chars))
-    for path in sorted(directory.glob("**/*.txt")):
-        chunks.extend(parse_document(path, max_chars=max_chars))
+    for pattern in ("**/*.md", "**/*.txt"):
+        for path in sorted(directory.glob(pattern)):
+            if not _METADATA_FILE_RE.match(path.name):
+                chunks.extend(parse_document(path, max_chars=max_chars))
     return chunks
