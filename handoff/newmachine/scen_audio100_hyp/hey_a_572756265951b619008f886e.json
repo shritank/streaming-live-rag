@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_a_572756265951b619008f886e",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2063,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What schools do prepare?"
+   }
+  },
+  {
+   "timestamp_ms": 3091,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What schools do"
+   }
+  },
+  {
+   "timestamp_ms": 3091,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What schools do preparatory schools prepare?"
+   }
+  },
+  {
+   "timestamp_ms": 4078,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " preparatory schools"
+   }
+  },
+  {
+   "timestamp_ms": 4078,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What schools do preparatory schools prepare British children?"
+   }
+  },
+  {
+   "timestamp_ms": 5090,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " prepare British"
+   }
+  },
+  {
+   "timestamp_ms": 5090,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What schools do preparatory schools prepare British children to attend?"
+   }
+  },
+  {
+   "timestamp_ms": 5173,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " children to attend?"
+   }
+  },
+  {
+   "timestamp_ms": 5174,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7173,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What schools do preparatory schools prepare British children to attend?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_571cc6f85efbb31900334de8",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3108,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "From what type of"
+   }
+  },
+  {
+   "timestamp_ms": 4075,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " materials"
+   }
+  },
+  {
+   "timestamp_ms": 5077,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " must liquid"
+   }
+  },
+  {
+   "timestamp_ms": 6103,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxygen be separated?"
+   }
+  },
+  {
+   "timestamp_ms": 6104,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8103,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "From what type of materials must liquid oxygen be separated?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "scenario_id": "hey_a_572759dbdd62a815002e9b96",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3078,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What notable?"
+   }
+  },
+  {
+   "timestamp_ms": 4134,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What"
+   }
+  },
+  {
+   "timestamp_ms": 4134,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What notable private school has-"
+   }
+  },
+  {
+   "timestamp_ms": 5121,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " notable private school"
+   }
+  },
+  {
+   "timestamp_ms": 5121,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What notable private school has an endowment of"
+   }
+  },
+  {
+   "timestamp_ms": 6111,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " has an endowment of"
+   }
+  },
+  {
+   "timestamp_ms": 6111,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What notable private school has an endowment of several hundred"
+   }
+  },
+  {
+   "timestamp_ms": 7140,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " several hundred"
+   }
+  },
+  {
+   "timestamp_ms": 7140,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What notable private school has an endowment of several hundred million dollars?"
+   }
+  },
+  {
+   "timestamp_ms": 7454,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " million dollars?"
+   }
+  },
+  {
+   "timestamp_ms": 7455,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9454,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What notable private school has an endowment of several hundred million dollars?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

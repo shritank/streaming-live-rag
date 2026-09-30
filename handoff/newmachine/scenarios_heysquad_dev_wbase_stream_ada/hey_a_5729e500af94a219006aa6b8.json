@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_5729e500af94a219006aa6b8",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3217,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "The Amazon"
+   }
+  },
+  {
+   "timestamp_ms": 4153,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " rainforest became a"
+   }
+  },
+  {
+   "timestamp_ms": 5208,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " mostly inland"
+   }
+  },
+  {
+   "timestamp_ms": 6276,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " forest around which"
+   }
+  },
+  {
+   "timestamp_ms": 6546,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " global event."
+   }
+  },
+  {
+   "timestamp_ms": 6547,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8546,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "The amazon rainforest became a mostly inland forest around which global event?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5727478cf1498d1400e8f59e",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 12515,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who receives"
+   }
+  },
+  {
+   "timestamp_ms": 14515,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " higher salaries at"
+   }
+  },
+  {
+   "timestamp_ms": 16515,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " private schools that charge"
+   }
+  },
+  {
+   "timestamp_ms": 17488,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " higher tuition?"
+   }
+  },
+  {
+   "timestamp_ms": 17489,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 19488,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who receives higher salaries at private schools that charge higher tuition?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

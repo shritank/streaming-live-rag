@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_57264f18f1498d1400e8dbb1",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3424,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How"
+   }
+  },
+  {
+   "timestamp_ms": 5424,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " and when did the first"
+   }
+  },
+  {
+   "timestamp_ms": 6175,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " variant of"
+   }
+  },
+  {
+   "timestamp_ms": 6666,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " bypasses enter Europe?"
+   }
+  },
+  {
+   "timestamp_ms": 6667,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8666,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How and when did the first variant of y. pestis enter Europe?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

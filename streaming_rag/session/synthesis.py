@@ -11,7 +11,9 @@ evidence and is discarded if it drifts (see `_phrase`).
 """
 from __future__ import annotations
 
+import asyncio
 import math
+from concurrent.futures import ThreadPoolExecutor
 import re
 import time
 
@@ -64,6 +66,13 @@ def _quoted(q: SubQuery) -> str:
     return f'"{q.text.strip()}"' if q.text.strip() else q.intent_label
 
 
+_POOL = ThreadPoolExecutor(max_workers=2, thread_name_prefix="gate-reader")
+
+
+def _uses_reader(model: dict) -> bool:
+    return "reader_margin" in model["features"] or "agree" in model["features"]
+
+
 def _overlap(question: str, text: str) -> float:
     q = set(content_tokens(question))
     return len(q & set(content_tokens(text))) / len(q) if q else 0.0
@@ -87,6 +96,21 @@ class GroundedSynthesizer:
         # query_id -> (id of the RetrievalResult it was computed from, claim)
         self._prefetched: dict[str, tuple[int, Claim | None]] = {}
 
+    async def setup(self) -> None:
+        """Cold start (Engine.setup): load the claim selector and the gate's
+        reader now instead of inside the first user turn (the lazy reader load
+        + first inference was a 0.5-0.8 s one-off on the first retrieving
+        turn). If a model is missing, keep the old lazy behaviour."""
+        if self._config.synthesis.selector != "cross-encoder":
+            return
+        from ..retrieval.neural import ModelNotAvailable, get_cross_encoder, get_reader
+        try:
+            await asyncio.to_thread(get_cross_encoder)
+            if self._config.synthesis.refusal_gate == "learned" and _uses_reader(_refusal_model()):
+                await asyncio.to_thread(get_reader)
+        except ModelNotAvailable:
+            pass
+
     def prefetch(self, query: SubQuery, result: RetrievalResult) -> None:
         """Speculative claim selection (and refusal decision), called by the
         engine in a worker thread when a retrieval completes during speech.
@@ -99,9 +123,27 @@ class GroundedSynthesizer:
             self._prefetched.clear()
         self._prefetched[query.query_id] = (id(result), claim)
 
+    def adopt_prefetch(self, src_query_id: str, src_result: RetrievalResult,
+                       dst_query_id: str, dst_result: RetrievalResult) -> None:
+        """The engine reused a speculative retrieval (identical sub-query text
+        and evidence) for the real sub-query: hand its already-selected claim
+        over. The claim depends only on the query text and the evidence."""
+        cached = self._prefetched.pop(src_query_id, None)
+        if cached is not None and cached[0] == id(src_result):
+            self._prefetched[dst_query_id] = (id(dst_result), cached[1])
+
     def _gated_claim(self, query: str, result: RetrievalResult) -> Claim | None:
+        learned = self._config.synthesis.refusal_gate == "learned"
+        # The gate's reader call does not depend on which sentence is chosen,
+        # so it runs concurrently with claim selection instead of after it
+        # (same computations, same answers; ~half the serial model time).
+        reader = None
+        if learned and len(content_tokens(query)) >= 2 and _uses_reader(_refusal_model()) and result.evidence:
+            from ..retrieval.neural import get_reader
+            passages = [e.chunk.text for e in result.evidence[:self._config.synthesis.ce_evidence_chunks]]
+            reader = _POOL.submit(get_reader().answer, query, passages)
         claim = self._ce_claim(query, result)
-        if claim is None or self._config.synthesis.refusal_gate != "learned":
+        if claim is None or not learned:
             return claim
         # The gate's features (the SQuAD2 reader's answer margin especially)
         # were fit on well-formed spoken QUESTIONS (HeySQuAD); a bare
@@ -114,13 +156,13 @@ class GroundedSynthesizer:
         # score computed on text it was never calibrated for.
         if len(content_tokens(query)) < 2:
             return claim if self._is_relevant(query, claim.text, self._specific_terms()) else None
-        return claim if self._answer_probability(query, result, claim) >= self._refusal_threshold() else None
+        return claim if self._answer_probability(query, result, claim, reader) >= self._refusal_threshold() else None
 
     def _refusal_threshold(self) -> float:
         t = self._config.synthesis.refusal_threshold
         return t if t is not None else _refusal_model()["threshold"]
 
-    def _answer_probability(self, query: str, result: RetrievalResult, claim: Claim) -> float:
+    def _answer_probability(self, query: str, result: RetrievalResult, claim: Claim, reader=None) -> float:
         """P(the claim answers the question correctly), from the logistic
         model fitted on development data (session/refusal_gate.json). The
         features are computed exactly as they were for fitting."""
@@ -136,13 +178,18 @@ class GroundedSynthesizer:
             "overlap_ce": _overlap(query, claim.text),
             "overlap_section": _overlap(query, section.text) if section is not None else 0.0,
             "margin": top.score - evidence[1].score if len(evidence) > 1 else 0.0,
-            "reader_margin": get_reader().margin(
-                query, [e.chunk.text for e in evidence[:self._config.synthesis.ce_evidence_chunks]]),
         }
-        if values["reader_margin"] is None:
-            values["reader_margin"] = -10.0
+        if _uses_reader(model):
+            margin, span = reader.result() if reader is not None else get_reader().answer(
+                query, [e.chunk.text for e in evidence[:self._config.synthesis.ce_evidence_chunks]])
+            values["reader_margin"] = -10.0 if margin is None else margin
+            # two independent models point at the same evidence: the reader's
+            # best answer span lies inside the sentence the cross-encoder chose
+            span = span.strip().lower()
+            values["agree"] = 1.0 if span and span in claim.text.lower() else 0.0
         z = model["intercept"]
-        for name, mean, scale, w in zip(model["features"], model["scaler_mean"], model["scaler_scale"], model["coef"]):
+        for name, mean, scale, w in zip(model["features"], model["scaler_mean"], model["scaler_scale"],
+                                         model["coef"], strict=True):
             z += w * (values[name] - mean) / scale
         return 1.0 / (1.0 + math.exp(-z))
 
@@ -150,7 +197,10 @@ class GroundedSynthesizer:
 
     async def synthesize(self, session_id: str, utterance: str,
                           sub_queries: list[SubQuery], results: list[RetrievalResult]) -> AnswerVersion:
-        claims, unsupported = self._claims_from(sub_queries, results)
+        # _claims_from runs the cross-encoder/reader inline on a prefetch
+        # miss; off the event loop so it doesn't stall other coroutines
+        # (~25ms/sub-query measured).
+        claims, unsupported = await asyncio.to_thread(self._claims_from, sub_queries, results)
         prior = self._sessions.view(session_id).latest_answer()
         return self._finalise(session_id, claims, unsupported, sub_queries, results,
                                parent=prior, change_kind="initial", carried=[])
@@ -161,7 +211,7 @@ class GroundedSynthesizer:
         if prior is None:
             return await self.synthesize(session_id, utterance, delta_queries, results)
 
-        delta_claims, unsupported = self._claims_from(delta_queries, results)
+        delta_claims, unsupported = await asyncio.to_thread(self._claims_from, delta_queries, results)
         merged, carried = merge_claims(prior.claims, delta_claims)
         return self._finalise(session_id, merged, unsupported,
                                list(prior.sub_queries) + list(delta_queries), results,
@@ -171,14 +221,20 @@ class GroundedSynthesizer:
         """Presentation-only turn: no retrieval, no new citations (pitfall 4)."""
         prior = self._sessions.view(session_id).latest_answer()
         if prior is None:
-            raise RuntimeError("restructure with no prior answer in session")
+            # nothing to reformat: say so (a targeted clarification), invent nothing, cite nothing
+            return AnswerVersion(
+                version=1, parent_version=None, change_kind="clarification",
+                text="There is no earlier answer in this session to reformat. Ask a question first.",
+                claims=[], citations=[], evidence_ids=[], sub_queries=[], uncertainty=None,
+                created_ms=int(time.perf_counter() * 1000),
+            )
 
         text = self._reformat(prior.claims, instruction)
         return AnswerVersion(
             version=prior.version + 1, parent_version=prior.version, change_kind="restructure",
             text=text, claims=list(prior.claims), citations=list(prior.citations),
             evidence_ids=list(prior.evidence_ids), sub_queries=list(prior.sub_queries),
-            uncertainty=prior.uncertainty, created_ms=int(time.monotonic() * 1000),
+            uncertainty=prior.uncertainty, created_ms=int(time.perf_counter() * 1000),
         )
 
     # ---------- internals ----------
@@ -379,7 +435,7 @@ class GroundedSynthesizer:
             parent_version=parent.version if parent is not None else None,
             change_kind=change_kind, text=text, claims=claims, citations=citations,
             evidence_ids=evidence_ids, sub_queries=list(sub_queries),
-            uncertainty=uncertainty, created_ms=int(time.monotonic() * 1000),
+            uncertainty=uncertainty, created_ms=int(time.perf_counter() * 1000),
         )
 
     def _resolve_citation(self, citation: str):
@@ -393,7 +449,7 @@ class GroundedSynthesizer:
         lowered = instruction.lower()
         wants_bullets = any(w in lowered for w in ("bullet", "point", "list"))
         limit = None
-        for word, n in (("two", 2), ("three", 3), ("four", 4)):
+        for word, n in (("one", 1), ("single", 1), ("two", 2), ("three", 3), ("four", 4)):
             if word in lowered:
                 limit = n
         import re

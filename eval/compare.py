@@ -20,6 +20,26 @@ from .loader import discover_scenarios, load_ground_truth
 from .runner import run_scenario
 
 
+def _latencies_by_turn(trace: list[dict]) -> dict[str, tuple[float | None, float | None, float | None]]:
+    """utterance_id -> (time_to_first_retrieval, utterance_end_to_answer, utterance_start_to_answer) in ms, for
+    the turns that did retrieval. Same definitions as _latencies, keyed per turn so that two modes can be compared
+    on the turns BOTH of them retrieved for."""
+    out = {}
+    for turn in assemble_turns(trace):
+        if not turn.of("retrieval_started"):
+            continue
+        chunk_events = turn.of("chunk_received")
+        final = next((e for e in chunk_events if e.get("is_final")), None)
+        first_retrieval = turn.first("retrieval_started")
+        output = turn.first("output_emitted")
+        start = chunk_events[0].get("ts_ms", 0) if chunk_events else None
+        ttfr = (first_retrieval.get("ts_ms", start) - start) if first_retrieval is not None and start is not None else None
+        e2e = max(0.0, output.get("ts_ms", 0) - final.get("ts_ms", 0)) if final is not None and output is not None else None
+        total = max(0.0, output.get("ts_ms", 0) - start) if start is not None and output is not None else None
+        out[turn.utterance_id] = (ttfr, e2e, total)
+    return out
+
+
 def _latencies(trace: list[dict]) -> tuple[list[float], list[float], list[float]]:
     """Returns (time_to_first_retrieval_ms, utterance_end_to_answer_ms,
     utterance_start_to_answer_ms) for turns that actually did retrieval work —
@@ -80,6 +100,7 @@ async def run_mode(scenarios: list[Path], mode: str, corpus_dir: str | None, imp
     all_ttfr: list[float] = []
     all_e2e: list[float] = []
     all_total: list[float] = []
+    by_turn: dict[tuple[str, str], tuple] = {}
     g2_e = g2_t = g3_s = g3_c = g4_sup = g4_n = g5_ok = g5_t = 0
     tin = tout = 0
     cost = 0.0
@@ -90,6 +111,8 @@ async def run_mode(scenarios: list[Path], mode: str, corpus_dir: str | None, imp
         results, trace = await run_scenario(str(path), config, impl=impl, time_scale=time_scale)
         ttfr, e2e, total = _latencies(trace)
         all_ttfr += ttfr; all_e2e += e2e; all_total += total
+        for uid, vals in _latencies_by_turn(trace).items():
+            by_turn[(path.stem, uid)] = vals
         g2 = score_g2(trace, gt); g3 = score_g3(trace, gt)
         g4 = score_g4(trace, gt); g5 = score_g5(trace, gt)
         g2_e += g2.early; g2_t += g2.eligible
@@ -112,6 +135,7 @@ async def run_mode(scenarios: list[Path], mode: str, corpus_dir: str | None, imp
         "tokens_per_turn": (tin + tout) / n_turns if n_turns else 0,
         "cost_per_turn": cost / n_turns if n_turns else 0,
         "n_turns": n_turns,
+        "by_turn": by_turn,
     }
 
 
@@ -160,15 +184,30 @@ def main(argv=None) -> int:
     if "streaming" in modes and "baseline" in modes:
         s = next(r for r in rows if r["mode"] == "streaming")
         b = next(r for r in rows if r["mode"] == "baseline")
-        beats = s["total_p50"] < b["total_p50"]
-        delta = b["total_p50"] - s["total_p50"]
+        shared = sorted(set(s["by_turn"]) & set(b["by_turn"]))
         print()
-        print(f"streaming utterance-start->answer p50 = {s['total_p50']:.1f}ms vs "
-              f"baseline {b['total_p50']:.1f}ms (streaming is "
-              f"{'faster' if beats else 'SLOWER'} by {delta:.1f}ms)")
-        print(f"(post-utterance-end e2e p50: streaming {s['e2e_p50']:.1f}ms vs baseline {b['e2e_p50']:.1f}ms "
-              f"— near-zero for streaming means its retrieval already finished before the user stopped talking)")
-        print("PASS CONDITION:", "MET" if beats else "NOT MET")
+        print(f"Turns that did retrieval: streaming {len(s['by_turn'])}, baseline {len(b['by_turn'])}; "
+              f"in BOTH (compared below): {len(shared)}. Baseline has no suppression, so it also retrieves for "
+              f"presentation-only turns that streaming correctly skips - those are excluded here.")
+
+        def col(r, i):
+            return [r["by_turn"][k][i] for k in shared if r["by_turn"][k][i] is not None]
+        print(f"{'paired turns':>14s} | {'ttfr_p50':>10s} | {'ttfr_p95':>10s} | {'e2e_p50':>10s} | {'e2e_p95':>10s} | "
+              f"{'total_p50':>10s} | {'total_p95':>10s}   (ms)")
+        for name, r in (("streaming", s), ("baseline", b)):
+            print(f"{name:>14s} | " + " | ".join(
+                f"{_percentile(col(r, i), q):>10.2f}" for i, q in ((0, .5), (0, .95), (1, .5), (1, .95), (2, .5), (2, .95))))
+        s50, b50 = _percentile(col(s, 1), .5), _percentile(col(b, 1), .5)
+        beats = s50 < b50
+        print()
+        print(f"utterance-end -> answer p50 (paired turns): streaming {s50:.2f} ms vs baseline {b50:.2f} ms "
+              f"(streaming is {'faster' if beats else 'SLOWER'} by {b50 - s50:.2f} ms"
+              + (f", {b50 / s50:.0f}x" if beats and s50 > 0 else "") + ")")
+        st50, bt50 = _percentile(col(s, 2), .5), _percentile(col(b, 2), .5)
+        print(f"(informational) utterance-start -> answer p50 (paired turns): streaming {st50:.1f} ms vs baseline {bt50:.1f} ms "
+              f"- dominated by how long the user speaks, identical for both")
+        print("PASS CONDITION (Task 4 section 4.6: streaming beats baseline on utterance-end -> answer p50):",
+              "MET" if beats else "NOT MET")
     return 0
 
 

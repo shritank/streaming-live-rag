@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_572fd47fa23a5019007fca58",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3057,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Other than"
+   }
+  },
+  {
+   "timestamp_ms": 4065,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Scotland's"
+   }
+  },
+  {
+   "timestamp_ms": 5074,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Chief Law"
+   }
+  },
+  {
+   "timestamp_ms": 8083,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Officer, from whence are most ministers"
+   }
+  },
+  {
+   "timestamp_ms": 9093,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " drawn from"
+   }
+  },
+  {
+   "timestamp_ms": 9877,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " amongst?"
+   }
+  },
+  {
+   "timestamp_ms": 9878,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11877,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Other than Scotland's Chief Law Officer, from whence are most ministers drawn from amongst?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad02bef77cf76001a686ca5",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3058,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Which"
+   }
+  },
+  {
+   "timestamp_ms": 4097,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " officer represents"
+   }
+  },
+  {
+   "timestamp_ms": 5095,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the Scottish Police"
+   }
+  },
+  {
+   "timestamp_ms": 6088,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Force at home and"
+   }
+  },
+  {
+   "timestamp_ms": 7096,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " abroad?"
+   }
+  },
+  {
+   "timestamp_ms": 7097,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9096,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which officer represents the Scottish Police Force at home and abroad?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

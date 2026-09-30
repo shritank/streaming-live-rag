@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_5729eb34af94a219006aa6cb",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 10975,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the"
+   }
+  },
+  {
+   "timestamp_ms": 11435,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " theorized maximum"
+   }
+  },
+  {
+   "timestamp_ms": 11925,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " population"
+   }
+  },
+  {
+   "timestamp_ms": 12487,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " density per square"
+   }
+  },
+  {
+   "timestamp_ms": 13178,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " kilometer for the"
+   }
+  },
+  {
+   "timestamp_ms": 13892,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Amazon rainforest?"
+   }
+  },
+  {
+   "timestamp_ms": 13893,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 15892,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What was the theorized maximum population density per square kilometre for the Amazon rainforest?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

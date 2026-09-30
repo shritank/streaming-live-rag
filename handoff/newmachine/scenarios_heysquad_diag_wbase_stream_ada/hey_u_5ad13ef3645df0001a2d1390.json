@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad13ef3645df0001a2d1390",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3057,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Which type of"
+   }
+  },
+  {
+   "timestamp_ms": 4069,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " law did not"
+   }
+  },
+  {
+   "timestamp_ms": 5079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " concern the"
+   }
+  },
+  {
+   "timestamp_ms": 6094,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " EU's governance"
+   }
+  },
+  {
+   "timestamp_ms": 7075,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " structure?"
+   }
+  },
+  {
+   "timestamp_ms": 7076,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9075,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which type of law did not concern the Eu's governance structure?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

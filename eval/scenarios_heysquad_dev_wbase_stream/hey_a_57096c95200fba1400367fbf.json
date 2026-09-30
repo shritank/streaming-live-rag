@@ -1,0 +1,104 @@
+{
+ "scenario_id": "hey_a_57096c95200fba1400367fbf",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2377,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "You"
+   }
+  },
+  {
+   "timestamp_ms": 4377,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " service is a"
+   }
+  },
+  {
+   "timestamp_ms": 6349,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " video guard"
+   }
+  },
+  {
+   "timestamp_ms": 7353,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " UK equipped"
+   }
+  },
+  {
+   "timestamp_ms": 8395,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " receiver"
+   }
+  },
+  {
+   "timestamp_ms": 9445,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " dedicated to"
+   }
+  },
+  {
+   "timestamp_ms": 9965,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " What service is a video guard UK-equipped receiver dedicated to decrypt?"
+   }
+  },
+  {
+   "timestamp_ms": 9966,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11965,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What service is a VideoGuard UK equipped receiver dedicated to decrypt?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

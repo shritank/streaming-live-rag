@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_57379829c3c5551400e51f41",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3153,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "At what"
+   }
+  },
+  {
+   "timestamp_ms": 4126,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " temperature do we can"
+   }
+  },
+  {
+   "timestamp_ms": 5227,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " electromagnetic forces"
+   }
+  },
+  {
+   "timestamp_ms": 6161,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " appear the same?"
+   }
+  },
+  {
+   "timestamp_ms": 6162,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8161,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "At what temperature do weak and electromagnetic forces appear the same?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572759dbdd62a815002e9b95",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4108,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What would"
+   }
+  },
+  {
+   "timestamp_ms": 5116,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " a parent have to"
+   }
+  },
+  {
+   "timestamp_ms": 6133,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " pay to send their"
+   }
+  },
+  {
+   "timestamp_ms": 7138,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " child to a boarding"
+   }
+  },
+  {
+   "timestamp_ms": 7661,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " school in 2012?"
+   }
+  },
+  {
+   "timestamp_ms": 7662,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9661,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What would a parent have to pay to send their child to a boarding school in 2012?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

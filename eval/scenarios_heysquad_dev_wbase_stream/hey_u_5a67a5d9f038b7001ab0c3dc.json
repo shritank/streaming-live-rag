@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a67a5d9f038b7001ab0c3dc",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 12395,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What percentage of"
+   }
+  },
+  {
+   "timestamp_ms": 13150,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " students enroll"
+   }
+  },
+  {
+   "timestamp_ms": 13928,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " in public primary"
+   }
+  },
+  {
+   "timestamp_ms": 14720,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " schools in the Philippines?"
+   }
+  },
+  {
+   "timestamp_ms": 14721,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 16720,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What percentage of students enroll in public primary school in the Philippines?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

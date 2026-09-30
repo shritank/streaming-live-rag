@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_a_57274a1edd62a815002e9a9d",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2112,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the percentage?"
+   }
+  },
+  {
+   "timestamp_ms": 3128,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the"
+   }
+  },
+  {
+   "timestamp_ms": 3128,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the percentage of Germans attending?"
+   }
+  },
+  {
+   "timestamp_ms": 4144,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " percentage of Germans"
+   }
+  },
+  {
+   "timestamp_ms": 4144,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the percentage of Germans attending private high school?"
+   }
+  },
+  {
+   "timestamp_ms": 5156,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " attending private high"
+   }
+  },
+  {
+   "timestamp_ms": 5156,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the percentage of Germans attending private high schools in 2008?"
+   }
+  },
+  {
+   "timestamp_ms": 5791,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " schools in 2008?"
+   }
+  },
+  {
+   "timestamp_ms": 5792,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7791,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What was the percentage of Germans attending private high schools in 2008?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

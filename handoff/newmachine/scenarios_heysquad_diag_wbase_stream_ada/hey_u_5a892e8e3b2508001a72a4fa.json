@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a892e8e3b2508001a72a4fa",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4072,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What type of"
+   }
+  },
+  {
+   "timestamp_ms": 6104,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " numbers"
+   }
+  },
+  {
+   "timestamp_ms": 7112,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " demonstrate a flaw with the"
+   }
+  },
+  {
+   "timestamp_ms": 9119,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Carmichael primality test?"
+   }
+  },
+  {
+   "timestamp_ms": 9120,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11119,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What type of numbers demonstrate a flaw with the Carmichael primality test?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

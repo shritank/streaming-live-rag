@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_571c7abfdd7acb1400e4c0be",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3218,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "of what"
+   }
+  },
+  {
+   "timestamp_ms": 5089,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " did"
+   }
+  },
+  {
+   "timestamp_ms": 6086,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " DaVinci think apart was consumed during combustion?"
+   }
+  },
+  {
+   "timestamp_ms": 6234,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Of what did DaVinci think apart was consumed during combustion?"
+   }
+  },
+  {
+   "timestamp_ms": 6235,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8234,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Of what did da Vinci think a part  was consumed during combustion?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

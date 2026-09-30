@@ -1,0 +1,14 @@
+          mode |       ttfr_p50 |       ttfr_p95 |        e2e_p50 |        e2e_p95 |      total_p50 |      total_p95 |             G2 |             G3 |             G4 |             G5 | tokens_per_turn |  cost_per_turn
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     streaming |           0.00 |        2400.00 |           2.38 |           3.13 |        6302.09 |       13462.84 |           1.00 |           1.00 |           1.00 |           1.00 |           0.00 |           0.00
+      deferred |        6300.00 |       13460.00 |         112.08 |         267.09 |        6412.97 |       13719.18 |           0.00 |           1.00 |           1.00 |           1.00 |           0.00 |           0.00
+      baseline |        5700.00 |       12920.00 |         110.07 |         168.72 |        5805.48 |       13051.57 |           0.00 |           0.00 |           1.00 |           0.00 |           0.00 |           0.00
+
+Turns that did retrieval: streaming 75, baseline 90; in BOTH (compared below): 75. Baseline has no suppression, so it also retrieves for presentation-only turns that streaming correctly skips - those are excluded here.
+  paired turns |   ttfr_p50 |   ttfr_p95 |    e2e_p50 |    e2e_p95 |  total_p50 |  total_p95   (ms)
+     streaming |       0.00 |    2400.00 |       2.38 |       3.13 |    6302.09 |   13462.84
+      baseline |    6300.00 |   13460.00 |     110.18 |     173.85 |    6408.11 |   13588.00
+
+utterance-end -> answer p50 (paired turns): streaming 2.38 ms vs baseline 110.18 ms (streaming is faster by 107.80 ms, 46x)
+(informational) utterance-start -> answer p50 (paired turns): streaming 6302.1 ms vs baseline 6408.1 ms - dominated by how long the user speaks, identical for both
+PASS CONDITION (Task 4 section 4.6: streaming beats baseline on utterance-end -> answer p50): MET

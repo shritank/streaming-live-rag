@@ -1,7 +1,8 @@
 # Pinned runtime + dev dependencies for streaming_rag (Python 3.11-3.12:
 # numpy 2.4.6 and pandas 3.0.5 require >= 3.11).
 # Top-level packages only: transitive dependencies are resolved by pip at
-# install time and are NOT pinned here. Every pin below was checked to have a
+# install time and are NOT pinned here. The fully pinned equivalent (every
+# transitive dependency, Linux x86-64 / CPython 3.12) is requirements-cpu.lock. Every pin below was checked to have a
 # Linux x86_64 CPython 3.12 wheel on PyPI (the Docker target).
 # (kept hand-curated here since this environment mixes package managers)
 

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a0c7fb2f5590b0018dab445",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3313,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Among the"
+   }
+  },
+  {
+   "timestamp_ms": 4369,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " smallest predatory"
+   }
+  },
+  {
+   "timestamp_ms": 5484,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " creatures are the"
+   }
+  },
+  {
+   "timestamp_ms": 6778,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " black caveman"
+   }
+  },
+  {
+   "timestamp_ms": 8112,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " and what?"
+   }
+  },
+  {
+   "timestamp_ms": 8113,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10112,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Among the smallest predatory creatures are the black Caiman and what?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

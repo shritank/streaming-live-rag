@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_57293c246aef051400154bb9",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 8245,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How"
+   }
+  },
+  {
+   "timestamp_ms": 8792,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " many people attended"
+   }
+  },
+  {
+   "timestamp_ms": 9241,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the"
+   }
+  },
+  {
+   "timestamp_ms": 10133,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 2003 IPCC"
+   }
+  },
+  {
+   "timestamp_ms": 10537,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " meeting?"
+   }
+  },
+  {
+   "timestamp_ms": 10538,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 12537,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How many people attended the 2003 IPCC meeting?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

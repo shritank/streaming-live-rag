@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5a679db8f038b7001ab0c350",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3241,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How are school"
+   }
+  },
+  {
+   "timestamp_ms": 4261,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fees in the rest of the"
+   }
+  },
+  {
+   "timestamp_ms": 4950,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " world compared to Ireland?"
+   }
+  },
+  {
+   "timestamp_ms": 4951,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 6950,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How are school fees in the rest of the world compared to Ireland?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

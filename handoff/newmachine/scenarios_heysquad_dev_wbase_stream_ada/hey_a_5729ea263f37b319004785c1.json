@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_a_5729ea263f37b319004785c1",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5000,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How"
+   }
+  },
+  {
+   "timestamp_ms": 5121,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " many turns as"
+   }
+  },
+  {
+   "timestamp_ms": 6227,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " tons of Saharan dust falls on the Amazon basin each year?"
+   }
+  },
+  {
+   "timestamp_ms": 6228,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8227,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How many tons of Saharan dust falls on the Amazon Basin each year?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

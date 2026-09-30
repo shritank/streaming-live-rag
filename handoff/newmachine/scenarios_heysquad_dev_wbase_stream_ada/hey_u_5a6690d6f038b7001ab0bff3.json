@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a6690d6f038b7001ab0bff3",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3094,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What"
+   }
+  },
+  {
+   "timestamp_ms": 4129,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " business was"
+   }
+  },
+  {
+   "timestamp_ms": 5146,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " incorporated in"
+   }
+  },
+  {
+   "timestamp_ms": 5944,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 1975?"
+   }
+  },
+  {
+   "timestamp_ms": 5945,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7944,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": false,
+    "gold_sub_intents": [
+     "What business was incorporated in 1975?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

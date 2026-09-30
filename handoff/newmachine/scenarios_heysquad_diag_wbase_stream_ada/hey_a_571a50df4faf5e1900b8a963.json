@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_571a50df4faf5e1900b8a963",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3070,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Although not a"
+   }
+  },
+  {
+   "timestamp_ms": 4102,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fuel,"
+   }
+  },
+  {
+   "timestamp_ms": 5086,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " blank is the"
+   }
+  },
+  {
+   "timestamp_ms": 6082,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " chemical compound that generates"
+   }
+  },
+  {
+   "timestamp_ms": 7776,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the most occurrences of explosions."
+   }
+  },
+  {
+   "timestamp_ms": 7777,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9776,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Although not a fuel  ___ is the chemical compound the generates the most occurrence of explosions."
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

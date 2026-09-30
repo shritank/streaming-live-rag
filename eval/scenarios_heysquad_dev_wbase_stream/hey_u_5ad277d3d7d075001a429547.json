@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad277d3d7d075001a429547",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4737,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "If three"
+   }
+  },
+  {
+   "timestamp_ms": 5374,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " identical"
+   }
+  },
+  {
+   "timestamp_ms": 6030,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fermions have a symmetric"
+   }
+  },
+  {
+   "timestamp_ms": 6731,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " spin, the spatial"
+   }
+  },
+  {
+   "timestamp_ms": 7417,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " variables must be what?"
+   }
+  },
+  {
+   "timestamp_ms": 7418,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9417,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "If three identical fermions have a symmetric spin, the spatial variables must be what?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

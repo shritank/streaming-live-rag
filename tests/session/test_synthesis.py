@@ -156,7 +156,7 @@ async def test_lexical_selector_KNOWN_LIMITATION_two_word_generic_phrase_can_foo
     it was found by writing this exact adversarial case, not assumed away.
     Closing it needs topic/domain discrimination beyond token overlap — a
     real semantic signal. That signal is exactly what the CROSS-ENCODER
-    selector (the default since final_report.md's audit) adds: see
+    selector (the default since final_report.docx's audit) adds: see
     test_cross_encoder_selector_closes_the_two_word_generic_phrase_gap
     directly below, which is the fix this docstring originally asked for.
     The lexical path is kept, and this limitation kept documented on it,
@@ -181,7 +181,7 @@ async def test_lexical_selector_KNOWN_LIMITATION_two_word_generic_phrase_can_foo
 
 async def test_cross_encoder_selector_closes_the_two_word_generic_phrase_gap():
     """The default selector (cross-encoder claim selection + the learned
-    refusal gate, final_report.md §5.3/§5.8) closes the exact gap documented
+    refusal gate, final_report.docx §5.3/§5.8) closes the exact gap documented
     in test_lexical_selector_KNOWN_LIMITATION_... above: on the identical
     adversarial decoy, a real semantic/relevance signal (the cross-encoder's
     sentence score and the SQuAD2 reader's answer-vs-no-answer margin) now
@@ -292,14 +292,14 @@ def test_learned_refusal_gate_suppresses_a_low_probability_claim():
     synth = GroundedSynthesizer(retriever=object(), session_store=SessionStore(), config=cfg)
     claim = Claim(text="Some sentence.", citations=["Doc_00 §1"])
     synth._ce_claim = lambda query, result: claim
-    synth._answer_probability = lambda query, result, claim: 0.0   # force "refuse"
+    synth._answer_probability = lambda query, result, claim, reader=None: 0.0   # force "refuse"
     # >= 2 content tokens: exercises the learned-model branch, not the
     # short-query lexical fallback (see test_short_query_bypasses_the_learned_model_gate)
     q = SubQuery(query_id="u1.q1", text="A real question here?", intent_label="q", trigger="final", utterance_id="u1")
     result = RetrievalResult(query_id="u1.q1", evidence=(), latency_ms=1.0, low_confidence=False)
     assert synth._gated_claim(q.text, result) is None
 
-    synth._answer_probability = lambda query, result, claim: 1.0   # force "answer"
+    synth._answer_probability = lambda query, result, claim, reader=None: 1.0   # force "answer"
     assert synth._gated_claim(q.text, result) is claim
 
 

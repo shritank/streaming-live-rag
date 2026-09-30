@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5a894a483b2508001a72a5ad",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5087,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "To what"
+   }
+  },
+  {
+   "timestamp_ms": 7129,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " may general arithmetic questions be transferred"
+   }
+  },
+  {
+   "timestamp_ms": 7513,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " to or from?"
+   }
+  },
+  {
+   "timestamp_ms": 7514,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9513,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "To what may general arithmetic questions be transferred to or from?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

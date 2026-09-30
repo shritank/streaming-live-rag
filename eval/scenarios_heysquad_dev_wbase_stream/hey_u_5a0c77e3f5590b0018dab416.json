@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a0c77e3f5590b0018dab416",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2306,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "You"
+   }
+  },
+  {
+   "timestamp_ms": 4306,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " claimed"
+   }
+  },
+  {
+   "timestamp_ms": 5354,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " not only two"
+   }
+  },
+  {
+   "timestamp_ms": 6370,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " inhabitants per"
+   }
+  },
+  {
+   "timestamp_ms": 8370,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Who claimed that only two inhabitants per square kilometer could be sustained in the rainforest?"
+   }
+  },
+  {
+   "timestamp_ms": 8371,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10370,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who claimed that only two inhabitants per square kilometer could be sustained in the rain forest?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

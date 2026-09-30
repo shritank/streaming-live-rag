@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_57293e983f37b3190047818f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3186,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How much did a statement"
+   }
+  },
+  {
+   "timestamp_ms": 4161,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " predict to"
+   }
+  },
+  {
+   "timestamp_ms": 5240,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " global surface"
+   }
+  },
+  {
+   "timestamp_ms": 6283,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " temperature would"
+   }
+  },
+  {
+   "timestamp_ms": 7249,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " increase by 2100?"
+   }
+  },
+  {
+   "timestamp_ms": 7250,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9249,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How much did the statement predict global surface temperature would increase by 2100?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

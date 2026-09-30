@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572fdc34a23a5019007fca97",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4132,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "who congratulated the"
+   }
+  },
+  {
+   "timestamp_ms": 6213,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " SNP while"
+   }
+  },
+  {
+   "timestamp_ms": 8111,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " vowing to campaign against"
+   }
+  },
+  {
+   "timestamp_ms": 9094,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " their"
+   }
+  },
+  {
+   "timestamp_ms": 9191,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " S&P while vowing to campaign against their referendum."
+   }
+  },
+  {
+   "timestamp_ms": 9192,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11191,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who congratulated the SNP while vowing to campaign against their referendum?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

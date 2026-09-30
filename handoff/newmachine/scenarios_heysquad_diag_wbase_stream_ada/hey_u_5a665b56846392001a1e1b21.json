@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a665b56846392001a1e1b21",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4076,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What is an"
+   }
+  },
+  {
+   "timestamp_ms": 5090,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " example of an ineffective"
+   }
+  },
+  {
+   "timestamp_ms": 6117,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " and observed"
+   }
+  },
+  {
+   "timestamp_ms": 7107,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " act according to"
+   }
+  },
+  {
+   "timestamp_ms": 7225,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Julia Butterfly?"
+   }
+  },
+  {
+   "timestamp_ms": 7226,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9225,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What is an example of an ineffective and absurd act according to Julia Butterfly Hill?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

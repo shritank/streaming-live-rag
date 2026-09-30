@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_a_571a50df4faf5e1900b8a962",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4095,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "The rock"
+   }
+  },
+  {
+   "timestamp_ms": 5098,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " sides, nitrates, and dichromates"
+   }
+  },
+  {
+   "timestamp_ms": 6580,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Aroxides, nitrates, and dichromates are examples of what type of compounds."
+   }
+  },
+  {
+   "timestamp_ms": 6581,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8580,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Peroxides, nitrates and dichromates are examples of what type of compounds?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

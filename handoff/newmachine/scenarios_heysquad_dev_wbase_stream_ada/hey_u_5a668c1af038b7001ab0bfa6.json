@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a668c1af038b7001ab0bfa6",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3209,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "It wasn't the"
+   }
+  },
+  {
+   "timestamp_ms": 4346,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " first"
+   }
+  },
+  {
+   "timestamp_ms": 5244,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " network to make the"
+   }
+  },
+  {
+   "timestamp_ms": 6897,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " hosts responsible for what."
+   }
+  },
+  {
+   "timestamp_ms": 6898,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8897,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "It wasn't the first network to make the hosts responsible for what?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

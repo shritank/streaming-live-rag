@@ -1,0 +1,149 @@
+{
+ "scenario_id": "hey_a_5727515f708984140094dc14",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2051,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In South Africa..."
+   }
+  },
+  {
+   "timestamp_ms": 3139,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In South"
+   }
+  },
+  {
+   "timestamp_ms": 3139,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In South Africa, along with private-"
+   }
+  },
+  {
+   "timestamp_ms": 4114,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Africa, along with"
+   }
+  },
+  {
+   "timestamp_ms": 4114,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In South Africa, along with privately governed schools,"
+   }
+  },
+  {
+   "timestamp_ms": 5098,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " privately governed schools,"
+   }
+  },
+  {
+   "timestamp_ms": 5098,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In South Africa, along with privately governed schools, what schools are"
+   }
+  },
+  {
+   "timestamp_ms": 6582,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " what schools are"
+   }
+  },
+  {
+   "timestamp_ms": 6582,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In South Africa, along with privately governed schools, what schools are classified as in in the end. And I'm going to start on the 3"
+   }
+  },
+  {
+   "timestamp_ms": 7115,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " classified as"
+   }
+  },
+  {
+   "timestamp_ms": 7115,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In South Africa, along with privately governed schools, what schools are classified as independent."
+   }
+  },
+  {
+   "timestamp_ms": 7269,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " independent."
+   }
+  },
+  {
+   "timestamp_ms": 7270,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9269,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In South Africa, along with privately governed schools, what schools are classified as independent?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

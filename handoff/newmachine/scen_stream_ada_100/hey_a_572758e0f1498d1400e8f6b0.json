@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572758e0f1498d1400e8f6b0",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4115,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What state"
+   }
+  },
+  {
+   "timestamp_ms": 5143,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " constitutional amendments"
+   }
+  },
+  {
+   "timestamp_ms": 6227,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " make reference to"
+   }
+  },
+  {
+   "timestamp_ms": 7214,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the government funding"
+   }
+  },
+  {
+   "timestamp_ms": 7453,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " religious schools?"
+   }
+  },
+  {
+   "timestamp_ms": 7454,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9453,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What state constitutional amendments make reference to the government funding religious schools?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

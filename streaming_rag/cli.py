@@ -91,12 +91,37 @@ async def run_replay(scenario_path: str, time_scale: float, mode: str, telemetry
     return results
 
 
+GUIDE_FIELDS = ("retrieval_events", "sub_queries", "answer", "citations", "uncertainty")
+
+
+def guide_record(turn_result: dict) -> dict:
+    """The Theme 4 guide's structured output event record: the five fields of a
+    turn_result, without the session/version bookkeeping."""
+    return {k: turn_result.get(k) for k in GUIDE_FIELDS}
+
+
+def print_guide_records(results: list[dict]) -> None:
+    """One indented JSON record per completed turn (text and audio input alike)."""
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(errors="replace")   # a legacy console code page must not crash on a symbol
+    for r in results:
+        if r.get("kind") == "turn_result":
+            print(json.dumps(guide_record(r), indent=2, ensure_ascii=False, default=str))
+
+
 def cmd_replay(args) -> int:
+    if args.warmup:
+        # Same as the evaluation harness: one uncounted, fast replay so the first CUDA calls of the process
+        # (kernel loading, allocator growth) are not charged to the turn being shown. Output is discarded.
+        asyncio.run(run_replay(args.scenario, 50.0, args.mode, None, impl=args.impl, corpus_dir=args.corpus_dir))
     results = asyncio.run(run_replay(args.scenario, args.time_scale, args.mode, args.telemetry,
                                        impl=args.impl, corpus_dir=args.corpus_dir))
     if args.json:
         with open(args.json, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=2, default=str)
+    if args.guide_format:
+        print_guide_records(results)
+        return 0
     for r in results:
         print(json.dumps(r, default=str))
     return 0
@@ -148,6 +173,29 @@ async def _live_loop() -> None:
         await consumer_task
 
 
+async def _show_evidence(query: str, k: int, corpus_dir: str | None) -> None:
+    from .contracts import SubQuery
+    config = load_config()
+    if corpus_dir:
+        config.corpus_dir = corpus_dir
+    _, retriever, _, _, _ = build_components(config, BufferedTelemetry(), SessionStore(), impl="real")
+    await retriever.setup()
+    sq = SubQuery(query_id="q1", text=query, intent_label=query, trigger="final", utterance_id="u1")
+    await retriever.search([sq], k=k)                       # uncounted warm-up call
+    result = (await retriever.search([sq], k=k))[0]
+    print(f"query: {query!r}   retrieval {result.latency_ms:.1f} ms   low_confidence={result.low_confidence}")
+    print("final  citation      score   BM25-rank  dense-rank  text   (score = cross-encoder logit; ranks: 0 = best)")
+    for i, e in enumerate(result.evidence, 1):
+        sparse = "-" if e.sparse_rank is None else str(e.sparse_rank)
+        dense = "-" if e.dense_rank is None else str(e.dense_rank)
+        print(f"{i:>5}  {e.chunk.citation:<12} {e.score:>6.2f}  {sparse:>9}  {dense:>10}  {e.chunk.text[:90]!r}")
+
+
+def cmd_evidence(args) -> int:
+    asyncio.run(_show_evidence(args.query, args.k, args.corpus_dir))
+    return 0
+
+
 def cmd_live(args) -> int:
     asyncio.run(_live_loop())
     return 0
@@ -165,7 +213,18 @@ def main(argv=None) -> int:
     p_replay.add_argument("--telemetry", default=None, help="path to write a JSONL trace")
     p_replay.add_argument("--impl", choices=["real", "mock"], default="real")
     p_replay.add_argument("--corpus-dir", default=None)
+    p_replay.add_argument("--warmup", action="store_true",
+                          help="run one uncounted fast replay first, so cold-start GPU costs are not shown as latency")
+    p_replay.add_argument("--guide-format", action="store_true",
+                          help="print each turn as the guide's structured output event record "
+                               "(retrieval_events, sub_queries, answer, citations, uncertainty)")
     p_replay.set_defaults(func=cmd_replay)
+
+    p_evidence = sub.add_parser("evidence", help="show one query's fused + reranked evidence with per-channel ranks")
+    p_evidence.add_argument("query")
+    p_evidence.add_argument("--k", type=int, default=6)
+    p_evidence.add_argument("--corpus-dir", default=None)
+    p_evidence.set_defaults(func=cmd_evidence)
 
     p_live = sub.add_parser("live")
     p_live.set_defaults(func=cmd_live)

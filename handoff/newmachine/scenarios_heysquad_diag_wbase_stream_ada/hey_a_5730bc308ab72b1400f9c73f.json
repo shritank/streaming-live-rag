@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_5730bc308ab72b1400f9c73f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4070,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "The Ottoman Empire"
+   }
+  },
+  {
+   "timestamp_ms": 5081,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " controlled territory"
+   }
+  },
+  {
+   "timestamp_ms": 6078,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " on three continents."
+   }
+  },
+  {
+   "timestamp_ms": 8103,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Africa, Asia, and"
+   }
+  },
+  {
+   "timestamp_ms": 8727,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " continents, Africa, Asia, and which other"
+   }
+  },
+  {
+   "timestamp_ms": 8728,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10727,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "The Ottoman empire controlled territory on three continents, Africa, Asia and which other?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

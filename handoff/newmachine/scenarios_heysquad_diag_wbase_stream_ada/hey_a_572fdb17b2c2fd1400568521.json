@@ -1,0 +1,131 @@
+{
+ "scenario_id": "hey_a_572fdb17b2c2fd1400568521",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3239,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What"
+   }
+  },
+  {
+   "timestamp_ms": 4137,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Act sets the term"
+   }
+  },
+  {
+   "timestamp_ms": 5200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " for"
+   }
+  },
+  {
+   "timestamp_ms": 6188,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " judging the"
+   }
+  },
+  {
+   "timestamp_ms": 7164,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " boundaries of"
+   }
+  },
+  {
+   "timestamp_ms": 8208,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " sanity to which individuals"
+   }
+  },
+  {
+   "timestamp_ms": 9222,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " wishing"
+   }
+  },
+  {
+   "timestamp_ms": 10255,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " to sit on"
+   }
+  },
+  {
+   "timestamp_ms": 11187,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the S.P."
+   }
+  },
+  {
+   "timestamp_ms": 12105,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " SP must adhere?"
+   }
+  },
+  {
+   "timestamp_ms": 12106,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 14105,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What act sets the term for judging the boundaries of sanity to which individuals wishing to sit on the SP must adhere?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

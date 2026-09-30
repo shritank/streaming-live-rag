@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_a_57293d6d1d046914007791ba",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3208,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who assembles"
+   }
+  },
+  {
+   "timestamp_ms": 4206,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the author's"
+   }
+  },
+  {
+   "timestamp_ms": 4493,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " contributions?"
+   }
+  },
+  {
+   "timestamp_ms": 4494,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 6493,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": false,
+    "gold_sub_intents": [
+     "Who assembles the authors' contributions?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

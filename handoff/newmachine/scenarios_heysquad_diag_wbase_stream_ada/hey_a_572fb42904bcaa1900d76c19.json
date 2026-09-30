@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_572fb42904bcaa1900d76c19",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4063,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who is responsible for"
+   }
+  },
+  {
+   "timestamp_ms": 5107,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " operating"
+   }
+  },
+  {
+   "timestamp_ms": 6129,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the electronic"
+   }
+  },
+  {
+   "timestamp_ms": 7237,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " voting equipment in chamber clocks?"
+   }
+  },
+  {
+   "timestamp_ms": 7238,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9237,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who is responsible for operating the electronic voting equipment and chamber clocks?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_a_5729a26d6aef05140015505c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4082,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Complete in"
+   }
+  },
+  {
+   "timestamp_ms": 6106,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " with respect to what"
+   }
+  },
+  {
+   "timestamp_ms": 7967,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Completing Q with respect to what will produce the field of real numbers."
+   }
+  },
+  {
+   "timestamp_ms": 7968,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9967,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Completing Q with respect to what will produce the field of real numbers?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

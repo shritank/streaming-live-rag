@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_a_572fd7b8947a6a140053cd3d",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3057,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What may"
+   }
+  },
+  {
+   "timestamp_ms": 4063,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " members"
+   }
+  },
+  {
+   "timestamp_ms": 5084,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " question the first"
+   }
+  },
+  {
+   "timestamp_ms": 6068,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " minister about"
+   }
+  },
+  {
+   "timestamp_ms": 7087,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " directly"
+   }
+  },
+  {
+   "timestamp_ms": 8112,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " during"
+   }
+  },
+  {
+   "timestamp_ms": 9172,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " first"
+   }
+  },
+  {
+   "timestamp_ms": 9965,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " minister's question at time?"
+   }
+  },
+  {
+   "timestamp_ms": 9966,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11965,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What may members question the First Minister about directly during First Minister's Question Time?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

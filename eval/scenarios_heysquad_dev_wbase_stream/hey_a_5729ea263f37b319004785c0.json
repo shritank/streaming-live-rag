@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5729ea263f37b319004785c0",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3975,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How"
+   }
+  },
+  {
+   "timestamp_ms": 4755,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " many miles across the"
+   }
+  },
+  {
+   "timestamp_ms": 5472,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Atlantic"
+   }
+  },
+  {
+   "timestamp_ms": 6943,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Ocean, this a horrendous travel?"
+   }
+  },
+  {
+   "timestamp_ms": 6944,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8943,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How many miles across the Atlantic Ocean does Saharan dust travel?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

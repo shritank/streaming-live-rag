@@ -1,0 +1,140 @@
+﻿################ EC1 refusal gate withholds a correct claim
+QUESTION: 'What did Kenya reveil in 2030?'   gold answer contains: ['Vision 2030']
+low_confidence=False  evidence=8  (claims use the top 3 chunks)
+  #0 Doc_08 §37     logit    2.88  answer_in_chunk=True  | 'In 2007, the Kenyan government unveiled Vision 2030, an economic development programme it '
+  #1 Doc_08 §37     logit   -1.60  answer_in_chunk=True  | 'The 200-page Action Plan, developed with support from the Climate & Development Knowledge '
+  #2 Doc_08 §21     logit   -5.44  answer_in_chunk=False  | 'A constitutional change was considered that would eliminate the position of Prime Minister'
+  #3 Doc_08 §18     logit   -5.83  answer_in_chunk=False  | 'Since the election riots, the government and civil society organisations started programme'
+  #4 Doc_08 §13     logit   -6.67  answer_in_chunk=False  | 'In this way, Kenya became an independent country under the Kenya Independence Act 1963 of '
+  #5 Doc_08 §34     logit   -6.92  answer_in_chunk=False  | "Kenya's installed capacity stood at 1,142 megawatts between 2001 and 2003. The state-owned"
+
+CE sentence ranking over 11 candidate sentences (claim threshold -4.0):
+  1.    2.12 Doc_08 §37     answer_in_sentence=True | 'In 2007, the Kenyan government unveiled Vision 2030, an economic development programme it hopes will put the c'
+  2.    0.76 Doc_08 §37     answer_in_sentence=True | 'In 2013, it launched a National Climate Change Action Plan, having acknowledged that omitting climate as a key'
+  3.   -1.99 Doc_08 §37     answer_in_sentence=True | 'At the launch in March 2013, the Secretary of the Ministry of Planning, National Development and Vision 2030 e'
+  4.   -4.31 Doc_08 §21     answer_in_sentence=False | "It was promulgated on 27 August 2010 at a euphoric ceremony in Nairobi's Uhuru Park, accompanied by a 21-gun s"
+  5.   -6.33 Doc_08 §21     answer_in_sentence=False | 'The event was attended by various African leaders and praised by the international community.'
+  -> best sentence holding the gold answer ranks: 1 of 11
+
+CLAIM ['Doc_08 §37']: answer_in_claim=True | 'In 2007, the Kenyan government unveiled Vision 2030, an economic development programme it hopes will put the country in the same league as the Asian Economic Tigers by the year 2030.'
+GATE features (value | standardised | coefficient | contribution to z):
+  top                  2.88 |   0.18 |  -0.51 |  -0.09
+  sentence             2.12 |   0.01 |   1.26 |   0.01
+  overlap_ce           0.33 |  -0.77 |   0.05 |  -0.04
+  overlap_section      0.67 |   0.30 |  -0.41 |  -0.12
+  margin               4.48 |  -0.13 |   0.16 |  -0.02
+  reader_margin        5.98 |   0.40 |   1.02 |   0.40
+  P(correct) = 0.3785   (synthesizer's own value 0.3785; must match)   threshold 0.4  -> REFUSE   reader span: 'economic development programme it hopes will put the country in the same league as the Asian Economic Tigers'
+
+################ EC2 claim from a different section than the gold one
+QUESTION: 'Who was the Most Valuable Player of Super Bowl 50?'   gold answer contains: ['Von Miller']
+low_confidence=False  evidence=8  (claims use the top 3 chunks)
+  #0 Doc_13 §43     logit    9.74  answer_in_chunk=False  | 'In honor of the 50th Super Bowl, the pregame ceremony featured the on-field introduction o'
+  #1 Doc_13 §2      logit    8.32  answer_in_chunk=False  | 'The Panthers finished the regular season with a 15–1 record, and quarterback Cam Newton wa'
+  #2 Doc_13 §15     logit    3.25  answer_in_chunk=False  | 'Linebacker Brandon Marshall led the team in total tackles with 109, while Danny Trevathan '
+  #3 Doc_13 §3      logit    2.96  answer_in_chunk=True  | 'The Broncos took an early lead in Super Bowl 50 and never trailed. Newton was limited by D'
+  #4 Doc_13 §18     logit    2.72  answer_in_chunk=False  | 'Carolina suffered a major setback when Thomas Davis, an 11-year veteran who had already ov'
+  #5 Doc_13 §54     logit    2.47  answer_in_chunk=False  | 'Manning and Newton had quarterback passer ratings of 56.6 and 55.4, respectively, and thei'
+
+CE sentence ranking over 8 candidate sentences (claim threshold -4.0):
+  1.    9.49 Doc_13 §2      answer_in_sentence=False | 'The Panthers finished the regular season with a 15–1 record, and quarterback Cam Newton was named the NFL Most'
+  2.    7.24 Doc_13 §43     answer_in_sentence=False | 'In honor of the 50th Super Bowl, the pregame ceremony featured the on-field introduction of 39 of the 43 previ'
+  3.    5.92 Doc_13 §43     answer_in_sentence=False | 'Bart Starr (MVP of Super Bowls I and II) and Chuck Howley (MVP of Super Bowl V) appeared via video, while Peyt'
+  4.    4.35 Doc_13 §15     answer_in_sentence=False | 'Linebacker Brandon Marshall led the team in total tackles with 109, while Danny Trevathan ranked second with 1'
+  5.    4.20 Doc_13 §43     answer_in_sentence=False | 'No plans were announced regarding the recognition of Harvey Martin, co-MVP of Super Bowl XII, who died in 2001'
+  -> best sentence holding the gold answer ranks: None of 8
+
+CLAIM ['Doc_13 §2']: answer_in_claim=False | 'The Panthers finished the regular season with a 15–1 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP).'
+GATE features (value | standardised | coefficient | contribution to z):
+  top                  9.74 |   1.46 |  -0.51 |  -0.75
+  sentence             9.49 |   1.37 |   1.26 |   1.72
+  overlap_ce           0.40 |  -0.48 |   0.05 |  -0.02
+  overlap_section      0.60 |   0.00 |  -0.41 |  -0.00
+  margin               1.42 |  -0.86 |   0.16 |  -0.14
+  reader_margin       13.73 |   1.40 |   1.02 |   1.42
+  P(correct) = 0.8314   (synthesizer's own value 0.8314; must match)   threshold 0.4  -> ASSERT   reader span: 'Bart Starr'
+
+################ EC3 the right chunk is never retrieved; a wrong-entity claim is asserted
+QUESTION: 'What year did Tesla die?'   gold answer contains: ['1943']
+low_confidence=False  evidence=8  (claims use the top 3 chunks)
+  #0 Doc_09 §12     logit    9.04  answer_in_chunk=False  | 'On 24 March 1879, Tesla was returned to Gospić under police guard for not having a residen'
+  #1 Doc_09 §65     logit    8.97  answer_in_chunk=True  | 'On 7 January 1943, at the age of 86, Tesla died alone in room 3327 of the New Yorker Hotel'
+  #2 Doc_09 §4      logit    7.53  answer_in_chunk=True  | 'Tesla was renowned for his achievements and showmanship, eventually earning him a reputati'
+  #3 Doc_09 §67     logit    6.95  answer_in_chunk=True  | 'On 10 January 1943, New York City mayor Fiorello La Guardia read a eulogy written by Slove'
+  #4 Doc_09 §10     logit    6.60  answer_in_chunk=False  | 'He was "mortified when [his] father made light of [those] hard won honors." After his fath'
+  #5 Doc_09 §1      logit    4.82  answer_in_chunk=True  | 'Nikola Tesla (Serbian Cyrillic: Никола Тесла; 10 July 1856 – 7 January 1943) was a Serbian'
+
+CE sentence ranking over 11 candidate sentences (claim threshold -4.0):
+  1.    9.98 Doc_09 §4      answer_in_sentence=True | 'Tesla died on 7 January 1943.'
+  2.    9.58 Doc_09 §65     answer_in_sentence=True | 'On 7 January 1943, at the age of 86, Tesla died alone in room 3327 of the New Yorker Hotel.'
+  3.    9.50 Doc_09 §12     answer_in_sentence=False | 'On 17 April 1879, Milutin Tesla died at the age of 60 after contracting an unspecified illness (although some '
+  4.    4.72 Doc_09 §4      answer_in_sentence=False | 'His work fell into relative obscurity after his death, but in 1960 the General Conference on Weights and Measu'
+  5.    4.43 Doc_09 §12     answer_in_sentence=False | 'On 24 March 1879, Tesla was returned to Gospić under police guard for not having a residence permit.'
+  -> best sentence holding the gold answer ranks: 1 of 11
+
+CLAIM ['Doc_09 §4']: answer_in_claim=True | 'Tesla died on 7 January 1943.'
+GATE features (value | standardised | coefficient | contribution to z):
+  top                  9.04 |   1.33 |  -0.51 |  -0.68
+  sentence             9.98 |   1.46 |   1.26 |   1.84
+  overlap_ce           0.33 |  -0.77 |   0.05 |  -0.04
+  overlap_section      0.67 |   0.30 |  -0.41 |  -0.12
+  margin               0.07 |  -1.18 |   0.16 |  -0.19
+  reader_margin       18.62 |   2.03 |   1.02 |   2.07
+  P(correct) = 0.9032   (synthesizer's own value 0.9032; must match)   threshold 0.4  -> ASSERT   reader span: '1943'
+
+################ EC4 right chunk, wrong sentence
+QUESTION: "What is the name of the turf used in Levi's Stadium for the Super Bowl?"   gold answer contains: ['Bermuda 419']
+low_confidence=False  evidence=8  (claims use the top 3 chunks)
+  #0 Doc_13 §22     logit    6.21  answer_in_chunk=True  | "Concerns were raised over whether Levi's Stadium's field was of a high enough quality to h"
+  #1 Doc_13 §22     logit    2.98  answer_in_chunk=True  | 'As is customary for Super Bowl games played at natural grass stadiums, the NFL re-sodded t'
+  #2 Doc_13 §1      logit    1.44  answer_in_chunk=False  | "The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area a"
+  #3 Doc_13 §8      logit    1.31  answer_in_chunk=False  | 'On May 21, 2013, NFL owners at their spring meetings in Boston voted and awarded the game '
+  #4 Doc_13 §1      logit    0.21  answer_in_chunk=False  | 'Super Bowl 50 was an American football game to determine the champion of the National Foot'
+  #5 Doc_13 §7      logit    0.07  answer_in_chunk=False  | 'The league announced on October 16, 2012, that the two finalists were Sun Life Stadium and'
+
+CE sentence ranking over 7 candidate sentences (claim threshold -4.0):
+  1.    4.27 Doc_13 §22     answer_in_sentence=False | "Concerns were raised over whether Levi's Stadium's field was of a high enough quality to host a Super Bowl; du"
+  2.    3.69 Doc_13 §22     answer_in_sentence=True | 'As is customary for Super Bowl games played at natural grass stadiums, the NFL re-sodded the field with a new '
+  3.    3.69 Doc_13 §22     answer_in_sentence=True | 'As is customary for Super Bowl games played at natural grass stadiums, the NFL re-sodded the field with a new '
+  4.    2.11 Doc_13 §1      answer_in_sentence=False | "The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, Calif"
+  5.   -0.48 Doc_13 §22     answer_in_sentence=False | 'However, the turf showed problem throughout the game, with a number of players needing to change their cleats '
+  -> best sentence holding the gold answer ranks: 2 of 7
+
+CLAIM ['Doc_13 §22']: answer_in_claim=False | "Concerns were raised over whether Levi's Stadium's field was of a high enough quality to host a Super Bowl; during the inaugural season, the field had to be re-sodded multiple times due to various iss"
+GATE features (value | standardised | coefficient | contribution to z):
+  top                  6.21 |   0.80 |  -0.51 |  -0.41
+  sentence             4.27 |   0.41 |   1.26 |   0.51
+  overlap_ce           0.71 |   0.87 |   0.05 |   0.04
+  overlap_section      0.71 |   0.51 |  -0.41 |  -0.21
+  margin               3.24 |  -0.42 |   0.16 |  -0.07
+  reader_margin       13.48 |   1.37 |   1.02 |   1.39
+  P(correct) = 0.6500   (synthesizer's own value 0.6500; must match)   threshold 0.4  -> ASSERT   reader span: 'Bermuda 419'
+
+################ EC5 answer split across a chunk boundary
+QUESTION: 'How many tree species are in the rainforest?'   gold answer contains: ['1,100']
+low_confidence=False  evidence=8  (claims use the top 3 chunks)
+  #0 Doc_00 §10     logit    8.02  answer_in_chunk=False  | 'To date, an estimated 438,000 species of plants of economic and social interest have been '
+  #1 Doc_00 §10     logit    6.21  answer_in_chunk=True  | 'The biodiversity of plant species is the highest on Earth with one 2001 study finding a qu'
+  #2 Doc_00 §9      logit    3.18  answer_in_chunk=False  | 'The region is home to about 2.5 million insect species, tens of thousands of plants, and s'
+  #3 Doc_00 §1      logit    2.97  answer_in_chunk=False  | 'This region includes territory belonging to nine nations. The majority of the forest is co'
+  #4 Doc_00 §11     logit   -1.03  answer_in_chunk=False  | 'The rainforest contains several species that can pose a hazard. Among the largest predator'
+  #5 Doc_00 §19     logit   -1.89  answer_in_chunk=False  | "To accurately map the Amazon's biomass and subsequent carbon related emissions, the classi"
+
+CE sentence ranking over 10 candidate sentences (claim threshold -4.0):
+  1.    9.21 Doc_00 §10     answer_in_sentence=False | 'The total number of tree species in the region is estimated at 16,000.'
+  2.    7.02 Doc_00 §10     answer_in_sentence=True | 'The biodiversity of plant species is the highest on Earth with one 2001 study finding a quarter square kilomet'
+  3.    5.13 Doc_00 §9      answer_in_sentence=False | 'To date, at least 40,000 plant species, 2,200 fishes, 1,294 birds, 427 mammals, 428 amphibians, and 378 reptil'
+  4.    4.72 Doc_00 §10     answer_in_sentence=False | 'To date, an estimated 438,000 species of plants of economic and social interest have been registered in the re'
+  5.    4.72 Doc_00 §10     answer_in_sentence=False | 'To date, an estimated 438,000 species of plants of economic and social interest have been registered in the re'
+  -> best sentence holding the gold answer ranks: 2 of 10
+
+CLAIM ['Doc_00 §10']: answer_in_claim=False | 'The total number of tree species in the region is estimated at 16,000.'
+GATE features (value | standardised | coefficient | contribution to z):
+  top                  8.02 |   1.14 |  -0.51 |  -0.59
+  sentence             9.21 |   1.32 |   1.26 |   1.66
+  overlap_ce           0.50 |  -0.05 |   0.05 |  -0.00
+  overlap_section      1.00 |   1.78 |  -0.41 |  -0.73
+  margin               1.81 |  -0.76 |   0.16 |  -0.12
+  reader_margin       11.84 |   1.16 |   1.02 |   1.18
+  P(correct) = 0.6809   (synthesizer's own value 0.6809; must match)   threshold 0.4  -> ASSERT   reader span: '1,100'
+

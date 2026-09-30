@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a550f98134fea001a0e18a0",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3173,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What to find the"
+   }
+  },
+  {
+   "timestamp_ms": 5318,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " differences between the"
+   }
+  },
+  {
+   "timestamp_ms": 6357,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " ARPANET and"
+   }
+  },
+  {
+   "timestamp_ms": 8244,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " CITA HLN and"
+   }
+  },
+  {
+   "timestamp_ms": 9838,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " X.25?"
+   }
+  },
+  {
+   "timestamp_ms": 9839,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11838,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What defined the differences between the ARPANET and SITA HLN and X.25?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

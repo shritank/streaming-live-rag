@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5ad044f977cf76001a686f60",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3053,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "For the"
+   }
+  },
+  {
+   "timestamp_ms": 5094,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Liberals, the main disappointment"
+   }
+  },
+  {
+   "timestamp_ms": 5405,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " liberals, the main disappointment was what?"
+   }
+  },
+  {
+   "timestamp_ms": 5406,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7405,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "For the Liberals, the main disappointment was what?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

@@ -16,6 +16,7 @@ Decision order per chunk:
 """
 from __future__ import annotations
 
+import copy
 import json
 import re
 
@@ -24,21 +25,71 @@ from ..contracts import (
     ControllerDecision, Decision, LLMClient, SessionView, SubQuery,
     Telemetry, NullTelemetry, TranscriptChunk, TurnKind,
 )
-from ..retrieval.text import content_tokens, jaccard
+from ..retrieval.text import STOPWORDS, content_tokens, jaccard
 from . import stability
 from .decompose import decompose
 
-_PRESENTATION_RE = re.compile(
-    r"\b(repeat|rephrase|reword|summari[sz]e|shorten|condense|expand|translate|"
-    r"say (?:that|it) again|in (?:two|three|\d+) (?:bullets?|points?|lines?|sentences?)|"
-    r"as (?:a )?(?:bullet|list)|bullet points?|tl;?dr)\b",
-    re.IGNORECASE,
-)
-_CHITCHAT_RE = re.compile(
-    r"^\s*(hi|hello|hey|thanks|thank you|thankyou|cheers|ok|okay|got it|great|"
-    r"perfect|bye|goodbye|good morning|good afternoon)[\s!.,]*$",
-    re.IGNORECASE,
-)
+_WORD_RE = re.compile(r"[a-z0-9']+")
+
+# Presentation-only ("reformat what you already told me"): a formatting cue,
+# NO topic words left once cue / filler words are removed, and either a
+# reference back to the earlier answer or a leading command verb. A cue word
+# alone is not enough - "Summarize the travel reimbursement rule" is a new
+# request and "What is a list?" is a question.
+_FORMAT_CUES = frozenset("""
+    repeat rephrase reword paraphrase summarize summarise summary shorten shorter short brief briefly
+    condense expand translate simplify simpler simply bullet bullets point points list table sentence
+    sentences line lines word words again tldr format reformat differently concise concisely wording
+""".split())
+_LEADING_VERBS = frozenset("""
+    repeat rephrase reword paraphrase summarize summarise shorten condense expand translate simplify
+    reformat format tldr
+""".split())
+_ANAPHORA = frozenset("that it this these those them above previous last earlier answer response reply said".split())
+_LANGUAGES = frozenset("""
+    english hindi spanish french german tamil telugu kannada malayalam marathi bengali gujarati punjabi urdu
+    korean japanese chinese mandarin arabic portuguese italian russian
+""".split())
+_PRESENTATION_FILLER = frozenset("""
+    please kindly can could would will you your me my give make put say tell show write now just into way
+    actually also and then ok okay well so one two three four five six seven eight nine ten
+    text version form style manner
+""".split()) | _LANGUAGES
+_SKIPPED_LEADERS = frozenset("please kindly can could would will you now actually also and then ok okay well so just".split())
+_QUANTIFIED_FORMAT_RE = re.compile(
+    r"\bin (?:an? |one |two |three |four |five |\d+ )?(?:short |brief |few )?"
+    r"(?:bullets?|points?|lines?|sentences?|words?)\b", re.IGNORECASE)
+
+# Chit-chat: only greeting / thanks / closing words, at least one of them real.
+_CHITCHAT_STRONG = frozenset(
+    "hi hello hey thanks thank thankyou cheers bye goodbye appreciate appreciated morning afternoon evening night".split())
+_CHITCHAT_WEAK = frozenset("ok okay great perfect cool awesome nice got".split())
+_CHITCHAT_WORDS = _CHITCHAT_STRONG | _CHITCHAT_WEAK | frozenset("""
+    got it good morning afternoon evening night alright sure that's thats all for today now so very much
+    a lot you i'll see later talk soon take care helpful
+""".split())
+
+
+def is_presentation_request(utterance: str) -> bool:
+    """True when the utterance only asks to reformat / repeat / shorten the
+    previous answer (no new information need)."""
+    tokens = _WORD_RE.findall(utterance.lower().replace("tl;dr", "tldr"))
+    if not any(t in _FORMAT_CUES for t in tokens):
+        return False
+    residue = [t for t in tokens if t not in STOPWORDS and t not in _FORMAT_CUES and t not in _ANAPHORA
+               and t not in _PRESENTATION_FILLER and not t.isdigit() and len(t) > 1]
+    if residue:
+        return False                      # topic words present: a real question, retrieve
+    leader = next((t for t in tokens if t not in _SKIPPED_LEADERS), "")
+    return (any(t in _ANAPHORA for t in tokens) or leader in _LEADING_VERBS
+            or bool(_QUANTIFIED_FORMAT_RE.search(utterance)))
+
+
+def is_chit_chat(utterance: str) -> bool:
+    tokens = _WORD_RE.findall(utterance.lower())
+    return (bool(tokens) and all(t in _CHITCHAT_WORDS for t in tokens)
+            and any(t in _CHITCHAT_STRONG or t in _CHITCHAT_WEAK for t in tokens))
+
 _REFINEMENT_RE = re.compile(
     r"\b(actually|also|wait|but |instead|what if|in addition|one more thing|"
     r"it was|they were|turns out|forgot to (?:say|mention)|make it)\b",
@@ -66,28 +117,42 @@ class RetrievalController:
         self._config = config if isinstance(config, Config) else Config()
         self._corpus_vocab = corpus_vocab
         self._corpus_bigrams = corpus_bigrams
-        self._accumulated: dict[str, str] = {}
-        self._previous: dict[str, str] = {}
-        self._covered: dict[str, set[str]] = {}
-        self._issued: dict[str, int] = {}
+        # All per-utterance state is keyed by (session_id, utterance_id): two sessions may use the same
+        # utterance id at the same time ("u1" is the guide's own example id) and must never share state.
+        # Query ids stay "<utterance_id>.q<n>" (unique within a session, as the contract says).
+        self._accumulated: dict[tuple[str, str], str] = {}
+        self._previous: dict[tuple[str, str], str] = {}
+        self._covered: dict[tuple[str, str], set[str]] = {}
+        self._issued: dict[tuple[str, str], int] = {}
         # every still-live (not yet superseded) sub-query of each utterance,
         # and the clause each was built from, so a growing clause's next
         # (more complete) sub-query can be linked via parent_query_id to the
         # stale partial one it supersedes — whenever that partial was issued
-        self._live: dict[str, list[SubQuery]] = {}
-        self._clauses: dict[str, dict[str, set[str]]] = {}
+        self._live: dict[tuple[str, str], list[SubQuery]] = {}
+        self._clauses: dict[tuple[str, str], dict[str, set[str]]] = {}
 
-    def reset_utterance(self, utterance_id: str) -> None:
+    def reset_utterance(self, utterance_id: str, session_id: str | None = None) -> None:
+        """Forget one utterance's state: that of `session_id`, or (no session given) of every session that used
+        this utterance id."""
         for d in (self._accumulated, self._previous, self._covered, self._issued, self._live, self._clauses):
-            d.pop(utterance_id, None)
+            for key in [k for k in d if k[1] == utterance_id and (session_id is None or k[0] == session_id)]:
+                d.pop(key, None)
+
+    def reset_session(self, session_id: str) -> None:
+        """Forget everything this controller holds for a session (its utterances' text and sub-query state):
+        session memory is ephemeral and must not outlive the session."""
+        for d in (self._accumulated, self._previous, self._covered, self._issued, self._live, self._clauses):
+            for key in [k for k in d if k[0] == session_id]:
+                d.pop(key, None)
 
     async def on_chunk(self, chunk: TranscriptChunk, session: SessionView) -> ControllerDecision:
         uid = chunk.utterance_id
-        previous = self._accumulated.get(uid, "")
+        key = (chunk.session_id, uid)
+        previous = self._accumulated.get(key, "")
         text = previous + chunk.text
-        self._accumulated[uid] = text
-        self._previous[uid] = previous
-        covered = self._covered.setdefault(uid, set())
+        self._accumulated[key] = text
+        self._previous[key] = previous
+        covered = self._covered.setdefault(key, set())
 
         utterance = text.strip()
         if not utterance and not chunk.is_final:
@@ -99,8 +164,10 @@ class RetrievalController:
             return ControllerDecision(Decision.SUPPRESS, TurnKind.CHIT_CHAT, "chit_chat", 1.0)
 
         if turn_kind == TurnKind.PRESENTATION_ONLY:
+            # with no earlier answer there is nothing to reformat: still no corpus search
             return ControllerDecision(Decision.SUPPRESS, TurnKind.PRESENTATION_ONLY,
-                                       "presentation_restructure", 1.0)
+                                       "presentation_restructure" if session.has_answer()
+                                       else "presentation_without_answer", 1.0)
 
         known_terms = self._corpus_vocab() if self._corpus_vocab is not None else None
         low_df_bigrams = self._corpus_bigrams() if self._corpus_bigrams is not None else None
@@ -112,13 +179,13 @@ class RetrievalController:
 
         trigger = self._trigger_for(turn_kind, chunk.is_final)
         clause_text: dict[str, str] = {}
-        candidates = decompose(utterance, covered, uid, trigger, self._issued.get(uid, 0),
+        candidates = decompose(utterance, covered, uid, trigger, self._issued.get(key, 0),
                                strip_markers=self._config.controller.strip_discourse_markers,
                                context_carry=self._config.controller.context_carry,
                                clause_sink=clause_text,
                                normalize_numbers=self._config.controller.normalize_spoken_numbers,
                                split_unpunctuated=self._config.controller.split_unpunctuated_questions)
-        clauses = self._clauses.setdefault(uid, {})
+        clauses = self._clauses.setdefault(key, {})
         clauses.update({qid: set(content_tokens(c)) for qid, c in clause_text.items()})
 
         if turn_kind == TurnKind.REFINEMENT:
@@ -141,11 +208,11 @@ class RetrievalController:
         # new candidate to the most recent sub-query it overlaps heavily with
         # from THIS utterance, so the engine cancels the stale one (§ engine.
         # _dispatch_decision's parent_query_id handling).
-        candidates, extra_superseded = self._link_supersession(uid, candidates)
+        candidates, extra_superseded = self._link_supersession(key, candidates)
 
         for q in candidates:
             covered |= set(content_tokens(q.intent_label)) | set(content_tokens(q.text))
-        self._issued[uid] = self._issued.get(uid, 0) + len(candidates)
+        self._issued[key] = self._issued.get(key, 0) + len(candidates)
 
         reason = ("refinement_delta" if turn_kind == TurnKind.REFINEMENT
                    else "multi_intent" if len(candidates) > 1
@@ -156,16 +223,53 @@ class RetrievalController:
             superseded_query_ids=tuple(extra_superseded),
         )
 
+    async def preview_final(self, utterance_id: str, session_id: str, session: SessionView,
+                            pending_text: str = "") -> ControllerDecision:
+        """What on_chunk would decide if the utterance ended right now (the
+        engine's empty is_final chunk) - or, with `pending_text`, if that text
+        (e.g. the ASR's not-yet-committed hypothesis) arrived as one more chunk
+        and then the utterance ended. Computed on a snapshot and rolled back:
+        the controller's state is exactly as before the call. If exactly
+        those words (and no others) arrive, the real passes see the same
+        state and session, so they return the same sub-query texts - which
+        lets the engine run their retrieval before utterance_end. Returned
+        sub_queries = everything either pass would issue."""
+        stores = (self._accumulated, self._previous, self._covered, self._issued, self._live, self._clauses)
+        missing = object()   # (never deep-copied: a copy would not be `missing`)
+        key = (session_id, utterance_id)
+        snapshot = [copy.deepcopy(d[key]) if key in d else missing for d in stores]
+        try:
+            issued: list[SubQuery] = []
+            if pending_text:
+                first = await self.on_chunk(TranscriptChunk(session_id=session_id, utterance_id=utterance_id,
+                                                            timestamp_ms=0, text=pending_text, is_final=False), session)
+                if first.decision == Decision.RETRIEVE:
+                    issued += first.sub_queries
+            final = await self.on_chunk(TranscriptChunk(session_id=session_id, utterance_id=utterance_id,
+                                                        timestamp_ms=0, text="", is_final=True), session)
+            if not pending_text:
+                return final
+            if final.decision == Decision.RETRIEVE:
+                issued += final.sub_queries
+            return ControllerDecision(Decision.RETRIEVE if issued else final.decision, final.turn_kind,
+                                      "preview", final.stability, sub_queries=tuple(issued))
+        finally:
+            for d, v in zip(stores, snapshot):
+                if v is missing:
+                    d.pop(key, None)
+                else:
+                    d[key] = v
+
     def _trigger_for(self, turn_kind: TurnKind, is_final: bool) -> str:
         if turn_kind == TurnKind.REFINEMENT:
             return "refinement"
         return "final" if is_final else "provisional"
 
     def _classify(self, utterance: str, session: SessionView) -> TurnKind:
-        if _CHITCHAT_RE.match(utterance):
+        if is_chit_chat(utterance):
             return TurnKind.CHIT_CHAT
         has_prior = session.has_answer()
-        if has_prior and _PRESENTATION_RE.search(utterance):
+        if is_presentation_request(utterance):
             return TurnKind.PRESENTATION_ONLY
         if has_prior and self._looks_like_refinement(utterance, session):
             return TurnKind.REFINEMENT
@@ -182,7 +286,7 @@ class RetrievalController:
         topic = set(content_tokens(session.topic_summary()))
         return bool(topic) and jaccard(tokens, topic) >= 0.12
 
-    def _link_supersession(self, uid: str, candidates: list[SubQuery],
+    def _link_supersession(self, key: tuple[str, str], candidates: list[SubQuery],
                             threshold: float = 0.8) -> tuple[list[SubQuery], list[str]]:
         """Within-utterance supersession must take priority over any
         cross-turn `parent_query_id` `_scope_to_delta` already set: they mean
@@ -206,8 +310,8 @@ class RetrievalController:
         were appended to a partial one) made a stale partial unrecognisable,
         so it was never cancelled. Every still-live sub-query of the
         utterance is a candidate predecessor, not just the latest batch."""
-        clauses = self._clauses.get(uid, {})
-        live = self._live.setdefault(uid, [])
+        clauses = self._clauses.get(key, {})
+        live = self._live.setdefault(key, [])
         linked = []
         for q in candidates:
             tokens = clauses.get(q.query_id) or set(content_tokens(q.text))

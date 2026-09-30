@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_u_5ad2605dd7d075001a428fc6",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3423,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who"
+   }
+  },
+  {
+   "timestamp_ms": 4544,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " provided a"
+   }
+  },
+  {
+   "timestamp_ms": 5515,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " discussion on the concept of"
+   }
+  },
+  {
+   "timestamp_ms": 6598,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " time as an"
+   }
+  },
+  {
+   "timestamp_ms": 7604,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " integral part of"
+   }
+  },
+  {
+   "timestamp_ms": 9587,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Aristotelian cosmology?"
+   }
+  },
+  {
+   "timestamp_ms": 9588,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11587,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who provided a discussion on the concept of time as an integral part of Aristotelian cosmology?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

@@ -29,11 +29,17 @@ class RetrievalConfig:
     k: int = 8
     rrf_k: int = 60
     # Defaults chosen on the DEV split only (data/corpus qrels + scenarios;
-    # final_report.md §5): BM25 + e5 fused with equal weight, then the
-    # cross-encoder reranks the top 5. On 1000 dev queries that lifted r@1
-    # from 67.6% (old BM25 + heuristic rerank, where LSA at weight 0.01
-    # contributed nothing) to ~86-89%; a pool of 5 matches pools of 10/20 on
-    # r@1 at a quarter of the cost (~180 ms vs ~800 ms per query on CPU).
+    # final_report.docx §5): BM25 + e5 fused with equal weight, then the
+    # cross-encoder reranks the top `rerank_pool` (20). On 1000 dev queries that
+    # lifted r@1 from 67.6% (old BM25 + heuristic rerank, where LSA at weight
+    # 0.01 contributed nothing) to ~88-89%. The pool was 5 while inference ran
+    # on a laptop CPU (5 matched 10/20 on r@1 at a quarter of the cost, ~180 ms
+    # vs ~800 ms per query). On the GPU a pool of 20 costs ~+8 ms per isolated query
+    # (in the real-time pipeline per-sub-query retrieval goes from ~40 to ~82 ms p50,
+    # all during speech; post-speech latency is unchanged) and gave a significant
+    # answer-recall gain on DEV (pooled
+    # text + HeySQuAD, +1.3 pts [+0.3, +2.6]) that DIAG confirmed identically
+    # (final_report.docx section 5.13); 32 adds nothing over 20 at r@1 / r@5.
     dense_weight: float = 0.5
     sparse_weight: float = 0.5
     low_confidence_threshold: float = 0.15   # heuristic reranker scale only
@@ -43,7 +49,7 @@ class RetrievalConfig:
     # 6.5 points vs no reranking on dev) | none (fused order) | cross-encoder
     # (ONNX ms-marco-MiniLM-L6-v2 over the top `rerank_pool` fused candidates)
     reranker: str = "cross-encoder"
-    rerank_pool: int = 5
+    rerank_pool: int = 20
     # max characters per chunk (sentences are never split; 1 sentence overlap)
     chunk_chars: int = 600
     # RM3-style pseudo-relevance feedback on the BM25 side: expand the query
@@ -81,7 +87,7 @@ class ControllerConfig:
     context_carry: str = "elliptical"
     # ASR transcripts spell numbers out ("eighteen thirty"); rewrite them as
     # digits in sub-query text (controller/normalize.py)
-    # Evidence-based defaults (final_report.md §5.4): both are no-ops on
+    # Evidence-based defaults (final_report.docx §5.4): both are no-ops on
     # punctuated text (the splitter bails out the instant any punctuation is
     # present; the number normaliser only touches recognised spelled-out
     # number-word sequences), so there is no cost on clean/typed input, and
@@ -95,6 +101,16 @@ class ControllerConfig:
 
 @dataclass
 class SynthesisConfig:
+    # How answers are written:
+    #   extractive  every claim is a verbatim corpus sentence (default; measured
+    #               on held-out gold data, cannot invent facts)
+    #   generative  an LLM writes claims, each verified against the evidence
+    #               before it ships (session/generative/, ported from build A;
+    #               needs a real LLM provider; NOT yet measured on gold data)
+    mode: str = "extractive"
+    # generative mode only: how a claim's support is checked
+    #   lexical (offline) | nli (local cross-encoder) | llm (judge prompt)
+    grounding_checker: str = "lexical"
     grounding_check: bool = True
     max_answer_tokens: int = 512
     # How the claim sentence is chosen and gated for relevance:
@@ -106,7 +122,7 @@ class SynthesisConfig:
     # threshold -4) was not significant and it adds ~155 ms after the user
     # stops speaking.
     # lexical is dependency-free; cross-encoder is the evidence-based default
-    # (final_report.md §5.3/§5.8): +6.5pts answer recall on 279 real spoken
+    # (final_report.docx §5.3/§5.8): +6.5pts answer recall on 279 real spoken
     # questions [95% CI +2.5, +10.4], consistent gains on SQuAD-derived dev
     # and diagnostic sets. Needs the same fetched models as retrieval's
     # cross-encoder reranker (already required by the production default).
@@ -138,6 +154,11 @@ class EngineConfig:
     # streaming | deferred (same pipeline, retrieval only after utterance end)
     # | baseline (single whole-utterance query, no decomposition/refinement)
     mode: str = "streaming"
+    # streaming only: during speech, run the retrieval (+ claim selection)
+    # that the controller's final pass WOULD issue if the utterance ended now
+    # (RetrievalController.preview_final), and reuse it at utterance_end only
+    # for an identical sub-query text - answers unchanged by construction.
+    speculative_final: bool = True
     per_turn_timeout_ms: int = 15_000
     loop_lag_threshold_ms: int = 100
 

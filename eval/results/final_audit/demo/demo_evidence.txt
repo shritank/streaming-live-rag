@@ -1,0 +1,8 @@
+﻿query: 'cancellation policy plan customer workshop pune'   retrieval 10.1 ms   low_confidence=False
+final  citation      score   BM25-rank  dense-rank  text   (score = cross-encoder logit; ranks: 0 = best)
+    1  Doc_16 §1      4.68          0           0  'This policy governs cancellation and refund of venue reservations made in Pune.'
+    2  Doc_16 §4      4.07          1           3  'A reservation may be rescheduled once at no charge if the request is made more than 96 hou'
+    3  Doc_16 §3      3.96         12           1  'A booking cancelled between 48 and 96 hours before the start date receives a 75 percent re'
+    4  Doc_16 §2      3.95         11           2  'A booking cancelled more than 96 hours before the scheduled start date receives a full ref'
+    5  Doc_22 §1     -2.52          9           5  'This policy governs cancellation and refund of venue reservations made in Indore.'
+    6  Doc_18 §1     -2.58          5          12  'This policy governs cancellation and refund of venue reservations made in Hyderabad.'

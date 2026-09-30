@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_a_57264d9edd62a815002e8100",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4081,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Why was this"
+   }
+  },
+  {
+   "timestamp_ms": 5065,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " short-term"
+   }
+  },
+  {
+   "timestamp_ms": 5564,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " organization created?"
+   }
+  },
+  {
+   "timestamp_ms": 5565,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7564,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": false,
+    "gold_sub_intents": [
+     "Why was this short termed organization created?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

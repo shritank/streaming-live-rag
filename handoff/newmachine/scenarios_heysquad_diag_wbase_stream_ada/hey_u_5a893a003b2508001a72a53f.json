@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a893a003b2508001a72a53f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "which conjecture holds"
+   }
+  },
+  {
+   "timestamp_ms": 6098,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " that every"
+   }
+  },
+  {
+   "timestamp_ms": 10145,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " odd integer in greater than"
+   }
+  },
+  {
+   "timestamp_ms": 12665,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " two can be expressed as a sum of two primes."
+   }
+  },
+  {
+   "timestamp_ms": 12666,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 14665,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which conjecture holds that every odd integer n greater than 2 can be expressed as a sum of two primes?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

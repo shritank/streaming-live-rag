@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_5726965ef1498d1400e8e484",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3075,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How is the"
+   }
+  },
+  {
+   "timestamp_ms": 4129,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " judicial branch"
+   }
+  },
+  {
+   "timestamp_ms": 5124,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " of the"
+   }
+  },
+  {
+   "timestamp_ms": 6101,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " EU an important factor"
+   }
+  },
+  {
+   "timestamp_ms": 7123,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " in the development"
+   }
+  },
+  {
+   "timestamp_ms": 7710,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " of EU law?"
+   }
+  },
+  {
+   "timestamp_ms": 7711,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9710,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How is the judicial branch of the EU an important factor in the development of EU law?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

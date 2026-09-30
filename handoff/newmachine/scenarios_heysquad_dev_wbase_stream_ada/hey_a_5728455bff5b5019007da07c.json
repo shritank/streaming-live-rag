@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5728455bff5b5019007da07c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3198,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How"
+   }
+  },
+  {
+   "timestamp_ms": 4249,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " much the"
+   }
+  },
+  {
+   "timestamp_ms": 5240,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " heart and death is blown and"
+   }
+  },
+  {
+   "timestamp_ms": 7074,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " harm does is blown and falls upon, the cravings see each year."
+   }
+  },
+  {
+   "timestamp_ms": 7075,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9074,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How much Saharan dust is blown and falls upon the Caribbean Sea each year?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

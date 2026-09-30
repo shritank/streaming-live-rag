@@ -1,0 +1,14 @@
+config overrides: ['synthesis.refusal_gate=none']   wall 95.1s   providers ['CUDAExecutionProvider']
+  G2 early retrieval   49/49 = 100.0% [95% CI 92.7%-100.0%]  false triggers 0/15
+  G3 >=2 sub-queries   20/20 = 100.0% [95% CI 83.9%-100.0%]
+  G4 self-reported     125/125 = 100.0% [95% CI 97.0%-100.0%]  fabricated=0
+  G5 continuity        20/20 = 100.0% [95% CI 83.9%-100.0%]
+  G6 coverage          90/90 = 100.0% [95% CI 95.9%-100.0%]
+  answer recall (gold)     81/98 = 82.7% [95% CI 74.0%-88.9%]
+  citation recall (gold)   90/98 = 91.8% [95% CI 84.7%-95.8%]
+  claim precision (gold)   90/96 = 93.8% [95% CI 87.0%-97.1%]
+  correct abstention       5/5 = 100.0% [95% CI 56.6%-100.0%]
+  exact decomposition      20/20 = 100.0% [95% CI 83.9%-100.0%]
+  over-split (lower=better) 0/35 = 0.0% [95% CI 0.0%-9.9%]
+  mean words per claim     31.9 (n=96)
+  post-utterance latency p50=2.5072000025829766 p95=3.2968000014079735 (virtual ms, n=75)

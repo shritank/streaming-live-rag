@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_u_5a67dedd8476ee001a58a74f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3113,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What can be"
+   }
+  },
+  {
+   "timestamp_ms": 4201,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " interpreted by"
+   }
+  },
+  {
+   "timestamp_ms": 5207,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " individuals to"
+   }
+  },
+  {
+   "timestamp_ms": 6253,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " determine a"
+   }
+  },
+  {
+   "timestamp_ms": 8222,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " funding for course content is"
+   }
+  },
+  {
+   "timestamp_ms": 8513,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " if funding for course content is forbidden."
+   }
+  },
+  {
+   "timestamp_ms": 8514,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10513,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What can be interpreted by individuals to determine if funding for course content is forbidden?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

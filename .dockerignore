@@ -1,0 +1,22 @@
+# Keep the build context to source + committed data. None of this is needed inside the image
+# (and the venvs / audio / caches are several GB).
+.git
+.gitignore
+.venv*
+venv
+__pycache__
+**/__pycache__
+*.pyc
+.pytest_cache
+.cache
+.env
+*.env.local
+handoff/asr_tools/heysquad_audio
+handoff/asr_tools/whisper
+handoff/newmachine
+data/raw
+generated
+reports/*.md
+trace*.jsonl
+trace*.json
+demo*.jsonl

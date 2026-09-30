@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5ad27941d7d075001a4295a9",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5152,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Most of the forces in the universe"
+   }
+  },
+  {
+   "timestamp_ms": 5731,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " are based on how many"
+   }
+  },
+  {
+   "timestamp_ms": 6583,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fundamental"
+   }
+  },
+  {
+   "timestamp_ms": 7147,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " interactions."
+   }
+  },
+  {
+   "timestamp_ms": 7148,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9147,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Most of the forces in the universe are based on how many fundamental interactions?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

@@ -18,3 +18,14 @@ reports/*.md
 
 .venv/
 venv/
+
+# virtual environments (not portable: they hard-code the path of the machine that made them)
+.venv*/
+
+# optional audio front end: model weights (up to 461 MB) and the HeySQuAD audio clips are fetched by
+# handoff/asr_tools/fetch_whisper.py and fetch_audio.py, not committed
+handoff/asr_tools/whisper/
+handoff/asr_tools/heysquad_audio/
+
+# per-run telemetry traces written into the working directory by the demo commands
+demo*.jsonl

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a67a898f038b7001ab0c3f7",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3700,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What program provides"
+   }
+  },
+  {
+   "timestamp_ms": 4199,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " financial"
+   }
+  },
+  {
+   "timestamp_ms": 5163,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " assistance for"
+   }
+  },
+  {
+   "timestamp_ms": 6289,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " tuition and fees for a"
+   }
+  },
+  {
+   "timestamp_ms": 7214,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " college or technical education?"
+   }
+  },
+  {
+   "timestamp_ms": 7215,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9214,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What program provides financial assistance for tuition and fees for a college or technical education?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

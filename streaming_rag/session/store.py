@@ -70,3 +70,16 @@ class SessionStore:
 
     def close(self, session_id: str) -> None:
         self._sessions.pop(session_id, None)
+
+    def history(self, session_id: str) -> tuple[list[AnswerVersion], list[SubQuery], list[RetrievalResult]]:
+        """Copies of a session's answers, sub-queries and evidence, oldest first.
+
+        Read-only: callers get new lists, so nothing they do can mutate the
+        session. Used by the generative synthesizer, which rebuilds its working
+        state from here on every turn so this store stays the single source of
+        truth and close() still forgets everything.
+        """
+        state = self._sessions.get(session_id)
+        if state is None:
+            return [], [], []
+        return list(state.answers), list(state.sub_queries), list(state.evidence)

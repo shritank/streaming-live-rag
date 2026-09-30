@@ -1,0 +1,24 @@
+stage                                 n       p50       p95       p99       max  (ms)
+ce.claim_ms                         222    22.051    55.473    82.471   171.501
+ce.gate_ms                          207    13.609    23.156    32.711    35.940
+ce.rerank_ms                        240    49.790   121.181   171.887   206.686
+controller.decision_ms              347     0.533     0.881     1.018     5.169
+engine.answer_telemetry_ms           90     0.057     0.072     0.111     0.372
+engine.final_decision_ms             90     0.571     0.778     0.899     0.968
+engine.post_speech_ms                90     2.373     3.149     3.950     4.041
+engine.retrieval_wait_ms             90     0.194     0.235     0.274     0.274
+engine.synthesis_ms                  90     1.517     2.159     2.890     2.893
+reader.other_ms                     215    32.385    60.689    73.324   176.820
+retrieval.bm25_ms                   240     3.911     6.632     7.707     9.151
+retrieval.dense_topk_ms             240     0.782     1.151     1.389     2.798
+retrieval.e5_encode_ms              240    10.509    21.916    26.177    33.828
+retrieval.rrf_ms                    240     0.063     0.095     0.128     0.222
+retrieval.search.other_ms           240    79.914   163.384   199.063   246.583
+retrieval.subquery_ms               240    81.601   166.967   199.978   248.096
+synthesis.claim_select_ms           222    26.288    59.691    84.938   174.645
+synthesis.gate_ms                   207    14.650    25.346    33.089    36.543
+synthesis.grounding_ms               75     0.406     0.983     1.168     1.277
+synthesis.prefetch_ms               240    40.729    77.742   103.290   211.391
+cold start (first scenario, excluded): 5.4 s
+execution providers: {'fused/e5.onnx': 'CUDAExecutionProvider', 'fused/ce.onnx': 'CUDAExecutionProvider', 'fused/reader.onnx': 'CUDAExecutionProvider'}
+speculative final-pass retrievals: {'launched': 0, 'reused': 0}; turns with post-speech > 5 ms: 0

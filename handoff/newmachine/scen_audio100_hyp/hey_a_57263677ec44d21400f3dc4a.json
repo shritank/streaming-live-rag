@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_57263677ec44d21400f3dc4a",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2068,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Well, it was..."
+   }
+  },
+  {
+   "timestamp_ms": 3080,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was your report, Pete?"
+   }
+  },
+  {
+   "timestamp_ms": 4237,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was"
+   }
+  },
+  {
+   "timestamp_ms": 4237,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was report P2626-26-26-26-26-26-26-26-26-26-26-26-26-"
+   }
+  },
+  {
+   "timestamp_ms": 4531,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " report P2626? Okay."
+   }
+  },
+  {
+   "timestamp_ms": 4532,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 6531,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": false,
+    "gold_sub_intents": [
+     "What was report P-2626"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

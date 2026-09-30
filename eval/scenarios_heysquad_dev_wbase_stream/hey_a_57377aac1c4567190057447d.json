@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_57377aac1c4567190057447d",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4517,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What notion keeps"
+   }
+  },
+  {
+   "timestamp_ms": 5529,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " its meaning through"
+   }
+  },
+  {
+   "timestamp_ms": 6559,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " both Newtonian and"
+   }
+  },
+  {
+   "timestamp_ms": 7568,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Schrodinger physics"
+   }
+  },
+  {
+   "timestamp_ms": 8264,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " equations?"
+   }
+  },
+  {
+   "timestamp_ms": 8265,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10264,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What notion keeps it's meaning through both Netonian and Schrodinger physics equations?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

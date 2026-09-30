@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_u_5a6688fcf038b7001ab0bf6c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 7602,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "After the introduction"
+   }
+  },
+  {
+   "timestamp_ms": 8112,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " of"
+   }
+  },
+  {
+   "timestamp_ms": 8641,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " X dot 25"
+   }
+  },
+  {
+   "timestamp_ms": 9178,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " in"
+   }
+  },
+  {
+   "timestamp_ms": 10410,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 1973, how"
+   }
+  },
+  {
+   "timestamp_ms": 11027,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " many network"
+   }
+  },
+  {
+   "timestamp_ms": 11697,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " technologies"
+   }
+  },
+  {
+   "timestamp_ms": 12398,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " X.25 in 1973, how many network technologies had been developed?"
+   }
+  },
+  {
+   "timestamp_ms": 12399,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 14398,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "After the introduction of X.25 in 1973, how many network technologies had been developed?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

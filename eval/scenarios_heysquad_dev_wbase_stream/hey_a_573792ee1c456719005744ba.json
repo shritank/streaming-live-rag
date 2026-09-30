@@ -1,0 +1,104 @@
+{
+ "scenario_id": "hey_a_573792ee1c456719005744ba",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3464,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was used"
+   }
+  },
+  {
+   "timestamp_ms": 4461,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " to create a new"
+   }
+  },
+  {
+   "timestamp_ms": 5506,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " electromagnetic"
+   }
+  },
+  {
+   "timestamp_ms": 6593,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " theory to reconcile the"
+   }
+  },
+  {
+   "timestamp_ms": 7610,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " trouble with"
+   }
+  },
+  {
+   "timestamp_ms": 9610,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the electromagnetic theory as it used to"
+   }
+  },
+  {
+   "timestamp_ms": 10225,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " of the electromagnetic theory as it used to stand?"
+   }
+  },
+  {
+   "timestamp_ms": 10226,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 12225,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What was used to create a new electromagnetic theory to reconcile the troubles with electromagnetic theory as it used to stand?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

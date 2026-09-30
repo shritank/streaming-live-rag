@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5727500f708984140094dc01",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 11370,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Along with English and mathematics, what subject"
+   }
+  },
+  {
+   "timestamp_ms": 11887,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " replaced values"
+   }
+  },
+  {
+   "timestamp_ms": 12402,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " education for"
+   }
+  },
+  {
+   "timestamp_ms": 12907,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fourth-year students?"
+   }
+  },
+  {
+   "timestamp_ms": 12908,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 14907,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Along with English and mathematics, what subject replaced values education for fourth year students?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

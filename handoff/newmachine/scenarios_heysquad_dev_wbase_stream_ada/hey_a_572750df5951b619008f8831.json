@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572750df5951b619008f8831",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3168,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What aid is"
+   }
+  },
+  {
+   "timestamp_ms": 4179,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " available to"
+   }
+  },
+  {
+   "timestamp_ms": 5201,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " underprivileged"
+   }
+  },
+  {
+   "timestamp_ms": 6243,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " students seeking to attend a private"
+   }
+  },
+  {
+   "timestamp_ms": 6640,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " university?"
+   }
+  },
+  {
+   "timestamp_ms": 6641,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8640,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What aid is available to underprivileged students seeking to attend a private university?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

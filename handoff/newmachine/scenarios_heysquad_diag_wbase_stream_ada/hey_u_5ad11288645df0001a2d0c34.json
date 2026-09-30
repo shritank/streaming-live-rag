@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad11288645df0001a2d0c34",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4072,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who"
+   }
+  },
+  {
+   "timestamp_ms": 5071,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " was subjected to a"
+   }
+  },
+  {
+   "timestamp_ms": 6071,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " qualified minority"
+   }
+  },
+  {
+   "timestamp_ms": 7092,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " vote at the"
+   }
+  },
+  {
+   "timestamp_ms": 7180,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Council for approval?"
+   }
+  },
+  {
+   "timestamp_ms": 7181,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9180,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who was subjected to a qualified minority vote of the Council for approval?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

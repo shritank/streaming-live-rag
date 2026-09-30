@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a2eccc9a83784001a7d24a3",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3398,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what year did"
+   }
+  },
+  {
+   "timestamp_ms": 4439,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Samuel Kay"
+   }
+  },
+  {
+   "timestamp_ms": 5482,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Cohn, Jr."
+   }
+  },
+  {
+   "timestamp_ms": 6477,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " read, Graham"
+   }
+  },
+  {
+   "timestamp_ms": 7042,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Twigg's major work?"
+   }
+  },
+  {
+   "timestamp_ms": 7043,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9042,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In what year did Samuel K. Cohn, Jr.  read Graham Twigg's major work?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

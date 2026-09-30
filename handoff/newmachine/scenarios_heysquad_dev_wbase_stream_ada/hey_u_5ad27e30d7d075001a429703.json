@@ -1,0 +1,59 @@
+{
+ "scenario_id": "hey_u_5ad27e30d7d075001a429703",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5317,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Newtune realized that gravitational deceleration"
+   }
+  },
+  {
+   "timestamp_ms": 6417,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Newton realized that gravitational deceleration was proportional to what?"
+   }
+  },
+  {
+   "timestamp_ms": 6418,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8417,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Newton realized that gravitational deceleration was proportional to what?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

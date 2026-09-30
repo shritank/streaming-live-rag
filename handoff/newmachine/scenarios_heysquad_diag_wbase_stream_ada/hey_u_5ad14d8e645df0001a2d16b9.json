@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad14d8e645df0001a2d16b9",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5114,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who is the only member state not to"
+   }
+  },
+  {
+   "timestamp_ms": 6097,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " veto the"
+   }
+  },
+  {
+   "timestamp_ms": 9137,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " social charter, the social charter being included as a"
+   }
+  },
+  {
+   "timestamp_ms": 10129,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " social"
+   }
+  },
+  {
+   "timestamp_ms": 11797,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the social charter of Maastricht Treaty?"
+   }
+  },
+  {
+   "timestamp_ms": 11798,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 13797,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who was the only member state not to veto the Social Charter the Social Charter being included as the Social Charter of Masstricht Treaty?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

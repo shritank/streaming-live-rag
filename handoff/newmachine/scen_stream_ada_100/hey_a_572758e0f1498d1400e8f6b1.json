@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572758e0f1498d1400e8f6b1",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4204,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Granting what status"
+   }
+  },
+  {
+   "timestamp_ms": 5269,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " would allow"
+   }
+  },
+  {
+   "timestamp_ms": 6207,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " private"
+   }
+  },
+  {
+   "timestamp_ms": 7275,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " non-religious schools in the U.S."
+   }
+  },
+  {
+   "timestamp_ms": 8190,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " to receive public funds."
+   }
+  },
+  {
+   "timestamp_ms": 8191,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10190,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Granting what status would allow private non-religious schools in the US to receive public funds?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

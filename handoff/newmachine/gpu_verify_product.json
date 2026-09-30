@@ -1,0 +1,57 @@
+{
+ "gpu_before": "NVIDIA GeForce RTX 4050 Laptop GPU, 1202 MiB, 596.49",
+ "onnxruntime": "1.20.0",
+ "calls": {
+  "e5_norm": 0.9999999403953552,
+  "ce_logit": 6.361254692077637,
+  "reader": [
+   13.458679854869843,
+   "Vecht"
+  ]
+ },
+ "sessions": {
+  ".cache\\streaming_rag\\models\\fused\\e5.onnx": "CUDAExecutionProvider",
+  ".cache\\streaming_rag\\models\\fused\\ce.onnx": "CUDAExecutionProvider",
+  ".cache\\streaming_rag\\models\\fused\\reader.onnx": "CUDAExecutionProvider"
+ },
+ "op_placement": {
+  "fused/e5.onnx": {
+   "kernel_time_share": {
+    "CUDAExecutionProvider": 1.0
+   },
+   "cpu_op_types_us": {}
+  },
+  "fused/ce.onnx": {
+   "kernel_time_share": {
+    "CUDAExecutionProvider": 0.981,
+    "CPUExecutionProvider": 0.019
+   },
+   "cpu_op_types_us": {
+    "Gather": 92,
+    "Unsqueeze": 85,
+    "Where": 44,
+    "Concat": 40,
+    "Equal": 37
+   }
+  },
+  "fused/reader.onnx": {
+   "kernel_time_share": {
+    "CUDAExecutionProvider": 0.989,
+    "CPUExecutionProvider": 0.011
+   },
+   "cpu_op_types_us": {
+    "Gather": 113,
+    "Unsqueeze": 91,
+    "Where": 50,
+    "Concat": 44,
+    "Equal": 42
+   }
+  }
+ },
+ "whisper": {
+  "device": "cuda",
+  "loaded_on": "cuda",
+  "text": "YouWhat is the ... ... ... ... ...What is theWhat is the universal band? universalWhat is the universal band that did band thatWhat is the universal band that digital receivers digital receiversWhat is the universal band that digital receivers will receive? willWhat is the universal band that digital receivers will receive free-to-air channels? receive free-to-airWhat is the universal band that digital receivers will receive free-to-air channels on? channels on?"
+ },
+ "gpu_after": "NVIDIA GeForce RTX 4050 Laptop GPU, 2761 MiB, 596.49"
+}

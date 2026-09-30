@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5ad56aea5b96ef001a10ae4c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4173,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "An 1830"
+   }
+  },
+  {
+   "timestamp_ms": 5193,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " sonnet was written about"
+   }
+  },
+  {
+   "timestamp_ms": 5998,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Chopin by Wattman."
+   }
+  },
+  {
+   "timestamp_ms": 5999,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7998,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What is the least well known algorithm associated with the the integer factorization problem?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572841772ca10214002da1a6",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4416,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "There have been major"
+   }
+  },
+  {
+   "timestamp_ms": 5453,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " changes in Amazon"
+   }
+  },
+  {
+   "timestamp_ms": 6529,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " rainforest"
+   }
+  },
+  {
+   "timestamp_ms": 7624,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " vegetation over the last"
+   }
+  },
+  {
+   "timestamp_ms": 8366,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " how many years."
+   }
+  },
+  {
+   "timestamp_ms": 8367,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10366,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "There have been major changes in Amazon rainforest vegetation over the last how many years?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

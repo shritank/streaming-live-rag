@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a67e29d8476ee001a58a75a",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4293,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What other"
+   }
+  },
+  {
+   "timestamp_ms": 5319,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " person was"
+   }
+  },
+  {
+   "timestamp_ms": 6273,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " involved in the case with"
+   }
+  },
+  {
+   "timestamp_ms": 7316,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Runyon in"
+   }
+  },
+  {
+   "timestamp_ms": 7676,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 1972?"
+   }
+  },
+  {
+   "timestamp_ms": 7677,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9676,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What other person was involved in the case with Runyon in 1972?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

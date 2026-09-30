@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad3c061604f3c001a3fef73",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3077,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What is"
+   }
+  },
+  {
+   "timestamp_ms": 4113,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " continuing with"
+   }
+  },
+  {
+   "timestamp_ms": 5126,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " energy"
+   }
+  },
+  {
+   "timestamp_ms": 6139,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " levels far beyond the"
+   }
+  },
+  {
+   "timestamp_ms": 7143,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " term of the 20th century?"
+   }
+  },
+  {
+   "timestamp_ms": 7144,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9143,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What is continuing with energy levels far beyond the turn of the 20th century?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5728e5224b864d1900165036",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4085,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who lived in a tree to"
+   }
+  },
+  {
+   "timestamp_ms": 5102,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " prevent it from being"
+   }
+  },
+  {
+   "timestamp_ms": 6130,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " cut down"
+   }
+  },
+  {
+   "timestamp_ms": 6882,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " as a form of civil disobedience?"
+   }
+  },
+  {
+   "timestamp_ms": 6883,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8882,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who lived in a tree to prevent it from being cut down as a form of civil disobedience?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a2c116ebfd06b001a5ae9c4",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3382,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What free"
+   }
+  },
+  {
+   "timestamp_ms": 5169,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " TV platform was"
+   }
+  },
+  {
+   "timestamp_ms": 6203,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " most"
+   }
+  },
+  {
+   "timestamp_ms": 7223,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " popular in Europe at this"
+   }
+  },
+  {
+   "timestamp_ms": 7588,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " time?"
+   }
+  },
+  {
+   "timestamp_ms": 7589,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9588,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What free TV platform was most popular in Europe at this time?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

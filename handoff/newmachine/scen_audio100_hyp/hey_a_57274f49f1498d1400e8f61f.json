@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_57274f49f1498d1400e8f61f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2073,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Where is Samuel?"
+   }
+  },
+  {
+   "timestamp_ms": 3098,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Where is"
+   }
+  },
+  {
+   "timestamp_ms": 3098,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Where is Samuel Marsden Collegiate?"
+   }
+  },
+  {
+   "timestamp_ms": 4095,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Samuel Marsden"
+   }
+  },
+  {
+   "timestamp_ms": 4095,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Where is Samuel Marsden Collegiate School located?"
+   }
+  },
+  {
+   "timestamp_ms": 4722,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Collegiate School located?"
+   }
+  },
+  {
+   "timestamp_ms": 4723,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 6722,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Where is Samuel Marsden Collegiate School located?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_5729a3716aef05140015506d",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In which a toad of"
+   }
+  },
+  {
+   "timestamp_ms": 6152,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " nooms with"
+   }
+  },
+  {
+   "timestamp_ms": 8132,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " to primes"
+   }
+  },
+  {
+   "timestamp_ms": 9135,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 41,"
+   }
+  },
+  {
+   "timestamp_ms": 10153,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 43,"
+   }
+  },
+  {
+   "timestamp_ms": 11112,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " makes the primes 41, 43, 47, and 53 appear it."
+   }
+  },
+  {
+   "timestamp_ms": 11113,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 13112,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In which etude of Neumes rythmiques do the primes 41, 43, 47 and 53 appear in?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

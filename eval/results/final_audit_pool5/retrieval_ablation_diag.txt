@@ -1,0 +1,16 @@
+hybrid+CE(default) n=1000  r@1 89.4% [87.3%-91.2%]  r@5 96.1% [94.7%-97.1%]  r@10 97.7% [96.6%-98.5%]  MRR@10 0.927  nDCG@10 0.939  doc r@1 98.9%  19.5 ms/query
+sparse_BM25_only n=1000  r@1 87.6% [85.4%-89.5%]  r@5 92.8% [91.0%-94.2%]  r@10 96.0% [94.6%-97.0%]  MRR@10 0.905  nDCG@10 0.918  doc r@1 98.6%  12.9 ms/query
+                 vs hybrid+CE(default): r@1 -1.8% [95% CI -3.2%, -0.5%]  *
+                 vs hybrid+CE(default): r@5 -3.3% [95% CI -4.6%, -2.0%]  *
+dense_e5_only  n=1000  r@1 88.3% [86.2%-90.1%]  r@5 95.1% [93.6%-96.3%]  r@10 97.9% [96.8%-98.6%]  MRR@10 0.917  nDCG@10 0.932  doc r@1 98.4%  13.2 ms/query
+                 vs hybrid+CE(default): r@1 -1.1% [95% CI -2.1%, -0.1%]  *
+                 vs hybrid+CE(default): r@5 -1.0% [95% CI -2.2%, +0.2%]
+hybrid_no_rerank n=1000  r@1 83.0% [80.5%-85.2%]  r@5 96.1% [94.7%-97.1%]  r@10 97.8% [96.7%-98.5%]  MRR@10 0.888  nDCG@10 0.911  doc r@1 98.6%  12.1 ms/query
+                 vs hybrid+CE(default): r@1 -6.4% [95% CI -8.4%, -4.3%]  *
+                 vs hybrid+CE(default): r@5 +0.0% [95% CI +0.0%, +0.0%]
+sparse_no_rerank n=1000  r@1 79.1% [76.5%-81.5%]  r@5 92.8% [91.0%-94.2%]  r@10 96.0% [94.6%-97.0%]  MRR@10 0.851  nDCG@10 0.878  doc r@1 96.4%  3.7 ms/query
+                 vs hybrid+CE(default): r@1 -10.3% [95% CI -12.7%, -8.0%]  *
+                 vs hybrid+CE(default): r@5 -3.3% [95% CI -4.6%, -2.0%]  *
+dense_no_rerank n=1000  r@1 79.3% [76.7%-81.7%]  r@5 95.1% [93.6%-96.3%]  r@10 97.9% [96.8%-98.6%]  MRR@10 0.862  nDCG@10 0.891  doc r@1 97.8%  7.2 ms/query
+                 vs hybrid+CE(default): r@1 -10.1% [95% CI -12.4%, -7.8%]  *
+                 vs hybrid+CE(default): r@5 -1.0% [95% CI -2.2%, +0.2%]

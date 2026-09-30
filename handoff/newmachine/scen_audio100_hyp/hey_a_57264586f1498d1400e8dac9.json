@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_a_57264586f1498d1400e8dac9",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2086,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was it that you"
+   }
+  },
+  {
+   "timestamp_ms": 3318,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was"
+   }
+  },
+  {
+   "timestamp_ms": 3318,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the use of dad and dad?"
+   }
+  },
+  {
+   "timestamp_ms": 4156,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the use of"
+   }
+  },
+  {
+   "timestamp_ms": 4156,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the use of that in that one name?"
+   }
+  },
+  {
+   "timestamp_ms": 5155,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " that in that one"
+   }
+  },
+  {
+   "timestamp_ms": 5155,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What was the use of that in that one name correct?"
+   }
+  },
+  {
+   "timestamp_ms": 5827,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " name correct?"
+   }
+  },
+  {
+   "timestamp_ms": 5828,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7827,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Was the Use of the DATANET 1 name correct "
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

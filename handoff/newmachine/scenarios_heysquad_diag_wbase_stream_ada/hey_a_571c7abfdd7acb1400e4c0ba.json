@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_571c7abfdd7acb1400e4c0ba",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3096,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What early"
+   }
+  },
+  {
+   "timestamp_ms": 4093,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Greek wrote"
+   }
+  },
+  {
+   "timestamp_ms": 5082,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " about experiments on"
+   }
+  },
+  {
+   "timestamp_ms": 5614,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " air and combustion?"
+   }
+  },
+  {
+   "timestamp_ms": 5615,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 7614,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What early Greek wrote about experiments on air and combustion?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

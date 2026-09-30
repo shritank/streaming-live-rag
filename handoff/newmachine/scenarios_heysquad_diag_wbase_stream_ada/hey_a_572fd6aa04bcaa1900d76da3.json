@@ -1,0 +1,104 @@
+{
+ "scenario_id": "hey_a_572fd6aa04bcaa1900d76da3",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3138,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "If an"
+   }
+  },
+  {
+   "timestamp_ms": 5082,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " ordinary election is held within"
+   }
+  },
+  {
+   "timestamp_ms": 6093,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " less than"
+   }
+  },
+  {
+   "timestamp_ms": 7109,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " six months before the"
+   }
+  },
+  {
+   "timestamp_ms": 8111,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " date of an ordinary"
+   }
+  },
+  {
+   "timestamp_ms": 10158,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " election, what does it"
+   }
+  },
+  {
+   "timestamp_ms": 11045,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " do to the ordinary election?"
+   }
+  },
+  {
+   "timestamp_ms": 11046,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 13045,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "If an extraordinary election is held within less than six months before the date of an ordinary election, what does it do to the ordinary election?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

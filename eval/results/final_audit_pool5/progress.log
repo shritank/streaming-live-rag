@@ -1,0 +1,35 @@
+09:50:38 A1 latency profile DEV (real time, 1x)
+10:01:45 A2 latency profile DIAG (real time, 1x)
+10:13:45 A3 engine.mode=streaming on DIAG (1x)
+10:25:36 A3 engine.mode=deferred on DIAG (1x)
+10:37:26 A3 engine.mode=baseline on DIAG (1x)
+10:49:16 A4 eval.compare streaming vs baseline on DIAG (1x)
+11:12:53 PHASE A DONE
+11:12:53 B start
+11:14:24 B done abl_dev_sparse
+11:15:16 B done gates legacy ts8 reps3
+11:15:56 B done abl_dev_dense
+11:16:30 B done gates real_corpus ts8 reps3
+11:17:28 B done abl_dev_norerank
+11:18:59 B done abl_dev_nogate
+11:20:27 B done spoken_dev_typed
+11:20:30 B done abl_dev_lexsel
+11:22:03 B done abl_dev_baseline
+11:23:35 B done abl_dev_nospec
+11:25:10 B done abl_diag_sparse
+11:26:37 B done spoken_diag_typed
+11:26:47 B done abl_diag_dense
+11:28:27 B done abl_diag_norerank
+11:30:04 B done abl_diag_nogate
+11:31:41 B done abl_diag_lexsel
+11:33:19 B done abl_diag_baseline
+11:34:57 B done abl_diag_nospec
+11:43:32 X done spoken_dev_pool20
+11:43:32 X done spoken_dev_nogate
+11:46:05 B done gates real_dev ts1 reps3
+11:48:16 B done gates real_diag ts1 reps3
+11:48:16 PHASE B DONE
+ALL_DONE
+11:49:41 X done spoken_diag_nogate
+11:49:42 X done spoken_diag_pool20
+11:49:42 EXTRA DONE

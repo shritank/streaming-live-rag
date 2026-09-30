@@ -49,12 +49,12 @@ class FakeLLM:
 
     async def complete(self, *, purpose: str, system: str, prompt: str,
                         json_mode: bool = False, max_tokens: int = 512) -> LLMResponse:
-        start = time.monotonic()
+        start = time.perf_counter()
         # Deterministic "generation": a stable digest-derived echo, never invents facts.
         digest = hashlib.sha256(f"{purpose}|{system}|{prompt}".encode()).hexdigest()[:8]
         text = prompt if not json_mode else "{}"
         await asyncio.sleep(0)  # yield control; never block the loop
-        latency_ms = (time.monotonic() - start) * 1000
+        latency_ms = (time.perf_counter() - start) * 1000
         tokens_in = _estimate_tokens(system + prompt)
         tokens_out = _estimate_tokens(text)
         price_in, price_out = _price_for(self._model, self._config.llm.price_table)
@@ -97,7 +97,7 @@ class OpenAILLM:
         attempts = self._config.llm.max_retries + 1
         last_err: Exception | None = None
         for attempt in range(attempts):
-            start = time.monotonic()
+            start = time.perf_counter()
             try:
                 resp = await self._client.chat.completions.create(
                     model=model,
@@ -110,7 +110,7 @@ class OpenAILLM:
                         {"role": "user", "content": prompt},
                     ],
                 )
-                latency_ms = (time.monotonic() - start) * 1000
+                latency_ms = (time.perf_counter() - start) * 1000
                 text = resp.choices[0].message.content or ""
                 tokens_in = resp.usage.prompt_tokens if resp.usage else _estimate_tokens(system + prompt)
                 tokens_out = resp.usage.completion_tokens if resp.usage else _estimate_tokens(text)
@@ -157,7 +157,7 @@ class GeminiLLM:
         attempts = self._config.llm.max_retries + 1
         last_err: Exception | None = None
         for attempt in range(attempts):
-            start = time.monotonic()
+            start = time.perf_counter()
             try:
                 resp = await self._client.aio.models.generate_content(
                     model=model,
@@ -170,7 +170,7 @@ class GeminiLLM:
                         "response_mime_type": "application/json" if json_mode else "text/plain",
                     },
                 )
-                latency_ms = (time.monotonic() - start) * 1000
+                latency_ms = (time.perf_counter() - start) * 1000
                 text = resp.text or ""
                 usage = getattr(resp, "usage_metadata", None)
                 tokens_in = getattr(usage, "prompt_token_count", None) or _estimate_tokens(system + prompt)

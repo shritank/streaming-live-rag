@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_572fd264b2c2fd14005684ab",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3066,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What is the"
+   }
+  },
+  {
+   "timestamp_ms": 4082,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " minimum amount of"
+   }
+  },
+  {
+   "timestamp_ms": 5079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " time"
+   }
+  },
+  {
+   "timestamp_ms": 6089,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " before a"
+   }
+  },
+  {
+   "timestamp_ms": 7083,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " bill can go"
+   }
+  },
+  {
+   "timestamp_ms": 7184,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " into law?"
+   }
+  },
+  {
+   "timestamp_ms": 7185,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9184,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What is the minimum amount of time before a bill can go into law?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

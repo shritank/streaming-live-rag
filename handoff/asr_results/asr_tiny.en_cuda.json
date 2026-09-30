@@ -1,0 +1,4997 @@
+{
+ "meta": {
+  "model": "tiny.en",
+  "revision": "0d3d19a32d3338f10357c0889762bd8d64bbdeba",
+  "device": "cuda",
+  "compute_type": "int8",
+  "n": 996,
+  "load_s": 1.6,
+  "decode_s": 3647.1,
+  "audio_s": 6272.5,
+  "rtf": 0.581,
+  "mean_ms_per_clip": 3661.8,
+  "peak_rss_mb": NaN
+ },
+ "items": {
+  "57096c95200fba1400367fbe": {
+   "text": "What is the universal band that digital receivers will receive free-to-air channels on?",
+   "sec": 1.595,
+   "audio_sec": 9.78
+  },
+  "57096c95200fba1400367fbf": {
+   "text": "What service is a video guard UK equipped receiver dedicated to Decrit?",
+   "sec": 0.336,
+   "audio_sec": 9.54
+  },
+  "57115b2850c2381900b54a83": {
+   "text": "Who wrote of the savory water pump in the 1751's Philosophical Transactions?",
+   "sec": 0.351,
+   "audio_sec": 9.13
+  },
+  "571a4ead10f8ca1400304fe0": {
+   "text": "The final of Byzantium blank surmised that air converted to fire.",
+   "sec": 0.372,
+   "audio_sec": 5.74
+  },
+  "571a50df4faf5e1900b8a961": {
+   "text": "Combustion is caused by an oxidant and a fuel. What role does oxygen play in combustion?",
+   "sec": 0.477,
+   "audio_sec": 7.27
+  },
+  "571a50df4faf5e1900b8a962": {
+   "text": "For oxides, nitrates and dichromates are examples of what type of compounds.",
+   "sec": 0.388,
+   "audio_sec": 6.46
+  },
+  "571a50df4faf5e1900b8a963": {
+   "text": "Although not a fuel, Blink is the chemical compound that generates the most occurrences of explosions.",
+   "sec": 0.641,
+   "audio_sec": 7.66
+  },
+  "571c4132dd7acb1400e4c0b1": {
+   "text": "What did Priestly name the gas experiment produced?",
+   "sec": 0.303,
+   "audio_sec": 4.5
+  },
+  "571c4132dd7acb1400e4c0b2": {
+   "text": "In what year did Priestly publish the findings of his experiments?",
+   "sec": 0.317,
+   "audio_sec": 4.99
+  },
+  "571c4132dd7acb1400e4c0b3": {
+   "text": "Why is priestly usually given credit for being first to discover oxygen?",
+   "sec": 0.39,
+   "audio_sec": 5.99
+  },
+  "571c4132dd7acb1400e4c0b4": {
+   "text": "What affected breeding species discovered gas have on the experiment's mouse?",
+   "sec": 0.341,
+   "audio_sec": 6.36
+  },
+  "571c7abfdd7acb1400e4c0ba": {
+   "text": "What early greek wrote about experiments on air and combustion?",
+   "sec": 0.329,
+   "audio_sec": 5.53
+  },
+  "571c7abfdd7acb1400e4c0bb": {
+   "text": "What did Fileau incorrectly assume that the air became?",
+   "sec": 0.319,
+   "audio_sec": 5.43
+  },
+  "571c7abfdd7acb1400e4c0bc": {
+   "text": "What was the title of the file was work?",
+   "sec": 0.294,
+   "audio_sec": 3.85
+  },
+  "571c7abfdd7acb1400e4c0bd": {
+   "text": "What famous artists later further investigative follows experiments?",
+   "sec": 0.276,
+   "audio_sec": 6.13
+  },
+  "571c7abfdd7acb1400e4c0be": {
+   "text": "of what did the Vinci think apart was consumed during combustion.",
+   "sec": 0.29,
+   "audio_sec": 6.13
+  },
+  "571cb010dd7acb1400e4c12b": {
+   "text": "By what process is singlet oxygen made in the troposphere?",
+   "sec": 0.334,
+   "audio_sec": 8.99
+  },
+  "571cb010dd7acb1400e4c12c": {
+   "text": "What objects in organisms absorb a single oxygen to prevent harm?",
+   "sec": 0.34,
+   "audio_sec": 10.87
+  },
+  "571cc3dedd7acb1400e4c14a": {
+   "text": "What device is used to test the magnetic attractions involved in liquid oxygen?",
+   "sec": 0.312,
+   "audio_sec": 7.99
+  },
+  "571cc6f85efbb31900334de7": {
+   "text": "What element is used as a coolant in the process of making liquid oxygen?",
+   "sec": 0.325,
+   "audio_sec": 7.59
+  },
+  "571cc6f85efbb31900334de8": {
+   "text": "From what type of materials must liquid oxygen be separated?",
+   "sec": 0.276,
+   "audio_sec": 6.27
+  },
+  "571cca4add7acb1400e4c154": {
+   "text": "When did oxygen begin to move from the oceans to the atmosphere?",
+   "sec": 0.321,
+   "audio_sec": 7.08
+  },
+  "571cd88ddd7acb1400e4c18e": {
+   "text": "What is the type of oxygen production for emergency oxygen in airlines?",
+   "sec": 0.291,
+   "audio_sec": 7.08
+  },
+  "571cd88ddd7acb1400e4c18f": {
+   "text": "What type of reaction is present in the emergency oxygen generator of an airplane?",
+   "sec": 0.333,
+   "audio_sec": 8.15
+  },
+  "571cd88ddd7acb1400e4c190": {
+   "text": "What gas does the airline exothermic reaction produce?",
+   "sec": 0.299,
+   "audio_sec": 6.2
+  },
+  "571ce7f25efbb31900334e42": {
+   "text": "Aside from oxides, what other compounds comprise a large portion of the earth's crust?",
+   "sec": 0.325,
+   "audio_sec": 6.69
+  },
+  "571cebc05efbb31900334e48": {
+   "text": "What can concentrated oxygen produce?",
+   "sec": 0.227,
+   "audio_sec": 3.81
+  },
+  "571cebc05efbb31900334e49": {
+   "text": "What is a spark or heat to the progress of a fire?",
+   "sec": 0.305,
+   "audio_sec": 4.41
+  },
+  "571cebc05efbb31900334e4a": {
+   "text": "By the end of the fuel, what is oxygen to a fire?",
+   "sec": 0.35,
+   "audio_sec": 4.37
+  },
+  "571cebc05efbb31900334e4b": {
+   "text": "What is oxygen the basis for in combustion?",
+   "sec": 0.271,
+   "audio_sec": 4.5
+  },
+  "571cebc05efbb31900334e4c": {
+   "text": "What other sources of high oxidative potential can add to a fire?",
+   "sec": 0.337,
+   "audio_sec": 6.36
+  },
+  "5725b81b271a42140099d09b": {
+   "text": "What percentage does the Amazon represent in rainforests on the planet?",
+   "sec": 0.353,
+   "audio_sec": 5.92
+  },
+  "5725bcb6271a42140099d0ee": {
+   "text": "How much was the emergency aid to Israel?",
+   "sec": 0.289,
+   "audio_sec": 6.08
+  },
+  "5725bcb6271a42140099d0ef": {
+   "text": "Why did OPEC block oil deliveries to the United States?",
+   "sec": 0.297,
+   "audio_sec": 7.04
+  },
+  "5725c28a271a42140099d14d": {
+   "text": "What is European Union law?",
+   "sec": 0.274,
+   "audio_sec": 4.16
+  },
+  "5725c28a271a42140099d14e": {
+   "text": "What effect does European Union law have on laws of member states?",
+   "sec": 0.283,
+   "audio_sec": 6.97
+  },
+  "5725c28a271a42140099d14f": {
+   "text": "What are the three sources of European Union law?",
+   "sec": 0.324,
+   "audio_sec": 5.15
+  },
+  "5725c28a271a42140099d150": {
+   "text": "What are the main legislative bodies of the European Union?",
+   "sec": 0.319,
+   "audio_sec": 5.87
+  },
+  "5725c3a9ec44d21400f3d506": {
+   "text": "What is one supplementary source of European Union law?",
+   "sec": 0.309,
+   "audio_sec": 6.22
+  },
+  "5725d16aec44d21400f3d61f": {
+   "text": "How many invertebrate species are known in Brazil alone?",
+   "sec": 0.311,
+   "audio_sec": 5.53
+  },
+  "57261dab38643c19005ad03a": {
+   "text": "What is one of the reasons that under-developed nations received aid from the oil income?",
+   "sec": 0.369,
+   "audio_sec": 11.96
+  },
+  "57261dab38643c19005ad03b": {
+   "text": "What is a fundamentalist interpretation of Islam called?",
+   "sec": 0.341,
+   "audio_sec": 8.54
+  },
+  "57261f9f271a42140099d4ac": {
+   "text": "Interest groups and government agencies that were concerned with the energy were no match for him.",
+   "sec": 0.616,
+   "audio_sec": 11.94
+  },
+  "57263677ec44d21400f3dc49": {
+   "text": "What concept was developed by Barron while researching at Rand?",
+   "sec": 0.293,
+   "audio_sec": 6.08
+  },
+  "57263677ec44d21400f3dc4a": {
+   "text": "What was your port P2626?",
+   "sec": 0.286,
+   "audio_sec": 4.37
+  },
+  "57263677ec44d21400f3dc4b": {
+   "text": "What things did the network concentrate on?",
+   "sec": 0.309,
+   "audio_sec": 5.2
+  },
+  "57263677ec44d21400f3dc4c": {
+   "text": "What delivery message was used?",
+   "sec": 0.325,
+   "audio_sec": 4.76
+  },
+  "57263c78ec44d21400f3dc7d": {
+   "text": "What does user data gram protocol guarantee?",
+   "sec": 0.266,
+   "audio_sec": 5.34
+  },
+  "57263c78ec44d21400f3dc7e": {
+   "text": "x.25 uses what type network type.",
+   "sec": 0.32,
+   "audio_sec": 5.41
+  },
+  "57263ea0271a42140099d7c6": {
+   "text": "What did DeckNet face to become?",
+   "sec": 0.288,
+   "audio_sec": 4.83
+  },
+  "57264228ec44d21400f3dcf8": {
+   "text": "Tell net used what interface technology.",
+   "sec": 0.344,
+   "audio_sec": 5.06
+  },
+  "57264228ec44d21400f3dcf9": {
+   "text": "How net was sold to?",
+   "sec": 0.297,
+   "audio_sec": 4.18
+  },
+  "5726431d271a42140099d7f8": {
+   "text": "Why event was blamed on the introduction of NIMIopsis into the Black Sea?",
+   "sec": 0.393,
+   "audio_sec": 7.13
+  },
+  "5726431d271a42140099d7f9": {
+   "text": "What was done to counteract the overpopulation of NIMIopsis in the black sea?",
+   "sec": 0.359,
+   "audio_sec": 8.13
+  },
+  "57264586f1498d1400e8dac7": {
+   "text": "Strictly speaking, who was included in DataNet 1.",
+   "sec": 0.543,
+   "audio_sec": 5.71
+  },
+  "57264586f1498d1400e8dac8": {
+   "text": "Who else did that in that one refer to?",
+   "sec": 0.317,
+   "audio_sec": 4.83
+  },
+  "57264586f1498d1400e8dac9": {
+   "text": "What was the use of that in that one name correct?",
+   "sec": 0.38,
+   "audio_sec": 5.69
+  },
+  "57264845f1498d1400e8db0e": {
+   "text": "What contributed to the severity of the plague?",
+   "sec": 0.307,
+   "audio_sec": 4.85
+  },
+  "5726487b5951b619008f6ee0": {
+   "text": "Harold Winston, supported which country during its six-day war.",
+   "sec": 0.367,
+   "audio_sec": 8.5
+  },
+  "5726487b5951b619008f6ee1": {
+   "text": "Who wanted Israel to withdraw from its border?",
+   "sec": 0.364,
+   "audio_sec": 5.74
+  },
+  "572649d8f1498d1400e8db3a": {
+   "text": "Which country Russian gasoline and heating gas?",
+   "sec": 0.312,
+   "audio_sec": 6.18
+  },
+  "57264a74708984140094c18d": {
+   "text": "Who allegedly coined the name Black Death?",
+   "sec": 0.362,
+   "audio_sec": 6.22
+  },
+  "57264a74708984140094c18e": {
+   "text": "When did the name Black Death officially take root in England?",
+   "sec": 0.374,
+   "audio_sec": 6.29
+  },
+  "57264a74708984140094c18f": {
+   "text": "Did the plague spread in Scandinavia or Germany first?",
+   "sec": 0.325,
+   "audio_sec": 11.63
+  },
+  "57264d9edd62a815002e8100": {
+   "text": "Why was this short-term organization created?",
+   "sec": 0.673,
+   "audio_sec": 5.48
+  },
+  "57264d9edd62a815002e8101": {
+   "text": "According to the majority to the critical advantage of the gas stations that ran out of gasoline.",
+   "sec": 0.424,
+   "audio_sec": 8.41
+  },
+  "57264efddd62a815002e8138": {
+   "text": "One was the Cabot-level energy department created.",
+   "sec": 0.334,
+   "audio_sec": 5.29
+  },
+  "57264f18f1498d1400e8dbb1": {
+   "text": "How and when did the first variant of Ypasses enter Europe?",
+   "sec": 0.353,
+   "audio_sec": 5.29
+  },
+  "57264f18f1498d1400e8dbb2": {
+   "text": "When did the y-passes reach England?",
+   "sec": 0.324,
+   "audio_sec": 4.2
+  },
+  "57265360dd62a815002e819c": {
+   "text": "To force Japan to be more involved in the crisis, what did Saudi and Qawati governments do?",
+   "sec": 0.413,
+   "audio_sec": 8.27
+  },
+  "57265360dd62a815002e819d": {
+   "text": "When did Japan release a statement to tell Israelis to a draw from the Palestine?",
+   "sec": 0.372,
+   "audio_sec": 7.59
+  },
+  "57265360dd62a815002e819e": {
+   "text": "When was Japan accepted as an Arab friendly state?",
+   "sec": 0.307,
+   "audio_sec": 6.18
+  },
+  "57265526708984140094c2c1": {
+   "text": "When did the wahabi seize the Grand Mosque in Mecca?",
+   "sec": 0.35,
+   "audio_sec": 5.78
+  },
+  "5726581fdd62a815002e823d": {
+   "text": "which countries and ports became the de facto mass market leaders.",
+   "sec": 0.358,
+   "audio_sec": 6.52
+  },
+  "572658435951b619008f7029": {
+   "text": "What is the C.J.E.U.'s duty?",
+   "sec": 0.374,
+   "audio_sec": 5.09
+  },
+  "572659535951b619008f7041": {
+   "text": "Name an extra that was added to the production of the compacts.",
+   "sec": 0.333,
+   "audio_sec": 6.22
+  },
+  "572659535951b619008f7042": {
+   "text": "Need a luxury division at Toyota.",
+   "sec": 0.308,
+   "audio_sec": 5.71
+  },
+  "57265a58dd62a815002e8272": {
+   "text": "Mazda, Mitsubishi, and Azuzu join partnership with which American car company.",
+   "sec": 0.435,
+   "audio_sec": 7.36
+  },
+  "57265a58dd62a815002e8273": {
+   "text": "When American car companies rolled out with their domestic replacement cars, which Paul I'll see you all in the next video. I'll see you all in the next video. I'll see you all in the next video.",
+   "sec": 1.06,
+   "audio_sec": 8.36
+  },
+  "57265ceddd62a815002e82ba": {
+   "text": "Which car shows the DOT's revision of categories?",
+   "sec": 0.334,
+   "audio_sec": 6.36
+  },
+  "5726722bdd62a815002e852c": {
+   "text": "What is the number of plant species in economics and social interest?",
+   "sec": 0.329,
+   "audio_sec": 6.9
+  },
+  "572683075951b619008f7517": {
+   "text": "is fertilization internal or external in most species.",
+   "sec": 0.309,
+   "audio_sec": 6.36
+  },
+  "572686fc708984140094c8e8": {
+   "text": "Do adults or juveniles secretions luminesse brighter?",
+   "sec": 0.305,
+   "audio_sec": 6.36
+  },
+  "5726887e708984140094c91b": {
+   "text": "What is the name of the two tentacle, sedipid, that feeds entirely on on Salp's called.",
+   "sec": 0.784,
+   "audio_sec": 9.2
+  },
+  "57268b43dd62a815002e88f0": {
+   "text": "What are the three main sources of European Union law?",
+   "sec": 0.449,
+   "audio_sec": 5.43
+  },
+  "57268b43dd62a815002e88f1": {
+   "text": "What are the main sources of primary law?",
+   "sec": 0.4,
+   "audio_sec": 5.06
+  },
+  "57268b43dd62a815002e88f2": {
+   "text": "What is the legislature of the European Union comprised of?",
+   "sec": 0.419,
+   "audio_sec": 5.76
+  },
+  "57268b43dd62a815002e88f3": {
+   "text": "How many sources of European Union law are there?",
+   "sec": 0.439,
+   "audio_sec": 5.62
+  },
+  "57268bf9dd62a815002e890a": {
+   "text": "By whom is European law applied by?",
+   "sec": 0.388,
+   "audio_sec": 4.81
+  },
+  "57268bf9dd62a815002e890b": {
+   "text": "Who can enforce European Union law?",
+   "sec": 0.394,
+   "audio_sec": 5.71
+  },
+  "57268bf9dd62a815002e890c": {
+   "text": "What is the highest core in European Union law?",
+   "sec": 0.406,
+   "audio_sec": 5.74
+  },
+  "57268bf9dd62a815002e890d": {
+   "text": "What are some supplementary sources of European Union Law?",
+   "sec": 0.402,
+   "audio_sec": 6.36
+  },
+  "57268d2ddd62a815002e8950": {
+   "text": "When do the stated treaties apply?",
+   "sec": 0.369,
+   "audio_sec": 4.46
+  },
+  "57268d2ddd62a815002e8951": {
+   "text": "Who is suited to interpret the treaties?",
+   "sec": 0.327,
+   "audio_sec": 4.32
+  },
+  "57268e2bf1498d1400e8e3b0": {
+   "text": "What caused the need for principal treaties that ended up forming the EU?",
+   "sec": 0.42,
+   "audio_sec": 6.36
+  },
+  "57268e2bf1498d1400e8e3b1": {
+   "text": "When year was the mass-trich treaty signed?",
+   "sec": 0.343,
+   "audio_sec": 5.27
+  },
+  "57268e2bf1498d1400e8e3b2": {
+   "text": "When was the single European Act made?",
+   "sec": 0.312,
+   "audio_sec": 4.69
+  },
+  "57268e2bf1498d1400e8e3b3": {
+   "text": "When did Denmark join the EU?",
+   "sec": 0.277,
+   "audio_sec": 4.48
+  },
+  "57268e2bf1498d1400e8e3b4": {
+   "text": "When did Greenland sign a treaty granting them special status?",
+   "sec": 0.366,
+   "audio_sec": 6.04
+  },
+  "57268f2bf1498d1400e8e3c4": {
+   "text": "Let reform with the tempted following the nice treaty.",
+   "sec": 0.393,
+   "audio_sec": 5.34
+  },
+  "57268f2bf1498d1400e8e3c5": {
+   "text": "What was an additional projected effect of the attempted reform?",
+   "sec": 0.328,
+   "audio_sec": 6.25
+  },
+  "57268f2bf1498d1400e8e3c6": {
+   "text": "which caused the reform to never come into force.",
+   "sec": 0.378,
+   "audio_sec": 5.34
+  },
+  "57268f2bf1498d1400e8e3c7": {
+   "text": "But treaty took the place of constitutional treaty.",
+   "sec": 0.515,
+   "audio_sec": 5.39
+  },
+  "572691545951b619008f76e4": {
+   "text": "Which country refuse to content to changes in the Treaty of Lipzon 2007?",
+   "sec": 0.374,
+   "audio_sec": 7.48
+  },
+  "572691545951b619008f76e5": {
+   "text": "Who are the unelected subordinates of member state governments?",
+   "sec": 0.395,
+   "audio_sec": 6.76
+  },
+  "5726926a5951b619008f770c": {
+   "text": "The corruption found by the Committee of Independent Experts resulted to the creation of what office.",
+   "sec": 0.435,
+   "audio_sec": 8.64
+  },
+  "5726926a5951b619008f770d": {
+   "text": "When did the European Anti-Fraud Office investigate John Dolly?",
+   "sec": 0.378,
+   "audio_sec": 6.71
+  },
+  "57269424dd62a815002e8a1e": {
+   "text": "which end of the area is at the second very legislative body.",
+   "sec": 0.354,
+   "audio_sec": 5.6
+  },
+  "57269424dd62a815002e8a1f": {
+   "text": "How often does the European Council meet?",
+   "sec": 0.312,
+   "audio_sec": 4.99
+  },
+  "57269424dd62a815002e8a20": {
+   "text": "How many books in total does the council have?",
+   "sec": 0.319,
+   "audio_sec": 4.27
+  },
+  "57269424dd62a815002e8a21": {
+   "text": "What is to find as the majority vote?",
+   "sec": 0.313,
+   "audio_sec": 3.74
+  },
+  "572695285951b619008f774c": {
+   "text": "What can block legislation?",
+   "sec": 0.306,
+   "audio_sec": 3.62
+  },
+  "572695285951b619008f774d": {
+   "text": "Which article state that powers state with member states unless they've been conferred?",
+   "sec": 0.441,
+   "audio_sec": 6.69
+  },
+  "572695285951b619008f774e": {
+   "text": "What entity is created if there are three different institutions that cannot come to a consensus at any stage?",
+   "sec": 0.526,
+   "audio_sec": 10.1
+  },
+  "5726965ef1498d1400e8e484": {
+   "text": "How is the judicial branch of the EU an important factor in the development of EU law?",
+   "sec": 0.437,
+   "audio_sec": 7.57
+  },
+  "5726965ef1498d1400e8e485": {
+   "text": "What is the current name judicial body of the EU?",
+   "sec": 0.345,
+   "audio_sec": 5.13
+  },
+  "5726965ef1498d1400e8e486": {
+   "text": "What entity deals with EU staff issues?",
+   "sec": 0.316,
+   "audio_sec": 5.57
+  },
+  "5726965ef1498d1400e8e487": {
+   "text": "How long is one term for an elected president of the CJEU?",
+   "sec": 0.381,
+   "audio_sec": 6.97
+  },
+  "5726965ef1498d1400e8e488": {
+   "text": "What is the CJE's duty?",
+   "sec": 0.32,
+   "audio_sec": 4.92
+  },
+  "572699db5951b619008f779d": {
+   "text": "What does the EU's legitimacy rest on?",
+   "sec": 0.321,
+   "audio_sec": 5.55
+  },
+  "5726a09f708984140094cc3b": {
+   "text": "Which measure must be adopted when there is a choice between several?",
+   "sec": 0.344,
+   "audio_sec": 6.41
+  },
+  "5726b718dd62a815002e8dc1": {
+   "text": "In which case were French vigilantes, sabotaging shipments of Spanish strawberries?",
+   "sec": 0.397,
+   "audio_sec": 7.29
+  },
+  "5726b718dd62a815002e8dc2": {
+   "text": "In Schimbit's rigor versus Austria, the quarter-justice came to the conclusion that Austria didn't infringe upon Article 34 by failing to ban a what?",
+   "sec": 0.672,
+   "audio_sec": 14.77
+  },
+  "5726bcde708984140094cfc2": {
+   "text": "What has the court required to be more accessible?",
+   "sec": 0.353,
+   "audio_sec": 5.27
+  },
+  "5726c3da708984140094d0db": {
+   "text": "What did the Court of Justice reason were controlled in all member states in was meant to be recognized by the master of the master of the master.",
+   "sec": 2.479,
+   "audio_sec": 8.27
+  },
+  "5726c3da708984140094d0dc": {
+   "text": "What did the Dutch health authorities regard as unnecessary and Garrett smits the shifting that is he conforms.",
+   "sec": 1.862,
+   "audio_sec": 8.87
+  },
+  "5726c5a9f1498d1400e8eac8": {
+   "text": "In which case did the Court of Justice hold that a German court couldn't deny a Dutch building company the right to enforce a contract based in German?",
+   "sec": 0.634,
+   "audio_sec": 10.24
+  },
+  "572746addd62a815002e9a5f": {
+   "text": "Along with sport and art, what is a type of talent scholarship?",
+   "sec": 0.366,
+   "audio_sec": 7.5
+  },
+  "572746addd62a815002e9a60": {
+   "text": "Rather than taxation, what are private schools largely funded by?",
+   "sec": 0.352,
+   "audio_sec": 7.55
+  },
+  "572746addd62a815002e9a61": {
+   "text": "What right do private schools have that public schools don't?",
+   "sec": 0.371,
+   "audio_sec": 6.55
+  },
+  "57274712708984140094dbb0": {
+   "text": "What region does use a term private schools to refer to universities?",
+   "sec": 0.36,
+   "audio_sec": 5.74
+  },
+  "5727478cf1498d1400e8f59b": {
+   "text": "What is another term used for year 13?",
+   "sec": 0.299,
+   "audio_sec": 3.72
+  },
+  "5727478cf1498d1400e8f59c": {
+   "text": "What is another term for university preparatory schools?",
+   "sec": 0.315,
+   "audio_sec": 5.36
+  },
+  "5727478cf1498d1400e8f59d": {
+   "text": "Along with location, endowment, and the willingness of parents to pay what factor influences private school tuition.",
+   "sec": 0.435,
+   "audio_sec": 8.31
+  },
+  "5727478cf1498d1400e8f59e": {
+   "text": "Who receives higher salaries at private schools that charge higher tuition?",
+   "sec": 0.401,
+   "audio_sec": 5.57
+  },
+  "5727490bdd62a815002e9a83": {
+   "text": "What is an example of an article of uniform clothing typically present in Australian private schools?",
+   "sec": 0.526,
+   "audio_sec": 6.66
+  },
+  "5727490bdd62a815002e9a84": {
+   "text": "What is a comparison in price between Australian, private schools versus public?",
+   "sec": 0.41,
+   "audio_sec": 6.13
+  },
+  "57274971708984140094dbbe": {
+   "text": "Who attends Loretto Normanhurst?",
+   "sec": 0.334,
+   "audio_sec": 3.39
+  },
+  "57274a1edd62a815002e9a9b": {
+   "text": "The prospect of what event compelled the protection of German private schools.",
+   "sec": 0.377,
+   "audio_sec": 6.08
+  },
+  "57274a1edd62a815002e9a9c": {
+   "text": "What percentage of German students attended private schools in 2008?",
+   "sec": 0.336,
+   "audio_sec": 5.32
+  },
+  "57274a1edd62a815002e9a9d": {
+   "text": "What was the percentage of Germans attending private high schools in in 2008.",
+   "sec": 0.701,
+   "audio_sec": 5.62
+  },
+  "57274a1edd62a815002e9a9e": {
+   "text": "In 1992, Walker Center of East German students attended private schools.",
+   "sec": 0.391,
+   "audio_sec": 5.99
+  },
+  "57274a8ff1498d1400e8f5be": {
+   "text": "How does a level of tuition in German private schools compare to private schools in other western European countries?",
+   "sec": 0.433,
+   "audio_sec": 7.64
+  },
+  "57274b35f1498d1400e8f5d6": {
+   "text": "How are Ergo on Zungshul and funded?",
+   "sec": 1.9,
+   "audio_sec": 3.99
+  },
+  "57274b35f1498d1400e8f5d7": {
+   "text": "Along with private individuals and organizations, what groups sometimes run Ergo and Zangshorn.",
+   "sec": 0.467,
+   "audio_sec": 7.43
+  },
+  "57274beff1498d1400e8f5e5": {
+   "text": "Along with the CISCE and NEMBSE, what is a notable examination board in multiple Indian states?",
+   "sec": 0.505,
+   "audio_sec": 10.15
+  },
+  "57274beff1498d1400e8f5e6": {
+   "text": "How many examination boards exist in India?",
+   "sec": 0.429,
+   "audio_sec": 4.09
+  },
+  "57274beff1498d1400e8f5e7": {
+   "text": "where body and India provides policy directions to schools.",
+   "sec": 0.389,
+   "audio_sec": 5.41
+  },
+  "57274ca8dd62a815002e9aa5": {
+   "text": "What country has the most illiterate adults in the world?",
+   "sec": 0.352,
+   "audio_sec": 4.23
+  },
+  "57274ca8dd62a815002e9aa6": {
+   "text": "What is a full name of the ASER?",
+   "sec": 0.412,
+   "audio_sec": 3.97
+  },
+  "57274ca8dd62a815002e9aa7": {
+   "text": "What is the purpose of the ASER?",
+   "sec": 0.312,
+   "audio_sec": 3.76
+  },
+  "57274ca8dd62a815002e9aa8": {
+   "text": "In private schools, what language your class is taught in?",
+   "sec": 0.353,
+   "audio_sec": 4.67
+  },
+  "57274d1cdd62a815002e9ab0": {
+   "text": "What is the typical annual cost for an Irish private school?",
+   "sec": 0.348,
+   "audio_sec": 5.13
+  },
+  "57274d1cdd62a815002e9ab1": {
+   "text": "Along with the congregation of Christian brothers, what is a notable religious group that runs It's v-paying schools in Ireland.",
+   "sec": 0.767,
+   "audio_sec": 8.45
+  },
+  "57274d1cdd62a815002e9ab2": {
+   "text": "What might the fees to attend an Irish boarding school rise to?",
+   "sec": 0.378,
+   "audio_sec": 5.06
+  },
+  "57274d9bf1498d1400e8f5f7": {
+   "text": "What languages used in Chinese primary schools in Malaysia?",
+   "sec": 0.352,
+   "audio_sec": 4.69
+  },
+  "57274d9bf1498d1400e8f5f8": {
+   "text": "What languages use in Chinese secondary schools in Malaysia?",
+   "sec": 0.332,
+   "audio_sec": 4.76
+  },
+  "57274d9bf1498d1400e8f5f9": {
+   "text": "What is the name of the post-independence government school system in Malaysia?",
+   "sec": 0.436,
+   "audio_sec": 5.87
+  },
+  "57274d9bf1498d1400e8f5fa": {
+   "text": "As a result of a compromise about how many Chinese schools became national type schools.",
+   "sec": 0.386,
+   "audio_sec": 7.22
+  },
+  "57274e145951b619008f87e8": {
+   "text": "How are unaided schools different from hated schools?",
+   "sec": 0.37,
+   "audio_sec": 4.57
+  },
+  "57274e145951b619008f87e9": {
+   "text": "Where's Galaxy Public School located?",
+   "sec": 0.303,
+   "audio_sec": 4.09
+  },
+  "57274e145951b619008f87ea": {
+   "text": "In Nepalese private schools, what is a primary language of instruction?",
+   "sec": 0.432,
+   "audio_sec": 5.8
+  },
+  "57274e145951b619008f87eb": {
+   "text": "In addition to English, what language is also often taught in Nepalese private schools.",
+   "sec": 0.426,
+   "audio_sec": 6.22
+  },
+  "57274eca5951b619008f8801": {
+   "text": "What percentage of New Zealand students attended private schools in April 2014?",
+   "sec": 0.551,
+   "audio_sec": 6.71
+  },
+  "57274eca5951b619008f8802": {
+   "text": "What religion schools were integrated into New Zealand public schools between 1979 and 1984?",
+   "sec": 0.427,
+   "audio_sec": 8.75
+  },
+  "57274eca5951b619008f8803": {
+   "text": "What city, along with Hamilton, Wellington and Christchurch, is one of the largest in New Zealand?",
+   "sec": 0.474,
+   "audio_sec": 6.97
+  },
+  "57274f49f1498d1400e8f61f": {
+   "text": "Where is Samuel Marsden Collegiate School located?",
+   "sec": 0.323,
+   "audio_sec": 4.62
+  },
+  "57274f49f1498d1400e8f620": {
+   "text": "What the nomination is associated with St. Kentiger in College.",
+   "sec": 0.356,
+   "audio_sec": 5.5
+  },
+  "57274f49f1498d1400e8f621": {
+   "text": "In what city is reindeer when we were a girl school?",
+   "sec": 0.413,
+   "audio_sec": 4.48
+  },
+  "57274f49f1498d1400e8f622": {
+   "text": "What group operates seeing Dominick's College in Wenga, Nui?",
+   "sec": 0.396,
+   "audio_sec": 5.5
+  },
+  "5727500f708984140094dbfe": {
+   "text": "In the Philippines, what percentage of secondary school students attend private schools?",
+   "sec": 0.358,
+   "audio_sec": 6.01
+  },
+  "5727500f708984140094dbff": {
+   "text": "What percentage of Filipino tertiary education takes place in private schools?",
+   "sec": 0.363,
+   "audio_sec": 5.83
+  },
+  "5727500f708984140094dc00": {
+   "text": "In what month and year was a revised manual of regulations from private schools released?",
+   "sec": 0.427,
+   "audio_sec": 6.71
+  },
+  "5727500f708984140094dc01": {
+   "text": "Along with English and Mathematics, what subject replace values education for 4th year students?",
+   "sec": 0.524,
+   "audio_sec": 7.17
+  },
+  "572750df5951b619008f8831": {
+   "text": "What aid is available to underprivileged students seeking to attend a private university?",
+   "sec": 0.411,
+   "audio_sec": 6.41
+  },
+  "5727515f708984140094dc13": {
+   "text": "Along with public schools, what type of school was recognized under the South African Schools Act.",
+   "sec": 0.424,
+   "audio_sec": 6.57
+  },
+  "5727515f708984140094dc14": {
+   "text": "In South Africa, along with privately governed schools, what schools are classified as independent.",
+   "sec": 0.466,
+   "audio_sec": 7.04
+  },
+  "5727515f708984140094dc15": {
+   "text": "In what century did missionaries notably establish church schools in South Africa?",
+   "sec": 0.354,
+   "audio_sec": 6.13
+  },
+  "572754dd708984140094dc3c": {
+   "text": "about how many students attend can scop school on schools.",
+   "sec": 0.352,
+   "audio_sec": 5.36
+  },
+  "572754dd708984140094dc3d": {
+   "text": "How many people work for a conscript school on schools?",
+   "sec": 0.385,
+   "audio_sec": 4.78
+  },
+  "572754dd708984140094dc3e": {
+   "text": "What is the English translation of conscript school on?",
+   "sec": 0.353,
+   "audio_sec": 5.09
+  },
+  "572754dd708984140094dc3f": {
+   "text": "What school model is Sweden notable for?",
+   "sec": 0.337,
+   "audio_sec": 3.88
+  },
+  "572756265951b619008f886e": {
+   "text": "But schools do preparatory schools prepare British children to attend.",
+   "sec": 0.346,
+   "audio_sec": 5.06
+  },
+  "572756265951b619008f886f": {
+   "text": "What percentage of British children are educated at GSCE level in fee paying schools?",
+   "sec": 0.415,
+   "audio_sec": 7.8
+  },
+  "572756265951b619008f8870": {
+   "text": "At a level, what percentage of British students attend fee paying schools?",
+   "sec": 0.411,
+   "audio_sec": 6.04
+  },
+  "572756265951b619008f8871": {
+   "text": "What is the upper range of annual fees for non-boarding students in British public schools?",
+   "sec": 0.432,
+   "audio_sec": 5.92
+  },
+  "572757bef1498d1400e8f693": {
+   "text": "What was a primary race of students attending Christian academies after the Brown decision?",
+   "sec": 0.464,
+   "audio_sec": 6.2
+  },
+  "572757bef1498d1400e8f694": {
+   "text": "School desegregation in the United States led to an increased number of students of what ethnicity in public schools.",
+   "sec": 0.5,
+   "audio_sec": 7.83
+  },
+  "572758e0f1498d1400e8f6af": {
+   "text": "What a amendment to the United States Constitution governs government funding of religious school.",
+   "sec": 0.474,
+   "audio_sec": 7.62
+  },
+  "572758e0f1498d1400e8f6b0": {
+   "text": "What state constitutional amendments make reference to the government funding religious schools?",
+   "sec": 0.416,
+   "audio_sec": 7.08
+  },
+  "572758e0f1498d1400e8f6b1": {
+   "text": "Granting what status would allow private non-religious schools in the U.S. to receive public funds?",
+   "sec": 0.496,
+   "audio_sec": 7.87
+  },
+  "572759665951b619008f8884": {
+   "text": "In what year did Massachusetts first require children to be educated in schools?",
+   "sec": 0.377,
+   "audio_sec": 7.71
+  },
+  "572759665951b619008f8885": {
+   "text": "In what year was Wisconsin v. Yoder decided at the Supreme Court?",
+   "sec": 0.407,
+   "audio_sec": 6.94
+  },
+  "572759665951b619008f8886": {
+   "text": "What is the citation for the Pierce v. Society of Sisters case?",
+   "sec": 0.387,
+   "audio_sec": 6.46
+  },
+  "572759665951b619008f8887": {
+   "text": "Who was the opposing party in the Runyon case?",
+   "sec": 0.368,
+   "audio_sec": 5.06
+  },
+  "572759dbdd62a815002e9b95": {
+   "text": "What would a parent have to pay to send their child to a boarding school in 2012?",
+   "sec": 0.447,
+   "audio_sec": 7.5
+  },
+  "572759dbdd62a815002e9b96": {
+   "text": "What notable private school has an endowment of several hundred million dollars?",
+   "sec": 0.386,
+   "audio_sec": 7.27
+  },
+  "572759dbdd62a815002e9b97": {
+   "text": "In addition to endowments and tuition, how do boarding schools cover their operating costs?",
+   "sec": 0.491,
+   "audio_sec": 7.94
+  },
+  "5728349dff5b5019007d9efe": {
+   "text": "What is the Dutch word for the Amazon rainforest?",
+   "sec": 0.345,
+   "audio_sec": 4.97
+  },
+  "5728349dff5b5019007d9eff": {
+   "text": "What rainforests covers the majority of the Amazon basin in South America?",
+   "sec": 0.389,
+   "audio_sec": 6.57
+  },
+  "5728349dff5b5019007d9f00": {
+   "text": "In what country can most of the Amazon rainforest be found?",
+   "sec": 0.349,
+   "audio_sec": 4.92
+  },
+  "5728349dff5b5019007d9f01": {
+   "text": "The Amazon rainforest makes up a lot amount of earth rainforests.",
+   "sec": 0.419,
+   "audio_sec": 5.32
+  },
+  "5728349dff5b5019007d9f02": {
+   "text": "How many species of trees can be found in the Amazon rainforest?",
+   "sec": 0.438,
+   "audio_sec": 5.2
+  },
+  "57283adcff5b5019007d9f97": {
+   "text": "During which period in history was the Amazon rainforest in narrowband of forest.",
+   "sec": 0.443,
+   "audio_sec": 6.59
+  },
+  "57283adcff5b5019007d9f98": {
+   "text": "What did the Amazon rainforests do during the middle myosene?",
+   "sec": 0.425,
+   "audio_sec": 5.64
+  },
+  "57283d173acd2414000df793": {
+   "text": "What basin was formed when the Andes Mountains rose?",
+   "sec": 0.364,
+   "audio_sec": 5.48
+  },
+  "572841772ca10214002da1a6": {
+   "text": "There have been major changes in Amazon rainforest vegetation over the last how many years.",
+   "sec": 0.566,
+   "audio_sec": 7.73
+  },
+  "572841772ca10214002da1a7": {
+   "text": "What caused changes in the Amazon rainforest vegetation?",
+   "sec": 0.346,
+   "audio_sec": 4.85
+  },
+  "572841772ca10214002da1a8": {
+   "text": "What has been analyzed to compare Amazon rainfall in the past and present?",
+   "sec": 0.403,
+   "audio_sec": 5.57
+  },
+  "572841772ca10214002da1a9": {
+   "text": "Let's have a lower rainfall in the Amazon during the LGM than attributed to.",
+   "sec": 0.453,
+   "audio_sec": 6.8
+  },
+  "5728455bff5b5019007da078": {
+   "text": "What tool has measured the amount of dust that travels from the Sahara to the Amazon?",
+   "sec": 0.441,
+   "audio_sec": 7.29
+  },
+  "5728455bff5b5019007da079": {
+   "text": "How much deaths is blown out of the Sahara each year?",
+   "sec": 0.368,
+   "audio_sec": 4.67
+  },
+  "5728455bff5b5019007da07a": {
+   "text": "How much the hiring desk falls over the Amazon basin each year?",
+   "sec": 0.368,
+   "audio_sec": 5.87
+  },
+  "5728455bff5b5019007da07b": {
+   "text": "How much the hard and desk remains in the air over the Amazon each year?",
+   "sec": 0.502,
+   "audio_sec": 6.04
+  },
+  "5728455bff5b5019007da07c": {
+   "text": "How much saharan dust is blown and false upon, the Caribbean Sea each year.",
+   "sec": 0.491,
+   "audio_sec": 6.83
+  },
+  "572847dd4b864d19001648bd": {
+   "text": "What a well known archaeologist, believe the Amazon didn't have many inhabitants.",
+   "sec": 0.425,
+   "audio_sec": 6.99
+  },
+  "572847dd4b864d19001648be": {
+   "text": "How many inhabitants did Betty Megers believe could occupy each square kilometer of the Amazon?",
+   "sec": 0.409,
+   "audio_sec": 8.43
+  },
+  "572847dd4b864d19001648bf": {
+   "text": "In what book did Betty Meger subscribe the idea of the Amazon being sparsely populated?",
+   "sec": 0.438,
+   "audio_sec": 7.29
+  },
+  "5728d5793acd2414000dffb7": {
+   "text": "How was the civil disobedience shown and untickening?",
+   "sec": 0.348,
+   "audio_sec": 6.36
+  },
+  "5728d63c4b864d1900164f1a": {
+   "text": "What was the principle shown in the Mark of Anarchy?",
+   "sec": 0.294,
+   "audio_sec": 6.11
+  },
+  "5728d63c4b864d1900164f1b": {
+   "text": "Which famous Indian practiced civil disobedience?",
+   "sec": 0.285,
+   "audio_sec": 6.46
+  },
+  "5728d63c4b864d1900164f1c": {
+   "text": "What was Gandhi's work called?",
+   "sec": 0.319,
+   "audio_sec": 4.57
+  },
+  "5728d6f02ca10214002da912": {
+   "text": "What issue has been plaguing the civil disobedience movement?",
+   "sec": 0.323,
+   "audio_sec": 7.13
+  },
+  "5728dafe3acd2414000e0061": {
+   "text": "What did Thoreau claim about the majority?",
+   "sec": 0.311,
+   "audio_sec": 5.64
+  },
+  "5728e3c33acd2414000e0135": {
+   "text": "How long did it take for throws disobedient to be known?",
+   "sec": 0.337,
+   "audio_sec": 5.76
+  },
+  "5728e5224b864d1900165035": {
+   "text": "What type of goals are usually done starting the law?",
+   "sec": 0.317,
+   "audio_sec": 4.76
+  },
+  "5728e5224b864d1900165036": {
+   "text": "Who lived in a tree to prevent it from being cut down as a form of civil disobedience?",
+   "sec": 0.411,
+   "audio_sec": 6.73
+  },
+  "57293c246aef051400154bb9": {
+   "text": "How many people attended the 2003 IPCC meeting?",
+   "sec": 0.33,
+   "audio_sec": 7.5
+  },
+  "57293c246aef051400154bba": {
+   "text": "What kind of people attend the IPCC meetings?",
+   "sec": 0.322,
+   "audio_sec": 5.76
+  },
+  "57293c246aef051400154bbb": {
+   "text": "How much of the IPCC attendees are government representatives?",
+   "sec": 0.386,
+   "audio_sec": 7.5
+  },
+  "57293ca73f37b3190047815c": {
+   "text": "We started the IPCC Trust Fund.",
+   "sec": 0.316,
+   "audio_sec": 5.62
+  },
+  "57293ca73f37b3190047815d": {
+   "text": "Who funds the IPCC Secretary?",
+   "sec": 0.286,
+   "audio_sec": 5.22
+  },
+  "57293ca73f37b3190047815e": {
+   "text": "Who funds the IPCC's Deputy Secretary?",
+   "sec": 0.344,
+   "audio_sec": 6.15
+  },
+  "57293ca73f37b3190047815f": {
+   "text": "What rules does the IPCC have to follow?",
+   "sec": 0.296,
+   "audio_sec": 6.08
+  },
+  "57293d6d1d046914007791b9": {
+   "text": "How many contributing authors does an IPCC report chapter have?",
+   "sec": 0.357,
+   "audio_sec": 5.97
+  },
+  "57293d6d1d046914007791ba": {
+   "text": "Who assembles the author's contributions?",
+   "sec": 0.304,
+   "audio_sec": 4.37
+  },
+  "57293d6d1d046914007791bb": {
+   "text": "Who do coordinating lead authors report to?",
+   "sec": 0.299,
+   "audio_sec": 4.48
+  },
+  "57293e221d046914007791d6": {
+   "text": "What do increase the greenhouse gases cause?",
+   "sec": 0.326,
+   "audio_sec": 4.67
+  },
+  "57293e221d046914007791d7": {
+   "text": "How much of the greenhouse effect is due to carbon dioxide?",
+   "sec": 0.344,
+   "audio_sec": 5.99
+  },
+  "57293e221d046914007791d8": {
+   "text": "What is the scenario called in which we don't change our greenhouse gas creation practices?",
+   "sec": 0.424,
+   "audio_sec": 7.48
+  },
+  "57293e221d046914007791d9": {
+   "text": "How much has global mean surface air temperature changed in the last century?",
+   "sec": 0.514,
+   "audio_sec": 7.04
+  },
+  "57293e983f37b3190047818d": {
+   "text": "Which journal was the joint statement published in?",
+   "sec": 0.345,
+   "audio_sec": 4.83
+  },
+  "57293e983f37b3190047818e": {
+   "text": "How short did the steam and sea scientists were the temperature would keep rising?",
+   "sec": 0.354,
+   "audio_sec": 6.06
+  },
+  "57293e983f37b3190047818f": {
+   "text": "How much did a statement predict a global surface temperature would increase by 2100?",
+   "sec": 0.385,
+   "audio_sec": 6.92
+  },
+  "57293f353f37b3190047819c": {
+   "text": "What did Linden criticize about a summary for policymakers?",
+   "sec": 0.331,
+   "audio_sec": 5.76
+  },
+  "57293f353f37b3190047819d": {
+   "text": "Who responded to Linden's criticisms?",
+   "sec": 0.503,
+   "audio_sec": 4.46
+  },
+  "57293f353f37b3190047819e": {
+   "text": "What was Hotton's role?",
+   "sec": 0.305,
+   "audio_sec": 3.09
+  },
+  "57293f353f37b3190047819f": {
+   "text": "What did Hopkins say is necessary for any changes to the SPM?",
+   "sec": 0.389,
+   "audio_sec": 5.69
+  },
+  "572940246aef051400154bed": {
+   "text": "What is used to ask the made emissions?",
+   "sec": 0.292,
+   "audio_sec": 4.32
+  },
+  "572940246aef051400154bee": {
+   "text": "Levels of what things are used to determine emission factors.",
+   "sec": 0.521,
+   "audio_sec": 5.04
+  },
+  "572940246aef051400154bef": {
+   "text": "We'll count those assigned tasks to the IPCC.",
+   "sec": 0.322,
+   "audio_sec": 5.22
+  },
+  "572941273f37b319004781ae": {
+   "text": "What direction do Watson say the mistake went in?",
+   "sec": 0.307,
+   "audio_sec": 4.55
+  },
+  "572941273f37b319004781af": {
+   "text": "Well, what's Martin Perry's Row in DiPCC?",
+   "sec": 0.5,
+   "audio_sec": 4.81
+  },
+  "572941273f37b319004781b0": {
+   "text": "What was the topic of the era?",
+   "sec": 0.28,
+   "audio_sec": 3.58
+  },
+  "572941273f37b319004781b1": {
+   "text": "Well, what's the verdict on other alleged errors?",
+   "sec": 0.307,
+   "audio_sec": 4.74
+  },
+  "57294209af94a219006aa203": {
+   "text": "What is the nickname for the Millennial Northern Hemisphere Temporary Construction Graph?",
+   "sec": 0.42,
+   "audio_sec": 7.11
+  },
+  "57294209af94a219006aa204": {
+   "text": "Worry construction supported in 1999 papers information.",
+   "sec": 0.318,
+   "audio_sec": 5.39
+  },
+  "57294279af94a219006aa20c": {
+   "text": "When the singer dispute the graph out of Senate hearing.",
+   "sec": 0.397,
+   "audio_sec": 4.48
+  },
+  "57294279af94a219006aa20d": {
+   "text": "What's that a committee did singer speak to in July 2000?",
+   "sec": 0.429,
+   "audio_sec": 5.99
+  },
+  "572943ab1d0469140077921c": {
+   "text": "Who was Chairman of the House Science Committee?",
+   "sec": 0.295,
+   "audio_sec": 4.11
+  },
+  "572943ab1d0469140077921d": {
+   "text": "Who said Barton's investigation was misguided and illegitimate?",
+   "sec": 0.306,
+   "audio_sec": 5.74
+  },
+  "572944e03f37b319004781e3": {
+   "text": "How many medieval warm period reconstructions were used?",
+   "sec": 0.341,
+   "audio_sec": 4.95
+  },
+  "572944e03f37b319004781e4": {
+   "text": "How many medieval war-impaired reconstructions covered a thousand plus years?",
+   "sec": 0.44,
+   "audio_sec": 6.25
+  },
+  "572944e03f37b319004781e5": {
+   "text": "What problem did some tree-wing data have?",
+   "sec": 0.362,
+   "audio_sec": 4.62
+  },
+  "572945b11d04691400779230": {
+   "text": "How did the 2001 IPCC report compare to reality for 2001 to 2006?",
+   "sec": 0.403,
+   "audio_sec": 7.83
+  },
+  "572945b11d04691400779231": {
+   "text": "How did the 2001 IPCC report compare to reality on temperature levels?",
+   "sec": 0.441,
+   "audio_sec": 6.97
+  },
+  "572945b11d04691400779232": {
+   "text": "How did the 2001 IPCC report compare to reality on sea levels?",
+   "sec": 0.483,
+   "audio_sec": 6.66
+  },
+  "572949306aef051400154c69": {
+   "text": "How much did the ITCC third assessment report say sea levels will rise from 1990 to 2100?",
+   "sec": 0.544,
+   "audio_sec": 9.03
+  },
+  "572949306aef051400154c6a": {
+   "text": "How much do researchers now think sea levels arise from 1990 to 2100?",
+   "sec": 0.411,
+   "audio_sec": 6.71
+  },
+  "572949306aef051400154c6b": {
+   "text": "When was the third assessment report published?",
+   "sec": 0.34,
+   "audio_sec": 3.9
+  },
+  "57294baaaf94a219006aa26c": {
+   "text": "who published the state of a planet 2008-2009 report.",
+   "sec": 0.78,
+   "audio_sec": 6.22
+  },
+  "57294baaaf94a219006aa26d": {
+   "text": "What approach did open-himer advocate?",
+   "sec": 0.369,
+   "audio_sec": 3.81
+  },
+  "572951f16aef051400154cd0": {
+   "text": "What was one proposal to let the IPCC respond to new evidence faster?",
+   "sec": 0.401,
+   "audio_sec": 6.62
+  },
+  "572951f16aef051400154cd1": {
+   "text": "How was it suggested that the IPCC avoid political problem?",
+   "sec": 0.357,
+   "audio_sec": 5.13
+  },
+  "5729a26d6aef05140015505a": {
+   "text": "What happens to the norm when a number is multiplied by P?",
+   "sec": 0.373,
+   "audio_sec": 6.46
+  },
+  "5729a26d6aef05140015505b": {
+   "text": "To what may general global fields be transferred to or from?",
+   "sec": 0.36,
+   "audio_sec": 7.8
+  },
+  "5729a26d6aef05140015505c": {
+   "text": "Completing Q with respect to what will produce the field of real numbers.",
+   "sec": 0.433,
+   "audio_sec": 7.87
+  },
+  "5729a26d6aef05140015505d": {
+   "text": "What principle highlights the significance of primes in number theory?",
+   "sec": 0.432,
+   "audio_sec": 6.99
+  },
+  "5729a3716aef05140015506a": {
+   "text": "Which French composer wrote a metrical music using prime numbers?",
+   "sec": 0.397,
+   "audio_sec": 8.41
+  },
+  "5729a3716aef05140015506b": {
+   "text": "What is One Work by Olivier Messian?",
+   "sec": 0.349,
+   "audio_sec": 6.52
+  },
+  "5729a3716aef05140015506c": {
+   "text": "What is another piece created by Olivier Messian?",
+   "sec": 0.378,
+   "audio_sec": 7.17
+  },
+  "5729a3716aef05140015506d": {
+   "text": "In which a toad of noons with makes to primes 41, 43, 47, and 53 appear in.",
+   "sec": 0.511,
+   "audio_sec": 10.96
+  },
+  "5729a3716aef05140015506e": {
+   "text": "Messian says that composition with prime numbers was inspired by what?",
+   "sec": 0.402,
+   "audio_sec": 7.92
+  },
+  "5729e2316aef0514001550c4": {
+   "text": "What kind of forest is the Amazon rainforest?",
+   "sec": 0.338,
+   "audio_sec": 4.39
+  },
+  "5729e2316aef0514001550c5": {
+   "text": "How many square kilometers is the Amazon decent?",
+   "sec": 0.345,
+   "audio_sec": 4.46
+  },
+  "5729e2316aef0514001550c6": {
+   "text": "How many nations are within the Amazon Basin?",
+   "sec": 0.361,
+   "audio_sec": 3.92
+  },
+  "5729e2316aef0514001550c7": {
+   "text": "which nation contains the majority of the Amazon forest.",
+   "sec": 0.357,
+   "audio_sec": 5.04
+  },
+  "5729e2316aef0514001550c8": {
+   "text": "What is the estimate for the amount of tree species in the Amazon Tropical Rainforest?",
+   "sec": 0.446,
+   "audio_sec": 6.55
+  },
+  "5729e500af94a219006aa6b5": {
+   "text": "Rainforest.",
+   "sec": 1.434,
+   "audio_sec": 3.37
+  },
+  "5729e500af94a219006aa6b6": {
+   "text": "Beginning how many years ago did the Amazon rainforest extend 45 degrees south?",
+   "sec": 0.476,
+   "audio_sec": 6.5
+  },
+  "5729e500af94a219006aa6b7": {
+   "text": "After all, it goes from period. Under what period did the Amazon rainforest begin to expand?",
+   "sec": 0.485,
+   "audio_sec": 7.27
+  },
+  "5729e500af94a219006aa6b8": {
+   "text": "The Amazon rainforest became a mostly inland forest around which global event.",
+   "sec": 0.404,
+   "audio_sec": 6.22
+  },
+  "5729e500af94a219006aa6b9": {
+   "text": "Savannah area is expanded over the last how many years.",
+   "sec": 0.355,
+   "audio_sec": 5.46
+  },
+  "5729e6313f37b319004785a9": {
+   "text": "During what period the drainage basin of the Amazon likely split.",
+   "sec": 0.366,
+   "audio_sec": 5.8
+  },
+  "5729e6313f37b319004785aa": {
+   "text": "Near where, in the continent, is it believed that the Amazon Basin split?",
+   "sec": 0.457,
+   "audio_sec": 5.99
+  },
+  "5729e6313f37b319004785ab": {
+   "text": "Where did water on the eastern side of the Amazon basin travel after the split?",
+   "sec": 0.449,
+   "audio_sec": 6.29
+  },
+  "5729e6313f37b319004785ac": {
+   "text": "Where did the water in the Amazon basin flow towards when moving west?",
+   "sec": 0.437,
+   "audio_sec": 5.71
+  },
+  "5729e6313f37b319004785ad": {
+   "text": "What is the lake known as which was created by the rise of the Andy's mountains?",
+   "sec": 0.432,
+   "audio_sec": 6.59
+  },
+  "5729ea263f37b319004785bd": {
+   "text": "A satellite that measured the amount of dust going to the Amazon was named the what?",
+   "sec": 0.474,
+   "audio_sec": 6.41
+  },
+  "5729ea263f37b319004785be": {
+   "text": "What organization runs the satellite that measured dust that landed on the Amazon?",
+   "sec": 0.392,
+   "audio_sec": 6.36
+  },
+  "5729ea263f37b319004785bf": {
+   "text": "How much windblown gusts leads to Sahara each year?",
+   "sec": 0.391,
+   "audio_sec": 4.92
+  },
+  "5729ea263f37b319004785c0": {
+   "text": "How many miles across the Atlantic Ocean? This is a Harring Dust Travel.",
+   "sec": 0.482,
+   "audio_sec": 6.11
+  },
+  "5729ea263f37b319004785c1": {
+   "text": "How many tons of Sahara and dust falls on the Amazon basin each year?",
+   "sec": 0.427,
+   "audio_sec": 5.99
+  },
+  "5729eb34af94a219006aa6c9": {
+   "text": "Which archaeologists propose the idea that the Amazon rainforest connects to staying large population?",
+   "sec": 0.534,
+   "audio_sec": 7.73
+  },
+  "5729eb34af94a219006aa6ca": {
+   "text": "Which book discussed a theory about low populations in the Amazon lane for the Amazon?",
+   "sec": 0.465,
+   "audio_sec": 5.85
+  },
+  "5729eb34af94a219006aa6cb": {
+   "text": "What was the theorized maximum population density per square kilometer for the Amazon rainforest?",
+   "sec": 0.446,
+   "audio_sec": 8.01
+  },
+  "5729eb34af94a219006aa6cc": {
+   "text": "In 1500 AD, how many people were built to have lived in the Amazon region?",
+   "sec": 0.716,
+   "audio_sec": 7.57
+  },
+  "5729eb34af94a219006aa6cd": {
+   "text": "In the 1980s, what was the population at the Amazon region?",
+   "sec": 0.429,
+   "audio_sec": 5.78
+  },
+  "5729edd56aef051400155113": {
+   "text": "In white year to the first European travel the entire length of the Amazon",
+   "sec": 0.407,
+   "audio_sec": 5.57
+  },
+  "5729edd56aef051400155114": {
+   "text": "Geoglyph's DG of the Wet Period were found in T4 Stidland along the Amazon River.",
+   "sec": 0.481,
+   "audio_sec": 7.01
+  },
+  "5729edd56aef051400155115": {
+   "text": "He was given credit for discovering geoglyphs along the Amazon.",
+   "sec": 0.382,
+   "audio_sec": 5.78
+  },
+  "5729edd56aef051400155116": {
+   "text": "For how many years was evidence shown that humans shaped the Amazon?",
+   "sec": 0.375,
+   "audio_sec": 5.53
+  },
+  "5729ef266aef051400155120": {
+   "text": "Evidence for what types of structures were found in 2003.",
+   "sec": 0.395,
+   "audio_sec": 5.41
+  },
+  "5729f0db6aef051400155126": {
+   "text": "The Amazon region is home to how many species of insect.",
+   "sec": 0.417,
+   "audio_sec": 5.94
+  },
+  "5729f0db6aef051400155127": {
+   "text": "How many species of bird and mammals are there in the Amazon region?",
+   "sec": 0.515,
+   "audio_sec": 7.06
+  },
+  "5729f0db6aef051400155128": {
+   "text": "How many plant species are estimated to be in the Amazon region?",
+   "sec": 0.431,
+   "audio_sec": 5.97
+  },
+  "5729f0db6aef051400155129": {
+   "text": "How many reptiles have been discovered in the Amazon region?",
+   "sec": 0.343,
+   "audio_sec": 5.71
+  },
+  "5729f0db6aef05140015512a": {
+   "text": "What amount of bird species on earth are found in the Amazon rainforest?",
+   "sec": 0.394,
+   "audio_sec": 6.97
+  },
+  "5729f2646aef051400155130": {
+   "text": "Where does the Amazon region rate among the entire earth for its amount of biodiversity?",
+   "sec": 0.413,
+   "audio_sec": 8.57
+  },
+  "5729f2646aef051400155131": {
+   "text": "How many tree species were found in one square kilometer of Ecuadorian rainforest in 2001?",
+   "sec": 0.414,
+   "audio_sec": 9.75
+  },
+  "5729f2646aef051400155132": {
+   "text": "How many tons of life plants were found to live in one square kilometer of the Amazon rainforest in 1999?",
+   "sec": 0.513,
+   "audio_sec": 9.4
+  },
+  "5729f2646aef051400155133": {
+   "text": "What is the average weight of the biomass per hectare in the Amazon?",
+   "sec": 0.412,
+   "audio_sec": 6.13
+  },
+  "5729f2646aef051400155134": {
+   "text": "How many plant species are of interest to society and manufacturers exist in the Amazon rainforest?",
+   "sec": 0.365,
+   "audio_sec": 8.87
+  },
+  "572a0bfaaf94a219006aa779": {
+   "text": "Many changes in the vegetation of the Amazon rainforest took place since the last glacial maximum, which was how many years ago?",
+   "sec": 0.833,
+   "audio_sec": 11.1
+  },
+  "572a0bfaaf94a219006aa77a": {
+   "text": "Peace in.",
+   "sec": 1.083,
+   "audio_sec": 3.32
+  },
+  "572a0bfaaf94a219006aa77b": {
+   "text": "Changes in rainfall reduce what kind of vegetation cover in the Amazon basin.",
+   "sec": 0.37,
+   "audio_sec": 6.78
+  },
+  "572a0bfaaf94a219006aa77c": {
+   "text": "Scientists disagree with how the Amazon rainforest change over time, with some arguing that it was reduced to isolated refusia I would ever rate it I would.",
+   "sec": 0.632,
+   "audio_sec": 11.84
+  },
+  "572a0bfaaf94a219006aa77d": {
+   "text": "Why is it called to respond to disagreements about the machines and the items on record?",
+   "sec": 0.391,
+   "audio_sec": 6.87
+  },
+  "572fae4b04bcaa1900d76be2": {
+   "text": "What provided much of the basis for the structure of the Parliament in 1995?",
+   "sec": 0.358,
+   "audio_sec": 6.78
+  },
+  "572faec7b2c2fd1400568337": {
+   "text": "Who opened the new Parliament Building on October 9th, 2004?",
+   "sec": 0.341,
+   "audio_sec": 6.11
+  },
+  "572fb059947a6a140053cb84": {
+   "text": "Which hall is used as Parliament's Principal Committee room?",
+   "sec": 0.301,
+   "audio_sec": 5.99
+  },
+  "572fb42904bcaa1900d76c19": {
+   "text": "Who is responsible for operating the electronic voting equipment in chambercloths?",
+   "sec": 0.413,
+   "audio_sec": 7.13
+  },
+  "572fbea404bcaa1900d76c5e": {
+   "text": "How many members in the seats of the Scottish Parliament are members of the Scottish Government?",
+   "sec": 0.441,
+   "audio_sec": 8.03
+  },
+  "572fbea404bcaa1900d76c5f": {
+   "text": "What can the non-elected members from the Scottish government not do?",
+   "sec": 0.332,
+   "audio_sec": 6.32
+  },
+  "572fbf21a23a5019007fc93a": {
+   "text": "who presented the map to the Scottish Parliament when it was initially opened.",
+   "sec": 0.365,
+   "audio_sec": 6.9
+  },
+  "572fbf21a23a5019007fc93b": {
+   "text": "What is the mace displayed in?",
+   "sec": 0.32,
+   "audio_sec": 4.06
+  },
+  "572fc41f947a6a140053cc82": {
+   "text": "What does a presiding officer try to achieve a balance of between speakers?",
+   "sec": 0.384,
+   "audio_sec": 5.6
+  },
+  "572fc41f947a6a140053cc83": {
+   "text": "What members typically open debates?",
+   "sec": 0.271,
+   "audio_sec": 4.11
+  },
+  "572fc41f947a6a140053cc84": {
+   "text": "What language other than English has a Scottish Parliament had meetings in?",
+   "sec": 0.414,
+   "audio_sec": 5.9
+  },
+  "572fc659b2c2fd1400568449": {
+   "text": "Wire debates on proposed motions by an MSP conducted.",
+   "sec": 0.381,
+   "audio_sec": 5.25
+  },
+  "572fc659b2c2fd140056844a": {
+   "text": "who contributes to members business in addition to the proposal.",
+   "sec": 0.44,
+   "audio_sec": 5.27
+  },
+  "572fc659b2c2fd140056844b": {
+   "text": "What does a minister who was a catalyst of the members' business do by speaking after everyone else?",
+   "sec": 0.461,
+   "audio_sec": 7.17
+  },
+  "572fc80b04bcaa1900d76d13": {
+   "text": "Economy, energy, and tourism is one of the what.",
+   "sec": 0.382,
+   "audio_sec": 4.76
+  },
+  "572fc80b04bcaa1900d76d14": {
+   "text": "What is a Scottish Parliament currently in the fourth of?",
+   "sec": 0.412,
+   "audio_sec": 4.48
+  },
+  "572fd1c4947a6a140053cd06": {
+   "text": "When do members proceed to vote on whether they agree to the principles of the final bill?",
+   "sec": 0.412,
+   "audio_sec": 8.41
+  },
+  "572fd264b2c2fd14005684ab": {
+   "text": "What is the minimum amount of time before a bill can go into law?",
+   "sec": 0.362,
+   "audio_sec": 7.08
+  },
+  "572fd264b2c2fd14005684ac": {
+   "text": "Who is a bill referred to for a ruling on whether it's within the powers of the parliament?",
+   "sec": 0.417,
+   "audio_sec": 8.29
+  },
+  "572fd264b2c2fd14005684ad": {
+   "text": "What does the template for bills passed by the Scottish Parliament include?",
+   "sec": 0.383,
+   "audio_sec": 7.13
+  },
+  "572fd47fa23a5019007fca57": {
+   "text": "Who is eligible to toss their name in the hat to be first minister?",
+   "sec": 0.404,
+   "audio_sec": 7.41
+  },
+  "572fd47fa23a5019007fca58": {
+   "text": "Other than Scotland's chief law officer, from whence our most ministers drawn from amongst.",
+   "sec": 0.72,
+   "audio_sec": 9.75
+  },
+  "572fd47fa23a5019007fca59": {
+   "text": "Who makes formal appointment or dismissal decisions?",
+   "sec": 0.311,
+   "audio_sec": 5.46
+  },
+  "572fd6aa04bcaa1900d76da1": {
+   "text": "who may change the date by up to a month on the proposal of the PO.",
+   "sec": 0.412,
+   "audio_sec": 6.78
+  },
+  "572fd6aa04bcaa1900d76da2": {
+   "text": "How many days does the Parliament have to nominate a first minister after a general election?",
+   "sec": 0.387,
+   "audio_sec": 8.31
+  },
+  "572fd6aa04bcaa1900d76da3": {
+   "text": "If an ordinary election is held within less than six months before the date of an ordinary election, what does it do to the ordinary election?",
+   "sec": 0.573,
+   "audio_sec": 10.91
+  },
+  "572fd73e947a6a140053cd33": {
+   "text": "Who can question statements the first minister or members of the cabinet make?",
+   "sec": 0.366,
+   "audio_sec": 7.04
+  },
+  "572fd73e947a6a140053cd34": {
+   "text": "What does the first minister deliver at the beginning of each parliamentary year?",
+   "sec": 0.386,
+   "audio_sec": 6.9
+  },
+  "572fd73e947a6a140053cd35": {
+   "text": "What do the leaders of the opposition parties and other MSP's question the first minister about?",
+   "sec": 0.473,
+   "audio_sec": 8.94
+  },
+  "572fd7b8947a6a140053cd3b": {
+   "text": "On what day does a general question time take place?",
+   "sec": 0.372,
+   "audio_sec": 5.8
+  },
+  "572fd7b8947a6a140053cd3c": {
+   "text": "Who may members direct questions towards during general question time?",
+   "sec": 0.4,
+   "audio_sec": 7.83
+  },
+  "572fd7b8947a6a140053cd3d": {
+   "text": "What may members question the first minister about directly during first minister's question at time?",
+   "sec": 0.575,
+   "audio_sec": 9.82
+  },
+  "572fd7b8947a6a140053cd3e": {
+   "text": "How many general questions are available to opposition leaders?",
+   "sec": 0.349,
+   "audio_sec": 6.83
+  },
+  "572fd8efb2c2fd14005684fb": {
+   "text": "When was there a reduction in the number of Scottish MPs?",
+   "sec": 0.363,
+   "audio_sec": 7.13
+  },
+  "572fd8efb2c2fd14005684fc": {
+   "text": "What is the current number of electors currently in a Scottish Parliament to constitute you and see.",
+   "sec": 0.713,
+   "audio_sec": 8.24
+  },
+  "572fd8efb2c2fd14005684fd": {
+   "text": "Why do the island archipelago compromise a smaller number of electors?",
+   "sec": 0.376,
+   "audio_sec": 7.5
+  },
+  "572fda6fb2c2fd140056850c": {
+   "text": "What method is used for tallying votes in the second vote of the ballot?",
+   "sec": 1.551,
+   "audio_sec": 7.48
+  },
+  "572fda6fb2c2fd140056850d": {
+   "text": "The party awarded a seat is the one with the highest what.",
+   "sec": 0.362,
+   "audio_sec": 5.99
+  },
+  "572fda6fb2c2fd140056850e": {
+   "text": "What set is a seat added to after being allocated?",
+   "sec": 0.434,
+   "audio_sec": 6.01
+  },
+  "572fda6fb2c2fd140056850f": {
+   "text": "How is the process of allocating seats repeated until all available seats have been determined?",
+   "sec": 0.49,
+   "audio_sec": 9.68
+  },
+  "572fdb17b2c2fd140056851e": {
+   "text": "When was the British Nationality Act passed?",
+   "sec": 0.3,
+   "audio_sec": 5.62
+  },
+  "572fdb17b2c2fd140056851f": {
+   "text": "How old most a person be to apply to be an MSP?",
+   "sec": 0.389,
+   "audio_sec": 7.5
+  },
+  "572fdb17b2c2fd1400568520": {
+   "text": "Members of which organizations are disqualified from sitting in the SP as elected MSPs.",
+   "sec": 0.433,
+   "audio_sec": 11.12
+  },
+  "572fdb17b2c2fd1400568521": {
+   "text": "What act sets the term for judging the boundaries of sanity to which individuals wishing to sit on the SP must adhere?",
+   "sec": 0.51,
+   "audio_sec": 11.89
+  },
+  "572fdbb004bcaa1900d76dda": {
+   "text": "Who did the S&P obtain 16 seats from?",
+   "sec": 0.337,
+   "audio_sec": 7.99
+  },
+  "572fdbb004bcaa1900d76ddb": {
+   "text": "By how much did labor lead Lane Gray retain East Lovian?",
+   "sec": 0.354,
+   "audio_sec": 7.87
+  },
+  "572fdbb004bcaa1900d76ddc": {
+   "text": "How many seats did the SNP take from the liberal Democrats?",
+   "sec": 0.353,
+   "audio_sec": 7.69
+  },
+  "572fdbb004bcaa1900d76ddd": {
+   "text": "What did the result of the SNP majority allow a referendum be held on?",
+   "sec": 0.372,
+   "audio_sec": 9.26
+  },
+  "572fdc34a23a5019007fca94": {
+   "text": "What was the seat of former party leader David MacLecci?",
+   "sec": 0.363,
+   "audio_sec": 7.83
+  },
+  "572fdc34a23a5019007fca95": {
+   "text": "What net loss did the conservative suffer?",
+   "sec": 0.314,
+   "audio_sec": 5.64
+  },
+  "572fdc34a23a5019007fca96": {
+   "text": "who announced she would step down as leader of the Conservatives.",
+   "sec": 0.346,
+   "audio_sec": 7.5
+  },
+  "572fdc34a23a5019007fca97": {
+   "text": "who congratulated the SNP while valuing to campaign against their referendum.",
+   "sec": 0.336,
+   "audio_sec": 9.06
+  },
+  "572fdd03a23a5019007fca9d": {
+   "text": "What consequence of establishing the Scottish Parliament applies to Scottish MPs sitting in the UK House of Commons?",
+   "sec": 0.442,
+   "audio_sec": 11.4
+  },
+  "572fdd03a23a5019007fca9e": {
+   "text": "What are MPs unable to vote on?",
+   "sec": 0.414,
+   "audio_sec": 5.18
+  },
+  "572fdd03a23a5019007fca9f": {
+   "text": "What phenomenon has led to criticism?",
+   "sec": 0.321,
+   "audio_sec": 5.18
+  },
+  "572fdd03a23a5019007fcaa0": {
+   "text": "What party had a victory in the 2015 UK election?",
+   "sec": 0.402,
+   "audio_sec": 6.76
+  },
+  "572fdd03a23a5019007fcaa1": {
+   "text": "MPs representing English constituencies can only veto laws affecting which country.",
+   "sec": 0.391,
+   "audio_sec": 9.96
+  },
+  "57308f6b8ab72b1400f9c584": {
+   "text": "The West saw themselves as what compared to the East.",
+   "sec": 0.397,
+   "audio_sec": 5.5
+  },
+  "5730ab63396df91900096264": {
+   "text": "Germany referred to which area more so than an actual country.",
+   "sec": 0.343,
+   "audio_sec": 6.87
+  },
+  "5730aef38ab72b1400f9c686": {
+   "text": "Who influenced Bismarck's size to his neighbors?",
+   "sec": 0.343,
+   "audio_sec": 5.22
+  },
+  "5730b4282461fd1900a9cfc5": {
+   "text": "Trustee thought what was needed for a true Russian revolution.",
+   "sec": 0.333,
+   "audio_sec": 5.8
+  },
+  "5730b4282461fd1900a9cfc6": {
+   "text": "Who wrote that imperialism is the highest stage of capitalism?",
+   "sec": 0.365,
+   "audio_sec": 6.27
+  },
+  "5730b4282461fd1900a9cfc7": {
+   "text": "What policy did someone implement shortly after London's death?",
+   "sec": 0.343,
+   "audio_sec": 6.32
+  },
+  "5730b4282461fd1900a9cfc8": {
+   "text": "Who is the leader of Russia in the 1960s?",
+   "sec": 0.315,
+   "audio_sec": 4.76
+  },
+  "5730b4282461fd1900a9cfc9": {
+   "text": "Who are you that the USSR had itself become an imperialist power?",
+   "sec": 0.345,
+   "audio_sec": 7.76
+  },
+  "5730b541396df919000962c2": {
+   "text": "What was the first British Empire based on?",
+   "sec": 0.3,
+   "audio_sec": 4.76
+  },
+  "5730b541396df919000962c3": {
+   "text": "Monday Great Britain loses colonies in North America.",
+   "sec": 0.354,
+   "audio_sec": 5.57
+  },
+  "5730b541396df919000962c4": {
+   "text": "When did this Spanish and Portuguese colonies gain their independence?",
+   "sec": 0.392,
+   "audio_sec": 6.18
+  },
+  "5730b541396df919000962c5": {
+   "text": "What policy gave Britain dominance in world trade?",
+   "sec": 0.313,
+   "audio_sec": 5.15
+  },
+  "5730b541396df919000962c6": {
+   "text": "When was the dispute of the Napaldionic France?",
+   "sec": 0.311,
+   "audio_sec": 5.2
+  },
+  "5730b6592461fd1900a9cfcf": {
+   "text": "By the late 19th century, which country had the largest empire ever to exist in the world?",
+   "sec": 0.422,
+   "audio_sec": 8.22
+  },
+  "5730b6592461fd1900a9cfd0": {
+   "text": "What kinds of sciences were social Darwinism in theories of race?",
+   "sec": 0.426,
+   "audio_sec": 6.06
+  },
+  "5730b6592461fd1900a9cfd1": {
+   "text": "In which continent besides Asia, for major games made by the British Empire in the late 19th century.",
+   "sec": 0.843,
+   "audio_sec": 8.73
+  },
+  "5730b6592461fd1900a9cfd2": {
+   "text": "Rudyard Kipling was an influential spokesman for what?",
+   "sec": 0.338,
+   "audio_sec": 5.5
+  },
+  "5730b7ce069b5314008322c3": {
+   "text": "How do the United States plan to subdue imperialistic tendencies?",
+   "sec": 0.327,
+   "audio_sec": 6.71
+  },
+  "5730b7ce069b5314008322c4": {
+   "text": "What was the name of Theodore Roosevelt's policy of Imperialism?",
+   "sec": 0.362,
+   "audio_sec": 7.06
+  },
+  "5730b7ce069b5314008322c5": {
+   "text": "Which country besides the Cuba did the United States try to annex in 1898?",
+   "sec": 0.344,
+   "audio_sec": 8.38
+  },
+  "5730b7ce069b5314008322c6": {
+   "text": "What caused the U.S. public to condemn the occupation of the Philippines?",
+   "sec": 0.375,
+   "audio_sec": 6.55
+  },
+  "5730b7ce069b5314008322c7": {
+   "text": "What did Smithly Butler call U.S. foreign policy?",
+   "sec": 0.362,
+   "audio_sec": 5.27
+  },
+  "5730b8ca8ab72b1400f9c704": {
+   "text": "Who was the director of the American Geographical Society in 1914?",
+   "sec": 0.319,
+   "audio_sec": 7.27
+  },
+  "5730b8ca8ab72b1400f9c705": {
+   "text": "When was Isaiah Bowman appointed to President Wilson's inquiry?",
+   "sec": 0.316,
+   "audio_sec": 6.04
+  },
+  "5730b8ca8ab72b1400f9c706": {
+   "text": "Who besides Woodrow Wilson himself had the idea for the inquiry?",
+   "sec": 0.365,
+   "audio_sec": 7.38
+  },
+  "5730b8ca8ab72b1400f9c707": {
+   "text": "What was the premise of Woodrow Wilson's inquiry?",
+   "sec": 0.31,
+   "audio_sec": 5.25
+  },
+  "5730b8ca8ab72b1400f9c708": {
+   "text": "What was Isaiah Bowman nickname as known by the public?",
+   "sec": 0.301,
+   "audio_sec": 6.22
+  },
+  "5730bb522461fd1900a9d011": {
+   "text": "Some people describe what between individuals or groups as imperialism or colonialism.",
+   "sec": 0.39,
+   "audio_sec": 9.38
+  },
+  "5730bb522461fd1900a9d012": {
+   "text": "The U.S. expansion westward could be viewed as what type of colonialism.",
+   "sec": 0.452,
+   "audio_sec": 6.59
+  },
+  "5730bb522461fd1900a9d013": {
+   "text": "How many Africans were brought into the United States during the slave trade?",
+   "sec": 0.346,
+   "audio_sec": 6.69
+  },
+  "5730bb522461fd1900a9d015": {
+   "text": "Who does Edward Sade say is being attacked by U.S. imperialism?",
+   "sec": 0.402,
+   "audio_sec": 7.01
+  },
+  "5730bc308ab72b1400f9c73c": {
+   "text": "When did the Ottoman Empire fall?",
+   "sec": 0.329,
+   "audio_sec": 4.55
+  },
+  "5730bc308ab72b1400f9c73d": {
+   "text": "Who rained over the Ottoman Empire when it was added to most powerful?",
+   "sec": 0.464,
+   "audio_sec": 6.27
+  },
+  "5730bc308ab72b1400f9c73e": {
+   "text": "How many provinces did the Ottoman Empire contain in the 17th century?",
+   "sec": 0.394,
+   "audio_sec": 7.55
+  },
+  "5730bc308ab72b1400f9c73f": {
+   "text": "The Ottoman Empire Control Territory on three continents, Africa, Asia, and which other?",
+   "sec": 0.447,
+   "audio_sec": 8.64
+  },
+  "5730bc308ab72b1400f9c740": {
+   "text": "When was the Ottoman Empire at a tight?",
+   "sec": 0.369,
+   "audio_sec": 4.83
+  },
+  "5730bd00069b5314008322d7": {
+   "text": "What was the capital of the Ottoman Empire?",
+   "sec": 0.351,
+   "audio_sec": 4.88
+  },
+  "5730bd00069b5314008322d9": {
+   "text": "Who did the Ottoman Empire ally with in World War I?",
+   "sec": 0.407,
+   "audio_sec": 5.92
+  },
+  "5730bd00069b5314008322da": {
+   "text": "Which country today is a remnant of the Ottoman Empire?",
+   "sec": 0.436,
+   "audio_sec": 6.18
+  },
+  "5730bd00069b5314008322db": {
+   "text": "What ended Turkish imperial ambitions?",
+   "sec": 0.444,
+   "audio_sec": 5.25
+  },
+  "57373a9fc3c5551400e51e7e": {
+   "text": "What is the weakest main interaction?",
+   "sec": 0.355,
+   "audio_sec": 4.6
+  },
+  "57373a9fc3c5551400e51e7f": {
+   "text": "What are weak and electromagnetic forces expressions of?",
+   "sec": 0.377,
+   "audio_sec": 5.97
+  },
+  "57373d0cc3c5551400e51e89": {
+   "text": "What did Aristotle refer to forced motion as?",
+   "sec": 0.343,
+   "audio_sec": 5.46
+  },
+  "57377aac1c4567190057447d": {
+   "text": "What notion keeps its meaning through both Newtonian and Schrodinger physics equations?",
+   "sec": 0.443,
+   "audio_sec": 7.69
+  },
+  "57378e311c456719005744af": {
+   "text": "Who first fully explained the origins of magnetic and electric fields?",
+   "sec": 0.373,
+   "audio_sec": 6.87
+  },
+  "57378e311c456719005744b0": {
+   "text": "When do the origins of magnetic and electric fields occur?",
+   "sec": 0.355,
+   "audio_sec": 5.85
+  },
+  "57378e311c456719005744b1": {
+   "text": "How many scalar equations were formed into a set by James Maxwell?",
+   "sec": 0.392,
+   "audio_sec": 6.99
+  },
+  "57378e311c456719005744b2": {
+   "text": "How many vector equations did have this side and games reformulate Maxwell's 20 scalar equations into?",
+   "sec": 0.532,
+   "audio_sec": 9.61
+  },
+  "57378e311c456719005744b3": {
+   "text": "Who discovered that magnetic and electric could self-generate?",
+   "sec": 0.369,
+   "audio_sec": 5.22
+  },
+  "573792ee1c456719005744b9": {
+   "text": "What was difficult to reconcile the photoelectric effect and the missing ultraviolet catastrophe?",
+   "sec": 0.448,
+   "audio_sec": 8.08
+  },
+  "573792ee1c456719005744ba": {
+   "text": "What was used to create a new electromagnetic theory to reconcile the troubles of the electromagnetic theory as it used to stand?",
+   "sec": 0.571,
+   "audio_sec": 9.36
+  },
+  "573792ee1c456719005744bb": {
+   "text": "What did electromagnetic theory finally lead to?",
+   "sec": 0.299,
+   "audio_sec": 4.57
+  },
+  "573792ee1c456719005744bc": {
+   "text": "What are the waves particles called the mediate all electromagnetic phenomena?",
+   "sec": 0.389,
+   "audio_sec": 6.71
+  },
+  "573792ee1c456719005744bd": {
+   "text": "What is QED short for?",
+   "sec": 0.303,
+   "audio_sec": 4.62
+  },
+  "5737958b1c456719005744c3": {
+   "text": "What is often misunderstood as a cause of matter rigidity.",
+   "sec": 0.346,
+   "audio_sec": 5.41
+  },
+  "5737958b1c456719005744c4": {
+   "text": "What actually causes rigidity in matter?",
+   "sec": 0.312,
+   "audio_sec": 4.67
+  },
+  "5737958b1c456719005744c5": {
+   "text": "What is needed to pack electrons densely together?",
+   "sec": 0.309,
+   "audio_sec": 4.78
+  },
+  "5737958b1c456719005744c6": {
+   "text": "How is a pally exclusion principle manifested in the macro world?",
+   "sec": 0.38,
+   "audio_sec": 6.5
+  },
+  "573796edc3c5551400e51f33": {
+   "text": "What is strong force active on?",
+   "sec": 0.256,
+   "audio_sec": 4.27
+  },
+  "573796edc3c5551400e51f34": {
+   "text": "What can be seen between hydrums?",
+   "sec": 0.273,
+   "audio_sec": 4.11
+  },
+  "573796edc3c5551400e51f35": {
+   "text": "What is a force between nucleons?",
+   "sec": 0.278,
+   "audio_sec": 3.95
+  },
+  "573796edc3c5551400e51f36": {
+   "text": "How are nuclear forces transmitted?",
+   "sec": 0.25,
+   "audio_sec": 3.62
+  },
+  "573796edc3c5551400e51f37": {
+   "text": "What is the term for the lack of observable free quarks?",
+   "sec": 0.363,
+   "audio_sec": 4.97
+  },
+  "57379829c3c5551400e51f3d": {
+   "text": "What does a W and Z boson exchange create?",
+   "sec": 0.332,
+   "audio_sec": 5.34
+  },
+  "57379829c3c5551400e51f3e": {
+   "text": "What is an observable effect of W and Z boson exchange?",
+   "sec": 0.341,
+   "audio_sec": 5.6
+  },
+  "57379829c3c5551400e51f3f": {
+   "text": "What is the effect of beta decay?",
+   "sec": 0.315,
+   "audio_sec": 3.88
+  },
+  "57379829c3c5551400e51f40": {
+   "text": "How many times less is a strength of the weak field compared to this strong?",
+   "sec": 0.401,
+   "audio_sec": 5.71
+  },
+  "57379829c3c5551400e51f41": {
+   "text": "I watch him for sure that we can electromagnetic forces appear the same.",
+   "sec": 0.38,
+   "audio_sec": 5.97
+  },
+  "57379a4b1c456719005744cd": {
+   "text": "What is a repulsive force of close range atom interaction?",
+   "sec": 0.387,
+   "audio_sec": 5.64
+  },
+  "57379a4b1c456719005744ce": {
+   "text": "Water occurs when the electron clouds overlap from different atoms.",
+   "sec": 0.342,
+   "audio_sec": 5.48
+  },
+  "57379a4b1c456719005744cf": {
+   "text": "What causes palliative repulsion?",
+   "sec": 0.403,
+   "audio_sec": 3.81
+  },
+  "57379a4b1c456719005744d0": {
+   "text": "What is a force that causes rigid strength instructors?",
+   "sec": 0.412,
+   "audio_sec": 5.39
+  },
+  "57379ed81c456719005744d5": {
+   "text": "What can be used to model tension forces?",
+   "sec": 0.331,
+   "audio_sec": 4.78
+  },
+  "57379ed81c456719005744d6": {
+   "text": "What do you use to let ideas string switch direction?",
+   "sec": 0.326,
+   "audio_sec": 5.55
+  },
+  "57379ed81c456719005744d7": {
+   "text": "In what ways do idea strings transmit tension forces?",
+   "sec": 0.432,
+   "audio_sec": 5.99
+  },
+  "57379ed81c456719005744d8": {
+   "text": "What is a final effect of adding more and more idea strings to a load?",
+   "sec": 0.459,
+   "audio_sec": 6.25
+  },
+  "57379ed81c456719005744d9": {
+   "text": "What can increase attention force on the load?",
+   "sec": 0.372,
+   "audio_sec": 4.5
+  },
+  "5737a0acc3c5551400e51f47": {
+   "text": "What did Newton's mechanics affect?",
+   "sec": 0.322,
+   "audio_sec": 4.32
+  },
+  "5737a0acc3c5551400e51f48": {
+   "text": "What didn't Newton's mechanics affect?",
+   "sec": 0.347,
+   "audio_sec": 4.69
+  },
+  "5737a0acc3c5551400e51f49": {
+   "text": "In what kind of fluid are pressure differences caused by direction of forces over gradients?",
+   "sec": 0.385,
+   "audio_sec": 7.17
+  },
+  "5737a0acc3c5551400e51f4a": {
+   "text": "What may a force on one part of an object effect?",
+   "sec": 0.347,
+   "audio_sec": 5.04
+  },
+  "5737a0acc3c5551400e51f4b": {
+   "text": "What does matter actually have the Newtonian mechanics doesn't address?",
+   "sec": 0.352,
+   "audio_sec": 5.85
+  },
+  "5737a25ac3c5551400e51f51": {
+   "text": "What causes strain in structures?",
+   "sec": 0.255,
+   "audio_sec": 4.78
+  },
+  "5737a25ac3c5551400e51f52": {
+   "text": "What is used to calculate cross-section area in the volume of an object?",
+   "sec": 0.368,
+   "audio_sec": 6.27
+  },
+  "5737a25ac3c5551400e51f53": {
+   "text": "What are associated with normal forces?",
+   "sec": 0.276,
+   "audio_sec": 4.9
+  },
+  "5737a25ac3c5551400e51f54": {
+   "text": "What includes pressure terms when calculating area and volume?",
+   "sec": 0.322,
+   "audio_sec": 5.85
+  },
+  "5737a4511c456719005744df": {
+   "text": "What is the force equivalent of torque compared to angular momentum?",
+   "sec": 0.332,
+   "audio_sec": 6.62
+  },
+  "5737a4511c456719005744e0": {
+   "text": "What would change their rotational inertia of the body under Newton's first law of motion?",
+   "sec": 0.368,
+   "audio_sec": 7.78
+  },
+  "5737a4511c456719005744e1": {
+   "text": "To calculate instant angular acceleration of a rigid body, what would you use?",
+   "sec": 0.418,
+   "audio_sec": 7.15
+  },
+  "5737a5931c456719005744e7": {
+   "text": "Where does centripetal force go?",
+   "sec": 0.275,
+   "audio_sec": 4.57
+  },
+  "5737a5931c456719005744e8": {
+   "text": "How do centripetal forces act in relation to vectors of velocity?",
+   "sec": 0.37,
+   "audio_sec": 6.41
+  },
+  "5737a5931c456719005744e9": {
+   "text": "What force changes an object's direction of travel?",
+   "sec": 0.332,
+   "audio_sec": 5.36
+  },
+  "5737a5931c456719005744ea": {
+   "text": "What is another word for centripetal force?",
+   "sec": 0.326,
+   "audio_sec": 5.04
+  },
+  "5737a5931c456719005744eb": {
+   "text": "What is responsible for speeding up or slowing down an object?",
+   "sec": 0.369,
+   "audio_sec": 5.53
+  },
+  "5737a7351c456719005744f1": {
+   "text": "What is the only form potential energy you can change into?",
+   "sec": 0.398,
+   "audio_sec": 5.9
+  },
+  "5737a7351c456719005744f2": {
+   "text": "What is the only form kinetic energy can change into?",
+   "sec": 0.42,
+   "audio_sec": 5.29
+  },
+  "5737a7351c456719005744f3": {
+   "text": "What is preserved in a closed system of forces when acted upon.",
+   "sec": 0.401,
+   "audio_sec": 6.08
+  },
+  "5737a7351c456719005744f4": {
+   "text": "What is the force between two locations related to?",
+   "sec": 0.359,
+   "audio_sec": 5.34
+  },
+  "5737a7351c456719005744f5": {
+   "text": "What is the force called regarding a potential field between two locations?",
+   "sec": 0.408,
+   "audio_sec": 6.76
+  },
+  "5737a84dc3c5551400e51f59": {
+   "text": "What is sometimes impossible to model?",
+   "sec": 0.301,
+   "audio_sec": 5.34
+  },
+  "5737a84dc3c5551400e51f5a": {
+   "text": "Why are some forces due to that are impossible to model?",
+   "sec": 0.371,
+   "audio_sec": 6.04
+  },
+  "5737a84dc3c5551400e51f5b": {
+   "text": "What do electrostatic gradient potentials create?",
+   "sec": 0.312,
+   "audio_sec": 5.5
+  },
+  "5737a84dc3c5551400e51f5c": {
+   "text": "Tension, compression, and drag are what kind of forces.",
+   "sec": 0.337,
+   "audio_sec": 6.04
+  },
+  "5737a9afc3c5551400e51f61": {
+   "text": "In what treatment are non-conservative and conservative forces described?",
+   "sec": 0.34,
+   "audio_sec": 6.39
+  },
+  "5737a9afc3c5551400e51f62": {
+   "text": "What changes macroscopic closed system energies?",
+   "sec": 0.365,
+   "audio_sec": 5.34
+  },
+  "5737a9afc3c5551400e51f63": {
+   "text": "What is the exchange of he associated with?",
+   "sec": 0.328,
+   "audio_sec": 4.85
+  },
+  "5737a9afc3c5551400e51f64": {
+   "text": "What is the law of thermodynamics associated with closed system heat exchange?",
+   "sec": 0.373,
+   "audio_sec": 7.01
+  },
+  "5737a9afc3c5551400e51f65": {
+   "text": "What makes energy changes in the closed system?",
+   "sec": 0.329,
+   "audio_sec": 5.46
+  },
+  "5737aafd1c456719005744fb": {
+   "text": "What is a metric term less used in the Newton?",
+   "sec": 0.334,
+   "audio_sec": 5.41
+  },
+  "5737aafd1c456719005744fc": {
+   "text": "What is a kilogram for some time referred to as?",
+   "sec": 0.332,
+   "audio_sec": 5.99
+  },
+  "5737aafd1c456719005744fd": {
+   "text": "What is a very seldom used unit of mass in the metric system?",
+   "sec": 0.386,
+   "audio_sec": 7.22
+  },
+  "5737aafd1c456719005744fe": {
+   "text": "What seldom use term of a unit of force equals to 1,000 pounds of force?",
+   "sec": 0.468,
+   "audio_sec": 7.96
+  },
+  "5737aafd1c456719005744ff": {
+   "text": "What is a seldom used force unit equal to 1,000 newtons?",
+   "sec": 0.366,
+   "audio_sec": 6.73
+  },
+  "5a0c677bf5590b0018dab3ee": {
+   "text": "What type of climates stop reinventing the forest for growing across the continent?",
+   "sec": 0.43,
+   "audio_sec": 6.5
+  },
+  "5a0c677bf5590b0018dab3f1": {
+   "text": "Climate fluctuations have stopped the savannah from doing what.",
+   "sec": 0.368,
+   "audio_sec": 5.11
+  },
+  "5a0c677bf5590b0018dab3f2": {
+   "text": "The rain force failed to thrive during what periods.",
+   "sec": 0.333,
+   "audio_sec": 5.5
+  },
+  "5a0c6a7ef5590b0018dab3f8": {
+   "text": "What's split the Amazon drainage basin along the northern part of the continent?",
+   "sec": 0.421,
+   "audio_sec": 6.55
+  },
+  "5a0c6a7ef5590b0018dab3fa": {
+   "text": "Water on the west side, float below the basin and towards which ocean.",
+   "sec": 0.397,
+   "audio_sec": 6.04
+  },
+  "5a0c6c78f5590b0018dab403": {
+   "text": "What was higher during the LGM in the present?",
+   "sec": 0.37,
+   "audio_sec": 5.11
+  },
+  "5a0c6c78f5590b0018dab404": {
+   "text": "What has been easily proven about the rainforest?",
+   "sec": 0.368,
+   "audio_sec": 5.22
+  },
+  "5a0c6d26f5590b0018dab40a": {
+   "text": "Amazon.",
+   "sec": 0.244,
+   "audio_sec": 2.76
+  },
+  "5a0c6d26f5590b0018dab40c": {
+   "text": "How many miles is a dust travel over the Pacific?",
+   "sec": 0.381,
+   "audio_sec": 4.92
+  },
+  "5a0c77e3f5590b0018dab416": {
+   "text": "Who claimed that only two inhabitants per square kilometer could be sustained in the rainforest?",
+   "sec": 0.43,
+   "audio_sec": 8.31
+  },
+  "5a0c77e3f5590b0018dab417": {
+   "text": "Betty Meger said that hunting was needed to support a large population where?",
+   "sec": 0.405,
+   "audio_sec": 6.32
+  },
+  "5a0c77e3f5590b0018dab418": {
+   "text": "More than 200,000 people lived in a rainforest during what decade.",
+   "sec": 0.36,
+   "audio_sec": 5.76
+  },
+  "5a0c7b88f5590b0018dab41f": {
+   "text": "Who made exaggerated claims about a complex civilization in the Amazon?",
+   "sec": 0.341,
+   "audio_sec": 6.87
+  },
+  "5a0c7cb3f5590b0018dab42b": {
+   "text": "In 2000, who found evidence of a large settlement in the Amazon rainforest?",
+   "sec": 0.385,
+   "audio_sec": 6.94
+  },
+  "5a0c7d74f5590b0018dab432": {
+   "text": "The region is home to 25 million what?",
+   "sec": 0.285,
+   "audio_sec": 5.53
+  },
+  "5a0c7d74f5590b0018dab434": {
+   "text": "Between 96,660 and 128,843 vertebrate species live where.",
+   "sec": 0.444,
+   "audio_sec": 11.12
+  },
+  "5a0c7d74f5590b0018dab435": {
+   "text": "The Amazon Rivers and Streams contain how many reptiles.",
+   "sec": 0.351,
+   "audio_sec": 5.62
+  },
+  "5a0c7edcf5590b0018dab43a": {
+   "text": "The biodiversity of what is the lowest on earth.",
+   "sec": 0.316,
+   "audio_sec": 5.46
+  },
+  "5a0c7edcf5590b0018dab43b": {
+   "text": "What rainforest supports more than 11,003 species?",
+   "sec": 0.345,
+   "audio_sec": 7.8
+  },
+  "5a0c7edcf5590b0018dab43e": {
+   "text": "There are very few of what remain to be discovered.",
+   "sec": 0.324,
+   "audio_sec": 4.92
+  },
+  "5a0c7fb2f5590b0018dab445": {
+   "text": "Among the smallest predatory creatures are the black K-man and what?",
+   "sec": 0.34,
+   "audio_sec": 6.06
+  },
+  "5a0c807ff5590b0018dab452": {
+   "text": "Areas of heavy forest are visible to the naked eye from where.",
+   "sec": 0.327,
+   "audio_sec": 6.5
+  },
+  "5a0c817df5590b0018dab45b": {
+   "text": "Who showed that blogging increases precipitation in the Amazon?",
+   "sec": 0.347,
+   "audio_sec": 5.85
+  },
+  "5a0c8ba8f5590b0018dab463": {
+   "text": "Deforestation increased in Brazil during what years.",
+   "sec": 0.301,
+   "audio_sec": 4.76
+  },
+  "5a0c8ba8f5590b0018dab464": {
+   "text": "What type of projects are widely supported?",
+   "sec": 0.314,
+   "audio_sec": 4.57
+  },
+  "5a0c9275f5590b0018dab46d": {
+   "text": "How many metric tons of carbon are believed to be released from the Amazon rainforest each year?",
+   "sec": 0.42,
+   "audio_sec": 7.89
+  },
+  "5a0c93b9f5590b0018dab475": {
+   "text": "Hunting and population are the main threats facing what?",
+   "sec": 0.312,
+   "audio_sec": 5.64
+  },
+  "5a0c958bf5590b0018dab480": {
+   "text": "Indigenous territories are being preserved through what type of conservation efforts.",
+   "sec": 0.531,
+   "audio_sec": 7.15
+  },
+  "5a0c96fbf5590b0018dab488": {
+   "text": "Most what in the Amazon have clearly defined boundaries.",
+   "sec": 0.315,
+   "audio_sec": 6.36
+  },
+  "5a0c9832f5590b0018dab494": {
+   "text": "What was classified in 2008?",
+   "sec": 0.281,
+   "audio_sec": 4.41
+  },
+  "5a0c98fef5590b0018dab49c": {
+   "text": "Drought and overpopulation are pushing to the force towards what?",
+   "sec": 0.317,
+   "audio_sec": 6.43
+  },
+  "5a0c98fef5590b0018dab49e": {
+   "text": "Savana and Desert were replaced by what in the Amazon.",
+   "sec": 0.322,
+   "audio_sec": 5.2
+  },
+  "5a0c99fcf5590b0018dab4a7": {
+   "text": "In 2005, the force absorbed how much carbon dioxide.",
+   "sec": 0.304,
+   "audio_sec": 6.83
+  },
+  "5a1c836ab4fb5d0018714639": {
+   "text": "What battle involved the Confederate Calvary in 1862?",
+   "sec": 0.358,
+   "audio_sec": 5.34
+  },
+  "5a1c883cb4fb5d0018714674": {
+   "text": "What was it called in Jacksonville's white population move to the city?",
+   "sec": 0.373,
+   "audio_sec": 5.2
+  },
+  "5a1c8971b4fb5d0018714686": {
+   "text": "What were the reasons not to consolidate the government?",
+   "sec": 0.327,
+   "audio_sec": 4.53
+  },
+  "5a1c8aedb4fb5d00187146a4": {
+   "text": "What river surrounds Jacksonville?",
+   "sec": 0.301,
+   "audio_sec": 4.13
+  },
+  "5a1c8f54b4fb5d00187146db": {
+   "text": "Where was the average household size? Was 3.21.",
+   "sec": 0.433,
+   "audio_sec": 6.32
+  },
+  "5a1c8f54b4fb5d00187146dc": {
+   "text": "What percentage of married couples had children living with them?",
+   "sec": 0.333,
+   "audio_sec": 6.83
+  },
+  "5a2c07d5bfd06b001a5ae983": {
+   "text": "Where did the headquarters relocate from?",
+   "sec": 0.273,
+   "audio_sec": 4.81
+  },
+  "5a2c116ebfd06b001a5ae9c1": {
+   "text": "How many homes had B-Sky B's direct-to-home satellite service unavailable to them in 2010?",
+   "sec": 0.48,
+   "audio_sec": 10.24
+  },
+  "5a2c116ebfd06b001a5ae9c2": {
+   "text": "How small was the audience B Sky B said they couldn't reach?",
+   "sec": 0.382,
+   "audio_sec": 6.18
+  },
+  "5a2c116ebfd06b001a5ae9c3": {
+   "text": "What was the percentage of households B-sky being never reached?",
+   "sec": 0.379,
+   "audio_sec": 6.22
+  },
+  "5a2c116ebfd06b001a5ae9c4": {
+   "text": "What free TV platform was most popular in Europe at this time?",
+   "sec": 0.38,
+   "audio_sec": 7.34
+  },
+  "5a2c1397bfd06b001a5ae9cc": {
+   "text": "What did the benefits agency think sports channels on a TV bill ignored?",
+   "sec": 0.398,
+   "audio_sec": 7.17
+  },
+  "5a2c1622bfd06b001a5ae9de": {
+   "text": "When did Santanta sports say it would launch as a free service on the digital to the RestReel platform.",
+   "sec": 2.009,
+   "audio_sec": 11.59
+  },
+  "5a2c1622bfd06b001a5ae9df": {
+   "text": "What platform was Santanta Sports planning to avoid launching on?",
+   "sec": 0.418,
+   "audio_sec": 8.1
+  },
+  "5a2c1622bfd06b001a5ae9e1": {
+   "text": "What channel lost advertising revenue due to their plans?",
+   "sec": 0.54,
+   "audio_sec": 7.11
+  },
+  "5a2c30dabfd06b001a5aea2b": {
+   "text": "How many people never registered to receive the HD service prior to launch?",
+   "sec": 0.458,
+   "audio_sec": 8.73
+  },
+  "5a2c3595bfd06b001a5aea5f": {
+   "text": "What service used Astra 2A in 1995?",
+   "sec": 0.421,
+   "audio_sec": 7.43
+  },
+  "5a2c3595bfd06b001a5aea60": {
+   "text": "Once satellite made it impossible for Sky Digital to launch an all new digital service.",
+   "sec": 0.53,
+   "audio_sec": 9.22
+  },
+  "5a2c3595bfd06b001a5aea62": {
+   "text": "When was the only satellite launch?",
+   "sec": 0.421,
+   "audio_sec": 5.78
+  },
+  "5a2c36c4bfd06b001a5aea68": {
+   "text": "What does a receiver have to be equipped with to view unencrypted content?",
+   "sec": 0.424,
+   "audio_sec": 8.61
+  },
+  "5a2c382dbfd06b001a5aea74": {
+   "text": "What kind of soundtracks are mandatory with the Sky movies and Skybox office channels?",
+   "sec": 0.481,
+   "audio_sec": 9.98
+  },
+  "5a2c3ca9bfd06b001a5aea85": {
+   "text": "What can B-sky B-V-to the presence of channels on?",
+   "sec": 0.442,
+   "audio_sec": 7.24
+  },
+  "5a2c3ca9bfd06b001a5aea86": {
+   "text": "What service doesn't require a fee to use?",
+   "sec": 0.38,
+   "audio_sec": 5.29
+  },
+  "5a2c3d73bfd06b001a5aea8d": {
+   "text": "What was the one linear SD channel Virgin Media Carried from November 2006 to July 2009?",
+   "sec": 0.549,
+   "audio_sec": 12.21
+  },
+  "5a2c41c8bfd06b001a5aeaa9": {
+   "text": "What did Microsoft announce that it would rename OneDrive 2?",
+   "sec": 0.404,
+   "audio_sec": 5.41
+  },
+  "5a2eba17a83784001a7d2433": {
+   "text": "In what year did Johnny Begg become leader of the Mongol army?",
+   "sec": 0.413,
+   "audio_sec": 9.26
+  },
+  "5a2eba17a83784001a7d2434": {
+   "text": "In what year was Cuffa founded?",
+   "sec": 1628.167,
+   "audio_sec": 5.22
+  },
+  "5a2ebaada83784001a7d243f": {
+   "text": "In what year did the black death spread in Iceland?",
+   "sec": 1561.723,
+   "audio_sec": 5.83
+  },
+  "5a2ebaada83784001a7d2440": {
+   "text": "Who did the kingdom of Poland trade with?",
+   "sec": 0.448,
+   "audio_sec": 4.78
+  },
+  "5a2ebaada83784001a7d2441": {
+   "text": "What was one of the countries that had isolated Alpine villages?",
+   "sec": 0.424,
+   "audio_sec": 6.29
+  },
+  "5a2ebb5fa83784001a7d244a": {
+   "text": "What was one of the cities that had a port on the Black Sea?",
+   "sec": 0.717,
+   "audio_sec": 6.94
+  },
+  "5a2ec431a83784001a7d2451": {
+   "text": "In what year did the name Black Death spread into Germany?",
+   "sec": 0.548,
+   "audio_sec": 10.4
+  },
+  "5a2ec431a83784001a7d2452": {
+   "text": "In what year did the Black Death spread into England?",
+   "sec": 0.662,
+   "audio_sec": 6.22
+  },
+  "5a2ec431a83784001a7d2455": {
+   "text": "What is the Latin name for Germany?",
+   "sec": 0.583,
+   "audio_sec": 4.76
+  },
+  "5a2ec82fa83784001a7d2470": {
+   "text": "And what here was the Eastern Roman Empire established.",
+   "sec": 0.454,
+   "audio_sec": 6.97
+  },
+  "5a2ecb43a83784001a7d248e": {
+   "text": "In what month in 1349 did the second wave of the plague reach England?",
+   "sec": 0.507,
+   "audio_sec": 6.41
+  },
+  "5a2ecb43a83784001a7d248f": {
+   "text": "In what country did the YPA Orientalist genome originate?",
+   "sec": 0.488,
+   "audio_sec": 5.64
+  },
+  "5a2eccc9a83784001a7d24a3": {
+   "text": "In what year did Samuel K. Cohn Jr. read, Graham Twig's major work?",
+   "sec": 0.356,
+   "audio_sec": 6.18
+  },
+  "5a2ecd6da83784001a7d24ac": {
+   "text": "And what year did the clergy enter England?",
+   "sec": 0.255,
+   "audio_sec": 3.69
+  },
+  "5a2eced7a83784001a7d24b5": {
+   "text": "How long did it take to travel across your using primitive transport systems?",
+   "sec": 0.291,
+   "audio_sec": 5.5
+  },
+  "5a2ecfb1a83784001a7d24c9": {
+   "text": "Who discovered why pest is?",
+   "sec": 0.235,
+   "audio_sec": 2.97
+  },
+  "5a2ed136a83784001a7d24dd": {
+   "text": "How many people died from the Black Death in Northern Africa?",
+   "sec": 0.264,
+   "audio_sec": 4.92
+  },
+  "5a2ed246a83784001a7d24e5": {
+   "text": "In what year did the two-door era begin in England?",
+   "sec": 0.259,
+   "audio_sec": 4.34
+  },
+  "5a2ed246a83784001a7d24e6": {
+   "text": "What was the population of Europe in 1665?",
+   "sec": 0.248,
+   "audio_sec": 3.97
+  },
+  "5a2ed354a83784001a7d24f1": {
+   "text": "How many people lived in Norway in 1348?",
+   "sec": 0.245,
+   "audio_sec": 5.69
+  },
+  "5a38a8d2a4b263001a8c1877": {
+   "text": "What was the price of oil in 1979 before it rose?",
+   "sec": 0.299,
+   "audio_sec": 7.78
+  },
+  "5a38b07ca4b263001a8c18a1": {
+   "text": "What this serious owl refined oil for to the Middle East.",
+   "sec": 0.274,
+   "audio_sec": 9.8
+  },
+  "5a38b29da4b263001a8c18a8": {
+   "text": "What did various countries request of Congress?",
+   "sec": 0.238,
+   "audio_sec": 6.25
+  },
+  "5a38b29da4b263001a8c18aa": {
+   "text": "What was the announcement made immediately by Kuwait?",
+   "sec": 0.245,
+   "audio_sec": 6.8
+  },
+  "5a38b468a4b263001a8c18b4": {
+   "text": "What is a fundamentalist interpretation of El Harameen called?",
+   "sec": 0.281,
+   "audio_sec": 9.5
+  },
+  "5a38b819a4b263001a8c18c9": {
+   "text": "What did macroeconomic problems cause oil companies to search for?",
+   "sec": 0.296,
+   "audio_sec": 7.04
+  },
+  "5a38b9b3a4b263001a8c18cf": {
+   "text": "What was the embargo like in Israel?",
+   "sec": 0.235,
+   "audio_sec": 5.71
+  },
+  "5a38baa2a4b263001a8c18da": {
+   "text": "What was rationed by real road workers?",
+   "sec": 0.247,
+   "audio_sec": 5.2
+  },
+  "5a38bbe3a4b263001a8c18e5": {
+   "text": "What was the rationing intended to promote in the market?",
+   "sec": 0.27,
+   "audio_sec": 5.43
+  },
+  "5a38bd58a4b263001a8c18ed": {
+   "text": "What percentage of American gas stations were out of fuel in 1973?",
+   "sec": 0.596,
+   "audio_sec": 7.04
+  },
+  "5a38bd58a4b263001a8c18ee": {
+   "text": "In 1973, what was Nixon named as?",
+   "sec": 0.417,
+   "audio_sec": 4.76
+  },
+  "5a38bd58a4b263001a8c18ef": {
+   "text": "What was the American Automobile Association created to do?",
+   "sec": 0.379,
+   "audio_sec": 5.69
+  },
+  "5a38bd58a4b263001a8c18f0": {
+   "text": "How much oil did Nixon give to the states in 1974?",
+   "sec": 0.306,
+   "audio_sec": 6.04
+  },
+  "5a38bd58a4b263001a8c18f1": {
+   "text": "What was common in state without population increases?",
+   "sec": 0.291,
+   "audio_sec": 5.06
+  },
+  "5a38c6bca4b263001a8c1918": {
+   "text": "When was Israel declared a non-friendly country?",
+   "sec": 0.307,
+   "audio_sec": 4.6
+  },
+  "5a38c911a4b263001a8c1920": {
+   "text": "What are other signs of insecurity in Mecca?",
+   "sec": 0.321,
+   "audio_sec": 5.09
+  },
+  "5a38c911a4b263001a8c1923": {
+   "text": "What kind of sunny Muslim monarchy is Iran led by?",
+   "sec": 0.281,
+   "audio_sec": 6.22
+  },
+  "5a38cd93a4b263001a8c1929": {
+   "text": "What standards did American cars create in the auto industry?",
+   "sec": 0.318,
+   "audio_sec": 5.5
+  },
+  "5a38cd93a4b263001a8c192a": {
+   "text": "What are two cars of the V8 engines that were more fuel efficient?",
+   "sec": 0.354,
+   "audio_sec": 6.87
+  },
+  "5a38ceaaa4b263001a8c1936": {
+   "text": "What did some buyers not like about accuracy?",
+   "sec": 0.352,
+   "audio_sec": 4.81
+  },
+  "5a38d4b9a4b263001a8c1949": {
+   "text": "What was the price of a barrel of oil in 1970?",
+   "sec": 0.33,
+   "audio_sec": 6.08
+  },
+  "5a38d4b9a4b263001a8c194a": {
+   "text": "What are two small car models that didn't recover in 1974?",
+   "sec": 0.293,
+   "audio_sec": 6.9
+  },
+  "5a3e2ba4378766001a0024bb": {
+   "text": "Who is President of the IPCC before hosting me?",
+   "sec": 0.305,
+   "audio_sec": 6.27
+  },
+  "5a3e2ba4378766001a0024bc": {
+   "text": "In what year did Elle gazole the resign from the IPCC?",
+   "sec": 0.316,
+   "audio_sec": 5.99
+  },
+  "5a3e2dc0378766001a0024c3": {
+   "text": "which non-governmental groups are participants of the plenary sessions.",
+   "sec": 0.308,
+   "audio_sec": 7.76
+  },
+  "5a3e2dc0378766001a0024c7": {
+   "text": "What session did the IPCC panel attend before the opening ceremonies?",
+   "sec": 0.304,
+   "audio_sec": 8.1
+  },
+  "5a3e2f07378766001a0024d0": {
+   "text": "Who distributes money from the annual trust fund?",
+   "sec": 0.249,
+   "audio_sec": 5.67
+  },
+  "5a3e2f07378766001a0024d1": {
+   "text": "Who is not required to follow financial rules and regulations?",
+   "sec": 0.305,
+   "audio_sec": 7.31
+  },
+  "5a3e307f378766001a0024d8": {
+   "text": "What organization does climate related research?",
+   "sec": 0.288,
+   "audio_sec": 5.85
+  },
+  "5a3e307f378766001a0024da": {
+   "text": "We must all research be according to the IPCC guidelines.",
+   "sec": 0.298,
+   "audio_sec": 5.78
+  },
+  "5a3e307f378766001a0024db": {
+   "text": "What is an example of a peer-reviewed resource?",
+   "sec": 0.271,
+   "audio_sec": 4.74
+  },
+  "5a3e3405378766001a0024e3": {
+   "text": "How much are carbon dioxide levels expected to increase over the next 100 years?",
+   "sec": 0.273,
+   "audio_sec": 8.24
+  },
+  "5a3e3614378766001a0024ec": {
+   "text": "Which society was responsible for the publication of the joint statement?",
+   "sec": 0.248,
+   "audio_sec": 5.83
+  },
+  "5a3e3614378766001a0024ed": {
+   "text": "What journal was the effects of climate change published in?",
+   "sec": 0.34,
+   "audio_sec": 5.6
+  },
+  "5a3e3752378766001a0024f5": {
+   "text": "Which organization faithfully summarized the WGI report?",
+   "sec": 0.328,
+   "audio_sec": 6.55
+  },
+  "5a3e3752378766001a0024f7": {
+   "text": "Who has that that climate models are uncertain?",
+   "sec": 0.328,
+   "audio_sec": 4.9
+  },
+  "5a3e3907378766001a002502": {
+   "text": "What is while of the two assessment reports published in 2011?",
+   "sec": 0.424,
+   "audio_sec": 6.13
+  },
+  "5a3e3aa9378766001a002509": {
+   "text": "Who runs the UNEP Council?",
+   "sec": 0.309,
+   "audio_sec": 3.6
+  },
+  "5a3e3de4378766001a002513": {
+   "text": "Who set that climate change has been overstated?",
+   "sec": 0.383,
+   "audio_sec": 4.48
+  },
+  "5a3e3de4378766001a002514": {
+   "text": "Who should be concerned with the trend to understand the effects of climate change?",
+   "sec": 0.384,
+   "audio_sec": 5.57
+  },
+  "5a3e3de4378766001a002517": {
+   "text": "Who created assessments that were found to have substantial errors?",
+   "sec": 0.33,
+   "audio_sec": 5.09
+  },
+  "5a3e40d1378766001a00251d": {
+   "text": "which graph was prominently featured in the second assessment report.",
+   "sec": 0.331,
+   "audio_sec": 5.53
+  },
+  "5a3e40d1378766001a00251f": {
+   "text": "What was lacking in the second assessment report?",
+   "sec": 0.327,
+   "audio_sec": 4.6
+  },
+  "5a3e40d1378766001a002520": {
+   "text": "which report depicted lesser temperature variations.",
+   "sec": 0.284,
+   "audio_sec": 5.04
+  },
+  "5a3e40d1378766001a002521": {
+   "text": "In which area was the 1995 report based?",
+   "sec": 0.325,
+   "audio_sec": 5.34
+  },
+  "5a3e42de378766001a002527": {
+   "text": "Which years did studies find that warming was exceptional?",
+   "sec": 0.337,
+   "audio_sec": 5.48
+  },
+  "5a3e42de378766001a002528": {
+   "text": "Who are you for including the graph in the final report?",
+   "sec": 0.32,
+   "audio_sec": 4.55
+  },
+  "5a3e42de378766001a002529": {
+   "text": "What did Carlin and Singer present to the U.S. Senate?",
+   "sec": 0.389,
+   "audio_sec": 5.13
+  },
+  "5a3e44ea378766001a002533": {
+   "text": "Who suggested that the investigation was legitimate?",
+   "sec": 0.358,
+   "audio_sec": 4.39
+  },
+  "5a3e488b378766001a00253c": {
+   "text": "How many chapters have coordinating lead authors?",
+   "sec": 0.299,
+   "audio_sec": 4.62
+  },
+  "5a3e488b378766001a00253d": {
+   "text": "Who do the contributing authors report to?",
+   "sec": 0.313,
+   "audio_sec": 4.85
+  },
+  "5a3e495c378766001a002547": {
+   "text": "What did policy makers create for the IPCC?",
+   "sec": 0.36,
+   "audio_sec": 5.36
+  },
+  "5a3e4a34378766001a00254f": {
+   "text": "How much greater were 1990 sea levels than those anticipated in the year 2100?",
+   "sec": 0.464,
+   "audio_sec": 6.87
+  },
+  "5a3e4a34378766001a002552": {
+   "text": "which studies suggest that previous estimates were overstated.",
+   "sec": 0.411,
+   "audio_sec": 5.27
+  },
+  "5a3e4c01378766001a00255b": {
+   "text": "What reports did Michael open-himer suggest needed to contain a broad exploration of certainties?",
+   "sec": 0.428,
+   "audio_sec": 7.55
+  },
+  "5a3e4e57378766001a002566": {
+   "text": "Who do states and governments often work in lockstep with?",
+   "sec": 0.36,
+   "audio_sec": 4.67
+  },
+  "5a3e4e57378766001a002567": {
+   "text": "What will be assured because of the political response to the linear model?",
+   "sec": 0.369,
+   "audio_sec": 5.64
+  },
+  "5a3e5014378766001a002579": {
+   "text": "What did everyday relevance to popular culture explain?",
+   "sec": 0.324,
+   "audio_sec": 5.13
+  },
+  "5a3e5014378766001a00257a": {
+   "text": "What does a public see as an imminent danger?",
+   "sec": 0.409,
+   "audio_sec": 5.06
+  },
+  "5a3e5014378766001a00257b": {
+   "text": "What was one of the problems solved by the Toyota protocol?",
+   "sec": 0.372,
+   "audio_sec": 4.74
+  },
+  "5a3e51b6378766001a002584": {
+   "text": "What area of science is understanding slowly changing?",
+   "sec": 0.275,
+   "audio_sec": 4.81
+  },
+  "5a3e539a378766001a00258b": {
+   "text": "What date was a fourth assessment report published?",
+   "sec": 0.299,
+   "audio_sec": 5.43
+  },
+  "5a3e539a378766001a00258c": {
+   "text": "In which journal did five lead IPCC authors call for support of the IPCC?",
+   "sec": 0.398,
+   "audio_sec": 7.73
+  },
+  "5a3e539a378766001a00258f": {
+   "text": "What is one way the current IPCC response to new evidence quickly?",
+   "sec": 0.503,
+   "audio_sec": 5.57
+  },
+  "5a3e5697378766001a002595": {
+   "text": "What did the 2007 IPCC report suggest had been decreasing?",
+   "sec": 0.32,
+   "audio_sec": 6.55
+  },
+  "5a3e5697378766001a002599": {
+   "text": "below what levels were the projected sea levels in the 2001 IPCC projection.",
+   "sec": 0.394,
+   "audio_sec": 6.92
+  },
+  "5a3e582e378766001a0025a2": {
+   "text": "Who analyzed the medieval cold period?",
+   "sec": 0.311,
+   "audio_sec": 4.37
+  },
+  "5a3e582e378766001a0025a3": {
+   "text": "How many reconstructions covered more than 10,000 years?",
+   "sec": 0.451,
+   "audio_sec": 4.99
+  },
+  "5a5508f5134fea001a0e1829": {
+   "text": "What ideas did the report in 1964 state?",
+   "sec": 0.446,
+   "audio_sec": 6.32
+  },
+  "5a5509e8134fea001a0e183c": {
+   "text": "Where is the ACM symposium held?",
+   "sec": 0.35,
+   "audio_sec": 4.57
+  },
+  "5a5509e8134fea001a0e183d": {
+   "text": "What does ARPA and ET in simple terms?",
+   "sec": 0.36,
+   "audio_sec": 7.66
+  },
+  "5a550f98134fea001a0e189c": {
+   "text": "How many different technologies were there before 1973?",
+   "sec": 0.329,
+   "audio_sec": 6.43
+  },
+  "5a550f98134fea001a0e189d": {
+   "text": "What type of network does SATA HLN not use?",
+   "sec": 0.335,
+   "audio_sec": 6.06
+  },
+  "5a550f98134fea001a0e18a0": {
+   "text": "What to find the differences between the ARPANET and SIDA HLN and X.25.",
+   "sec": 0.434,
+   "audio_sec": 9.61
+  },
+  "5a55106f134fea001a0e18b2": {
+   "text": "Could only Apple devices utilize this suite.",
+   "sec": 0.348,
+   "audio_sec": 5.99
+  },
+  "5a55114d134fea001a0e18c5": {
+   "text": "Who had influenced ARPANET?",
+   "sec": 0.325,
+   "audio_sec": 4.3
+  },
+  "5a55114d134fea001a0e18c6": {
+   "text": "What types of alternatives did Cyclades give?",
+   "sec": 0.319,
+   "audio_sec": 6.39
+  },
+  "5a551328134fea001a0e18d6": {
+   "text": "Who lost money?",
+   "sec": 0.28,
+   "audio_sec": 3.37
+  },
+  "5a551328134fea001a0e18d9": {
+   "text": "What did Warner send back offer?",
+   "sec": 0.315,
+   "audio_sec": 4.41
+  },
+  "5a551328134fea001a0e18da": {
+   "text": "What was Warner correct about?",
+   "sec": 0.304,
+   "audio_sec": 3.92
+  },
+  "5a551492134fea001a0e18e2": {
+   "text": "What was the triad?",
+   "sec": 0.291,
+   "audio_sec": 3.13
+  },
+  "5a55167b134fea001a0e18fe": {
+   "text": "Tim Net worked with what?",
+   "sec": 0.313,
+   "audio_sec": 3.81
+  },
+  "5a55167b134fea001a0e1902": {
+   "text": "Where were servers hosted?",
+   "sec": 0.292,
+   "audio_sec": 4.41
+  },
+  "5a551d87134fea001a0e1945": {
+   "text": "Online betting was supported by what network frame.",
+   "sec": 0.441,
+   "audio_sec": 5.87
+  },
+  "5a552252134fea001a0e1962": {
+   "text": "What was confusing within KPN?",
+   "sec": 1.237,
+   "audio_sec": 4.83
+  },
+  "5a552252134fea001a0e1966": {
+   "text": "Who managed that in that one 4k p.n.",
+   "sec": 1.501,
+   "audio_sec": 5.29
+  },
+  "5a55242b134fea001a0e1981": {
+   "text": "Abilene referred to what?",
+   "sec": 1.372,
+   "audio_sec": 3.9
+  },
+  "5a55242b134fea001a0e1982": {
+   "text": "A higher capacity network was formed by WUP project.",
+   "sec": 2.195,
+   "audio_sec": 5.85
+  },
+  "5a552578134fea001a0e1994": {
+   "text": "What prompted advanced research and education in networking?",
+   "sec": 1.196,
+   "audio_sec": 6.69
+  },
+  "5a55319c134fea001a0e19bd": {
+   "text": "Why was OC-12C considered a substantial engineering fee?",
+   "sec": 0.761,
+   "audio_sec": 8.85
+  },
+  "5a55319c134fea001a0e19be": {
+   "text": "When was OC-12C upgraded?",
+   "sec": 0.532,
+   "audio_sec": 7.76
+  },
+  "5a564c956349e2001acdcd1a": {
+   "text": "Who presented briefing B-265 to the Air Force?",
+   "sec": 0.426,
+   "audio_sec": 5.92
+  },
+  "5a564c956349e2001acdcd1c": {
+   "text": "What was the U.S. Air Force Interest Air Force Interest in Air Force?",
+   "sec": 0.495,
+   "audio_sec": 5.11
+  },
+  "5a564c956349e2001acdcd1e": {
+   "text": "What was the Air Force not interested in for their message system?",
+   "sec": 0.377,
+   "audio_sec": 5.09
+  },
+  "5a6057f0eae51e001ab14d1d": {
+   "text": "How many access points are in a multiple access game?",
+   "sec": 0.312,
+   "audio_sec": 5.78
+  },
+  "5a6057f0eae51e001ab14d1e": {
+   "text": "Do certain packets take priority over others if sent at the exact same time?",
+   "sec": 0.344,
+   "audio_sec": 7.36
+  },
+  "5a6057f0eae51e001ab14d20": {
+   "text": "What exactly is a beaky bucket in terms of this matter?",
+   "sec": 0.403,
+   "audio_sec": 5.29
+  },
+  "5a6059ace9e1cc001a33cd34": {
+   "text": "To bear and develop this only for use by the Air Force.",
+   "sec": 0.461,
+   "audio_sec": 5.94
+  },
+  "5a6059ace9e1cc001a33cd37": {
+   "text": "Assuming the Air Force paid for the development of the concept, then with the Air Force being title to a world TV for every packet sent.",
+   "sec": 0.997,
+   "audio_sec": 10.73
+  },
+  "5a6059ace9e1cc001a33cd38": {
+   "text": "Alright.",
+   "sec": 4.568,
+   "audio_sec": 2.79
+  },
+  "5a605b5ee9e1cc001a33cd41": {
+   "text": "Did Davey develop his concept with the intention of monetizing it?",
+   "sec": 0.394,
+   "audio_sec": 6.11
+  },
+  "5a605cdce9e1cc001a33cd4c": {
+   "text": "If the package travel via different routes, then how do they arrive in order?",
+   "sec": 0.676,
+   "audio_sec": 7.17
+  },
+  "5a605eaae9e1cc001a33cd53": {
+   "text": "Our link parameter is based on size.",
+   "sec": 0.823,
+   "audio_sec": 4.88
+  },
+  "5a605eaae9e1cc001a33cd54": {
+   "text": "Can the node ever acquire the wrong connection ID?",
+   "sec": 0.398,
+   "audio_sec": 6.29
+  },
+  "5a605eaae9e1cc001a33cd55": {
+   "text": "Can address information be changed after the setup phase?",
+   "sec": 0.4,
+   "audio_sec": 5.71
+  },
+  "5a66413dc2b11c001a425ec9": {
+   "text": "Who's occupation did the Egyptians resist in the 2003 rose revolution?",
+   "sec": 0.376,
+   "audio_sec": 8.1
+  },
+  "5a66413dc2b11c001a425eca": {
+   "text": "To what countries did the 1919 revolution want to bring independence to from Russia?",
+   "sec": 0.456,
+   "audio_sec": 10.19
+  },
+  "5a664447c2b11c001a425eef": {
+   "text": "What would Henry David Thoreau quote to audiences in India?",
+   "sec": 0.443,
+   "audio_sec": 5.99
+  },
+  "5a664612c2b11c001a425f0c": {
+   "text": "What types of people were always involved in the court system?",
+   "sec": 0.346,
+   "audio_sec": 6.29
+  },
+  "5a6647d2c2b11c001a425f1e": {
+   "text": "What did the ground write about grammatical niceties?",
+   "sec": 0.528,
+   "audio_sec": 6.08
+  },
+  "5a665142846392001a1e1abe": {
+   "text": "What was the government the final judge of?",
+   "sec": 0.341,
+   "audio_sec": 5.41
+  },
+  "5a665142846392001a1e1abf": {
+   "text": "Who do the government refuse to pay?",
+   "sec": 0.377,
+   "audio_sec": 4.88
+  },
+  "5a665338846392001a1e1ac8": {
+   "text": "What two groups do trade unions think civil disobedience is justified against?",
+   "sec": 0.469,
+   "audio_sec": 7.34
+  },
+  "5a665549846392001a1e1ad9": {
+   "text": "What dilemma is a good example of perjury?",
+   "sec": 0.382,
+   "audio_sec": 4.48
+  },
+  "5a665747846392001a1e1aea": {
+   "text": "What is one thing that rebellion must have in black's law dictionary?",
+   "sec": 0.404,
+   "audio_sec": 6.73
+  },
+  "5a665870846392001a1e1af5": {
+   "text": "What did Gandhi mention about the right to abolish an unjust government in the declaration of independence?",
+   "sec": 0.612,
+   "audio_sec": 9.31
+  },
+  "5a6659d3846392001a1e1b0d": {
+   "text": "What took place during the Maxian War?",
+   "sec": 0.505,
+   "audio_sec": 4.41
+  },
+  "5a6659d3846392001a1e1b0e": {
+   "text": "What did tax collectors try to prevent from being installed in the temple?",
+   "sec": 0.457,
+   "audio_sec": 6.57
+  },
+  "5a6659d3846392001a1e1b11": {
+   "text": "When was the essay written by modern activist published?",
+   "sec": 0.409,
+   "audio_sec": 5.71
+  },
+  "5a665b56846392001a1e1b1d": {
+   "text": "How long did Julia Butterfly Hill live near a nuclear missile installation?",
+   "sec": 0.417,
+   "audio_sec": 6.48
+  },
+  "5a665b56846392001a1e1b20": {
+   "text": "What company was Bodeo a part of while breaking the law by bringing medicine to Iraq?",
+   "sec": 0.509,
+   "audio_sec": 6.73
+  },
+  "5a665b56846392001a1e1b21": {
+   "text": "What is an example of an ineffective and observed act according to Julia Butterfly?",
+   "sec": 0.421,
+   "audio_sec": 7.04
+  },
+  "5a66797c846392001a1e1c4b": {
+   "text": "If there is no radio or ten bases, how are the packets delivered?",
+   "sec": 0.511,
+   "audio_sec": 6.46
+  },
+  "5a66797c846392001a1e1c4c": {
+   "text": "What is the only way to forward packets?",
+   "sec": 0.429,
+   "audio_sec": 4.32
+  },
+  "5a667dae846392001a1e1c57": {
+   "text": "How did man use this network?",
+   "sec": 0.365,
+   "audio_sec": 3.92
+  },
+  "5a667f50846392001a1e1c6a": {
+   "text": "Who did Davies tell about Barron's work?",
+   "sec": 0.342,
+   "audio_sec": 4.67
+  },
+  "5a668172f038b7001ab0bef8": {
+   "text": "What is each message labeled with?",
+   "sec": 0.345,
+   "audio_sec": 4.11
+  },
+  "5a668172f038b7001ab0befa": {
+   "text": "Why is there a need for a dedicated path?",
+   "sec": 0.341,
+   "audio_sec": 4.48
+  },
+  "5a6681d1f038b7001ab0bf02": {
+   "text": "What action did Brownlee take against GCSB-Y-HOPI that caused them to close temporarily?",
+   "sec": 0.631,
+   "audio_sec": 9.4
+  },
+  "5a66850bf038b7001ab0bf3e": {
+   "text": "What is contained in the large pane in the large pane?",
+   "sec": 0.407,
+   "audio_sec": 4.55
+  },
+  "5a668682f038b7001ab0bf4f": {
+   "text": "What does frame relays LAPB provide?",
+   "sec": 0.392,
+   "audio_sec": 5.74
+  },
+  "5a668682f038b7001ab0bf50": {
+   "text": "What does X.25's integrity operations concern?",
+   "sec": 0.415,
+   "audio_sec": 6.06
+  },
+  "5a6688fcf038b7001ab0bf6c": {
+   "text": "After the introduction of X.25 in 1973, how many network technologies had been developed.",
+   "sec": 0.629,
+   "audio_sec": 10.98
+  },
+  "5a6688fcf038b7001ab0bf6d": {
+   "text": "In UDP, the network guarantees what?",
+   "sec": 0.306,
+   "audio_sec": 6.11
+  },
+  "5a6688fcf038b7001ab0bf6e": {
+   "text": "What suite uses UDP?",
+   "sec": 0.375,
+   "audio_sec": 4.53
+  },
+  "5a66893ff038b7001ab0bf77": {
+   "text": "What do people pleading no contest believe about defending themselves?",
+   "sec": 0.455,
+   "audio_sec": 5.92
+  },
+  "5a668b1df038b7001ab0bf8a": {
+   "text": "Internet work routing was what kind of system?",
+   "sec": 0.381,
+   "audio_sec": 5.6
+  },
+  "5a668b1df038b7001ab0bf8b": {
+   "text": "What protocol was popular in the 1970s and 80s for Apple?",
+   "sec": 0.39,
+   "audio_sec": 7.8
+  },
+  "5a668c1af038b7001ab0bfa4": {
+   "text": "who developed the Finnish Research Network, the Cyclades packet.",
+   "sec": 0.45,
+   "audio_sec": 7.55
+  },
+  "5a668c1af038b7001ab0bfa5": {
+   "text": "Why was it developed in 1983?",
+   "sec": 0.354,
+   "audio_sec": 4.78
+  },
+  "5a668c1af038b7001ab0bfa6": {
+   "text": "It wasn't the first network to make the hosts responsible for what?",
+   "sec": 0.434,
+   "audio_sec": 6.62
+  },
+  "5a668d25f038b7001ab0bfaf": {
+   "text": "Deck-n-at-2 protocols were designed by who.",
+   "sec": 0.467,
+   "audio_sec": 5.94
+  },
+  "5a668e55f038b7001ab0bfcc": {
+   "text": "Send back work with what college on a time sharing system.",
+   "sec": 0.528,
+   "audio_sec": 5.92
+  },
+  "5a668e55f038b7001ab0bfcd": {
+   "text": "What job was Kimney given at GE?",
+   "sec": 0.414,
+   "audio_sec": 5.36
+  },
+  "5a668ef8f038b7001ab0bfdf": {
+   "text": "How did the Camden 28 decide to submit themselves to the court after pleading guilty?",
+   "sec": 0.429,
+   "audio_sec": 7.17
+  },
+  "5a668fc9f038b7001ab0bfe7": {
+   "text": "When was Michigan Network Inc. formed by Michigan's public universities?",
+   "sec": 0.379,
+   "audio_sec": 7.59
+  },
+  "5a668fc9f038b7001ab0bfea": {
+   "text": "NSF helped the network enhance what?",
+   "sec": 0.485,
+   "audio_sec": 5.43
+  },
+  "5a6690d6f038b7001ab0bff3": {
+   "text": "What business was incorporated in 1975?",
+   "sec": 0.538,
+   "audio_sec": 5.8
+  },
+  "5a6695e8f038b7001ab0c016": {
+   "text": "Power Transpack and Tim Net modified.",
+   "sec": 0.358,
+   "audio_sec": 6.15
+  },
+  "5a6695e8f038b7001ab0c019": {
+   "text": "Talonnet and Transpack were implemented with what?",
+   "sec": 0.372,
+   "audio_sec": 6.04
+  },
+  "5a6695e8f038b7001ab0c01a": {
+   "text": "x.25 and x.121 allowed what to happen.",
+   "sec": 0.384,
+   "audio_sec": 7.31
+  },
+  "5a6696d0f038b7001ab0c021": {
+   "text": "The Australian tax office used OSTPAC to access what remotely.",
+   "sec": 0.416,
+   "audio_sec": 7.5
+  },
+  "5a6696d0f038b7001ab0c022": {
+   "text": "What applications did Austin Pack not support?",
+   "sec": 0.383,
+   "audio_sec": 5.87
+  },
+  "5a66978af038b7001ab0c02c": {
+   "text": "What did the judge have to let jurors know about in the Chicago 8 case?",
+   "sec": 0.426,
+   "audio_sec": 6.8
+  },
+  "5a669800f038b7001ab0c03e": {
+   "text": "What was the network operated by the duct PTT telecom?",
+   "sec": 0.469,
+   "audio_sec": 7.08
+  },
+  "5a669800f038b7001ab0c03f": {
+   "text": "Though the name was correct, all these services were managed by who.",
+   "sec": 0.449,
+   "audio_sec": 7.48
+  },
+  "5a669a2cf038b7001ab0c046": {
+   "text": "Why did academic and research institutions need NSF's help connecting to ARPANET?",
+   "sec": 0.526,
+   "audio_sec": 9.17
+  },
+  "5a669b3df038b7001ab0c04e": {
+   "text": "What was the first internet to network created with NLR?",
+   "sec": 0.38,
+   "audio_sec": 7.22
+  },
+  "5a669ca9f038b7001ab0c056": {
+   "text": "NSF began in 1985 to promote what?",
+   "sec": 0.295,
+   "audio_sec": 6.29
+  },
+  "5a669d5cf038b7001ab0c05f": {
+   "text": "NSF was engineered and operated by who?",
+   "sec": 0.424,
+   "audio_sec": 6.76
+  },
+  "5a669d5cf038b7001ab0c060": {
+   "text": "NSF crew to connect how many universities.",
+   "sec": 0.459,
+   "audio_sec": 6.87
+  },
+  "5a6787d4f038b7001ab0c27d": {
+   "text": "What are two reasons a student would be able to get a scholarship for a public school?",
+   "sec": 0.528,
+   "audio_sec": 6.62
+  },
+  "5a6787d4f038b7001ab0c27e": {
+   "text": "What are public schools allowed to do to retain talented students?",
+   "sec": 0.419,
+   "audio_sec": 6.25
+  },
+  "5a678aa6f038b7001ab0c2a0": {
+   "text": "What is another term used for library?",
+   "sec": 0.337,
+   "audio_sec": 3.65
+  },
+  "5a678f35f038b7001ab0c2c5": {
+   "text": "How well are teachers paid in public schools in Australia?",
+   "sec": 0.416,
+   "audio_sec": 4.37
+  },
+  "5a678f35f038b7001ab0c2c6": {
+   "text": "What kind of education is offered in public schools in Australia?",
+   "sec": 0.338,
+   "audio_sec": 4.5
+  },
+  "5a678f35f038b7001ab0c2c8": {
+   "text": "What part of a uniform must you wear if you go to a public school in Australia?",
+   "sec": 0.543,
+   "audio_sec": 6.27
+  },
+  "5a6790dbf038b7001ab0c2d0": {
+   "text": "Where is St. Gregory's College located?",
+   "sec": 0.355,
+   "audio_sec": 3.62
+  },
+  "5a67978ef038b7001ab0c306": {
+   "text": "Who runs this under wrongs for butt?",
+   "sec": 0.372,
+   "audio_sec": 4.13
+  },
+  "5a67986af038b7001ab0c311": {
+   "text": "What are most public schools not a part of?",
+   "sec": 0.36,
+   "audio_sec": 3.46
+  },
+  "5a67986af038b7001ab0c312": {
+   "text": "What do public schools operate outside of in Germany?",
+   "sec": 0.356,
+   "audio_sec": 4.18
+  },
+  "5a6799adf038b7001ab0c31b": {
+   "text": "What two categories can a government school be put into an India?",
+   "sec": 0.544,
+   "audio_sec": 5.06
+  },
+  "5a6799adf038b7001ab0c31d": {
+   "text": "How many independent schools are in India?",
+   "sec": 0.432,
+   "audio_sec": 4.02
+  },
+  "5a679cc7f038b7001ab0c345": {
+   "text": "What new government schools have to do to be able to teach English?",
+   "sec": 0.415,
+   "audio_sec": 5.06
+  },
+  "5a679db8f038b7001ab0c34e": {
+   "text": "What is the Irish term for school fees?",
+   "sec": 0.434,
+   "audio_sec": 3.76
+  },
+  "5a679db8f038b7001ab0c34f": {
+   "text": "How do private schools in the rest of the world differ from Ireland?",
+   "sec": 0.42,
+   "audio_sec": 4.83
+  },
+  "5a679db8f038b7001ab0c350": {
+   "text": "How are school fees in the rest of the world compared to Ireland?",
+   "sec": 0.366,
+   "audio_sec": 4.71
+  },
+  "5a679f83f038b7001ab0c366": {
+   "text": "What happened to schools after Chinese independence in 1957?",
+   "sec": 0.445,
+   "audio_sec": 5.04
+  },
+  "5a679f83f038b7001ab0c367": {
+   "text": "What type of schools would they have in China as a compromise after Chinese independence?",
+   "sec": 0.49,
+   "audio_sec": 6.04
+  },
+  "5a67a2c7f038b7001ab0c3a3": {
+   "text": "How many private school students were there in 1979?",
+   "sec": 0.326,
+   "audio_sec": 5.09
+  },
+  "5a67a2c7f038b7001ab0c3a5": {
+   "text": "What has happened to private school number since 2014?",
+   "sec": 0.337,
+   "audio_sec": 4.95
+  },
+  "5a67a2c7f038b7001ab0c3a6": {
+   "text": "Why have private schools been in decline since 2014?",
+   "sec": 0.469,
+   "audio_sec": 4.85
+  },
+  "5a67a492f038b7001ab0c3c4": {
+   "text": "How is seeing Andrew's college run?",
+   "sec": 0.538,
+   "audio_sec": 4.04
+  },
+  "5a67a492f038b7001ab0c3c8": {
+   "text": "How many affiliates are connected to the ACG New Zealand International College?",
+   "sec": 0.447,
+   "audio_sec": 7.24
+  },
+  "5a67a5d9f038b7001ab0c3dc": {
+   "text": "What percentage of students enroll in public primary schools in the Philippines?",
+   "sec": 0.468,
+   "audio_sec": 5.43
+  },
+  "5a67a5d9f038b7001ab0c3df": {
+   "text": "But I have government regulations given public schools recently.",
+   "sec": 0.409,
+   "audio_sec": 5.2
+  },
+  "5a67a898f038b7001ab0c3f5": {
+   "text": "How does a tuition fee supplement help high school students?",
+   "sec": 0.345,
+   "audio_sec": 4.76
+  },
+  "5a67a898f038b7001ab0c3f7": {
+   "text": "What program provides financial assistance for tuition and fees for a college or technical education?",
+   "sec": 0.55,
+   "audio_sec": 6.92
+  },
+  "5a67a898f038b7001ab0c3f8": {
+   "text": "What does a government provide for students turned away from priority courses?",
+   "sec": 0.521,
+   "audio_sec": 5.53
+  },
+  "5a67aa48f038b7001ab0c400": {
+   "text": "How did Africa becoming independent change the laws about missionaries coming to Africa?",
+   "sec": 0.397,
+   "audio_sec": 6.69
+  },
+  "5a67b759f038b7001ab0c43b": {
+   "text": "What was abolished during the apartheid era?",
+   "sec": 0.365,
+   "audio_sec": 3.74
+  },
+  "5a67d87ef038b7001ab0c48b": {
+   "text": "What percentage of children educated in Scotland are at independent schools?",
+   "sec": 0.512,
+   "audio_sec": 5.57
+  },
+  "5a67d87ef038b7001ab0c48c": {
+   "text": "At what level are 13% of children in Scottish independent schools?",
+   "sec": 0.418,
+   "audio_sec": 5.46
+  },
+  "5a67d87ef038b7001ab0c48e": {
+   "text": "What is the highest range of student would pay when boarding into Scottish school?",
+   "sec": 0.496,
+   "audio_sec": 5.29
+  },
+  "5a67dae18476ee001a58a738": {
+   "text": "What court case de-segregated schools in 1970?",
+   "sec": 0.366,
+   "audio_sec": 6.13
+  },
+  "5a67dae18476ee001a58a739": {
+   "text": "How quickly were Christian academies supposed to be segregated?",
+   "sec": 0.399,
+   "audio_sec": 5.34
+  },
+  "5a67dedd8476ee001a58a74c": {
+   "text": "What body would determine that funding for course content is forbidden?",
+   "sec": 0.374,
+   "audio_sec": 6.2
+  },
+  "5a67dedd8476ee001a58a74d": {
+   "text": "What is course content funding subject to?",
+   "sec": 0.462,
+   "audio_sec": 4.81
+  },
+  "5a67dedd8476ee001a58a74e": {
+   "text": "Why would a course content funding be restricted by the courts?",
+   "sec": 0.397,
+   "audio_sec": 6.01
+  },
+  "5a67dedd8476ee001a58a74f": {
+   "text": "What can be interpreted by individuals to determine if funding for course content is forbidden.",
+   "sec": 0.441,
+   "audio_sec": 8.13
+  },
+  "5a67dedd8476ee001a58a750": {
+   "text": "How is course content provided to a private school?",
+   "sec": 0.347,
+   "audio_sec": 5.92
+  },
+  "5a67e29d8476ee001a58a757": {
+   "text": "What was the first state to have set educational standards?",
+   "sec": 0.346,
+   "audio_sec": 6.06
+  },
+  "5a67e29d8476ee001a58a759": {
+   "text": "Who was part of the case with Wisconsin in 1976?",
+   "sec": 0.481,
+   "audio_sec": 6.55
+  },
+  "5a67e29d8476ee001a58a75a": {
+   "text": "What other person was involved in the case with Runyon in 1972?",
+   "sec": 0.463,
+   "audio_sec": 7.43
+  },
+  "5a67e5278476ee001a58a760": {
+   "text": "How much did the Graten School charge per student for tuition in 2012?",
+   "sec": 0.517,
+   "audio_sec": 7.92
+  },
+  "5a67e5278476ee001a58a761": {
+   "text": "Where do most students at the Grotten School come from?",
+   "sec": 0.457,
+   "audio_sec": 5.67
+  },
+  "5a67e5278476ee001a58a764": {
+   "text": "What were the operating expenses of Vic Rotten School in 2012?",
+   "sec": 0.468,
+   "audio_sec": 6.78
+  },
+  "5a75054b97ca42001a521dd0": {
+   "text": "What does it mean for the dollar to float?",
+   "sec": 0.396,
+   "audio_sec": 5.99
+  },
+  "5a75066297ca42001a521dec": {
+   "text": "What was Iran's relationship with the U.S. at the time?",
+   "sec": 0.408,
+   "audio_sec": 6.5
+  },
+  "5a75066297ca42001a521ded": {
+   "text": "How much do they say it was fair to raise the prices?",
+   "sec": 0.549,
+   "audio_sec": 6.57
+  },
+  "5a75082a97ca42001a521df6": {
+   "text": "Who announced it would embargo oil shipments to the US?",
+   "sec": 0.439,
+   "audio_sec": 7.57
+  },
+  "5a75082a97ca42001a521df7": {
+   "text": "When did Saudi Arabia join the embargo?",
+   "sec": 0.514,
+   "audio_sec": 7.59
+  },
+  "5a7b064b21c2de001afe9ce6": {
+   "text": "What area was renamed Pinedale?",
+   "sec": 0.445,
+   "audio_sec": 5.55
+  },
+  "5a7b070121c2de001afe9cec": {
+   "text": "What month did the Bank AmeriCard creator resign?",
+   "sec": 0.69,
+   "audio_sec": 6.18
+  },
+  "5a7b070121c2de001afe9cef": {
+   "text": "What year did the Bank of America become successful?",
+   "sec": 0.457,
+   "audio_sec": 5.8
+  },
+  "5a81f28431013a001a334fb4": {
+   "text": "How many U.S. presidents once campaigned in Cambridge?",
+   "sec": 0.454,
+   "audio_sec": 5.5
+  },
+  "5a81f84e31013a001a33500b": {
+   "text": "What university was John of London in a lump of?",
+   "sec": 0.451,
+   "audio_sec": 5.46
+  },
+  "5a820ebf31013a001a33516f": {
+   "text": "What medical school is located in Alston?",
+   "sec": 0.512,
+   "audio_sec": 6.04
+  },
+  "5a82237d31013a001a335246": {
+   "text": "How many students did Charles William Elliot teach throughout his tenure at Harvard?",
+   "sec": 0.461,
+   "audio_sec": 8.31
+  },
+  "5a834caae60761001a2eb53b": {
+   "text": "What happens to plankton when they mature?",
+   "sec": 0.423,
+   "audio_sec": 4.55
+  },
+  "5a834caae60761001a2eb53d": {
+   "text": "How quickly do plankton populations grow due to her maphrodizum and early reproduction?",
+   "sec": 0.976,
+   "audio_sec": 8.31
+  },
+  "5a83878de60761001a2eb779": {
+   "text": "What kind of oracles do Celia have?",
+   "sec": 0.395,
+   "audio_sec": 5.74
+  },
+  "5a83878de60761001a2eb77b": {
+   "text": "What happens when Celia and Arbol clap their lobes?",
+   "sec": 0.475,
+   "audio_sec": 6.06
+  },
+  "5a838db9e60761001a2eb7ba": {
+   "text": "In what kind of chamber do species and the genus ocriopsis keep their eggs until they hatch?",
+   "sec": 0.953,
+   "audio_sec": 8.99
+  },
+  "5a838db9e60761001a2eb7bd": {
+   "text": "What are most species of the genus Ocriopsis dot to be?",
+   "sec": 0.569,
+   "audio_sec": 6.06
+  },
+  "5a83a59be60761001a2eb84f": {
+   "text": "What did Vendo Biontas descendants change their Celia to?",
+   "sec": 0.425,
+   "audio_sec": 7.5
+  },
+  "5a83a80ae60761001a2eb859": {
+   "text": "What has the presence of hawk's genes been the focus of for many years?",
+   "sec": 0.514,
+   "audio_sec": 7.01
+  },
+  "5a83acb4e60761001a2eb85f": {
+   "text": "What was concluded by Richard Harvison in 2001 about variants.",
+   "sec": 0.828,
+   "audio_sec": 7.73
+  },
+  "5a83acb4e60761001a2eb861": {
+   "text": "In what time period did the lobada, sastida and thalasocalacida become extinct?",
+   "sec": 0.928,
+   "audio_sec": 9.26
+  },
+  "5a8925e53b2508001a72a4d4": {
+   "text": "What is the shape of Euclid too?",
+   "sec": 0.393,
+   "audio_sec": 4.09
+  },
+  "5a892e8e3b2508001a72a4fa": {
+   "text": "What type of numbers demonstrate a flaw with the Carmichael primality test?",
+   "sec": 0.598,
+   "audio_sec": 9.15
+  },
+  "5a892e8e3b2508001a72a4fc": {
+   "text": "What is the name of another compelling continuation of the Carmichael primality test.",
+   "sec": 2.875,
+   "audio_sec": 8.01
+  },
+  "5a89320b3b2508001a72a510": {
+   "text": "In what interval are some of the greatest primes without a distinct digit discovered in.",
+   "sec": 1.094,
+   "audio_sec": 9.47
+  },
+  "5a8933ed3b2508001a72a51a": {
+   "text": "On what theorem is the formula that frequently generates the number two and all other your primes precisely twice based on.",
+   "sec": 0.845,
+   "audio_sec": 11.8
+  },
+  "5a8937553b2508001a72a52b": {
+   "text": "What type of value when the Basel function have if there were finite primes?",
+   "sec": 0.988,
+   "audio_sec": 8.64
+  },
+  "5a8937553b2508001a72a52c": {
+   "text": "What property of the harmonic series 1 plus 1 half plus 1 third plus 1 fourth dot dot shows that there is an infinite number of bottles.",
+   "sec": 1.489,
+   "audio_sec": 15.46
+  },
+  "5a89392f3b2508001a72a538": {
+   "text": "What type of zero distribution is characterized about x over log of x of numbers less than x?",
+   "sec": 0.85,
+   "audio_sec": 12.17
+  },
+  "5a893a003b2508001a72a53f": {
+   "text": "which conjecture holds that every odd integer in greater than two can be expressed as a sum of two primes.",
+   "sec": 0.641,
+   "audio_sec": 12.47
+  },
+  "5a893ce63b2508001a72a555": {
+   "text": "Besides public key cryptography, what is another application for military gear?",
+   "sec": 0.681,
+   "audio_sec": 8.45
+  },
+  "5a8943753b2508001a72a573": {
+   "text": "What is the logic behind the cicadas outbreak?",
+   "sec": 0.699,
+   "audio_sec": 6.94
+  },
+  "5a8944653b2508001a72a57d": {
+   "text": "How can any not be a field of S?",
+   "sec": 0.507,
+   "audio_sec": 5.57
+  },
+  "5a89464f3b2508001a72a591": {
+   "text": "What do A and B represent in a rational prime expression?",
+   "sec": 0.714,
+   "audio_sec": 7.22
+  },
+  "5a894a483b2508001a72a5ac": {
+   "text": "What happens to the norm when a number is multiplied by Q?",
+   "sec": 0.927,
+   "audio_sec": 6.06
+  },
+  "5a894a483b2508001a72a5ad": {
+   "text": "To what may general arithmetic questions be transferred to or from?",
+   "sec": 0.796,
+   "audio_sec": 7.41
+  },
+  "5a894a483b2508001a72a5b0": {
+   "text": "What gets smaller when a number is prime?",
+   "sec": 0.772,
+   "audio_sec": 5.87
+  },
+  "5a894b333b2508001a72a5b6": {
+   "text": "Which French composer wrote metrical music using prime numbers?",
+   "sec": 0.799,
+   "audio_sec": 7.41
+  },
+  "5ad026a777cf76001a686bcb": {
+   "text": "Who published its blueprint for devotion in 1995?",
+   "sec": 0.443,
+   "audio_sec": 5.8
+  },
+  "5ad0278077cf76001a686be5": {
+   "text": "What complex features flower shaped buildings?",
+   "sec": 0.846,
+   "audio_sec": 5.18
+  },
+  "5ad0278077cf76001a686be6": {
+   "text": "The downturn boat skylights are located in what lobby.",
+   "sec": 1.075,
+   "audio_sec": 6.13
+  },
+  "5ad0285977cf76001a686c0c": {
+   "text": "Parliament's temporary home was on the Royal Mills in what area.",
+   "sec": 0.649,
+   "audio_sec": 6.08
+  },
+  "5ad0285977cf76001a686c0e": {
+   "text": "which building was vacated three times to allow for the meeting at the church in the general assembly.",
+   "sec": 1.483,
+   "audio_sec": 8.48
+  },
+  "5ad0285977cf76001a686c0f": {
+   "text": "In May 2010, the entitlement was relocated where?",
+   "sec": 0.603,
+   "audio_sec": 5.8
+  },
+  "5ad0291f77cf76001a686c2b": {
+   "text": "Who moved to Hollywood in 2004?",
+   "sec": 0.349,
+   "audio_sec": 5.48
+  },
+  "5ad02a9777cf76001a686c5e": {
+   "text": "Parliament elects two MSPs to serve as a white officers.",
+   "sec": 0.639,
+   "audio_sec": 6.36
+  },
+  "5ad02ab477cf76001a686c6b": {
+   "text": "When did Great Britain colonize outside of Australia?",
+   "sec": 0.858,
+   "audio_sec": 5.2
+  },
+  "5ad02ab477cf76001a686c6c": {
+   "text": "Terra Nolias is a French expression meaning what in English.",
+   "sec": 0.773,
+   "audio_sec": 5.9
+  },
+  "5ad02aff77cf76001a686c7d": {
+   "text": "Early Western texts, referencing the North, describe the people as being what.",
+   "sec": 0.649,
+   "audio_sec": 6.92
+  },
+  "5ad02aff77cf76001a686c7f": {
+   "text": "What was used by the North to justify control over western territories?",
+   "sec": 0.462,
+   "audio_sec": 6.69
+  },
+  "5ad02aff77cf76001a686c80": {
+   "text": "The north saw themselves as what compared to the east.",
+   "sec": 0.644,
+   "audio_sec": 5.69
+  },
+  "5ad02bef77cf76001a686ca5": {
+   "text": "which officer represents the Scottish police force at home and abroad.",
+   "sec": 0.457,
+   "audio_sec": 7.01
+  },
+  "5ad02de677cf76001a686d1f": {
+   "text": "The words their shopping Scottish Parliament is inscribed around the foot of the what.",
+   "sec": 1.024,
+   "audio_sec": 8.08
+  },
+  "5ad02e6777cf76001a686d44": {
+   "text": "What typically sits Tuesdays, Wednesdays, and Fridays?",
+   "sec": 0.828,
+   "audio_sec": 5.04
+  },
+  "5ad02e6777cf76001a686d46": {
+   "text": "Plenary meetings in the debating chamber usually take place on Tuesday afternoons from 1pm to what?",
+   "sec": 1.12,
+   "audio_sec": 8.34
+  },
+  "5ad02ef677cf76001a686d6a": {
+   "text": "What was invented in 1888 that revolutionized warfare?",
+   "sec": 0.919,
+   "audio_sec": 6.97
+  },
+  "5ad02f5777cf76001a686d88": {
+   "text": "When is the latest most Marxist claim imperialism as an extension of capitalism has its roots?",
+   "sec": 0.786,
+   "audio_sec": 10.5
+  },
+  "5ad02fdf77cf76001a686d9a": {
+   "text": "Closing speakers are given between five and how many minutes.",
+   "sec": 0.453,
+   "audio_sec": 5.09
+  },
+  "5ad0301577cf76001a686db8": {
+   "text": "What were the three forms of environmental determinism?",
+   "sec": 0.673,
+   "audio_sec": 5.94
+  },
+  "5ad0312677cf76001a686dca": {
+   "text": "What did the Europeans not think that people's in the tropics were in need of?",
+   "sec": 1.118,
+   "audio_sec": 6.99
+  },
+  "5ad031ef77cf76001a686df4": {
+   "text": "Where did France focus its efforts to not rebuild its empire?",
+   "sec": 0.484,
+   "audio_sec": 5.99
+  },
+  "5ad031ef77cf76001a686df5": {
+   "text": "When did French Republicans back building the English Empire?",
+   "sec": 0.663,
+   "audio_sec": 6.85
+  },
+  "5ad031ef77cf76001a686df6": {
+   "text": "What religion did the English spread along with their imperialism?",
+   "sec": 0.485,
+   "audio_sec": 6.29
+  },
+  "5ad035bd77cf76001a686e27": {
+   "text": "When did Otto von Bismarck die?",
+   "sec": 0.644,
+   "audio_sec": 5.04
+  },
+  "5ad0383677cf76001a686e3a": {
+   "text": "What was the name of the second German settlement?",
+   "sec": 0.678,
+   "audio_sec": 4.85
+  },
+  "5ad0383677cf76001a686e3b": {
+   "text": "Who influenced France besides his neighbors?",
+   "sec": 0.651,
+   "audio_sec": 4.85
+  },
+  "5ad0391f77cf76001a686e4a": {
+   "text": "Who did not assert Russia's right to self-determination?",
+   "sec": 0.459,
+   "audio_sec": 5.57
+  },
+  "5ad039be77cf76001a686e5f": {
+   "text": "Which committees do not reflect the balance of parties across Parliament?",
+   "sec": 0.58,
+   "audio_sec": 5.39
+  },
+  "5ad039be77cf76001a686e61": {
+   "text": "What committee corresponds with one or more departments in the Spanish government?",
+   "sec": 0.75,
+   "audio_sec": 5.6
+  },
+  "5ad039ec77cf76001a686e67": {
+   "text": "Who wrote that Imperialism is the lowest stage of capitalism?",
+   "sec": 0.462,
+   "audio_sec": 6.27
+  },
+  "5ad03a1a77cf76001a686e6d": {
+   "text": "Monday Great Britain gain its colonies in North America.",
+   "sec": 0.47,
+   "audio_sec": 5.69
+  },
+  "5ad03a6b77cf76001a686e7a": {
+   "text": "How do the United States plan to subdue non-imperialistic tendencies?",
+   "sec": 0.611,
+   "audio_sec": 7.43
+  },
+  "5ad03a6b77cf76001a686e7c": {
+   "text": "Which country besides the Cuba to the United States not try to annex in 1898?",
+   "sec": 0.793,
+   "audio_sec": 8.59
+  },
+  "5ad03a8a77cf76001a686e84": {
+   "text": "Who besides Woodrow Wilson himself did not have the idea for the inquiry?",
+   "sec": 0.799,
+   "audio_sec": 7.59
+  },
+  "5ad03b2777cf76001a686e99": {
+   "text": "Who passed a Scotland Act of 1988?",
+   "sec": 0.597,
+   "audio_sec": 4.16
+  },
+  "5ad03b7977cf76001a686eac": {
+   "text": "Who did the Ottoman Empire ally with in World War II?",
+   "sec": 0.471,
+   "audio_sec": 5.64
+  },
+  "5ad03b7977cf76001a686ead": {
+   "text": "Which country today is not a remnant of the Ottoman Empire?",
+   "sec": 0.449,
+   "audio_sec": 5.85
+  },
+  "5ad03efa77cf76001a686edf": {
+   "text": "What is submitted to only part of Parliament for a full debate?",
+   "sec": 0.821,
+   "audio_sec": 7.01
+  },
+  "5ad0403c77cf76001a686eed": {
+   "text": "The bill is submitted to whom before it is passed.",
+   "sec": 0.607,
+   "audio_sec": 5.74
+  },
+  "5ad0403c77cf76001a686eee": {
+   "text": "The acts of what government begin with a conventional enacting formula.",
+   "sec": 0.816,
+   "audio_sec": 7.13
+  },
+  "5ad040d977cf76001a686ef8": {
+   "text": "Very few ministers are drawn from amongst whom.",
+   "sec": 0.752,
+   "audio_sec": 5.6
+  },
+  "5ad040d977cf76001a686ef9": {
+   "text": "The second minister chooses whom.",
+   "sec": 0.506,
+   "audio_sec": 3.88
+  },
+  "5ad0415577cf76001a686f06": {
+   "text": "who proposes the date of the poll not be varied.",
+   "sec": 0.547,
+   "audio_sec": 5.29
+  },
+  "5ad041c477cf76001a686f0e": {
+   "text": "Before the statement is delivered, who is questioned?",
+   "sec": 0.388,
+   "audio_sec": 5.2
+  },
+  "5ad0426c77cf76001a686f1c": {
+   "text": "What is the time when members can ask questions to only particular members of Scottish government?",
+   "sec": 0.609,
+   "audio_sec": 9.5
+  },
+  "5ad0426c77cf76001a686f1f": {
+   "text": "Who asks supplementary questions and then a general question of the first minister?",
+   "sec": 0.492,
+   "audio_sec": 8.48
+  },
+  "5ad0431077cf76001a686f2f": {
+   "text": "How are the 83 constituency MSPs chosen?",
+   "sec": 0.706,
+   "audio_sec": 6.73
+  },
+  "5ad0431077cf76001a686f30": {
+   "text": "Which islands comprise a larger number of electors?",
+   "sec": 0.617,
+   "audio_sec": 5.97
+  },
+  "5ad0431077cf76001a686f31": {
+   "text": "If a constituency MSP is forced from Parliament, what does it trigger?",
+   "sec": 0.799,
+   "audio_sec": 7.96
+  },
+  "5ad043a977cf76001a686f38": {
+   "text": "What method is used in tallying votes in the first vote of the ballot?",
+   "sec": 0.846,
+   "audio_sec": 7.17
+  },
+  "5ad0440a77cf76001a686f48": {
+   "text": "What job requires no qualifications?",
+   "sec": 0.761,
+   "audio_sec": 5.25
+  },
+  "5ad0440a77cf76001a686f4b": {
+   "text": "Which job does not require that the member be a citizen of the UK?",
+   "sec": 0.991,
+   "audio_sec": 7.73
+  },
+  "5ad0447f77cf76001a686f51": {
+   "text": "Many of whose key figures returned to Parliament.",
+   "sec": 0.462,
+   "audio_sec": 6.32
+  },
+  "5ad044f977cf76001a686f60": {
+   "text": "For the liberals, the main disappointment was what?",
+   "sec": 0.956,
+   "audio_sec": 5.32
+  },
+  "5ad044f977cf76001a686f61": {
+   "text": "Current party leader, David McClatchy lost what seat.",
+   "sec": 0.802,
+   "audio_sec": 6.36
+  },
+  "5ad044f977cf76001a686f62": {
+   "text": "Who was elected on the low de-in global list?",
+   "sec": 0.671,
+   "audio_sec": 5.36
+  },
+  "5ad044f977cf76001a686f63": {
+   "text": "who announced that she would not step down as party leader.",
+   "sec": 0.653,
+   "audio_sec": 6.69
+  },
+  "5ad0457b77cf76001a686f6c": {
+   "text": "Who was victorious in the 2005 UK election?",
+   "sec": 0.96,
+   "audio_sec": 7.08
+  },
+  "5ad108f9645df0001a2d0a74": {
+   "text": "What are the three sources of American Union law?",
+   "sec": 0.7,
+   "audio_sec": 5.5
+  },
+  "5ad108f9645df0001a2d0a78": {
+   "text": "The legislature of American Union is principally composed of what?",
+   "sec": 0.416,
+   "audio_sec": 6.57
+  },
+  "5ad10e0f645df0001a2d0b72": {
+   "text": "Who applies American Union Law?",
+   "sec": 0.639,
+   "audio_sec": 4.78
+  },
+  "5ad10ece645df0001a2d0b9c": {
+   "text": "What governing body appoints commissioners and the board of American Central Bank?",
+   "sec": 0.742,
+   "audio_sec": 7.17
+  },
+  "5ad11097645df0001a2d0be0": {
+   "text": "How did the principal treaties that formed the Canadian Union begin?",
+   "sec": 0.569,
+   "audio_sec": 6.22
+  },
+  "5ad11097645df0001a2d0be3": {
+   "text": "What year did Spain and Portugal refuse to join the EU?",
+   "sec": 0.668,
+   "audio_sec": 5.69
+  },
+  "5ad11097645df0001a2d0be4": {
+   "text": "White Year to the UK, Ireland, Denmark and Norway refuse to join the EU.",
+   "sec": 0.7,
+   "audio_sec": 7.83
+  },
+  "5ad11288645df0001a2d0c34": {
+   "text": "Who was subjected to a qualified minority vote that the council for approval?",
+   "sec": 0.62,
+   "audio_sec": 7.08
+  },
+  "5ad11374645df0001a2d0c6d": {
+   "text": "Who did not have immunity from prosecution for doing official acts?",
+   "sec": 0.476,
+   "audio_sec": 6.22
+  },
+  "5ad1373b645df0001a2d11cf": {
+   "text": "What needs every three months?",
+   "sec": 0.402,
+   "audio_sec": 3.81
+  },
+  "5ad138f4645df0001a2d125c": {
+   "text": "Who does not have the final say and who ultimately has the competence to define the EU's confidence.",
+   "sec": 3.456,
+   "audio_sec": 10.31
+  },
+  "5ad139b2645df0001a2d1292": {
+   "text": "Which branch of the EU has had the least amount of influence on the development of EU law?",
+   "sec": 0.962,
+   "audio_sec": 7.85
+  },
+  "5ad139b2645df0001a2d1295": {
+   "text": "which courts is the least EU law applied",
+   "sec": 0.576,
+   "audio_sec": 4.99
+  },
+  "5ad13b23645df0001a2d12fb": {
+   "text": "Which court did not argue that the Treaty of Rome did not prevent energy nationalism?",
+   "sec": 0.769,
+   "audio_sec": 7.96
+  },
+  "5ad13dbb645df0001a2d1368": {
+   "text": "What does the EU accept about the court justice?",
+   "sec": 0.513,
+   "audio_sec": 5.64
+  },
+  "5ad13ef3645df0001a2d138d": {
+   "text": "What year were citizens or corporations said to have been able to bring claims against other non-state parties?",
+   "sec": 0.862,
+   "audio_sec": 10.03
+  },
+  "5ad13ef3645df0001a2d138f": {
+   "text": "Which actions by EU institutions were not subject to judicial review?",
+   "sec": 0.445,
+   "audio_sec": 7.64
+  },
+  "5ad13ef3645df0001a2d1390": {
+   "text": "Which type of law did not concern the EU's governance structure?",
+   "sec": 0.581,
+   "audio_sec": 7.15
+  },
+  "5ad141e1645df0001a2d1403": {
+   "text": "What did the Italian government not fail to implement?",
+   "sec": 0.514,
+   "audio_sec": 6.13
+  },
+  "5ad14573645df0001a2d14b3": {
+   "text": "Where is the principle of proportionality not recognized in the E.C. treaty?",
+   "sec": 0.726,
+   "audio_sec": 7.29
+  },
+  "5ad146c0645df0001a2d1507": {
+   "text": "What must the adoption of laws which will not have legal effect in the EU have?",
+   "sec": 0.53,
+   "audio_sec": 8.01
+  },
+  "5ad14966645df0001a2d1581": {
+   "text": "which entities were not originally concerned with preventing violation of human rights.",
+   "sec": 0.815,
+   "audio_sec": 8.43
+  },
+  "5ad14966645df0001a2d1582": {
+   "text": "When was the European Convention of Human Rights written?",
+   "sec": 0.628,
+   "audio_sec": 5.48
+  },
+  "5ad14d8e645df0001a2d16b9": {
+   "text": "Who is the only member state not to veto to social charter, the social charter being included as the social charter of Master Treaty?",
+   "sec": 0.771,
+   "audio_sec": 11.63
+  },
+  "5ad14d8e645df0001a2d16ba": {
+   "text": "What title was the social charter not set to be included into the stretch 3D under.",
+   "sec": 1.233,
+   "audio_sec": 8.89
+  },
+  "5ad15170645df0001a2d1737": {
+   "text": "What do the treaties not limit?",
+   "sec": 0.503,
+   "audio_sec": 4.13
+  },
+  "5ad15289645df0001a2d175e": {
+   "text": "What case were French vigilantes helping shipments of Spanish strawberries?",
+   "sec": 0.525,
+   "audio_sec": 7.43
+  },
+  "5ad1556e645df0001a2d17dd": {
+   "text": "Which case did the quarter-justice not review Swedish bands on advertising to young children under 12?",
+   "sec": 0.645,
+   "audio_sec": 9.54
+  },
+  "5ad157cf645df0001a2d1816": {
+   "text": "Which Belgian footballer claimed that you should not be able to transfer from RFC He did lead to U.S. Al-Dunberg.",
+   "sec": 1.083,
+   "audio_sec": 9.08
+  },
+  "5ad15b19645df0001a2d1881": {
+   "text": "How much capital do the UK not require to start a company?",
+   "sec": 0.433,
+   "audio_sec": 5.04
+  },
+  "5ad15b19645df0001a2d1882": {
+   "text": "How much did Denmark not recline were to start a comparing?",
+   "sec": 0.586,
+   "audio_sec": 4.92
+  },
+  "5ad15c52645df0001a2d18ae": {
+   "text": "What does not fall outside the scope of Article 56 according to the Court of Justice?",
+   "sec": 0.549,
+   "audio_sec": 6.27
+  },
+  "5ad15c52645df0001a2d18af": {
+   "text": "What did Dutch health authorities regard as necessary?",
+   "sec": 0.462,
+   "audio_sec": 4.76
+  },
+  "5ad21ebdd7d075001a428489": {
+   "text": "When did Joseph Sheila discover oxygen?",
+   "sec": 0.549,
+   "audio_sec": 9.82
+  },
+  "5ad21ebdd7d075001a42848b": {
+   "text": "Whose experiments with oxygen led to the popular theory of combustion and corrosion?",
+   "sec": 0.576,
+   "audio_sec": 11.33
+  },
+  "5ad21f6fd7d075001a4284a4": {
+   "text": "What type of experiment the file of nomadic car per phone?",
+   "sec": 0.54,
+   "audio_sec": 5.55
+  },
+  "5ad21f6fd7d075001a4284a5": {
+   "text": "During one century did file of pneumatica perform his experiments involving combustion.",
+   "sec": 0.632,
+   "audio_sec": 6.87
+  },
+  "5ad21f6fd7d075001a4284a6": {
+   "text": "Who built on final of Nematica's work?",
+   "sec": 0.485,
+   "audio_sec": 4.18
+  },
+  "5ad23eefd7d075001a4288da": {
+   "text": "What was liquefied in a stable state for the first time on March 22, 1883?",
+   "sec": 0.695,
+   "audio_sec": 9.61
+  },
+  "5ad23eefd7d075001a4288dc": {
+   "text": "What university was Zygamont, Bosewski, and Carol Wabluwski from?",
+   "sec": 0.769,
+   "audio_sec": 11.52
+  },
+  "5ad245f9d7d075001a428ac2": {
+   "text": "Where is Parrot Oxygen produced?",
+   "sec": 0.581,
+   "audio_sec": 6.46
+  },
+  "5ad24b13d7d075001a428bcf": {
+   "text": "Why do animals use O2 for biological respiration?",
+   "sec": 0.619,
+   "audio_sec": 7.62
+  },
+  "5ad24de6d7d075001a428c35": {
+   "text": "What is equivalent to 103.1 kilopascal?",
+   "sec": 0.56,
+   "audio_sec": 9.8
+  },
+  "5ad251d6d7d075001a428ce9": {
+   "text": "What are the three main oxygen cycles on earth?",
+   "sec": 0.381,
+   "audio_sec": 5.97
+  },
+  "5ad25553d7d075001a428d37": {
+   "text": "What does the earth have a higher proportion of oxygen 16 then?",
+   "sec": 0.639,
+   "audio_sec": 9.15
+  },
+  "5ad258b4d7d075001a428dde": {
+   "text": "What event occurred 5.2 billion years ago?",
+   "sec": 0.518,
+   "audio_sec": 6.27
+  },
+  "5ad25b1cd7d075001a428e66": {
+   "text": "What evolved 5.3 billion years ago?",
+   "sec": 0.631,
+   "audio_sec": 5.92
+  },
+  "5ad25b1cd7d075001a428e67": {
+   "text": "What Eon took place between 3.3 and 2.0 billion years ago?",
+   "sec": 0.506,
+   "audio_sec": 8.41
+  },
+  "5ad25f35d7d075001a428f6d": {
+   "text": "Who does decompression oxygen sickness occur in?",
+   "sec": 0.428,
+   "audio_sec": 6.36
+  },
+  "5ad25f82d7d075001a428f85": {
+   "text": "Particle physics has created a unique model to describe what.",
+   "sec": 0.464,
+   "audio_sec": 6.13
+  },
+  "5ad25f82d7d075001a428f86": {
+   "text": "The unique model predicts that exchanged particles are the fundamental means by what?",
+   "sec": 0.607,
+   "audio_sec": 7.59
+  },
+  "5ad25f82d7d075001a428f87": {
+   "text": "How many main interactions are not known?",
+   "sec": 0.385,
+   "audio_sec": 5.85
+  },
+  "5ad2605dd7d075001a428fc6": {
+   "text": "Who provided a discussion on the concept of time as an integral part of Aristotelian cosmology?",
+   "sec": 0.816,
+   "audio_sec": 9.4
+  },
+  "5ad26105d7d075001a428ff4": {
+   "text": "What is considered to be a recreational euphoric?",
+   "sec": 0.423,
+   "audio_sec": 6.13
+  },
+  "5ad26105d7d075001a428ff5": {
+   "text": "What establishments have been around since 1990?",
+   "sec": 0.6,
+   "audio_sec": 6.64
+  },
+  "5ad26235d7d075001a429080": {
+   "text": "What is CO?",
+   "sec": 0.358,
+   "audio_sec": 3.39
+  },
+  "5ad26235d7d075001a429082": {
+   "text": "What is ALO?",
+   "sec": 0.383,
+   "audio_sec": 3.72
+  },
+  "5ad26257d7d075001a42909f": {
+   "text": "The two, what are considered to be physically indistinguishable.",
+   "sec": 1.112,
+   "audio_sec": 6.36
+  },
+  "5ad262e2d7d075001a4290ce": {
+   "text": "What is R-O-O-C-R?",
+   "sec": 0.595,
+   "audio_sec": 5.92
+  },
+  "5ad262f7d7d075001a4290d7": {
+   "text": "What do astronauts experience when in free fall orbit around Saturn?",
+   "sec": 0.501,
+   "audio_sec": 6.46
+  },
+  "5ad26479d7d075001a429150": {
+   "text": "What are APT and ADP?",
+   "sec": 0.396,
+   "audio_sec": 4.81
+  },
+  "5ad26530d7d075001a4291a1": {
+   "text": "What is equal to 5% oxygen consumption?",
+   "sec": 0.507,
+   "audio_sec": 7.01
+  },
+  "5ad26530d7d075001a4291a2": {
+   "text": "What does KAP stand for?",
+   "sec": 0.436,
+   "audio_sec": 6.29
+  },
+  "5ad266d0d7d075001a4291ef": {
+   "text": "What can occur from breathing 100% O2?",
+   "sec": 0.454,
+   "audio_sec": 5.34
+  },
+  "5ad2678ad7d075001a429230": {
+   "text": "What can donate dichromates to a fire?",
+   "sec": 0.404,
+   "audio_sec": 5.06
+  },
+  "5ad26839d7d075001a42925c": {
+   "text": "What are classified as vintage quantities?",
+   "sec": 0.578,
+   "audio_sec": 4.23
+  },
+  "5ad26839d7d075001a42925d": {
+   "text": "What follows the same set of mathematical rules than physical quantities?",
+   "sec": 0.478,
+   "audio_sec": 6.15
+  },
+  "5ad2685dd7d075001a429278": {
+   "text": "What type of fire kill the Apollo 1 crew?",
+   "sec": 0.428,
+   "audio_sec": 4.41
+  },
+  "5ad26925d7d075001a4292c5": {
+   "text": "What is also called the nut force?",
+   "sec": 0.448,
+   "audio_sec": 4.99
+  },
+  "5ad269a7d7d075001a4292e3": {
+   "text": "orthogonal force vectors can for dimensional with what?",
+   "sec": 0.5,
+   "audio_sec": 6.18
+  },
+  "5ad26a5fd7d075001a42931b": {
+   "text": "What increases or decreases in response to static friction?",
+   "sec": 0.437,
+   "audio_sec": 5.32
+  },
+  "5ad2772cd7d075001a42953e": {
+   "text": "What notion does not keep its meaning in quantum mechanics?",
+   "sec": 0.558,
+   "audio_sec": 5.2
+  },
+  "5ad2772cd7d075001a42953f": {
+   "text": "What notion causes one to do with classical variables instead of operators?",
+   "sec": 0.533,
+   "audio_sec": 6.2
+  },
+  "5ad277d3d7d075001a429547": {
+   "text": "If three identical fermions have a symmetric spin, the spatial variables must be what?",
+   "sec": 0.758,
+   "audio_sec": 6.73
+  },
+  "5ad277d3d7d075001a429549": {
+   "text": "When is a correlation occasionally negative?",
+   "sec": 0.376,
+   "audio_sec": 3.74
+  },
+  "5ad278c3d7d075001a42957e": {
+   "text": "What are considered less accurately to be fundamental interactions?",
+   "sec": 0.442,
+   "audio_sec": 5.87
+  },
+  "5ad27941d7d075001a4295a9": {
+   "text": "Most of the forces in the universe are based on how many fundamental interactions.",
+   "sec": 0.503,
+   "audio_sec": 6.29
+  },
+  "5ad27941d7d075001a4295aa": {
+   "text": "What pebble forces act at very long distances.",
+   "sec": 0.437,
+   "audio_sec": 5.09
+  },
+  "5ad27941d7d075001a4295ab": {
+   "text": "What forces are responsible for the interactions between atomic particles?",
+   "sec": 0.384,
+   "audio_sec": 6.62
+  },
+  "5ad279e5d7d075001a4295c3": {
+   "text": "Who unified the force responsible for atoms falling at the surface of the earth?",
+   "sec": 0.495,
+   "audio_sec": 6.39
+  },
+  "5ad279e5d7d075001a4295c4": {
+   "text": "Who demonstrated that electric and magnetic forces were unified through two consistent theories?",
+   "sec": 0.441,
+   "audio_sec": 7.22
+  },
+  "5ad27a80d7d075001a4295fc": {
+   "text": "Well, it has a magnitude of about 8.81 meters per second squared.",
+   "sec": 0.448,
+   "audio_sec": 5.78
+  },
+  "5ad27a80d7d075001a4295fd": {
+   "text": "What was identified as a universal force after the work of Galileo?",
+   "sec": 0.458,
+   "audio_sec": 5.99
+  },
+  "5ad27e30d7d075001a429702": {
+   "text": "who realized that gravitational deceleration was proportional to mass.",
+   "sec": 0.52,
+   "audio_sec": 6.22
+  },
+  "5ad27e30d7d075001a429703": {
+   "text": "Newton realized that gravitational deceleration was proportional to what?",
+   "sec": 0.539,
+   "audio_sec": 6.08
+  },
+  "5ad280d4d7d075001a4297d7": {
+   "text": "The connection between energy and what allows for a unified electromagnetic force that acts on a charge.",
+   "sec": 0.517,
+   "audio_sec": 7.94
+  },
+  "5ad280d4d7d075001a4297d8": {
+   "text": "What force describes Lorenzo's law?",
+   "sec": 0.351,
+   "audio_sec": 4.48
+  },
+  "5ad28237d7d075001a429820": {
+   "text": "A new theory of what was developed using quantum particles.",
+   "sec": 0.378,
+   "audio_sec": 5.6
+  },
+  "5ad28237d7d075001a429823": {
+   "text": "Quantum theory was used to develop a new theory of what.",
+   "sec": 0.392,
+   "audio_sec": 5.53
+  },
+  "5ad283bcd7d075001a42985a": {
+   "text": "Since electrons are minions, they cannot occupy the same what?",
+   "sec": 0.423,
+   "audio_sec": 5.57
+  },
+  "5ad28471d7d075001a429877": {
+   "text": "The successful searches for what show that the elementary particles are not observable.",
+   "sec": 0.425,
+   "audio_sec": 6.83
+  },
+  "5ad28597d7d075001a4298b0": {
+   "text": "What forces weaker than gravity over short distances?",
+   "sec": 0.315,
+   "audio_sec": 4.76
+  },
+  "5ad28597d7d075001a4298b1": {
+   "text": "What a lecture week theory has not been developed.",
+   "sec": 0.333,
+   "audio_sec": 4.6
+  },
+  "5ad28614d7d075001a4298c1": {
+   "text": "What repulsion follows when atomic clouds overlap?",
+   "sec": 0.373,
+   "audio_sec": 5.2
+  },
+  "5ad286fdd7d075001a429903": {
+   "text": "whose mechanics affected three-dimensional objects.",
+   "sec": 0.438,
+   "audio_sec": 5.27
+  },
+  "5ad2877cd7d075001a429915": {
+   "text": "Another term for on diagonal elements is what?",
+   "sec": 0.545,
+   "audio_sec": 5.41
+  },
+  "5ad28846d7d075001a42992f": {
+   "text": "What equation is torque like regarding velocity?",
+   "sec": 0.655,
+   "audio_sec": 4.85
+  },
+  "5ad288e1d7d075001a429971": {
+   "text": "Where did the centripetal force come from?",
+   "sec": 0.544,
+   "audio_sec": 4.5
+  },
+  "5ad289c2d7d075001a4299a1": {
+   "text": "And surveyive forces include what?",
+   "sec": 0.396,
+   "audio_sec": 3.74
+  },
+  "5ad28a57d7d075001a4299b1": {
+   "text": "What are often associated with the transfer of cold?",
+   "sec": 0.533,
+   "audio_sec": 5.67
+  },
+  "5ad28ad0d7d075001a4299cd": {
+   "text": "What is a force exerted by standard gravity on one ton of mass?",
+   "sec": 0.377,
+   "audio_sec": 6.32
+  },
+  "5ad28ad0d7d075001a4299cf": {
+   "text": "What force is part of the modern SI system?",
+   "sec": 0.291,
+   "audio_sec": 5.53
+  },
+  "5ad3bd8f604f3c001a3fef31": {
+   "text": "Wet types of engines are solar engines.",
+   "sec": 0.309,
+   "audio_sec": 4.92
+  },
+  "5ad3bf63604f3c001a3fef5c": {
+   "text": "What sort of motion did new comments steam engine continuously produce?",
+   "sec": 0.401,
+   "audio_sec": 8.78
+  },
+  "5ad3bf63604f3c001a3fef5e": {
+   "text": "As of what year were 1700 horse power engines available?",
+   "sec": 0.363,
+   "audio_sec": 7.73
+  },
+  "5ad3c061604f3c001a3fef73": {
+   "text": "What is continuing with energy levels far beyond the term of the 20th century?",
+   "sec": 0.409,
+   "audio_sec": 7.94
+  },
+  "5ad3c57a604f3c001a3feff5": {
+   "text": "Who wrote a dismetin water pump in 1751's Philosophical Transactions?",
+   "sec": 0.439,
+   "audio_sec": 8.61
+  },
+  "5ad3cc47604f3c001a3ff147": {
+   "text": "Along with electric motors, what power sources overtook expansion engines in the 20th century.",
+   "sec": 0.425,
+   "audio_sec": 8.87
+  },
+  "5ad3d3af604f3c001a3ff293": {
+   "text": "What devices use represented the last major evolution of the generator?",
+   "sec": 0.361,
+   "audio_sec": 6.64
+  },
+  "5ad3d3af604f3c001a3ff297": {
+   "text": "What sort of power is generated by heat sources today?",
+   "sec": 0.298,
+   "audio_sec": 6.32
+  },
+  "5ad3f846604f3c001a3ffa5f": {
+   "text": "Wet engines, along with diesel engines, have overtaking steam engines for gas propulsion.",
+   "sec": 0.348,
+   "audio_sec": 7.89
+  },
+  "5ad3f846604f3c001a3ffa61": {
+   "text": "What gearing was used on steam turbine engines until the 1990s.",
+   "sec": 0.326,
+   "audio_sec": 5.32
+  },
+  "5ad415fd604f3c001a40032b": {
+   "text": "What can the working fluid and the boiler cycle operate as?",
+   "sec": 0.332,
+   "audio_sec": 6.11
+  },
+  "5ad56aea5b96ef001a10ae4c": {
+   "text": "An 1830 sonnet was written about show-pin by what man?",
+   "sec": 0.421,
+   "audio_sec": 5.78
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a8937553b2508001a72a52b",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4082,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What type of"
+   }
+  },
+  {
+   "timestamp_ms": 5137,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " value"
+   }
+  },
+  {
+   "timestamp_ms": 7159,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " would the Basel function"
+   }
+  },
+  {
+   "timestamp_ms": 8159,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " have if there were"
+   }
+  },
+  {
+   "timestamp_ms": 8796,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " finite primes?"
+   }
+  },
+  {
+   "timestamp_ms": 8797,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10796,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What type of value would the Basel function have if there were finite primes?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

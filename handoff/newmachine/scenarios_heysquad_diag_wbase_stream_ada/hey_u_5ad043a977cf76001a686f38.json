@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_u_5ad043a977cf76001a686f38",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3073,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What method is"
+   }
+  },
+  {
+   "timestamp_ms": 4069,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " used in"
+   }
+  },
+  {
+   "timestamp_ms": 5083,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " tallying"
+   }
+  },
+  {
+   "timestamp_ms": 6087,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " votes in the first"
+   }
+  },
+  {
+   "timestamp_ms": 7099,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " vote of the"
+   }
+  },
+  {
+   "timestamp_ms": 7276,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " ballot?"
+   }
+  },
+  {
+   "timestamp_ms": 7277,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9276,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What method is used in tallying votes in the first vote of the ballot?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

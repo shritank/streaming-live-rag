@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_5729f2646aef051400155130",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4174,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Where does the Amazon"
+   }
+  },
+  {
+   "timestamp_ms": 5185,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " region rate among"
+   }
+  },
+  {
+   "timestamp_ms": 6223,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the entire"
+   }
+  },
+  {
+   "timestamp_ms": 7224,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Earth for its"
+   }
+  },
+  {
+   "timestamp_ms": 8284,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " amount of"
+   }
+  },
+  {
+   "timestamp_ms": 8838,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " biodiversity?"
+   }
+  },
+  {
+   "timestamp_ms": 8839,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10838,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Where does the Amazon region rate among the entire earth for its amount of biodiversity?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

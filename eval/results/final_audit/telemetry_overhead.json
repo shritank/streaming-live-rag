@@ -1,0 +1,39 @@
+{
+ "scenarios": 60,
+ "rounds": 2,
+ "time_scale": 4.0,
+ "turns_per_sink": 180,
+ "null": {
+  "n": 180,
+  "p50": 2.39,
+  "p95": 3.237,
+  "p99": 3.64,
+  "max": 3.932,
+  "mean": 2.19
+ },
+ "buffered": {
+  "n": 180,
+  "p50": 2.379,
+  "p95": 3.141,
+  "p99": 3.434,
+  "max": 4.798,
+  "mean": 2.194
+ },
+ "jsonl": {
+  "n": 180,
+  "p50": 2.445,
+  "p95": 3.322,
+  "p99": 3.633,
+  "max": 3.842,
+  "mean": 2.263
+ },
+ "buffered_vs_null_p95_pct": -3.0,
+ "buffered_vs_null_p50_pct": -0.5,
+ "jsonl_vs_null_p95_pct": 2.6,
+ "jsonl_vs_null_p50_pct": 2.3,
+ "emit_cost_us": {
+  "null": 2.44,
+  "buffered": 2.68,
+  "jsonl": 16.63
+ }
+}

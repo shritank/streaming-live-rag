@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_57283adcff5b5019007d9f97",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3119,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "During"
+   }
+  },
+  {
+   "timestamp_ms": 4155,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " which period in history"
+   }
+  },
+  {
+   "timestamp_ms": 5477,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " was the Amazon"
+   }
+  },
+  {
+   "timestamp_ms": 6311,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " rainforest"
+   }
+  },
+  {
+   "timestamp_ms": 6831,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " a narrow band of forest."
+   }
+  },
+  {
+   "timestamp_ms": 6832,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8831,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "During which period in history was the Amazon rainforest a narrow band of forest?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -16,6 +16,11 @@ from .session.synthesis import GroundedSynthesizer
 
 def build_real_components(config: Config, telemetry: Telemetry | None = None,
                            session_store: SessionStore | None = None):
+    if config.controller.mode != "rule":
+        # Only the rule-based controller exists. Accepting "model" here would
+        # quietly run the rule path, so a rule-vs-model ablation would report
+        # rule numbers twice under two names.
+        raise ValueError(f"controller.mode={config.controller.mode!r} is not implemented; only 'rule' exists")
     telemetry = telemetry or NullTelemetry()
     session_store = session_store or SessionStore()
     llm = build_llm_client(config, telemetry)
@@ -23,8 +28,21 @@ def build_real_components(config: Config, telemetry: Telemetry | None = None,
     controller = RetrievalController(llm=llm, telemetry=telemetry, config=config,
                                       corpus_vocab=lambda: retriever.specific_vocabulary,
                                       corpus_bigrams=lambda: retriever.low_df_bigrams)
-    synthesizer = GroundedSynthesizer(retriever, session_store, config, llm=llm, telemetry=telemetry)
+    synthesizer = _build_synthesizer(retriever, session_store, config, llm, telemetry)
     return controller, retriever, synthesizer, llm, session_store
+
+
+VALID_SYNTHESIS_MODES = ("extractive", "generative")
+
+
+def _build_synthesizer(retriever, session_store, config: Config, llm, telemetry):
+    mode = config.synthesis.mode
+    if mode == "extractive":
+        return GroundedSynthesizer(retriever, session_store, config, llm=llm, telemetry=telemetry)
+    if mode == "generative":
+        from .session.generative import GenerativeSynthesizer
+        return GenerativeSynthesizer(retriever, session_store, config, llm=llm, telemetry=telemetry)
+    raise ValueError(f"unknown synthesis.mode: {mode!r} (expected one of {VALID_SYNTHESIS_MODES})")
 
 
 def build_mock_components(config: Config, telemetry: Telemetry | None = None,

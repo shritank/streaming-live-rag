@@ -13,6 +13,7 @@ tasks so speculative retrieval overlaps with incoming speech.
 from __future__ import annotations
 
 import asyncio
+import dataclasses
 import time
 from dataclasses import dataclass, field
 from typing import Any
@@ -34,10 +35,20 @@ class _UtteranceState:
     retrieval_required: bool = False
     pending: dict[str, asyncio.Task] = field(default_factory=dict)   # query_id -> task
     query_by_id: dict[str, SubQuery] = field(default_factory=dict)
+    superseded: set[str] = field(default_factory=set)      # query_ids cancelled/superseded within this utterance
     retrieval_events: list[dict[str, Any]] = field(default_factory=list)
     completed_results: dict[str, RetrievalResult] = field(default_factory=dict)
+    # perf_counter marks for the post-speech path (utterance_end -> output)
+    marks: dict[str, float] = field(default_factory=dict)
     started_ms: int = 0
     suppressed_instruction: str | None = None
+    # sub-query text -> task retrieving it speculatively (see _speculate)
+    speculative: dict[str, asyncio.Task] = field(default_factory=dict)
+    spec_launched: int = 0
+    spec_reused: int = 0
+    # latest full ASR hypothesis (committed + not-yet-committed words), if the
+    # audio front end sends transcript_hypothesis events
+    hypothesis: str | None = None
 
 
 class Engine:
@@ -50,12 +61,13 @@ class Engine:
         self._config = config
         self._telemetry = telemetry or NullTelemetry()
         self._sessions = session_store or SessionStore()
-        self._utterances: dict[str, _UtteranceState] = {}
+        # keyed by (session_id, utterance_id): two sessions may reuse an utterance id at the same time
+        self._utterances: dict[tuple[str, str], _UtteranceState] = {}
         self._request_counter = 0
         self._watchdog_task: asyncio.Task | None = None
         self._closing = asyncio.Event()
         self._anchor_ts_ms = 0
-        self._anchor_wall = time.monotonic()
+        self._anchor_wall = time.perf_counter()
 
     def _now_ms(self) -> float:
         """Virtual (scenario) clock: anchored to the last envelope's timestamp
@@ -63,11 +75,11 @@ class Engine:
         the gaps BETWEEN envelopes (speech), never the engine's own work —
         retrieval and synthesis take the same wall time at any replay speed,
         so scaling them would overstate latency by the replay factor."""
-        return self._anchor_ts_ms + (time.monotonic() - self._anchor_wall) * 1000
+        return self._anchor_ts_ms + (time.perf_counter() - self._anchor_wall) * 1000
 
     def _anchor_clock(self, ts_ms: int) -> None:
         self._anchor_ts_ms = ts_ms
-        self._anchor_wall = time.monotonic()
+        self._anchor_wall = time.perf_counter()
 
     async def setup(self) -> None:
         """Cold-start work happens here, off the per-turn clock."""
@@ -85,13 +97,13 @@ class Engine:
     async def _loop_lag_watchdog(self, tick_ms: float = 20.0) -> None:
         threshold = self._config.engine.loop_lag_threshold_ms / 1000
         tick = tick_ms / 1000
-        last = time.monotonic()
+        last = time.perf_counter()
         while not self._closing.is_set():
             try:
                 await asyncio.wait_for(self._closing.wait(), timeout=tick)
             except asyncio.TimeoutError:
                 pass
-            now = time.monotonic()
+            now = time.perf_counter()
             drift = (now - last) - tick
             if drift > threshold:
                 self._telemetry.emit(
@@ -137,6 +149,8 @@ class Engine:
                 await self._on_transcript_chunk(payload, ts_ms, output_queue)
             elif event_type == "utterance_end":
                 await self._on_utterance_end(payload, ts_ms, output_queue)
+            elif event_type == "transcript_hypothesis":
+                await self._on_transcript_hypothesis(payload, ts_ms)
             elif event_type == "session_end":
                 await self._on_session_end(payload, ts_ms)
             else:
@@ -155,9 +169,16 @@ class Engine:
 
     async def _on_session_end(self, payload: dict, ts_ms: int) -> None:
         session_id = payload.get("session_id")
+        if not session_id and len(self._sessions._sessions) == 1:   # guide format: session_end carries an empty payload
+            session_id = next(iter(self._sessions._sessions))
         self._telemetry.emit("session_ended", component="engine", session_id=session_id, ts_ms=ts_ms)
         if session_id:
             self._sessions.close(session_id)
+            for key in [k for k in self._utterances if k[0] == session_id]:   # half-finished utterances
+                self._utterances.pop(key, None)
+            reset_session = getattr(self._controller, "reset_session", None)
+            if reset_session is not None:
+                reset_session(session_id)
 
     async def _on_transcript_chunk(self, payload: dict, ts_ms: int, output_queue) -> None:
         session_id = payload["session_id"] if "session_id" in payload else None
@@ -168,7 +189,8 @@ class Engine:
         self._telemetry.emit("chunk_received", component="engine", session_id=session_id,
                               utterance_id=utterance_id, ts_ms=ts_ms, text_len=len(text), is_final=False)
 
-        state = self._utterances.setdefault(utterance_id, _UtteranceState(utterance_id=utterance_id, started_ms=ts_ms))
+        state = self._utterances.setdefault((session_id, utterance_id),
+                                            _UtteranceState(utterance_id=utterance_id, started_ms=ts_ms))
         state.accumulated_text += text
 
         if self._config.engine.mode in ("baseline", "deferred"):
@@ -177,6 +199,110 @@ class Engine:
         chunk = TranscriptChunk(session_id=session_id, utterance_id=utterance_id,
                                  timestamp_ms=ts_ms, text=text, is_final=False)
         await self._dispatch_decision(chunk, session_id, state, ts_ms)
+        await self._speculate(state, session_id, utterance_id)
+
+    async def _on_transcript_hypothesis(self, payload: dict, ts_ms: int) -> None:
+        """The streaming ASR's current full hypothesis, including words it has
+        not committed yet. Never becomes transcript text: it only lets the
+        engine speculate on what the rest of the utterance will probably be
+        (see _speculate); nothing reaches synthesis unless the committed
+        words later produce the identical sub-query text."""
+        if self._config.engine.mode != "streaming":
+            return
+        utterance_id = payload["utterance_id"]
+        session_id = payload.get("session_id") or self._infer_session(utterance_id)
+        state = self._utterances.setdefault((session_id, utterance_id),
+                                            _UtteranceState(utterance_id=utterance_id, started_ms=ts_ms))
+        state.hypothesis = payload.get("text", "")
+        await self._speculate(state, session_id, utterance_id)
+
+    @staticmethod
+    def _pending_from_hypothesis(committed: str, hypothesis: str | None) -> str:
+        """The words the hypothesis adds after the committed text, formatted
+        as the ASR would commit them ("" if it contradicts a committed word
+        or adds nothing)."""
+        if not hypothesis:
+            return ""
+        done, hyp = committed.split(), hypothesis.split()
+        if len(hyp) <= len(done) or hyp[:len(done)] != done:
+            return ""
+        return (" " if done else "") + " ".join(hyp[len(done):])
+
+    async def _speculate(self, state: _UtteranceState, session_id: str, utterance_id: str) -> None:
+        """Start, during speech, the retrievals the final controller pass
+        would issue if the utterance ended now. Only warms a cache: nothing
+        reaches synthesis unless the real decision later emits a sub-query
+        with the identical text (retrieval and claim selection depend only on
+        that text), so answers cannot change. Stale speculations are
+        cancelled as soon as new words change the preview."""
+        preview_final = getattr(self._controller, "preview_final", None)
+        if not self._config.engine.speculative_final or preview_final is None:
+            return
+        pending = self._pending_from_hypothesis(state.accumulated_text, state.hypothesis)
+        wanted: dict[str, SubQuery] = {}
+        try:
+            for extra in ([""] + ([pending] if pending else [])):
+                preview = await preview_final(utterance_id, session_id, self._sessions.view(session_id),
+                                              pending_text=extra)
+                if preview.decision == Decision.RETRIEVE:
+                    wanted.update({q.text: q for q in preview.sub_queries})
+        except Exception as e:
+            self._telemetry.emit("error", component="controller", session_id=session_id, utterance_id=utterance_id,
+                                  ts_ms=self._now_ms(), where="controller.preview_final",
+                                  error_type=type(e).__name__, message=str(e))
+            return
+        for text in [t for t in state.speculative if t not in wanted]:
+            state.speculative.pop(text).cancel()
+        issued = {q.text for q in state.query_by_id.values()}
+        for text, q in wanted.items():
+            if text in state.speculative or text in issued:
+                continue
+            # own id namespace: the preview rolls back the controller's id
+            # counter, so its "u1.q3" can later belong to a DIFFERENT real
+            # sub-query - whose prefetch would then overwrite this one's
+            # cached claim (answers unaffected, the reuse silently lost)
+            state.spec_launched += 1
+            q = dataclasses.replace(q, query_id=f"{q.query_id}~spec{state.spec_launched}")
+            state.speculative[text] = asyncio.create_task(self._speculative_retrieval(q))
+
+    async def _speculative_retrieval(self, q: SubQuery) -> tuple[SubQuery, RetrievalResult] | None:
+        try:
+            results = await self._retriever.search([q], k=self._config.retrieval.k)
+            if not results:
+                return None
+            prefetch = getattr(self._synthesizer, "prefetch", None)
+            if prefetch is not None:
+                await asyncio.to_thread(prefetch, q, results[0])
+            return q, results[0]
+        except asyncio.CancelledError:
+            raise
+        except Exception:          # speculative: the real path simply runs normally
+            return None
+
+    async def _adopt_speculative(self, request_id: str, q: SubQuery, spec: asyncio.Task, session_id: str,
+                                 utterance_id: str, state: _UtteranceState) -> RetrievalResult | None:
+        """The real sub-query q has exactly the text a speculative retrieval
+        already ran: wait for it (usually already done) instead of searching
+        again. Falls back to the normal path if the speculation failed."""
+        start = time.perf_counter()
+        done = await spec
+        if done is None:
+            return await self._run_retrieval(request_id, [q], session_id, utterance_id, state)
+        spec_q, spec_result = done
+        result = dataclasses.replace(spec_result, query_id=q.query_id)
+        state.completed_results[q.query_id] = result
+        adopt = getattr(self._synthesizer, "adopt_prefetch", None)
+        if adopt is not None:
+            adopt(spec_q.query_id, spec_result, q.query_id, result)
+        state.spec_reused += 1
+        self._telemetry.emit(
+            "retrieval_completed", component="retriever", session_id=session_id,
+            utterance_id=utterance_id, ts_ms=self._now_ms(), request_id=request_id,
+            latency_ms=(time.perf_counter() - start) * 1000,
+            chunk_ids=[e.chunk.chunk_id for e in result.evidence],
+            low_confidence_query_ids=[q.query_id] if result.low_confidence else [],
+        )
+        return result
 
     def _infer_session(self, utterance_id: str) -> str:
         # utterances are per-session; fall back to a stable default if the
@@ -187,7 +313,7 @@ class Engine:
 
     async def _dispatch_decision(self, chunk: TranscriptChunk, session_id: str,
                                   state: _UtteranceState, ts_ms: int) -> None:
-        decision_start = time.monotonic()
+        decision_start = time.perf_counter()
         try:
             decision: ControllerDecision = await self._controller.on_chunk(chunk, self._sessions.view(session_id))
         except Exception as e:
@@ -195,7 +321,7 @@ class Engine:
                                   utterance_id=chunk.utterance_id, ts_ms=ts_ms, where="controller.on_chunk",
                                   error_type=type(e).__name__, message=str(e))
             return
-        decision_latency_ms = (time.monotonic() - decision_start) * 1000
+        decision_latency_ms = (time.perf_counter() - decision_start) * 1000
 
         self._telemetry.emit(
             "controller_decision", component="controller", session_id=session_id,
@@ -250,12 +376,17 @@ class Engine:
                 query_ids=[q.query_id], mode=self._config.retrieval.mode,
             )
             state.retrieval_events.append({"timestamp_s": ts_ms / 1000, "query": q.text, "trigger": q.trigger})
-            task = asyncio.create_task(self._run_retrieval(request_id, [q], session_id, chunk.utterance_id, state))
+            spec = state.speculative.pop(q.text, None)
+            if spec is not None:
+                task = asyncio.create_task(self._adopt_speculative(request_id, q, spec, session_id,
+                                                                   chunk.utterance_id, state))
+            else:
+                task = asyncio.create_task(self._run_retrieval(request_id, [q], session_id, chunk.utterance_id, state))
             state.pending[q.query_id] = task
 
     async def _run_retrieval(self, request_id: str, queries: list[SubQuery], session_id: str,
                               utterance_id: str, state: _UtteranceState) -> RetrievalResult | None:
-        start = time.monotonic()
+        start = time.perf_counter()
         try:
             results = await self._retriever.search(queries, k=self._config.retrieval.k)
         except asyncio.CancelledError:
@@ -266,7 +397,7 @@ class Engine:
                                   where="retriever.search",
                                   error_type=type(e).__name__, message=str(e))
             return None
-        latency_ms = (time.monotonic() - start) * 1000
+        latency_ms = (time.perf_counter() - start) * 1000
         for r in results:
             state.completed_results[r.query_id] = r
         prefetch = getattr(self._synthesizer, "prefetch", None)
@@ -296,6 +427,7 @@ class Engine:
         task = state.pending.pop(query_id, None)
         if task is None:
             return
+        state.superseded.add(query_id)
         # "Superseded" means "exclude this evidence from synthesis" — that
         # still applies even if the retrieval already finished by the time
         # the next chunk arrived (the common case for a fast mock/local
@@ -317,11 +449,12 @@ class Engine:
     async def _on_utterance_end(self, payload: dict, ts_ms: int, output_queue) -> None:
         utterance_id = payload["utterance_id"]
         session_id = payload.get("session_id") or self._infer_session(utterance_id)
-        state = self._utterances.get(utterance_id)
+        state = self._utterances.get((session_id, utterance_id))
         if state is None:
             state = _UtteranceState(utterance_id=utterance_id, started_ms=ts_ms)
-            self._utterances[utterance_id] = state
+            self._utterances[(session_id, utterance_id)] = state
 
+        state.marks = {"utterance_end": time.perf_counter()}
         self._telemetry.emit("chunk_received", component="engine", session_id=session_id,
                               utterance_id=utterance_id, ts_ms=ts_ms, text_len=0, is_final=True)
 
@@ -333,7 +466,15 @@ class Engine:
                                   where="finish_turn", error_type="turn_timeout", message="per-turn timeout exceeded")
             await self._emit_degraded_turn_result(state, session_id, ts_ms, output_queue)
         finally:
-            self._utterances.pop(utterance_id, None)
+            self._utterances.pop((session_id, utterance_id), None)
+            # the turn is over: the controller must not keep this utterance's text (and a later turn that
+            # reuses the id starts fresh). Controllers with the older one-argument signature are supported.
+            reset = getattr(self._controller, "reset_utterance", None)
+            if reset is not None:
+                try:
+                    reset(utterance_id, session_id)
+                except TypeError:
+                    reset(utterance_id)
 
     async def _finish_turn(self, state: _UtteranceState, session_id: str, ts_ms: int, output_queue) -> None:
         if self._config.engine.mode == "baseline":
@@ -350,9 +491,14 @@ class Engine:
         final_chunk = TranscriptChunk(session_id=session_id, utterance_id=state.utterance_id,
                                        timestamp_ms=ts_ms, text="", is_final=True)
         await self._dispatch_decision(final_chunk, session_id, state, ts_ms)
+        state.marks["final_decision"] = time.perf_counter()
+        for spec in state.speculative.values():     # previewed texts the final pass did not issue
+            spec.cancel()
+        state.speculative.clear()
 
         if state.pending:
             await asyncio.gather(*state.pending.values(), return_exceptions=True)
+        state.marks["retrieval_wait"] = time.perf_counter()
 
         results = [state.completed_results[qid] for qid in state.query_by_id if qid in state.completed_results]
         sub_queries = [state.query_by_id[r.query_id] for r in results]
@@ -373,9 +519,11 @@ class Engine:
             await self._emit_degraded_turn_result(state, session_id, ts_ms, output_queue)
             return
 
+        state.marks["synthesis"] = time.perf_counter()
         if answer is not None:
             self._sessions.record_answer(session_id, answer)
             self._emit_answer_telemetry(answer, session_id, state.utterance_id, results)
+        state.marks["answer_telemetry"] = time.perf_counter()
 
         await self._emit_turn_result(state, session_id, ts_ms, answer, output_queue)
 
@@ -444,7 +592,7 @@ class Engine:
             "session_id": session_id,
             "utterance_id": state.utterance_id,
             "retrieval_events": state.retrieval_events,
-            "sub_queries": [q.text for q in state.query_by_id.values()],
+            "sub_queries": _live_sub_queries(state),
             "answer": answer.text if answer else "",
             "citations": answer.citations if answer else [],
             "uncertainty": answer.uncertainty if answer else None,
@@ -458,7 +606,8 @@ class Engine:
         # end-to-end latency regardless of how long the turn actually took.
         self._telemetry.emit("output_emitted", component="engine", session_id=session_id,
                               utterance_id=state.utterance_id, ts_ms=self._now_ms(), kind="turn_result",
-                              version=answer.version if answer else None)
+                              version=answer.version if answer else None, timings=_timings(state.marks),
+                              speculation={"launched": state.spec_launched, "reused": state.spec_reused})
         await output_queue.put(record)
 
     async def _emit_degraded_turn_result(self, state: _UtteranceState, session_id: str, ts_ms: int, output_queue) -> None:
@@ -467,7 +616,7 @@ class Engine:
             "session_id": session_id,
             "utterance_id": state.utterance_id,
             "retrieval_events": state.retrieval_events,
-            "sub_queries": [q.text for q in state.query_by_id.values()],
+            "sub_queries": _live_sub_queries(state),
             "answer": "I'm not able to complete this right now.",
             "citations": [],
             "uncertainty": "internal error or timeout prevented a grounded answer",
@@ -485,3 +634,26 @@ async def _maybe_await(value):
     if asyncio.iscoroutine(value):
         return await value
     return value
+
+
+def _live_sub_queries(state: "_UtteranceState") -> list[str]:
+    """The utterance's final decomposition: every issued sub-query except the
+    provisional fragments that a grown clause superseded (those were cancelled
+    and never reached synthesis; listing them would report a near-duplicate
+    fragment next to the real question - the guide's over-fragmenting pitfall)."""
+    return [q.text for qid, q in state.query_by_id.items() if qid not in state.superseded]
+
+
+def _timings(marks: dict[str, float]) -> dict[str, float]:
+    """Post-speech breakdown in ms (perf_counter), stage by stage, from the
+    utterance_end envelope to the output: final controller decision, waiting
+    for retrievals still in flight, synthesis, answer telemetry, and the
+    total. Stages absent for a turn (e.g. baseline mode) are omitted."""
+    if "utterance_end" not in marks:
+        return {}
+    now = time.perf_counter()
+    order = ["utterance_end", "final_decision", "retrieval_wait", "synthesis", "answer_telemetry"]
+    present = [m for m in order if m in marks]
+    out = {f"{b}_ms": round((marks[b] - marks[a]) * 1000, 3) for a, b in zip(present, present[1:])}
+    out["post_speech_ms"] = round((now - marks["utterance_end"]) * 1000, 3)
+    return out

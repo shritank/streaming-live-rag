@@ -1,0 +1,106 @@
+{
+ "scenario_dir": "eval\\scenarios_diagnostic",
+ "corpus_dir": "data\\corpus",
+ "overrides": [],
+ "wall_s": 0.0,
+ "gates": {
+  "g2": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "g3": [
+   0,
+   0
+  ],
+  "g4": [
+   0,
+   0,
+   0
+  ],
+  "g5": [
+   0,
+   0
+  ],
+  "g6": [
+   0,
+   0
+  ]
+ },
+ "latency_post_utterance_ms": {
+  "p50": null,
+  "p95": null,
+  "n": 0
+ },
+ "raw": {},
+ "quality": {
+  "answer": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "citation": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "claim_correct": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "abstention": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "split_exact": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "oversplit": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "claim_words": {
+   "mean": null,
+   "n": 0
+  }
+ },
+ "items": {
+  "answer": {},
+  "citation": {},
+  "claim_correct": {},
+  "abstention": {},
+  "split_exact": {},
+  "oversplit": {}
+ },
+ "wrong_claims": []
+}

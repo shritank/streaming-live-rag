@@ -10,6 +10,7 @@ still works with zero dependencies installed.
 """
 from __future__ import annotations
 
+import logging
 import re
 
 _TOKEN_RE = re.compile(r"[a-z0-9]+")
@@ -31,8 +32,12 @@ def _get_spacy_sentencizer():
         nlp.add_pipe("sentencizer")
         _spacy_nlp = nlp
         return nlp
-    except Exception:
+    except Exception as e:
         _spacy_unavailable = True
+        logging.getLogger("streaming_rag.text").warning(
+            "spaCy sentence splitter unavailable (%s: %s): falling back to the regex splitter, "
+            "which segments differently (abbreviations, quotes) and can change claim boundaries",
+            type(e).__name__, e)
         return None
 
 STOPWORDS = frozenset("""

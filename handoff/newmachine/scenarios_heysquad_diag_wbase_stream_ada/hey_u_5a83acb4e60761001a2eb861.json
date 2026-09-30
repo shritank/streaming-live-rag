@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a83acb4e60761001a2eb861",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3092,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what"
+   }
+  },
+  {
+   "timestamp_ms": 4106,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " time period did the"
+   }
+  },
+  {
+   "timestamp_ms": 7182,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Lobata,"
+   }
+  },
+  {
+   "timestamp_ms": 9226,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Cestida, and Thalasso Colicida become extinct?"
+   }
+  },
+  {
+   "timestamp_ms": 9227,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11226,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In what time period did the Lobata, Cestida and Thalassocalycida become extinct?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

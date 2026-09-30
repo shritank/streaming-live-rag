@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5729eb34af94a219006aa6ca",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3200,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Which book"
+   }
+  },
+  {
+   "timestamp_ms": 4262,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " discussed the theory about"
+   }
+  },
+  {
+   "timestamp_ms": 5195,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " low"
+   }
+  },
+  {
+   "timestamp_ms": 6099,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " populations in the Amazon link or in Amazon"
+   }
+  },
+  {
+   "timestamp_ms": 6100,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8099,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which book discussed the theory about low populations in the Amazon rainforest?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

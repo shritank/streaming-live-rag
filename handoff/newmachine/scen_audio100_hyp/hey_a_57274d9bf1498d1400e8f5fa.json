@@ -1,0 +1,140 @@
+{
+ "scenario_id": "hey_a_57274d9bf1498d1400e8f5fa",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2049,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "As a result of a"
+   }
+  },
+  {
+   "timestamp_ms": 3091,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "As a result of a"
+   }
+  },
+  {
+   "timestamp_ms": 3091,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "As a result of a compromise, \u2588\u2588\u2588\u2588\u2588\u2588"
+   }
+  },
+  {
+   "timestamp_ms": 4068,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "As a result of a compromise about how many"
+   }
+  },
+  {
+   "timestamp_ms": 5068,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " compromise about how many"
+   }
+  },
+  {
+   "timestamp_ms": 5068,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "As a result of a compromise about how many Chinese schools"
+   }
+  },
+  {
+   "timestamp_ms": 6081,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Chinese schools"
+   }
+  },
+  {
+   "timestamp_ms": 6081,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "As a result of a compromise about how many Chinese schools became national-type"
+   }
+  },
+  {
+   "timestamp_ms": 7097,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " became"
+   }
+  },
+  {
+   "timestamp_ms": 7097,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "As a result of a compromise about how many Chinese schools became national type schools."
+   }
+  },
+  {
+   "timestamp_ms": 7341,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " national type schools."
+   }
+  },
+  {
+   "timestamp_ms": 7342,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9341,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "As a result of a compromise, about how many Chinese schools became National Type schools?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

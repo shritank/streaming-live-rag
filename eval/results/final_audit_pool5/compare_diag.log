@@ -1,0 +1,8 @@
+          mode |       ttfr_p50 |       ttfr_p95 |        e2e_p50 |        e2e_p95 |      total_p50 |      total_p95 |             G2 |             G3 |             G4 |             G5 | tokens_per_turn |  cost_per_turn
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     streaming |           0.00 |        2400.00 |           2.43 |           3.87 |        6302.26 |       13462.48 |           1.00 |           1.00 |           1.00 |           1.00 |           0.00 |           0.00
+      baseline |        5700.00 |       12920.00 |          82.25 |          97.83 |        5782.69 |       13007.75 |           0.00 |           0.00 |           1.00 |           0.00 |           0.00 |           0.00
+
+streaming utterance-start->answer p50 = 6302.3ms vs baseline 5782.7ms (streaming is SLOWER by -519.6ms)
+(post-utterance-end e2e p50: streaming 2.4ms vs baseline 82.2ms — near-zero for streaming means its retrieval already finished before the user stopped talking)
+PASS CONDITION: NOT MET

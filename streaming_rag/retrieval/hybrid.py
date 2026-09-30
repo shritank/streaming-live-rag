@@ -187,12 +187,12 @@ class HybridRetriever:
         return await asyncio.gather(*(self._search_one(q, k) for q in queries))
 
     async def _search_one(self, query: SubQuery, k: int) -> RetrievalResult:
-        start = time.monotonic()
+        start = time.perf_counter()
         evidence = await asyncio.to_thread(self._search_sync, query, k)
         extra = self._config.retrieval.simulated_latency_ms
         if extra:
             await asyncio.sleep(extra / 1000)
-        latency_ms = (time.monotonic() - start) * 1000
+        latency_ms = (time.perf_counter() - start) * 1000
         best = evidence[0].score if evidence else float("-inf")
         threshold = (self._config.retrieval.ce_low_confidence_logit
                      if self._cross_encoder is not None

@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_57265a58dd62a815002e8273",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "When"
+   }
+  },
+  {
+   "timestamp_ms": 7150,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " American car companies rolled out with their domestic replacement cars,"
+   }
+  },
+  {
+   "timestamp_ms": 8187,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " which policy"
+   }
+  },
+  {
+   "timestamp_ms": 8474,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " ended?"
+   }
+  },
+  {
+   "timestamp_ms": 8475,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10474,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "When American car companies rolled out with their domestic replacement cars, which policy ended?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

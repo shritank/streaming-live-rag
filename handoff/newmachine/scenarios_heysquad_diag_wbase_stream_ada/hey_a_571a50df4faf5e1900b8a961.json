@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_571a50df4faf5e1900b8a961",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3065,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Combustion is"
+   }
+  },
+  {
+   "timestamp_ms": 4110,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " caused by an"
+   }
+  },
+  {
+   "timestamp_ms": 5106,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " oxidant and a fuel."
+   }
+  },
+  {
+   "timestamp_ms": 7140,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " What role does oxygen"
+   }
+  },
+  {
+   "timestamp_ms": 7418,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " play in combustion?"
+   }
+  },
+  {
+   "timestamp_ms": 7419,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9418,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Combustion is caused by an oxidant and a fuel. What role does oxygen play in combustion?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

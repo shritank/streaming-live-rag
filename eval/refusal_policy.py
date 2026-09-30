@@ -34,6 +34,8 @@ SUBSETS = {
     # negatively weighted by the 6-feature fit, an artefact of how SQuAD2's
     # unanswerable questions were written: by copying passage words)
     "sentence + reader": ["sentence", "reader_margin"],
+    # + whether the reader's answer span lies inside the CE-selected sentence
+    "+ reader + agree": ["top", "sentence", "overlap_ce", "overlap_section", "margin", "reader_margin", "agree"],
     "reader only": ["reader_margin"],
     "sentence only": ["sentence"],
 }

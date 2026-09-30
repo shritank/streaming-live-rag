@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572fd6aa04bcaa1900d76da2",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3059,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How many"
+   }
+  },
+  {
+   "timestamp_ms": 4079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " days does the"
+   }
+  },
+  {
+   "timestamp_ms": 5086,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Parliament have to"
+   }
+  },
+  {
+   "timestamp_ms": 6086,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " nominate a"
+   }
+  },
+  {
+   "timestamp_ms": 8418,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " First Minister after a general election?"
+   }
+  },
+  {
+   "timestamp_ms": 8419,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10418,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How many days does the Parliament have to nominate a First Minister after a General Election?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_5737a9afc3c5551400e51f61",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3672,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In"
+   }
+  },
+  {
+   "timestamp_ms": 4348,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " what treatment are"
+   }
+  },
+  {
+   "timestamp_ms": 5233,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " non-conservative and"
+   }
+  },
+  {
+   "timestamp_ms": 6241,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " conservative"
+   }
+  },
+  {
+   "timestamp_ms": 6669,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " forces described?"
+   }
+  },
+  {
+   "timestamp_ms": 6670,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8669,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In what treatment are nonconservative and conservative forces described?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -42,7 +42,15 @@ def best_sub(item, selector):
 
 
 FEATURES = ["top", "sentence", "reader_margin", "overlap_ce", "overlap_section", "margin",
-            "nli_contra_rd", "nli_entail_rd"]
+            "nli_contra_rd", "nli_entail_rd", "agree"]
+
+
+def _agree(s: dict) -> float:
+    """1.0 when the SQuAD2 reader's best answer span lies inside the sentence
+    the cross-encoder selected: two independent models pointing at the same
+    evidence. Robust to query garbling in a way raw scores are not."""
+    span, claim = (s.get("reader_span") or "").strip().lower(), (s.get("ce_claim") or "").lower()
+    return 1.0 if span and span in claim else 0.0
 
 
 def features(item):
@@ -50,6 +58,7 @@ def features(item):
     if s is None:
         return None
     defaults = {"sentence": -10.0, "reader_margin": -10.0, "nli_contra_rd": 0.5, "nli_entail_rd": 0.5}
+    s = {**s, "agree": _agree(s)}
     return [s.get(f) if s.get(f) is not None else defaults.get(f, 0.0) for f in FEATURES]
 
 

@@ -1,0 +1,4108 @@
+{
+ "scenario_dir": "eval\\scenarios_real_test",
+ "corpus_dir": "data\\corpus",
+ "overrides": [
+  "synthesis.refusal_gate=none"
+ ],
+ "wall_s": 95.1,
+ "gates": {
+  "g2": [
+   49,
+   49,
+   0,
+   15
+  ],
+  "g3": [
+   20,
+   20
+  ],
+  "g4": [
+   5,
+   5,
+   0
+  ],
+  "g5": [
+   20,
+   20
+  ],
+  "g6": [
+   90,
+   90
+  ]
+ },
+ "latency_post_utterance_ms": {
+  "p50": 0.0,
+  "p95": 47.00000000593718,
+  "n": 75
+ },
+ "raw": {
+  "gen_chit_chat_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": null,
+     "answer_version": null,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": "chit_chat"
+    }
+   ],
+   "answers": {},
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_late_detail_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What year was the new bus",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What year was the new bus station in Newcastle officially opened?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What year was the new bus",
+      "What year was the new bus station in Newcastle officially opened?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What year was the new bus station in Newcastle officially opened?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.2,
+       "query": "What was added",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.6,
+       "query": "What was added to the the church of St",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.0,
+       "query": "What was added to the the church of St. Andrew in 1726?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What was added",
+      "What was added to the the church of St",
+      "What was added to the the church of St. Andrew in 1726?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was added to the the church of St. Andrew in 1726?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What year was the new bus station in Newcastle officially opened?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was added to the the church of St. Andrew in 1726?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Which entity has a monopoly on",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Which entity has a monopoly on initiating legislation?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Which entity has a monopoly on",
+      "Which entity has a monopoly on initiating legislation?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which entity has a monopoly on initiating legislation?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.4,
+       "query": "When was there an attempt to reform the law",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.8,
+       "query": "When was there an attempt to reform the law of the EU?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "When was there an attempt to reform the law",
+      "When was there an attempt to reform the law of the EU?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"When was there an attempt to reform the law of the EU?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which entity has a monopoly on initiating legislation?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"When was there an attempt to reform the law of the EU?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What type of medal did NASA",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What type of medal did NASA give the astronauts",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "who visited space",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What type of medal did NASA give the astronauts who visited space and the moon?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What type of medal did NASA",
+      "What type of medal did NASA give the astronauts",
+      "who visited space",
+      "What type of medal did NASA give the astronauts who visited space and the moon?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of medal did NASA give the astronauts who visited space and the moon?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.8,
+       "query": "What did Pegasus",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "What did Pegasus satellites measure to propose the safety",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 12.6,
+       "query": "What did Pegasus satellites measure to propose the safety of the environment in space and",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 15.0,
+       "query": "What did Pegasus satellites measure to propose the safety of the environment in space and on the moon?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What did Pegasus",
+      "What did Pegasus satellites measure to propose the safety",
+      "What did Pegasus satellites measure to propose the safety of the environment in space and",
+      "What did Pegasus satellites measure to propose the safety of the environment in space and on the moon?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What did Pegasus satellites measure to propose the safety of the environment in space and on the moon?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of medal did NASA give the astronauts who visited space and the moon?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What did Pegasus satellites measure to propose the safety of the environment in space and on the moon?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What material's weight gain during rusting",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What material's weight gain during rusting was an early clue that philogiston",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What material's weight gain during rusting was an early clue that philogiston theory was wrong?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What material's weight gain during rusting",
+      "What material's weight gain during rusting was an early clue that philogiston",
+      "What material's weight gain during rusting was an early clue that philogiston theory was wrong?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What material's weight gain during rusting was an early clue that philogiston theory was wrong?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.8,
+       "query": "three most",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "three most abundent elements of the universe by",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 12.6,
+       "query": "three most abundent elements of the universe by mass?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "three most",
+      "three most abundent elements of the universe by",
+      "three most abundent elements of the universe by mass?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"three most abundent elements of the universe by mass?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What material's weight gain during rusting was an early clue that philogiston theory was wrong?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"three most abundent elements of the universe by mass?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What type of vote must the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What type of vote must the Parliament have to either block or",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What type of vote must the",
+      "What type of vote must the Parliament have to either block or",
+      "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.4,
+       "query": "Who is the sole governing authority capable of initiating",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.8,
+       "query": "Who is the sole governing authority capable of initiating legislative proposals?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Who is the sole governing authority capable of initiating",
+      "Who is the sole governing authority capable of initiating legislative proposals?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Who is the sole governing authority capable of initiating legislative proposals?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Who is the sole governing authority capable of initiating legislative proposals?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "another term for shortening",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "another term for shortening the admission event?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "another term for shortening",
+      "another term for shortening the admission event?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another term for shortening the admission event?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.8,
+       "query": "approximate turbine entry temperature",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "approximate turbine entry temperature of a gas turbine?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "approximate turbine entry temperature",
+      "approximate turbine entry temperature of a gas turbine?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"approximate turbine entry temperature of a gas turbine?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another term for shortening the admission event?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"approximate turbine entry temperature of a gas turbine?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What movement did the fair held",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What movement did the fair held in June have its origins in?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What movement did the fair held",
+      "What movement did the fair held in June have its origins in?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What movement did the fair held in June have its origins in?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.6,
+       "query": "What museum in",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.0,
+       "query": "What museum in Newcastle is dedicated to children's books?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What museum in",
+      "What museum in Newcastle is dedicated to children's books?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What museum in Newcastle is dedicated to children's books?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What movement did the fair held in June have its origins in?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What museum in Newcastle is dedicated to children's books?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What type of treatment do civil",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What type of treatment do civil disobedients usually receive?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What type of treatment do civil",
+      "What type of treatment do civil disobedients usually receive?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of treatment do civil disobedients usually receive?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.4,
+       "query": "Since Thoreau was",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.8,
+       "query": "Since Thoreau was not a well known writer what",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "Since Thoreau was not a well known writer what happened when he was arrested?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Since Thoreau was",
+      "Since Thoreau was not a well known writer what",
+      "Since Thoreau was not a well known writer what happened when he was arrested?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since Thoreau was not a well known writer what happened when he was arrested?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of treatment do civil disobedients usually receive?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since Thoreau was not a well known writer what happened when he was arrested?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "In what state were the original",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "In what state were the original launching facilities for missions?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "In what state were the original",
+      "In what state were the original launching facilities for missions?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what state were the original launching facilities for missions?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.2,
+       "query": "What was originally on the spacesuits prior",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.6,
+       "query": "What was originally on the spacesuits prior to the clear \"fishbowl\" helmet?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What was originally on the spacesuits prior",
+      "What was originally on the spacesuits prior to the clear \"fishbowl\" helmet?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was originally on the spacesuits prior to the clear \"fishbowl\" helmet?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what state were the original launching facilities for missions?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was originally on the spacesuits prior to the clear \"fishbowl\" helmet?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "two principal Asian-American",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "two principal Asian-American groups living in the west side",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "two principal Asian-American groups living in the west side neighborhood of Fresno?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "two principal Asian-American",
+      "two principal Asian-American groups living in the west side",
+      "two principal Asian-American groups living in the west side neighborhood of Fresno?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"two principal Asian-American groups living in the west side neighborhood of Fresno?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 10.2,
+       "query": "What was the percentage of Black or African-Americans living",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 12.6,
+       "query": "What was the percentage of Black or African-Americans living in the city?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What was the percentage of Black or African-Americans living",
+      "What was the percentage of Black or African-Americans living in the city?"
+     ],
+     "answer": "The Black Death killed about 40% of Egypt's population.",
+     "citations": [
+      "Doc_01 \u00a718"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"two principal Asian-American groups living in the west side neighborhood of Fresno?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The Black Death killed about 40% of Egypt's population.",
+       "citations": [
+        "Doc_01 \u00a718"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Why must one be excluded in",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Why must one be excluded in order to preserve the uniqueness of",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Why must one be excluded in order to preserve the uniqueness of the fundamental theorem?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Why must one be excluded in",
+      "Why must one be excluded in order to preserve the uniqueness of",
+      "Why must one be excluded in order to preserve the uniqueness of the fundamental theorem?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why must one be excluded in order to preserve the uniqueness of the fundamental theorem?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.8,
+       "query": "name of the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "name of the function used for the largest integer",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 12.6,
+       "query": "name of the function used for the largest integer not greater than the number in",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 15.0,
+       "query": "name of the function used for the largest integer not greater than the number in question?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "name of the",
+      "name of the function used for the largest integer",
+      "name of the function used for the largest integer not greater than the number in",
+      "name of the function used for the largest integer not greater than the number in question?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"name of the function used for the largest integer not greater than the number in question?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why must one be excluded in order to preserve the uniqueness of the fundamental theorem?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"name of the function used for the largest integer not greater than the number in question?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "When was the Cretaceous-Paleogen extinction occur?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "When was the Cretaceous-Paleogen extinction occur?"
+     ],
+     "answer": "Following the Cretaceous\u2013Paleogene extinction event, the extinction of the dinosaurs and the wetter climate may have allowed the tropical rainforest to spread out across the continent.",
+     "citations": [
+      "Doc_00 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.2,
+       "query": "jellyfish can eat",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 6.6,
+       "query": "Turtles and jellyfish can eat large quantities of what?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "jellyfish can eat",
+      "Turtles and jellyfish can eat large quantities of what?"
+     ],
+     "answer": "Following the Cretaceous\u2013Paleogene extinction event, the extinction of the dinosaurs and the wetter climate may have allowed the tropical rainforest to spread out across the continent.",
+     "citations": [
+      "Doc_00 \u00a72"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Turtles and jellyfish can eat large quantities of what?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Following the Cretaceous\u2013Paleogene extinction event, the extinction of the dinosaurs and the wetter climate may have allowed the tropical rainforest to spread out across the continent.",
+       "citations": [
+        "Doc_00 \u00a72"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Turtles and jellyfish can eat large quantities of what?\".",
+     "claims": [
+      {
+       "text": "Following the Cretaceous\u2013Paleogene extinction event, the extinction of the dinosaurs and the wetter climate may have allowed the tropical rainforest to spread out across the continent.",
+       "citations": [
+        "Doc_00 \u00a72"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "How big was the Vertical Assembly",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How big was the Vertical Assembly Building?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "How big was the Vertical Assembly",
+      "How big was the Vertical Assembly Building?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How big was the Vertical Assembly Building?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.6,
+       "query": "What was the name of",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.0,
+       "query": "What was the name of the launch vehicle for NASA",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.4,
+       "query": "which North American Aviation designed the second",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.8,
+       "query": "which North American Aviation designed the second stage of?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What was the name of",
+      "What was the name of the launch vehicle for NASA",
+      "which North American Aviation designed the second",
+      "which North American Aviation designed the second stage of?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the name of the launch vehicle for NASA\"; \"which North American Aviation designed the second stage of?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How big was the Vertical Assembly Building?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the name of the launch vehicle for NASA\"; \"which North American Aviation designed the second stage of?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 2
+   }
+  },
+  "gen_late_detail_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Which country is not badly hit",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Which country is not badly hit by the embargo?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Which country is not badly hit",
+      "Which country is not badly hit by the embargo?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which country is not badly hit by the embargo?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.8,
+       "query": "Why did the Shah of Iran gave",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.2,
+       "query": "Why did the Shah of Iran gave an interview?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Why did the Shah of Iran gave",
+      "Why did the Shah of Iran gave an interview?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why did the Shah of Iran gave an interview?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which country is not badly hit by the embargo?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why did the Shah of Iran gave an interview?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What type of vote must the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What type of vote must the Council pass in order to approve",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What type of vote must the Council pass in order to approve of any changes recommended by Parliament?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What type of vote must the",
+      "What type of vote must the Council pass in order to approve",
+      "What type of vote must the Council pass in order to approve of any changes recommended by Parliament?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Council pass in order to approve of any changes recommended by Parliament?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.0,
+       "query": "Which treaty provides that the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.4,
+       "query": "Which treaty provides that the European Union law be applied to",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.8,
+       "query": "Which treaty provides that the European Union law be applied to metropolitan territories of member states?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "Which treaty provides that the",
+      "Which treaty provides that the European Union law be applied to",
+      "Which treaty provides that the European Union law be applied to metropolitan territories of member states?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which treaty provides that the European Union law be applied to metropolitan territories of member states?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Council pass in order to approve of any changes recommended by Parliament?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which treaty provides that the European Union law be applied to metropolitan territories of member states?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Why would one want to give",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Why would one want to give a speech?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Why would one want to give",
+      "Why would one want to give a speech?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why would one want to give a speech?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.4,
+       "query": "What type of person can not be",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 9.8,
+       "query": "What type of person can not be attributed civil disobedience?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "What type of person can not be",
+      "What type of person can not be attributed civil disobedience?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of person can not be attributed civil disobedience?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why would one want to give a speech?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of person can not be attributed civil disobedience?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "In what major portion of living",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "In what major portion of living things is oxygen found?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "In what major portion of living",
+      "In what major portion of living things is oxygen found?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what major portion of living things is oxygen found?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.8,
+       "query": "To ensure safety of future",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 8.2,
+       "query": "To ensure safety of future space missions Oxygen was used at",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 10.6,
+       "query": "To ensure safety of future space missions Oxygen was used at _____ of the normal pressure",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "To ensure safety of future",
+      "To ensure safety of future space missions Oxygen was used at",
+      "To ensure safety of future space missions Oxygen was used at _____ of the normal pressure"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"To ensure safety of future space missions Oxygen was used at _____ of the normal pressure\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what major portion of living things is oxygen found?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"To ensure safety of future space missions Oxygen was used at _____ of the normal pressure\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "After what battle did Union forces",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "After what battle did Union forces return to",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "occupy Jacksonville for after battle union forces",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "After what battle did Union forces return to and occupy Jacksonville for the rest of the war?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "After what battle did Union forces",
+      "After what battle did Union forces return to",
+      "occupy Jacksonville for after battle union forces",
+      "After what battle did Union forces return to and occupy Jacksonville for the rest of the war?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"After what battle did Union forces return to and occupy Jacksonville for the rest of the war?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.6,
+       "query": "After what event did the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.0,
+       "query": "After what event did the Spanish concede Florida to Britain?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "After what event did the",
+      "After what event did the Spanish concede Florida to Britain?"
+     ],
+     "answer": "In 1565 the Spanish decided to enforce their claim to La Florida, and sent Pedro Men\u00e9ndez de Avil\u00e9s, who established the settlement of St. Augustine near Fort Caroline.",
+     "citations": [
+      "Doc_06 \u00a728"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"After what battle did Union forces return to and occupy Jacksonville for the rest of the war?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In 1565 the Spanish decided to enforce their claim to La Florida, and sent Pedro Men\u00e9ndez de Avil\u00e9s, who established the settlement of St. Augustine near Fort Caroline.",
+       "citations": [
+        "Doc_06 \u00a728"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What was the first year that",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What was the first year that Yale and Harvard played football?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What was the first year that",
+      "What was the first year that Yale and Harvard played football?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the first year that Yale and Harvard played football?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.6,
+       "query": "name of the bridge that joins",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 11.0,
+       "query": "name of the bridge that joins parts of the campus of the",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 13.4,
+       "query": "name of the bridge that joins parts of the campus of the Charles River?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "name of the bridge that joins",
+      "name of the bridge that joins parts of the campus of the",
+      "name of the bridge that joins parts of the campus of the Charles River?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"name of the bridge that joins parts of the campus of the Charles River?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the first year that Yale and Harvard played football?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"name of the bridge that joins parts of the campus of the Charles River?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_late_detail_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "In what town did Bill Aiken",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "In what town did Bill Aiken grow up?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "In what town did Bill Aiken",
+      "In what town did Bill Aiken grow up?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what town did Bill Aiken grow up?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.0,
+       "query": "name of",
+       "trigger": "refinement"
+      },
+      {
+       "timestamp_s": 7.4,
+       "query": "name of the first aviation community built?",
+       "trigger": "refinement"
+      }
+     ],
+     "sub_queries": [
+      "name of",
+      "name of the first aviation community built?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"name of the first aviation community built?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": true,
+     "reason": "refinement_delta"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what town did Bill Aiken grow up?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "refinement",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"name of the first aviation community built?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 1
+   }
+  },
+  "gen_multi_intent_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Upon what chemical characteristic is oxygen's",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Upon what chemical characteristic is oxygen's solubility dependent?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What second part of",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What second part of air was deemed lifeless by Lavoisier?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "In what group of compounds upon chemical characteristic oxygen",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "In what group of compounds is oxygen a necessary part? upon chemical characteristic",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Upon what chemical characteristic is oxygen's",
+      "Upon what chemical characteristic is oxygen's solubility dependent?",
+      "What second part of",
+      "What second part of air was deemed lifeless by Lavoisier?",
+      "In what group of compounds upon chemical characteristic oxygen",
+      "In what group of compounds is oxygen a necessary part? upon chemical characteristic"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Upon what chemical characteristic is oxygen's solubility dependent?\"; \"What second part of air was deemed lifeless by Lavoisier?\"; \"In what group of compounds is oxygen a necessary part? upon chemical characteristic\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Upon what chemical characteristic is oxygen's solubility dependent?\"; \"What second part of air was deemed lifeless by Lavoisier?\"; \"In what group of compounds is oxygen a necessary part? upon chemical characteristic\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Which genus is considered the \"aunt\"",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Which genus is considered the \"aunt\" of ctenophores?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What does the pleurobrachia genus considered aunt ctenophores",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What does the pleurobrachia have on opposite sides of its",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What does the pleurobrachia have on opposite sides of its body?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Which genus is considered the \"aunt\"",
+      "Which genus is considered the \"aunt\" of ctenophores?",
+      "What does the pleurobrachia genus considered aunt ctenophores",
+      "What does the pleurobrachia have on opposite sides of its",
+      "What does the pleurobrachia have on opposite sides of its body?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which genus is considered the \"aunt\" of ctenophores?\"; \"What does the pleurobrachia have on opposite sides of its body?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which genus is considered the \"aunt\" of ctenophores?\"; \"What does the pleurobrachia have on opposite sides of its body?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Harvard's Pell grant reserves?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What famous civil rights leader called",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What famous civil rights leader called Harvard home?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Harvard's Pell grant reserves?",
+      "What famous civil rights leader called",
+      "What famous civil rights leader called Harvard home?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Harvard's Pell grant reserves?\"; \"What famous civil rights leader called Harvard home?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Harvard's Pell grant reserves?\"; \"What famous civil rights leader called Harvard home?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Who backed policies that have solutions",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Who backed policies that have solutions that sound good but have poor",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Who backed policies that have solutions that sound good but have poor prospects?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "How long does it take",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "How long does it take for new areas to have significant",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "How long does it take for new areas to have significant oil production?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "Why did the oil ministers agree to a cut",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Who backed policies that have solutions",
+      "Who backed policies that have solutions that sound good but have poor",
+      "Who backed policies that have solutions that sound good but have poor prospects?",
+      "How long does it take",
+      "How long does it take for new areas to have significant",
+      "How long does it take for new areas to have significant oil production?",
+      "Why did the oil ministers agree to a cut"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Who backed policies that have solutions that sound good but have poor prospects?\"; \"How long does it take for new areas to have significant oil production?\"; \"Why did the oil ministers agree to a cut\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Who backed policies that have solutions that sound good but have poor prospects?\"; \"How long does it take for new areas to have significant oil production?\"; \"Why did the oil ministers agree to a cut\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What kinds of sciences were Social",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What kinds of sciences were Social Darwinism and theories of race?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "When did Great Britain lose its colonies",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "When did Great Britain lose its colonies in North America?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What kinds of sciences were Social",
+      "What kinds of sciences were Social Darwinism and theories of race?",
+      "When did Great Britain lose its colonies",
+      "When did Great Britain lose its colonies in North America?"
+     ],
+     "answer": "Barred by the government from settling in New France, Huguenots led by Jess\u00e9 de Forest, sailed to North America in 1624 and settled instead in the Dutch colony of New Netherland (later incorporated into New York and New Jersey); as well as Great Britain's colonies, including Nova Scotia.",
+     "citations": [
+      "Doc_06 \u00a76"
+     ],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What kinds of sciences were Social Darwinism and theories of race?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What kinds of sciences were Social Darwinism and theories of race?\".",
+     "claims": [
+      {
+       "text": "Barred by the government from settling in New France, Huguenots led by Jess\u00e9 de Forest, sailed to North America in 1624 and settled instead in the Dutch colony of New Netherland (later incorporated into New York and New Jersey); as well as Great Britain's colonies, including Nova Scotia.",
+       "citations": [
+        "Doc_06 \u00a76"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Along with diesel engines",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 0.0,
+       "query": "what engines along diesel",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "what engines have overtaken steam engines for marine",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Along with diesel engines, what engines have overtaken steam engines for marine propulsion?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "565 \u00b0C the along diesel engines engines",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "565 \u00b0C the creep limit of?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Along with diesel engines",
+      "what engines along diesel",
+      "what engines have overtaken steam engines for marine",
+      "Along with diesel engines, what engines have overtaken steam engines for marine propulsion?",
+      "565 \u00b0C the along diesel engines engines",
+      "565 \u00b0C the creep limit of?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Along with diesel engines, what engines have overtaken steam engines for marine propulsion?\"; \"565 \u00b0C the creep limit of?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Along with diesel engines, what engines have overtaken steam engines for marine propulsion?\"; \"565 \u00b0C the creep limit of?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Since Thoreau was not a well",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Since Thoreau was not a well known writer what happened",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Since Thoreau was not a well known writer what happened when he was arrested?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "How long did Julia",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "How long did Julia Butterfly Hill live in a tree?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "What US war caused a",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "What US war caused a high amount of civil disobedience?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Since Thoreau was not a well",
+      "Since Thoreau was not a well known writer what happened",
+      "Since Thoreau was not a well known writer what happened when he was arrested?",
+      "How long did Julia",
+      "How long did Julia Butterfly Hill live in a tree?",
+      "What US war caused a",
+      "What US war caused a high amount of civil disobedience?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since Thoreau was not a well known writer what happened when he was arrested?\"; \"How long did Julia Butterfly Hill live in a tree?\"; \"What US war caused a high amount of civil disobedience?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since Thoreau was not a well known writer what happened when he was arrested?\"; \"How long did Julia Butterfly Hill live in a tree?\"; \"What US war caused a high amount of civil disobedience?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "After what battle did Union forces",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "After what battle did Union forces return to",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "occupy Jacksonville for after battle union forces",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "After what battle did Union forces return to and occupy Jacksonville for the rest of the war?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What factors negatively impacted Jacksonville following the",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "After what battle did Union forces",
+      "After what battle did Union forces return to",
+      "occupy Jacksonville for after battle union forces",
+      "After what battle did Union forces return to and occupy Jacksonville for the rest of the war?",
+      "What factors negatively impacted Jacksonville following the"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"After what battle did Union forces return to and occupy Jacksonville for the rest of the war?\"; \"What factors negatively impacted Jacksonville following the\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"After what battle did Union forces return to and occupy Jacksonville for the rest of the war?\"; \"What factors negatively impacted Jacksonville following the\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Where were the Germanic tribes originally",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Where were the Germanic tribes originally located?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What were European countries doing",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What were European countries doing during the 1700's?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What subtle germanic tribes originally located",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "What subtle tool can be used in an",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "What subtle tool can be used in an informal imperialistic situation to expand a",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "What subtle tool can be used in an informal imperialistic situation to expand a controlled area?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Where were the Germanic tribes originally",
+      "Where were the Germanic tribes originally located?",
+      "What were European countries doing",
+      "What were European countries doing during the 1700's?",
+      "What subtle germanic tribes originally located",
+      "What subtle tool can be used in an",
+      "What subtle tool can be used in an informal imperialistic situation to expand a",
+      "What subtle tool can be used in an informal imperialistic situation to expand a controlled area?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Where were the Germanic tribes originally located?\"; \"What were European countries doing during the 1700's?\"; \"What subtle tool can be used in an informal imperialistic situation to expand a controlled area?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Where were the Germanic tribes originally located?\"; \"What were European countries doing during the 1700's?\"; \"What subtle tool can be used in an informal imperialistic situation to expand a controlled area?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "another way of referring",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "another way of referring to stators?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What components raise steam",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What components raise steam temperature above its saturated vapor point?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "another way of referring",
+      "another way of referring to stators?",
+      "What components raise steam",
+      "What components raise steam temperature above its saturated vapor point?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another way of referring to stators?\"; \"What components raise steam temperature above its saturated vapor point?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another way of referring to stators?\"; \"What components raise steam temperature above its saturated vapor point?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What caused UK to have an",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What caused UK to have an oil crisis in its own country?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "one of the reason",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "one of the reason that US production has been held",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "one of the reason that US production has been held responsible for recessions",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "lower economic caused uk oil crisis",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "one of the reason that US production has been held responsible for recessions and lower economic growth?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What caused UK to have an",
+      "What caused UK to have an oil crisis in its own country?",
+      "one of the reason",
+      "one of the reason that US production has been held",
+      "one of the reason that US production has been held responsible for recessions",
+      "lower economic caused uk oil crisis",
+      "one of the reason that US production has been held responsible for recessions and lower economic growth?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What caused UK to have an oil crisis in its own country?\"; \"one of the reason that US production has been held responsible for recessions and lower economic growth?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What caused UK to have an oil crisis in its own country?\"; \"one of the reason that US production has been held responsible for recessions and lower economic growth?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What does civil disobedience relate to?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How is civil disobedience typically defined",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "How is civil disobedience typically defined in connection of the citizen's?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What does civil disobedience relate to?",
+      "How is civil disobedience typically defined",
+      "How is civil disobedience typically defined in connection of the citizen's?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does civil disobedience relate to?\"; \"How is civil disobedience typically defined in connection of the citizen's?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does civil disobedience relate to?\"; \"How is civil disobedience typically defined in connection of the citizen's?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What former building is currently known",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What former building is currently known as Grand 1401?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What area has former building currently known",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What area has become attractive for restaurants?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What former building is currently known",
+      "What former building is currently known as Grand 1401?",
+      "What area has former building currently known",
+      "What area has become attractive for restaurants?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What former building is currently known as Grand 1401?\"; \"What area has become attractive for restaurants?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What former building is currently known as Grand 1401?\"; \"What area has become attractive for restaurants?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What conviction motivated Eliot to move",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What conviction motivated Eliot to move towards secularization?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How many residential dorms",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "How many residential dorms house upper class",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "How many residential dorms house upper class, sophomore, Jr, and Sr students?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What conviction motivated Eliot to move",
+      "What conviction motivated Eliot to move towards secularization?",
+      "How many residential dorms",
+      "How many residential dorms house upper class",
+      "How many residential dorms house upper class, sophomore, Jr, and Sr students?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What conviction motivated Eliot to move towards secularization?\"; \"How many residential dorms house upper class, sophomore, Jr, and Sr students?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What conviction motivated Eliot to move towards secularization?\"; \"How many residential dorms house upper class, sophomore, Jr, and Sr students?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What does ctenophore mean in Greek?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "cilia used for?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "eight comb rows",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "eight comb rows on the outer surface called?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What does ctenophore mean in Greek?",
+      "cilia used for?",
+      "eight comb rows",
+      "eight comb rows on the outer surface called?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does ctenophore mean in Greek?\"; \"cilia used for?\"; \"eight comb rows on the outer surface called?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does ctenophore mean in Greek?\"; \"cilia used for?\"; \"eight comb rows on the outer surface called?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What contains a nearly verbatim of",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What contains a nearly verbatim of parliamentary debates?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "committees in contains nearly verbatim parliamentary",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "committees in the Scottish Parliament compared to other",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "committees in the Scottish Parliament compared to other systems?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "When was the final contains nearly verbatim parliamentary",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "When was the final legislative proposals for a Scottish Assembly",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "When was the final legislative proposals for a Scottish Assembly passed?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What contains a nearly verbatim of",
+      "What contains a nearly verbatim of parliamentary debates?",
+      "committees in contains nearly verbatim parliamentary",
+      "committees in the Scottish Parliament compared to other",
+      "committees in the Scottish Parliament compared to other systems?",
+      "When was the final contains nearly verbatim parliamentary",
+      "When was the final legislative proposals for a Scottish Assembly",
+      "When was the final legislative proposals for a Scottish Assembly passed?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What contains a nearly verbatim of parliamentary debates?\"; \"committees in the Scottish Parliament compared to other systems?\"; \"When was the final legislative proposals for a Scottish Assembly passed?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What contains a nearly verbatim of parliamentary debates?\"; \"committees in the Scottish Parliament compared to other systems?\"; \"When was the final legislative proposals for a Scottish Assembly passed?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "When are subject committees established?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Tourism is one of subject committees established",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Economy, Energy and Tourism is one of the what? subject committees established",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "When are subject committees established?",
+      "Tourism is one of subject committees established",
+      "Economy, Energy and Tourism is one of the what? subject committees established"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"When are subject committees established?\"; \"Economy, Energy and Tourism is one of the what? subject committees established\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"When are subject committees established?\"; \"Economy, Energy and Tourism is one of the what? subject committees established\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_multi_intent_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What was the percentage of whit",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What was the percentage of whit people in Fresno in 2010?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "two major thoroughfares of",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "two major thoroughfares of Sunnyside?",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "Does the residential architecture",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "Does the residential architecture of the Tower District compare or",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "Does the residential architecture of the Tower District compare or contrast with other part of Fresno?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What was the percentage of whit",
+      "What was the percentage of whit people in Fresno in 2010?",
+      "two major thoroughfares of",
+      "two major thoroughfares of Sunnyside?",
+      "Does the residential architecture",
+      "Does the residential architecture of the Tower District compare or",
+      "Does the residential architecture of the Tower District compare or contrast with other part of Fresno?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the percentage of whit people in Fresno in 2010?\"; \"two major thoroughfares of Sunnyside?\"; \"Does the residential architecture of the Tower District compare or contrast with other part of Fresno?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the percentage of whit people in Fresno in 2010?\"; \"two major thoroughfares of Sunnyside?\"; \"Does the residential architecture of the Tower District compare or contrast with other part of Fresno?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Which is one of the park",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Which is one of the park features located in North Fresno?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "After its re-opening one park features located",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "which types of movies",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "After its re-opening, which types of movies did the Tower Theatre show? one park features located",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "Who founded Woodward Park?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Which is one of the park",
+      "Which is one of the park features located in North Fresno?",
+      "After its re-opening one park features located",
+      "which types of movies",
+      "After its re-opening, which types of movies did the Tower Theatre show? one park features located",
+      "Who founded Woodward Park?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which is one of the park features located in North Fresno?\"; \"After its re-opening, which types of movies did the Tower Theatre show? one park features located\"; \"Who founded Woodward Park?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which is one of the park features located in North Fresno?\"; \"After its re-opening, which types of movies did the Tower Theatre show? one park features located\"; \"Who founded Woodward Park?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 3
+   }
+  },
+  "gen_multi_intent_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Since NASA didn't know how many",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Since NASA didn't know how many attempts each test would end up",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "Since NASA didn't know how many attempts each test would end up requiring",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "what did they use instead",
+       "trigger": "multi_intent"
+      },
+      {
+       "timestamp_s": 7.2,
+       "query": "Since NASA didn't know how many attempts each test would end up requiring, what did they use instead of numbers for the trials?",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 9.6,
+       "query": "How high in miles did the first",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 12.0,
+       "query": "How high in miles did the first block, AS-201, reach when launched?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Since NASA didn't know how many",
+      "Since NASA didn't know how many attempts each test would end up",
+      "Since NASA didn't know how many attempts each test would end up requiring",
+      "what did they use instead",
+      "Since NASA didn't know how many attempts each test would end up requiring, what did they use instead of numbers for the trials?",
+      "How high in miles did the first",
+      "How high in miles did the first block, AS-201, reach when launched?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since NASA didn't know how many attempts each test would end up requiring, what did they use instead of numbers for the trials?\"; \"How high in miles did the first block, AS-201, reach when launched?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since NASA didn't know how many attempts each test would end up requiring, what did they use instead of numbers for the trials?\"; \"How high in miles did the first block, AS-201, reach when launched?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 2
+   }
+  },
+  "gen_suppression_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What year was the new bus",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What year was the new bus station in Newcastle officially opened?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What year was the new bus",
+      "What year was the new bus station in Newcastle officially opened?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What year was the new bus station in Newcastle officially opened?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What year was the new bus station in Newcastle officially opened?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What year was the new bus station in Newcastle officially opened?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What year was the new bus station in Newcastle officially opened?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.4,
+       "query": "bridge of what element can be built between poles",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "In experiments, a bridge of what element can be built between poles of a magnet?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "bridge of what element can be built between poles",
+      "In experiments, a bridge of what element can be built between poles of a magnet?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In experiments, a bridge of what element can be built between poles of a magnet?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In experiments, a bridge of what element can be built between poles of a magnet?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In experiments, a bridge of what element can be built between poles of a magnet?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In experiments, a bridge of what element can be built between poles of a magnet?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "Which entity has a monopoly on",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "Which entity has a monopoly on initiating legislation?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "Which entity has a monopoly on",
+      "Which entity has a monopoly on initiating legislation?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which entity has a monopoly on initiating legislation?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which entity has a monopoly on initiating legislation?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which entity has a monopoly on initiating legislation?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which entity has a monopoly on initiating legislation?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What does Newcastle still contain many",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What does Newcastle still contain many"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does Newcastle still contain many\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does Newcastle still contain many\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does Newcastle still contain many\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What does Newcastle still contain many\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "How long has Radio Tyneside been",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "How long has Radio Tyneside been the voluntary hospital radio service?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "How long has Radio Tyneside been",
+      "How long has Radio Tyneside been the voluntary hospital radio service?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How long has Radio Tyneside been the voluntary hospital radio service?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How long has Radio Tyneside been the voluntary hospital radio service?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How long has Radio Tyneside been the voluntary hospital radio service?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"How long has Radio Tyneside been the voluntary hospital radio service?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What material's weight gain during rusting",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What material's weight gain during rusting was an early clue that philogiston",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What material's weight gain during rusting was an early clue that philogiston theory was wrong?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What material's weight gain during rusting",
+      "What material's weight gain during rusting was an early clue that philogiston",
+      "What material's weight gain during rusting was an early clue that philogiston theory was wrong?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What material's weight gain during rusting was an early clue that philogiston theory was wrong?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What material's weight gain during rusting was an early clue that philogiston theory was wrong?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What material's weight gain during rusting was an early clue that philogiston theory was wrong?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What material's weight gain during rusting was an early clue that philogiston theory was wrong?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "one work by Olivier",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "one work by Olivier Messiaen?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "one work by Olivier",
+      "one work by Olivier Messiaen?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"one work by Olivier Messiaen?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"one work by Olivier Messiaen?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"one work by Olivier Messiaen?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"one work by Olivier Messiaen?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What type of vote must the",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What type of vote must the Parliament have to either block or",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 4.8,
+       "query": "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What type of vote must the",
+      "What type of vote must the Parliament have to either block or",
+      "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "What type of behavior in primes",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "What type of behavior in primes is it possible to determine?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "What type of behavior in primes",
+      "What type of behavior in primes is it possible to determine?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of behavior in primes is it possible to determine?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of behavior in primes is it possible to determine?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of behavior in primes is it possible to determine?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What type of behavior in primes is it possible to determine?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_suppression_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "another term for shortening",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "another term for shortening the admission event?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "another term for shortening",
+      "another term for shortening the admission event?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another term for shortening the admission event?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [],
+     "sub_queries": [],
+     "answer": "",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another term for shortening the admission event?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": "presentation_restructure"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another term for shortening the admission event?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "restructure",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"another term for shortening the admission event?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1,
+    "u2": 0
+   }
+  },
+  "gen_unanswerable_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "office plant watering",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "office plant watering schedule?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "office plant watering",
+      "office plant watering schedule?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"office plant watering schedule?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"office plant watering schedule?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "company's stance on",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "company's stance on interstellar travel expenses?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "company's stance on",
+      "company's stance on interstellar travel expenses?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"company's stance on interstellar travel expenses?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"company's stance on interstellar travel expenses?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "office plant watering",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "office plant watering schedule?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "office plant watering",
+      "office plant watering schedule?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"office plant watering schedule?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"office plant watering schedule?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "office plant watering",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "office plant watering schedule?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "office plant watering",
+      "office plant watering schedule?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"office plant watering schedule?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"office plant watering schedule?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  },
+  "gen_unanswerable_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.0,
+       "query": "parking validation policy",
+       "trigger": "provisional"
+      },
+      {
+       "timestamp_s": 2.4,
+       "query": "parking validation policy for visiting contractors?",
+       "trigger": "provisional"
+      }
+     ],
+     "sub_queries": [
+      "parking validation policy",
+      "parking validation policy for visiting contractors?"
+     ],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": true,
+     "reason": "intent_stable"
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"parking validation policy for visiting contractors?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 1
+   }
+  }
+ },
+ "quality": {
+  "answer": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "citation": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    1.0
+   ]
+  },
+  "claim_correct": {
+   "k": 0,
+   "n": 4,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ]
+  },
+  "abstention": {
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci": [
+    0.5655085052479191,
+    1.0
+   ]
+  },
+  "split_exact": {
+   "k": 20,
+   "n": 20,
+   "rate": 1.0,
+   "ci": [
+    0.8388698745050667,
+    1.0
+   ]
+  },
+  "oversplit": {
+   "k": 0,
+   "n": 35,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.09890426758938868
+   ]
+  },
+  "claim_words": {
+   "mean": 27.75,
+   "n": 4
+  }
+ },
+ "items": {
+  "answer": {},
+  "citation": {},
+  "claim_correct": {
+   "gen_late_detail_009|u2:c0": 0,
+   "gen_late_detail_011|u1:c0": 0,
+   "gen_late_detail_017|u2:c0": 0,
+   "gen_multi_intent_004|u1:c0": 0
+  },
+  "abstention": {
+   "gen_unanswerable_000|u1": 1,
+   "gen_unanswerable_001|u1": 1,
+   "gen_unanswerable_002|u1": 1,
+   "gen_unanswerable_003|u1": 1,
+   "gen_unanswerable_004|u1": 1
+  },
+  "split_exact": {
+   "gen_multi_intent_000|u1": 1,
+   "gen_multi_intent_001|u1": 1,
+   "gen_multi_intent_002|u1": 1,
+   "gen_multi_intent_003|u1": 1,
+   "gen_multi_intent_004|u1": 1,
+   "gen_multi_intent_005|u1": 1,
+   "gen_multi_intent_006|u1": 1,
+   "gen_multi_intent_007|u1": 1,
+   "gen_multi_intent_008|u1": 1,
+   "gen_multi_intent_009|u1": 1,
+   "gen_multi_intent_010|u1": 1,
+   "gen_multi_intent_011|u1": 1,
+   "gen_multi_intent_012|u1": 1,
+   "gen_multi_intent_013|u1": 1,
+   "gen_multi_intent_014|u1": 1,
+   "gen_multi_intent_015|u1": 1,
+   "gen_multi_intent_016|u1": 1,
+   "gen_multi_intent_017|u1": 1,
+   "gen_multi_intent_018|u1": 1,
+   "gen_multi_intent_019|u1": 1
+  },
+  "oversplit": {
+   "gen_late_detail_000|u1": 0,
+   "gen_late_detail_001|u1": 0,
+   "gen_late_detail_002|u1": 0,
+   "gen_late_detail_003|u1": 0,
+   "gen_late_detail_004|u1": 0,
+   "gen_late_detail_005|u1": 0,
+   "gen_late_detail_006|u1": 0,
+   "gen_late_detail_007|u1": 0,
+   "gen_late_detail_008|u1": 0,
+   "gen_late_detail_009|u1": 0,
+   "gen_late_detail_010|u1": 0,
+   "gen_late_detail_011|u1": 0,
+   "gen_late_detail_012|u1": 0,
+   "gen_late_detail_013|u1": 0,
+   "gen_late_detail_014|u1": 0,
+   "gen_late_detail_015|u1": 0,
+   "gen_late_detail_016|u1": 0,
+   "gen_late_detail_017|u1": 0,
+   "gen_late_detail_018|u1": 0,
+   "gen_late_detail_019|u1": 0,
+   "gen_suppression_000|u1": 0,
+   "gen_suppression_001|u1": 0,
+   "gen_suppression_002|u1": 0,
+   "gen_suppression_003|u1": 0,
+   "gen_suppression_004|u1": 0,
+   "gen_suppression_005|u1": 0,
+   "gen_suppression_006|u1": 0,
+   "gen_suppression_007|u1": 0,
+   "gen_suppression_008|u1": 0,
+   "gen_suppression_009|u1": 0,
+   "gen_unanswerable_000|u1": 0,
+   "gen_unanswerable_001|u1": 0,
+   "gen_unanswerable_002|u1": 0,
+   "gen_unanswerable_003|u1": 0,
+   "gen_unanswerable_004|u1": 0
+  }
+ },
+ "wrong_claims": [
+  {
+   "scenario": "gen_late_detail_009",
+   "utterance": "u2",
+   "questions": [
+    "What was the percentage of Black or African-Americans living in the city?"
+   ],
+   "claim": "The Black Death killed about 40% of Egypt's population.",
+   "citations": [
+    "Doc_01 \u00a718"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_011",
+   "utterance": "u1",
+   "questions": [
+    "When was the Cretaceous-Paleogen extinction occur?"
+   ],
+   "claim": "Following the Cretaceous\u2013Paleogene extinction event, the extinction of the dinosaurs and the wetter climate may have allowed the tropical rainforest to spread o",
+   "citations": [
+    "Doc_00 \u00a72"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_017",
+   "utterance": "u2",
+   "questions": [
+    "After what event did the Spanish concede Florida to Britain?"
+   ],
+   "claim": "In 1565 the Spanish decided to enforce their claim to La Florida, and sent Pedro Men\u00e9ndez de Avil\u00e9s, who established the settlement of St. Augustine near Fort C",
+   "citations": [
+    "Doc_06 \u00a728"
+   ]
+  },
+  {
+   "scenario": "gen_multi_intent_004",
+   "utterance": "u1",
+   "questions": [
+    "What kinds of sciences were Social Darwinism and theories of race?",
+    "When did Great Britain lose its colonies in North America?"
+   ],
+   "claim": "Barred by the government from settling in New France, Huguenots led by Jess\u00e9 de Forest, sailed to North America in 1624 and settled instead in the Dutch colony ",
+   "citations": [
+    "Doc_06 \u00a76"
+   ]
+  }
+ ]
+}

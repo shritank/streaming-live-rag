@@ -1,0 +1,122 @@
+{
+ "scenario_id": "hey_a_572759665951b619008f8885",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2113,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "You"
+   }
+  },
+  {
+   "timestamp_ms": 3080,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what year?"
+   }
+  },
+  {
+   "timestamp_ms": 4079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what"
+   }
+  },
+  {
+   "timestamp_ms": 4079,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what year was Wisconsin?"
+   }
+  },
+  {
+   "timestamp_ms": 5114,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " year was"
+   }
+  },
+  {
+   "timestamp_ms": 5114,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what year was Wisconsin v. Yoder?"
+   }
+  },
+  {
+   "timestamp_ms": 6097,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Wisconsin"
+   }
+  },
+  {
+   "timestamp_ms": 6097,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what year was Wisconsin Vyodor decided at the"
+   }
+  },
+  {
+   "timestamp_ms": 7047,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " v. Yoder decided at the Supreme Court?"
+   }
+  },
+  {
+   "timestamp_ms": 7048,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9047,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In what year was Wisconsin v. Yoder decided at the Supreme Court?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

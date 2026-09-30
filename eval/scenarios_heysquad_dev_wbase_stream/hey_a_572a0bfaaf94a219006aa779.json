@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_a_572a0bfaaf94a219006aa779",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2490,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "You"
+   }
+  },
+  {
+   "timestamp_ms": 4490,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " changes in the"
+   }
+  },
+  {
+   "timestamp_ms": 6490,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " vegetation"
+   }
+  },
+  {
+   "timestamp_ms": 8375,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " of the Amazon rainforest took"
+   }
+  },
+  {
+   "timestamp_ms": 9293,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " place since the last"
+   }
+  },
+  {
+   "timestamp_ms": 9792,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " glacial maximum."
+   }
+  },
+  {
+   "timestamp_ms": 11792,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " which was how"
+   }
+  },
+  {
+   "timestamp_ms": 13628,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Many changes in the vegetation of the Amazon rainforest took place since the last glacial maximum, which was how many years ago."
+   }
+  },
+  {
+   "timestamp_ms": 13629,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 15628,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Many changes in the vegetation of the amazon rainforest took place since the  Last Glacial Maximum, which was how many years ago?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

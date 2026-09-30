@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_57265360dd62a815002e819c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 6125,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "To force Japan to be more involved in the crisis, what"
+   }
+  },
+  {
+   "timestamp_ms": 7135,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " did"
+   }
+  },
+  {
+   "timestamp_ms": 8163,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Saudi and Kuwaiti governments"
+   }
+  },
+  {
+   "timestamp_ms": 8429,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " do?"
+   }
+  },
+  {
+   "timestamp_ms": 8430,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10429,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "To force Japan to be more involved in the crisis, what did Saudi and Kuwaiti government do?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -40,7 +40,7 @@ def evaluate(corpus_dir: str, overrides: list[str], queries: list[dict], k: int 
     asyncio.run(retriever.setup())
     per_query = []
     doc_hits: list[bool] = []
-    started = time.monotonic()
+    started = time.perf_counter()
     for n, q in enumerate(queries):
         evidence = retriever._search_sync(SubQuery(query_id=f"q{n}", text=q["query"], intent_label="",
                                                      trigger="final", utterance_id="eval"), k)
@@ -49,7 +49,7 @@ def evaluate(corpus_dir: str, overrides: list[str], queries: list[dict], k: int 
         per_query.append(rank)
         gold_doc = q["relevant"][0].split(" §")[0]
         doc_hits.append(bool(evidence) and evidence[0].chunk.doc_id == gold_doc)
-    elapsed = time.monotonic() - started
+    elapsed = time.perf_counter() - started
     n = len(per_query)
     out = {"overrides": overrides, "n": n, "ms_per_query": 1000 * elapsed / max(n, 1), "ranks": per_query}
     for cut in (1, 5, 10):

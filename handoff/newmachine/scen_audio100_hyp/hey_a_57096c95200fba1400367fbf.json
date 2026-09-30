@@ -1,0 +1,167 @@
+{
+ "scenario_id": "hey_a_57096c95200fba1400367fbf",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2331,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": ". . . . . . . . . ."
+   }
+  },
+  {
+   "timestamp_ms": 3285,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What surf- S*** S*** S*** S*** S*** S***"
+   }
+  },
+  {
+   "timestamp_ms": 4081,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What"
+   }
+  },
+  {
+   "timestamp_ms": 4081,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What service is a video?"
+   }
+  },
+  {
+   "timestamp_ms": 5080,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " service is a"
+   }
+  },
+  {
+   "timestamp_ms": 5080,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What service is a video guard you can"
+   }
+  },
+  {
+   "timestamp_ms": 6140,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " video guard"
+   }
+  },
+  {
+   "timestamp_ms": 6140,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What service is a video guard UK equipped with?"
+   }
+  },
+  {
+   "timestamp_ms": 7109,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " UK equipped"
+   }
+  },
+  {
+   "timestamp_ms": 7109,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What service is a video guard UK equipped receiver that"
+   }
+  },
+  {
+   "timestamp_ms": 8129,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " receiver"
+   }
+  },
+  {
+   "timestamp_ms": 8129,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What service is a video guard UK equipped receiver dedicated to"
+   }
+  },
+  {
+   "timestamp_ms": 9167,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What service is a video guard UK-equipped receiver dedicated to decrypt?"
+   }
+  },
+  {
+   "timestamp_ms": 9684,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " UK-equipped receiver dedicated to decrypt?"
+   }
+  },
+  {
+   "timestamp_ms": 9685,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11684,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What service is a VideoGuard UK equipped receiver dedicated to decrypt?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

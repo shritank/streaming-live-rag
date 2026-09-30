@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad25f82d7d075001a428f86",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 6749,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "The unique model predicts"
+   }
+  },
+  {
+   "timestamp_ms": 7184,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " that"
+   }
+  },
+  {
+   "timestamp_ms": 7665,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " exchanged particles are the"
+   }
+  },
+  {
+   "timestamp_ms": 8201,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fundamental"
+   }
+  },
+  {
+   "timestamp_ms": 8747,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " means by what?"
+   }
+  },
+  {
+   "timestamp_ms": 8748,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10747,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "The Unique Model predicts that exchanged particles are the fundamental means by what?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

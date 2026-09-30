@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5729a3716aef05140015506a",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5073,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Which French"
+   }
+  },
+  {
+   "timestamp_ms": 6073,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " composer wrote a"
+   }
+  },
+  {
+   "timestamp_ms": 7093,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " metrical"
+   }
+  },
+  {
+   "timestamp_ms": 8523,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " A-metrical music using prime numbers?"
+   }
+  },
+  {
+   "timestamp_ms": 8524,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10523,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which French composer wrote ametrical music using prime numbers?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -15,6 +15,7 @@ after which everything runs offline (files are read with local_files_only).
 from __future__ import annotations
 
 import hashlib
+import logging
 import os
 import threading
 from dataclasses import dataclass
@@ -53,6 +54,8 @@ MS_MARCO_MINILM_L6 = ModelSpec(
             ("onnx/model.onnx", "5d3e70fd0c9ff14b9b5169a51e957b7a9c74897afd0a35ce4bd318150c1d4d4a")),
 )
 
+_log = logging.getLogger("streaming_rag.neural")
+ACTIVE_PROVIDERS: dict[str, str] = {}   # model file -> execution provider its session bound
 _CACHE_DIR = Path(os.environ.get("STREAMING_RAG_CACHE", ".cache/streaming_rag"))
 _lock = threading.Lock()
 _loaded: dict[str, object] = {}
@@ -72,17 +75,141 @@ def _resolve(spec: ModelSpec, filename: str) -> str:
             f"cache. Run: python -m streaming_rag.retrieval.neural --fetch") from e
 
 
-def _session(path: str):
+def _session(path: str, max_len: int = 512):
     import onnxruntime as ort
+
+    from ..gpu import check_ort_session, ort_use_cuda
     opts = ort.SessionOptions()
     opts.intra_op_num_threads = int(os.environ.get("STREAMING_RAG_ORT_THREADS", "4"))
     opts.inter_op_num_threads = 1
-    # cpu (default, the verified configuration) | cuda (needs the separate
-    # onnxruntime-gpu build and CUDA 12 libraries; falls back to CPU if absent)
-    providers = ["CPUExecutionProvider"]
-    if os.environ.get("STREAMING_RAG_ORT_PROVIDER", "cpu") == "cuda":
-        providers.insert(0, "CUDAExecutionProvider")
-    return ort.InferenceSession(path, sess_options=opts, providers=providers)
+    # auto (default): CUDA, mandatory whenever an NVIDIA GPU is present
+    # (streaming_rag/gpu.py); cpu only as an explicit opt-out. The CPU EP stays
+    # listed only for the few int64 mask/shape nodes CUDA has no kernel for;
+    # the session must still bind CUDA first.
+    cuda = ort_use_cuda()
+    # Sessions per model (each its own CUDA stream). Default 1: a pool of 3
+    # halves per-call latency only at >= 4 concurrent callers (micro-benchmark);
+    # the real pipeline runs ~2-way and had WORSE tails with 3 (rerank p99
+    # 41-52 vs 26 ms, docs/experiment_log.md W6) - kept only as a knob.
+    size = int(os.environ.get("STREAMING_RAG_ORT_SESSIONS", "1"))
+    sessions = []
+    for _ in range(max(1, size)):
+        if cuda:
+            s = ort.InferenceSession(path, sess_options=opts,
+                                     providers=["CUDAExecutionProvider", "CPUExecutionProvider"])
+            check_ort_session(s, path)
+        else:
+            s = ort.InferenceSession(path, sess_options=opts, providers=["CPUExecutionProvider"])
+        _warm_up(s, max_len)
+        sessions.append(s)
+    pool = _SessionPool(sessions)
+    ACTIVE_PROVIDERS[path] = pool.get_providers()[0]
+    _log.info("%s -> %s x%d", path, ACTIVE_PROVIDERS[path], len(sessions))
+    return pool
+
+
+class _SessionPool:
+    """Same interface as an InferenceSession; each run() checks out an idle
+    session (blocking if all are busy), so concurrent callers use separate
+    sessions. Identical weights and graph: which session runs a call cannot
+    change its result."""
+
+    def __init__(self, sessions):
+        import queue
+        self._sessions = sessions
+        self._idle = queue.SimpleQueue()
+        for s in sessions:
+            self._idle.put(s)
+
+    def run(self, output_names, feeds):
+        s = self._idle.get()
+        try:
+            return s.run(output_names, feeds)
+        finally:
+            self._idle.put(s)
+
+    def get_inputs(self):
+        return self._sessions[0].get_inputs()
+
+    def get_providers(self):
+        return self._sessions[0].get_providers()
+
+    def __len__(self):
+        return len(self._sessions)
+
+
+def _warm_up(session, max_len: int) -> None:
+    """Run the model once per representative shape at load time, so the first
+    user question does not pay one-off initialisation (CUDA: cuBLAS/cuDNN
+    handles, kernel loading, memory-arena growth; measured 100-540 ms spikes
+    on the first retrieving turn). Stateless: no effect on any output."""
+    names = {i.name for i in session.get_inputs()}
+    for batch, seq in ((1, 16), (5, 192), (12, 96), (3, max_len)):
+        feeds = {"input_ids": np.full((batch, seq), 1000, np.int64),
+                 "attention_mask": np.ones((batch, seq), np.int64)}
+        if "token_type_ids" in names:
+            feeds["token_type_ids"] = np.zeros((batch, seq), np.int64)
+        session.run(None, feeds)
+
+
+FUSED_DIR = _CACHE_DIR / "models" / "fused"
+
+
+def _onnx_path(key: str, original: str) -> str:
+    """On CUDA (STREAMING_RAG_ORT_FUSED=auto, the default, or 1): the same
+    weights with ONNX Runtime's transformer fusions (Attention/SkipLayerNorm/
+    BiasGelu, fp32), built by `python -m streaming_rag.retrieval.neural
+    --fuse`. Far fewer kernel launches per call; answers bit-identical on 618
+    dev scenarios (docs/experiment_log.md, GPU pass). 0 = original graphs."""
+    if os.environ.get("STREAMING_RAG_ORT_FUSED", "auto") == "0":
+        return original
+    from ..gpu import ort_use_cuda
+    if not ort_use_cuda():
+        return original
+    fused = FUSED_DIR / f"{key}.onnx"
+    if not fused.exists():
+        if os.environ.get("STREAMING_RAG_ORT_FUSED", "auto") == "1":       # explicitly required
+            raise ModelNotAvailable(f"{fused} missing. Run: python -m streaming_rag.retrieval.neural --fuse")
+        # auto: still the GPU, just the original (slower, ~2x per call) graph - never the CPU
+        _log.warning("fused CUDA graph %s not built - running the original graph on the GPU "
+                     "(python -m streaming_rag.retrieval.neural --fuse builds it)", fused)
+        return original
+    return str(fused)
+
+
+def fuse() -> None:
+    """Build the CUDA graphs: cross-encoder and reader first get the exact
+    static-shape rewrite (graph_static.staticize: bit-identical to the pinned
+    export, moves their per-call shape arithmetic off the CPU EP), then all
+    three get ONNX Runtime's transformer fusions. Writes FUSED_DIR/manifest.json."""
+    import json
+
+    import onnx
+    from onnxruntime.transformers import optimizer
+
+    from .graph_static import staticize
+    FUSED_DIR.mkdir(parents=True, exist_ok=True)
+    manifest = {}
+    for key, src in (("e5", _resolve(E5_SMALL_V2, E5_SMALL_V2.onnx_file)),
+                     ("ce", _resolve(MS_MARCO_MINILM_L6, MS_MARCO_MINILM_L6.onnx_file)),
+                     ("reader", str(READER_DIR / "model.onnx"))):
+        entry = {"source": str(src), "source_sha256": _sha256(src)}
+        stage = src
+        if key != "e5":   # e5's export has no run-time shape math (100% CUDA already)
+            model, entry["staticize"] = staticize(Path(src).read_bytes())
+            stage = str(FUSED_DIR / f"{key}.static.onnx")
+            onnx.save(model, stage)
+        opt = optimizer.optimize_model(stage, model_type="bert", num_heads=12, hidden_size=384,
+                                       use_gpu=True, opt_level=0)
+        dst = FUSED_DIR / f"{key}.onnx"
+        opt.save_model_to_file(str(dst))
+        if stage != src:
+            Path(stage).unlink()
+        entry["sha256"] = _sha256(str(dst))
+        entry["fused_ops"] = {k: v for k, v in opt.get_fused_operator_statistics().items() if v}
+        manifest[key] = entry
+        print(f"{key}: {src} -> {dst} sha256 {entry['sha256'][:16]} {entry.get('staticize', '')}")
+    (FUSED_DIR / "manifest.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
 
 
 def _tokenizer(path: str, max_length: int):
@@ -108,7 +235,10 @@ class E5Encoder:
     def __init__(self, spec: ModelSpec = E5_SMALL_V2, max_length: int = 512, batch_size: int = 32):
         self.spec = spec
         self.dim = 384
-        self._session = _session(_resolve(spec, spec.onnx_file))
+        original = _resolve(spec, spec.onnx_file)
+        path = _onnx_path("e5", original) if spec == E5_SMALL_V2 else original
+        self.variant = "" if path == original else "-fused"   # separate corpus-vector cache
+        self._session = _session(path)
         self._tok = _tokenizer(_resolve(spec, "tokenizer.json"), max_length)
         self._batch_size = batch_size
 
@@ -140,7 +270,8 @@ class E5Embedder:
     def fit(self, documents: list[str]) -> "E5Embedder":
         digest = hashlib.sha256("\x1e".join(documents).encode("utf-8")).hexdigest()[:24]
         rev = self._encoder.spec.revision[:8]
-        cache = _CACHE_DIR / "embeddings" / f"e5-small-v2@{rev}" / f"{digest}.npy"
+        variant = getattr(self._encoder, "variant", "")
+        cache = _CACHE_DIR / "embeddings" / f"e5-small-v2@{rev}{variant}" / f"{digest}.npy"
         if cache.exists():
             vecs = np.load(cache)
             if vecs.shape == (len(documents), self.dim):
@@ -166,7 +297,8 @@ class CrossEncoder:
 
     def __init__(self, spec: ModelSpec = MS_MARCO_MINILM_L6, max_length: int = 512, batch_size: int = 32):
         self.spec = spec
-        self._session = _session(_resolve(spec, spec.onnx_file))
+        original = _resolve(spec, spec.onnx_file)
+        self._session = _session(_onnx_path("ce", original) if spec == MS_MARCO_MINILM_L6 else original)
         self._tok = _tokenizer(_resolve(spec, "tokenizer.json"), max_length)
         self._batch_size = batch_size
 
@@ -193,7 +325,9 @@ class SquadReader:
         if not (folder / "model.onnx").exists():
             raise ModelNotAvailable(
                 f"SQuAD2 reader not found in {folder}. Run: python -m streaming_rag.retrieval.export_reader")
-        self._session = _session(str(folder / "model.onnx"))
+        original = str(folder / "model.onnx")
+        self._session = _session(_onnx_path("reader", original) if folder == READER_DIR else original,
+                                 max_len=max_length)
         self._tok = Tokenizer.from_file(str(folder / "tokenizer.json"))
         self._tok.enable_truncation(max_length=max_length, strategy="only_second")
         self._tok.enable_padding(pad_id=0, pad_token="[PAD]")
@@ -202,11 +336,15 @@ class SquadReader:
     def margin(self, question: str, passages: list[str]) -> float | None:
         """Best answer-span score minus the lowest no-answer score over the
         passages (higher = more confident an answer is present)."""
+        return self.answer(question, passages)[0]
+
+    def answer(self, question: str, passages: list[str]) -> tuple[float | None, str]:
+        """(margin, text of the single best answer span over all passages)."""
         if not passages:
-            return None
+            return None, ""
         encs = self._tok.encode_batch([(question, p) for p in passages])
         start, end = self._session.run(None, _feeds(self._session, encs))
-        best, nulls = -1e9, []
+        best, where, nulls = -1e9, None, []
         for i, enc in enumerate(encs):
             nulls.append(float(start[i][0] + end[i][0]))
             ctx = [j for j, sid in enumerate(enc.sequence_ids) if sid == 1]
@@ -217,9 +355,13 @@ class SquadReader:
             top_e = np.argsort(-end[i][lo:hi + 1])[:20] + lo
             for s in top_s:
                 for e in top_e:
-                    if s <= e < s + self._max_answer:
-                        best = max(best, float(start[i][s] + end[i][e]))
-        return None if best <= -1e9 else best - min(nulls)
+                    if s <= e < s + self._max_answer and float(start[i][s] + end[i][e]) > best:
+                        best, where = float(start[i][s] + end[i][e]), (i, int(s), int(e))
+        if where is None:
+            return None, ""
+        i, s, e = where
+        span = passages[i][encs[i].offsets[s][0]:encs[i].offsets[e][1]]
+        return best - min(nulls), span
 
 
 def get_reader() -> SquadReader:
@@ -281,6 +423,8 @@ if __name__ == "__main__":
     import sys
     if "--fetch" in sys.argv:
         fetch()
+    elif "--fuse" in sys.argv:
+        fuse()
     elif "--verify" in sys.argv:
         issues = verify()
         print("\n".join(issues) if issues else "all model files verified against pinned SHA-256")

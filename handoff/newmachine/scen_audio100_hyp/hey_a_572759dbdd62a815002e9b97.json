@@ -1,0 +1,140 @@
+{
+ "scenario_id": "hey_a_572759dbdd62a815002e9b97",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2397,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "You"
+   }
+  },
+  {
+   "timestamp_ms": 3140,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In addition..."
+   }
+  },
+  {
+   "timestamp_ms": 4132,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In"
+   }
+  },
+  {
+   "timestamp_ms": 4132,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In addition to endowments and"
+   }
+  },
+  {
+   "timestamp_ms": 5280,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " addition to endowments and"
+   }
+  },
+  {
+   "timestamp_ms": 5280,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In addition to endowments and tuition, // // // // // // //"
+   }
+  },
+  {
+   "timestamp_ms": 6133,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " tuition,"
+   }
+  },
+  {
+   "timestamp_ms": 6133,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In addition to endowments and tuition, how do boarding school"
+   }
+  },
+  {
+   "timestamp_ms": 7183,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " how do boarding"
+   }
+  },
+  {
+   "timestamp_ms": 7183,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In addition to endowments and tuition, how do boarding schools cover their options?"
+   }
+  },
+  {
+   "timestamp_ms": 8118,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " schools cover their operating costs?"
+   }
+  },
+  {
+   "timestamp_ms": 8119,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10118,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In addition to endowments and tuition, how do boarding schools cover their operating costs?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

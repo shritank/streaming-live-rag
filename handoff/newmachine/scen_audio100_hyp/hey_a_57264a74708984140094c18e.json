@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_a_57264a74708984140094c18e",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3130,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "When did the name..."
+   }
+  },
+  {
+   "timestamp_ms": 4109,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "When did the"
+   }
+  },
+  {
+   "timestamp_ms": 4109,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "When did the name Black Death?"
+   }
+  },
+  {
+   "timestamp_ms": 5126,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " name Black"
+   }
+  },
+  {
+   "timestamp_ms": 5126,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "When did the name Black Death officially take root?"
+   }
+  },
+  {
+   "timestamp_ms": 6134,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Death officially take"
+   }
+  },
+  {
+   "timestamp_ms": 6134,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "When did the name Black Death officially take root in England?"
+   }
+  },
+  {
+   "timestamp_ms": 6424,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " root in England?"
+   }
+  },
+  {
+   "timestamp_ms": 6425,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8424,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "When did the name black death officially take root in England?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

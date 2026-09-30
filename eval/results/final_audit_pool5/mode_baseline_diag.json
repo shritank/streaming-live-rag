@@ -1,0 +1,3850 @@
+{
+ "scenario_dir": "eval/scenarios_real_test",
+ "corpus_dir": "data/corpus_test",
+ "overrides": [
+  "engine.mode=baseline"
+ ],
+ "wall_s": 709.0,
+ "gates": {
+  "g2": [
+   0,
+   49,
+   15,
+   15
+  ],
+  "g3": [
+   0,
+   20
+  ],
+  "g4": [
+   62,
+   62,
+   0
+  ],
+  "g5": [
+   0,
+   20
+  ],
+  "g6": [
+   0,
+   90
+  ]
+ },
+ "execution_providers": {
+  "e5.onnx": "CUDAExecutionProvider",
+  "ce.onnx": "CUDAExecutionProvider",
+  "reader.onnx": "CUDAExecutionProvider"
+ },
+ "latency_post_utterance_ms": {
+  "p50": 72.36139999986335,
+  "p95": 93.24430000015127,
+  "n": 90
+ },
+ "raw": {
+  "gen_chit_chat_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 1.1,
+       "query": "Thank you",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Thank you\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Thank you\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 1.1,
+       "query": "Good morning",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Good morning\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Good morning\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 1.1,
+       "query": "Thank you",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Thank you\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Thank you\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 1.1,
+       "query": "Thank you",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Thank you\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Thank you\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_chit_chat_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 0.7,
+       "query": "Hello",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Hello\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Hello\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_late_detail_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.7,
+       "query": "What year was the new bus station in Newcastle officially opened?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "A new bus station, replacing the old underground bus station, was officially opened in March 2007.",
+     "citations": [
+      "Doc_09 \u00a716"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.5,
+       "query": "It turns out What was added to the the church of St. Andrew in 1726?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"It turns out What was added to the the church of St. Andrew in 1726?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "A new bus station, replacing the old underground bus station, was officially opened in March 2007.",
+       "citations": [
+        "Doc_09 \u00a716"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"It turns out What was added to the the church of St. Andrew in 1726?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.5,
+       "query": "Which entity has a monopoly on initiating legislation?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "While the Commission has a monopoly on initiating legislation, the European Parliament and the Council of the European Union have powers of amendment and veto during the legislative process.",
+     "citations": [
+      "Doc_04 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.3,
+       "query": "It turns out When was there an attempt to reform the law of the EU?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Following the Nice Treaty, there was an attempt to reform the constitutional law of the European Union and make it more transparent; this would have also produced a single constitutional document.",
+     "citations": [
+      "Doc_04 \u00a76"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "While the Commission has a monopoly on initiating legislation, the European Parliament and the Council of the European Union have powers of amendment and veto during the legislative process.",
+       "citations": [
+        "Doc_04 \u00a79"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Following the Nice Treaty, there was an attempt to reform the constitutional law of the European Union and make it more transparent; this would have also produced a single constitutional document.",
+       "citations": [
+        "Doc_04 \u00a76"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.3,
+       "query": "What type of medal did NASA give the astronauts who visited space and the moon?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "NASA awarded all 32 of these astronauts its highest honor, the Distinguished Service Medal, given for \"distinguished service, ability, or courage\", and personal \"contribution representing substantial progress to the NASA mission\".",
+     "citations": [
+      "Doc_01 \u00a730"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 16.5,
+       "query": "It turns out What did Pegasus satellites measure to propose the safety of the environment in space and on the moon?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The last three of these further supported the Apollo program by also carrying Pegasus satellites, which verified the safety of the translunar environment by measuring the frequency and severity of micrometeorite impacts.",
+     "citations": [
+      "Doc_01 \u00a726"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "NASA awarded all 32 of these astronauts its highest honor, the Distinguished Service Medal, given for \"distinguished service, ability, or courage\", and personal \"contribution representing substantial progress to the NASA mission\".",
+       "citations": [
+        "Doc_01 \u00a730"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The last three of these further supported the Apollo program by also carrying Pegasus satellites, which verified the safety of the translunar environment by measuring the frequency and severity of micrometeorite impacts.",
+       "citations": [
+        "Doc_01 \u00a726"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.3,
+       "query": "What material's weight gain during rusting was an early clue that philogiston theory was wrong?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Indeed, one of the first clues that the phlogiston theory was incorrect was that metals, too, gain weight in rusting (when they were supposedly losing phlogiston).",
+     "citations": [
+      "Doc_10 \u00a710"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 13.3,
+       "query": "Also, What are the three most abundent elements of the universe by mass?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "By mass, oxygen is the third-most abundant element in the universe, after hydrogen and helium.",
+     "citations": [
+      "Doc_10 \u00a71"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Indeed, one of the first clues that the phlogiston theory was incorrect was that metals, too, gain weight in rusting (when they were supposedly losing phlogiston).",
+       "citations": [
+        "Doc_10 \u00a710"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "By mass, oxygen is the third-most abundant element in the universe, after hydrogen and helium.",
+       "citations": [
+        "Doc_10 \u00a71"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.5,
+       "query": "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes, and the Council must vote by qualified majority to approve changes, but by unanimity to block Commission amendment.",
+     "citations": [
+      "Doc_04 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 14.9,
+       "query": "It turns out Who is the sole governing authority capable of initiating legislative proposals?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "This means that the Commission has a monopoly on initiating the legislative procedure, although the Council is the \"de facto catalyst of many legislative initiatives\".",
+     "citations": [
+      "Doc_04 \u00a77"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes, and the Council must vote by qualified majority to approve changes, but by unanimity to block Commission amendment.",
+       "citations": [
+        "Doc_04 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "This means that the Commission has a monopoly on initiating the legislative procedure, although the Council is the \"de facto catalyst of many legislative initiatives\".",
+       "citations": [
+        "Doc_04 \u00a77"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.9,
+       "query": "What is another term for shortening the admission event?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Most however have a reversing mechanism which additionally can provide means for saving steam as speed and momentum are gained by gradually \"shortening the cutoff\" or rather, shortening the admission event; this in turn proportionately lengthens the expansion period.",
+     "citations": [
+      "Doc_13 \u00a733"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.1,
+       "query": "Wait, one more thing \u2014 What is the approximate turbine entry temperature of a gas turbine?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Gas turbines, for instance, have turbine entry temperatures approaching 1500 \u00b0C.",
+     "citations": [
+      "Doc_13 \u00a742"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Most however have a reversing mechanism which additionally can provide means for saving steam as speed and momentum are gained by gradually \"shortening the cutoff\" or rather, shortening the admission event; this in turn proportionately lengthens the expansion period.",
+       "citations": [
+        "Doc_13 \u00a733"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Gas turbines, for instance, have turbine entry temperatures approaching 1500 \u00b0C.",
+       "citations": [
+        "Doc_13 \u00a742"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.1,
+       "query": "What movement did the fair held in June have its origins in?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What movement did the fair held in June have its origins in?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.7,
+       "query": "It turns out What museum in Newcastle is dedicated to children's books?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "There are several museums and galleries in Newcastle, including the Centre for Life with its Science Village; the Discovery Museum a museum highlighting life on Tyneside, including Tyneside's shipbuilding heritage, and inventions which changed the world; the Great North Museum; in 2009 the Newcastle on Tyne Museum of Antiquities merged with the Great North Museum (Hancock Museum); Seven Stories a museum dedicated to children's books, the Side Gallery historical and contemporary photography from around the world and Northern England and the Newburn Hall Motor Museum.",
+     "citations": [
+      "Doc_09 \u00a734"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What movement did the fair held in June have its origins in?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "There are several museums and galleries in Newcastle, including the Centre for Life with its Science Village; the Discovery Museum a museum highlighting life on Tyneside, including Tyneside's shipbuilding heritage, and inventions which changed the world; the Great North Museum; in 2009 the Newcastle on Tyne Museum of Antiquities merged with the Great North Museum (Hancock Museum); Seven Stories a museum dedicated to children's books, the Side Gallery historical and contemporary photography from around the world and Northern England and the Newburn Hall Motor Museum.",
+       "citations": [
+        "Doc_09 \u00a734"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.9,
+       "query": "What type of treatment do civil disobedients usually receive?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Some civil disobedients, such as the proprietors of illegal medical cannabis dispensaries and Voice in the Wilderness, which brought medicine to Iraq without the permission of the U.S. Government, directly achieve a desired social goal (such as the provision of medication to the sick) while openly breaking the law.",
+     "citations": [
+      "Doc_02 \u00a713"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.5,
+       "query": "It turns out Since Thoreau was not a well known writer what happened when he was arrested?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Thoreau, at the time of his arrest, was not yet a well-known author, and his arrest was not covered in any newspapers in the days, weeks and months after it happened.",
+     "citations": [
+      "Doc_02 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Some civil disobedients, such as the proprietors of illegal medical cannabis dispensaries and Voice in the Wilderness, which brought medicine to Iraq without the permission of the U.S. Government, directly achieve a desired social goal (such as the provision of medication to the sick) while openly breaking the law.",
+       "citations": [
+        "Doc_02 \u00a713"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Thoreau, at the time of his arrest, was not yet a well-known author, and his arrest was not covered in any newspapers in the days, weeks and months after it happened.",
+       "citations": [
+        "Doc_02 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.3,
+       "query": "In what state were the original launching facilities for missions?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "It also became clear that Apollo would outgrow the Canaveral launch facilities in Florida.",
+     "citations": [
+      "Doc_01 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.9,
+       "query": "Wait, one more thing \u2014 What was originally on the spacesuits prior to the clear \"fishbowl\" helmet?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The traditional visor helmet was replaced with a clear \"fishbowl\" type for greater visibility, and the lunar surface EVA suit would include a water-cooled undergarment.",
+     "citations": [
+      "Doc_01 \u00a732"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "It also became clear that Apollo would outgrow the Canaveral launch facilities in Florida.",
+       "citations": [
+        "Doc_01 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The traditional visor helmet was replaced with a clear \"fishbowl\" type for greater visibility, and the lunar surface EVA suit would include a water-cooled undergarment.",
+       "citations": [
+        "Doc_01 \u00a732"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.3,
+       "query": "What are the two principal Asian-American groups living in the west side neighborhood of Fresno?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "It is culturally diverse and also includes significant Mexican-American and Asian-American (principally Hmong or Laotian) populations.",
+     "citations": [
+      "Doc_05 \u00a715"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 14.1,
+       "query": "It turns out What was the percentage of Black or African-Americans living in the city?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The racial makeup of the city was 50.2% White, 8.4% Black or African American, 1.6% Native American, 11.2% Asian (about a third of which is Hmong), 0.1% Pacific Islander, 23.4% from other races, and 5.2% from two or more races.",
+     "citations": [
+      "Doc_05 \u00a724"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "It is culturally diverse and also includes significant Mexican-American and Asian-American (principally Hmong or Laotian) populations.",
+       "citations": [
+        "Doc_05 \u00a715"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The racial makeup of the city was 50.2% White, 8.4% Black or African American, 1.6% Native American, 11.2% Asian (about a third of which is Hmong), 0.1% Pacific Islander, 23.4% from other races, and 5.2% from two or more races.",
+       "citations": [
+        "Doc_05 \u00a724"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.3,
+       "query": "Why must one be excluded in order to preserve the uniqueness of the fundamental theorem?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The uniqueness in this theorem requires excluding 1 as a prime because one can include arbitrarily many instances of 1 in any factorization, e.g., 3, 1 \u00b7 3, 1 \u00b7 1 \u00b7 3, etc.",
+     "citations": [
+      "Doc_11 \u00a71"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 15.7,
+       "query": "Actually, What is name of the function used for the largest integer not greater than the number in question?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "are prime for any natural number n. Here  represents the floor function, i.e., largest integer not greater than the number in question.",
+     "citations": [
+      "Doc_11 \u00a715"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The uniqueness in this theorem requires excluding 1 as a prime because one can include arbitrarily many instances of 1 in any factorization, e.g., 3, 1 \u00b7 3, 1 \u00b7 1 \u00b7 3, etc.",
+       "citations": [
+        "Doc_11 \u00a71"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "are prime for any natural number n. Here  represents the floor function, i.e., largest integer not greater than the number in question.",
+       "citations": [
+        "Doc_11 \u00a715"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 2.7,
+       "query": "When was the Cretaceous-Paleogen extinction occur?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "This suggests that the last common ancestor of modern ctenophores was relatively recent, and perhaps was lucky enough to survive the Cretaceous\u2013Paleogene extinction event 65.5 million years ago while other lineages perished.",
+     "citations": [
+      "Doc_03 \u00a731"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.5,
+       "query": "Actually, Turtles and jellyfish can eat large quantities of what?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Some jellyfish and turtles eat large quantities of ctenophores, and jellyfish may temporarily wipe out ctenophore populations.",
+     "citations": [
+      "Doc_03 \u00a726"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "This suggests that the last common ancestor of modern ctenophores was relatively recent, and perhaps was lucky enough to survive the Cretaceous\u2013Paleogene extinction event 65.5 million years ago while other lineages perished.",
+       "citations": [
+        "Doc_03 \u00a731"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Some jellyfish and turtles eat large quantities of ctenophores, and jellyfish may temporarily wipe out ctenophore populations.",
+       "citations": [
+        "Doc_03 \u00a726"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.1,
+       "query": "How big was the Vertical Assembly Building?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The LOC included Launch Complex 39, a Launch Control Center, and a 130 million cubic foot (3.7 million cubic meter) Vertical Assembly Building (VAB) in which the space vehicle (launch vehicle and spacecraft) would be assembled on a Mobile Launcher Platform and then moved by a transporter to one of several launch pads.",
+     "citations": [
+      "Doc_01 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.9,
+       "query": "Also, What was the name of the launch vehicle for NASA, which North American Aviation designed the second stage of?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "North American Aviation won the contract to build the CSM, and also the second stage of the Saturn V launch vehicle for NASA.",
+     "citations": [
+      "Doc_01 \u00a723"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The LOC included Launch Complex 39, a Launch Control Center, and a 130 million cubic foot (3.7 million cubic meter) Vertical Assembly Building (VAB) in which the space vehicle (launch vehicle and spacecraft) would be assembled on a Mobile Launcher Platform and then moved by a transporter to one of several launch pads.",
+       "citations": [
+        "Doc_01 \u00a712"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "North American Aviation won the contract to build the CSM, and also the second stage of the Saturn V launch vehicle for NASA.",
+       "citations": [
+        "Doc_01 \u00a723"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.9,
+       "query": "Which country is not badly hit by the embargo?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which country is not badly hit by the embargo?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.3,
+       "query": "Wait, one more thing \u2014 Why did the Shah of Iran gave an interview?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Weeks later, the Shah of Iran said in an interview: \"Of course [the price of oil] is going to rise... Certainly!",
+     "citations": [
+      "Doc_00 \u00a75"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which country is not badly hit by the embargo?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Weeks later, the Shah of Iran said in an interview: \"Of course [the price of oil] is going to rise... Certainly!",
+       "citations": [
+        "Doc_00 \u00a75"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.5,
+       "query": "What type of vote must the Council pass in order to approve of any changes recommended by Parliament?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes, and the Council must vote by qualified majority to approve changes, but by unanimity to block Commission amendment.",
+     "citations": [
+      "Doc_04 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 16.1,
+       "query": "Also, Which treaty provides that the European Union law be applied to metropolitan territories of member states?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The TEU establishes that European Union law applies to the metropolitan territories of the member states, as well as certain islands and overseas territories, including Madeira, the Canary Islands and the French overseas departments.",
+     "citations": [
+      "Doc_04 \u00a74"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes, and the Council must vote by qualified majority to approve changes, but by unanimity to block Commission amendment.",
+       "citations": [
+        "Doc_04 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The TEU establishes that European Union law applies to the metropolitan territories of the member states, as well as certain islands and overseas territories, including Madeira, the Canary Islands and the French overseas departments.",
+       "citations": [
+        "Doc_04 \u00a74"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.5,
+       "query": "Why would one want to give a speech?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why would one want to give a speech?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.3,
+       "query": "Wait, one more thing \u2014 What type of person can not be attributed civil disobedience?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "It has also been argued that breaking the law for self-gratification, as in the case of a homosexual or cannabis user who does not direct his act at securing the repeal of amendment of the law, is not civil disobedience.",
+     "citations": [
+      "Doc_02 \u00a724"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Why would one want to give a speech?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "It has also been argued that breaking the law for self-gratification, as in the case of a homosexual or cannabis user who does not direct his act at securing the repeal of amendment of the law, is not civil disobedience.",
+       "citations": [
+        "Doc_02 \u00a724"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.3,
+       "query": "In what major portion of living things is oxygen found?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Many major classes of organic molecules in living organisms, such as proteins, nucleic acids, carbohydrates, and fats, contain oxygen, as do the major inorganic compounds that are constituents of animal shells, teeth, and bone.",
+     "citations": [
+      "Doc_10 \u00a72"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.9,
+       "query": "Also, To ensure safety of future space missions Oxygen was used at _____ of the normal pressure.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The fire that killed the Apollo 1 crew in a launch pad test spread so rapidly because the capsule was pressurized with pure O\n2 but at slightly more than atmospheric pressure, instead of the 1\u20443 normal pressure that would be used in a mission.[k]",
+     "citations": [
+      "Doc_10 \u00a77"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Many major classes of organic molecules in living organisms, such as proteins, nucleic acids, carbohydrates, and fats, contain oxygen, as do the major inorganic compounds that are constituents of animal shells, teeth, and bone.",
+       "citations": [
+        "Doc_10 \u00a72"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The fire that killed the Apollo 1 crew in a launch pad test spread so rapidly because the capsule was pressurized with pure O\n2 but at slightly more than atmospheric pressure, instead of the 1\u20443 normal pressure that would be used in a mission.[k]",
+       "citations": [
+        "Doc_10 \u00a77"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.1,
+       "query": "After what battle did Union forces return to and occupy Jacksonville for the rest of the war?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "In February 1864 Union forces left Jacksonville and confronted a Confederate Army at the Battle of Olustee resulting in a Confederate victory.",
+     "citations": [
+      "Doc_08 \u00a77"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 13.3,
+       "query": "Also, After what event did the Spanish concede Florida to Britain?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Britain ceded control of the territory back to Spain in 1783, after its defeat in the American Revolutionary War, and the settlement at the Cow Ford continued to grow.",
+     "citations": [
+      "Doc_08 \u00a76"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In February 1864 Union forces left Jacksonville and confronted a Confederate Army at the Battle of Olustee resulting in a Confederate victory.",
+       "citations": [
+        "Doc_08 \u00a77"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Britain ceded control of the territory back to Spain in 1783, after its defeat in the American Revolutionary War, and the settlement at the Cow Ford continued to grow.",
+       "citations": [
+        "Doc_08 \u00a76"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.7,
+       "query": "What was the first year that Yale and Harvard played football?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the first year that Yale and Harvard played football?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 14.5,
+       "query": "It turns out What is the name of the bridge that joins parts of the campus of the Charles River?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The John W. Weeks Bridge is a pedestrian bridge over the Charles River connecting both campuses.",
+     "citations": [
+      "Doc_06 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What was the first year that Yale and Harvard played football?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The John W. Weeks Bridge is a pedestrian bridge over the Charles River connecting both campuses.",
+       "citations": [
+        "Doc_06 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_late_detail_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.5,
+       "query": "In what town did Bill Aiken grow up?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what town did Bill Aiken grow up?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.7,
+       "query": "Actually, What is the name of the first aviation community built?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Sierra Sky Park was the first aviation community to be built[citation needed] and there are now numerous such communities across the United States and around the world.",
+     "citations": [
+      "Doc_05 \u00a719"
+     ],
+     "uncertainty": null,
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"In what town did Bill Aiken grow up?\".",
+     "claims": []
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Sierra Sky Park was the first aviation community to be built[citation needed] and there are now numerous such communities across the United States and around the world.",
+       "citations": [
+        "Doc_05 \u00a719"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_multi_intent_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.9,
+       "query": "Upon what chemical characteristic is oxygen's solubility dependent?, What second part of air was deemed lifeless by Lavoisier? and In what group of compounds is oxygen a necessary part?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The solubility of oxygen in water is temperature-dependent, and about twice as much (14.6 mg\u00b7L\u22121) dissolves at 0 \u00b0C than at 20 \u00b0C (7.6 mg\u00b7L\u22121).",
+     "citations": [
+      "Doc_10 \u00a718"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The solubility of oxygen in water is temperature-dependent, and about twice as much (14.6 mg\u00b7L\u22121) dissolves at 0 \u00b0C than at 20 \u00b0C (7.6 mg\u00b7L\u22121).",
+       "citations": [
+        "Doc_10 \u00a718"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.9,
+       "query": "Which genus is considered the \"aunt\" of ctenophores?, What does the pleurobrachia have on opposite sides of its body?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which genus is considered the \"aunt\" of ctenophores?, What does the pleurobrachia have on opposite sides of its body?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Which genus is considered the \"aunt\" of ctenophores?, What does the pleurobrachia have on opposite sides of its body?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.9,
+       "query": "What are Harvard's Pell grant reserves?, What famous civil rights leader called Harvard home?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "As of 2012[update], Harvard University had a total financial aid reserve of $159 million for students, and a Pell Grant reserve of $4.093 million available for disbursement.",
+     "citations": [
+      "Doc_06 \u00a715"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "As of 2012[update], Harvard University had a total financial aid reserve of $159 million for students, and a Pell Grant reserve of $4.093 million available for disbursement.",
+       "citations": [
+        "Doc_06 \u00a715"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 15.9,
+       "query": "Who backed policies that have solutions that sound good but have poor prospects?, How long does it take for new areas to have significant oil production? and Why did the oil ministers agree to a cut in oil production?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Instead of providing stable rules that support basic research while leaving plenty of scope for entrepreneurship and innovation, congresses and presidents have repeatedly backed policies which promise solutions that are politically expedient, but whose prospects are doubtful.",
+     "citations": [
+      "Doc_00 \u00a715"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Instead of providing stable rules that support basic research while leaving plenty of scope for entrepreneurship and innovation, congresses and presidents have repeatedly backed policies which promise solutions that are politically expedient, but whose prospects are doubtful.",
+       "citations": [
+        "Doc_00 \u00a715"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.7,
+       "query": "What kinds of sciences were Social Darwinism and theories of race?, When did Great Britain lose its colonies in North America?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The pseudo-sciences of Social Darwinism and theories of race formed an ideological underpinning during this time.",
+     "citations": [
+      "Doc_07 \u00a734"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The pseudo-sciences of Social Darwinism and theories of race formed an ideological underpinning during this time.",
+       "citations": [
+        "Doc_07 \u00a734"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.7,
+       "query": "Along with diesel engines, what engines have overtaken steam engines for marine propulsion?, What is 565 \u00b0C the creep limit of?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Without the pressure reaching supercritical levels for the working fluid, the temperature range the cycle can operate over is quite small; in steam turbines, turbine entry temperatures are typically 565 \u00b0C (the creep limit of stainless steel) and condenser temperatures are around 30 \u00b0C.",
+     "citations": [
+      "Doc_13 \u00a719"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Without the pressure reaching supercritical levels for the working fluid, the temperature range the cycle can operate over is quite small; in steam turbines, turbine entry temperatures are typically 565 \u00b0C (the creep limit of stainless steel) and condenser temperatures are around 30 \u00b0C.",
+       "citations": [
+        "Doc_13 \u00a719"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 14.3,
+       "query": "Since Thoreau was not a well known writer what happened when he was arrested?, How long did Julia Butterfly Hill live in a tree? and What US war caused a high amount of civil disobedience?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Thoreau, at the time of his arrest, was not yet a well-known author, and his arrest was not covered in any newspapers in the days, weeks and months after it happened.",
+     "citations": [
+      "Doc_02 \u00a712"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Thoreau, at the time of his arrest, was not yet a well-known author, and his arrest was not covered in any newspapers in the days, weeks and months after it happened.",
+       "citations": [
+        "Doc_02 \u00a712"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 10.3,
+       "query": "After what battle did Union forces return to and occupy Jacksonville for the rest of the war?, What factors negatively impacted Jacksonville following the war?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "In February 1864 Union forces left Jacksonville and confronted a Confederate Army at the Battle of Olustee resulting in a Confederate victory.",
+     "citations": [
+      "Doc_08 \u00a77"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In February 1864 Union forces left Jacksonville and confronted a Confederate Army at the Battle of Olustee resulting in a Confederate victory.",
+       "citations": [
+        "Doc_08 \u00a77"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 13.1,
+       "query": "Where were the Germanic tribes originally located?, What were European countries doing during the 1700's? and What subtle tool can be used in an informal imperialistic situation to expand a controlled area?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "From their original homelands in Scandinavia and northern Europe, Germanic tribes expanded throughout northern and western Europe in the middle period of classical antiquity; southern Europe in late antiquity, conquering Celtic and other peoples; and by 800 CE, forming the Holy Roman Empire, the first German Empire.",
+     "citations": [
+      "Doc_07 \u00a727"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "From their original homelands in Scandinavia and northern Europe, Germanic tribes expanded throughout northern and western Europe in the middle period of classical antiquity; southern Europe in late antiquity, conquering Celtic and other peoples; and by 800 CE, forming the Holy Roman Empire, the first German Empire.",
+       "citations": [
+        "Doc_07 \u00a727"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.5,
+       "query": "What is another way of referring to stators?, What components raise steam temperature above its saturated vapor point?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Other components are often present; pumps (such as an injector) to supply water to the boiler during operation, condensers to recirculate the water and recover the latent heat of vaporisation, and superheaters to raise the temperature of the steam above its saturated vapour point, and various mechanisms to increase the draft for fireboxes.",
+     "citations": [
+      "Doc_13 \u00a743"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Other components are often present; pumps (such as an injector) to supply water to the boiler during operation, condensers to recirculate the water and recover the latent heat of vaporisation, and superheaters to raise the temperature of the steam above its saturated vapour point, and various mechanisms to increase the draft for fireboxes.",
+       "citations": [
+        "Doc_13 \u00a743"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_010": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.7,
+       "query": "What caused UK to have an oil crisis in its own country?, What is one of the reason that US production has been held responsible for recessions and lower economic growth?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "In the US production, distribution and price disruptions \"have been held responsible for recessions, periods of excessive inflation, reduced productivity, and lower economic growth.\"",
+     "citations": [
+      "Doc_00 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In the US production, distribution and price disruptions \"have been held responsible for recessions, periods of excessive inflation, reduced productivity, and lower economic growth.\"",
+       "citations": [
+        "Doc_00 \u00a78"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_011": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.1,
+       "query": "What does civil disobedience relate to?, How is civil disobedience typically defined in connection of the citizen's?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Civil disobedience is usually defined as pertaining to a citizen's relation to the state and its laws, as distinguished from a constitutional impasse in which two public agencies, especially two equally sovereign branches of government, conflict.",
+     "citations": [
+      "Doc_02 \u00a76"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Civil disobedience is usually defined as pertaining to a citizen's relation to the state and its laws, as distinguished from a constitutional impasse in which two public agencies, especially two equally sovereign branches of government, conflict.",
+       "citations": [
+        "Doc_02 \u00a76"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_012": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.7,
+       "query": "What former building is currently known as Grand 1401?, What area has become attractive for restaurants?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Among them, the original Fresno County Courthouse (demolished), the Fresno Carnegie Public Library (demolished), the Fresno Water Tower, the Bank of Italy Building, the Pacific Southwest Building, the San Joaquin Light & Power Building (currently known as the Grand 1401), and the Hughes Hotel (burned down), to name a few.",
+     "citations": [
+      "Doc_05 \u00a77"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Among them, the original Fresno County Courthouse (demolished), the Fresno Carnegie Public Library (demolished), the Fresno Water Tower, the Bank of Italy Building, the Pacific Southwest Building, the San Joaquin Light & Power Building (currently known as the Grand 1401), and the Hughes Hotel (burned down), to name a few.",
+       "citations": [
+        "Doc_05 \u00a77"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_013": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.3,
+       "query": "What conviction motivated Eliot to move towards secularization?, How many residential dorms house upper class, sophomore, Jr, and Sr students?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "While Eliot was the most crucial figure in the secularization of American higher education, he was motivated not by a desire to secularize education, but by Transcendentalist Unitarian convictions.",
+     "citations": [
+      "Doc_06 \u00a78"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "While Eliot was the most crucial figure in the secularization of American higher education, he was motivated not by a desire to secularize education, but by Transcendentalist Unitarian convictions.",
+       "citations": [
+        "Doc_06 \u00a78"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_014": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.5,
+       "query": "What does ctenophore mean in Greek?, What are cilia used for? and What are the eight comb rows on the outer surface called?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The outer surface bears usually eight comb rows, called swimming-plates, which are used for swimming.",
+     "citations": [
+      "Doc_03 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The outer surface bears usually eight comb rows, called swimming-plates, which are used for swimming.",
+       "citations": [
+        "Doc_03 \u00a711"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_015": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.7,
+       "query": "What contains a nearly verbatim of parliamentary debates?, What are committees in the Scottish Parliament compared to other systems? and When was the final legislative proposals for a Scottish Assembly passed?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The role of committees is stronger in the Scottish Parliament than in other parliamentary systems, partly as a means of strengthening the role of backbenchers in their scrutiny of the government and partly to compensate for the fact that there is no revising chamber.",
+     "citations": [
+      "Doc_12 \u00a719"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The role of committees is stronger in the Scottish Parliament than in other parliamentary systems, partly as a means of strengthening the role of backbenchers in their scrutiny of the government and partly to compensate for the fact that there is no revising chamber.",
+       "citations": [
+        "Doc_12 \u00a719"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_016": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 5.9,
+       "query": "When are subject committees established?, Economy, Energy and Tourism is one of the what?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The current Subject Committees in the fourth Session are: Economy, Energy and Tourism; Education and Culture; Health and Sport; Justice; Local Government and Regeneration; Rural Affairs, Climate Change and Environment; Welfare Reform; and Infrastructure and Capital Investment.",
+     "citations": [
+      "Doc_12 \u00a721"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The current Subject Committees in the fourth Session are: Economy, Energy and Tourism; Education and Culture; Health and Sport; Justice; Local Government and Regeneration; Rural Affairs, Climate Change and Environment; Welfare Reform; and Infrastructure and Capital Investment.",
+       "citations": [
+        "Doc_12 \u00a721"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_017": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 14.7,
+       "query": "What was the percentage of whit people in Fresno in 2010?, What are the two major thoroughfares of Sunnyside? and Does the residential architecture of the Tower District compare or contrast with other part of Fresno?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Its major thoroughfares are Kings Canyon Avenue and Clovis Avenue.",
+     "citations": [
+      "Doc_05 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Its major thoroughfares are Kings Canyon Avenue and Clovis Avenue.",
+       "citations": [
+        "Doc_05 \u00a79"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_018": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.5,
+       "query": "Which is one of the park features located in North Fresno?, After its re-opening, which types of movies did the Tower Theatre show? and Who founded Woodward Park?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "This vibrant and culturally diverse area of retail businesses and residences experienced a renewal after a significant decline in the late 1960s and 1970s.[citation needed] After decades of neglect and suburban flight, the neighborhood revival followed the re-opening of the Tower Theatre in the late 1970s, which at that time showed second and third run movies, along with classic films.",
+     "citations": [
+      "Doc_05 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "This vibrant and culturally diverse area of retail businesses and residences experienced a renewal after a significant decline in the late 1960s and 1970s.[citation needed] After decades of neglect and suburban flight, the neighborhood revival followed the re-opening of the Tower Theatre in the late 1970s, which at that time showed second and third run movies, along with classic films.",
+       "citations": [
+        "Doc_05 \u00a711"
+       ]
+      }
+     ]
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_multi_intent_019": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 14.3,
+       "query": "Since NASA didn't know how many attempts each test would end up requiring, what did they use instead of numbers for the trials?, How high in miles did the first block, AS-201, reach when launched?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since NASA didn't know how many attempts each test would end up requiring, what did they use instead of numbers for the trials?, How high in miles did the first block, AS-201, reach when launched?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Since NASA didn't know how many attempts each test would end up requiring, what did they use instead of numbers for the trials?, How high in miles did the first block, AS-201, reach when launched?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_suppression_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.7,
+       "query": "What year was the new bus station in Newcastle officially opened?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "A new bus station, replacing the old underground bus station, was officially opened in March 2007.",
+     "citations": [
+      "Doc_09 \u00a716"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 10.1,
+       "query": "Summarize what you just said as three bullet points.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Summarize what you just said as three bullet points.\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "A new bus station, replacing the old underground bus station, was officially opened in March 2007.",
+       "citations": [
+        "Doc_09 \u00a716"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Summarize what you just said as three bullet points.\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.3,
+       "query": "In experiments, a bridge of what element can be built between poles of a magnet?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Liquid oxygen is attracted to a magnet to a sufficient extent that, in laboratory demonstrations, a bridge of liquid oxygen may be supported against its own weight between the poles of a powerful magnet.[c]",
+     "citations": [
+      "Doc_10 \u00a725"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 10.9,
+       "query": "Can you shorten that to one sentence?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Can you shorten that to one sentence?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Liquid oxygen is attracted to a magnet to a sufficient extent that, in laboratory demonstrations, a bridge of liquid oxygen may be supported against its own weight between the poles of a powerful magnet.[c]",
+       "citations": [
+        "Doc_10 \u00a725"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Can you shorten that to one sentence?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.5,
+       "query": "Which entity has a monopoly on initiating legislation?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "While the Commission has a monopoly on initiating legislation, the European Parliament and the Council of the European Union have powers of amendment and veto during the legislative process.",
+     "citations": [
+      "Doc_04 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.5,
+       "query": "Please repeat your last answer in two bullets.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "While the Commission has a monopoly on initiating legislation, the European Parliament and the Council of the European Union have powers of amendment and veto during the legislative process.",
+       "citations": [
+        "Doc_04 \u00a79"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.1,
+       "query": "What does Newcastle still contain many of?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "In large parts, Newcastle still retains a medieval street layout.",
+     "citations": [
+      "Doc_09 \u00a79"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 8.1,
+       "query": "Please repeat your last answer in two bullets.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "In large parts, Newcastle still retains a medieval street layout.",
+       "citations": [
+        "Doc_09 \u00a79"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.7,
+       "query": "How long has Radio Tyneside been the voluntary hospital radio service?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Radio Tyneside has been the voluntary hospital radio service for most hospitals across Newcastle and Gateshead since 1951, broadcasting on Hospedia  and online.",
+     "citations": [
+      "Doc_09 \u00a751"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.3,
+       "query": "Can you shorten that to one sentence?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Can you shorten that to one sentence?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Radio Tyneside has been the voluntary hospital radio service for most hospitals across Newcastle and Gateshead since 1951, broadcasting on Hospedia  and online.",
+       "citations": [
+        "Doc_09 \u00a751"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Can you shorten that to one sentence?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_005": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 6.3,
+       "query": "What material's weight gain during rusting was an early clue that philogiston theory was wrong?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Indeed, one of the first clues that the phlogiston theory was incorrect was that metals, too, gain weight in rusting (when they were supposedly losing phlogiston).",
+     "citations": [
+      "Doc_10 \u00a710"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 11.3,
+       "query": "Please repeat your last answer in two bullets.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Indeed, one of the first clues that the phlogiston theory was incorrect was that metals, too, gain weight in rusting (when they were supposedly losing phlogiston).",
+       "citations": [
+        "Doc_10 \u00a710"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_006": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.1,
+       "query": "What is one work by Olivier Messiaen?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The French composer Olivier Messiaen used prime numbers to create ametrical music through \"natural phenomena\".",
+     "citations": [
+      "Doc_11 \u00a731"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.7,
+       "query": "Can you shorten that to one sentence?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Can you shorten that to one sentence?\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The French composer Olivier Messiaen used prime numbers to create ametrical music through \"natural phenomena\".",
+       "citations": [
+        "Doc_11 \u00a731"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Can you shorten that to one sentence?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_007": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 7.5,
+       "query": "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes, and the Council must vote by qualified majority to approve changes, but by unanimity to block Commission amendment.",
+     "citations": [
+      "Doc_04 \u00a711"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 12.5,
+       "query": "Please repeat your last answer in two bullets.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes, and the Council must vote by qualified majority to approve changes, but by unanimity to block Commission amendment.",
+       "citations": [
+        "Doc_04 \u00a711"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Please repeat your last answer in two bullets.\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_008": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 4.7,
+       "query": "What type of behavior in primes is it possible to determine?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "However, the distribution of primes, that is to say, the statistical behaviour of primes in the large, can be modelled.",
+     "citations": [
+      "Doc_11 \u00a73"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 10.1,
+       "query": "Summarize what you just said as three bullet points.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Summarize what you just said as three bullet points.\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "However, the distribution of primes, that is to say, the statistical behaviour of primes in the large, can be modelled.",
+       "citations": [
+        "Doc_11 \u00a73"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Summarize what you just said as three bullet points.\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_suppression_009": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.9,
+       "query": "What is another term for shortening the admission event?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "Most however have a reversing mechanism which additionally can provide means for saving steam as speed and momentum are gained by gradually \"shortening the cutoff\" or rather, shortening the admission event; this in turn proportionately lengthens the expansion period.",
+     "citations": [
+      "Doc_13 \u00a733"
+     ],
+     "uncertainty": null,
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    },
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u2",
+     "retrieval_events": [
+      {
+       "timestamp_s": 9.3,
+       "query": "Summarize what you just said as three bullet points.",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Summarize what you just said as three bullet points.\".",
+     "answer_version": 2,
+     "parent_version": 1,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": null,
+     "claims": [
+      {
+       "text": "Most however have a reversing mechanism which additionally can provide means for saving steam as speed and momentum are gained by gradually \"shortening the cutoff\" or rather, shortening the admission event; this in turn proportionately lengthens the expansion period.",
+       "citations": [
+        "Doc_13 \u00a733"
+       ]
+      }
+     ]
+    },
+    "s1|2": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"Summarize what you just said as three bullet points.\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0,
+    "u2": 0
+   }
+  },
+  "gen_unanswerable_000": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.1,
+       "query": "What is the office plant watering schedule?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the office plant watering schedule?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the office plant watering schedule?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_unanswerable_001": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.9,
+       "query": "What is the company's stance on interstellar travel expenses?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the company's stance on interstellar travel expenses?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the company's stance on interstellar travel expenses?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_unanswerable_002": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.1,
+       "query": "What is the office plant watering schedule?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the office plant watering schedule?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the office plant watering schedule?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_unanswerable_003": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.1,
+       "query": "What is the office plant watering schedule?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the office plant watering schedule?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the office plant watering schedule?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  },
+  "gen_unanswerable_004": {
+   "results": [
+    {
+     "kind": "turn_result",
+     "session_id": "s1",
+     "utterance_id": "u1",
+     "retrieval_events": [
+      {
+       "timestamp_s": 3.9,
+       "query": "What is the parking validation policy for visiting contractors?",
+       "trigger": "final"
+      }
+     ],
+     "sub_queries": [],
+     "answer": "I could not find anything in the corpus that answers this.",
+     "citations": [],
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the parking validation policy for visiting contractors?\".",
+     "answer_version": 1,
+     "parent_version": null,
+     "retrieval_required": false,
+     "reason": ""
+    }
+   ],
+   "answers": {
+    "s1|1": {
+     "change_kind": "initial",
+     "uncertainty": "Could not be verified from the retrieved corpus: \"What is the parking validation policy for visiting contractors?\".",
+     "claims": []
+    }
+   },
+   "subq_counts": {
+    "u1": 0
+   }
+  }
+ },
+ "quality": {
+  "answer": {
+   "k": 55,
+   "n": 98,
+   "rate": 0.5612244897959183,
+   "ci": [
+    0.46250823376575,
+    0.6553218081817449
+   ]
+  },
+  "citation": {
+   "k": 61,
+   "n": 98,
+   "rate": 0.6224489795918368,
+   "ci": [
+    0.5235640278836827,
+    0.7120960560113073
+   ]
+  },
+  "claim_correct": {
+   "k": 59,
+   "n": 62,
+   "rate": 0.9516129032258065,
+   "ci": [
+    0.8671174961524586,
+    0.9834086149991539
+   ]
+  },
+  "abstention": {
+   "k": 5,
+   "n": 5,
+   "rate": 1.0,
+   "ci": [
+    0.5655085052479191,
+    1.0
+   ]
+  },
+  "split_exact": {
+   "k": 0,
+   "n": 20,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.16113012549493322
+   ]
+  },
+  "oversplit": {
+   "k": 0,
+   "n": 35,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.09890426758938868
+   ]
+  },
+  "claim_words": {
+   "mean": 31.177419354838708,
+   "n": 62
+  }
+ },
+ "items": {
+  "answer": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 0,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 1,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 1,
+   "gen_late_detail_004|u1:0": 1,
+   "gen_late_detail_004|u2:0": 1,
+   "gen_late_detail_005|u1:0": 1,
+   "gen_late_detail_005|u2:0": 1,
+   "gen_late_detail_006|u1:0": 0,
+   "gen_late_detail_006|u2:0": 1,
+   "gen_late_detail_007|u1:0": 0,
+   "gen_late_detail_007|u2:0": 1,
+   "gen_late_detail_008|u1:0": 1,
+   "gen_late_detail_008|u2:0": 1,
+   "gen_late_detail_009|u1:0": 1,
+   "gen_late_detail_009|u2:0": 1,
+   "gen_late_detail_010|u1:0": 1,
+   "gen_late_detail_010|u2:0": 1,
+   "gen_late_detail_011|u1:0": 1,
+   "gen_late_detail_011|u2:0": 1,
+   "gen_late_detail_012|u1:0": 1,
+   "gen_late_detail_012|u2:0": 1,
+   "gen_late_detail_013|u1:0": 0,
+   "gen_late_detail_013|u2:0": 0,
+   "gen_late_detail_014|u1:0": 1,
+   "gen_late_detail_014|u2:0": 0,
+   "gen_late_detail_015|u1:0": 0,
+   "gen_late_detail_015|u2:0": 0,
+   "gen_late_detail_016|u1:0": 1,
+   "gen_late_detail_016|u2:0": 1,
+   "gen_late_detail_017|u1:0": 1,
+   "gen_late_detail_017|u2:0": 0,
+   "gen_late_detail_018|u1:0": 0,
+   "gen_late_detail_018|u2:0": 1,
+   "gen_late_detail_019|u1:0": 0,
+   "gen_late_detail_019|u2:0": 1,
+   "gen_multi_intent_000|u1:0": 0,
+   "gen_multi_intent_000|u1:1": 0,
+   "gen_multi_intent_000|u1:2": 0,
+   "gen_multi_intent_001|u1:0": 0,
+   "gen_multi_intent_001|u1:1": 0,
+   "gen_multi_intent_002|u1:0": 1,
+   "gen_multi_intent_002|u1:1": 0,
+   "gen_multi_intent_003|u1:0": 1,
+   "gen_multi_intent_003|u1:1": 0,
+   "gen_multi_intent_003|u1:2": 0,
+   "gen_multi_intent_004|u1:0": 1,
+   "gen_multi_intent_004|u1:1": 0,
+   "gen_multi_intent_005|u1:0": 0,
+   "gen_multi_intent_005|u1:1": 1,
+   "gen_multi_intent_006|u1:0": 1,
+   "gen_multi_intent_006|u1:1": 0,
+   "gen_multi_intent_006|u1:2": 0,
+   "gen_multi_intent_007|u1:0": 1,
+   "gen_multi_intent_007|u1:1": 0,
+   "gen_multi_intent_008|u1:0": 1,
+   "gen_multi_intent_008|u1:1": 0,
+   "gen_multi_intent_008|u1:2": 0,
+   "gen_multi_intent_009|u1:0": 0,
+   "gen_multi_intent_009|u1:1": 1,
+   "gen_multi_intent_010|u1:0": 0,
+   "gen_multi_intent_010|u1:1": 1,
+   "gen_multi_intent_011|u1:0": 1,
+   "gen_multi_intent_011|u1:1": 1,
+   "gen_multi_intent_012|u1:0": 1,
+   "gen_multi_intent_012|u1:1": 0,
+   "gen_multi_intent_013|u1:0": 1,
+   "gen_multi_intent_013|u1:1": 0,
+   "gen_multi_intent_014|u1:0": 0,
+   "gen_multi_intent_014|u1:1": 0,
+   "gen_multi_intent_014|u1:2": 1,
+   "gen_multi_intent_015|u1:0": 0,
+   "gen_multi_intent_015|u1:1": 1,
+   "gen_multi_intent_015|u1:2": 0,
+   "gen_multi_intent_016|u1:0": 0,
+   "gen_multi_intent_016|u1:1": 1,
+   "gen_multi_intent_017|u1:0": 0,
+   "gen_multi_intent_017|u1:1": 1,
+   "gen_multi_intent_017|u1:2": 0,
+   "gen_multi_intent_018|u1:0": 0,
+   "gen_multi_intent_018|u1:1": 1,
+   "gen_multi_intent_018|u1:2": 0,
+   "gen_multi_intent_019|u1:0": 0,
+   "gen_multi_intent_019|u1:1": 0,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 1,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 0,
+   "gen_suppression_004|u1:0": 1,
+   "gen_suppression_005|u1:0": 1,
+   "gen_suppression_006|u1:0": 0,
+   "gen_suppression_007|u1:0": 1,
+   "gen_suppression_008|u1:0": 1,
+   "gen_suppression_009|u1:0": 1
+  },
+  "citation": {
+   "gen_late_detail_000|u1:0": 1,
+   "gen_late_detail_000|u2:0": 0,
+   "gen_late_detail_001|u1:0": 1,
+   "gen_late_detail_001|u2:0": 1,
+   "gen_late_detail_002|u1:0": 1,
+   "gen_late_detail_002|u2:0": 1,
+   "gen_late_detail_003|u1:0": 1,
+   "gen_late_detail_003|u2:0": 1,
+   "gen_late_detail_004|u1:0": 1,
+   "gen_late_detail_004|u2:0": 1,
+   "gen_late_detail_005|u1:0": 1,
+   "gen_late_detail_005|u2:0": 1,
+   "gen_late_detail_006|u1:0": 0,
+   "gen_late_detail_006|u2:0": 1,
+   "gen_late_detail_007|u1:0": 0,
+   "gen_late_detail_007|u2:0": 1,
+   "gen_late_detail_008|u1:0": 0,
+   "gen_late_detail_008|u2:0": 1,
+   "gen_late_detail_009|u1:0": 1,
+   "gen_late_detail_009|u2:0": 1,
+   "gen_late_detail_010|u1:0": 1,
+   "gen_late_detail_010|u2:0": 1,
+   "gen_late_detail_011|u1:0": 1,
+   "gen_late_detail_011|u2:0": 1,
+   "gen_late_detail_012|u1:0": 1,
+   "gen_late_detail_012|u2:0": 1,
+   "gen_late_detail_013|u1:0": 0,
+   "gen_late_detail_013|u2:0": 1,
+   "gen_late_detail_014|u1:0": 1,
+   "gen_late_detail_014|u2:0": 1,
+   "gen_late_detail_015|u1:0": 0,
+   "gen_late_detail_015|u2:0": 0,
+   "gen_late_detail_016|u1:0": 1,
+   "gen_late_detail_016|u2:0": 1,
+   "gen_late_detail_017|u1:0": 1,
+   "gen_late_detail_017|u2:0": 1,
+   "gen_late_detail_018|u1:0": 0,
+   "gen_late_detail_018|u2:0": 1,
+   "gen_late_detail_019|u1:0": 0,
+   "gen_late_detail_019|u2:0": 1,
+   "gen_multi_intent_000|u1:0": 1,
+   "gen_multi_intent_000|u1:1": 0,
+   "gen_multi_intent_000|u1:2": 0,
+   "gen_multi_intent_001|u1:0": 0,
+   "gen_multi_intent_001|u1:1": 0,
+   "gen_multi_intent_002|u1:0": 1,
+   "gen_multi_intent_002|u1:1": 0,
+   "gen_multi_intent_003|u1:0": 1,
+   "gen_multi_intent_003|u1:1": 0,
+   "gen_multi_intent_003|u1:2": 0,
+   "gen_multi_intent_004|u1:0": 1,
+   "gen_multi_intent_004|u1:1": 0,
+   "gen_multi_intent_005|u1:0": 0,
+   "gen_multi_intent_005|u1:1": 1,
+   "gen_multi_intent_006|u1:0": 1,
+   "gen_multi_intent_006|u1:1": 0,
+   "gen_multi_intent_006|u1:2": 0,
+   "gen_multi_intent_007|u1:0": 1,
+   "gen_multi_intent_007|u1:1": 1,
+   "gen_multi_intent_008|u1:0": 1,
+   "gen_multi_intent_008|u1:1": 0,
+   "gen_multi_intent_008|u1:2": 0,
+   "gen_multi_intent_009|u1:0": 0,
+   "gen_multi_intent_009|u1:1": 1,
+   "gen_multi_intent_010|u1:0": 0,
+   "gen_multi_intent_010|u1:1": 1,
+   "gen_multi_intent_011|u1:0": 1,
+   "gen_multi_intent_011|u1:1": 1,
+   "gen_multi_intent_012|u1:0": 1,
+   "gen_multi_intent_012|u1:1": 0,
+   "gen_multi_intent_013|u1:0": 1,
+   "gen_multi_intent_013|u1:1": 0,
+   "gen_multi_intent_014|u1:0": 0,
+   "gen_multi_intent_014|u1:1": 0,
+   "gen_multi_intent_014|u1:2": 1,
+   "gen_multi_intent_015|u1:0": 0,
+   "gen_multi_intent_015|u1:1": 1,
+   "gen_multi_intent_015|u1:2": 0,
+   "gen_multi_intent_016|u1:0": 1,
+   "gen_multi_intent_016|u1:1": 1,
+   "gen_multi_intent_017|u1:0": 0,
+   "gen_multi_intent_017|u1:1": 1,
+   "gen_multi_intent_017|u1:2": 0,
+   "gen_multi_intent_018|u1:0": 0,
+   "gen_multi_intent_018|u1:1": 1,
+   "gen_multi_intent_018|u1:2": 0,
+   "gen_multi_intent_019|u1:0": 0,
+   "gen_multi_intent_019|u1:1": 0,
+   "gen_suppression_000|u1:0": 1,
+   "gen_suppression_001|u1:0": 1,
+   "gen_suppression_002|u1:0": 1,
+   "gen_suppression_003|u1:0": 0,
+   "gen_suppression_004|u1:0": 1,
+   "gen_suppression_005|u1:0": 1,
+   "gen_suppression_006|u1:0": 1,
+   "gen_suppression_007|u1:0": 1,
+   "gen_suppression_008|u1:0": 1,
+   "gen_suppression_009|u1:0": 1
+  },
+  "claim_correct": {
+   "gen_late_detail_000|u1:c0": 1,
+   "gen_late_detail_001|u1:c0": 1,
+   "gen_late_detail_001|u2:c0": 1,
+   "gen_late_detail_002|u1:c0": 1,
+   "gen_late_detail_002|u2:c0": 1,
+   "gen_late_detail_003|u1:c0": 1,
+   "gen_late_detail_003|u2:c0": 1,
+   "gen_late_detail_004|u1:c0": 1,
+   "gen_late_detail_004|u2:c0": 1,
+   "gen_late_detail_005|u1:c0": 1,
+   "gen_late_detail_005|u2:c0": 1,
+   "gen_late_detail_006|u2:c0": 1,
+   "gen_late_detail_007|u1:c0": 0,
+   "gen_late_detail_007|u2:c0": 1,
+   "gen_late_detail_008|u1:c0": 1,
+   "gen_late_detail_008|u2:c0": 1,
+   "gen_late_detail_009|u1:c0": 1,
+   "gen_late_detail_009|u2:c0": 1,
+   "gen_late_detail_010|u1:c0": 1,
+   "gen_late_detail_010|u2:c0": 1,
+   "gen_late_detail_011|u1:c0": 1,
+   "gen_late_detail_011|u2:c0": 1,
+   "gen_late_detail_012|u1:c0": 1,
+   "gen_late_detail_012|u2:c0": 1,
+   "gen_late_detail_013|u2:c0": 1,
+   "gen_late_detail_014|u1:c0": 1,
+   "gen_late_detail_014|u2:c0": 1,
+   "gen_late_detail_015|u2:c0": 0,
+   "gen_late_detail_016|u1:c0": 1,
+   "gen_late_detail_016|u2:c0": 1,
+   "gen_late_detail_017|u1:c0": 1,
+   "gen_late_detail_017|u2:c0": 1,
+   "gen_late_detail_018|u2:c0": 1,
+   "gen_late_detail_019|u2:c0": 1,
+   "gen_multi_intent_000|u1:c0": 1,
+   "gen_multi_intent_002|u1:c0": 1,
+   "gen_multi_intent_003|u1:c0": 1,
+   "gen_multi_intent_004|u1:c0": 1,
+   "gen_multi_intent_005|u1:c0": 1,
+   "gen_multi_intent_006|u1:c0": 1,
+   "gen_multi_intent_007|u1:c0": 1,
+   "gen_multi_intent_008|u1:c0": 1,
+   "gen_multi_intent_009|u1:c0": 1,
+   "gen_multi_intent_010|u1:c0": 1,
+   "gen_multi_intent_011|u1:c0": 1,
+   "gen_multi_intent_012|u1:c0": 1,
+   "gen_multi_intent_013|u1:c0": 1,
+   "gen_multi_intent_014|u1:c0": 1,
+   "gen_multi_intent_015|u1:c0": 1,
+   "gen_multi_intent_016|u1:c0": 1,
+   "gen_multi_intent_017|u1:c0": 1,
+   "gen_multi_intent_018|u1:c0": 1,
+   "gen_suppression_000|u1:c0": 1,
+   "gen_suppression_001|u1:c0": 1,
+   "gen_suppression_002|u1:c0": 1,
+   "gen_suppression_003|u1:c0": 0,
+   "gen_suppression_004|u1:c0": 1,
+   "gen_suppression_005|u1:c0": 1,
+   "gen_suppression_006|u1:c0": 1,
+   "gen_suppression_007|u1:c0": 1,
+   "gen_suppression_008|u1:c0": 1,
+   "gen_suppression_009|u1:c0": 1
+  },
+  "abstention": {
+   "gen_unanswerable_000|u1": 1,
+   "gen_unanswerable_001|u1": 1,
+   "gen_unanswerable_002|u1": 1,
+   "gen_unanswerable_003|u1": 1,
+   "gen_unanswerable_004|u1": 1
+  },
+  "split_exact": {
+   "gen_multi_intent_000|u1": 0,
+   "gen_multi_intent_001|u1": 0,
+   "gen_multi_intent_002|u1": 0,
+   "gen_multi_intent_003|u1": 0,
+   "gen_multi_intent_004|u1": 0,
+   "gen_multi_intent_005|u1": 0,
+   "gen_multi_intent_006|u1": 0,
+   "gen_multi_intent_007|u1": 0,
+   "gen_multi_intent_008|u1": 0,
+   "gen_multi_intent_009|u1": 0,
+   "gen_multi_intent_010|u1": 0,
+   "gen_multi_intent_011|u1": 0,
+   "gen_multi_intent_012|u1": 0,
+   "gen_multi_intent_013|u1": 0,
+   "gen_multi_intent_014|u1": 0,
+   "gen_multi_intent_015|u1": 0,
+   "gen_multi_intent_016|u1": 0,
+   "gen_multi_intent_017|u1": 0,
+   "gen_multi_intent_018|u1": 0,
+   "gen_multi_intent_019|u1": 0
+  },
+  "oversplit": {
+   "gen_late_detail_000|u1": 0,
+   "gen_late_detail_001|u1": 0,
+   "gen_late_detail_002|u1": 0,
+   "gen_late_detail_003|u1": 0,
+   "gen_late_detail_004|u1": 0,
+   "gen_late_detail_005|u1": 0,
+   "gen_late_detail_006|u1": 0,
+   "gen_late_detail_007|u1": 0,
+   "gen_late_detail_008|u1": 0,
+   "gen_late_detail_009|u1": 0,
+   "gen_late_detail_010|u1": 0,
+   "gen_late_detail_011|u1": 0,
+   "gen_late_detail_012|u1": 0,
+   "gen_late_detail_013|u1": 0,
+   "gen_late_detail_014|u1": 0,
+   "gen_late_detail_015|u1": 0,
+   "gen_late_detail_016|u1": 0,
+   "gen_late_detail_017|u1": 0,
+   "gen_late_detail_018|u1": 0,
+   "gen_late_detail_019|u1": 0,
+   "gen_suppression_000|u1": 0,
+   "gen_suppression_001|u1": 0,
+   "gen_suppression_002|u1": 0,
+   "gen_suppression_003|u1": 0,
+   "gen_suppression_004|u1": 0,
+   "gen_suppression_005|u1": 0,
+   "gen_suppression_006|u1": 0,
+   "gen_suppression_007|u1": 0,
+   "gen_suppression_008|u1": 0,
+   "gen_suppression_009|u1": 0,
+   "gen_unanswerable_000|u1": 0,
+   "gen_unanswerable_001|u1": 0,
+   "gen_unanswerable_002|u1": 0,
+   "gen_unanswerable_003|u1": 0,
+   "gen_unanswerable_004|u1": 0
+  }
+ },
+ "wrong_claims": [
+  {
+   "scenario": "gen_late_detail_007",
+   "utterance": "u1",
+   "questions": [
+    "What type of treatment do civil disobedients usually receive?"
+   ],
+   "claim": "Some civil disobedients, such as the proprietors of illegal medical cannabis dispensaries and Voice in the Wilderness, which brought medicine to Iraq without th",
+   "citations": [
+    "Doc_02 \u00a713"
+   ]
+  },
+  {
+   "scenario": "gen_late_detail_015",
+   "utterance": "u2",
+   "questions": [
+    "What type of person can not be attributed civil disobedience?"
+   ],
+   "claim": "It has also been argued that breaking the law for self-gratification, as in the case of a homosexual or cannabis user who does not direct his act at securing th",
+   "citations": [
+    "Doc_02 \u00a724"
+   ]
+  },
+  {
+   "scenario": "gen_suppression_003",
+   "utterance": "u1",
+   "questions": [
+    "What does Newcastle still contain many of?"
+   ],
+   "claim": "In large parts, Newcastle still retains a medieval street layout.",
+   "citations": [
+    "Doc_09 \u00a79"
+   ]
+  }
+ ]
+}

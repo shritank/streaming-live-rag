@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_5730b6592461fd1900a9cfcf",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4203,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "By the late 19th"
+   }
+  },
+  {
+   "timestamp_ms": 5104,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " century,"
+   }
+  },
+  {
+   "timestamp_ms": 6106,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " which country had the"
+   }
+  },
+  {
+   "timestamp_ms": 7106,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " largest empire"
+   }
+  },
+  {
+   "timestamp_ms": 8104,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " ever to exist in the"
+   }
+  },
+  {
+   "timestamp_ms": 8368,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " world?"
+   }
+  },
+  {
+   "timestamp_ms": 8369,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10368,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "By the late 19th century, which country had the largest empire ever to exist in the world?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

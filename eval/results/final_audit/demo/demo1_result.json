@@ -1,0 +1,40 @@
+[
+  {
+    "kind": "turn_result",
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "retrieval_events": [
+      {
+        "timestamp_s": 0.8,
+        "query": "plan a customer workshop in Pune for 30 people",
+        "trigger": "provisional"
+      },
+      {
+        "timestamp_s": 1.6,
+        "query": "cancellation policy plan customer workshop pune",
+        "trigger": "multi_intent"
+      },
+      {
+        "timestamp_s": 1.6,
+        "query": "catering options plan customer workshop pune",
+        "trigger": "multi_intent"
+      }
+    ],
+    "sub_queries": [
+      "plan a customer workshop in Pune for 30 people",
+      "cancellation policy plan customer workshop pune",
+      "catering options plan customer workshop pune"
+    ],
+    "answer": "Venue B supports a maximum workshop capacity of 25 attendees in theatre layout, across 4 breakout rooms. This policy governs cancellation and refund of venue reservations made in Pune. Spice Route Foods provides vegetarian, vegan and gluten-free options on request.",
+    "citations": [
+      "Doc_00 \u00a72",
+      "Doc_16 \u00a71",
+      "Doc_24 \u00a73"
+    ],
+    "uncertainty": null,
+    "answer_version": 1,
+    "parent_version": null,
+    "retrieval_required": true,
+    "reason": "multi_intent"
+  }
+]

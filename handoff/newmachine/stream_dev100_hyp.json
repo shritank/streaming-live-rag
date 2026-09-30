@@ -1,0 +1,5454 @@
+{
+ "meta": {
+  "model": "base.en",
+  "device": "cuda",
+  "compute_type": "int8",
+  "step_s": 1.0,
+  "min_first_s": 2.0,
+  "max_new_tokens": 64,
+  "n": 100,
+  "asr_post_speech_ms_p50": 130,
+  "asr_post_speech_ms_p95": 233
+ },
+ "items": {
+  "57096c95200fba1400367fbe": {
+   "events": [
+    [
+     4083,
+     "What is the"
+    ],
+    [
+     5086,
+     " universal"
+    ],
+    [
+     6098,
+     " band that"
+    ],
+    [
+     7125,
+     " digital receivers"
+    ],
+    [
+     8162,
+     " will"
+    ],
+    [
+     9175,
+     " receive free-to-air"
+    ],
+    [
+     9949,
+     " channels on?"
+    ]
+   ],
+   "text": "What is the universal band that digital receivers will receive free-to-air channels on?",
+   "audio_ms": 9775,
+   "asr_post_speech_ms": 173,
+   "n_decodes": 9,
+   "decode_ms": [
+    101,
+    235,
+    83,
+    86,
+    98,
+    125,
+    162,
+    175,
+    173
+   ],
+   "hypotheses": [
+    [
+     2101,
+     "You"
+    ],
+    [
+     3235,
+     "What is the ... ... ... ... ..."
+    ],
+    [
+     4083,
+     "What is the universal band?"
+    ],
+    [
+     5086,
+     "What is the universal band that did"
+    ],
+    [
+     6098,
+     "What is the universal band that digital receivers"
+    ],
+    [
+     7125,
+     "What is the universal band that digital receivers will receive?"
+    ],
+    [
+     8162,
+     "What is the universal band that digital receivers will receive free-to-air channels?"
+    ],
+    [
+     9175,
+     "What is the universal band that digital receivers will receive free-to-air channels on?"
+    ],
+    [
+     9949,
+     "What is the universal band that digital receivers will receive free-to-air channels on?"
+    ]
+   ]
+  },
+  "57096c95200fba1400367fbf": {
+   "events": [
+    [
+     4081,
+     "What"
+    ],
+    [
+     5080,
+     " service is a"
+    ],
+    [
+     6140,
+     " video guard"
+    ],
+    [
+     7109,
+     " UK equipped"
+    ],
+    [
+     8129,
+     " receiver"
+    ],
+    [
+     9684,
+     " UK-equipped receiver dedicated to decrypt?"
+    ]
+   ],
+   "text": "What service is a video guard UK equipped receiver UK-equipped receiver dedicated to decrypt?",
+   "audio_ms": 9543,
+   "asr_post_speech_ms": 141,
+   "n_decodes": 9,
+   "decode_ms": [
+    331,
+    285,
+    81,
+    80,
+    140,
+    109,
+    129,
+    167,
+    141
+   ],
+   "hypotheses": [
+    [
+     2331,
+     ". . . . . . . . . ."
+    ],
+    [
+     3285,
+     "What surf- S*** S*** S*** S*** S*** S***"
+    ],
+    [
+     4081,
+     "What service is a video?"
+    ],
+    [
+     5080,
+     "What service is a video guard you can"
+    ],
+    [
+     6140,
+     "What service is a video guard UK equipped with?"
+    ],
+    [
+     7109,
+     "What service is a video guard UK equipped receiver that"
+    ],
+    [
+     8129,
+     "What service is a video guard UK equipped receiver dedicated to"
+    ],
+    [
+     9167,
+     "What service is a video guard UK-equipped receiver dedicated to decrypt?"
+    ],
+    [
+     9684,
+     "What service is a video guard UK-equipped receiver dedicated to decrypt?"
+    ]
+   ]
+  },
+  "5725b81b271a42140099d09b": {
+   "events": [
+    [
+     3075,
+     "What"
+    ],
+    [
+     4107,
+     " percentage does the Amazon"
+    ],
+    [
+     5139,
+     " represent in"
+    ],
+    [
+     6099,
+     " rainforests on the planet?"
+    ]
+   ],
+   "text": "What percentage does the Amazon represent in rainforests on the planet?",
+   "audio_ms": 5921,
+   "asr_post_speech_ms": 178,
+   "n_decodes": 5,
+   "decode_ms": [
+    84,
+    75,
+    107,
+    139,
+    178
+   ],
+   "hypotheses": [
+    [
+     2084,
+     "What percent?"
+    ],
+    [
+     3075,
+     "What percentage does the Amazon"
+    ],
+    [
+     4107,
+     "What percentage does the Amazon represent in range?"
+    ],
+    [
+     5139,
+     "What percentage does the Amazon represent in rainforests on the planet?"
+    ],
+    [
+     6099,
+     "What percentage does the Amazon represent in rainforests on the planet?"
+    ]
+   ]
+  },
+  "5725d16aec44d21400f3d61f": {
+   "events": [
+    [
+     3094,
+     "How many"
+    ],
+    [
+     5657,
+     " invertebrate species are known in Brazil alone?"
+    ]
+   ],
+   "text": "How many invertebrate species are known in Brazil alone?",
+   "audio_ms": 5526,
+   "asr_post_speech_ms": 130,
+   "n_decodes": 5,
+   "decode_ms": [
+    79,
+    94,
+    111,
+    123,
+    130
+   ],
+   "hypotheses": [
+    [
+     2079,
+     "How many Invers-"
+    ],
+    [
+     3094,
+     "How many invertebrate species..."
+    ],
+    [
+     4111,
+     "how many invertebrate species are known"
+    ],
+    [
+     5123,
+     "How many invertebrate species are known in Brazil alone?"
+    ],
+    [
+     5657,
+     "How many invertebrate species are known in Brazil alone?"
+    ]
+   ]
+  },
+  "57263677ec44d21400f3dc49": {
+   "events": [
+    [
+     4101,
+     "What concept was"
+    ],
+    [
+     5111,
+     " developed by"
+    ],
+    [
+     6122,
+     " Barron while"
+    ],
+    [
+     6239,
+     " researching at Rand?"
+    ]
+   ],
+   "text": "What concept was developed by Barron while researching at Rand?",
+   "audio_ms": 6083,
+   "asr_post_speech_ms": 155,
+   "n_decodes": 6,
+   "decode_ms": [
+    72,
+    874,
+    101,
+    111,
+    122,
+    116
+   ],
+   "hypotheses": [
+    [
+     2072,
+     "What?"
+    ],
+    [
+     3874,
+     "What concept was this?"
+    ],
+    [
+     4101,
+     "What concept was developed by parents?"
+    ],
+    [
+     5111,
+     "What concept was developed by Barron while re-"
+    ],
+    [
+     6122,
+     "What concept was developed by Barron while researching at Rand?"
+    ],
+    [
+     6239,
+     "What concept was developed by Barron while researching at Rand?"
+    ]
+   ]
+  },
+  "57263677ec44d21400f3dc4a": {
+   "events": [
+    [
+     4237,
+     "What was"
+    ],
+    [
+     4531,
+     " report P2626? Okay."
+    ]
+   ],
+   "text": "What was report P2626? Okay.",
+   "audio_ms": 4365,
+   "asr_post_speech_ms": 166,
+   "n_decodes": 4,
+   "decode_ms": [
+    68,
+    80,
+    237,
+    166
+   ],
+   "hypotheses": [
+    [
+     2068,
+     "Well, it was..."
+    ],
+    [
+     3080,
+     "What was your report, Pete?"
+    ],
+    [
+     4237,
+     "What was report P2626-26-26-26-26-26-26-26-26-26-26-26-26-"
+    ],
+    [
+     4531,
+     "What was report P2626? Okay."
+    ]
+   ]
+  },
+  "57263677ec44d21400f3dc4b": {
+   "events": [
+    [
+     4094,
+     "What"
+    ],
+    [
+     5102,
+     " things did the network"
+    ],
+    [
+     5377,
+     " concentrate on? You"
+    ]
+   ],
+   "text": "What things did the network concentrate on? You",
+   "audio_ms": 5201,
+   "asr_post_speech_ms": 175,
+   "n_decodes": 5,
+   "decode_ms": [
+    101,
+    71,
+    94,
+    102,
+    175
+   ],
+   "hypotheses": [
+    [
+     2101,
+     "You"
+    ],
+    [
+     3071,
+     "What things?"
+    ],
+    [
+     4094,
+     "What things did the network come?"
+    ],
+    [
+     5102,
+     "What things did the network concentrate on?"
+    ],
+    [
+     5377,
+     "What things did the network concentrate on? You"
+    ]
+   ]
+  },
+  "57263677ec44d21400f3dc4c": {
+   "events": [
+    [
+     4877,
+     "What delivery message was used?"
+    ]
+   ],
+   "text": "What delivery message was used?",
+   "audio_ms": 4760,
+   "asr_post_speech_ms": 117,
+   "n_decodes": 4,
+   "decode_ms": [
+    58,
+    66,
+    134,
+    117
+   ],
+   "hypotheses": [
+    [
+     2058,
+     "You"
+    ],
+    [
+     3066,
+     "White delivery."
+    ],
+    [
+     4134,
+     "What delivery message was you?"
+    ],
+    [
+     4877,
+     "What delivery message was used?"
+    ]
+   ]
+  },
+  "57263c78ec44d21400f3dc7d": {
+   "events": [
+    [
+     3098,
+     "What"
+    ],
+    [
+     4101,
+     " does"
+    ],
+    [
+     5432,
+     " user datagram protocol guarantee?"
+    ]
+   ],
+   "text": "What does user datagram protocol guarantee?",
+   "audio_ms": 5340,
+   "asr_post_speech_ms": 91,
+   "n_decodes": 5,
+   "decode_ms": [
+    106,
+    98,
+    101,
+    135,
+    91
+   ],
+   "hypotheses": [
+    [
+     2106,
+     "What the..."
+    ],
+    [
+     3098,
+     "What does user data"
+    ],
+    [
+     4101,
+     "What does User Datagram protocol mean?"
+    ],
+    [
+     5135,
+     "What does user datagram protocol guarantee?"
+    ],
+    [
+     5432,
+     "What does user datagram protocol guarantee?"
+    ]
+   ]
+  },
+  "57263c78ec44d21400f3dc7e": {
+   "events": [
+    [
+     3092,
+     "x dot"
+    ],
+    [
+     5511,
+     " X dot 25 uses what type network type."
+    ]
+   ],
+   "text": "x dot X dot 25 uses what type network type.",
+   "audio_ms": 5410,
+   "asr_post_speech_ms": 101,
+   "n_decodes": 5,
+   "decode_ms": [
+    120,
+    92,
+    156,
+    111,
+    101
+   ],
+   "hypotheses": [
+    [
+     2120,
+     "x dot"
+    ],
+    [
+     3092,
+     "x dot 25"
+    ],
+    [
+     4156,
+     "X.25 uses what type of..."
+    ],
+    [
+     5111,
+     "x.25 uses what type network"
+    ],
+    [
+     5511,
+     "X dot 25 uses what type network type."
+    ]
+   ]
+  },
+  "57263ea0271a42140099d7c6": {
+   "events": [
+    [
+     3091,
+     "What did"
+    ],
+    [
+     4105,
+     " DeckNet"
+    ],
+    [
+     4937,
+     " phase 2 become?"
+    ]
+   ],
+   "text": "What did DeckNet phase 2 become?",
+   "audio_ms": 4829,
+   "asr_post_speech_ms": 107,
+   "n_decodes": 4,
+   "decode_ms": [
+    93,
+    91,
+    105,
+    107
+   ],
+   "hypotheses": [
+    [
+     2093,
+     "What did deck?"
+    ],
+    [
+     3091,
+     "What did DeckNet face?"
+    ],
+    [
+     4105,
+     "What did DeckNet phase 2 become?"
+    ],
+    [
+     4937,
+     "What did DeckNet phase 2 become?"
+    ]
+   ]
+  },
+  "57264228ec44d21400f3dcf8": {
+   "events": [
+    [
+     4116,
+     "Telnet used what"
+    ],
+    [
+     5109,
+     " interface"
+    ],
+    [
+     5210,
+     " technology."
+    ]
+   ],
+   "text": "Telnet used what interface technology.",
+   "audio_ms": 5061,
+   "asr_post_speech_ms": 148,
+   "n_decodes": 5,
+   "decode_ms": [
+    79,
+    1023,
+    93,
+    109,
+    100
+   ],
+   "hypotheses": [
+    [
+     2079,
+     "Tell Nat you"
+    ],
+    [
+     4023,
+     "Telnet used what interests me."
+    ],
+    [
+     4116,
+     "Telnet used what interface technology"
+    ],
+    [
+     5109,
+     "Telnet used what interface technology."
+    ],
+    [
+     5210,
+     "Telnet used what interface technology."
+    ]
+   ]
+  },
+  "57264228ec44d21400f3dcf9": {
+   "events": [
+    [
+     4266,
+     "CalNet was sold to"
+    ]
+   ],
+   "text": "CalNet was sold to",
+   "audio_ms": 4179,
+   "asr_post_speech_ms": 86,
+   "n_decodes": 4,
+   "decode_ms": [
+    87,
+    110,
+    86,
+    86
+   ],
+   "hypotheses": [
+    [
+     2087,
+     "Hellness"
+    ],
+    [
+     3110,
+     "How net was so"
+    ],
+    [
+     4086,
+     "CalNet was sold to"
+    ],
+    [
+     4266,
+     "CalNet was sold to"
+    ]
+   ]
+  },
+  "57264586f1498d1400e8dac7": {
+   "events": [
+    [
+     3112,
+     "Strictly"
+    ],
+    [
+     4146,
+     " speaking, who was"
+    ],
+    [
+     5145,
+     " included in"
+    ],
+    [
+     5841,
+     " DataNet 1."
+    ]
+   ],
+   "text": "Strictly speaking, who was included in DataNet 1.",
+   "audio_ms": 5712,
+   "asr_post_speech_ms": 129,
+   "n_decodes": 5,
+   "decode_ms": [
+    93,
+    112,
+    146,
+    145,
+    129
+   ],
+   "hypotheses": [
+    [
+     2093,
+     "Strictly speaking."
+    ],
+    [
+     3112,
+     "Strictly speaking, who was in"
+    ],
+    [
+     4146,
+     "Strictly speaking, who was included in death"
+    ],
+    [
+     5145,
+     "Strictly speaking, who was included in DataNet 1."
+    ],
+    [
+     5841,
+     "Strictly speaking, who was included in DataNet 1."
+    ]
+   ]
+  },
+  "57264586f1498d1400e8dac8": {
+   "events": [
+    [
+     4110,
+     "Who else did that in that"
+    ],
+    [
+     4946,
+     " one refer to?"
+    ]
+   ],
+   "text": "Who else did that in that one refer to?",
+   "audio_ms": 4829,
+   "asr_post_speech_ms": 116,
+   "n_decodes": 4,
+   "decode_ms": [
+    98,
+    108,
+    110,
+    116
+   ],
+   "hypotheses": [
+    [
+     2098,
+     "who else did"
+    ],
+    [
+     3108,
+     "Who else did that in that one?"
+    ],
+    [
+     4110,
+     "Who else did that in that one refer to?"
+    ],
+    [
+     4946,
+     "Who else did that in that one refer to?"
+    ]
+   ]
+  },
+  "57264586f1498d1400e8dac9": {
+   "events": [
+    [
+     3318,
+     "What was"
+    ],
+    [
+     4156,
+     " the use of"
+    ],
+    [
+     5155,
+     " that in that one"
+    ],
+    [
+     5827,
+     " name correct?"
+    ]
+   ],
+   "text": "What was the use of that in that one name correct?",
+   "audio_ms": 5688,
+   "asr_post_speech_ms": 138,
+   "n_decodes": 5,
+   "decode_ms": [
+    86,
+    318,
+    156,
+    155,
+    138
+   ],
+   "hypotheses": [
+    [
+     2086,
+     "What was it that you"
+    ],
+    [
+     3318,
+     "What was the use of dad and dad?"
+    ],
+    [
+     4156,
+     "What was the use of that in that one name?"
+    ],
+    [
+     5155,
+     "What was the use of that in that one name correct?"
+    ],
+    [
+     5827,
+     "What was the use of that in that one name correct?"
+    ]
+   ]
+  },
+  "57264845f1498d1400e8db0e": {
+   "events": [
+    [
+     4111,
+     "What"
+    ],
+    [
+     4968,
+     " contributed to the severity of the plague?"
+    ]
+   ],
+   "text": "What contributed to the severity of the plague?",
+   "audio_ms": 4853,
+   "asr_post_speech_ms": 115,
+   "n_decodes": 4,
+   "decode_ms": [
+    89,
+    101,
+    111,
+    115
+   ],
+   "hypotheses": [
+    [
+     2089,
+     "Okay."
+    ],
+    [
+     3101,
+     "What contributed?"
+    ],
+    [
+     4111,
+     "What contributed to the severity of the pla-"
+    ],
+    [
+     4968,
+     "What contributed to the severity of the plague?"
+    ]
+   ]
+  },
+  "57264a74708984140094c18d": {
+   "events": [
+    [
+     4094,
+     "Who"
+    ],
+    [
+     5105,
+     " allegedly coined the"
+    ],
+    [
+     6122,
+     " name Black Death?"
+    ]
+   ],
+   "text": "Who allegedly coined the name Black Death?",
+   "audio_ms": 6222,
+   "asr_post_speech_ms": 121,
+   "n_decodes": 6,
+   "decode_ms": [
+    75,
+    77,
+    94,
+    105,
+    122,
+    121
+   ],
+   "hypotheses": [
+    [
+     2075,
+     "You"
+    ],
+    [
+     3077,
+     "Who a legend"
+    ],
+    [
+     4094,
+     "Who allegedly coined the name?"
+    ],
+    [
+     5105,
+     "Who allegedly coined the name Black Death?"
+    ],
+    [
+     6122,
+     "Who allegedly coined the name Black Death?"
+    ],
+    [
+     6344,
+     "Who allegedly coined the name Black Death?"
+    ]
+   ]
+  },
+  "57264a74708984140094c18e": {
+   "events": [
+    [
+     4109,
+     "When did the"
+    ],
+    [
+     5126,
+     " name Black"
+    ],
+    [
+     6134,
+     " Death officially take"
+    ],
+    [
+     6424,
+     " root in England?"
+    ]
+   ],
+   "text": "When did the name Black Death officially take root in England?",
+   "audio_ms": 6292,
+   "asr_post_speech_ms": 131,
+   "n_decodes": 6,
+   "decode_ms": [
+    501,
+    130,
+    109,
+    126,
+    134,
+    131
+   ],
+   "hypotheses": [
+    [
+     2501,
+     ""
+    ],
+    [
+     3130,
+     "When did the name..."
+    ],
+    [
+     4109,
+     "When did the name Black Death?"
+    ],
+    [
+     5126,
+     "When did the name Black Death officially take root?"
+    ],
+    [
+     6134,
+     "When did the name Black Death officially take root in England?"
+    ],
+    [
+     6424,
+     "When did the name Black Death officially take root in England?"
+    ]
+   ]
+  },
+  "57264a74708984140094c18f": {
+   "events": [
+    [
+     5125,
+     "Did the plague"
+    ],
+    [
+     6133,
+     " spread in"
+    ],
+    [
+     7115,
+     " Scandinavia or"
+    ],
+    [
+     8137,
+     " Germany first?"
+    ]
+   ],
+   "text": "Did the plague spread in Scandinavia or Germany first?",
+   "audio_ms": 11633,
+   "asr_post_speech_ms": 146,
+   "n_decodes": 11,
+   "decode_ms": [
+    111,
+    868,
+    95,
+    125,
+    133,
+    115,
+    137,
+    121,
+    139,
+    125,
+    146
+   ],
+   "hypotheses": [
+    [
+     2111,
+     "You"
+    ],
+    [
+     3868,
+     "This is the the the the the the the the the"
+    ],
+    [
+     4095,
+     "Did the plague spread?"
+    ],
+    [
+     5125,
+     "Did the plague spread in Scandinavia?"
+    ],
+    [
+     6133,
+     "Did the plague spread in Scandinavia or Germany?"
+    ],
+    [
+     7115,
+     "Did the plague spread in Scandinavia or Germany first?"
+    ],
+    [
+     8137,
+     "Did the plague spread in Scandinavia or Germany first?"
+    ],
+    [
+     9121,
+     "Did the plague spread in Scandinavia or Germany first?"
+    ],
+    [
+     10139,
+     "Did the plague spread in Scandinavia or Germany first?"
+    ],
+    [
+     11125,
+     "Did the plague spread in Scandinavia or Germany first?"
+    ],
+    [
+     11779,
+     "Did the plague spread in Scandinavia or Germany first?"
+    ]
+   ]
+  },
+  "57264f18f1498d1400e8dbb1": {
+   "events": [
+    [
+     3154,
+     "How"
+    ],
+    [
+     4382,
+     " and when did the first"
+    ],
+    [
+     5147,
+     " variant of"
+    ],
+    [
+     5449,
+     " bypasses enter Europe?"
+    ]
+   ],
+   "text": "How and when did the first variant of bypasses enter Europe?",
+   "audio_ms": 5294,
+   "asr_post_speech_ms": 155,
+   "n_decodes": 5,
+   "decode_ms": [
+    80,
+    154,
+    382,
+    147,
+    155
+   ],
+   "hypotheses": [
+    [
+     2080,
+     "How and."
+    ],
+    [
+     3154,
+     "How and when did the first very"
+    ],
+    [
+     4382,
+     "How and when did the first variant of white tested? // // // // // //"
+    ],
+    [
+     5147,
+     "How and when did the first variant of bypasses enter Europe?"
+    ],
+    [
+     5449,
+     "How and when did the first variant of bypasses enter Europe?"
+    ]
+   ]
+  },
+  "57264f18f1498d1400e8dbb2": {
+   "events": [
+    [
+     3150,
+     "When did the"
+    ],
+    [
+     4331,
+     " bypasses reach England?"
+    ]
+   ],
+   "text": "When did the bypasses reach England?",
+   "audio_ms": 4202,
+   "asr_post_speech_ms": 129,
+   "n_decodes": 4,
+   "decode_ms": [
+    105,
+    150,
+    153,
+    129
+   ],
+   "hypotheses": [
+    [
+     2105,
+     "When did the"
+    ],
+    [
+     3150,
+     "When did the Y-passes region?"
+    ],
+    [
+     4153,
+     "When did the Y-Pestis reach England?"
+    ],
+    [
+     4331,
+     "When did the bypasses reach England?"
+    ]
+   ]
+  },
+  "5726722bdd62a815002e852c": {
+   "events": [
+    [
+     3099,
+     "What is the"
+    ],
+    [
+     4141,
+     " number of"
+    ],
+    [
+     5144,
+     " plant species in"
+    ],
+    [
+     6146,
+     " economics and"
+    ],
+    [
+     7061,
+     " social interest?"
+    ]
+   ],
+   "text": "What is the number of plant species in economics and social interest?",
+   "audio_ms": 6896,
+   "asr_post_speech_ms": 164,
+   "n_decodes": 6,
+   "decode_ms": [
+    73,
+    99,
+    141,
+    144,
+    146,
+    164
+   ],
+   "hypotheses": [
+    [
+     2073,
+     "What is the"
+    ],
+    [
+     3099,
+     "What is the number of plants?"
+    ],
+    [
+     4141,
+     "What is the number of plant species in ex..."
+    ],
+    [
+     5144,
+     "What is the number of plant species in economics and"
+    ],
+    [
+     6146,
+     "What is the number of plant species in economics and social interests?"
+    ],
+    [
+     7061,
+     "What is the number of plant species in economics and social interest?"
+    ]
+   ]
+  },
+  "572746addd62a815002e9a5f": {
+   "events": [
+    [
+     3090,
+     "Along with"
+    ],
+    [
+     4110,
+     " sport and"
+    ],
+    [
+     6167,
+     " art, what is a type of"
+    ],
+    [
+     7174,
+     " talent scholarship?"
+    ]
+   ],
+   "text": "Along with sport and art, what is a type of talent scholarship?",
+   "audio_ms": 7500,
+   "asr_post_speech_ms": 158,
+   "n_decodes": 7,
+   "decode_ms": [
+    86,
+    90,
+    110,
+    138,
+    167,
+    174,
+    158
+   ],
+   "hypotheses": [
+    [
+     2086,
+     "Along with"
+    ],
+    [
+     3090,
+     "Along with sport and our"
+    ],
+    [
+     4110,
+     "Along with sport and art what"
+    ],
+    [
+     5138,
+     "Along with sport and art, what is a type of"
+    ],
+    [
+     6167,
+     "Along with sport and art, what is a type of talent scholarship?"
+    ],
+    [
+     7174,
+     "Along with sport and art, what is a type of talent scholarship?"
+    ],
+    [
+     7658,
+     "Along with sport and art, what is a type of talent scholarship?"
+    ]
+   ]
+  },
+  "572746addd62a815002e9a60": {
+   "events": [
+    [
+     4119,
+     "Rather than"
+    ],
+    [
+     5139,
+     " taxation, what"
+    ],
+    [
+     7711,
+     " are private schools largely funded by?"
+    ]
+   ],
+   "text": "Rather than taxation, what are private schools largely funded by?",
+   "audio_ms": 7546,
+   "asr_post_speech_ms": 165,
+   "n_decodes": 7,
+   "decode_ms": [
+    97,
+    106,
+    119,
+    139,
+    158,
+    157,
+    165
+   ],
+   "hypotheses": [
+    [
+     2097,
+     "rather than tech"
+    ],
+    [
+     3106,
+     "Rather than taxation..."
+    ],
+    [
+     4119,
+     "Rather than taxation, what our"
+    ],
+    [
+     5139,
+     "Rather than taxation, what are private schools?"
+    ],
+    [
+     6158,
+     "Rather than taxation, what our private school is largely funded?"
+    ],
+    [
+     7157,
+     "Rather than taxation, what are private schools largely funded by?"
+    ],
+    [
+     7711,
+     "Rather than taxation, what are private schools largely funded by?"
+    ]
+   ]
+  },
+  "572746addd62a815002e9a61": {
+   "events": [
+    [
+     3133,
+     "What"
+    ],
+    [
+     4268,
+     " right do private schools"
+    ],
+    [
+     5130,
+     " have that"
+    ],
+    [
+     6152,
+     " public"
+    ],
+    [
+     6689,
+     " schools don't?"
+    ]
+   ],
+   "text": "What right do private schools have that public schools don't?",
+   "audio_ms": 6548,
+   "asr_post_speech_ms": 141,
+   "n_decodes": 6,
+   "decode_ms": [
+    97,
+    133,
+    268,
+    130,
+    152,
+    141
+   ],
+   "hypotheses": [
+    [
+     2097,
+     "What right?"
+    ],
+    [
+     3133,
+     "What right do private schools"
+    ],
+    [
+     4268,
+     "What right do private schools have that ... ... ... ... ..."
+    ],
+    [
+     5130,
+     "What right do private schools have that public school?"
+    ],
+    [
+     6152,
+     "What right do private schools have that public schools don't?"
+    ],
+    [
+     6689,
+     "What right do private schools have that public schools don't?"
+    ]
+   ]
+  },
+  "57274712708984140094dbb0": {
+   "events": [
+    [
+     3134,
+     "What"
+    ],
+    [
+     4148,
+     " region does use"
+    ],
+    [
+     5134,
+     " a term private schools to"
+    ],
+    [
+     5888,
+     " the term private schools to refer to universities?"
+    ]
+   ],
+   "text": "What region does use a term private schools to the term private schools to refer to universities?",
+   "audio_ms": 5735,
+   "asr_post_speech_ms": 152,
+   "n_decodes": 5,
+   "decode_ms": [
+    79,
+    134,
+    148,
+    134,
+    152
+   ],
+   "hypotheses": [
+    [
+     2079,
+     "What region?"
+    ],
+    [
+     3134,
+     "What region does use the term private?"
+    ],
+    [
+     4148,
+     "What region does use a term private schools to refer?"
+    ],
+    [
+     5134,
+     "What region does use a term private schools to refer to universities?"
+    ],
+    [
+     5888,
+     "What region does use the term private schools to refer to universities?"
+    ]
+   ]
+  },
+  "5727478cf1498d1400e8f59b": {
+   "events": [
+    [
+     3107,
+     "What is another term"
+    ],
+    [
+     3816,
+     " used for Year 13?"
+    ]
+   ],
+   "text": "What is another term used for Year 13?",
+   "audio_ms": 3715,
+   "asr_post_speech_ms": 101,
+   "n_decodes": 3,
+   "decode_ms": [
+    93,
+    107,
+    101
+   ],
+   "hypotheses": [
+    [
+     2093,
+     "What is another term used?"
+    ],
+    [
+     3107,
+     "What is another term used for year 13?"
+    ],
+    [
+     3816,
+     "What is another term used for Year 13?"
+    ]
+   ]
+  },
+  "5727478cf1498d1400e8f59c": {
+   "events": [
+    [
+     3112,
+     "What is"
+    ],
+    [
+     4113,
+     " another term for"
+    ],
+    [
+     5481,
+     " university preparatory schools?"
+    ]
+   ],
+   "text": "What is another term for university preparatory schools?",
+   "audio_ms": 5363,
+   "asr_post_speech_ms": 117,
+   "n_decodes": 5,
+   "decode_ms": [
+    95,
+    112,
+    113,
+    137,
+    117
+   ],
+   "hypotheses": [
+    [
+     2095,
+     "What is a"
+    ],
+    [
+     3112,
+     "What is another term for you in a..."
+    ],
+    [
+     4113,
+     "What is another term for University Preparatory?"
+    ],
+    [
+     5137,
+     "What is another term for university preparatory schools?"
+    ],
+    [
+     5481,
+     "What is another term for university preparatory schools?"
+    ]
+   ]
+  },
+  "5727478cf1498d1400e8f59d": {
+   "events": [
+    [
+     4170,
+     "Along with location,"
+    ],
+    [
+     7110,
+     " endowment, and the willingness of parents to"
+    ],
+    [
+     7283,
+     " pay, what factor"
+    ],
+    [
+     8184,
+     " influences"
+    ],
+    [
+     8506,
+     " private school tuition?"
+    ]
+   ],
+   "text": "Along with location, endowment, and the willingness of parents to pay, what factor influences private school tuition?",
+   "audio_ms": 8312,
+   "asr_post_speech_ms": 193,
+   "n_decodes": 8,
+   "decode_ms": [
+    95,
+    190,
+    170,
+    156,
+    1110,
+    173,
+    184,
+    193
+   ],
+   "hypotheses": [
+    [
+     2095,
+     "along with location"
+    ],
+    [
+     3190,
+     "Along with location, endowment, endowment."
+    ],
+    [
+     4170,
+     "Along with location, endowment and the willingness of parents"
+    ],
+    [
+     5156,
+     "Along with location, endowment, and the willingness of parents to pay"
+    ],
+    [
+     7110,
+     "Along with location, endowment, and the willingness of parents to pay, what factor and"
+    ],
+    [
+     7283,
+     "Along with location, endowment, and the willingness of parents to pay, what factor influences privacy."
+    ],
+    [
+     8184,
+     "Along with location, endowment, and the willingness of parents to pay, what factor influences private school tuition?"
+    ],
+    [
+     8506,
+     "Along with location, endowment, and the willingness of parents to pay, what factor influences private school tuition?"
+    ]
+   ]
+  },
+  "5727478cf1498d1400e8f59e": {
+   "events": [
+    [
+     3237,
+     "Who receives"
+    ],
+    [
+     4242,
+     " higher salaries at"
+    ],
+    [
+     5159,
+     " private schools that"
+    ],
+    [
+     5735,
+     " charge higher tuition?"
+    ]
+   ],
+   "text": "Who receives higher salaries at private schools that charge higher tuition?",
+   "audio_ms": 5572,
+   "asr_post_speech_ms": 162,
+   "n_decodes": 5,
+   "decode_ms": [
+    87,
+    237,
+    242,
+    159,
+    162
+   ],
+   "hypotheses": [
+    [
+     2087,
+     "Who receives hi-"
+    ],
+    [
+     3237,
+     "Who receives higher salaries at price of $%%%%%%%%%%%%%%%%%%%%%%%"
+    ],
+    [
+     4242,
+     "Who receives higher salaries at private schools that charge..."
+    ],
+    [
+     5159,
+     "Who receives higher salaries at private schools that charge higher tuition?"
+    ],
+    [
+     5735,
+     "Who receives higher salaries at private schools that charge higher tuition?"
+    ]
+   ]
+  },
+  "5727490bdd62a815002e9a83": {
+   "events": [
+    [
+     3133,
+     "What is an example of"
+    ],
+    [
+     4136,
+     " an article of"
+    ],
+    [
+     5191,
+     " uniform clothing typically"
+    ],
+    [
+     6181,
+     " present in"
+    ],
+    [
+     6905,
+     " Australian private schools?"
+    ]
+   ],
+   "text": "What is an example of an article of uniform clothing typically present in Australian private schools?",
+   "audio_ms": 6664,
+   "asr_post_speech_ms": 241,
+   "n_decodes": 6,
+   "decode_ms": [
+    115,
+    133,
+    136,
+    191,
+    181,
+    241
+   ],
+   "hypotheses": [
+    [
+     2115,
+     "What is an example of an..."
+    ],
+    [
+     3133,
+     "What is an example of an article of uniform?"
+    ],
+    [
+     4136,
+     "What is an example of an article of uniform clothing typically pre-"
+    ],
+    [
+     5191,
+     "What is an example of an article of uniform clothing typically present in Australian?"
+    ],
+    [
+     6181,
+     "What is an example of an article of uniform clothing typically present in Australian private schools?"
+    ],
+    [
+     6905,
+     "What is an example of an article of uniform clothing typically present in Australian private schools?"
+    ]
+   ]
+  },
+  "5727490bdd62a815002e9a84": {
+   "events": [
+    [
+     3134,
+     "What is the"
+    ],
+    [
+     5174,
+     " comparison and price between Australian"
+    ],
+    [
+     6161,
+     " private schools versus"
+    ],
+    [
+     6303,
+     " a comparison and price between Australian private schools versus public?"
+    ]
+   ],
+   "text": "What is the comparison and price between Australian private schools versus a comparison and price between Australian private schools versus public?",
+   "audio_ms": 6130,
+   "asr_post_speech_ms": 173,
+   "n_decodes": 6,
+   "decode_ms": [
+    106,
+    134,
+    176,
+    174,
+    161,
+    141
+   ],
+   "hypotheses": [
+    [
+     2106,
+     "What is the comparison?"
+    ],
+    [
+     3134,
+     "What is the comparison and price between this?"
+    ],
+    [
+     4176,
+     "What is a comparison and price between Australian privacy and privacy?"
+    ],
+    [
+     5174,
+     "What is a comparison and price between Australian private schools versus public schools?"
+    ],
+    [
+     6161,
+     "What is a comparison and price between Australian private schools versus public?"
+    ],
+    [
+     6303,
+     "What is a comparison and price between Australian private schools versus public?"
+    ]
+   ]
+  },
+  "57274971708984140094dbbe": {
+   "events": [
+    [
+     3127,
+     "Who attends"
+    ],
+    [
+     3515,
+     " Loretto Normanhurst?"
+    ]
+   ],
+   "text": "Who attends Loretto Normanhurst?",
+   "audio_ms": 3390,
+   "asr_post_speech_ms": 125,
+   "n_decodes": 3,
+   "decode_ms": [
+    116,
+    127,
+    125
+   ],
+   "hypotheses": [
+    [
+     2116,
+     "Who attends Loretta?"
+    ],
+    [
+     3127,
+     "Who attends Loretto Normanhurst?"
+    ],
+    [
+     3515,
+     "Who attends Loretto Normanhurst?"
+    ]
+   ]
+  },
+  "57274a1edd62a815002e9a9b": {
+   "events": [
+    [
+     4287,
+     "The prospect of what event"
+    ],
+    [
+     5140,
+     " compelled the protection of"
+    ],
+    [
+     6126,
+     " German private schools."
+    ]
+   ],
+   "text": "The prospect of what event compelled the protection of German private schools.",
+   "audio_ms": 6083,
+   "asr_post_speech_ms": 221,
+   "n_decodes": 6,
+   "decode_ms": [
+    81,
+    214,
+    287,
+    140,
+    126,
+    178
+   ],
+   "hypotheses": [
+    [
+     2081,
+     "the prospect"
+    ],
+    [
+     3214,
+     "The prospect of what event comes to us. . . . . ."
+    ],
+    [
+     4287,
+     "The prospect of what event compelled the protection of ... ... ... ... ... ..."
+    ],
+    [
+     5140,
+     "The prospect of what event compelled the protection of German private schools."
+    ],
+    [
+     6126,
+     "The prospect of what event compelled the protection of German private schools."
+    ],
+    [
+     6304,
+     "The prospect of what event compelled the protection of German private schools."
+    ]
+   ]
+  },
+  "57274a1edd62a815002e9a9c": {
+   "events": [
+    [
+     3126,
+     "What"
+    ],
+    [
+     4140,
+     " percentage of German students"
+    ],
+    [
+     5158,
+     " attended private"
+    ],
+    [
+     5466,
+     " schools in 2008?"
+    ]
+   ],
+   "text": "What percentage of German students attended private schools in 2008?",
+   "audio_ms": 5317,
+   "asr_post_speech_ms": 148,
+   "n_decodes": 5,
+   "decode_ms": [
+    82,
+    126,
+    140,
+    158,
+    148
+   ],
+   "hypotheses": [
+    [
+     2082,
+     "What percentage?"
+    ],
+    [
+     3126,
+     "What percentage of German students it"
+    ],
+    [
+     4140,
+     "What percentage of German students attended private schools?"
+    ],
+    [
+     5158,
+     "What percentage of German students attended private schools in 2008?"
+    ],
+    [
+     5466,
+     "What percentage of German students attended private schools in 2008?"
+    ]
+   ]
+  },
+  "57274a1edd62a815002e9a9d": {
+   "events": [
+    [
+     3128,
+     "What was the"
+    ],
+    [
+     4144,
+     " percentage of Germans"
+    ],
+    [
+     5156,
+     " attending private high"
+    ],
+    [
+     5791,
+     " schools in 2008?"
+    ]
+   ],
+   "text": "What was the percentage of Germans attending private high schools in 2008?",
+   "audio_ms": 5619,
+   "asr_post_speech_ms": 171,
+   "n_decodes": 5,
+   "decode_ms": [
+    112,
+    128,
+    144,
+    156,
+    171
+   ],
+   "hypotheses": [
+    [
+     2112,
+     "What was the percentage?"
+    ],
+    [
+     3128,
+     "What was the percentage of Germans attending?"
+    ],
+    [
+     4144,
+     "What was the percentage of Germans attending private high school?"
+    ],
+    [
+     5156,
+     "What was the percentage of Germans attending private high schools in 2008?"
+    ],
+    [
+     5791,
+     "What was the percentage of Germans attending private high schools in 2008?"
+    ]
+   ]
+  },
+  "57274a1edd62a815002e9a9e": {
+   "events": [
+    [
+     3100,
+     "In"
+    ],
+    [
+     4123,
+     " 1992,"
+    ],
+    [
+     6167,
+     " well-presented of East German students attended private schools."
+    ]
+   ],
+   "text": "In 1992, well-presented of East German students attended private schools.",
+   "audio_ms": 5990,
+   "asr_post_speech_ms": 177,
+   "n_decodes": 5,
+   "decode_ms": [
+    82,
+    100,
+    123,
+    148,
+    177
+   ],
+   "hypotheses": [
+    [
+     2082,
+     "In 1992"
+    ],
+    [
+     3100,
+     "In 1992, what presented it?"
+    ],
+    [
+     4123,
+     "In 1992, well presented at East German students."
+    ],
+    [
+     5148,
+     "In 1992, well-presented of East German students attended private school."
+    ],
+    [
+     6167,
+     "In 1992, well-presented of East German students attended private schools."
+    ]
+   ]
+  },
+  "57274a8ff1498d1400e8f5be": {
+   "events": [
+    [
+     3151,
+     "How does"
+    ],
+    [
+     4118,
+     " a level of tuition in"
+    ],
+    [
+     5132,
+     " German private schools"
+    ],
+    [
+     6186,
+     " compare to private"
+    ],
+    [
+     7184,
+     " schools in other western"
+    ],
+    [
+     7820,
+     " European countries?"
+    ]
+   ],
+   "text": "How does a level of tuition in German private schools compare to private schools in other western European countries?",
+   "audio_ms": 7639,
+   "asr_post_speech_ms": 180,
+   "n_decodes": 7,
+   "decode_ms": [
+    84,
+    151,
+    118,
+    132,
+    186,
+    184,
+    180
+   ],
+   "hypotheses": [
+    [
+     2084,
+     "How does it level?"
+    ],
+    [
+     3151,
+     "How does a level of tuition in"
+    ],
+    [
+     4118,
+     "How does a level of tuition in German private schools"
+    ],
+    [
+     5132,
+     "How does a level of tuition in German private schools compare to private schools?"
+    ],
+    [
+     6186,
+     "How does a level of tuition in German private schools compare to private schools in other western schools?"
+    ],
+    [
+     7184,
+     "How does a level of tuition in German private schools compare to private schools in other western European countries?"
+    ],
+    [
+     7820,
+     "How does a level of tuition in German private schools compare to private schools in other western European countries?"
+    ]
+   ]
+  },
+  "57274b35f1498d1400e8f5d6": {
+   "events": [
+    [
+     3110,
+     "How are"
+    ],
+    [
+     4126,
+     " Ergo and Zungshul and funded?"
+    ]
+   ],
+   "text": "How are Ergo and Zungshul and funded?",
+   "audio_ms": 3993,
+   "asr_post_speech_ms": 132,
+   "n_decodes": 3,
+   "decode_ms": [
+    86,
+    110,
+    132
+   ],
+   "hypotheses": [
+    [
+     2086,
+     "How are air go?"
+    ],
+    [
+     3110,
+     "How are Ergo on Zung Shulen?"
+    ],
+    [
+     4126,
+     "How are Ergo and Zungshul and funded?"
+    ]
+   ]
+  },
+  "57274b35f1498d1400e8f5d7": {
+   "events": [
+    [
+     4100,
+     "Along with private individuals"
+    ],
+    [
+     5125,
+     " and"
+    ],
+    [
+     6140,
+     " organizations, what groups sometimes"
+    ],
+    [
+     7607,
+     " run ergo and zung shalom."
+    ]
+   ],
+   "text": "Along with private individuals and organizations, what groups sometimes run ergo and zung shalom.",
+   "audio_ms": 7430,
+   "asr_post_speech_ms": 177,
+   "n_decodes": 7,
+   "decode_ms": [
+    87,
+    113,
+    100,
+    125,
+    140,
+    169,
+    177
+   ],
+   "hypotheses": [
+    [
+     2087,
+     "along with private."
+    ],
+    [
+     3113,
+     "Along with private individuals in organizing."
+    ],
+    [
+     4100,
+     "Along with private individuals and organizations."
+    ],
+    [
+     5125,
+     "Along with private individuals and organizations, what groups sometimes"
+    ],
+    [
+     6140,
+     "Along with private individuals and organizations, what groups sometimes run, or go."
+    ],
+    [
+     7169,
+     "Along with private individuals and organizations, what groups sometimes run ergo on Zung Shulin."
+    ],
+    [
+     7607,
+     "Along with private individuals and organizations, what groups sometimes run ergo and zung shalom."
+    ]
+   ]
+  },
+  "57274beff1498d1400e8f5e5": {
+   "events": [
+    [
+     5158,
+     "Along with the CISCE and"
+    ],
+    [
+     7165,
+     " N-E-N-B-S-E, what is"
+    ],
+    [
+     8145,
+     " a notable"
+    ],
+    [
+     10395,
+     " examination board in multiple Indian states."
+    ]
+   ],
+   "text": "Along with the CISCE and N-E-N-B-S-E, what is a notable examination board in multiple Indian states.",
+   "audio_ms": 10147,
+   "asr_post_speech_ms": 248,
+   "n_decodes": 10,
+   "decode_ms": [
+    82,
+    96,
+    118,
+    158,
+    176,
+    165,
+    145,
+    130,
+    187,
+    208
+   ],
+   "hypotheses": [
+    [
+     2082,
+     "Along with the."
+    ],
+    [
+     3096,
+     "along with the CISC."
+    ],
+    [
+     4118,
+     "Along with the CISCE and any..."
+    ],
+    [
+     5158,
+     "Along with the CISCE and N-E-N-B-SCE."
+    ],
+    [
+     6176,
+     "Along with the CISCE and N-E-N-B-S-E, what is an"
+    ],
+    [
+     7165,
+     "Along with the CISCE and N-E-N-B-S-E, what is a notable examination?"
+    ],
+    [
+     8145,
+     "Along with the CISCE and N-E-N-B-S-E, what is a notable examination board involved?"
+    ],
+    [
+     9130,
+     "Along with the CISCE and NENBSE, what is a notable examination board in multiple Indian"
+    ],
+    [
+     10187,
+     "Along with the CISCE and N-E-N-B-S-E, what is a notable examination board in multiple Indian states?"
+    ],
+    [
+     10395,
+     "Along with the CISCE and N-E-N-B-S-E, what is a notable examination board in multiple Indian states."
+    ]
+   ]
+  },
+  "57274beff1498d1400e8f5e6": {
+   "events": [
+    [
+     3057,
+     "How many"
+    ],
+    [
+     4074,
+     " examination boards"
+    ],
+    [
+     4146,
+     " exist in India?"
+    ]
+   ],
+   "text": "How many examination boards exist in India?",
+   "audio_ms": 4086,
+   "asr_post_speech_ms": 60,
+   "n_decodes": 4,
+   "decode_ms": [
+    60,
+    57,
+    74,
+    60
+   ],
+   "hypotheses": [
+    [
+     2060,
+     "How many examine-"
+    ],
+    [
+     3057,
+     "How many examination boards exist?"
+    ],
+    [
+     4074,
+     "How many examination boards exist in India?"
+    ],
+    [
+     4146,
+     "How many examination boards exist in India?"
+    ]
+   ]
+  },
+  "57274beff1498d1400e8f5e7": {
+   "events": [
+    [
+     5085,
+     "War body in India provides policy directions"
+    ],
+    [
+     5480,
+     " to schools."
+    ]
+   ],
+   "text": "War body in India provides policy directions to schools.",
+   "audio_ms": 5410,
+   "asr_post_speech_ms": 70,
+   "n_decodes": 5,
+   "decode_ms": [
+    53,
+    62,
+    64,
+    85,
+    70
+   ],
+   "hypotheses": [
+    [
+     2053,
+     "What body in India?"
+    ],
+    [
+     3062,
+     "Your body in India provides"
+    ],
+    [
+     4064,
+     "War body in India provides policy directions"
+    ],
+    [
+     5085,
+     "War body in India provides policy directions to schools."
+    ],
+    [
+     5480,
+     "War body in India provides policy directions to schools."
+    ]
+   ]
+  },
+  "57274ca8dd62a815002e9aa5": {
+   "events": [
+    [
+     3069,
+     "What country has the"
+    ],
+    [
+     4087,
+     " most illiterate"
+    ],
+    [
+     4320,
+     " adults in the world?"
+    ]
+   ],
+   "text": "What country has the most illiterate adults in the world?",
+   "audio_ms": 4226,
+   "asr_post_speech_ms": 94,
+   "n_decodes": 4,
+   "decode_ms": [
+    56,
+    69,
+    87,
+    94
+   ],
+   "hypotheses": [
+    [
+     2056,
+     "What country has the most..."
+    ],
+    [
+     3069,
+     "What country has the most illiterate adults?"
+    ],
+    [
+     4087,
+     "What country has the most illiterate adults in the world?"
+    ],
+    [
+     4320,
+     "What country has the most illiterate adults in the world?"
+    ]
+   ]
+  },
+  "57274ca8dd62a815002e9aa6": {
+   "events": [
+    [
+     3075,
+     "What is"
+    ],
+    [
+     4038,
+     " the full name of the AESER?"
+    ]
+   ],
+   "text": "What is the full name of the AESER?",
+   "audio_ms": 3970,
+   "asr_post_speech_ms": 67,
+   "n_decodes": 3,
+   "decode_ms": [
+    63,
+    75,
+    67
+   ],
+   "hypotheses": [
+    [
+     2063,
+     "What is your phone name?"
+    ],
+    [
+     3075,
+     "What is the full name of the A.S.?"
+    ],
+    [
+     4038,
+     "What is the full name of the AESER?"
+    ]
+   ]
+  },
+  "57274ca8dd62a815002e9aa7": {
+   "events": [
+    [
+     3071,
+     "What is the purpose of"
+    ],
+    [
+     3840,
+     " the ASER?"
+    ]
+   ],
+   "text": "What is the purpose of the ASER?",
+   "audio_ms": 3761,
+   "asr_post_speech_ms": 79,
+   "n_decodes": 3,
+   "decode_ms": [
+    90,
+    71,
+    79
+   ],
+   "hypotheses": [
+    [
+     2090,
+     "What is the purpose of"
+    ],
+    [
+     3071,
+     "What is the purpose of the ASER?"
+    ],
+    [
+     3840,
+     "What is the purpose of the ASER?"
+    ]
+   ]
+  },
+  "57274ca8dd62a815002e9aa8": {
+   "events": [
+    [
+     3105,
+     "In private"
+    ],
+    [
+     4084,
+     " schools, what language"
+    ],
+    [
+     4762,
+     " or class is taught in?"
+    ]
+   ],
+   "text": "In private schools, what language or class is taught in?",
+   "audio_ms": 4667,
+   "asr_post_speech_ms": 95,
+   "n_decodes": 4,
+   "decode_ms": [
+    54,
+    105,
+    84,
+    95
+   ],
+   "hypotheses": [
+    [
+     2054,
+     "In private school"
+    ],
+    [
+     3105,
+     "In private schools, what language are"
+    ],
+    [
+     4084,
+     "In private schools, what language or class is taught in?"
+    ],
+    [
+     4762,
+     "In private schools, what language or class is taught in?"
+    ]
+   ]
+  },
+  "57274d1cdd62a815002e9ab0": {
+   "events": [
+    [
+     3060,
+     "What is the"
+    ],
+    [
+     4096,
+     " typical annual"
+    ],
+    [
+     5218,
+     " a typical annual cost for an Irish private school?"
+    ]
+   ],
+   "text": "What is the typical annual a typical annual cost for an Irish private school?",
+   "audio_ms": 5131,
+   "asr_post_speech_ms": 86,
+   "n_decodes": 5,
+   "decode_ms": [
+    58,
+    60,
+    96,
+    78,
+    86
+   ],
+   "hypotheses": [
+    [
+     2058,
+     "What is the typical..."
+    ],
+    [
+     3060,
+     "What is the typical annual cost?"
+    ],
+    [
+     4096,
+     "What is the typical annual cost for an Irish price?"
+    ],
+    [
+     5078,
+     "What is a typical annual cost for an Irish private school?"
+    ],
+    [
+     5218,
+     "What is a typical annual cost for an Irish private school?"
+    ]
+   ]
+  },
+  "57274d1cdd62a815002e9ab1": {
+   "events": [
+    [
+     4161,
+     "Along with the congregation of"
+    ],
+    [
+     5130,
+     " Christian brothers,"
+    ],
+    [
+     6100,
+     " what is a notable"
+    ],
+    [
+     7470,
+     " religious group that"
+    ],
+    [
+     8181,
+     " runs"
+    ],
+    [
+     8576,
+     " fee-paying schools in Ireland?"
+    ]
+   ],
+   "text": "Along with the congregation of Christian brothers, what is a notable religious group that runs fee-paying schools in Ireland?",
+   "audio_ms": 8452,
+   "asr_post_speech_ms": 124,
+   "n_decodes": 8,
+   "decode_ms": [
+    51,
+    63,
+    161,
+    130,
+    100,
+    470,
+    181,
+    124
+   ],
+   "hypotheses": [
+    [
+     2051,
+     "along with the Congress."
+    ],
+    [
+     3063,
+     "Along with the congregation of Christians."
+    ],
+    [
+     4161,
+     "Along with the congregation of Christian brothers,"
+    ],
+    [
+     5130,
+     "Along with the congregation of Christian brothers, what is a notable relationship between the"
+    ],
+    [
+     6100,
+     "Along with the congregation of Christian brothers, what is a notable religious group that brought"
+    ],
+    [
+     7470,
+     "Along with the congregation of Christian brothers, what is a notable religious group that runs fee paying school."
+    ],
+    [
+     8181,
+     "Along with the congregation of Christian brothers, what is a notable religious group that runs fee-paying schools in Ireland."
+    ],
+    [
+     8576,
+     "Along with the congregation of Christian brothers, what is a notable religious group that runs fee-paying schools in Ireland?"
+    ]
+   ]
+  },
+  "57274d1cdd62a815002e9ab2": {
+   "events": [
+    [
+     3058,
+     "What might"
+    ],
+    [
+     4073,
+     " the fees to attend an"
+    ],
+    [
+     5089,
+     " Irish boarding"
+    ],
+    [
+     5180,
+     " school rise to?"
+    ]
+   ],
+   "text": "What might the fees to attend an Irish boarding school rise to?",
+   "audio_ms": 5061,
+   "asr_post_speech_ms": 118,
+   "n_decodes": 5,
+   "decode_ms": [
+    51,
+    58,
+    73,
+    89,
+    90
+   ],
+   "hypotheses": [
+    [
+     2051,
+     "What might this"
+    ],
+    [
+     3058,
+     "What might the fees to attend an"
+    ],
+    [
+     4073,
+     "What might the fees to attend an Irish boarding school?"
+    ],
+    [
+     5089,
+     "What might the fees to attend an Irish boarding school rise to?"
+    ],
+    [
+     5180,
+     "What might the fees to attend an Irish boarding school rise to?"
+    ]
+   ]
+  },
+  "57274d9bf1498d1400e8f5f7": {
+   "events": [
+    [
+     3059,
+     "What language is"
+    ],
+    [
+     4069,
+     " used in Chinese primary"
+    ],
+    [
+     4758,
+     " schools in Malaysia?"
+    ]
+   ],
+   "text": "What language is used in Chinese primary schools in Malaysia?",
+   "audio_ms": 4690,
+   "asr_post_speech_ms": 68,
+   "n_decodes": 4,
+   "decode_ms": [
+    50,
+    59,
+    69,
+    68
+   ],
+   "hypotheses": [
+    [
+     2050,
+     "What language is used?"
+    ],
+    [
+     3059,
+     "What language is used in Chinese primary"
+    ],
+    [
+     4069,
+     "What language is used in Chinese primary schools in Malaysia?"
+    ],
+    [
+     4758,
+     "What language is used in Chinese primary schools in Malaysia?"
+    ]
+   ]
+  },
+  "57274d9bf1498d1400e8f5f8": {
+   "events": [
+    [
+     3073,
+     "What language is"
+    ],
+    [
+     4066,
+     " used in Chinese"
+    ],
+    [
+     4833,
+     " secondary schools in Malaysia?"
+    ]
+   ],
+   "text": "What language is used in Chinese secondary schools in Malaysia?",
+   "audio_ms": 4760,
+   "asr_post_speech_ms": 72,
+   "n_decodes": 4,
+   "decode_ms": [
+    51,
+    73,
+    66,
+    72
+   ],
+   "hypotheses": [
+    [
+     2051,
+     "What language is you?"
+    ],
+    [
+     3073,
+     "What language is used in Chinese"
+    ],
+    [
+     4066,
+     "What language is used in Chinese secondary schools and beliefs?"
+    ],
+    [
+     4833,
+     "What language is used in Chinese secondary schools in Malaysia?"
+    ]
+   ]
+  },
+  "57274d9bf1498d1400e8f5f9": {
+   "events": [
+    [
+     3064,
+     "What is the name"
+    ],
+    [
+     4077,
+     " of the"
+    ],
+    [
+     5088,
+     " post-independence government"
+    ],
+    [
+     5962,
+     " school system in Malaysia?"
+    ]
+   ],
+   "text": "What is the name of the post-independence government school system in Malaysia?",
+   "audio_ms": 5874,
+   "asr_post_speech_ms": 88,
+   "n_decodes": 5,
+   "decode_ms": [
+    59,
+    64,
+    77,
+    88,
+    88
+   ],
+   "hypotheses": [
+    [
+     2059,
+     "What is the name of?"
+    ],
+    [
+     3064,
+     "What is the name of the post-independent"
+    ],
+    [
+     4077,
+     "What is the name of the post-independence government school?"
+    ],
+    [
+     5088,
+     "What is the name of the post-independence government school system in Malaysia?"
+    ],
+    [
+     5962,
+     "What is the name of the post-independence government school system in Malaysia?"
+    ]
+   ]
+  },
+  "57274d9bf1498d1400e8f5fa": {
+   "events": [
+    [
+     3091,
+     "As a result of a"
+    ],
+    [
+     5068,
+     " compromise about how many"
+    ],
+    [
+     6081,
+     " Chinese schools"
+    ],
+    [
+     7097,
+     " became"
+    ],
+    [
+     7341,
+     " national type schools."
+    ]
+   ],
+   "text": "As a result of a compromise about how many Chinese schools became national type schools.",
+   "audio_ms": 7221,
+   "asr_post_speech_ms": 120,
+   "n_decodes": 7,
+   "decode_ms": [
+    49,
+    91,
+    68,
+    68,
+    81,
+    97,
+    120
+   ],
+   "hypotheses": [
+    [
+     2049,
+     "As a result of a"
+    ],
+    [
+     3091,
+     "As a result of a compromise, \u2588\u2588\u2588\u2588\u2588\u2588"
+    ],
+    [
+     4068,
+     "As a result of a compromise about how many"
+    ],
+    [
+     5068,
+     "As a result of a compromise about how many Chinese schools"
+    ],
+    [
+     6081,
+     "As a result of a compromise about how many Chinese schools became national-type"
+    ],
+    [
+     7097,
+     "As a result of a compromise about how many Chinese schools became national type schools."
+    ],
+    [
+     7341,
+     "As a result of a compromise about how many Chinese schools became national type schools."
+    ]
+   ]
+  },
+  "57274e145951b619008f87e8": {
+   "events": [
+    [
+     3074,
+     "How are"
+    ],
+    [
+     4078,
+     " unaided schools"
+    ],
+    [
+     4659,
+     " different from hated schools?"
+    ]
+   ],
+   "text": "How are unaided schools different from hated schools?",
+   "audio_ms": 4574,
+   "asr_post_speech_ms": 85,
+   "n_decodes": 4,
+   "decode_ms": [
+    54,
+    74,
+    78,
+    85
+   ],
+   "hypotheses": [
+    [
+     2054,
+     "How are una-"
+    ],
+    [
+     3074,
+     "How are unaided schools different?"
+    ],
+    [
+     4078,
+     "How are unaided schools different from hated schools?"
+    ],
+    [
+     4659,
+     "How are unaided schools different from hated schools?"
+    ]
+   ]
+  },
+  "57274e145951b619008f87e9": {
+   "events": [
+    [
+     4063,
+     "Where is"
+    ],
+    [
+     4164,
+     " Galaxy Public School located?"
+    ]
+   ],
+   "text": "Where is Galaxy Public School located?",
+   "audio_ms": 4086,
+   "asr_post_speech_ms": 78,
+   "n_decodes": 4,
+   "decode_ms": [
+    56,
+    54,
+    63,
+    78
+   ],
+   "hypotheses": [
+    [
+     2056,
+     "Where's gout?"
+    ],
+    [
+     3054,
+     "Where is galaxy public school?"
+    ],
+    [
+     4063,
+     "Where is Galaxy Public School located?"
+    ],
+    [
+     4164,
+     "Where is Galaxy Public School located?"
+    ]
+   ]
+  },
+  "57274e145951b619008f87ea": {
+   "events": [
+    [
+     3085,
+     "In"
+    ],
+    [
+     4119,
+     " Nepalese, private"
+    ],
+    [
+     5922,
+     " schools, what is a primary language of instruction?"
+    ]
+   ],
+   "text": "In Nepalese, private schools, what is a primary language of instruction?",
+   "audio_ms": 5805,
+   "asr_post_speech_ms": 117,
+   "n_decodes": 5,
+   "decode_ms": [
+    67,
+    85,
+    119,
+    108,
+    117
+   ],
+   "hypotheses": [
+    [
+     2067,
+     "In Nepalese."
+    ],
+    [
+     3085,
+     "In Nepalese, private school..."
+    ],
+    [
+     4119,
+     "In Nepalese, private schools, what is a primary school?"
+    ],
+    [
+     5108,
+     "In Nepalese private schools, what is a primary language of instruction?"
+    ],
+    [
+     5922,
+     "In Nepalese, private schools, what is a primary language of instruction?"
+    ]
+   ]
+  },
+  "57274e145951b619008f87eb": {
+   "events": [
+    [
+     3095,
+     "In addition to"
+    ],
+    [
+     4095,
+     " English, what"
+    ],
+    [
+     5172,
+     " language is also often"
+    ],
+    [
+     6113,
+     " taught in"
+    ],
+    [
+     6331,
+     " Nepalese private schools?"
+    ]
+   ],
+   "text": "In addition to English, what language is also often taught in Nepalese private schools?",
+   "audio_ms": 6222,
+   "asr_post_speech_ms": 108,
+   "n_decodes": 6,
+   "decode_ms": [
+    64,
+    95,
+    95,
+    172,
+    113,
+    108
+   ],
+   "hypotheses": [
+    [
+     2064,
+     "In addition to in."
+    ],
+    [
+     3095,
+     "In addition to English, what language?"
+    ],
+    [
+     4095,
+     "In addition to English, what language is also often"
+    ],
+    [
+     5172,
+     "In addition to English, what language is also often taught in Nepalese,"
+    ],
+    [
+     6113,
+     "In addition to English, what language is also often taught in Nepalese private schools?"
+    ],
+    [
+     6331,
+     "In addition to English, what language is also often taught in Nepalese private schools?"
+    ]
+   ]
+  },
+  "57274eca5951b619008f8801": {
+   "events": [
+    [
+     3099,
+     "What percentage"
+    ],
+    [
+     4100,
+     " of New Zealand"
+    ],
+    [
+     5106,
+     " students attended"
+    ],
+    [
+     6118,
+     " private schools in"
+    ],
+    [
+     6804,
+     " April 2014?"
+    ]
+   ],
+   "text": "What percentage of New Zealand students attended private schools in April 2014?",
+   "audio_ms": 6710,
+   "asr_post_speech_ms": 94,
+   "n_decodes": 6,
+   "decode_ms": [
+    59,
+    99,
+    100,
+    106,
+    118,
+    94
+   ],
+   "hypotheses": [
+    [
+     2059,
+     "What percentage"
+    ],
+    [
+     3099,
+     "What percentage of New Zealand students?"
+    ],
+    [
+     4100,
+     "What percentage of New Zealand students attended private?"
+    ],
+    [
+     5106,
+     "What percentage of New Zealand students attended private schools in April?"
+    ],
+    [
+     6118,
+     "What percentage of New Zealand students attended private schools in April 2014?"
+    ],
+    [
+     6804,
+     "What percentage of New Zealand students attended private schools in April 2014?"
+    ]
+   ]
+  },
+  "57274eca5951b619008f8802": {
+   "events": [
+    [
+     3091,
+     "What"
+    ],
+    [
+     4104,
+     " religion schools were"
+    ],
+    [
+     5125,
+     " integrated into"
+    ],
+    [
+     6116,
+     " New Zealand public"
+    ],
+    [
+     7776,
+     " schools between"
+    ],
+    [
+     8213,
+     " 1979 and"
+    ],
+    [
+     8989,
+     " 1984."
+    ]
+   ],
+   "text": "What religion schools were integrated into New Zealand public schools between 1979 and 1984.",
+   "audio_ms": 8753,
+   "asr_post_speech_ms": 235,
+   "n_decodes": 8,
+   "decode_ms": [
+    70,
+    91,
+    104,
+    125,
+    116,
+    776,
+    213,
+    235
+   ],
+   "hypotheses": [
+    [
+     2070,
+     "What religion?"
+    ],
+    [
+     3091,
+     "What religion schools were in?"
+    ],
+    [
+     4104,
+     "What religion schools were integrated into music?"
+    ],
+    [
+     5125,
+     "What religion schools were integrated into New Zealand public schools?"
+    ],
+    [
+     6116,
+     "What religion schools were integrated into New Zealand public schools between 19-"
+    ],
+    [
+     7776,
+     "What religion schools were integrated into New Zealand public schools between 1979 and And that's it. We'll see you in a minute. Bye. Bye. Bye."
+    ],
+    [
+     8213,
+     "What religion schools were integrated into New Zealand public schools between 1979 and 1984."
+    ],
+    [
+     8989,
+     "What religion schools were integrated into New Zealand public schools between 1979 and 1984."
+    ]
+   ]
+  },
+  "57274eca5951b619008f8803": {
+   "events": [
+    [
+     3093,
+     "What"
+    ],
+    [
+     5157,
+     " city, along with Hamilton, Wellington, and"
+    ],
+    [
+     6272,
+     " Christchurch, is one of the"
+    ],
+    [
+     7204,
+     " largest in New Zealand."
+    ]
+   ],
+   "text": "What city, along with Hamilton, Wellington, and Christchurch, is one of the largest in New Zealand.",
+   "audio_ms": 6966,
+   "asr_post_speech_ms": 238,
+   "n_decodes": 6,
+   "decode_ms": [
+    76,
+    93,
+    134,
+    157,
+    272,
+    238
+   ],
+   "hypotheses": [
+    [
+     2076,
+     "What city?"
+    ],
+    [
+     3093,
+     "What city along with Hamilton"
+    ],
+    [
+     4134,
+     "What city, along with Hamilton, Wellington, and"
+    ],
+    [
+     5157,
+     "What city, along with Hamilton, Wellington, and Christchurch, is one of the most important"
+    ],
+    [
+     6272,
+     "What city, along with Hamilton, Wellington, and Christchurch, is one of the largest and"
+    ],
+    [
+     7204,
+     "What city, along with Hamilton, Wellington, and Christchurch, is one of the largest in New Zealand."
+    ]
+   ]
+  },
+  "57274f49f1498d1400e8f61f": {
+   "events": [
+    [
+     3098,
+     "Where is"
+    ],
+    [
+     4095,
+     " Samuel Marsden"
+    ],
+    [
+     4722,
+     " Collegiate School located?"
+    ]
+   ],
+   "text": "Where is Samuel Marsden Collegiate School located?",
+   "audio_ms": 4620,
+   "asr_post_speech_ms": 101,
+   "n_decodes": 4,
+   "decode_ms": [
+    73,
+    98,
+    95,
+    101
+   ],
+   "hypotheses": [
+    [
+     2073,
+     "Where is Samuel?"
+    ],
+    [
+     3098,
+     "Where is Samuel Marsden Collegiate?"
+    ],
+    [
+     4095,
+     "Where is Samuel Marsden Collegiate School located?"
+    ],
+    [
+     4722,
+     "Where is Samuel Marsden Collegiate School located?"
+    ]
+   ]
+  },
+  "57274f49f1498d1400e8f620": {
+   "events": [
+    [
+     3081,
+     "What"
+    ],
+    [
+     4126,
+     " denomination is"
+    ],
+    [
+     5113,
+     " associated with St."
+    ],
+    [
+     5650,
+     " Kentagern College?"
+    ]
+   ],
+   "text": "What denomination is associated with St. Kentagern College?",
+   "audio_ms": 5503,
+   "asr_post_speech_ms": 146,
+   "n_decodes": 5,
+   "decode_ms": [
+    72,
+    81,
+    126,
+    113,
+    146
+   ],
+   "hypotheses": [
+    [
+     2072,
+     "What denomination?"
+    ],
+    [
+     3081,
+     "What denomination is associated?"
+    ],
+    [
+     4126,
+     "What denomination is associated with St. Kentager?"
+    ],
+    [
+     5113,
+     "What denomination is associated with St. Kentagern College?"
+    ],
+    [
+     5650,
+     "What denomination is associated with St. Kentagern College?"
+    ]
+   ]
+  },
+  "57274f49f1498d1400e8f621": {
+   "events": [
+    [
+     3137,
+     "In what city is"
+    ],
+    [
+     4627,
+     " Reingy Roo-Roo Girl School?"
+    ]
+   ],
+   "text": "In what city is Reingy Roo-Roo Girl School?",
+   "audio_ms": 4481,
+   "asr_post_speech_ms": 145,
+   "n_decodes": 4,
+   "decode_ms": [
+    109,
+    137,
+    143,
+    145
+   ],
+   "hypotheses": [
+    [
+     2109,
+     "In what city is re."
+    ],
+    [
+     3137,
+     "In what city is Reinky Roo-Roo-Roo?"
+    ],
+    [
+     4143,
+     "In what city is Reinde-Roo-Roo Girl School?"
+    ],
+    [
+     4627,
+     "In what city is Reingy Roo-Roo Girl School?"
+    ]
+   ]
+  },
+  "57274f49f1498d1400e8f622": {
+   "events": [
+    [
+     3082,
+     "What group"
+    ],
+    [
+     4183,
+     " operates"
+    ],
+    [
+     5154,
+     " seeing Dominique's College in"
+    ],
+    [
+     5666,
+     " Wenga Nui?"
+    ]
+   ],
+   "text": "What group operates seeing Dominique's College in Wenga Nui?",
+   "audio_ms": 5503,
+   "asr_post_speech_ms": 162,
+   "n_decodes": 5,
+   "decode_ms": [
+    82,
+    82,
+    183,
+    154,
+    162
+   ],
+   "hypotheses": [
+    [
+     2082,
+     "What group operation"
+    ],
+    [
+     3082,
+     "What group operates same domination?"
+    ],
+    [
+     4183,
+     "What group operates seeing Dominique's College in which"
+    ],
+    [
+     5154,
+     "What group operates seeing Dominique's College in Wenga Nui?"
+    ],
+    [
+     5666,
+     "What group operates seeing Dominique's College in Wenga Nui?"
+    ]
+   ]
+  },
+  "5727500f708984140094dbfe": {
+   "events": [
+    [
+     3113,
+     "In the Philippines, what"
+    ],
+    [
+     4106,
+     " percentage of"
+    ],
+    [
+     5125,
+     " secondary school"
+    ],
+    [
+     6147,
+     " students attend"
+    ],
+    [
+     6263,
+     " private schools?"
+    ]
+   ],
+   "text": "In the Philippines, what percentage of secondary school students attend private schools?",
+   "audio_ms": 6014,
+   "asr_post_speech_ms": 249,
+   "n_decodes": 6,
+   "decode_ms": [
+    121,
+    113,
+    106,
+    125,
+    147,
+    116
+   ],
+   "hypotheses": [
+    [
+     2121,
+     "In the Philippines, what"
+    ],
+    [
+     3113,
+     "In the Philippines, what percentage of seconds..."
+    ],
+    [
+     4106,
+     "In the Philippines, what percentage of secondary school students?"
+    ],
+    [
+     5125,
+     "In the Philippines, what percentage of secondary school students attend private?"
+    ],
+    [
+     6147,
+     "In the Philippines, what percentage of secondary school students attend private schools?"
+    ],
+    [
+     6263,
+     "In the Philippines, what percentage of secondary school students attend private schools?"
+    ]
+   ]
+  },
+  "5727500f708984140094dbff": {
+   "events": [
+    [
+     3091,
+     "What percentage of"
+    ],
+    [
+     4102,
+     " Filipino"
+    ],
+    [
+     5096,
+     " tertiary education"
+    ],
+    [
+     5964,
+     " takes place in private schools?"
+    ]
+   ],
+   "text": "What percentage of Filipino tertiary education takes place in private schools?",
+   "audio_ms": 5828,
+   "asr_post_speech_ms": 136,
+   "n_decodes": 5,
+   "decode_ms": [
+    99,
+    91,
+    102,
+    96,
+    136
+   ],
+   "hypotheses": [
+    [
+     2099,
+     "What percentage of people"
+    ],
+    [
+     3091,
+     "What percentage of Filipino tertiary?"
+    ],
+    [
+     4102,
+     "What percentage of Filipino tertiary education takes?"
+    ],
+    [
+     5096,
+     "What percentage of Filipino tertiary education takes place in private school?"
+    ],
+    [
+     5964,
+     "What percentage of Filipino tertiary education takes place in private schools?"
+    ]
+   ]
+  },
+  "5727500f708984140094dc00": {
+   "events": [
+    [
+     3790,
+     "In what"
+    ],
+    [
+     4090,
+     " month and year was a revised"
+    ],
+    [
+     5079,
+     " manual of"
+    ],
+    [
+     6088,
+     " regulations"
+    ],
+    [
+     6797,
+     " for private schools released?"
+    ]
+   ],
+   "text": "In what month and year was a revised manual of regulations for private schools released?",
+   "audio_ms": 6710,
+   "asr_post_speech_ms": 86,
+   "n_decodes": 6,
+   "decode_ms": [
+    90,
+    790,
+    90,
+    79,
+    88,
+    86
+   ],
+   "hypotheses": [
+    [
+     2090,
+     "In what month?"
+    ],
+    [
+     3790,
+     "In what month and year was a revised"
+    ],
+    [
+     4090,
+     "In what month and year was a revised manual of"
+    ],
+    [
+     5079,
+     "In what month and year was a revised manual of regulations from the"
+    ],
+    [
+     6088,
+     "In what month and year was a revised manual of regulations for private schools' release?"
+    ],
+    [
+     6797,
+     "In what month and year was a revised manual of regulations for private schools released?"
+    ]
+   ]
+  },
+  "5727500f708984140094dc01": {
+   "events": [
+    [
+     5075,
+     "Along with English and mathematics, what subject"
+    ],
+    [
+     6082,
+     " replaced values"
+    ],
+    [
+     7084,
+     " education for"
+    ],
+    [
+     7258,
+     " fourth-year students?"
+    ]
+   ],
+   "text": "Along with English and mathematics, what subject replaced values education for fourth-year students?",
+   "audio_ms": 7175,
+   "asr_post_speech_ms": 83,
+   "n_decodes": 7,
+   "decode_ms": [
+    43,
+    54,
+    93,
+    75,
+    82,
+    84,
+    83
+   ],
+   "hypotheses": [
+    [
+     2043,
+     "Along with English"
+    ],
+    [
+     3054,
+     "along with English and mathematics."
+    ],
+    [
+     4093,
+     "Along with English and mathematics, what subject would be the subject of the subject of the subject?"
+    ],
+    [
+     5075,
+     "Along with English and mathematics, what subject replaced values education?"
+    ],
+    [
+     6082,
+     "Along with English and mathematics, what subject replaced values education for fourth year?"
+    ],
+    [
+     7084,
+     "Along with English and mathematics, what subject replaced values education for fourth-year students?"
+    ],
+    [
+     7258,
+     "Along with English and mathematics, what subject replaced values education for fourth-year students?"
+    ]
+   ]
+  },
+  "572750df5951b619008f8831": {
+   "events": [
+    [
+     3056,
+     "What aid is"
+    ],
+    [
+     4069,
+     " available to"
+    ],
+    [
+     5099,
+     " underprivileged"
+    ],
+    [
+     6088,
+     " students seeking to attend a private"
+    ],
+    [
+     6495,
+     " university?"
+    ]
+   ],
+   "text": "What aid is available to underprivileged students seeking to attend a private university?",
+   "audio_ms": 6408,
+   "asr_post_speech_ms": 86,
+   "n_decodes": 6,
+   "decode_ms": [
+    54,
+    56,
+    69,
+    99,
+    88,
+    86
+   ],
+   "hypotheses": [
+    [
+     2054,
+     "What aid is it?"
+    ],
+    [
+     3056,
+     "What aid is available to under?"
+    ],
+    [
+     4069,
+     "What aid is available to underprivileged students?"
+    ],
+    [
+     5099,
+     "What aid is available to underprivileged students seeking to attend a private survey?"
+    ],
+    [
+     6088,
+     "What aid is available to underprivileged students seeking to attend a private university?"
+    ],
+    [
+     6495,
+     "What aid is available to underprivileged students seeking to attend a private university?"
+    ]
+   ]
+  },
+  "5727515f708984140094dc13": {
+   "events": [
+    [
+     4088,
+     "Along with public schools, what"
+    ],
+    [
+     5088,
+     " type of school was recognized"
+    ],
+    [
+     6091,
+     " under the South"
+    ],
+    [
+     6719,
+     " African Schools Act?"
+    ]
+   ],
+   "text": "Along with public schools, what type of school was recognized under the South African Schools Act?",
+   "audio_ms": 6571,
+   "asr_post_speech_ms": 148,
+   "n_decodes": 6,
+   "decode_ms": [
+    47,
+    58,
+    88,
+    88,
+    91,
+    148
+   ],
+   "hypotheses": [
+    [
+     2047,
+     "along with public school."
+    ],
+    [
+     3058,
+     "Along with public schools, what happens?"
+    ],
+    [
+     4088,
+     "Along with public schools, what type of school was recognized for?"
+    ],
+    [
+     5088,
+     "Along with public schools, what type of school was recognized under the South Act-"
+    ],
+    [
+     6091,
+     "Along with public schools, what type of school was recognized under the South African Schools Act?"
+    ],
+    [
+     6719,
+     "Along with public schools, what type of school was recognized under the South African Schools Act?"
+    ]
+   ]
+  },
+  "5727515f708984140094dc14": {
+   "events": [
+    [
+     3139,
+     "In South"
+    ],
+    [
+     4114,
+     " Africa, along with"
+    ],
+    [
+     5098,
+     " privately governed schools,"
+    ],
+    [
+     6582,
+     " what schools are"
+    ],
+    [
+     7115,
+     " classified as"
+    ],
+    [
+     7269,
+     " independent."
+    ]
+   ],
+   "text": "In South Africa, along with privately governed schools, what schools are classified as independent.",
+   "audio_ms": 7035,
+   "asr_post_speech_ms": 233,
+   "n_decodes": 7,
+   "decode_ms": [
+    51,
+    139,
+    114,
+    98,
+    582,
+    115,
+    154
+   ],
+   "hypotheses": [
+    [
+     2051,
+     "In South Africa..."
+    ],
+    [
+     3139,
+     "In South Africa, along with private-"
+    ],
+    [
+     4114,
+     "In South Africa, along with privately governed schools,"
+    ],
+    [
+     5098,
+     "In South Africa, along with privately governed schools, what schools are"
+    ],
+    [
+     6582,
+     "In South Africa, along with privately governed schools, what schools are classified as in in the end. And I'm going to start on the 3"
+    ],
+    [
+     7115,
+     "In South Africa, along with privately governed schools, what schools are classified as independent."
+    ],
+    [
+     7269,
+     "In South Africa, along with privately governed schools, what schools are classified as independent."
+    ]
+   ]
+  },
+  "5727515f708984140094dc15": {
+   "events": [
+    [
+     4095,
+     "In what century did missionaries"
+    ],
+    [
+     5098,
+     " notably establish"
+    ],
+    [
+     6081,
+     " church schools in South Africa?"
+    ]
+   ],
+   "text": "In what century did missionaries notably establish church schools in South Africa?",
+   "audio_ms": 6130,
+   "asr_post_speech_ms": 84,
+   "n_decodes": 6,
+   "decode_ms": [
+    73,
+    76,
+    95,
+    98,
+    81,
+    84
+   ],
+   "hypotheses": [
+    [
+     2073,
+     "And what century didn't"
+    ],
+    [
+     3076,
+     "In what century did missionaries notably..."
+    ],
+    [
+     4095,
+     "In what century did missionaries notably establish"
+    ],
+    [
+     5098,
+     "In what century did missionaries notably establish church schools in South Africa?"
+    ],
+    [
+     6081,
+     "In what century did missionaries notably establish church schools in South Africa?"
+    ],
+    [
+     6214,
+     "In what century did missionaries notably establish church schools in South Africa?"
+    ]
+   ]
+  },
+  "572754dd708984140094dc3c": {
+   "events": [
+    [
+     3053,
+     "about how"
+    ],
+    [
+     5077,
+     " many students attend can stop"
+    ],
+    [
+     5435,
+     " school on schools."
+    ]
+   ],
+   "text": "about how many students attend can stop school on schools.",
+   "audio_ms": 5363,
+   "asr_post_speech_ms": 71,
+   "n_decodes": 5,
+   "decode_ms": [
+    54,
+    53,
+    72,
+    77,
+    71
+   ],
+   "hypotheses": [
+    [
+     2054,
+     "about how many."
+    ],
+    [
+     3053,
+     "about how many students attend."
+    ],
+    [
+     4072,
+     "About how many students attend can stop school."
+    ],
+    [
+     5077,
+     "About how many students attend can stop school on schools."
+    ],
+    [
+     5435,
+     "about how many students attend can stop school on schools."
+    ]
+   ]
+  },
+  "572754dd708984140094dc3d": {
+   "events": [
+    [
+     3070,
+     "How many people"
+    ],
+    [
+     4076,
+     " work for"
+    ],
+    [
+     4862,
+     " conscap school and schools?"
+    ]
+   ],
+   "text": "How many people work for conscap school and schools?",
+   "audio_ms": 4783,
+   "asr_post_speech_ms": 78,
+   "n_decodes": 4,
+   "decode_ms": [
+    54,
+    70,
+    76,
+    78
+   ],
+   "hypotheses": [
+    [
+     2054,
+     "How many people were..."
+    ],
+    [
+     3070,
+     "How many people work for conscripts?"
+    ],
+    [
+     4076,
+     "How many people work for a conscap school on schools?"
+    ],
+    [
+     4862,
+     "How many people work for conscap school and schools?"
+    ]
+   ]
+  },
+  "572754dd708984140094dc3e": {
+   "events": [
+    [
+     3060,
+     "What is the"
+    ],
+    [
+     4076,
+     " English translation"
+    ],
+    [
+     5088,
+     " of CanScop School on?"
+    ]
+   ],
+   "text": "What is the English translation of CanScop School on?",
+   "audio_ms": 5085,
+   "asr_post_speech_ms": 104,
+   "n_decodes": 5,
+   "decode_ms": [
+    51,
+    60,
+    76,
+    88,
+    101
+   ],
+   "hypotheses": [
+    [
+     2051,
+     "What is the English?"
+    ],
+    [
+     3060,
+     "What is the English translation of?"
+    ],
+    [
+     4076,
+     "What is the English translation of CanScop School on?"
+    ],
+    [
+     5088,
+     "What is the English translation of CanScop School on?"
+    ],
+    [
+     5189,
+     "What is the English translation of CanScop School on?"
+    ]
+   ]
+  },
+  "572754dd708984140094dc3f": {
+   "events": [
+    [
+     3069,
+     "What school"
+    ],
+    [
+     3955,
+     " model is Sweden notable for?"
+    ]
+   ],
+   "text": "What school model is Sweden notable for?",
+   "audio_ms": 3877,
+   "asr_post_speech_ms": 77,
+   "n_decodes": 3,
+   "decode_ms": [
+    65,
+    69,
+    77
+   ],
+   "hypotheses": [
+    [
+     2065,
+     "What school model?"
+    ],
+    [
+     3069,
+     "What school model is Sweden notable?"
+    ],
+    [
+     3955,
+     "What school model is Sweden notable for?"
+    ]
+   ]
+  },
+  "572756265951b619008f886e": {
+   "events": [
+    [
+     3091,
+     "What schools do"
+    ],
+    [
+     4078,
+     " preparatory schools"
+    ],
+    [
+     5090,
+     " prepare British"
+    ],
+    [
+     5173,
+     " children to attend?"
+    ]
+   ],
+   "text": "What schools do preparatory schools prepare British children to attend?",
+   "audio_ms": 5061,
+   "asr_post_speech_ms": 111,
+   "n_decodes": 5,
+   "decode_ms": [
+    63,
+    91,
+    78,
+    90,
+    82
+   ],
+   "hypotheses": [
+    [
+     2063,
+     "What schools do prepare?"
+    ],
+    [
+     3091,
+     "What schools do preparatory schools prepare?"
+    ],
+    [
+     4078,
+     "What schools do preparatory schools prepare British children?"
+    ],
+    [
+     5090,
+     "What schools do preparatory schools prepare British children to attend?"
+    ],
+    [
+     5173,
+     "What schools do preparatory schools prepare British children to attend?"
+    ]
+   ]
+  },
+  "572756265951b619008f886f": {
+   "events": [
+    [
+     3059,
+     "What"
+    ],
+    [
+     4063,
+     " percentage of British children"
+    ],
+    [
+     5094,
+     " are"
+    ],
+    [
+     6107,
+     " educated at"
+    ],
+    [
+     7942,
+     " GSE level in fee-paying schools?"
+    ]
+   ],
+   "text": "What percentage of British children are educated at GSE level in fee-paying schools?",
+   "audio_ms": 7801,
+   "asr_post_speech_ms": 140,
+   "n_decodes": 7,
+   "decode_ms": [
+    51,
+    59,
+    63,
+    94,
+    107,
+    112,
+    140
+   ],
+   "hypotheses": [
+    [
+     2051,
+     "What percentage?"
+    ],
+    [
+     3059,
+     "What percentage of British children"
+    ],
+    [
+     4063,
+     "What percentage of British children are educated?"
+    ],
+    [
+     5094,
+     "What percentage of British children are educated at G.S.?"
+    ],
+    [
+     6107,
+     "What percentage of British children are educated at GSEE level?"
+    ],
+    [
+     7112,
+     "What percentage of British children are educated at G.S.C.E. level in fee-paying school?"
+    ],
+    [
+     7942,
+     "What percentage of British children are educated at GSE level in fee-paying schools?"
+    ]
+   ]
+  },
+  "572756265951b619008f8870": {
+   "events": [
+    [
+     4077,
+     "At a level, what"
+    ],
+    [
+     5099,
+     " percentage of British students"
+    ],
+    [
+     6104,
+     " attend"
+    ],
+    [
+     6211,
+     " fee-paying schools?"
+    ]
+   ],
+   "text": "At a level, what percentage of British students attend fee-paying schools?",
+   "audio_ms": 6037,
+   "asr_post_speech_ms": 174,
+   "n_decodes": 6,
+   "decode_ms": [
+    71,
+    87,
+    77,
+    99,
+    104,
+    106
+   ],
+   "hypotheses": [
+    [
+     2071,
+     "at a level."
+    ],
+    [
+     3087,
+     "At a level, what percentage?"
+    ],
+    [
+     4077,
+     "At a level, what percentage of British students"
+    ],
+    [
+     5099,
+     "At a level, what percentage of British students attend fee pay?"
+    ],
+    [
+     6104,
+     "At a level, what percentage of British students attend fee-paying schools?"
+    ],
+    [
+     6211,
+     "At a level, what percentage of British students attend fee-paying schools?"
+    ]
+   ]
+  },
+  "572756265951b619008f8871": {
+   "events": [
+    [
+     3085,
+     "What is the upper range"
+    ],
+    [
+     4090,
+     " of annual fees"
+    ],
+    [
+     5127,
+     " for non-boarding"
+    ],
+    [
+     6015,
+     " students in British public schools?"
+    ]
+   ],
+   "text": "What is the upper range of annual fees for non-boarding students in British public schools?",
+   "audio_ms": 5921,
+   "asr_post_speech_ms": 94,
+   "n_decodes": 5,
+   "decode_ms": [
+    65,
+    85,
+    90,
+    127,
+    94
+   ],
+   "hypotheses": [
+    [
+     2065,
+     "What is the upper range of..."
+    ],
+    [
+     3085,
+     "What is the upper range of annual fees for..."
+    ],
+    [
+     4090,
+     "What is the upper range of annual fees for non-boarding students?"
+    ],
+    [
+     5127,
+     "What is the upper range of annual fees for non-boarding students in British public?"
+    ],
+    [
+     6015,
+     "What is the upper range of annual fees for non-boarding students in British public schools?"
+    ]
+   ]
+  },
+  "572757bef1498d1400e8f693": {
+   "events": [
+    [
+     3156,
+     "What was"
+    ],
+    [
+     5080,
+     " a primary race of students attending Christian"
+    ],
+    [
+     6301,
+     " academies after the Brown decision?"
+    ]
+   ],
+   "text": "What was a primary race of students attending Christian academies after the Brown decision?",
+   "audio_ms": 6199,
+   "asr_post_speech_ms": 101,
+   "n_decodes": 6,
+   "decode_ms": [
+    52,
+    156,
+    93,
+    80,
+    102,
+    101
+   ],
+   "hypotheses": [
+    [
+     2052,
+     "What was a primary week?"
+    ],
+    [
+     3156,
+     "What was the primary race of students attending the school? What was the primary race of students attending the school?"
+    ],
+    [
+     4093,
+     "What was a primary race of students attending Christian Academy?"
+    ],
+    [
+     5080,
+     "What was a primary race of students attending Christian academies after the Brown"
+    ],
+    [
+     6102,
+     "What was the primary race of students attending Christian academies after the Brown decision?"
+    ],
+    [
+     6301,
+     "What was a primary race of students attending Christian academies after the Brown decision?"
+    ]
+   ]
+  },
+  "572757bef1498d1400e8f694": {
+   "events": [
+    [
+     3058,
+     "School"
+    ],
+    [
+     4080,
+     " desegregation in the United States"
+    ],
+    [
+     5103,
+     " led to an increased"
+    ],
+    [
+     6107,
+     " number of"
+    ],
+    [
+     7139,
+     " students of what ethnicity"
+    ],
+    [
+     7984,
+     " in public schools."
+    ]
+   ],
+   "text": "School desegregation in the United States led to an increased number of students of what ethnicity in public schools.",
+   "audio_ms": 7825,
+   "asr_post_speech_ms": 158,
+   "n_decodes": 7,
+   "decode_ms": [
+    48,
+    58,
+    80,
+    103,
+    107,
+    139,
+    158
+   ],
+   "hypotheses": [
+    [
+     2048,
+     "School deceleration."
+    ],
+    [
+     3058,
+     "School desegregation in the United States"
+    ],
+    [
+     4080,
+     "School desegregation in the United States led to an increased"
+    ],
+    [
+     5103,
+     "School desegregation in the United States led to an increased number of students."
+    ],
+    [
+     6107,
+     "School desegregation in the United States led to an increased number of students of what ethnicity"
+    ],
+    [
+     7139,
+     "School desegregation in the United States led to an increased number of students of what ethnicity in public school"
+    ],
+    [
+     7984,
+     "School desegregation in the United States led to an increased number of students of what ethnicity in public schools."
+    ]
+   ]
+  },
+  "572758e0f1498d1400e8f6af": {
+   "events": [
+    [
+     4094,
+     "What"
+    ],
+    [
+     5279,
+     " amendment to the United"
+    ],
+    [
+     6085,
+     " States Constitution"
+    ],
+    [
+     7094,
+     " governs"
+    ],
+    [
+     7733,
+     " government funding of religious school?"
+    ]
+   ],
+   "text": "What amendment to the United States Constitution governs government funding of religious school?",
+   "audio_ms": 7616,
+   "asr_post_speech_ms": 117,
+   "n_decodes": 7,
+   "decode_ms": [
+    68,
+    59,
+    94,
+    279,
+    85,
+    94,
+    117
+   ],
+   "hypotheses": [
+    [
+     2068,
+     "You"
+    ],
+    [
+     3059,
+     "What a man went to"
+    ],
+    [
+     4094,
+     "What amendment to the United States-"
+    ],
+    [
+     5279,
+     "What amendment to the United States Constitution . . . . . . . ."
+    ],
+    [
+     6085,
+     "What amendment to the United States Constitution governs governments?"
+    ],
+    [
+     7094,
+     "What amendment to the United States Constitution governs government funding of religious"
+    ],
+    [
+     7733,
+     "What amendment to the United States Constitution governs government funding of religious school?"
+    ]
+   ]
+  },
+  "572758e0f1498d1400e8f6b0": {
+   "events": [
+    [
+     4064,
+     "What state"
+    ],
+    [
+     5064,
+     " constitutional amendments"
+    ],
+    [
+     6087,
+     " make reference to"
+    ],
+    [
+     7109,
+     " the government funding"
+    ],
+    [
+     7196,
+     " religious schools?"
+    ]
+   ],
+   "text": "What state constitutional amendments make reference to the government funding religious schools?",
+   "audio_ms": 7082,
+   "asr_post_speech_ms": 114,
+   "n_decodes": 7,
+   "decode_ms": [
+    61,
+    67,
+    64,
+    64,
+    87,
+    109,
+    86
+   ],
+   "hypotheses": [
+    [
+     2061,
+     "What?"
+    ],
+    [
+     3067,
+     "What state constant-"
+    ],
+    [
+     4064,
+     "What state constitutional amendments"
+    ],
+    [
+     5064,
+     "What state constitutional amendments make reference to"
+    ],
+    [
+     6087,
+     "What state constitutional amendments make reference to the government funding"
+    ],
+    [
+     7109,
+     "What state constitutional amendments make reference to the government funding religious school?"
+    ],
+    [
+     7196,
+     "What state constitutional amendments make reference to the government funding religious schools?"
+    ]
+   ]
+  },
+  "572758e0f1498d1400e8f6b1": {
+   "events": [
+    [
+     4089,
+     "Granting what status"
+    ],
+    [
+     5093,
+     " would allow"
+    ],
+    [
+     6109,
+     " private"
+    ],
+    [
+     7119,
+     " non-religious schools in the U.S."
+    ],
+    [
+     8000,
+     " to receive public funds."
+    ]
+   ],
+   "text": "Granting what status would allow private non-religious schools in the U.S. to receive public funds.",
+   "audio_ms": 7871,
+   "asr_post_speech_ms": 129,
+   "n_decodes": 7,
+   "decode_ms": [
+    50,
+    78,
+    89,
+    93,
+    109,
+    119,
+    129
+   ],
+   "hypotheses": [
+    [
+     2050,
+     "Grant"
+    ],
+    [
+     3078,
+     "Granting what status"
+    ],
+    [
+     4089,
+     "Granting what status would allow price."
+    ],
+    [
+     5093,
+     "Granting what status would allow private non-religious-"
+    ],
+    [
+     6109,
+     "Granting what status would allow private non-religious schools in the U.S."
+    ],
+    [
+     7119,
+     "Granting what status would allow private non-religious schools in the U.S. to receive"
+    ],
+    [
+     8000,
+     "Granting what status would allow private non-religious schools in the U.S. to receive public funds."
+    ]
+   ]
+  },
+  "572759665951b619008f8884": {
+   "events": [
+    [
+     4072,
+     "And what"
+    ],
+    [
+     6085,
+     " year did Massachusetts first require"
+    ],
+    [
+     7103,
+     " children to be"
+    ],
+    [
+     7814,
+     " In what year did Massachusetts first require children to be educated in schools?"
+    ]
+   ],
+   "text": "And what year did Massachusetts first require children to be In what year did Massachusetts first require children to be educated in schools?",
+   "audio_ms": 7709,
+   "asr_post_speech_ms": 105,
+   "n_decodes": 7,
+   "decode_ms": [
+    50,
+    68,
+    72,
+    95,
+    85,
+    103,
+    105
+   ],
+   "hypotheses": [
+    [
+     2050,
+     "If"
+    ],
+    [
+     3068,
+     "And what year?"
+    ],
+    [
+     4072,
+     "And what year did Massachusetts"
+    ],
+    [
+     5095,
+     "In what year did Massachusetts first require"
+    ],
+    [
+     6085,
+     "In what year did Massachusetts first require children to be edited?"
+    ],
+    [
+     7103,
+     "In what year did Massachusetts first require children to be educated in school?"
+    ],
+    [
+     7814,
+     "In what year did Massachusetts first require children to be educated in schools?"
+    ]
+   ]
+  },
+  "572759665951b619008f8885": {
+   "events": [
+    [
+     4079,
+     "In what"
+    ],
+    [
+     5114,
+     " year was"
+    ],
+    [
+     6097,
+     " Wisconsin"
+    ],
+    [
+     7047,
+     " v. Yoder decided at the Supreme Court?"
+    ]
+   ],
+   "text": "In what year was Wisconsin v. Yoder decided at the Supreme Court?",
+   "audio_ms": 6942,
+   "asr_post_speech_ms": 104,
+   "n_decodes": 6,
+   "decode_ms": [
+    113,
+    80,
+    79,
+    114,
+    97,
+    104
+   ],
+   "hypotheses": [
+    [
+     2113,
+     "You"
+    ],
+    [
+     3080,
+     "In what year?"
+    ],
+    [
+     4079,
+     "In what year was Wisconsin?"
+    ],
+    [
+     5114,
+     "In what year was Wisconsin v. Yoder?"
+    ],
+    [
+     6097,
+     "In what year was Wisconsin Vyodor decided at the"
+    ],
+    [
+     7047,
+     "In what year was Wisconsin v. Yoder decided at the Supreme Court?"
+    ]
+   ]
+  },
+  "572759665951b619008f8886": {
+   "events": [
+    [
+     4068,
+     "What is the"
+    ],
+    [
+     5079,
+     " citation for the"
+    ],
+    [
+     6107,
+     " Pierce v"
+    ],
+    [
+     6547,
+     " Society of Sisters case?"
+    ]
+   ],
+   "text": "What is the citation for the Pierce v Society of Sisters case?",
+   "audio_ms": 6455,
+   "asr_post_speech_ms": 92,
+   "n_decodes": 6,
+   "decode_ms": [
+    286,
+    83,
+    68,
+    79,
+    107,
+    92
+   ],
+   "hypotheses": [
+    [
+     2286,
+     ". . . . . . . . . ."
+    ],
+    [
+     3083,
+     "What is the sighting?"
+    ],
+    [
+     4068,
+     "What is the citation for the p-"
+    ],
+    [
+     5079,
+     "What is the citation for the Pierce v Society?"
+    ],
+    [
+     6107,
+     "What is the citation for the Pierce v Society of Sisters?"
+    ],
+    [
+     6547,
+     "What is the citation for the Pierce v Society of Sisters case?"
+    ]
+   ]
+  },
+  "572759665951b619008f8887": {
+   "events": [
+    [
+     4102,
+     "Who was the opposing"
+    ],
+    [
+     5132,
+     " party in the"
+    ],
+    [
+     5247,
+     " Runyon case?"
+    ]
+   ],
+   "text": "Who was the opposing party in the Runyon case?",
+   "audio_ms": 5061,
+   "asr_post_speech_ms": 185,
+   "n_decodes": 5,
+   "decode_ms": [
+    54,
+    67,
+    102,
+    132,
+    115
+   ],
+   "hypotheses": [
+    [
+     2054,
+     "Who?"
+    ],
+    [
+     3067,
+     "Who was the opposing"
+    ],
+    [
+     4102,
+     "Who was the opposing party in the ri-"
+    ],
+    [
+     5132,
+     "Who was the opposing party in the Runyon case?"
+    ],
+    [
+     5247,
+     "Who was the opposing party in the Runyon case?"
+    ]
+   ]
+  },
+  "572759dbdd62a815002e9b95": {
+   "events": [
+    [
+     4108,
+     "What would"
+    ],
+    [
+     5116,
+     " a parent have to"
+    ],
+    [
+     6133,
+     " pay to send their"
+    ],
+    [
+     7138,
+     " child to a boarding"
+    ],
+    [
+     7661,
+     " school in 2012?"
+    ]
+   ],
+   "text": "What would a parent have to pay to send their child to a boarding school in 2012?",
+   "audio_ms": 7500,
+   "asr_post_speech_ms": 161,
+   "n_decodes": 7,
+   "decode_ms": [
+    89,
+    89,
+    108,
+    116,
+    133,
+    138,
+    161
+   ],
+   "hypotheses": [
+    [
+     2089,
+     "You"
+    ],
+    [
+     3089,
+     "What would a... What would a..."
+    ],
+    [
+     4108,
+     "What would a parent have to pay?"
+    ],
+    [
+     5116,
+     "What would a parent have to pay to send their"
+    ],
+    [
+     6133,
+     "What would a parent have to pay to send their child to a boarding"
+    ],
+    [
+     7138,
+     "What would a parent have to pay to send their child to a boarding school in 2018?"
+    ],
+    [
+     7661,
+     "What would a parent have to pay to send their child to a boarding school in 2012?"
+    ]
+   ]
+  },
+  "572759dbdd62a815002e9b96": {
+   "events": [
+    [
+     4134,
+     "What"
+    ],
+    [
+     5121,
+     " notable private school"
+    ],
+    [
+     6111,
+     " has an endowment of"
+    ],
+    [
+     7140,
+     " several hundred"
+    ],
+    [
+     7454,
+     " million dollars?"
+    ]
+   ],
+   "text": "What notable private school has an endowment of several hundred million dollars?",
+   "audio_ms": 7267,
+   "asr_post_speech_ms": 186,
+   "n_decodes": 7,
+   "decode_ms": [
+    838,
+    78,
+    134,
+    121,
+    111,
+    140,
+    186
+   ],
+   "hypotheses": [
+    [
+     2838,
+     ""
+    ],
+    [
+     3078,
+     "What notable?"
+    ],
+    [
+     4134,
+     "What notable private school has-"
+    ],
+    [
+     5121,
+     "What notable private school has an endowment of"
+    ],
+    [
+     6111,
+     "What notable private school has an endowment of several hundred"
+    ],
+    [
+     7140,
+     "What notable private school has an endowment of several hundred million dollars?"
+    ],
+    [
+     7454,
+     "What notable private school has an endowment of several hundred million dollars?"
+    ]
+   ]
+  },
+  "572759dbdd62a815002e9b97": {
+   "events": [
+    [
+     4132,
+     "In"
+    ],
+    [
+     5280,
+     " addition to endowments and"
+    ],
+    [
+     6133,
+     " tuition,"
+    ],
+    [
+     7183,
+     " how do boarding"
+    ],
+    [
+     8118,
+     " schools cover their operating costs?"
+    ]
+   ],
+   "text": "In addition to endowments and tuition, how do boarding schools cover their operating costs?",
+   "audio_ms": 7941,
+   "asr_post_speech_ms": 176,
+   "n_decodes": 7,
+   "decode_ms": [
+    397,
+    140,
+    132,
+    280,
+    133,
+    183,
+    176
+   ],
+   "hypotheses": [
+    [
+     2397,
+     "You"
+    ],
+    [
+     3140,
+     "In addition..."
+    ],
+    [
+     4132,
+     "In addition to endowments and"
+    ],
+    [
+     5280,
+     "In addition to endowments and tuition, // // // // // // //"
+    ],
+    [
+     6133,
+     "In addition to endowments and tuition, how do boarding school"
+    ],
+    [
+     7183,
+     "In addition to endowments and tuition, how do boarding schools cover their options?"
+    ],
+    [
+     8118,
+     "In addition to endowments and tuition, how do boarding schools cover their operating costs?"
+    ]
+   ]
+  },
+  "5728349dff5b5019007d9efe": {
+   "events": [
+    [
+     3117,
+     "What is the"
+    ],
+    [
+     4131,
+     " Dutch word for"
+    ],
+    [
+     5093,
+     " the Amazon rainforest?"
+    ]
+   ],
+   "text": "What is the Dutch word for the Amazon rainforest?",
+   "audio_ms": 4969,
+   "asr_post_speech_ms": 124,
+   "n_decodes": 4,
+   "decode_ms": [
+    92,
+    117,
+    131,
+    124
+   ],
+   "hypotheses": [
+    [
+     2092,
+     "What is the"
+    ],
+    [
+     3117,
+     "What is the Dutch word for the..."
+    ],
+    [
+     4131,
+     "What is the Dutch word for the Amazon rainfall?"
+    ],
+    [
+     5093,
+     "What is the Dutch word for the Amazon rainforest?"
+    ]
+   ]
+  },
+  "5728349dff5b5019007d9eff": {
+   "events": [
+    [
+     4101,
+     "What rainforest"
+    ],
+    [
+     5159,
+     " covers the majority"
+    ],
+    [
+     6174,
+     " of the Amazon"
+    ],
+    [
+     6729,
+     " Basin in South America?"
+    ]
+   ],
+   "text": "What rainforest covers the majority of the Amazon Basin in South America?",
+   "audio_ms": 6571,
+   "asr_post_speech_ms": 158,
+   "n_decodes": 6,
+   "decode_ms": [
+    85,
+    108,
+    101,
+    159,
+    174,
+    158
+   ],
+   "hypotheses": [
+    [
+     2085,
+     "What?"
+    ],
+    [
+     3108,
+     "What rainforest cover"
+    ],
+    [
+     4101,
+     "What rainforest covers the majority of..."
+    ],
+    [
+     5159,
+     "What rainforest covers the majority of the Amazon base?"
+    ],
+    [
+     6174,
+     "What rainforest covers the majority of the Amazon basin in South America?"
+    ],
+    [
+     6729,
+     "What rainforest covers the majority of the Amazon Basin in South America?"
+    ]
+   ]
+  },
+  "5728349dff5b5019007d9f00": {
+   "events": [
+    [
+     3165,
+     "In what"
+    ],
+    [
+     4147,
+     " country can most of the"
+    ],
+    [
+     5061,
+     " Amazon rainforest be found?"
+    ]
+   ],
+   "text": "In what country can most of the Amazon rainforest be found?",
+   "audio_ms": 4922,
+   "asr_post_speech_ms": 139,
+   "n_decodes": 4,
+   "decode_ms": [
+    101,
+    165,
+    147,
+    139
+   ],
+   "hypotheses": [
+    [
+     2101,
+     "In what country?"
+    ],
+    [
+     3165,
+     "In what country can most of the aim of"
+    ],
+    [
+     4147,
+     "In what country can most of the Amazon rainforest be"
+    ],
+    [
+     5061,
+     "In what country can most of the Amazon rainforest be found?"
+    ]
+   ]
+  },
+  "5728349dff5b5019007d9f01": {
+   "events": [
+    [
+     4137,
+     "The Amazon"
+    ],
+    [
+     5157,
+     " rainforest makes up what amount of"
+    ],
+    [
+     5468,
+     " Earth's rainforests."
+    ]
+   ],
+   "text": "The Amazon rainforest makes up what amount of Earth's rainforests.",
+   "audio_ms": 5317,
+   "asr_post_speech_ms": 151,
+   "n_decodes": 5,
+   "decode_ms": [
+    83,
+    92,
+    137,
+    157,
+    151
+   ],
+   "hypotheses": [
+    [
+     2083,
+     "the Amazon"
+    ],
+    [
+     3092,
+     "The Amazon Rainforest Mixable"
+    ],
+    [
+     4137,
+     "The Amazon rainforest makes up what amount of earth"
+    ],
+    [
+     5157,
+     "The Amazon rainforest makes up what amount of Earth's rainforests."
+    ],
+    [
+     5468,
+     "The Amazon rainforest makes up what amount of Earth's rainforests."
+    ]
+   ]
+  },
+  "5728349dff5b5019007d9f02": {
+   "events": [
+    [
+     3112,
+     "How many"
+    ],
+    [
+     4136,
+     " species of trees"
+    ],
+    [
+     5173,
+     " can be found in the"
+    ],
+    [
+     5340,
+     " Amazon rainforest?"
+    ]
+   ],
+   "text": "How many species of trees can be found in the Amazon rainforest?",
+   "audio_ms": 5201,
+   "asr_post_speech_ms": 139,
+   "n_decodes": 5,
+   "decode_ms": [
+    104,
+    112,
+    136,
+    173,
+    139
+   ],
+   "hypotheses": [
+    [
+     2104,
+     "How many speed"
+    ],
+    [
+     3112,
+     "How many species of trees can..."
+    ],
+    [
+     4136,
+     "How many species of trees can be found in the Amazon?"
+    ],
+    [
+     5173,
+     "How many species of trees can be found in the Amazon rainforest?"
+    ],
+    [
+     5340,
+     "How many species of trees can be found in the Amazon rainforest?"
+    ]
+   ]
+  },
+  "57283adcff5b5019007d9f97": {
+   "events": [
+    [
+     3093,
+     "During"
+    ],
+    [
+     4099,
+     " which period in history"
+    ],
+    [
+     5233,
+     " was the Amazon"
+    ],
+    [
+     6171,
+     " rainforest"
+    ],
+    [
+     6744,
+     " a narrow band of forest."
+    ]
+   ],
+   "text": "During which period in history was the Amazon rainforest a narrow band of forest.",
+   "audio_ms": 6594,
+   "asr_post_speech_ms": 149,
+   "n_decodes": 6,
+   "decode_ms": [
+    70,
+    93,
+    99,
+    233,
+    171,
+    149
+   ],
+   "hypotheses": [
+    [
+     2070,
+     "During"
+    ],
+    [
+     3093,
+     "During which period in history"
+    ],
+    [
+     4099,
+     "During which period in history was the Amazon"
+    ],
+    [
+     5233,
+     "During which period in history was the Amazon rainforest and"
+    ],
+    [
+     6171,
+     "During which period in history was the Amazon rainforest a narrow band of forest."
+    ],
+    [
+     6744,
+     "During which period in history was the Amazon rainforest a narrow band of forest."
+    ]
+   ]
+  }
+ }
+}

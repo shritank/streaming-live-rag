@@ -1,0 +1,3651 @@
+{
+ "scenarios": "handoff/newmachine/scen_audio100_hyp",
+ "corpus_dir": "data/corpus",
+ "overrides": [],
+ "time_scale": 1.0,
+ "n_scenarios": 100,
+ "cold_start_s": 12.1,
+ "execution_providers": {
+  "fused/e5.onnx": "CUDAExecutionProvider",
+  "fused/ce.onnx": "CUDAExecutionProvider",
+  "fused/reader.onnx": "CUDAExecutionProvider"
+ },
+ "stages": {
+  "ce.claim_ms": {
+   "n": 492,
+   "p50": 19.911,
+   "p95": 32.884,
+   "p99": 39.158,
+   "max": 115.965,
+   "mean": 21.041
+  },
+  "ce.gate_ms": {
+   "n": 383,
+   "p50": 12.975,
+   "p95": 27.332,
+   "p99": 31.227,
+   "max": 40.886,
+   "mean": 14.911
+  },
+  "ce.rerank_ms": {
+   "n": 596,
+   "p50": 14.789,
+   "p95": 26.965,
+   "p99": 31.544,
+   "max": 81.394,
+   "mean": 16.469
+  },
+  "controller.decision_ms": {
+   "n": 471,
+   "p50": 0.431,
+   "p95": 0.766,
+   "p99": 1.11,
+   "max": 1.429,
+   "mean": 0.416
+  },
+  "engine.answer_telemetry_ms": {
+   "n": 100,
+   "p50": 0.052,
+   "p95": 0.073,
+   "p99": 0.081,
+   "max": 0.084,
+   "mean": 0.05
+  },
+  "engine.final_decision_ms": {
+   "n": 100,
+   "p50": 0.316,
+   "p95": 0.534,
+   "p99": 0.657,
+   "max": 0.693,
+   "mean": 0.321
+  },
+  "engine.post_speech_ms": {
+   "n": 100,
+   "p50": 2.856,
+   "p95": 86.369,
+   "p99": 91.088,
+   "max": 95.622,
+   "mean": 34.727
+  },
+  "engine.retrieval_wait_ms": {
+   "n": 100,
+   "p50": 0.138,
+   "p95": 84.706,
+   "p99": 89.156,
+   "max": 94.067,
+   "mean": 32.361
+  },
+  "engine.synthesis_ms": {
+   "n": 100,
+   "p50": 1.275,
+   "p95": 1.847,
+   "p99": 35.802,
+   "max": 41.988,
+   "mean": 1.979
+  },
+  "reader.other_ms": {
+   "n": 405,
+   "p50": 28.399,
+   "p95": 43.702,
+   "p99": 54.367,
+   "max": 127.844,
+   "mean": 30.029
+  },
+  "retrieval.bm25_ms": {
+   "n": 596,
+   "p50": 2.96,
+   "p95": 6.008,
+   "p99": 7.267,
+   "max": 9.422,
+   "mean": 3.235
+  },
+  "retrieval.dense_topk_ms": {
+   "n": 596,
+   "p50": 0.659,
+   "p95": 1.203,
+   "p99": 4.364,
+   "max": 9.016,
+   "mean": 0.774
+  },
+  "retrieval.e5_encode_ms": {
+   "n": 596,
+   "p50": 12.94,
+   "p95": 26.444,
+   "p99": 39.112,
+   "max": 98.767,
+   "mean": 15.386
+  },
+  "retrieval.rrf_ms": {
+   "n": 596,
+   "p50": 0.047,
+   "p95": 0.078,
+   "p99": 0.11,
+   "max": 0.916,
+   "mean": 0.052
+  },
+  "retrieval.search.other_ms": {
+   "n": 596,
+   "p50": 43.517,
+   "p95": 72.711,
+   "p99": 84.749,
+   "max": 133.115,
+   "mean": 46.598
+  },
+  "retrieval.subquery_ms": {
+   "n": 269,
+   "p50": 39.864,
+   "p95": 69.864,
+   "p99": 90.2,
+   "max": 112.686,
+   "mean": 31.166
+  },
+  "synthesis.claim_select_ms": {
+   "n": 492,
+   "p50": 23.605,
+   "p95": 36.72,
+   "p99": 43.593,
+   "max": 120.503,
+   "mean": 24.489
+  },
+  "synthesis.gate_ms": {
+   "n": 383,
+   "p50": 14.757,
+   "p95": 28.111,
+   "p99": 32.771,
+   "max": 42.027,
+   "mean": 16.229
+  },
+  "synthesis.grounding_ms": {
+   "n": 100,
+   "p50": 0.235,
+   "p95": 0.449,
+   "p99": 0.547,
+   "max": 0.598,
+   "mean": 0.219
+  },
+  "synthesis.prefetch_ms": {
+   "n": 596,
+   "p50": 33.925,
+   "p95": 58.557,
+   "p99": 68.082,
+   "max": 150.551,
+   "mean": 30.697
+  }
+ },
+ "slowest": {
+  "ce.claim_ms": [
+   [
+    116.0,
+    "hey_a_57274e145951b619008f87e8",
+    4.34
+   ],
+   [
+    111.0,
+    "hey_a_57274e145951b619008f87e8",
+    4.36
+   ],
+   [
+    42.3,
+    "hey_a_5727500f708984140094dc01",
+    5.16
+   ],
+   [
+    39.4,
+    "hey_a_57274eca5951b619008f8802",
+    7.9
+   ],
+   [
+    39.2,
+    "hey_a_57274eca5951b619008f8803",
+    6.38
+   ]
+  ],
+  "ce.gate_ms": [
+   [
+    40.9,
+    "hey_a_5727515f708984140094dc13",
+    6.22
+   ],
+   [
+    32.9,
+    "hey_a_57263677ec44d21400f3dc4b",
+    5.21
+   ],
+   [
+    32.3,
+    "hey_a_572750df5951b619008f8831",
+    5.19
+   ],
+   [
+    31.5,
+    "hey_a_5727500f708984140094dc01",
+    6.18
+   ],
+   [
+    31.2,
+    "hey_a_57274d9bf1498d1400e8f5fa",
+    7.23
+   ]
+  ],
+  "ce.rerank_ms": [
+   [
+    81.4,
+    "hey_a_57274e145951b619008f87e8",
+    4.21
+   ],
+   [
+    48.5,
+    "hey_a_5727500f708984140094dc01",
+    5.13
+   ],
+   [
+    34.5,
+    "hey_a_57274eca5951b619008f8801",
+    6.23
+   ],
+   [
+    34.4,
+    "hey_a_5727500f708984140094dc01",
+    7.12
+   ],
+   [
+    33.5,
+    "hey_a_57274712708984140094dbb0",
+    4.21
+   ]
+  ],
+  "reader.other_ms": [
+   [
+    127.8,
+    "hey_a_57274e145951b619008f87e8",
+    4.37
+   ],
+   [
+    121.6,
+    "hey_a_57274e145951b619008f87e8",
+    4.34
+   ],
+   [
+    55.2,
+    "hey_a_57274d9bf1498d1400e8f5fa",
+    7.23
+   ],
+   [
+    54.6,
+    "hey_a_57274e145951b619008f87eb",
+    6.22
+   ],
+   [
+    54.4,
+    "hey_a_572750df5951b619008f8831",
+    5.2
+   ]
+  ],
+  "retrieval.bm25_ms": [
+   [
+    9.4,
+    "hey_a_5727490bdd62a815002e9a83",
+    5.2
+   ],
+   [
+    9.2,
+    "hey_a_5727500f708984140094dc01",
+    5.06
+   ],
+   [
+    7.4,
+    "hey_a_57274e145951b619008f87eb",
+    6.11
+   ],
+   [
+    7.4,
+    "hey_a_5727490bdd62a815002e9a83",
+    6.22
+   ],
+   [
+    7.3,
+    "hey_a_57274d9bf1498d1400e8f5fa",
+    7.07
+   ]
+  ],
+  "retrieval.dense_topk_ms": [
+   [
+    9.0,
+    "hey_a_572756265951b619008f8871",
+    3.16
+   ],
+   [
+    8.4,
+    "hey_a_57274f49f1498d1400e8f622",
+    5.24
+   ],
+   [
+    7.0,
+    "hey_a_572756265951b619008f886f",
+    6.16
+   ],
+   [
+    6.9,
+    "hey_a_57274d1cdd62a815002e9ab1",
+    6.15
+   ],
+   [
+    6.9,
+    "hey_a_57274971708984140094dbbe",
+    3.17
+   ]
+  ],
+  "retrieval.e5_encode_ms": [
+   [
+    98.8,
+    "hey_a_57274e145951b619008f87e8",
+    4.21
+   ],
+   [
+    46.4,
+    "hey_a_57274e145951b619008f87eb",
+    3.15
+   ],
+   [
+    42.7,
+    "hey_a_572756265951b619008f886e",
+    3.16
+   ],
+   [
+    41.6,
+    "hey_a_57274ca8dd62a815002e9aa8",
+    3.17
+   ],
+   [
+    40.8,
+    "hey_a_57274f49f1498d1400e8f621",
+    3.16
+   ]
+  ],
+  "retrieval.rrf_ms": [
+   [
+    0.9,
+    "hey_a_5728349dff5b5019007d9f01",
+    5.2
+   ],
+   [
+    0.8,
+    "hey_a_572756265951b619008f8871",
+    3.14
+   ],
+   [
+    0.4,
+    "hey_a_57274ca8dd62a815002e9aa8",
+    3.14
+   ],
+   [
+    0.3,
+    "hey_a_57096c95200fba1400367fbe",
+    6.13
+   ],
+   [
+    0.2,
+    "hey_a_5727515f708984140094dc14",
+    2.07
+   ]
+  ],
+  "retrieval.search.other_ms": [
+   [
+    133.1,
+    "hey_a_57274e145951b619008f87e8",
+    4.24
+   ],
+   [
+    111.9,
+    "hey_a_57274e145951b619008f87e8",
+    4.22
+   ],
+   [
+    98.3,
+    "hey_a_57274d9bf1498d1400e8f5fa",
+    7.16
+   ],
+   [
+    94.5,
+    "hey_a_5727500f708984140094dc01",
+    5.15
+   ],
+   [
+    89.1,
+    "hey_a_57263677ec44d21400f3dc49",
+    6.18
+   ]
+  ],
+  "synthesis.claim_select_ms": [
+   [
+    120.5,
+    "hey_a_57274e145951b619008f87e8",
+    4.34
+   ],
+   [
+    112.4,
+    "hey_a_57274e145951b619008f87e8",
+    4.36
+   ],
+   [
+    46.0,
+    "hey_a_5727500f708984140094dc01",
+    5.16
+   ],
+   [
+    44.7,
+    "hey_a_57274eca5951b619008f8802",
+    7.9
+   ],
+   [
+    44.5,
+    "hey_a_57274eca5951b619008f8803",
+    6.38
+   ]
+  ],
+  "synthesis.gate_ms": [
+   [
+    42.0,
+    "hey_a_57274d9bf1498d1400e8f5fa",
+    7.23
+   ],
+   [
+    41.1,
+    "hey_a_5727515f708984140094dc13",
+    6.22
+   ],
+   [
+    40.9,
+    "hey_a_572750df5951b619008f8831",
+    5.2
+   ],
+   [
+    33.2,
+    "hey_a_57263677ec44d21400f3dc4b",
+    5.21
+   ],
+   [
+    32.7,
+    "hey_a_57264228ec44d21400f3dcf8",
+    4.26
+   ]
+  ],
+  "synthesis.grounding_ms": [
+   [
+    0.6,
+    "hey_a_57274f49f1498d1400e8f61f",
+    4.71
+   ],
+   [
+    0.5,
+    "hey_a_572756265951b619008f886f",
+    8.02
+   ],
+   [
+    0.5,
+    "hey_a_57274eca5951b619008f8803",
+    7.28
+   ],
+   [
+    0.5,
+    "hey_a_5727515f708984140094dc14",
+    7.32
+   ],
+   [
+    0.5,
+    "hey_a_57274f49f1498d1400e8f620",
+    5.65
+   ]
+  ],
+  "synthesis.prefetch_ms": [
+   [
+    150.6,
+    "hey_a_57274e145951b619008f87e8",
+    4.37
+   ],
+   [
+    133.4,
+    "hey_a_57274e145951b619008f87e8",
+    4.38
+   ],
+   [
+    68.4,
+    "hey_a_57264f18f1498d1400e8dbb1",
+    5.28
+   ],
+   [
+    68.3,
+    "hey_a_5727515f708984140094dc13",
+    6.22
+   ],
+   [
+    68.2,
+    "hey_a_57096c95200fba1400367fbf",
+    8.27
+   ]
+  ]
+ },
+ "speculation": {
+  "launched": 426,
+  "reused": 102
+ },
+ "turns_over_5ms": [
+  {
+   "scenario": "hey_a_57096c95200fba1400367fbf",
+   "utterance": "u1",
+   "post_speech_ms": 95.62,
+   "timings": {
+    "final_decision_ms": 0.337,
+    "retrieval_wait_ms": 94.067,
+    "synthesis_ms": 1.145,
+    "answer_telemetry_ms": 0.056,
+    "post_speech_ms": 95.622
+   },
+   "retrievals": [
+    [
+     "queries",
+     -3545,
+     "provisional",
+     [
+      "What service is a video guard"
+     ]
+    ],
+    [
+     "completed",
+     -3469.2,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -2576,
+     "provisional",
+     [
+      "What service is a video guard UK equipped"
+     ]
+    ],
+    [
+     "cancelled",
+     -2575.5,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -2479.0,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1556,
+     "provisional",
+     [
+      "What service is a video guard UK equipped receiver"
+     ]
+    ],
+    [
+     "cancelled",
+     -1555.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -1422.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What service is a video guard UK equipped receiver UK-equipped receiver dedicated to decrypt?"
+     ]
+    ],
+    [
+     "cancelled",
+     0.4,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     94.3,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572759665951b619008f8884",
+   "utterance": "u1",
+   "post_speech_ms": 91.04,
+   "timings": {
+    "final_decision_ms": 0.433,
+    "retrieval_wait_ms": 89.106,
+    "synthesis_ms": 1.433,
+    "answer_telemetry_ms": 0.053,
+    "post_speech_ms": 91.042
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1730,
+     "provisional",
+     [
+      "And what year did Massachusetts first require"
+     ]
+    ],
+    [
+     "completed",
+     -1651.3,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -712,
+     "provisional",
+     [
+      "And what year did Massachusetts first require children to be"
+     ]
+    ],
+    [
+     "cancelled",
+     -711.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -635.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "And what year did Massachusetts first require children to be In what year did Massachusetts first require children to be educated in schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     89.4,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57263677ec44d21400f3dc4c",
+   "utterance": "u1",
+   "post_speech_ms": 90.05,
+   "timings": {
+    "final_decision_ms": 0.321,
+    "retrieval_wait_ms": 88.991,
+    "synthesis_ms": 0.708,
+    "answer_telemetry_ms": 0.022,
+    "post_speech_ms": 90.049
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What delivery message was used?"
+     ]
+    ],
+    [
+     "completed",
+     89.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572759665951b619008f8886",
+   "utterance": "u1",
+   "post_speech_ms": 89.17,
+   "timings": {
+    "final_decision_ms": 0.476,
+    "retrieval_wait_ms": 87.249,
+    "synthesis_ms": 1.373,
+    "answer_telemetry_ms": 0.054,
+    "post_speech_ms": 89.169
+   },
+   "retrievals": [
+    [
+     "queries",
+     -441,
+     "provisional",
+     [
+      "citation for the Pierce v"
+     ]
+    ],
+    [
+     "completed",
+     -309.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "citation for the Pierce v Society of Sisters case?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     87.6,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57263c78ec44d21400f3dc7e",
+   "utterance": "u1",
+   "post_speech_ms": 87.43,
+   "timings": {
+    "final_decision_ms": 0.291,
+    "retrieval_wait_ms": 85.386,
+    "synthesis_ms": 1.687,
+    "answer_telemetry_ms": 0.053,
+    "post_speech_ms": 87.433
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "x dot X dot 25 uses what type network type"
+     ]
+    ],
+    [
+     "completed",
+     85.6,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572759665951b619008f8885",
+   "utterance": "u1",
+   "post_speech_ms": 86.31,
+   "timings": {
+    "final_decision_ms": 0.356,
+    "retrieval_wait_ms": 84.67,
+    "synthesis_ms": 1.214,
+    "answer_telemetry_ms": 0.055,
+    "post_speech_ms": 86.313
+   },
+   "retrievals": [
+    [
+     "queries",
+     -951,
+     "provisional",
+     [
+      "In what year was Wisconsin"
+     ]
+    ],
+    [
+     "completed",
+     -859.3,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "In what year was Wisconsin v. Yoder decided at the Supreme Court?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     84.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572758e0f1498d1400e8f6af",
+   "utterance": "u1",
+   "post_speech_ms": 85.23,
+   "timings": {
+    "final_decision_ms": 0.41,
+    "retrieval_wait_ms": 83.814,
+    "synthesis_ms": 0.945,
+    "answer_telemetry_ms": 0.044,
+    "post_speech_ms": 85.23
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2455,
+     "provisional",
+     [
+      "What amendment to the United"
+     ]
+    ],
+    [
+     "completed",
+     -2379.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1649,
+     "provisional",
+     [
+      "What amendment to the United States Constitution"
+     ]
+    ],
+    [
+     "cancelled",
+     -1648.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -1574.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -640,
+     "provisional",
+     [
+      "What amendment to the United States Constitution governs"
+     ]
+    ],
+    [
+     "cancelled",
+     -639.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -589.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What amendment to the United States Constitution governs government funding of religious school?"
+     ]
+    ],
+    [
+     "cancelled",
+     0.1,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     84.1,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57264f18f1498d1400e8dbb2",
+   "utterance": "u1",
+   "post_speech_ms": 84.26,
+   "timings": {
+    "final_decision_ms": 0.322,
+    "retrieval_wait_ms": 82.355,
+    "synthesis_ms": 1.509,
+    "answer_telemetry_ms": 0.055,
+    "post_speech_ms": 84.259
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "When did the bypasses reach England?"
+     ]
+    ],
+    [
+     "completed",
+     82.6,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274712708984140094dbb0",
+   "utterance": "u1",
+   "post_speech_ms": 84.06,
+   "timings": {
+    "final_decision_ms": 0.347,
+    "retrieval_wait_ms": 82.631,
+    "synthesis_ms": 1.001,
+    "answer_telemetry_ms": 0.062,
+    "post_speech_ms": 84.06
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1741,
+     "provisional",
+     [
+      "What region does use"
+     ]
+    ],
+    [
+     "completed",
+     -1689.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -755,
+     "provisional",
+     [
+      "What region does use a term private schools to"
+     ]
+    ],
+    [
+     "cancelled",
+     -754.4,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -642.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What region does use a term private schools to the term private schools to refer to universities?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.1,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     82.8,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274a1edd62a815002e9a9e",
+   "utterance": "u1",
+   "post_speech_ms": 82.91,
+   "timings": {
+    "final_decision_ms": 0.421,
+    "retrieval_wait_ms": 81.032,
+    "synthesis_ms": 1.405,
+    "answer_telemetry_ms": 0.046,
+    "post_speech_ms": 82.914
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2045,
+     "provisional",
+     [
+      "In 1992"
+     ]
+    ],
+    [
+     "completed",
+     -1974.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "well-presented of East German students attended private schools"
+     ]
+    ],
+    [
+     "completed",
+     81.4,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572757bef1498d1400e8f694",
+   "utterance": "u1",
+   "post_speech_ms": 82.71,
+   "timings": {
+    "final_decision_ms": 0.379,
+    "retrieval_wait_ms": 80.98,
+    "synthesis_ms": 1.277,
+    "answer_telemetry_ms": 0.051,
+    "post_speech_ms": 82.707
+   },
+   "retrievals": [
+    [
+     "queries",
+     -3905,
+     "provisional",
+     [
+      "School desegregation in the United States"
+     ]
+    ],
+    [
+     "completed",
+     -3903.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -2882,
+     "provisional",
+     [
+      "School desegregation in the United States led to an increased"
+     ]
+    ],
+    [
+     "cancelled",
+     -2881.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -2880.9,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1878,
+     "provisional",
+     [
+      "School desegregation in the United States led to an increased number of"
+     ]
+    ],
+    [
+     "cancelled",
+     -1877.1,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -1766.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -846,
+     "provisional",
+     [
+      "School desegregation in the United States led to an increased number of students of what ethnicity"
+     ]
+    ],
+    [
+     "cancelled",
+     -845.2,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     -844.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "School desegregation in the United States led to an increased number of students of what ethnicity in public schools"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.3,
+     "",
+     [
+      "u1.q4"
+     ]
+    ],
+    [
+     "completed",
+     81.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572758e0f1498d1400e8f6b0",
+   "utterance": "u1",
+   "post_speech_ms": 82.27,
+   "timings": {
+    "final_decision_ms": 0.324,
+    "retrieval_wait_ms": 80.33,
+    "synthesis_ms": 1.545,
+    "answer_telemetry_ms": 0.052,
+    "post_speech_ms": 82.267
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2133,
+     "provisional",
+     [
+      "What state constitutional amendments"
+     ]
+    ],
+    [
+     "completed",
+     -2132.0,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1110,
+     "provisional",
+     [
+      "What state constitutional amendments make reference to"
+     ]
+    ],
+    [
+     "cancelled",
+     -1109.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -1108.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -88,
+     "provisional",
+     [
+      "What state constitutional amendments make reference to the government funding"
+     ]
+    ],
+    [
+     "cancelled",
+     -87.1,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -86.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What state constitutional amendments make reference to the government funding religious schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.4,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     80.5,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572757bef1498d1400e8f693",
+   "utterance": "u1",
+   "post_speech_ms": 81.94,
+   "timings": {
+    "final_decision_ms": 0.462,
+    "retrieval_wait_ms": 79.589,
+    "synthesis_ms": 1.817,
+    "answer_telemetry_ms": 0.055,
+    "post_speech_ms": 81.94
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1222,
+     "provisional",
+     [
+      "What was a primary race of students attending Christian"
+     ]
+    ],
+    [
+     "completed",
+     -1171.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What was a primary race of students attending Christian academies after the Brown decision?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     79.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572756265951b619008f886f",
+   "utterance": "u1",
+   "post_speech_ms": 81.83,
+   "timings": {
+    "final_decision_ms": 0.31,
+    "retrieval_wait_ms": 79.635,
+    "synthesis_ms": 1.801,
+    "answer_telemetry_ms": 0.065,
+    "post_speech_ms": 81.828
+   },
+   "retrievals": [
+    [
+     "queries",
+     -3880,
+     "provisional",
+     [
+      "What percentage of British children"
+     ]
+    ],
+    [
+     "completed",
+     -3878.9,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1836,
+     "provisional",
+     [
+      "What percentage of British children are educated at"
+     ]
+    ],
+    [
+     "cancelled",
+     -1835.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -1736.9,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What percentage of British children are educated at GSE level in fee-paying schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.1,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     79.8,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5727500f708984140094dc00",
+   "utterance": "u1",
+   "post_speech_ms": 81.42,
+   "timings": {
+    "final_decision_ms": 0.585,
+    "retrieval_wait_ms": 79.298,
+    "synthesis_ms": 1.461,
+    "answer_telemetry_ms": 0.057,
+    "post_speech_ms": 81.419
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2708,
+     "provisional",
+     [
+      "year was a revised"
+     ]
+    ],
+    [
+     "completed",
+     -2706.3,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1719,
+     "provisional",
+     [
+      "year was a revised manual of"
+     ]
+    ],
+    [
+     "cancelled",
+     -1718.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -1717.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -710,
+     "provisional",
+     [
+      "year was a revised manual of regulations"
+     ]
+    ],
+    [
+     "cancelled",
+     -709.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -604.2,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "In what month and year was a revised manual of regulations for private schools released?"
+     ]
+    ],
+    [
+     "cancelled",
+     0.1,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     79.8,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572758e0f1498d1400e8f6b1",
+   "utterance": "u1",
+   "post_speech_ms": 81.07,
+   "timings": {
+    "final_decision_ms": 0.316,
+    "retrieval_wait_ms": 78.988,
+    "synthesis_ms": 1.715,
+    "answer_telemetry_ms": 0.041,
+    "post_speech_ms": 81.073
+   },
+   "retrievals": [
+    [
+     "queries",
+     -3912,
+     "provisional",
+     [
+      "Granting what status"
+     ]
+    ],
+    [
+     "completed",
+     -3910.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -2908,
+     "provisional",
+     [
+      "Granting what status would allow"
+     ]
+    ],
+    [
+     "cancelled",
+     -2907.4,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -2857.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1892,
+     "provisional",
+     [
+      "Granting what status would allow private"
+     ]
+    ],
+    [
+     "cancelled",
+     -1891.4,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -1790.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -882,
+     "provisional",
+     [
+      "Granting what status would allow private non-religious schools in the U.S"
+     ]
+    ],
+    [
+     "cancelled",
+     -881.4,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     -879.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "Granting what status would allow private non-religious schools in the U.S. to receive public funds"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.3,
+     "",
+     [
+      "u1.q4"
+     ]
+    ],
+    [
+     "completed",
+     79.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572759dbdd62a815002e9b97",
+   "utterance": "u1",
+   "post_speech_ms": 80.63,
+   "timings": {
+    "final_decision_ms": 0.492,
+    "retrieval_wait_ms": 78.812,
+    "synthesis_ms": 1.273,
+    "answer_telemetry_ms": 0.043,
+    "post_speech_ms": 80.634
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2839,
+     "provisional",
+     [
+      "In addition to endowments and"
+     ]
+    ],
+    [
+     "completed",
+     -2838.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -936,
+     "provisional",
+     [
+      "how do boarding addition endowments"
+     ]
+    ],
+    [
+     "completed",
+     -846.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "In addition to endowments and tuition, how do boarding schools cover their operating costs?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.1,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.1,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     79.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274beff1498d1400e8f5e5",
+   "utterance": "u1",
+   "post_speech_ms": 80.57,
+   "timings": {
+    "final_decision_ms": 0.34,
+    "retrieval_wait_ms": 78.907,
+    "synthesis_ms": 1.252,
+    "answer_telemetry_ms": 0.052,
+    "post_speech_ms": 80.566
+   },
+   "retrievals": [
+    [
+     "queries",
+     -5238,
+     "provisional",
+     [
+      "Along with the CISCE and"
+     ]
+    ],
+    [
+     "completed",
+     -5169.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -2251,
+     "provisional",
+     [
+      "notable along cisce"
+     ]
+    ],
+    [
+     "completed",
+     -2167.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "notable examination board in multiple Indian states"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     79.1,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572754dd708984140094dc3f",
+   "utterance": "u1",
+   "post_speech_ms": 80.33,
+   "timings": {
+    "final_decision_ms": 0.408,
+    "retrieval_wait_ms": 79.119,
+    "synthesis_ms": 0.761,
+    "answer_telemetry_ms": 0.028,
+    "post_speech_ms": 80.325
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What school model is Sweden notable for?"
+     ]
+    ],
+    [
+     "completed",
+     79.5,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57263677ec44d21400f3dc4a",
+   "utterance": "u1",
+   "post_speech_ms": 79.21,
+   "timings": {
+    "final_decision_ms": 0.348,
+    "retrieval_wait_ms": 77.58,
+    "synthesis_ms": 1.183,
+    "answer_telemetry_ms": 0.074,
+    "post_speech_ms": 79.21
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What was report P2626?"
+     ]
+    ],
+    [
+     "completed",
+     77.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5727478cf1498d1400e8f59b",
+   "utterance": "u1",
+   "post_speech_ms": 78.87,
+   "timings": {
+    "final_decision_ms": 0.255,
+    "retrieval_wait_ms": 77.178,
+    "synthesis_ms": 1.366,
+    "answer_telemetry_ms": 0.054,
+    "post_speech_ms": 78.87
+   },
+   "retrievals": [
+    [
+     "queries",
+     -710,
+     "provisional",
+     [
+      "another term"
+     ]
+    ],
+    [
+     "completed",
+     -580.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "another term used for Year 13?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.4,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     77.3,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5728349dff5b5019007d9eff",
+   "utterance": "u1",
+   "post_speech_ms": 76.9,
+   "timings": {
+    "final_decision_ms": 0.333,
+    "retrieval_wait_ms": 75.158,
+    "synthesis_ms": 1.343,
+    "answer_telemetry_ms": 0.048,
+    "post_speech_ms": 76.9
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1571,
+     "provisional",
+     [
+      "What rainforest covers the majority"
+     ]
+    ],
+    [
+     "completed",
+     -1471.0,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -556,
+     "provisional",
+     [
+      "What rainforest covers the majority of the Amazon"
+     ]
+    ],
+    [
+     "cancelled",
+     -555.1,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -448.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What rainforest covers the majority of the Amazon Basin in South America?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.4,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     75.4,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274d1cdd62a815002e9ab1",
+   "utterance": "u1",
+   "post_speech_ms": 76.88,
+   "timings": {
+    "final_decision_ms": 0.121,
+    "retrieval_wait_ms": 75.354,
+    "synthesis_ms": 1.331,
+    "answer_telemetry_ms": 0.053,
+    "post_speech_ms": 76.877
+   },
+   "retrievals": [
+    [
+     "queries",
+     -4416,
+     "provisional",
+     [
+      "Along with the congregation of"
+     ]
+    ],
+    [
+     "completed",
+     -4287.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -3447,
+     "provisional",
+     [
+      "Along with the congregation of Christian brothers"
+     ]
+    ],
+    [
+     "cancelled",
+     -3446.7,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -3446.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -2477,
+     "provisional",
+     [
+      "notable along congregation christian brothers"
+     ]
+    ],
+    [
+     "completed",
+     -2442.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1107,
+     "provisional",
+     [
+      "notable religious group that"
+     ]
+    ],
+    [
+     "cancelled",
+     -1105.4,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     -1010.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -396,
+     "provisional",
+     [
+      "notable religious group that runs"
+     ]
+    ],
+    [
+     "cancelled",
+     -395.2,
+     "",
+     [
+      "u1.q4"
+     ]
+    ],
+    [
+     "completed",
+     -353.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "Along with the congregation of Christian brothers, what is a notable religious group that runs fee-paying schools in Ireland?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.5,
+     "",
+     [
+      "u1.q5"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.5,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     75.4,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5728349dff5b5019007d9f00",
+   "utterance": "u1",
+   "post_speech_ms": 76.78,
+   "timings": {
+    "final_decision_ms": 0.304,
+    "retrieval_wait_ms": 74.96,
+    "synthesis_ms": 1.448,
+    "answer_telemetry_ms": 0.053,
+    "post_speech_ms": 76.782
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "In what country can most of the Amazon rainforest be found?"
+     ]
+    ],
+    [
+     "completed",
+     75.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572754dd708984140094dc3c",
+   "utterance": "u1",
+   "post_speech_ms": 76.7,
+   "timings": {
+    "final_decision_ms": 0.375,
+    "retrieval_wait_ms": 75.543,
+    "synthesis_ms": 0.708,
+    "answer_telemetry_ms": 0.057,
+    "post_speech_ms": 76.7
+   },
+   "retrievals": [
+    [
+     "queries",
+     -359,
+     "provisional",
+     [
+      "about how many students attend can stop"
+     ]
+    ],
+    [
+     "completed",
+     -289.9,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "about how many students attend can stop school on schools"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     75.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274b35f1498d1400e8f5d6",
+   "utterance": "u1",
+   "post_speech_ms": 76.47,
+   "timings": {
+    "final_decision_ms": 0.292,
+    "retrieval_wait_ms": 75.251,
+    "synthesis_ms": 0.873,
+    "answer_telemetry_ms": 0.043,
+    "post_speech_ms": 76.472
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "How are Ergo and Zungshul and funded?"
+     ]
+    ],
+    [
+     "completed",
+     75.5,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274e145951b619008f87ea",
+   "utterance": "u1",
+   "post_speech_ms": 76.18,
+   "timings": {
+    "final_decision_ms": 0.347,
+    "retrieval_wait_ms": 74.408,
+    "synthesis_ms": 1.355,
+    "answer_telemetry_ms": 0.05,
+    "post_speech_ms": 76.176
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "In Nepalese, private schools, what is a primary language of instruction?"
+     ]
+    ],
+    [
+     "completed",
+     74.6,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572756265951b619008f8871",
+   "utterance": "u1",
+   "post_speech_ms": 73.85,
+   "timings": {
+    "final_decision_ms": 0.331,
+    "retrieval_wait_ms": 72.331,
+    "synthesis_ms": 1.115,
+    "answer_telemetry_ms": 0.059,
+    "post_speech_ms": 73.852
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2931,
+     "provisional",
+     [
+      "upper range"
+     ]
+    ],
+    [
+     "completed",
+     -2886.2,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1926,
+     "provisional",
+     [
+      "upper range of annual fees"
+     ]
+    ],
+    [
+     "cancelled",
+     -1925.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -1813.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -889,
+     "provisional",
+     [
+      "upper range of annual fees for non-boarding"
+     ]
+    ],
+    [
+     "cancelled",
+     -888.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -794.0,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "upper range of annual fees for non-boarding students in British public schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     0.2,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     72.5,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274b35f1498d1400e8f5d7",
+   "utterance": "u1",
+   "post_speech_ms": 73.41,
+   "timings": {
+    "final_decision_ms": 0.176,
+    "retrieval_wait_ms": 72.351,
+    "synthesis_ms": 0.837,
+    "answer_telemetry_ms": 0.04,
+    "post_speech_ms": 73.414
+   },
+   "retrievals": [
+    [
+     "queries",
+     -3508,
+     "provisional",
+     [
+      "Along with private individuals"
+     ]
+    ],
+    [
+     "completed",
+     -3425.9,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1468,
+     "provisional",
+     [
+      "what groups sometimes"
+     ]
+    ],
+    [
+     "completed",
+     -1466.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "multi_intent",
+     [
+      "what groups sometimes run ergo",
+      "zung shalom along private individuals"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.5,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     33.9,
+     "",
+     null
+    ],
+    [
+     "completed",
+     72.5,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5728349dff5b5019007d9efe",
+   "utterance": "u1",
+   "post_speech_ms": 73.27,
+   "timings": {
+    "final_decision_ms": 0.28,
+    "retrieval_wait_ms": 72.036,
+    "synthesis_ms": 0.907,
+    "answer_telemetry_ms": 0.033,
+    "post_speech_ms": 73.266
+   },
+   "retrievals": [
+    [
+     "queries",
+     -963,
+     "provisional",
+     [
+      "Dutch word for"
+     ]
+    ],
+    [
+     "completed",
+     -850.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "Dutch word for the Amazon rainforest?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.4,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     72.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5726722bdd62a815002e852c",
+   "utterance": "u1",
+   "post_speech_ms": 71.94,
+   "timings": {
+    "final_decision_ms": 0.312,
+    "retrieval_wait_ms": 70.14,
+    "synthesis_ms": 1.411,
+    "answer_telemetry_ms": 0.059,
+    "post_speech_ms": 71.94
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1918,
+     "provisional",
+     [
+      "number of plant species in"
+     ]
+    ],
+    [
+     "completed",
+     -1789.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -916,
+     "provisional",
+     [
+      "number of plant species in economics and"
+     ]
+    ],
+    [
+     "cancelled",
+     -915.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -914.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "number of plant species in economics and social interest?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.3,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     70.4,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274d9bf1498d1400e8f5f8",
+   "utterance": "u1",
+   "post_speech_ms": 70.23,
+   "timings": {
+    "final_decision_ms": 0.476,
+    "retrieval_wait_ms": 68.446,
+    "synthesis_ms": 1.239,
+    "answer_telemetry_ms": 0.054,
+    "post_speech_ms": 70.233
+   },
+   "retrievals": [
+    [
+     "queries",
+     -768,
+     "provisional",
+     [
+      "What language is used in Chinese"
+     ]
+    ],
+    [
+     "completed",
+     -766.2,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What language is used in Chinese secondary schools in Malaysia?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     68.8,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274eca5951b619008f8803",
+   "utterance": "u1",
+   "post_speech_ms": 69.01,
+   "timings": {
+    "final_decision_ms": 0.173,
+    "retrieval_wait_ms": 66.771,
+    "synthesis_ms": 1.965,
+    "answer_telemetry_ms": 0.084,
+    "post_speech_ms": 69.01
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2048,
+     "multi_intent",
+     [
+      "What city",
+      "along with Hamilton city"
+     ]
+    ],
+    [
+     "completed",
+     -2046.6,
+     "",
+     null
+    ],
+    [
+     "completed",
+     -2046.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -933,
+     "provisional",
+     [
+      "is one of the city"
+     ]
+    ],
+    [
+     "completed",
+     -813.9,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "is one of the largest in New Zealand"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.6,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     66.8,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57264845f1498d1400e8db0e",
+   "utterance": "u1",
+   "post_speech_ms": 67.5,
+   "timings": {
+    "final_decision_ms": 0.345,
+    "retrieval_wait_ms": 66.833,
+    "synthesis_ms": 0.304,
+    "answer_telemetry_ms": 0.015,
+    "post_speech_ms": 67.502
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What contributed to the severity of the plague?"
+     ]
+    ],
+    [
+     "completed",
+     67.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5727500f708984140094dbff",
+   "utterance": "u1",
+   "post_speech_ms": 63.55,
+   "timings": {
+    "final_decision_ms": 0.357,
+    "retrieval_wait_ms": 61.465,
+    "synthesis_ms": 1.66,
+    "answer_telemetry_ms": 0.054,
+    "post_speech_ms": 63.554
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1863,
+     "provisional",
+     [
+      "What percentage of Filipino"
+     ]
+    ],
+    [
+     "completed",
+     -1765.3,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -869,
+     "provisional",
+     [
+      "What percentage of Filipino tertiary education"
+     ]
+    ],
+    [
+     "cancelled",
+     -868.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -767.9,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What percentage of Filipino tertiary education takes place in private schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     61.7,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572759dbdd62a815002e9b95",
+   "utterance": "u1",
+   "post_speech_ms": 63.19,
+   "timings": {
+    "final_decision_ms": 0.693,
+    "retrieval_wait_ms": 61.709,
+    "synthesis_ms": 0.761,
+    "answer_telemetry_ms": 0.019,
+    "post_speech_ms": 63.189
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1529,
+     "provisional",
+     [
+      "What would a parent have to pay to send their"
+     ]
+    ],
+    [
+     "completed",
+     -1527.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -524,
+     "provisional",
+     [
+      "What would a parent have to pay to send their child to a boarding"
+     ]
+    ],
+    [
+     "cancelled",
+     -523.4,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -523.2,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What would a parent have to pay to send their child to a boarding school in 2012?"
+     ]
+    ],
+    [
+     "cancelled",
+     0.1,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     62.3,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5727490bdd62a815002e9a84",
+   "utterance": "u1",
+   "post_speech_ms": 57.95,
+   "timings": {
+    "final_decision_ms": 0.132,
+    "retrieval_wait_ms": 57.198,
+    "synthesis_ms": 0.588,
+    "answer_telemetry_ms": 0.024,
+    "post_speech_ms": 57.953
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1130,
+     "multi_intent",
+     [
+      "comparison",
+      "price between Australian comparison"
+     ]
+    ],
+    [
+     "completed",
+     -1060.2,
+     "",
+     null
+    ],
+    [
+     "completed",
+     -1058.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -143,
+     "provisional",
+     [
+      "price between Australian private schools versus comparison"
+     ]
+    ],
+    [
+     "cancelled",
+     -142.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -72.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "comparison and price between Australian private schools versus a comparison and price between Australian private schools versus public?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.6,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.6,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     57.3,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274d1cdd62a815002e9ab0",
+   "utterance": "u1",
+   "post_speech_ms": 57.63,
+   "timings": {
+    "final_decision_ms": 0.111,
+    "retrieval_wait_ms": 56.836,
+    "synthesis_ms": 0.654,
+    "answer_telemetry_ms": 0.016,
+    "post_speech_ms": 57.626
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1123,
+     "provisional",
+     [
+      "typical annual"
+     ]
+    ],
+    [
+     "completed",
+     -1075.2,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "typical annual a typical annual cost for an Irish private school?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.5,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     56.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274ca8dd62a815002e9aa6",
+   "utterance": "u1",
+   "post_speech_ms": 53.03,
+   "timings": {
+    "final_decision_ms": 0.306,
+    "retrieval_wait_ms": 51.534,
+    "synthesis_ms": 1.125,
+    "answer_telemetry_ms": 0.054,
+    "post_speech_ms": 53.035
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "full name of the AESER?"
+     ]
+    ],
+    [
+     "completed",
+     51.7,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274beff1498d1400e8f5e6",
+   "utterance": "u1",
+   "post_speech_ms": 48.67,
+   "timings": {
+    "final_decision_ms": 0.294,
+    "retrieval_wait_ms": 47.163,
+    "synthesis_ms": 1.138,
+    "answer_telemetry_ms": 0.055,
+    "post_speech_ms": 48.667
+   },
+   "retrievals": [
+    [
+     "queries",
+     -73,
+     "provisional",
+     [
+      "How many examination boards"
+     ]
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "How many examination boards exist in India?"
+     ]
+    ],
+    [
+     "cancelled",
+     0.0,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     47.4,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274f49f1498d1400e8f621",
+   "utterance": "u1",
+   "post_speech_ms": 47.28,
+   "timings": {
+    "final_decision_ms": 0.418,
+    "retrieval_wait_ms": 45.862,
+    "synthesis_ms": 0.955,
+    "answer_telemetry_ms": 0.038,
+    "post_speech_ms": 47.284
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "In what city is Reingy Roo-Roo Girl School?"
+     ]
+    ],
+    [
+     "completed",
+     46.2,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572754dd708984140094dc3d",
+   "utterance": "u1",
+   "post_speech_ms": 47.22,
+   "timings": {
+    "final_decision_ms": 0.329,
+    "retrieval_wait_ms": 45.678,
+    "synthesis_ms": 1.131,
+    "answer_telemetry_ms": 0.063,
+    "post_speech_ms": 47.218
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1793,
+     "provisional",
+     [
+      "How many people"
+     ]
+    ],
+    [
+     "completed",
+     -1695.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -787,
+     "provisional",
+     [
+      "How many people work for"
+     ]
+    ],
+    [
+     "cancelled",
+     -786.4,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -698.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "How many people work for conscap school and schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     0.1,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     45.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57264228ec44d21400f3dcf8",
+   "utterance": "u1",
+   "post_speech_ms": 42.91,
+   "timings": {
+    "final_decision_ms": 0.626,
+    "retrieval_wait_ms": 0.224,
+    "synthesis_ms": 41.988,
+    "answer_telemetry_ms": 0.058,
+    "post_speech_ms": 42.915
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1095,
+     "provisional",
+     [
+      "Telnet used what"
+     ]
+    ],
+    [
+     "completed",
+     -959.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -102,
+     "provisional",
+     [
+      "Telnet used what interface"
+     ]
+    ],
+    [
+     "cancelled",
+     -101.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -12.0,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "Telnet used what interface technology"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.5,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     0.1,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57263677ec44d21400f3dc49",
+   "utterance": "u1",
+   "post_speech_ms": 39.38,
+   "timings": {
+    "final_decision_ms": 0.178,
+    "retrieval_wait_ms": 38.827,
+    "synthesis_ms": 0.342,
+    "answer_telemetry_ms": 0.022,
+    "post_speech_ms": 39.379
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1129,
+     "provisional",
+     [
+      "What concept was developed by"
+     ]
+    ],
+    [
+     "completed",
+     -997.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -118,
+     "provisional",
+     [
+      "What concept was developed by Barron while"
+     ]
+    ],
+    [
+     "cancelled",
+     -117.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -12.5,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What concept was developed by Barron while researching at Rand?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.5,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     39.0,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_57274d1cdd62a815002e9ab2",
+   "utterance": "u1",
+   "post_speech_ms": 38.22,
+   "timings": {
+    "final_decision_ms": 0.329,
+    "retrieval_wait_ms": 36.62,
+    "synthesis_ms": 1.207,
+    "answer_telemetry_ms": 0.047,
+    "post_speech_ms": 38.218
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1108,
+     "provisional",
+     [
+      "What might the fees to attend an"
+     ]
+    ],
+    [
+     "completed",
+     -1106.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -92,
+     "provisional",
+     [
+      "What might the fees to attend an Irish boarding"
+     ]
+    ],
+    [
+     "cancelled",
+     -91.3,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What might the fees to attend an Irish boarding school rise to?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.0,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     36.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5727515f708984140094dc14",
+   "utterance": "u1",
+   "post_speech_ms": 36.24,
+   "timings": {
+    "final_decision_ms": 0.294,
+    "retrieval_wait_ms": 0.108,
+    "synthesis_ms": 35.74,
+    "answer_telemetry_ms": 0.077,
+    "post_speech_ms": 36.239
+   },
+   "retrievals": [
+    [
+     "queries",
+     -4131,
+     "provisional",
+     [
+      "In South"
+     ]
+    ],
+    [
+     "completed",
+     -4059.2,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -3156,
+     "provisional",
+     [
+      "In South Africa"
+     ]
+    ],
+    [
+     "cancelled",
+     -3155.4,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -3154.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -2172,
+     "provisional",
+     [
+      "along with privately governed schools south africa"
+     ]
+    ],
+    [
+     "completed",
+     -2170.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -155,
+     "provisional",
+     [
+      "what schools are classified as"
+     ]
+    ],
+    [
+     "completed",
+     -63.3,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "what schools are classified as independent"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.4,
+     "",
+     [
+      "u1.q4"
+     ]
+    ],
+    [
+     "completed",
+     0.5,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572756265951b619008f8870",
+   "utterance": "u1",
+   "post_speech_ms": 30.42,
+   "timings": {
+    "final_decision_ms": 0.338,
+    "retrieval_wait_ms": 28.873,
+    "synthesis_ms": 1.158,
+    "answer_telemetry_ms": 0.04,
+    "post_speech_ms": 30.423
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1113,
+     "provisional",
+     [
+      "what percentage of British students"
+     ]
+    ],
+    [
+     "completed",
+     -1111.8,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -108,
+     "provisional",
+     [
+      "what percentage of British students attend"
+     ]
+    ],
+    [
+     "cancelled",
+     -107.0,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "At a level, what percentage of British students attend fee-paying schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     29.1,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_572756265951b619008f886e",
+   "utterance": "u1",
+   "post_speech_ms": 24.27,
+   "timings": {
+    "final_decision_ms": 0.377,
+    "retrieval_wait_ms": 22.634,
+    "synthesis_ms": 1.21,
+    "answer_telemetry_ms": 0.033,
+    "post_speech_ms": 24.267
+   },
+   "retrievals": [
+    [
+     "queries",
+     -1096,
+     "provisional",
+     [
+      "What schools do preparatory schools"
+     ]
+    ],
+    [
+     "completed",
+     -1012.7,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -84,
+     "provisional",
+     [
+      "What schools do preparatory schools prepare British"
+     ]
+    ],
+    [
+     "cancelled",
+     -83.7,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     5.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "What schools do preparatory schools prepare British children to attend?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.5,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     22.9,
+     "",
+     null
+    ]
+   ]
+  },
+  {
+   "scenario": "hey_a_5727500f708984140094dbfe",
+   "utterance": "u1",
+   "post_speech_ms": 7.76,
+   "timings": {
+    "final_decision_ms": 0.288,
+    "retrieval_wait_ms": 6.035,
+    "synthesis_ms": 1.368,
+    "answer_telemetry_ms": 0.052,
+    "post_speech_ms": 7.761
+   },
+   "retrievals": [
+    [
+     "queries",
+     -2158,
+     "provisional",
+     [
+      "what percentage of"
+     ]
+    ],
+    [
+     "completed",
+     -2085.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1139,
+     "provisional",
+     [
+      "what percentage of secondary school"
+     ]
+    ],
+    [
+     "cancelled",
+     -1138.2,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -1035.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -117,
+     "provisional",
+     [
+      "what percentage of secondary school students attend"
+     ]
+    ],
+    [
+     "cancelled",
+     -116.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -11.4,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -1,
+     "provisional",
+     [
+      "In the Philippines, what percentage of secondary school students attend private schools?"
+     ]
+    ],
+    [
+     "cancelled",
+     -0.4,
+     "",
+     [
+      "u1.q3"
+     ]
+    ],
+    [
+     "completed",
+     6.2,
+     "",
+     null
+    ]
+   ]
+  }
+ ]
+}

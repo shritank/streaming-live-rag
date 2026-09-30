@@ -1,0 +1,6 @@
+0/438
+100/438
+200/438
+300/438
+400/438
+{"model": "base.en", "device": "cuda", "compute_type": "int8", "step_s": 1.0, "min_first_s": 2.0, "max_new_tokens": 64, "n": 438, "asr_post_speech_ms_p50": 102, "asr_post_speech_ms_p95": 206}

@@ -1,0 +1,140 @@
+{
+ "scenario_id": "hey_a_572756265951b619008f886f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2051,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What percentage?"
+   }
+  },
+  {
+   "timestamp_ms": 3059,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What"
+   }
+  },
+  {
+   "timestamp_ms": 3059,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What percentage of British children"
+   }
+  },
+  {
+   "timestamp_ms": 4063,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " percentage of British children"
+   }
+  },
+  {
+   "timestamp_ms": 4063,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What percentage of British children are educated?"
+   }
+  },
+  {
+   "timestamp_ms": 5094,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " are"
+   }
+  },
+  {
+   "timestamp_ms": 5094,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What percentage of British children are educated at G.S.?"
+   }
+  },
+  {
+   "timestamp_ms": 6107,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " educated at"
+   }
+  },
+  {
+   "timestamp_ms": 6107,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What percentage of British children are educated at GSEE level?"
+   }
+  },
+  {
+   "timestamp_ms": 7112,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What percentage of British children are educated at G.S.C.E. level in fee-paying school?"
+   }
+  },
+  {
+   "timestamp_ms": 7942,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " GSE level in fee-paying schools?"
+   }
+  },
+  {
+   "timestamp_ms": 7943,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9942,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What percentage of British children are educated at GSCE level in fee-paying schools?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

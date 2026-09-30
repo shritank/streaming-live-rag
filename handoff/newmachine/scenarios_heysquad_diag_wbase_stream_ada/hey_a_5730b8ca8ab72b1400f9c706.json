@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5730b8ca8ab72b1400f9c706",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5154,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who, besides Woodrow Wilson himself,"
+   }
+  },
+  {
+   "timestamp_ms": 6125,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " had the idea"
+   }
+  },
+  {
+   "timestamp_ms": 7106,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " for the"
+   }
+  },
+  {
+   "timestamp_ms": 7500,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " inquiry?"
+   }
+  },
+  {
+   "timestamp_ms": 7501,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9500,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who besides Woodrow Wilson himself had the idea for the inquiry?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

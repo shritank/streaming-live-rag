@@ -1,0 +1,51 @@
+{
+ "description": "Refusal gate: logistic model of P(the asserted answer is correct). Refuse when p < threshold.",
+ "features": [
+  "top",
+  "sentence",
+  "overlap_ce",
+  "overlap_section",
+  "margin",
+  "reader_margin"
+ ],
+ "feature_definitions": {
+  "top": "reranker logit of the top evidence chunk",
+  "sentence": "cross-encoder score of (sub-query, '<title of top chunk>: <claim sentence>')",
+  "overlap_ce": "share of the sub-query's content tokens present in the claim sentence",
+  "overlap_section": "share of the sub-query's content tokens present in the top chunk's whole section",
+  "margin": "top evidence logit minus second evidence logit (0 if only one)",
+  "reader_margin": "SQuAD2 reader: best span score minus the lowest no-answer score over the top-3 chunks"
+ },
+ "scaler_mean": [
+  1.8733665472159038,
+  2.0260108526264395,
+  0.5132615962732663,
+  0.5999757822468781,
+  5.020599661629874,
+  2.863184196590254
+ ],
+ "scaler_scale": [
+  5.351222134227087,
+  5.406444289186672,
+  0.23379704269997112,
+  0.2253898273184101,
+  4.207502742457045,
+  7.60232884796994
+ ],
+ "coef": [
+  -0.49525760196117957,
+  1.2554470265361375,
+  -0.0025780975423165793,
+  -0.3682199120303971,
+  0.15508542796756183,
+  0.9418115829843924
+ ],
+ "intercept": -0.6346712223041582,
+ "threshold": 0.4,
+ "fitted_on": [
+  "eval/results/rsweep_heydev_clean.json",
+  "eval/results/rsweep_heydev_asr.json",
+  "HeySQuAD human validation (yijingwu/HeySQuAD_human@2a9aff60), dev-corpus articles only"
+ ],
+ "threshold_rule": "maximise expected utility on DEV with p_unanswerable=0.3, cost of a wrong answer c=1 (U = (1-p)(recall - c*wrong_rate) - p*c*answered_unanswerable_rate)"
+}

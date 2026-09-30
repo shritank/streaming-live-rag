@@ -1,0 +1,122 @@
+{
+ "scenario_id": "hey_u_5a2c3d73bfd06b001a5aea8d",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3203,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "You"
+   }
+  },
+  {
+   "timestamp_ms": 5160,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " was the"
+   }
+  },
+  {
+   "timestamp_ms": 6207,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " one"
+   }
+  },
+  {
+   "timestamp_ms": 7215,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " linear SD"
+   }
+  },
+  {
+   "timestamp_ms": 8220,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " channel"
+   }
+  },
+  {
+   "timestamp_ms": 9295,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Virgin Media carried"
+   }
+  },
+  {
+   "timestamp_ms": 10294,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " from November"
+   }
+  },
+  {
+   "timestamp_ms": 12287,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 2006 to July"
+   }
+  },
+  {
+   "timestamp_ms": 12505,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " What was the one linear SD channel Virgin Media carried from November 2006 to July 2009?"
+   }
+  },
+  {
+   "timestamp_ms": 12506,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 14505,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What was the one linear SD channel Virgin Media carried from November 2006 to July 2009?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

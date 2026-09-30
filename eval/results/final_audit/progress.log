@@ -1,0 +1,39 @@
+13:46:27 A1 latency profile DEV (real time, 1x)
+13:57:36 A2 latency profile DIAG (real time, 1x)
+14:09:29 A3 eval.compare streaming / deferred / baseline on DIAG (1x, paired turns)
+14:44:50 A4 telemetry overhead (Task 4 section 4.3): null vs buffered vs jsonl sink
+15:01:34 PHASE A DONE
+15:01:34 B start
+15:03:08 B done abl_dev_baseline
+15:03:10 B done error analysis dev
+15:03:13 B done mode_streaming_diag
+15:04:01 B done gates legacy ts8 reps3
+15:04:42 B done abl_dev_sparse
+15:04:53 B done error analysis diag
+15:04:54 B done mode_deferred_diag
+15:05:16 B done gates real_corpus ts8 reps3
+15:06:15 B done abl_dev_dense
+15:06:40 B done mode_baseline_diag
+15:07:47 B done abl_dev_norerank
+15:08:20 B done mode_deferred_dev
+15:08:32 B done retrieval ablation dev
+15:09:14 B done spoken_dev_typed
+15:09:26 B done abl_dev_nogate
+15:10:00 B done mode_baseline_dev
+15:10:58 B done abl_dev_lexsel
+15:11:51 B done retrieval ablation diag
+15:12:33 B done abl_dev_nospec
+15:14:10 B done abl_diag_baseline
+15:15:23 B done spoken_diag_typed
+15:15:49 B done abl_diag_sparse
+15:17:31 B done abl_diag_dense
+15:19:09 B done abl_diag_norerank
+15:20:46 B done abl_diag_nogate
+15:22:28 B done abl_diag_lexsel
+15:23:01 B done spoken_dev_nogate
+15:24:10 B done abl_diag_nospec
+15:29:14 B done spoken_diag_nogate
+15:34:48 B done gates real_dev ts1 reps3
+15:36:59 B done gates real_diag ts1 reps3
+15:36:59 PHASE B DONE
+ALL_DONE

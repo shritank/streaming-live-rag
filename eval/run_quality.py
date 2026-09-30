@@ -109,7 +109,7 @@ async def run(scenario_dir: str, corpus_dir: str, overrides: list[str], time_sca
     gates = {"g2": [0, 0, 0, 0], "g3": [0, 0], "g4": [0, 0, 0], "g5": [0, 0], "g6": [0, 0]}
     latencies: list[float] = []
     raw: dict = {}
-    started = time.monotonic()
+    started = time.perf_counter()
 
     for path in discover_scenarios(scenario_dir):
         gt = load_ground_truth(path)
@@ -127,9 +127,11 @@ async def run(scenario_dir: str, corpus_dir: str, overrides: list[str], time_sca
 
     latencies.sort()
     pct = lambda p: latencies[min(len(latencies) - 1, int(p * (len(latencies) - 1)))] if latencies else None
+    from streaming_rag.retrieval.neural import ACTIVE_PROVIDERS
     report = {
         "scenario_dir": scenario_dir, "corpus_dir": corpus_dir, "overrides": overrides,
-        "wall_s": round(time.monotonic() - started, 1), "gates": gates,
+        "wall_s": round(time.perf_counter() - started, 1), "gates": gates,
+        "execution_providers": {Path(k).name: v for k, v in ACTIVE_PROVIDERS.items()},
         "latency_post_utterance_ms": {"p50": pct(0.5), "p95": pct(0.95), "n": len(latencies)},
         "raw": raw,
     }
@@ -138,7 +140,8 @@ async def run(scenario_dir: str, corpus_dir: str, overrides: list[str], time_sca
 
 def print_summary(report: dict) -> None:
     g = report["gates"]
-    print(f"config overrides: {report['overrides'] or '(defaults)'}   wall {report['wall_s']}s")
+    print(f"config overrides: {report['overrides'] or '(defaults)'}   wall {report['wall_s']}s   "
+          f"providers {sorted(set(report.get('execution_providers', {}).values())) or '-'}")
     print(f"  G2 early retrieval   {fmt_rate(g['g2'][0], g['g2'][1])}  false triggers {g['g2'][2]}/{g['g2'][3]}")
     print(f"  G3 >=2 sub-queries   {fmt_rate(g['g3'][0], g['g3'][1])}")
     print(f"  G4 self-reported     {fmt_rate(g['g4'][0], g['g4'][1])}  fabricated={g['g4'][2]}")

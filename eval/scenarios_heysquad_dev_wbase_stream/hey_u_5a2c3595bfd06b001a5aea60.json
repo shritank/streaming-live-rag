@@ -1,0 +1,104 @@
+{
+ "scenario_id": "hey_u_5a2c3595bfd06b001a5aea60",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2362,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "You"
+   }
+  },
+  {
+   "timestamp_ms": 4362,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " satellite made it"
+   }
+  },
+  {
+   "timestamp_ms": 6362,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " impossible for"
+   }
+  },
+  {
+   "timestamp_ms": 8362,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Sky Digital to launch an"
+   }
+  },
+  {
+   "timestamp_ms": 9791,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " all-new"
+   }
+  },
+  {
+   "timestamp_ms": 10227,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " digital service?"
+   }
+  },
+  {
+   "timestamp_ms": 10687,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " What satellite made it impossible for Sky Digital to launch an all-new digital service?"
+   }
+  },
+  {
+   "timestamp_ms": 10688,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 12687,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What satellite made it impossible for Sky Digital to launch an all new digital service?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

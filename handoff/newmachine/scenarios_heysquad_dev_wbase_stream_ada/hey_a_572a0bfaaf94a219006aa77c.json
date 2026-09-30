@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572a0bfaaf94a219006aa77c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 6225,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Scientists disagree with how the Amazon"
+   }
+  },
+  {
+   "timestamp_ms": 7331,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " rainforest change over"
+   }
+  },
+  {
+   "timestamp_ms": 9304,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " time, with some arguing that it was"
+   }
+  },
+  {
+   "timestamp_ms": 10350,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " reduced to"
+   }
+  },
+  {
+   "timestamp_ms": 12240,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " disagreed with how the Amazon rainforest change over time, with some arguing that it was reduced to isolated refugia I want to operate it I want"
+   }
+  },
+  {
+   "timestamp_ms": 12241,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 14240,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Scientists disagree with how the Amazon rainforest changed over time with some arguing that it was reduced to isolated refugia seperated by what?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

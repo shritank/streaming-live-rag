@@ -85,13 +85,85 @@ def build(corpus_dir: str, name: str, n_unanswerable: int | None, seed: int) -> 
     return {"answerable": len(answerable), "unanswerable": len(unanswerable), **counts}
 
 
+def retranscribe(src: str, transcripts: str, out: str) -> dict:
+    """Same questions, same gold, a different ASR front end: rebuild every
+    scenario of `src` with the transcript `transcripts` gives for its
+    HeySQuAD id ({id: {"text": ...}} as written by an ASR run)."""
+    items = json.loads(Path(transcripts).read_text(encoding="utf-8"))["items"]
+    dst = Path(out)
+    dst.mkdir(parents=True, exist_ok=True)
+    n = missing = 0
+    for path in sorted(Path(src).glob("*.json")):
+        sc = json.loads(path.read_text(encoding="utf-8"))
+        rid = sc["scenario_id"].split("_", 2)[2]
+        gt = sc["ground_truth"]["turns"]["u1"]
+        if rid not in items:
+            missing += 1
+            continue
+        new = _scenario(sc["scenario_id"], items[rid]["text"], gt["gold_sub_intents"][0], gt["expect_uncertainty"])
+        (dst / path.name).write_text(json.dumps(new, indent=1), encoding="utf-8")
+        n += 1
+    return {"written": n, "missing_transcript": missing}
+
+
+def restream(src: str, stream_json: str, out: str, with_hypotheses: bool = False) -> dict:
+    """Same questions, same gold, transcript chunks at the times a streaming
+    ASR actually committed them ({id: {"events": [[ms, text_delta], ...]}}).
+    utterance_end is sent when the ASR's final flush lands - the engine
+    cannot answer from words it has not received yet."""
+    items = json.loads(Path(stream_json).read_text(encoding="utf-8"))["items"]
+    dst = Path(out)
+    dst.mkdir(parents=True, exist_ok=True)
+    n = missing = 0
+    for path in sorted(Path(src).glob("*.json")):
+        sc = json.loads(path.read_text(encoding="utf-8"))
+        rid = sc["scenario_id"].split("_", 2)[2]
+        if rid not in items or not items[rid]["events"]:
+            missing += 1
+            continue
+        gt = sc["ground_truth"]["turns"]["u1"]
+        text = items[rid]["text"]
+        chunks = [{"timestamp_ms": ms, "event_type": "transcript_chunk",
+                   "payload": {"session_id": "s1", "utterance_id": "u1", "text": delta}}
+                  for ms, delta in items[rid]["events"]]
+        last = chunks[-1]["timestamp_ms"]
+        if with_hypotheses:
+            # the ASR's full hypothesis after each decode before the final flush
+            # (stream_asr.py "hypotheses"); sorted after a chunk at the same ms
+            hyps = [{"timestamp_ms": ms, "event_type": "transcript_hypothesis",
+                     "payload": {"session_id": "s1", "utterance_id": "u1", "text": text}}
+                    for ms, text in items[rid].get("hypotheses", []) if ms < last and text]
+            chunks = sorted(chunks + hyps, key=lambda e: (e["timestamp_ms"], e["event_type"] != "transcript_chunk"))
+        new = {"scenario_id": sc["scenario_id"], "template": "heysquad_stream",
+               "events": [{"timestamp_ms": 0, "event_type": "session_start", "payload": {"session_id": "s1"}}]
+                         + chunks
+                         + [{"timestamp_ms": last + 1, "event_type": "utterance_end",
+                             "payload": {"session_id": "s1", "utterance_id": "u1"}},
+                            {"timestamp_ms": last + 2000, "event_type": "session_end",
+                             "payload": {"session_id": "s1"}}],
+               "ground_truth": {"turns": {"u1": {**gt, "eligible_for_early_retrieval": _has_early_opportunity(text)}}}}
+        (dst / path.name).write_text(json.dumps(new, indent=1), encoding="utf-8")
+        n += 1
+    return {"written": n, "missing_stream": missing}
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--corpus-dir", required=True)
-    parser.add_argument("--name", required=True)
+    parser.add_argument("--corpus-dir")
+    parser.add_argument("--name")
     parser.add_argument("--n-unanswerable", type=int, default=None)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--retranscribe", nargs=3, metavar=("SRC_SCENARIOS", "TRANSCRIPTS_JSON", "OUT_DIR"))
+    parser.add_argument("--restream", nargs=3, metavar=("SRC_SCENARIOS", "STREAM_JSON", "OUT_DIR"))
+    parser.add_argument("--with-hypotheses", action="store_true",
+                        help="--restream: also send the ASR's uncommitted hypotheses (transcript_hypothesis events)")
     args = parser.parse_args(argv)
+    if args.restream:
+        print(restream(*args.restream, with_hypotheses=args.with_hypotheses))
+        return 0
+    if args.retranscribe:
+        print(retranscribe(*args.retranscribe))
+        return 0
     print(build(args.corpus_dir, args.name, args.n_unanswerable, args.seed))
     return 0
 

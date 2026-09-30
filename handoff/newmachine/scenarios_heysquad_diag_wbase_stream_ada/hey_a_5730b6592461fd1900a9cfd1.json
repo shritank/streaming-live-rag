@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5730b6592461fd1900a9cfd1",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4085,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In which continent"
+   }
+  },
+  {
+   "timestamp_ms": 5084,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " besides"
+   }
+  },
+  {
+   "timestamp_ms": 6079,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Asia"
+   }
+  },
+  {
+   "timestamp_ms": 8885,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " continent, besides Asia, were major beings made by the British Empire in the late 19th century?"
+   }
+  },
+  {
+   "timestamp_ms": 8886,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10885,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In which continent besides Asia were major gains made by the British Empire in the late 19th century?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

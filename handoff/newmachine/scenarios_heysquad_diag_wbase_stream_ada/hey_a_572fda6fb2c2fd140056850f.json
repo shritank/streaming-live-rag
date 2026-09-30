@@ -1,0 +1,104 @@
+{
+ "scenario_id": "hey_a_572fda6fb2c2fd140056850f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3063,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How is the"
+   }
+  },
+  {
+   "timestamp_ms": 4063,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " process of"
+   }
+  },
+  {
+   "timestamp_ms": 6082,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " allocating seats"
+   }
+  },
+  {
+   "timestamp_ms": 7105,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " repeated until"
+   }
+  },
+  {
+   "timestamp_ms": 8091,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " all"
+   }
+  },
+  {
+   "timestamp_ms": 9126,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " available seats have"
+   }
+  },
+  {
+   "timestamp_ms": 9800,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " been determined?"
+   }
+  },
+  {
+   "timestamp_ms": 9801,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11800,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How is the process of allocating seats repeated until all available seats have been determined?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

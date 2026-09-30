@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_57264d9edd62a815002e8101",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5104,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "According to the"
+   }
+  },
+  {
+   "timestamp_ms": 6118,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " triple A, the image of the gas"
+   }
+  },
+  {
+   "timestamp_ms": 7110,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " station that ran out of"
+   }
+  },
+  {
+   "timestamp_ms": 8126,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " gasoline."
+   }
+  },
+  {
+   "timestamp_ms": 8534,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " A footage of the gas stations that ran out of gasoline."
+   }
+  },
+  {
+   "timestamp_ms": 8535,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10534,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "According to the AAA, what is the percentage of the gas stations that ran out of gasoline?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

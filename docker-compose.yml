@@ -1,8 +1,11 @@
 services:
   streaming-rag:
     build: .
+    # .env is optional: every setting has a default below, so `docker compose up` works on a fresh clone.
+    # Copy .env.example to .env only to override a setting (e.g. an LLM provider key).
     env_file:
-      - .env
+      - path: .env
+        required: false
     environment:
       - LLM_PROVIDER=${LLM_PROVIDER:-fake}
       - LLM_MODEL=${LLM_MODEL:-fake-model}

@@ -1,0 +1,8 @@
+scenarios run: 47
+G2 early retrieval : 16/16 = 100.0%  (false-trigger rate 0.0%)
+G3 multi-intent    : 10/10 = 100.0%
+G4 grounding       : 68/68 = 100.0%  (fabricated=0)
+G5 refinement      : 10/10 = 100.0%
+G6 telemetry cov.  : 67/67 = 100.0%  (schema errors=0)
+
+VERDICT: PASS

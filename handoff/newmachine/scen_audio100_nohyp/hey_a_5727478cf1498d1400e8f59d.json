@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_5727478cf1498d1400e8f59d",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4170,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Along with location,"
+   }
+  },
+  {
+   "timestamp_ms": 7110,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " endowment, and the willingness of parents to"
+   }
+  },
+  {
+   "timestamp_ms": 7283,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " pay, what factor"
+   }
+  },
+  {
+   "timestamp_ms": 8184,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " influences"
+   }
+  },
+  {
+   "timestamp_ms": 8506,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " private school tuition?"
+   }
+  },
+  {
+   "timestamp_ms": 8507,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10506,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Along with location, endowment and the willingness of parents to pay, what factor influences private school tuition?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

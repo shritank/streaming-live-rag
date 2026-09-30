@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a2ecb43a83784001a7d248e",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3231,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "In what"
+   }
+  },
+  {
+   "timestamp_ms": 4288,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " month in"
+   }
+  },
+  {
+   "timestamp_ms": 5275,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 1349 did the second"
+   }
+  },
+  {
+   "timestamp_ms": 6281,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " wave of the plague"
+   }
+  },
+  {
+   "timestamp_ms": 6656,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " reach England?"
+   }
+  },
+  {
+   "timestamp_ms": 6657,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8656,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "In what month in 1349 did the second wave of the plague reach England?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "e5": {
+  "nodes_before": 1243,
+  "nodes_after": 88,
+  "fused_ops": {
+   "EmbedLayerNormalization": 1,
+   "Attention": 12,
+   "BiasGelu": 12,
+   "SkipLayerNormalization": 24
+  },
+  "maxdiff_origGPU_vs_origCPU": 0.02326512336730957,
+  "maxdiff_fusedGPU_vs_origCPU": 0.03560996055603027,
+  "maxdiff_fusedGPU_vs_origGPU": 0.058875083923339844,
+  "fused_bound": "CUDAExecutionProvider"
+ },
+ "ce": {
+  "nodes_before": 785,
+  "nodes_after": 358,
+  "fused_ops": {
+   "BiasGelu": 6,
+   "LayerNormalization": 1,
+   "SkipLayerNormalization": 12
+  },
+  "maxdiff_origGPU_vs_origCPU": 0.0004792213439941406,
+  "maxdiff_fusedGPU_vs_origCPU": 0.0004673004150390625,
+  "maxdiff_fusedGPU_vs_origGPU": 0.0004734992980957031,
+  "fused_bound": "CUDAExecutionProvider"
+ },
+ "reader": {
+  "nodes_before": 1258,
+  "nodes_after": 667,
+  "fused_ops": {
+   "BiasGelu": 12,
+   "LayerNormalization": 1,
+   "SkipLayerNormalization": 24
+  },
+  "maxdiff_origGPU_vs_origCPU": 0.009369134902954102,
+  "maxdiff_fusedGPU_vs_origCPU": 0.00748133659362793,
+  "maxdiff_fusedGPU_vs_origGPU": 0.009841322898864746,
+  "fused_bound": "CUDAExecutionProvider"
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5ad3f846604f3c001a3ffa5f",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4202,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "White"
+   }
+  },
+  {
+   "timestamp_ms": 5125,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " engines, along with diesel engines, have"
+   }
+  },
+  {
+   "timestamp_ms": 6130,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " overtaken"
+   }
+  },
+  {
+   "timestamp_ms": 8038,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Wet engines along with diesel engines have overtaken steam engines for gas propulsion."
+   }
+  },
+  {
+   "timestamp_ms": 8039,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10038,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What engines, along with diesel engines, have overtaken steam engines for gas propulsion?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

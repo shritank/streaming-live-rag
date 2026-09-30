@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_5729eb34af94a219006aa6c9",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3584,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Which"
+   }
+  },
+  {
+   "timestamp_ms": 4397,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " archeologists propose"
+   }
+  },
+  {
+   "timestamp_ms": 5246,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the idea that the"
+   }
+  },
+  {
+   "timestamp_ms": 6221,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Amazon rainforest"
+   }
+  },
+  {
+   "timestamp_ms": 7243,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " connects to"
+   }
+  },
+  {
+   "timestamp_ms": 8033,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " staying large population?"
+   }
+  },
+  {
+   "timestamp_ms": 8034,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10033,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which archaeologist proposed the idea that the Amazon rainforest couldn't sustain large populations? "
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

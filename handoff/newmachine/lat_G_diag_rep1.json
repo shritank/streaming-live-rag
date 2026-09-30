@@ -1,0 +1,606 @@
+{
+ "scenarios": "eval/scenarios_real_test",
+ "corpus_dir": "data/corpus_test",
+ "overrides": [],
+ "time_scale": 1.0,
+ "n_scenarios": 60,
+ "cold_start_s": 8.8,
+ "execution_providers": {
+  "fused/e5.onnx": "CUDAExecutionProvider",
+  "fused/ce.onnx": "CUDAExecutionProvider",
+  "fused/reader.onnx": "CUDAExecutionProvider"
+ },
+ "stages": {
+  "ce.claim_ms": {
+   "n": 214,
+   "p50": 19.253,
+   "p95": 34.467,
+   "p99": 66.083,
+   "max": 90.205,
+   "mean": 21.552
+  },
+  "ce.gate_ms": {
+   "n": 198,
+   "p50": 12.963,
+   "p95": 30.078,
+   "p99": 46.354,
+   "max": 51.733,
+   "mean": 15.277
+  },
+  "ce.rerank_ms": {
+   "n": 240,
+   "p50": 13.435,
+   "p95": 22.268,
+   "p99": 34.712,
+   "max": 41.265,
+   "mean": 14.452
+  },
+  "controller.decision_ms": {
+   "n": 347,
+   "p50": 0.496,
+   "p95": 1.009,
+   "p99": 1.283,
+   "max": 7.425,
+   "mean": 0.556
+  },
+  "engine.answer_telemetry_ms": {
+   "n": 90,
+   "p50": 0.06,
+   "p95": 0.086,
+   "p99": 0.103,
+   "max": 0.172,
+   "mean": 0.057
+  },
+  "engine.final_decision_ms": {
+   "n": 90,
+   "p50": 0.577,
+   "p95": 0.847,
+   "p99": 1.679,
+   "max": 7.521,
+   "mean": 0.626
+  },
+  "engine.post_speech_ms": {
+   "n": 90,
+   "p50": 2.337,
+   "p95": 3.51,
+   "p99": 4.805,
+   "max": 9.183,
+   "mean": 2.242
+  },
+  "engine.retrieval_wait_ms": {
+   "n": 90,
+   "p50": 0.204,
+   "p95": 0.35,
+   "p99": 0.454,
+   "max": 0.458,
+   "mean": 0.185
+  },
+  "engine.synthesis_ms": {
+   "n": 90,
+   "p50": 1.452,
+   "p95": 2.323,
+   "p99": 2.8,
+   "max": 3.428,
+   "mean": 1.355
+  },
+  "reader.other_ms": {
+   "n": 207,
+   "p50": 30.065,
+   "p95": 57.821,
+   "p99": 85.523,
+   "max": 116.073,
+   "mean": 34.036
+  },
+  "retrieval.bm25_ms": {
+   "n": 240,
+   "p50": 3.829,
+   "p95": 6.784,
+   "p99": 8.565,
+   "max": 10.949,
+   "mean": 4.046
+  },
+  "retrieval.dense_topk_ms": {
+   "n": 240,
+   "p50": 0.663,
+   "p95": 1.071,
+   "p99": 1.269,
+   "max": 3.111,
+   "mean": 0.704
+  },
+  "retrieval.e5_encode_ms": {
+   "n": 240,
+   "p50": 11.024,
+   "p95": 19.322,
+   "p99": 23.134,
+   "max": 33.661,
+   "mean": 11.934
+  },
+  "retrieval.rrf_ms": {
+   "n": 240,
+   "p50": 0.046,
+   "p95": 0.083,
+   "p99": 0.159,
+   "max": 0.479,
+   "mean": 0.052
+  },
+  "retrieval.search.other_ms": {
+   "n": 240,
+   "p50": 41.901,
+   "p95": 70.837,
+   "p99": 77.664,
+   "max": 91.365,
+   "mean": 43.688
+  },
+  "retrieval.subquery_ms": {
+   "n": 240,
+   "p50": 43.084,
+   "p95": 78.317,
+   "p99": 87.049,
+   "max": 96.367,
+   "mean": 46.035
+  },
+  "synthesis.claim_select_ms": {
+   "n": 214,
+   "p50": 22.329,
+   "p95": 37.45,
+   "p99": 67.208,
+   "max": 93.131,
+   "mean": 24.422
+  },
+  "synthesis.gate_ms": {
+   "n": 198,
+   "p50": 14.053,
+   "p95": 33.135,
+   "p99": 46.582,
+   "max": 52.165,
+   "mean": 16.693
+  },
+  "synthesis.grounding_ms": {
+   "n": 75,
+   "p50": 0.391,
+   "p95": 0.993,
+   "p99": 1.467,
+   "max": 1.955,
+   "mean": 0.447
+  },
+  "synthesis.prefetch_ms": {
+   "n": 240,
+   "p50": 35.504,
+   "p95": 64.435,
+   "p99": 101.822,
+   "max": 142.511,
+   "mean": 35.77
+  }
+ },
+ "slowest": {
+  "ce.claim_ms": [
+   [
+    90.2,
+    "gen_late_detail_012",
+    7.18
+   ],
+   [
+    90.1,
+    "gen_multi_intent_002",
+    4.95
+   ],
+   [
+    68.3,
+    "gen_multi_intent_003",
+    2.52
+   ],
+   [
+    51.3,
+    "gen_multi_intent_004",
+    4.9
+   ],
+   [
+    50.0,
+    "gen_multi_intent_004",
+    2.53
+   ]
+  ],
+  "ce.gate_ms": [
+   [
+    51.7,
+    "gen_multi_intent_004",
+    2.58
+   ],
+   [
+    49.0,
+    "gen_late_detail_012",
+    7.23
+   ],
+   [
+    46.3,
+    "gen_multi_intent_004",
+    4.95
+   ],
+   [
+    43.3,
+    "gen_multi_intent_001",
+    2.57
+   ],
+   [
+    37.4,
+    "gen_late_detail_017",
+    2.6
+   ]
+  ],
+  "ce.rerank_ms": [
+   [
+    41.3,
+    "gen_late_detail_013",
+    7.89
+   ],
+   [
+    36.1,
+    "gen_multi_intent_005",
+    0.12
+   ],
+   [
+    35.4,
+    "gen_multi_intent_004",
+    2.46
+   ],
+   [
+    33.6,
+    "gen_multi_intent_005",
+    4.9
+   ],
+   [
+    31.6,
+    "gen_late_detail_012",
+    7.06
+   ]
+  ],
+  "reader.other_ms": [
+   [
+    116.1,
+    "gen_late_detail_012",
+    7.21
+   ],
+   [
+    102.7,
+    "gen_multi_intent_002",
+    4.96
+   ],
+   [
+    85.6,
+    "gen_multi_intent_004",
+    4.94
+   ],
+   [
+    83.7,
+    "gen_multi_intent_004",
+    2.56
+   ],
+   [
+    83.5,
+    "gen_multi_intent_003",
+    2.54
+   ]
+  ],
+  "retrieval.bm25_ms": [
+   [
+    10.9,
+    "gen_multi_intent_012",
+    2.43
+   ],
+   [
+    9.9,
+    "gen_multi_intent_019",
+    4.84
+   ],
+   [
+    8.7,
+    "gen_multi_intent_017",
+    7.23
+   ],
+   [
+    8.4,
+    "gen_multi_intent_018",
+    7.24
+   ],
+   [
+    8.3,
+    "gen_late_detail_017",
+    4.84
+   ]
+  ],
+  "retrieval.dense_topk_ms": [
+   [
+    3.1,
+    "gen_multi_intent_003",
+    4.85
+   ],
+   [
+    1.4,
+    "gen_multi_intent_005",
+    4.87
+   ],
+   [
+    1.3,
+    "gen_multi_intent_005",
+    0.08
+   ],
+   [
+    1.3,
+    "gen_multi_intent_013",
+    2.44
+   ],
+   [
+    1.3,
+    "gen_suppression_004",
+    2.42
+   ]
+  ],
+  "retrieval.e5_encode_ms": [
+   [
+    33.7,
+    "gen_multi_intent_003",
+    4.85
+   ],
+   [
+    24.1,
+    "gen_multi_intent_007",
+    2.45
+   ],
+   [
+    23.2,
+    "gen_multi_intent_018",
+    4.85
+   ],
+   [
+    23.1,
+    "gen_late_detail_002",
+    2.43
+   ],
+   [
+    22.0,
+    "gen_multi_intent_005",
+    4.86
+   ]
+  ],
+  "retrieval.rrf_ms": [
+   [
+    0.5,
+    "gen_multi_intent_010",
+    9.65
+   ],
+   [
+    0.5,
+    "gen_multi_intent_003",
+    4.85
+   ],
+   [
+    0.2,
+    "gen_multi_intent_009",
+    2.44
+   ],
+   [
+    0.1,
+    "gen_multi_intent_011",
+    4.83
+   ],
+   [
+    0.1,
+    "gen_multi_intent_005",
+    0.08
+   ]
+  ],
+  "retrieval.search.other_ms": [
+   [
+    91.4,
+    "gen_multi_intent_003",
+    4.9
+   ],
+   [
+    90.2,
+    "gen_late_detail_017",
+    2.53
+   ],
+   [
+    77.8,
+    "gen_multi_intent_010",
+    9.7
+   ],
+   [
+    77.4,
+    "gen_late_detail_017",
+    2.52
+   ],
+   [
+    74.7,
+    "gen_multi_intent_005",
+    0.14
+   ]
+  ],
+  "synthesis.claim_select_ms": [
+   [
+    93.1,
+    "gen_late_detail_012",
+    7.18
+   ],
+   [
+    91.3,
+    "gen_multi_intent_002",
+    4.95
+   ],
+   [
+    69.4,
+    "gen_multi_intent_003",
+    2.52
+   ],
+   [
+    52.8,
+    "gen_multi_intent_004",
+    4.9
+   ],
+   [
+    51.0,
+    "gen_multi_intent_004",
+    2.53
+   ]
+  ],
+  "synthesis.gate_ms": [
+   [
+    52.2,
+    "gen_multi_intent_004",
+    2.58
+   ],
+   [
+    49.2,
+    "gen_late_detail_012",
+    7.23
+   ],
+   [
+    46.5,
+    "gen_multi_intent_004",
+    4.95
+   ],
+   [
+    44.1,
+    "gen_multi_intent_001",
+    2.57
+   ],
+   [
+    37.9,
+    "gen_multi_intent_015",
+    2.53
+   ]
+  ],
+  "synthesis.grounding_ms": [
+   [
+    2.0,
+    "gen_late_detail_001",
+    11.31
+   ],
+   [
+    1.3,
+    "gen_late_detail_001",
+    3.52
+   ],
+   [
+    1.2,
+    "gen_late_detail_007",
+    12.52
+   ],
+   [
+    1.0,
+    "gen_multi_intent_018",
+    11.51
+   ],
+   [
+    1.0,
+    "gen_multi_intent_002",
+    5.92
+   ]
+  ],
+  "synthesis.prefetch_ms": [
+   [
+    142.5,
+    "gen_late_detail_012",
+    7.23
+   ],
+   [
+    110.9,
+    "gen_multi_intent_002",
+    4.96
+   ],
+   [
+    103.3,
+    "gen_multi_intent_004",
+    2.58
+   ],
+   [
+    99.5,
+    "gen_multi_intent_004",
+    4.95
+   ],
+   [
+    90.6,
+    "gen_multi_intent_003",
+    2.54
+   ]
+  ]
+ },
+ "speculation": {
+  "launched": 0,
+  "reused": 0
+ },
+ "turns_over_5ms": [
+  {
+   "scenario": "gen_suppression_007",
+   "utterance": "u1",
+   "post_speech_ms": 9.18,
+   "timings": {
+    "final_decision_ms": 7.521,
+    "retrieval_wait_ms": 0.074,
+    "synthesis_ms": 1.54,
+    "answer_telemetry_ms": 0.035,
+    "post_speech_ms": 9.183
+   },
+   "retrievals": [
+    [
+     "queries",
+     -7500,
+     "provisional",
+     [
+      "What type of vote must the"
+     ]
+    ],
+    [
+     "completed",
+     -7426.1,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -5100,
+     "provisional",
+     [
+      "What type of vote must the Parliament have to either block or"
+     ]
+    ],
+    [
+     "cancelled",
+     -5099.5,
+     "",
+     [
+      "u1.q1"
+     ]
+    ],
+    [
+     "completed",
+     -5035.6,
+     "",
+     null
+    ],
+    [
+     "queries",
+     -2700,
+     "provisional",
+     [
+      "What type of vote must the Parliament have to either block or suggest changes to the Commission's proposals?"
+     ]
+    ],
+    [
+     "cancelled",
+     -2699.2,
+     "",
+     [
+      "u1.q2"
+     ]
+    ],
+    [
+     "completed",
+     -2614.3,
+     "",
+     null
+    ]
+   ]
+  }
+ ]
+}

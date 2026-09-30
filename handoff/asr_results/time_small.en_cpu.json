@@ -1,0 +1,217 @@
+{
+ "meta": {
+  "model": "small.en",
+  "revision": "d1d751a5f8271d482d14ca55d9e2deeebbae577f",
+  "device": "cpu",
+  "compute_type": "int8",
+  "n": 40,
+  "load_s": 2.2,
+  "decode_s": 190.1,
+  "audio_s": 257.8,
+  "rtf": 0.738,
+  "mean_ms_per_clip": 4753.0,
+  "peak_rss_mb": 0.0
+ },
+ "items": {
+  "57096c95200fba1400367fbe": {
+   "text": "What is the universal band that digital receivers will receive free-to-air channels on?",
+   "sec": 4.619,
+   "audio_sec": 9.78
+  },
+  "57096c95200fba1400367fbf": {
+   "text": "What service is a video guard UK equipped receiver dedicated to decrypt?",
+   "sec": 4.591,
+   "audio_sec": 9.54
+  },
+  "57115b2850c2381900b54a83": {
+   "text": "Who wrote of the Savory Water Pump in the 1751's Philosophical Transactions?",
+   "sec": 4.476,
+   "audio_sec": 9.13
+  },
+  "571a4ead10f8ca1400304fe0": {
+   "text": "Phylo of Byzantium blank surmise that air converted to fire.",
+   "sec": 4.532,
+   "audio_sec": 5.74
+  },
+  "571a50df4faf5e1900b8a961": {
+   "text": "Combustion is caused by an oxidant and a fuel. What role does oxygen play in combustion?",
+   "sec": 4.746,
+   "audio_sec": 7.27
+  },
+  "571a50df4faf5e1900b8a962": {
+   "text": "Peroxides, nitrates, and dichromates are examples of what type of compounds.",
+   "sec": 4.576,
+   "audio_sec": 6.46
+  },
+  "571a50df4faf5e1900b8a963": {
+   "text": "Although not a fuel, blank is the chemical compound that generates the most occurrences of explosions.",
+   "sec": 4.687,
+   "audio_sec": 7.66
+  },
+  "571c4132dd7acb1400e4c0b1": {
+   "text": "What did Priestley name the gas his experiment produced?",
+   "sec": 4.429,
+   "audio_sec": 4.5
+  },
+  "571c4132dd7acb1400e4c0b2": {
+   "text": "In what year did Priestley publish the findings of his experiments?",
+   "sec": 4.512,
+   "audio_sec": 4.99
+  },
+  "571c4132dd7acb1400e4c0b3": {
+   "text": "Why is priestly usually given credit for being first to discover oxygen?",
+   "sec": 4.449,
+   "audio_sec": 5.99
+  },
+  "571c4132dd7acb1400e4c0b4": {
+   "text": "What effect did breathing priestly's discovered gas have on the experiment's mouse?",
+   "sec": 4.546,
+   "audio_sec": 6.36
+  },
+  "571c7abfdd7acb1400e4c0ba": {
+   "text": "What early Greek wrote about experiments on air and combustion?",
+   "sec": 4.411,
+   "audio_sec": 5.53
+  },
+  "571c7abfdd7acb1400e4c0bb": {
+   "text": "What did Philo incorrectly assume that the air became?",
+   "sec": 4.39,
+   "audio_sec": 5.43
+  },
+  "571c7abfdd7acb1400e4c0bc": {
+   "text": "What was the title of Philo's work?",
+   "sec": 4.301,
+   "audio_sec": 3.85
+  },
+  "571c7abfdd7acb1400e4c0bd": {
+   "text": "What famous artists later further investigated Philo's experiments?",
+   "sec": 4.322,
+   "audio_sec": 6.13
+  },
+  "571c7abfdd7acb1400e4c0be": {
+   "text": "Of what did Da Vinci think a part was consumed during Thank you very much.",
+   "sec": 17.505,
+   "audio_sec": 6.13
+  },
+  "571cb010dd7acb1400e4c12b": {
+   "text": "By what process is singlet oxygen made in the troposphere?",
+   "sec": 4.409,
+   "audio_sec": 8.99
+  },
+  "571cb010dd7acb1400e4c12c": {
+   "text": "What objects in organisms absorb singlet oxygen to prevent harm?",
+   "sec": 4.423,
+   "audio_sec": 10.87
+  },
+  "571cc3dedd7acb1400e4c14a": {
+   "text": "What device is used to test the magnetic attractions involved in liquid oxygen?",
+   "sec": 4.428,
+   "audio_sec": 7.99
+  },
+  "571cc6f85efbb31900334de7": {
+   "text": "What element is used as a coolant in the process of making liquid oxygen?",
+   "sec": 4.5,
+   "audio_sec": 7.59
+  },
+  "571cc6f85efbb31900334de8": {
+   "text": "From what type of materials must liquid oxygen be separated?",
+   "sec": 4.305,
+   "audio_sec": 6.27
+  },
+  "571cca4add7acb1400e4c154": {
+   "text": "When did oxygen begin to move from the oceans to the atmosphere?",
+   "sec": 4.469,
+   "audio_sec": 7.08
+  },
+  "571cd88ddd7acb1400e4c18e": {
+   "text": "What is the type of oxygen production for emergency oxygen in airlines?",
+   "sec": 4.414,
+   "audio_sec": 7.08
+  },
+  "571cd88ddd7acb1400e4c18f": {
+   "text": "What type of reaction is present in the emergency oxygen generator of an airplane?",
+   "sec": 4.571,
+   "audio_sec": 8.15
+  },
+  "571cd88ddd7acb1400e4c190": {
+   "text": "What gas does the airline exothermic reaction produce?",
+   "sec": 4.34,
+   "audio_sec": 6.2
+  },
+  "571ce7f25efbb31900334e42": {
+   "text": "Aside from oxides, what other compounds comprise a large portion of the Earth's crust?",
+   "sec": 4.573,
+   "audio_sec": 6.69
+  },
+  "571cebc05efbb31900334e48": {
+   "text": "What can concentrated oxygen produce?",
+   "sec": 4.203,
+   "audio_sec": 3.81
+  },
+  "571cebc05efbb31900334e49": {
+   "text": "What is a spark or heat to the progress of a fire?",
+   "sec": 4.331,
+   "audio_sec": 4.41
+  },
+  "571cebc05efbb31900334e4a": {
+   "text": "Rather than the fuel, what is oxygen to a fire?",
+   "sec": 4.467,
+   "audio_sec": 4.37
+  },
+  "571cebc05efbb31900334e4b": {
+   "text": "What is oxygen the basis for in combustion?",
+   "sec": 4.318,
+   "audio_sec": 4.5
+  },
+  "571cebc05efbb31900334e4c": {
+   "text": "What other sources of high oxidative potential can add to a fire?",
+   "sec": 4.426,
+   "audio_sec": 6.36
+  },
+  "5725b81b271a42140099d09b": {
+   "text": "What percentage does the Amazon represent in rainforests on the planet?",
+   "sec": 4.474,
+   "audio_sec": 5.92
+  },
+  "5725bcb6271a42140099d0ee": {
+   "text": "How much was the emergency aid to Israel?",
+   "sec": 4.295,
+   "audio_sec": 6.08
+  },
+  "5725bcb6271a42140099d0ef": {
+   "text": "Why did OPEC block oil deliveries to the United States?",
+   "sec": 4.339,
+   "audio_sec": 7.04
+  },
+  "5725c28a271a42140099d14d": {
+   "text": "What is European Union law?",
+   "sec": 4.184,
+   "audio_sec": 4.16
+  },
+  "5725c28a271a42140099d14e": {
+   "text": "What effect does European Union law have on laws of member states?",
+   "sec": 4.457,
+   "audio_sec": 6.97
+  },
+  "5725c28a271a42140099d14f": {
+   "text": "What are the three sources of European Union law?",
+   "sec": 4.204,
+   "audio_sec": 5.15
+  },
+  "5725c28a271a42140099d150": {
+   "text": "What are the main legislative bodies of the European Union?",
+   "sec": 4.239,
+   "audio_sec": 5.87
+  },
+  "5725c3a9ec44d21400f3d506": {
+   "text": "What is one supplementary source of European Union law?",
+   "sec": 4.676,
+   "audio_sec": 6.22
+  },
+  "5725d16aec44d21400f3d61f": {
+   "text": "How many invertebrate species are known in Brazil alone?",
+   "sec": 3.984,
+   "audio_sec": 5.53
+  }
+ }
+}

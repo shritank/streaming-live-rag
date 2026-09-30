@@ -1,0 +1,87 @@
+# FULLY PINNED CPU reference environment - every package, including transitive dependencies.
+# Target: Linux x86-64, CPython 3.12 (the Docker image, Dockerfile stage 2). Resolved from the top-level list in
+# requirements.lock with `pip install --dry-run --report --python-version 3.12 --platform manylinux2014_x86_64
+# --only-binary=:all:`, so every pin below has a prebuilt wheel for that target (nothing builds from source).
+#
+#     pip install -r requirements-cpu.lock
+#
+# Limitations, stated plainly:
+#  * It was resolved on a Windows host: pip evaluates environment markers (sys_platform, python_version) on the host,
+#    not the target. The two Windows-only packages that leaked in (colorama, pyreadline3) were removed. A dependency
+#    that exists only on Linux / Python 3.12 could be missing - install WITHOUT --no-deps (as above) so pip can add it.
+#  * It was not built into the Docker image (Docker is not installed on the machines used so far), so the Dockerfile
+#    still installs the hand-curated top-level requirements.lock. To use this file there, change
+#    `COPY requirements.lock` / `pip install -r requirements.lock` to requirements-cpu.lock.
+#  * The tested GPU environment is requirements-gpu.lock (Windows, CPython 3.11.9).
+#  * onnxruntime here is the CPU build; never install it next to onnxruntime-gpu.
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+attrs==26.1.0
+blis==1.3.3
+catalogue==2.0.10
+certifi==2026.7.22
+charset-normalizer==3.5.2
+click==8.5.0
+cloudpathlib==0.25.0
+coloredlogs==15.0.1
+confection==1.3.3
+cymem==2.0.13
+filelock==4.0.7
+flatbuffers==25.12.19
+fsspec==2026.9.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.32.0
+humanfriendly==10.0
+idna==3.20
+iniconfig==2.3.0
+Jinja2==3.1.6
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+mpmath==1.3.0
+murmurhash==1.0.15
+numpy==2.4.6
+onnxruntime==1.20.1
+packaging==26.3
+pandas==3.0.5
+pluggy==1.6.0
+preshed==3.0.13
+protobuf==7.36.2
+pyarrow==25.0.1
+pydantic==2.13.5
+pydantic_core==2.46.5
+Pygments==2.21.0
+pytest==9.1.1
+pytest-asyncio==1.4.0
+python-dateutil==2.9.0.post0
+PyYAML==6.0.2
+referencing==0.37.0
+requests==2.34.2
+rich==15.0.0
+rpds-py==2026.6.3
+setuptools==84.0.0
+shellingham==1.5.4
+six==1.17.0
+smart_open==8.0.2
+spacy==3.8.16
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+srsly==2.5.4
+sympy==1.14.0
+thinc==8.3.13
+tokenizers==0.23.2
+tqdm==4.70.1
+typer==0.27.2
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+tzdata==2026.4
+urllib3==2.8.0
+wasabi==1.1.3
+weasel==1.0.0
+wrapt==2.5.0

@@ -1,0 +1,122 @@
+{
+ "scenario_id": "hey_a_572756265951b619008f8870",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2071,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "at a level."
+   }
+  },
+  {
+   "timestamp_ms": 3087,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "At a level, what percentage?"
+   }
+  },
+  {
+   "timestamp_ms": 4077,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "At a level, what"
+   }
+  },
+  {
+   "timestamp_ms": 4077,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "At a level, what percentage of British students"
+   }
+  },
+  {
+   "timestamp_ms": 5099,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " percentage of British students"
+   }
+  },
+  {
+   "timestamp_ms": 5099,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "At a level, what percentage of British students attend fee pay?"
+   }
+  },
+  {
+   "timestamp_ms": 6104,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " attend"
+   }
+  },
+  {
+   "timestamp_ms": 6104,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "At a level, what percentage of British students attend fee-paying schools?"
+   }
+  },
+  {
+   "timestamp_ms": 6211,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fee-paying schools?"
+   }
+  },
+  {
+   "timestamp_ms": 6212,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8211,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "At A-level, what percentage of British students attend fee-paying schools?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

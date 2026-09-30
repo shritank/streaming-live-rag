@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_u_5ad279e5d7d075001a4295c4",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3382,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who"
+   }
+  },
+  {
+   "timestamp_ms": 4431,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " demonstrated that"
+   }
+  },
+  {
+   "timestamp_ms": 5509,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " electric and magnetic"
+   }
+  },
+  {
+   "timestamp_ms": 7509,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " forces were"
+   }
+  },
+  {
+   "timestamp_ms": 8177,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " unified through two consistent"
+   }
+  },
+  {
+   "timestamp_ms": 8762,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " theories?"
+   }
+  },
+  {
+   "timestamp_ms": 8763,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10762,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who demonstrated that electric and magnetic forces were unified through two consistent theories?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

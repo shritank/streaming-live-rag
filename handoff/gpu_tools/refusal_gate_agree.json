@@ -1,0 +1,46 @@
+{
+ "description": "Refusal gate: logistic model of P(the asserted answer is correct). Refuse when p < threshold.",
+ "features": [
+  "top",
+  "sentence",
+  "overlap_ce",
+  "overlap_section",
+  "margin",
+  "reader_margin",
+  "agree"
+ ],
+ "scaler_mean": [
+  1.913595094740946,
+  2.075024557851683,
+  0.511664627014717,
+  0.5999483037409435,
+  5.009639409239465,
+  2.900909958303617,
+  0.5062836624775583
+ ],
+ "scaler_scale": [
+  5.35519368060602,
+  5.416140625755891,
+  0.23248967916011581,
+  0.22476872258577907,
+  4.191449684228107,
+  7.728687865695375,
+  0.49996051402672703
+ ],
+ "coef": [
+  -0.37790125008443826,
+  1.01059555421313,
+  -0.01682550890523606,
+  -0.2769132344739626,
+  0.07441897829254775,
+  0.8837307395562538,
+  0.6739686326418155
+ ],
+ "intercept": -0.6793233347939432,
+ "threshold": 0.4,
+ "fitted_on": [
+  "eval/results/rsweep2_heydev_clean.json",
+  "eval/results/rsweep2_heydev_asr.json"
+ ],
+ "threshold_rule": "maximise expected utility on DEV with p_unanswerable=0.3, cost of a wrong answer c=1.0 (U = (1-p)(recall - c*wrong_rate) - p*c*answered_unanswerable_rate)"
+}

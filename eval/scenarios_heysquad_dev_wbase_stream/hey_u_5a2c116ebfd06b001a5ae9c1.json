@@ -1,0 +1,104 @@
+{
+ "scenario_id": "hey_u_5a2c116ebfd06b001a5ae9c1",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3457,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How many"
+   }
+  },
+  {
+   "timestamp_ms": 4420,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " homes had"
+   }
+  },
+  {
+   "timestamp_ms": 5402,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " bee sky"
+   }
+  },
+  {
+   "timestamp_ms": 7402,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " direct to home satellite service"
+   }
+  },
+  {
+   "timestamp_ms": 9402,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " unavailable to"
+   }
+  },
+  {
+   "timestamp_ms": 10513,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " them in 2010?"
+   }
+  },
+  {
+   "timestamp_ms": 10989,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " B SkyBees direct to home satellite service unavailable to them in 2010?"
+   }
+  },
+  {
+   "timestamp_ms": 10990,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 12989,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How many homes had BSkyB's direct-to-home satellite service unavailable to them in 2010?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

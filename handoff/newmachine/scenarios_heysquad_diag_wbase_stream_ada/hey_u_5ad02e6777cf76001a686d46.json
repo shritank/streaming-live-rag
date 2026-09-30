@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5ad02e6777cf76001a686d46",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5093,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Plenary meetings in the debating chamber"
+   }
+  },
+  {
+   "timestamp_ms": 6097,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " usually take"
+   }
+  },
+  {
+   "timestamp_ms": 7120,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " place on Tuesday"
+   }
+  },
+  {
+   "timestamp_ms": 8150,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " afternoons from 1 p.m."
+   }
+  },
+  {
+   "timestamp_ms": 8446,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " afternoon from 1 p.m. to what?"
+   }
+  },
+  {
+   "timestamp_ms": 8447,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10446,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Plenary meetings in the debating chamber usually take place on Tuesday afternoons from 1pm to what?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

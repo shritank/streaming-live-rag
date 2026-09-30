@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5ad13b23645df0001a2d12fb",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3105,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "which court did"
+   }
+  },
+  {
+   "timestamp_ms": 4063,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " not argue"
+   }
+  },
+  {
+   "timestamp_ms": 8074,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " that the Treaty of Rome did not prevent energy nationalism."
+   }
+  },
+  {
+   "timestamp_ms": 8075,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10074,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Which court did not argue that the Treaty of Rome did not prevent energy nationalism?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

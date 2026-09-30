@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_572fdd03a23a5019007fcaa1",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5077,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "M.P.'s representing English"
+   }
+  },
+  {
+   "timestamp_ms": 7108,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " constituencies can"
+   }
+  },
+  {
+   "timestamp_ms": 8075,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " only veto"
+   }
+  },
+  {
+   "timestamp_ms": 10064,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " MPs representing English constituencies can only veto laws affecting which country."
+   }
+  },
+  {
+   "timestamp_ms": 10065,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 12064,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "MPs representing English constituencies can only veto laws affecting which country? "
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

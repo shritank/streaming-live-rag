@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5729a26d6aef05140015505b",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5060,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "To what"
+   }
+  },
+  {
+   "timestamp_ms": 6101,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " may general global"
+   }
+  },
+  {
+   "timestamp_ms": 7102,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " fields be transferred to"
+   }
+  },
+  {
+   "timestamp_ms": 7906,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " may, general global fields be transferred to or from?"
+   }
+  },
+  {
+   "timestamp_ms": 7907,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9906,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "To what may general global fields be transferred to or from?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

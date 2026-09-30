@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5ad21f6fd7d075001a4284a5",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3100,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "During"
+   }
+  },
+  {
+   "timestamp_ms": 4126,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " what century did file of"
+   }
+  },
+  {
+   "timestamp_ms": 5158,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " pneumatica"
+   }
+  },
+  {
+   "timestamp_ms": 7016,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " perform his experiments involving combustion?"
+   }
+  },
+  {
+   "timestamp_ms": 7017,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9016,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "During what century did Philo of Pneumatica preform his experiments involving combustion?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

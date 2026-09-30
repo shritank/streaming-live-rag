@@ -5,12 +5,13 @@
 
 name: streaming-live-rag
 python_version: ">=3.11,<3.13"   # numpy 2.4.6 / pandas 3.0.5 need >= 3.11
-requirements: requirements.lock
+requirements: requirements.lock   # top-level pins; fully pinned: requirements-cpu.lock (Linux, py3.12), requirements-gpu.lock (tested, Windows, py3.11)
 
 entry_points:
   replay: "python -m streaming_rag.cli replay <scenario.json> [--time-scale N] [--mode streaming|baseline]"
   live: "python -m streaming_rag.cli live"
   eval: "python -m eval.run_all"
+  audio: "python tools/answer_audio.py <clip.wav> [--corpus-dir DIR] [--model DIR] [--raw]   # optional, outside the official scope"
 
 env:
   # provider selection: fake (default, offline, zero-cost) | openai | gemini
@@ -33,10 +34,26 @@ env:
     required: false
     default: "4"
     description: "ONNX Runtime intra-op threads for the encoder and cross-encoder"
+  - name: STREAMING_RAG_ASR_THREADS
+    required: false
+    default: "6"
+    description: "CPU threads for the optional Whisper audio front end (streaming_rag/asr/whisper.py)"
   - name: STREAMING_RAG_ORT_PROVIDER
     required: false
-    default: cpu
-    description: "cpu (verified default) or cuda (optional; needs onnxruntime-gpu and CUDA 12 libraries, falls back to CPU)"
+    default: auto
+    description: "auto (mandatory CUDA whenever an NVIDIA GPU is present - raises instead of using the CPU; CPU only on machines without one) | cuda (require GPU) | cpu (explicit opt-out); streaming_rag/gpu.py"
+  - name: STREAMING_RAG_ORT_FUSED
+    required: false
+    default: auto
+    description: "auto/1 = on CUDA use the fused-graph copies of the RAG models (python -m streaming_rag.retrieval.neural --fuse; same weights, fp32); 0 = original graphs"
+  - name: STREAMING_RAG_ORT_SESSIONS
+    required: false
+    default: "1"
+    description: "ONNX Runtime sessions per model (each its own CUDA stream); >1 only helps at >= 4 concurrent callers, the pipeline's tails were worse with 3"
+  - name: STREAMING_RAG_ASR_DEVICE
+    required: false
+    default: auto
+    description: "Whisper front end device: auto (mandatory GPU whenever an NVIDIA GPU is present) | cuda | cpu (explicit opt-out)"
 
 corpus:
   dev_fixture: fixtures/dev_corpus       # synthetic, format-driven fixture (Task 1)

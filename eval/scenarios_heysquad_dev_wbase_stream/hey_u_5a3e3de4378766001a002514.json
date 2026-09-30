@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a3e3de4378766001a002514",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 6995,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who should be concerned with"
+   }
+  },
+  {
+   "timestamp_ms": 7444,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the trend to"
+   }
+  },
+  {
+   "timestamp_ms": 7962,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " understand the"
+   }
+  },
+  {
+   "timestamp_ms": 8518,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " effects of climate change?"
+   }
+  },
+  {
+   "timestamp_ms": 8519,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10518,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Who should be concerned with the trend to under state the effects of climate change?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

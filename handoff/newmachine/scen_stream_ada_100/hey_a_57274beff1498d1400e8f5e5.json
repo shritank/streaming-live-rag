@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_57274beff1498d1400e8f5e5",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5296,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Along with the CISCE and"
+   }
+  },
+  {
+   "timestamp_ms": 7357,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " N-E-N-B-S-E, what is"
+   }
+  },
+  {
+   "timestamp_ms": 8364,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " a notable"
+   }
+  },
+  {
+   "timestamp_ms": 10963,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " examination board in multiple Indian states."
+   }
+  },
+  {
+   "timestamp_ms": 10964,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 12963,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Along with the CISCE and NENBSE, what is a notable Examination Board in multiple Indian states?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

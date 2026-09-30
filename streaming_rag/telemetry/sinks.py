@@ -26,12 +26,12 @@ class BufferedTelemetry:
 
     def __init__(self):
         self.events: list[dict[str, Any]] = []
-        self._start_wall = time.monotonic()
+        self._start_wall = time.perf_counter()
 
     def emit(self, event: str, **fields: Any) -> None:
         record = {
             "event": event,
-            "wall_ms": (time.monotonic() - self._start_wall) * 1000,
+            "wall_ms": (time.perf_counter() - self._start_wall) * 1000,
             "component": fields.pop("component", "unknown"),
             "session_id": fields.pop("session_id", None),
             "utterance_id": fields.pop("utterance_id", None),
@@ -54,7 +54,7 @@ class JsonlTelemetry:
         self._buffer_size = buffer_size
         self._buffer: list[dict[str, Any]] = []
         self._lock = asyncio.Lock()
-        self._start_wall = time.monotonic()
+        self._start_wall = time.perf_counter()
         self._task: asyncio.Task | None = None
         self._stopping = asyncio.Event()
         # truncate any previous run's file up front so replays don't append forever
@@ -64,7 +64,7 @@ class JsonlTelemetry:
     def emit(self, event: str, **fields: Any) -> None:
         record = {
             "event": event,
-            "wall_ms": (time.monotonic() - self._start_wall) * 1000,
+            "wall_ms": (time.perf_counter() - self._start_wall) * 1000,
             "component": fields.pop("component", "unknown"),
             "session_id": fields.pop("session_id", None),
             "utterance_id": fields.pop("utterance_id", None),

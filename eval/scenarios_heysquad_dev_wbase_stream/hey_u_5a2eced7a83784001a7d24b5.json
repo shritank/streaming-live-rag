@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a2eced7a83784001a7d24b5",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3622,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How long did it"
+   }
+  },
+  {
+   "timestamp_ms": 4598,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " take to travel across"
+   }
+  },
+  {
+   "timestamp_ms": 6048,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Europe using primitive"
+   }
+  },
+  {
+   "timestamp_ms": 6936,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " transport systems?"
+   }
+  },
+  {
+   "timestamp_ms": 6937,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8936,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How long did it take to travel across Europe using primitive transport systems?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

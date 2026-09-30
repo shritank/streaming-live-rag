@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_5737958b1c456719005744c6",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3118,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How is"
+   }
+  },
+  {
+   "timestamp_ms": 4467,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " a"
+   }
+  },
+  {
+   "timestamp_ms": 5160,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Pauli exclusion principle"
+   }
+  },
+  {
+   "timestamp_ms": 6213,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " manifested in the"
+   }
+  },
+  {
+   "timestamp_ms": 6785,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " macro world?"
+   }
+  },
+  {
+   "timestamp_ms": 6786,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8785,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How is the Pauli exclusion priciple manifested in the macro world?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

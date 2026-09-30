@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a2c116ebfd06b001a5ae9c2",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3163,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How small was"
+   }
+  },
+  {
+   "timestamp_ms": 4159,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " the audience"
+   }
+  },
+  {
+   "timestamp_ms": 6181,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " B Sky B said they"
+   }
+  },
+  {
+   "timestamp_ms": 6347,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " couldn't reach?"
+   }
+  },
+  {
+   "timestamp_ms": 6348,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8347,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How small was the audience BSkyB said they couldn't reach?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

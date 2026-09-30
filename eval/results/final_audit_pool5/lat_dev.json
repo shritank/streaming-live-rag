@@ -1,0 +1,533 @@
+{
+ "scenarios": "eval/scenarios_real_dev",
+ "corpus_dir": "data/corpus",
+ "overrides": [],
+ "time_scale": 1.0,
+ "n_scenarios": 60,
+ "cold_start_s": 4.6,
+ "execution_providers": {
+  "fused/e5.onnx": "CUDAExecutionProvider",
+  "fused/ce.onnx": "CUDAExecutionProvider",
+  "fused/reader.onnx": "CUDAExecutionProvider"
+ },
+ "stages": {
+  "ce.claim_ms": {
+   "n": 196,
+   "p50": 18.283,
+   "p95": 25.898,
+   "p99": 29.339,
+   "max": 36.229,
+   "mean": 18.708
+  },
+  "ce.gate_ms": {
+   "n": 181,
+   "p50": 11.242,
+   "p95": 18.791,
+   "p99": 23.302,
+   "max": 25.835,
+   "mean": 11.821
+  },
+  "ce.rerank_ms": {
+   "n": 216,
+   "p50": 13.563,
+   "p95": 19.862,
+   "p99": 22.715,
+   "max": 29.038,
+   "mean": 13.908
+  },
+  "controller.decision_ms": {
+   "n": 330,
+   "p50": 0.499,
+   "p95": 1.042,
+   "p99": 1.294,
+   "max": 1.546,
+   "mean": 0.526
+  },
+  "engine.answer_telemetry_ms": {
+   "n": 90,
+   "p50": 0.06,
+   "p95": 0.08,
+   "p99": 0.102,
+   "max": 0.114,
+   "mean": 0.058
+  },
+  "engine.final_decision_ms": {
+   "n": 90,
+   "p50": 0.581,
+   "p95": 0.952,
+   "p99": 1.179,
+   "max": 1.539,
+   "mean": 0.594
+  },
+  "engine.post_speech_ms": {
+   "n": 90,
+   "p50": 2.408,
+   "p95": 3.326,
+   "p99": 3.599,
+   "max": 4.052,
+   "mean": 2.19
+  },
+  "engine.retrieval_wait_ms": {
+   "n": 90,
+   "p50": 0.206,
+   "p95": 0.357,
+   "p99": 0.516,
+   "max": 0.741,
+   "mean": 0.192
+  },
+  "engine.synthesis_ms": {
+   "n": 90,
+   "p50": 1.46,
+   "p95": 2.132,
+   "p99": 2.456,
+   "max": 2.856,
+   "mean": 1.325
+  },
+  "reader.other_ms": {
+   "n": 187,
+   "p50": 27.104,
+   "p95": 35.895,
+   "p99": 39.959,
+   "max": 42.224,
+   "mean": 27.411
+  },
+  "retrieval.bm25_ms": {
+   "n": 216,
+   "p50": 3.269,
+   "p95": 6.96,
+   "p99": 8.879,
+   "max": 9.784,
+   "mean": 3.526
+  },
+  "retrieval.dense_topk_ms": {
+   "n": 216,
+   "p50": 0.628,
+   "p95": 0.869,
+   "p99": 1.158,
+   "max": 1.305,
+   "mean": 0.627
+  },
+  "retrieval.e5_encode_ms": {
+   "n": 216,
+   "p50": 11.122,
+   "p95": 16.909,
+   "p99": 24.259,
+   "max": 26.681,
+   "mean": 11.606
+  },
+  "retrieval.rrf_ms": {
+   "n": 216,
+   "p50": 0.042,
+   "p95": 0.071,
+   "p99": 0.092,
+   "max": 0.206,
+   "mean": 0.044
+  },
+  "retrieval.search.other_ms": {
+   "n": 216,
+   "p50": 39.409,
+   "p95": 52.064,
+   "p99": 62.223,
+   "max": 65.66,
+   "mean": 39.43
+  },
+  "retrieval.subquery_ms": {
+   "n": 212,
+   "p50": 40.446,
+   "p95": 55.647,
+   "p99": 67.515,
+   "max": 71.41,
+   "mean": 40.502
+  },
+  "synthesis.claim_select_ms": {
+   "n": 196,
+   "p50": 21.167,
+   "p95": 29.159,
+   "p99": 31.794,
+   "max": 40.254,
+   "mean": 21.353
+  },
+  "synthesis.gate_ms": {
+   "n": 181,
+   "p50": 12.242,
+   "p95": 22.192,
+   "p99": 23.576,
+   "max": 26.097,
+   "mean": 13.281
+  },
+  "synthesis.grounding_ms": {
+   "n": 75,
+   "p50": 0.348,
+   "p95": 0.781,
+   "p99": 1.118,
+   "max": 1.594,
+   "mean": 0.384
+  },
+  "synthesis.prefetch_ms": {
+   "n": 216,
+   "p50": 33.426,
+   "p95": 44.042,
+   "p99": 53.764,
+   "max": 64.6,
+   "mean": 30.714
+  }
+ },
+ "slowest": {
+  "ce.claim_ms": [
+   [
+    36.2,
+    "gen_multi_intent_008",
+    2.49
+   ],
+   [
+    30.1,
+    "gen_multi_intent_002",
+    4.88
+   ],
+   [
+    29.3,
+    "gen_multi_intent_014",
+    4.9
+   ],
+   [
+    28.8,
+    "gen_multi_intent_018",
+    2.47
+   ],
+   [
+    28.7,
+    "gen_multi_intent_007",
+    4.86
+   ]
+  ],
+  "ce.gate_ms": [
+   [
+    25.8,
+    "gen_multi_intent_008",
+    4.91
+   ],
+   [
+    23.8,
+    "gen_multi_intent_008",
+    2.51
+   ],
+   [
+    23.2,
+    "gen_multi_intent_008",
+    4.92
+   ],
+   [
+    22.4,
+    "gen_multi_intent_007",
+    4.88
+   ],
+   [
+    22.0,
+    "gen_multi_intent_018",
+    2.5
+   ]
+  ],
+  "ce.rerank_ms": [
+   [
+    29.0,
+    "gen_multi_intent_018",
+    2.45
+   ],
+   [
+    25.0,
+    "gen_late_detail_000",
+    0.1
+   ],
+   [
+    22.9,
+    "gen_multi_intent_016",
+    4.87
+   ],
+   [
+    21.9,
+    "gen_multi_intent_004",
+    2.45
+   ],
+   [
+    21.4,
+    "gen_multi_intent_001",
+    2.44
+   ]
+  ],
+  "reader.other_ms": [
+   [
+    42.2,
+    "gen_multi_intent_008",
+    4.91
+   ],
+   [
+    41.6,
+    "gen_multi_intent_008",
+    2.49
+   ],
+   [
+    39.7,
+    "gen_multi_intent_004",
+    2.51
+   ],
+   [
+    37.8,
+    "gen_late_detail_006",
+    4.9
+   ],
+   [
+    36.9,
+    "gen_multi_intent_005",
+    12.08
+   ]
+  ],
+  "retrieval.bm25_ms": [
+   [
+    9.8,
+    "gen_late_detail_018",
+    4.81
+   ],
+   [
+    9.4,
+    "gen_multi_intent_009",
+    14.43
+   ],
+   [
+    9.0,
+    "gen_late_detail_006",
+    7.23
+   ],
+   [
+    8.2,
+    "gen_multi_intent_010",
+    9.61
+   ],
+   [
+    7.5,
+    "gen_multi_intent_016",
+    14.43
+   ]
+  ],
+  "retrieval.dense_topk_ms": [
+   [
+    1.3,
+    "gen_late_detail_006",
+    13.46
+   ],
+   [
+    1.3,
+    "gen_unanswerable_001",
+    2.41
+   ],
+   [
+    1.2,
+    "gen_late_detail_017",
+    6.23
+   ],
+   [
+    1.1,
+    "gen_multi_intent_001",
+    4.82
+   ],
+   [
+    1.0,
+    "gen_multi_intent_009",
+    14.44
+   ]
+  ],
+  "retrieval.e5_encode_ms": [
+   [
+    26.7,
+    "gen_multi_intent_004",
+    2.43
+   ],
+   [
+    24.7,
+    "gen_multi_intent_014",
+    4.83
+   ],
+   [
+    24.4,
+    "gen_multi_intent_019",
+    0.05
+   ],
+   [
+    23.6,
+    "gen_multi_intent_007",
+    4.82
+   ],
+   [
+    22.6,
+    "gen_multi_intent_016",
+    4.85
+   ]
+  ],
+  "retrieval.rrf_ms": [
+   [
+    0.2,
+    "gen_multi_intent_003",
+    4.83
+   ],
+   [
+    0.1,
+    "gen_multi_intent_002",
+    4.84
+   ],
+   [
+    0.1,
+    "gen_late_detail_017",
+    6.23
+   ],
+   [
+    0.1,
+    "gen_late_detail_006",
+    13.46
+   ],
+   [
+    0.1,
+    "gen_suppression_001",
+    2.43
+   ]
+  ],
+  "retrieval.search.other_ms": [
+   [
+    65.7,
+    "gen_multi_intent_014",
+    4.87
+   ],
+   [
+    63.9,
+    "gen_multi_intent_004",
+    2.46
+   ],
+   [
+    62.9,
+    "gen_multi_intent_008",
+    2.47
+   ],
+   [
+    58.1,
+    "gen_multi_intent_001",
+    2.46
+   ],
+   [
+    55.3,
+    "gen_multi_intent_004",
+    2.45
+   ]
+  ],
+  "synthesis.claim_select_ms": [
+   [
+    40.3,
+    "gen_multi_intent_008",
+    2.49
+   ],
+   [
+    33.0,
+    "gen_multi_intent_012",
+    9.66
+   ],
+   [
+    31.7,
+    "gen_multi_intent_014",
+    4.9
+   ],
+   [
+    31.3,
+    "gen_multi_intent_002",
+    4.88
+   ],
+   [
+    31.0,
+    "gen_multi_intent_007",
+    4.86
+   ]
+  ],
+  "synthesis.gate_ms": [
+   [
+    26.1,
+    "gen_multi_intent_008",
+    4.91
+   ],
+   [
+    24.0,
+    "gen_multi_intent_008",
+    2.51
+   ],
+   [
+    23.5,
+    "gen_multi_intent_008",
+    4.92
+   ],
+   [
+    22.8,
+    "gen_multi_intent_007",
+    4.88
+   ],
+   [
+    22.5,
+    "gen_late_detail_006",
+    4.9
+   ]
+  ],
+  "synthesis.grounding_ms": [
+   [
+    1.6,
+    "gen_multi_intent_016",
+    16.31
+   ],
+   [
+    1.0,
+    "gen_multi_intent_005",
+    13.08
+   ],
+   [
+    0.8,
+    "gen_multi_intent_004",
+    11.89
+   ],
+   [
+    0.8,
+    "gen_multi_intent_018",
+    9.9
+   ],
+   [
+    0.8,
+    "gen_multi_intent_014",
+    9.5
+   ]
+  ],
+  "synthesis.prefetch_ms": [
+   [
+    64.6,
+    "gen_multi_intent_008",
+    2.51
+   ],
+   [
+    55.5,
+    "gen_multi_intent_008",
+    4.91
+   ],
+   [
+    54.0,
+    "gen_multi_intent_007",
+    4.88
+   ],
+   [
+    52.5,
+    "gen_multi_intent_018",
+    2.5
+   ],
+   [
+    51.1,
+    "gen_multi_intent_004",
+    2.5
+   ]
+  ]
+ },
+ "speculation": {
+  "launched": 6,
+  "reused": 2
+ },
+ "turns_over_5ms": []
+}

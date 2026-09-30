@@ -1,0 +1,50 @@
+{
+ "scenario_id": "hey_a_5729edd56aef051400155114",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 7744,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Geoglyph state, Geoglyph's wet period, were found in deforested land along the Amson River."
+   }
+  },
+  {
+   "timestamp_ms": 7745,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9744,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Geoglyphs dating to what period were found in deforested land along the Amazon River?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "scenario_id": "hey_u_5a0c77e3f5590b0018dab417",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4413,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Betty Meggers said that"
+   }
+  },
+  {
+   "timestamp_ms": 5434,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " hunting was needed to"
+   }
+  },
+  {
+   "timestamp_ms": 6868,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Meggar said that hunting was needed to support a large population wear."
+   }
+  },
+  {
+   "timestamp_ms": 6869,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8868,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Betty Meggers said that hunting was needed to support a large population where?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

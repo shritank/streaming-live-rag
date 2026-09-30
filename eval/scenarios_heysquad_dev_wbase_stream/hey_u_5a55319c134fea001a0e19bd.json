@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a55319c134fea001a0e19bd",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5667,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Why was"
+   }
+  },
+  {
+   "timestamp_ms": 7667,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " OC-12C considered a"
+   }
+  },
+  {
+   "timestamp_ms": 8711,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " substantial engineering"
+   }
+  },
+  {
+   "timestamp_ms": 9539,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " feat?"
+   }
+  },
+  {
+   "timestamp_ms": 9540,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11539,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Why was OC-12c considered a substantial engineering feat? "
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

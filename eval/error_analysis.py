@@ -93,7 +93,19 @@ class Analyzer:
         return retriever._search_sync(SubQuery(query_id="probe", text=text, intent_label="",
                                                trigger="final", utterance_id="probe"), k)
 
-    def classify_miss(self, row: dict, question: str, call, final_answer, n_gold: int = 0) -> tuple[str, dict]:
+    def _ungated(self, text: str, result, gold: set, good: list[str]) -> dict:
+        """What the cross-encoder selector would have asserted with every gate
+        removed, and whether that claim would have been right."""
+        if self.config.synthesis.selector != "cross-encoder" or not result.evidence:
+            return {}
+        raw = self.synth._ce_claim(text, result)
+        if raw is None:
+            return {"ungated_claim": None, "ungated_correct": False}
+        right = contains_answer(raw.text, good) if good else raw.citations[0] in gold
+        return {"ungated_claim": raw.text[:200], "ungated_correct": bool(right)}
+
+    def classify_miss(self, row: dict, question: str, call, final_answer, n_gold: int = 0,
+                      other_gold: set | None = None) -> tuple[str, dict]:
         gold = set(row["relevant"])
         good = self._usable(row)
         info: dict = {}
@@ -117,15 +129,23 @@ class Analyzer:
             return ("rerank_depth" if gold & set(fused) else "first_stage"), info
         if result.low_confidence:
             info["top_score"] = round(result.evidence[0].score, 2)
+            info.update(self._ungated(match.text, result, gold, good))
             return "refusal", info
         claims, _ = self.synth._claims_from([match], [result])
         if not claims:
-            return "relevance_gate", info
+            info.update(self._ungated(match.text, result, gold, good))
+            # a claim existed before gating -> the learned refusal gate (or the
+            # short-query lexical fallback) withheld it; none -> the selector's
+            # own logit threshold found no sentence worth asserting
+            return ("refusal_gate" if info.get("ungated_claim") else "relevance_gate"), info
         claim = claims[0]
         info["claim"] = claim.text[:200]
         info["claim_citation"] = claim.citations[0]
         if claim.citations[0] not in gold:
-            return "context_selection", info
+            if other_gold and claim.citations[0] in other_gold:
+                return "cross_intent_contamination", info
+            same_doc = claim.citations[0].split(" §")[0] in {g.split(" §")[0] for g in gold}
+            return ("context_selection" if same_doc else "wrong_document"), info
         if good and contains_answer(claim.text, good) or (not good):
             return "merge_lost", info
         # claim came from the gold section but lacks the answer: where is it?
@@ -186,8 +206,12 @@ class Analyzer:
                        "template": path.stem.rsplit("_", 1)[0], "question": question,
                        "gold": row["relevant"], "answers": row["answers"][:3],
                        "correct": ok, **self.ceilings(row, question, call, n_gold)}
+                rec["cited_gold"] = bool(cited & set(row["relevant"]))
                 if not ok:
-                    rec["cause"], rec["detail"] = self.classify_miss(row, question, call, answer_text, n_gold)
+                    other = {s for q in turn.get("gold_sub_intents", []) if q != question and q in self.qrels
+                             for s in self.qrels[q]["relevant"]}
+                    rec["cause"], rec["detail"] = self.classify_miss(row, question, call, answer_text, n_gold,
+                                                                     other_gold=other)
                 records.append(rec)
             # wrong asserted claims
             if call is None:

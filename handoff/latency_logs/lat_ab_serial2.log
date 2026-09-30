@@ -1,0 +1,22 @@
+stage                                 n       p50       p95       p99       max  (ms)
+ce.claim_ms                         192    95.192   235.750   336.284   409.013
+ce.gate_ms                          181     9.114    20.015    35.725    45.412
+ce.rerank_ms                        212   118.259   216.176   464.243   647.275
+controller.decision_ms              330     0.358     1.534     1.954     4.564
+engine.answer_telemetry_ms           90     0.044     0.098     0.120     0.121
+engine.final_decision_ms             90     0.536     1.055     1.918     4.838
+engine.post_speech_ms                90     1.935     4.262   136.878   179.469
+engine.retrieval_wait_ms             90     0.201     0.584   134.842   174.112
+engine.synthesis_ms                  90     1.097     2.439     3.239     3.801
+reader.other_ms                     187   123.533   252.942   475.909   671.608
+retrieval.bm25_ms                   212     2.651     7.246     9.026    14.111
+retrieval.dense_topk_ms             212     0.357     0.562     0.814     1.013
+retrieval.e5_encode_ms              212    11.315    20.754    38.182   146.121
+retrieval.rrf_ms                    212     0.033     0.053     0.079     0.089
+retrieval.search.other_ms           212   141.538   248.598   518.295   887.708
+retrieval.subquery_ms               212   142.513   249.334   518.966   889.628
+synthesis.claim_select_ms           192    96.754   237.902   338.922   412.014
+synthesis.gate_ms                   181     9.276    20.258    36.071    45.853
+synthesis.grounding_ms               75     0.299     1.018     1.515     1.945
+synthesis.prefetch_ms               212   224.945   510.092   767.435  1006.878
+cold start (first scenario, excluded): 12.3 s

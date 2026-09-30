@@ -1,0 +1,26 @@
+﻿--- session=s1 utterance=u1 ---
+  [      0ms] session_started          
+  [      0ms] chunk_received           text_len=37, is_final=False
+  [      0ms] controller_decision      decision=wait, turn_kind=new_request, reason=intent_unstable, stability=0.0
+  [    800ms] chunk_received           text_len=31, is_final=False
+  [    800ms] controller_decision      decision=retrieve, turn_kind=new_request, reason=intent_stable, stability=0.7
+  [    800ms] sub_queries_emitted      query_ids=['u1.q1'], queries=['plan a customer workshop in Pune for 30 people'], trigger=provisional
+  [    800ms] retrieval_started        request_id=req1, query_ids=['u1.q1'], mode=hybrid
+  [    870ms] retrieval_completed      request_id=req1, latency_ms=31.140699997195043, chunk_ids=['Doc_00 §2 #1', 'Doc_01 §2 #1', 'Doc_01 §1 #1', 'Doc_00 §1 #1', 'Doc_39 §1 #1', 'Doc_24 §1 #1', 'Doc_00 §3 #1', 'Doc_14 §2 #1'], low_confidence_query_ids=[]
+  [   1600ms] chunk_received           text_len=50, is_final=False
+  [   1600ms] controller_decision      decision=retrieve, turn_kind=new_request, reason=multi_intent, stability=1.0
+  [   1600ms] sub_queries_emitted      query_ids=['u1.q2', 'u1.q3'], queries=['cancellation policy plan customer workshop pune', 'catering options plan customer workshop pune'], trigger=multi_intent
+  [   1600ms] retrieval_started        request_id=req2, query_ids=['u1.q2'], mode=hybrid
+  [   1600ms] retrieval_started        request_id=req3, query_ids=['u1.q3'], mode=hybrid
+  [   1693ms] retrieval_completed      request_id=req2, latency_ms=38.32889999830513, chunk_ids=['Doc_16 §1 #1', 'Doc_16 §4 #1', 'Doc_16 §3 #1', 'Doc_16 §2 #1', 'Doc_22 §1 #1', 'Doc_18 §1 #1', 'Doc_20 §1 #1', 'Doc_23 §1 #1'], low_confidence_query_ids=[]
+  [   1708ms] retrieval_completed      request_id=req3, latency_ms=51.664399998117005, chunk_ids=['Doc_24 §3 #1', 'Doc_24 §1 #1', 'Doc_24 §2 #1', 'Doc_39 §1 #1', 'Doc_00 §1 #1', 'Doc_01 §1 #1', 'Doc_00 §2 #1', 'Doc_01 §2 #1'], low_confidence_query_ids=[]
+  [   2100ms] chunk_received           text_len=0, is_final=True
+  [   2100ms] controller_decision      decision=wait, turn_kind=new_request, reason=no_new_intent, stability=1.0
+  [   2102ms] answer_version_created   version=1, parent_version=None, change_kind=initial, citations=['Doc_00 §2', 'Doc_16 §1', 'Doc_24 §3']
+  [   2102ms] grounding_checked        version=1, n_claims=3, n_supported=3, fabricated_citations=[]
+  [   2102ms] output_emitted           kind=turn_result, version=1, timings={'final_decision_ms': 0.628, 'retrieval_wait_ms': 0.255, 'synthesis_ms': 1.294, 'answer_telemetry_ms': 0.08, 'post_speech_ms': 2.284}, speculation={'launched': 1, 'reused': 0}
+  [   9000ms] session_ended            
+  => final version 1 (parent None), citations=['Doc_00 §2', 'Doc_16 §1', 'Doc_24 §3']
+  cost: $0.000000
+
+===== 1 turn(s), total cost $0.000000 =====

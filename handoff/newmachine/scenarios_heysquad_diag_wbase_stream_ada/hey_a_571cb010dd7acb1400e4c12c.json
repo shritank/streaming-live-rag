@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_571cb010dd7acb1400e4c12c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5092,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What objects"
+   }
+  },
+  {
+   "timestamp_ms": 7089,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " in organisms absorb"
+   }
+  },
+  {
+   "timestamp_ms": 8096,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " singlet oxygen to"
+   }
+  },
+  {
+   "timestamp_ms": 9097,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " prevent harm?"
+   }
+  },
+  {
+   "timestamp_ms": 9098,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 11097,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What objects in organisms absorb singlet oxygen to prevent harm?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5ad03a6b77cf76001a686e7c",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 6117,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Which"
+   }
+  },
+  {
+   "timestamp_ms": 7107,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " country besides the Cuba to the United States not try to"
+   }
+  },
+  {
+   "timestamp_ms": 8149,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " annex"
+   }
+  },
+  {
+   "timestamp_ms": 8711,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " in 1898?"
+   }
+  },
+  {
+   "timestamp_ms": 8712,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10711,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     " Which country besides the Cuba did the United states not try to annex in 1898?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

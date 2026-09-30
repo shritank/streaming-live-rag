@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_57274b35f1498d1400e8f5d6",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2086,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How are air go?"
+   }
+  },
+  {
+   "timestamp_ms": 3110,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How are"
+   }
+  },
+  {
+   "timestamp_ms": 3110,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "How are Ergo on Zung Shulen?"
+   }
+  },
+  {
+   "timestamp_ms": 4126,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Ergo and Zungshul and funded?"
+   }
+  },
+  {
+   "timestamp_ms": 4127,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 6126,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "How are erg\u00e4nzungsschulen funded?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

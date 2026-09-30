@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_u_5ad13ef3645df0001a2d138d",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3053,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What year were"
+   }
+  },
+  {
+   "timestamp_ms": 4099,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " citizens or"
+   }
+  },
+  {
+   "timestamp_ms": 6300,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " corporations said to have"
+   }
+  },
+  {
+   "timestamp_ms": 7098,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " been able to"
+   }
+  },
+  {
+   "timestamp_ms": 8129,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " bring claims"
+   }
+  },
+  {
+   "timestamp_ms": 9144,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " against"
+   }
+  },
+  {
+   "timestamp_ms": 10136,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " other non-state"
+   }
+  },
+  {
+   "timestamp_ms": 10280,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " parties?"
+   }
+  },
+  {
+   "timestamp_ms": 10281,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 12280,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What year were citizens or corporations said to have been able to bring claims against other non state parties?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

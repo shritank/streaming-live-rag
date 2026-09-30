@@ -1,0 +1,48 @@
+﻿--- session=s1 utterance=u1 ---
+  [      0ms] session_started          
+  [      0ms] chunk_received           text_len=69, is_final=False
+  [      0ms] controller_decision      decision=retrieve, turn_kind=new_request, reason=intent_stable, stability=1.0
+  [      0ms] sub_queries_emitted      query_ids=['u1.q1'], queries=['Summarize the travel reimbursement rule for an employee trip in Sales'], trigger=provisional
+  [      0ms] retrieval_started        request_id=req1, query_ids=['u1.q1'], mode=hybrid
+  [     33ms] retrieval_completed      request_id=req1, latency_ms=12.650699998630444, chunk_ids=['Doc_30 §1 #1', 'Doc_30 §2 #1', 'Doc_32 §1 #1', 'Doc_30 §3 #1', 'Doc_33 §1 #1', 'Doc_30 §5 #1', 'Doc_31 §1 #1', 'Doc_30 §4 #1'], low_confidence_query_ids=[]
+  [   2000ms] chunk_received           text_len=0, is_final=True
+  [   2000ms] controller_decision      decision=wait, turn_kind=new_request, reason=no_new_intent, stability=1.0
+  [   2003ms] answer_version_created   version=1, parent_version=None, change_kind=initial, citations=['Doc_30 §1']
+  [   2003ms] grounding_checked        version=1, n_claims=1, n_supported=1, fabricated_citations=[]
+  [   2003ms] output_emitted           kind=turn_result, version=1, timings={'final_decision_ms': 0.671, 'retrieval_wait_ms': 0.208, 'synthesis_ms': 1.679, 'answer_telemetry_ms': 0.083, 'post_speech_ms': 2.673}, speculation={'launched': 0, 'reused': 0}
+  [  12000ms] session_ended            
+  => final version 1 (parent None), citations=['Doc_30 §1']
+  cost: $0.000000
+
+--- session=s1 utterance=u2 ---
+  [      0ms] session_started          
+  [   4000ms] chunk_received           text_len=75, is_final=False
+  [   4000ms] controller_decision      decision=retrieve, turn_kind=refinement, reason=refinement_delta, stability=1.0
+  [   4000ms] sub_queries_emitted      query_ids=['u2.q1', 'u2.q2'], queries=['trip was international', 'booking was made after travel trip international'], trigger=refinement
+  [   4000ms] retrieval_started        request_id=req2, query_ids=['u2.q1'], mode=hybrid
+  [   4000ms] retrieval_started        request_id=req3, query_ids=['u2.q2'], mode=hybrid
+  [   4085ms] retrieval_completed      request_id=req2, latency_ms=38.279500000498956, chunk_ids=['Doc_32 §3 #1', 'Doc_33 §2 #1', 'Doc_32 §1 #1', 'Doc_30 §1 #1', 'Doc_31 §1 #1', 'Doc_33 §1 #1', 'Doc_30 §4 #1', 'Doc_30 §5 #1'], low_confidence_query_ids=[]
+  [   4088ms] retrieval_completed      request_id=req3, latency_ms=49.92349999884027, chunk_ids=['Doc_32 §5 #1', 'Doc_30 §3 #1', 'Doc_32 §2 #1', 'Doc_22 §2 #1', 'Doc_22 §4 #1', 'Doc_05 §3 #1', 'Doc_02 §3 #1', 'Doc_30 §4 #1'], low_confidence_query_ids=[]
+  [   6000ms] chunk_received           text_len=0, is_final=True
+  [   6000ms] controller_decision      decision=wait, turn_kind=refinement, reason=no_new_intent, stability=1.0
+  [   6003ms] answer_version_created   version=2, parent_version=1, change_kind=refinement, citations=['Doc_30 §1', 'Doc_32 §3', 'Doc_32 §5']
+  [   6003ms] grounding_checked        version=2, n_claims=3, n_supported=3, fabricated_citations=[]
+  [   6003ms] output_emitted           kind=turn_result, version=2, timings={'final_decision_ms': 0.574, 'retrieval_wait_ms': 0.517, 'synthesis_ms': 1.874, 'answer_telemetry_ms': 0.083, 'post_speech_ms': 3.078}, speculation={'launched': 0, 'reused': 0}
+  [  12000ms] session_ended            
+  => final version 2 (parent 1), citations=['Doc_30 §1', 'Doc_32 §3', 'Doc_32 §5']
+  cost: $0.000000
+
+--- session=s1 utterance=u3 ---
+  [      0ms] session_started          
+  [   8000ms] chunk_received           text_len=46, is_final=False
+  [   8000ms] controller_decision      decision=suppress, turn_kind=presentation_only, reason=presentation_restructure, stability=1.0
+  [   9000ms] chunk_received           text_len=0, is_final=True
+  [   9000ms] controller_decision      decision=suppress, turn_kind=presentation_only, reason=presentation_restructure, stability=1.0
+  [   9001ms] answer_version_created   version=3, parent_version=2, change_kind=restructure, citations=['Doc_30 §1', 'Doc_32 §3', 'Doc_32 §5']
+  [   9001ms] grounding_checked        version=3, n_claims=3, n_supported=3, fabricated_citations=[]
+  [   9001ms] output_emitted           kind=turn_result, version=3, timings={'final_decision_ms': 0.634, 'retrieval_wait_ms': 0.007, 'synthesis_ms': 0.15, 'answer_telemetry_ms': 0.08, 'post_speech_ms': 0.893}, speculation={'launched': 0, 'reused': 0}
+  [  12000ms] session_ended            
+  => final version 3 (parent 2), citations=['Doc_30 §1', 'Doc_32 §3', 'Doc_32 §5']
+  cost: $0.000000
+
+===== 3 turn(s), total cost $0.000000 =====

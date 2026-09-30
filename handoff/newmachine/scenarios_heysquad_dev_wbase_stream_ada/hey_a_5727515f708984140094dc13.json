@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_a_5727515f708984140094dc13",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 4216,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Along with public schools, what"
+   }
+  },
+  {
+   "timestamp_ms": 5210,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " type of school was recognized"
+   }
+  },
+  {
+   "timestamp_ms": 6231,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " under the South"
+   }
+  },
+  {
+   "timestamp_ms": 6868,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " African Schools Act?"
+   }
+  },
+  {
+   "timestamp_ms": 6869,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8868,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Along with public schools, what type of school was recognized under the South African Schools Act?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

@@ -1,0 +1,51 @@
+# GPU environment (NVIDIA, CUDA 12, Windows or Linux) - what every GPU number in final_report.docx ran on.
+# A fully pinned freeze of the tested environment (Windows, CPython 3.11.9; includes the optional audio packages) is
+# requirements-gpu.lock: `python -m pip install --no-deps -r requirements-gpu.lock`.
+# Same pins as requirements.lock EXCEPT: onnxruntime-gpu replaces onnxruntime, plus the CUDA 12 / cuDNN 9
+# user-space libraries as pip wheels (no CUDA toolkit install needed), and `onnx` for the one-time graph build.
+#
+#   python -m venv .venv-gpu
+#   .venv-gpu/Scripts/python -m pip install -r requirements-gpu.txt
+#   # IMPORTANT: never let plain `onnxruntime` (pulled in by faster-whisper) sit next to onnxruntime-gpu -
+#   # they share one package directory and the CPU build silently wins. If it happened:
+#   .venv-gpu/Scripts/python -m pip uninstall -y onnxruntime onnxruntime-gpu
+#   .venv-gpu/Scripts/python -m pip install --no-deps onnxruntime-gpu==1.20.0
+#
+# then, once:  python -m streaming_rag.retrieval.neural --fetch     (pinned models, SHA-256 verified)
+#              python -m streaming_rag.retrieval.export_reader        (SQuAD2 reader -> ONNX; needs torch + transformers==4.46.3,
+#                  whose huggingface_hub<1 pin clashes with this file - run it in a throwaway venv exactly like
+#                  Dockerfile stage 1, with STREAMING_RAG_CACHE pointing at this repo's .cache/streaming_rag)
+#              python -m streaming_rag.retrieval.neural --fuse        (optional CUDA graphs; see final_report.docx)
+#
+# Neural inference is GPU-only on such a machine: if CUDA cannot be used the code raises GpuUnavailable
+# (streaming_rag/gpu.py) - it never silently falls back to the CPU.
+
+# --- runtime (identical to requirements.lock) ---
+numpy==2.4.6
+jsonschema==4.26.0
+httpx==0.28.1
+spacy==3.8.16
+tokenizers==0.23.2
+huggingface_hub==1.32.0
+pandas==3.0.5
+pyarrow==25.0.1
+
+# --- GPU ---
+onnxruntime-gpu==1.20.0
+nvidia-cudnn-cu12==9.26.0.51
+nvidia-cublas-cu12==12.9.2.10
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cufft-cu12==11.4.1.4
+nvidia-curand-cu12==10.3.10.19
+nvidia-nvjitlink-cu12==12.9.86
+onnx==1.23.0                 # only for `neural --fuse` (graph rewrite + fusion)
+
+# --- dev / test ---
+pytest==9.1.1
+pytest-asyncio==1.4.0
+pyyaml==6.0.2
+
+# --- optional audio front end (out of the official scope; streaming_rag/asr/) ---
+# faster-whisper==1.2.1
+# ctranslate2==4.8.2

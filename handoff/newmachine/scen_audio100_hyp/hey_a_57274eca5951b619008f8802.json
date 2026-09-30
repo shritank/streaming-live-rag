@@ -1,0 +1,167 @@
+{
+ "scenario_id": "hey_a_57274eca5951b619008f8802",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2070,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What religion?"
+   }
+  },
+  {
+   "timestamp_ms": 3091,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What"
+   }
+  },
+  {
+   "timestamp_ms": 3091,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What religion schools were in?"
+   }
+  },
+  {
+   "timestamp_ms": 4104,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " religion schools were"
+   }
+  },
+  {
+   "timestamp_ms": 4104,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What religion schools were integrated into music?"
+   }
+  },
+  {
+   "timestamp_ms": 5125,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " integrated into"
+   }
+  },
+  {
+   "timestamp_ms": 5125,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What religion schools were integrated into New Zealand public schools?"
+   }
+  },
+  {
+   "timestamp_ms": 6116,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " New Zealand public"
+   }
+  },
+  {
+   "timestamp_ms": 6116,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What religion schools were integrated into New Zealand public schools between 19-"
+   }
+  },
+  {
+   "timestamp_ms": 7776,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " schools between"
+   }
+  },
+  {
+   "timestamp_ms": 7776,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What religion schools were integrated into New Zealand public schools between 1979 and And that's it. We'll see you in a minute. Bye. Bye. Bye."
+   }
+  },
+  {
+   "timestamp_ms": 8213,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 1979 and"
+   }
+  },
+  {
+   "timestamp_ms": 8213,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What religion schools were integrated into New Zealand public schools between 1979 and 1984."
+   }
+  },
+  {
+   "timestamp_ms": 8989,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 1984."
+   }
+  },
+  {
+   "timestamp_ms": 8990,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10989,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What religion's schools were integrated into New Zealand public schools between 1979 and 1984?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

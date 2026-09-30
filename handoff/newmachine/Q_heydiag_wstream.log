@@ -1,0 +1,14 @@
+config overrides: (defaults)   wall 493.6s   providers ['CUDAExecutionProvider']
+  G2 early retrieval   400/400 = 100.0% [95% CI 99.0%-100.0%]  false triggers 0/0
+  G3 >=2 sub-queries   n/a (n=0)
+  G4 self-reported     237/237 = 100.0% [95% CI 98.4%-100.0%]  fabricated=0
+  G5 continuity        n/a (n=0)
+  G6 coverage          438/438 = 100.0% [95% CI 99.1%-100.0%]
+  answer recall (gold)     156/219 = 71.2% [95% CI 64.9%-76.8%]
+  citation recall (gold)   171/219 = 78.1% [95% CI 72.1%-83.1%]
+  claim precision (gold)   171/237 = 72.2% [95% CI 66.1%-77.5%]
+  correct abstention       159/219 = 72.6% [95% CI 66.3%-78.1%]
+  exact decomposition      n/a (n=0)
+  over-split (lower=better) 22/438 = 5.0% [95% CI 3.3%-7.5%]
+  mean words per claim     28.0 (n=237)
+  post-utterance latency p50=69.51929999922868 p95=216.06959999917308 (virtual ms, n=436)

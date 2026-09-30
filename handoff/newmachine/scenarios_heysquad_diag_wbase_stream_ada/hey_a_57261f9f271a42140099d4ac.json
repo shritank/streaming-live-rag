@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_57261f9f271a42140099d4ac",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 6070,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Interest"
+   }
+  },
+  {
+   "timestamp_ms": 7099,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " groups and government"
+   }
+  },
+  {
+   "timestamp_ms": 8104,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " agencies that were concerned"
+   }
+  },
+  {
+   "timestamp_ms": 9093,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " with energy were"
+   }
+  },
+  {
+   "timestamp_ms": 10118,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " no"
+   }
+  },
+  {
+   "timestamp_ms": 11676,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " match for who."
+   }
+  },
+  {
+   "timestamp_ms": 11677,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 13676,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Interest groups and government agencies that were concerned with energy were no match for who?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

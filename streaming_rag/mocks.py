@@ -42,12 +42,18 @@ class MockController:
         self._telemetry = telemetry
         self._config = config or {}
         self._fail_mode = fail_mode
-        self._seen_by_utterance: dict[str, set[str]] = {}
-        self._accumulated: dict[str, str] = {}
+        self._seen_by_utterance: dict[tuple[str, str], set[str]] = {}
+        self._accumulated: dict[tuple[str, str], str] = {}
 
-    def reset_utterance(self, utterance_id: str) -> None:
-        self._seen_by_utterance.pop(utterance_id, None)
-        self._accumulated.pop(utterance_id, None)
+    def reset_utterance(self, utterance_id: str, session_id: str | None = None) -> None:
+        for d in (self._seen_by_utterance, self._accumulated):
+            for key in [k for k in d if k[1] == utterance_id and (session_id is None or k[0] == session_id)]:
+                d.pop(key, None)
+
+    def reset_session(self, session_id: str) -> None:
+        for d in (self._seen_by_utterance, self._accumulated):
+            for key in [k for k in d if k[0] == session_id]:
+                d.pop(key, None)
 
     async def on_chunk(self, chunk: TranscriptChunk, session: SessionView) -> ControllerDecision:
         if self._fail_mode == "raise":
@@ -55,8 +61,9 @@ class MockController:
         if self._fail_mode == "timeout":
             await asyncio.sleep(3600)
 
-        text = self._accumulated.get(chunk.utterance_id, "") + chunk.text
-        self._accumulated[chunk.utterance_id] = text
+        key = (chunk.session_id, chunk.utterance_id)
+        text = self._accumulated.get(key, "") + chunk.text
+        self._accumulated[key] = text
         stripped = text.strip().lower()
 
         if stripped in _CHITCHAT:
@@ -67,7 +74,7 @@ class MockController:
                                        "presentation_restructure", 1.0)
 
         tokens = _tokenize(text)
-        seen = self._seen_by_utterance.setdefault(chunk.utterance_id, set())
+        seen = self._seen_by_utterance.setdefault((chunk.session_id, chunk.utterance_id), set())
 
         # Word-boundary check: a naive substring test would treat "booking" as
         # matching "book" and wrongly disqualify a genuine refinement.
@@ -194,15 +201,22 @@ class MockSynthesizer:
 
     async def restructure(self, session_id: str, instruction: str) -> AnswerVersion:
         prior = self._history.get(session_id)
-        if prior is None:
-            raise RuntimeError("restructure called with no prior answer in session")
+        if prior is None:   # same contract as the real synthesizer: say so, invent and cite nothing
+            av = AnswerVersion(
+                version=self._next_version(session_id), parent_version=None, change_kind="clarification",
+                text="There is no earlier answer in this session to reformat. Ask a question first.",
+                claims=[], citations=[], evidence_ids=[], sub_queries=[], uncertainty=None,
+                created_ms=int(time.perf_counter() * 1000),
+            )
+            self._history[session_id] = av
+            return av
         version = self._next_version(session_id)
         text = " • " + " • ".join(c.text for c in prior.claims) if prior.claims else prior.text
         av = AnswerVersion(
             version=version, parent_version=prior.version, change_kind="restructure",
             text=text, claims=list(prior.claims), citations=list(prior.citations),
             evidence_ids=list(prior.evidence_ids), sub_queries=list(prior.sub_queries),
-            uncertainty=prior.uncertainty, created_ms=int(time.monotonic() * 1000),
+            uncertainty=prior.uncertainty, created_ms=int(time.perf_counter() * 1000),
         )
         self._history[session_id] = av
         return av
@@ -236,7 +250,7 @@ class MockSynthesizer:
             version=version, parent_version=parent.version if parent else None,
             change_kind=change_kind, text=text, claims=claims, citations=citations,
             evidence_ids=evidence_ids, sub_queries=list(extra_sub_queries or []) + list(sub_queries),
-            uncertainty=uncertainty, created_ms=int(time.monotonic() * 1000),
+            uncertainty=uncertainty, created_ms=int(time.perf_counter() * 1000),
         )
         self._history[session_id] = av
         return av

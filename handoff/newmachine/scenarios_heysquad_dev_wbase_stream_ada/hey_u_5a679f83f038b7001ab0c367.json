@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_u_5a679f83f038b7001ab0c367",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3273,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What type of"
+   }
+  },
+  {
+   "timestamp_ms": 4254,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " schools would they have in"
+   }
+  },
+  {
+   "timestamp_ms": 5288,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " China as a"
+   }
+  },
+  {
+   "timestamp_ms": 6321,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " compromise after Chinese"
+   }
+  },
+  {
+   "timestamp_ms": 6576,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " independence?"
+   }
+  },
+  {
+   "timestamp_ms": 6577,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 8576,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What type of schools would they have in China as a compromise after Chinese independence?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

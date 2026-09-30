@@ -1,0 +1,77 @@
+{
+ "scenario_id": "hey_u_5a66413dc2b11c001a425ec9",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5074,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Who's occupation did the"
+   }
+  },
+  {
+   "timestamp_ms": 7090,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Egyptians resist in the"
+   }
+  },
+  {
+   "timestamp_ms": 8097,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " 2003"
+   }
+  },
+  {
+   "timestamp_ms": 8231,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Whose occupation did the Egyptians resist in the 2003 Rose Revolution?"
+   }
+  },
+  {
+   "timestamp_ms": 8232,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10231,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Whose occupation did the Egyptians resist in the 2003 Rose Revolution?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

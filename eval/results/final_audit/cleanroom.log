@@ -1,0 +1,32 @@
+clean-room G1 substitute
+15:38:19 1. copy the working tree to C:\Users\Admin\AppData\Local\Temp\cleanroom_srag (no .git, venvs, caches, audio, raw data)
+15:38:39 2. fresh venv + pip install -r requirements.lock
+15:40:44    install took 125 s
+15:40:44 3. pip check
+15:40:47    No broken requirements found.
+15:40:47    import streaming_rag ok on Python 3.11.9
+15:40:47 4. fresh HF cache: fetch + SHA-256 verify the pinned models
+15:41:20    cross-encoder/ms-marco-MiniLM-L6-v2@233902d2 onnx/model.onnx -> C:\Users\Admin\AppData\Local\Temp\cleanroom_srag\.hf\hub\models--cross-encoder--ms-marco-MiniLM-L6-v2\snapshots\233902d25c440f23af6f7d6e94d2946bac0bee0a\onnx\model.onnx
+15:41:20    all model files verified against pinned SHA-256
+15:41:21    all model files verified against pinned SHA-256
+15:41:21 5. SQuAD2 reader ONNX: copy the exported artefact and compare its hash with the recorded one
+15:41:22    reader sha256 = 6e9e62e6c6acb891cca9896e6f6d2f939c28e4b810e885b902372dfe340bd421
+15:41:22    matches the recorded export hash: True
+15:41:22 6. rebuild the fixture corpus from its seed and diff against the committed one
+15:41:22    wrote 41 documents and 156 qrels to C:\Users\Admin\AppData\Local\Temp\cleanroom_srag\_rebuilt_dev_corpus
+15:41:23    files committed=42 rebuilt=42 differing/missing=0
+15:41:23 7. the image's command: python -m eval.run_all --scenarios eval/scenarios --time-scale 8 --reps 1 (CPU)
+15:42:17    scenarios run: 47
+15:42:17    G2 early retrieval : 16/16 = 100.0%  (false-trigger rate 0.0%)
+15:42:17    G3 multi-intent    : 10/10 = 100.0%
+15:42:17    G4 grounding       : 68/68 = 100.0%  (fabricated=0)
+15:42:17    G5 refinement      : 10/10 = 100.0%
+15:42:17    G6 telemetry cov.  : 67/67 = 100.0%  (schema errors=0)
+15:42:17    
+15:42:17    VERDICT: PASS
+15:42:17    run_all wall time 55 s
+15:42:17 8. pytest in the clean CPU environment
+15:42:46    ........................................................................ [ 80%]
+15:42:46    ...................................................................s.    [100%]
+15:42:46    356 passed, 1 skipped in 27.02s
+15:42:46 DONE

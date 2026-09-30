@@ -1,0 +1,122 @@
+{
+ "scenario_id": "hey_a_572746addd62a815002e9a60",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2097,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "rather than tech"
+   }
+  },
+  {
+   "timestamp_ms": 3106,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Rather than taxation..."
+   }
+  },
+  {
+   "timestamp_ms": 4119,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Rather than"
+   }
+  },
+  {
+   "timestamp_ms": 4119,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Rather than taxation, what our"
+   }
+  },
+  {
+   "timestamp_ms": 5139,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " taxation, what"
+   }
+  },
+  {
+   "timestamp_ms": 5139,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Rather than taxation, what are private schools?"
+   }
+  },
+  {
+   "timestamp_ms": 6158,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Rather than taxation, what our private school is largely funded?"
+   }
+  },
+  {
+   "timestamp_ms": 7157,
+   "event_type": "transcript_hypothesis",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Rather than taxation, what are private schools largely funded by?"
+   }
+  },
+  {
+   "timestamp_ms": 7711,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " are private schools largely funded by?"
+   }
+  },
+  {
+   "timestamp_ms": 7712,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9711,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Rather than taxation, what are private schools largely funded by?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

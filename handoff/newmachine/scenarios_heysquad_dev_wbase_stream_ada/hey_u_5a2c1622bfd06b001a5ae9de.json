@@ -1,0 +1,113 @@
+{
+ "scenario_id": "hey_u_5a2c1622bfd06b001a5ae9de",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 5429,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "When did"
+   }
+  },
+  {
+   "timestamp_ms": 6231,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Santanta Sports"
+   }
+  },
+  {
+   "timestamp_ms": 7207,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " say it would"
+   }
+  },
+  {
+   "timestamp_ms": 8248,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " launch as a free"
+   }
+  },
+  {
+   "timestamp_ms": 9310,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " service on the"
+   }
+  },
+  {
+   "timestamp_ms": 11876,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " digital"
+   }
+  },
+  {
+   "timestamp_ms": 12140,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " terrestrial"
+   }
+  },
+  {
+   "timestamp_ms": 12599,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " platform."
+   }
+  },
+  {
+   "timestamp_ms": 12600,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 14599,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "When did Setanta Sports say it would launch as a free service on the digital terrestrial platform?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

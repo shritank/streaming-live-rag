@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_a_57293e221d046914007791d8",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3137,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "What is the"
+   }
+  },
+  {
+   "timestamp_ms": 4181,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " scenario card in"
+   }
+  },
+  {
+   "timestamp_ms": 5209,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " which we don't"
+   }
+  },
+  {
+   "timestamp_ms": 6245,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " change our"
+   }
+  },
+  {
+   "timestamp_ms": 7248,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " greenhouse gas"
+   }
+  },
+  {
+   "timestamp_ms": 7733,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " creation practices?"
+   }
+  },
+  {
+   "timestamp_ms": 7734,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9733,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "What is the scenario called in which we don't change our greenhouse gas creation practices?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}

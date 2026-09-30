@@ -1,0 +1,95 @@
+{
+ "scenario_id": "hey_u_5a668fc9f038b7001ab0bfe7",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 2479,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "when"
+   }
+  },
+  {
+   "timestamp_ms": 4479,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " was Michigan"
+   }
+  },
+  {
+   "timestamp_ms": 5577,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Network Inc."
+   }
+  },
+  {
+   "timestamp_ms": 6655,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " formed by"
+   }
+  },
+  {
+   "timestamp_ms": 7694,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " Michigan's public"
+   }
+  },
+  {
+   "timestamp_ms": 8378,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " When was Michigan Network Inc. formed by Michigan's public universities?"
+   }
+  },
+  {
+   "timestamp_ms": 8379,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 10378,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "When was Michigan Network Inc. formed by Michigan's public universities?"
+    ],
+    "expect_uncertainty": true
+   }
+  }
+ }
+}

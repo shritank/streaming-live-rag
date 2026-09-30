@@ -1,0 +1,86 @@
+{
+ "scenario_id": "hey_a_572fd8efb2c2fd14005684fd",
+ "template": "heysquad_stream",
+ "events": [
+  {
+   "timestamp_ms": 0,
+   "event_type": "session_start",
+   "payload": {
+    "session_id": "s1"
+   }
+  },
+  {
+   "timestamp_ms": 3066,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": "Why do the"
+   }
+  },
+  {
+   "timestamp_ms": 4066,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " island"
+   }
+  },
+  {
+   "timestamp_ms": 6086,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " archipelago compromise a"
+   }
+  },
+  {
+   "timestamp_ms": 7110,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " smaller"
+   }
+  },
+  {
+   "timestamp_ms": 7618,
+   "event_type": "transcript_chunk",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1",
+    "text": " number of electors?"
+   }
+  },
+  {
+   "timestamp_ms": 7619,
+   "event_type": "utterance_end",
+   "payload": {
+    "session_id": "s1",
+    "utterance_id": "u1"
+   }
+  },
+  {
+   "timestamp_ms": 9618,
+   "event_type": "session_end",
+   "payload": {
+    "session_id": "s1"
+   }
+  }
+ ],
+ "ground_truth": {
+  "turns": {
+   "u1": {
+    "kind": "new_request",
+    "retrieval_required": true,
+    "eligible_for_early_retrieval": true,
+    "gold_sub_intents": [
+     "Why do the island archipelagos comprise a smaller number of electors?"
+    ],
+    "expect_uncertainty": false
+   }
+  }
+ }
+}
