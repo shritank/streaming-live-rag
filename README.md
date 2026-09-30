@@ -7,8 +7,10 @@ in place when a late constraint arrives, instead of restarting from scratch. Eve
 verbatim corpus sentence with its `[Doc_ID section]` citation; questions the corpus cannot answer
 are refused, not guessed.
 
-Built against the Theme 4 guide (`../Theme 4 Guide_RAG.pdf`) and the four-task project context
-in `../Task 1` - `../Task 4`. **Official scope: streaming transcript -> RAG -> grounded, cited
+Built against the Samsung PRISM Theme 4 guide and its four task briefs (Task 1 corpus retrieval, Task 2 stream
+controller, Task 3 session synthesis, Task 4 engine, telemetry and evaluation). Those source documents are kept in the
+original workspace next to this repository and are **not part of it**; where code comments and docs cite "Task 4 section 4.3"
+or "project context section 6.1", they mean those briefs. **Official scope: streaming transcript -> RAG -> grounded, cited
 answer.** (An optional Whisper audio front end exists in `streaming_rag/asr/`; it is outside the
 official scope and not part of any headline number. See "Audio input (optional)" below.)
 
@@ -51,7 +53,7 @@ directory structure.
 |---|---|---|---|
 | **D1** | **Reproducible repository**: source, pinned dependency lockfiles, environment template, one-command run | This whole `streaming-live-rag/` folder. One command: `docker compose up --build` (top of this README). Source: `streaming_rag/`. Lockfiles: `requirements.lock`, `requirements-cpu.lock`, `requirements-gpu.txt`, `requirements-gpu.lock`. Environment template: `.env.example`. One-command run: `docker compose up` (`Dockerfile`, `docker-compose.yml`) or the clean CLI runner `python -m eval.run_all` (this README, "Quickstart"). Manifest: `run.yaml`. Tests: `tests/`. | Code complete, 359 tests pass. Not yet committed / pushed. Gate G1 (`docker compose up`) passed (see Status). |
 | **D2** | **System architecture brief** (<= 6 pages): design rationale, retrieval trigger logic, decomposition strategy, data provenance, trade-offs, failure mitigations | `docs/architecture_brief.docx` (about 1,900 words); diagram as Mermaid code in `docs/architecture_diagram.md` | Done |
-| **D3** | **Benchmarking & evaluation report**: comparison against the baseline, >= 3 analysed edge-case failures, two architectural ablations | `final_report.docx` (authoritative): baseline vs streaming section 5.10, ablations 5.11, edge-case failures 5.12. Summary tables: `docs/benchmark_report.md`. Failure logs: `reports/edge_cases.md`, `reports/edge_cases_real.md`, `reports/failure_diagnosis.md`. Raw runs behind every number: `eval/results/final_audit/`; reproduction commands: `final_report.docx` section 12 and `handoff/final_audit/run_final_audit.sh` | Done |
+| **D3** | **Benchmarking & evaluation report**: comparison against the baseline, >= 3 analysed edge-case failures, two architectural ablations | `final_report.docx` (authoritative): baseline vs streaming section 5.10, ablations 5.11, edge-case failures 5.12. Summary tables: `docs/benchmark_report.md`. Raw runs behind every number: `eval/results/final_audit/`; reproduction commands: `final_report.docx` section 12 and `handoff/final_audit/run_final_audit.sh` | Done |
 | **D4** | **Telemetry & observability schema**: end-to-end latencies, retrieval trigger events, answer-version updates, inference cost | `docs/telemetry_schema.md` (human-readable) and `streaming_rag/telemetry/schema.json` (machine-readable, every trace line is validated against it). Code: `streaming_rag/telemetry/` (`sinks.py`, `cost.py`, `trace.py`, `report.py`). Example traces: `eval/results/final_audit/demo/demo1_trace.jsonl`, `demo2_trace.jsonl` | Done |
 | **D5** | **System demonstration video** (<= 5 minutes) | Link to the uploaded video: `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). Script, commands and recording procedure: `docs/demo_script.md`. Reference outputs: `eval/results/final_audit/demo/` | Uploaded |
 | **D6** | **Presentation** (PPT or PDF) | `SRMIST_VirtualVanguards_Submission.pptx` (12 slides, Samsung PRISM template) | Done |
@@ -65,11 +67,11 @@ and the six **evaluation gates G1-G6** (section 5) are scored by `python -m eval
 ## Project structure
 
 ```
-SamsungGenAI/                      the workspace this project sits in
-|-- Theme 4 Guide_RAG.pdf          the brief: requirements, gates, deliverables
-|-- Task 1 ... Task 4/             one brief per task (project context.md, task context.md)
-|-- participant-kit/               material for a different theme (interruptible agents); NOT used here
-`-- streaming-live-rag/            this project (everything below)
+SamsungGenAI/                      the original workspace (only streaming-live-rag/ is in this repository)
+|-- Theme 4 Guide_RAG.pdf          the brief: requirements, gates, deliverables         (not in this repo)
+|-- Task 1 ... Task 4/             one brief per task (project context.md, task context.md)   (not in this repo)
+|-- participant-kit/               material for a different theme (interruptible agents); NOT used here   (not in this repo)
+`-- streaming-live-rag/            this repository (everything below)
 ```
 
 ```
@@ -110,13 +112,12 @@ streaming-live-rag/
 |   |-- raw/                       downloaded SQuAD / HeySQuAD source files; build_squad_corpus.py rebuilds the corpora from them
 |-- docs/                          architecture_brief.docx [D2, Word, 3 pages], architecture_diagram.md [D2], telemetry_schema.md [D4],
 |                                  benchmark_report [D3], demo_script [D5], experiment_log, generative_synthesis, landscape_audit
-|-- reports/                       edge-case logs and the exhaustive failure-case diagnosis [D3]
+|-- reports/                       default output folder of `eval.edge_cases` / `eval.diagnose` (generated files, git-ignored); the edge-case analysis itself is in final_report.docx 5.12
 |-- handoff/                       tooling and records from the measurement passes
 |   |-- gpu_tools/                 GPU verification and benchmarks (verify_product_gpu.py, fuse_models.py ...)
 |   |-- asr_tools/                 Whisper models (tiny/base/small .en), 997 HeySQuAD WAV clips, transcribe scripts
-|   |-- asr_results/, newmachine/, latency_logs/    raw outputs and logs from the audio / GPU passes
-|   |-- final_audit/               the exact scripts that produced the final-audit results
-|   `-- baseline_snapshot/         patch + file list of the uncommitted changes made on top of the starting git commit
+|   |-- asr_results/, newmachine/    raw outputs and logs from the audio / GPU passes
+|   `-- final_audit/               the exact scripts that produced the final-audit results
 |-- tools/                         small standalone helpers
 |   |-- answer_audio.py            WAV file -> Whisper -> engine -> cited answer (guide-format record)
 |   `-- auto_recall_lab.py         answer-recall diagnostics
@@ -307,7 +308,7 @@ The annotated tree above is the folder map. Package internals:
 
 ```
 streaming_rag/
-  contracts.py          shared dataclasses/protocols - the only coupling surface (project context section 6.1)
+  contracts.py          shared dataclasses/protocols - the only coupling surface (task brief section 6.1; the briefs are kept outside this repository)
   config.py             every tunable + ablation switch
   gpu.py                GPU selection: CUDA mandatory when an NVIDIA GPU is present, no silent CPU fallback
   llm.py                async LLMClient: fake (offline, default) | openai | gemini (never used on the default path)
