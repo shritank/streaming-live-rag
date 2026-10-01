@@ -38,7 +38,7 @@ The first build downloads the models and takes several minutes; later runs reuse
 | Engine, all four tasks | Complete. 359 tests pass. |
 | Official gates G2-G6 | All pass on the legacy, dev and diagnostic suites (audited on an RTX 6000 Ada; re-run on an RTX 4050 laptop, see "Results at a glance"). |
 | Gate G1 (`docker compose up`) | **Passed** (30 Sep - 1 Oct 2026, Docker Desktop / WSL 2): image built, `VERDICT: PASS`, exit 0. Caveat: run from the working tree, not a fresh clone. |
-| Demo video | **Uploaded** - link in `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). Script: `docs/demo_script.md`; every command in it was re-run on the RTX 4050 and matches. |
+| Demo video | **Uploaded** - link in `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). |
 | Presentation | **Done** - `SRMIST_VirtualVanguards_Submission.pptx` (12 slides). |
 | AI disclosure form | **Done and signed** - `LangAI3.0_AI_Disclosure.docx`. |
 | Audio input | Works end to end (`tools/answer_audio.py`), optional, outside the official scope. |
