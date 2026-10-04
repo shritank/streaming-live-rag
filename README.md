@@ -38,7 +38,7 @@ The first build downloads the models and takes several minutes; later runs reuse
 | Engine, all four tasks | Complete. 373 tests pass. |
 | Official gates G2-G6 | All pass on the legacy, dev and diagnostic suites (audited on an RTX 6000 Ada; re-run on an RTX 4050 laptop, see "Results at a glance"). |
 | Gate G1 (`docker compose up`) | **Passed** (30 Sep - 1 Oct 2026, Docker Desktop / WSL 2): image built, `VERDICT: PASS`, exit 0. Re-run on 4 Oct 2026 after the default changes below: rebuilt and `VERDICT: PASS` again. Caveat: run from the working tree, not a fresh clone. |
-| Demo video | **Uploaded** - link in `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). The demo commands (`make demo`) were re-run on the RTX 4050 and match. |
+| Demo video | **Uploaded** - link in `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). |
 | Presentation | **Done** - `SRMIST_VirtualVanguards_Submission.pptx` (12 slides). |
 | AI disclosure form | **Done and signed** - `LangAI3.0_AI_Disclosure.docx`. |
 | Audio input | Works end to end (`tools/answer_audio.py`), optional, outside the official scope. |
@@ -55,7 +55,7 @@ directory structure.
 | **D2** | **System architecture brief** (<= 6 pages): design rationale, retrieval trigger logic, decomposition strategy, data provenance, trade-offs, failure mitigations | `docs/architecture_brief.docx` (about 1,900 words); diagram as Mermaid code in `docs/architecture_diagram.md` | Done |
 | **D3** | **Benchmarking & evaluation report**: comparison against the baseline, >= 3 analysed edge-case failures, two architectural ablations | `final_report.docx` (authoritative): baseline vs streaming section 5.10, ablations 5.11, edge-case failures 5.12. Summary tables: `docs/benchmark_report.md`. Raw runs behind every number: `eval/results/final_audit/`; reproduction commands: `final_report.docx` section 12 and `handoff/final_audit/run_final_audit.sh` | Done |
 | **D4** | **Telemetry & observability schema**: end-to-end latencies, retrieval trigger events, answer-version updates, inference cost | `docs/telemetry_schema.md` (human-readable) and `streaming_rag/telemetry/schema.json` (machine-readable, every trace line is validated against it). Code: `streaming_rag/telemetry/` (`sinks.py`, `cost.py`, `trace.py`, `report.py`). Example traces: `eval/results/final_audit/demo/demo1_trace.jsonl`, `demo2_trace.jsonl` | Done |
-| **D5** | **System demonstration video** (<= 5 minutes) | Link to the uploaded video: `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). Commands: `make demo`. Reference outputs: `eval/results/final_audit/demo/` | Uploaded |
+| **D5** | **System demonstration video** (<= 5 minutes) | Link to the uploaded video: `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). | Uploaded |
 | **D6** | **Presentation** (PPT or PDF) | `SRMIST_VirtualVanguards_Submission.pptx` (12 slides, Samsung PRISM template) | Done |
 | **D7** | **AI usage disclosure form** | `LangAI3.0_AI_Disclosure.docx` (signed) | Done |
 
