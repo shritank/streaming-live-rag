@@ -30,7 +30,7 @@ eval-gpu:               # the official procedure on the GPU: real-time replay, 3
 compare:                # streaming vs deferred vs baseline, real pipeline, real time (final report 5.10)
 	python -m eval.compare --modes streaming,deferred,baseline --scenarios eval/scenarios_real_test --corpus-dir data/corpus_test --time-scale 1
 
-demo:                   # the <= 5 minute demonstration, see docs/demo_script.md (~90 s of it is real-time replay)
+demo:                   # the <= 5 minute demonstration (~90 s of it is real-time replay)
 	python -m streaming_rag.cli replay eval/scenarios/dev_001_multi_intent.json --corpus-dir fixtures/dev_corpus --time-scale 1 --warmup --telemetry demo1.jsonl
 	python -m streaming_rag.telemetry.report demo1.jsonl
 	python -m streaming_rag.cli evidence "cancellation policy plan customer workshop pune" --corpus-dir fixtures/dev_corpus

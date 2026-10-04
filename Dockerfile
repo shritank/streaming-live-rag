@@ -49,6 +49,8 @@ ENV PYTHONUNBUFFERED=1
 # would otherwise stop with GpuUnavailable; the CPU opt-out is declared explicitly here instead.
 # The GPU environment is requirements-gpu.txt (see README).
 ENV STREAMING_RAG_ORT_PROVIDER=cpu STREAMING_RAG_ASR_DEVICE=cpu
+# The image runs the repository defaults: synthesis.anaphoric_context on, ONNX Runtime threads automatic on the CPU
+# (STREAMING_RAG_ORT_THREADS unset), int8 off (STREAMING_RAG_ORT_QUANT unset: it costs answer recall).
 
 ENTRYPOINT ["python", "-m", "eval.run_all"]
 CMD ["--scenarios", "eval/scenarios", "--time-scale", "8", "--reps", "1"]

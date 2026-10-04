@@ -74,9 +74,12 @@ class RetrievalConfig:
 
 @dataclass
 class ControllerConfig:
-    mode: str = "rule"            # rule | model | hybrid
+    mode: str = "rule"            # rule | model (learned stability classifier, controller/model_stability.py)
     min_stability: float = 0.6
     provisional_stability: float = 0.45
+    # mode="model": retrieve on a partial when the learned P(ready to search) reaches this; None = the value
+    # fitted by `python -m eval.train_model_controller` (stored in controller/model_controller.json)
+    model_threshold: float | None = None
     debounce_ms: int = 150
     # Drop conversational lead-ins ("Actually,", "Wait, one more thing —")
     # from sub-query text; they carry no search content.
@@ -147,6 +150,14 @@ class SynthesisConfig:
     # demonstrative ("It is...", "This renewal...") — it continues the chosen
     # sentence's subject, and the answer is often in it.
     anaphoric_continuation: bool = False
+    # The opposite direction: when the CHOSEN sentence itself opens with a
+    # pronoun, demonstrative or "that day"-style reference ("It was founded in
+    # 1802", "As of that day, ..."), prepend the sentence before it so the answer
+    # does not start with a dangling reference. Applied after the refusal gate, so
+    # the gate's decision is unchanged; the added sentence is verbatim corpus text.
+    # On by default: sentences that open with a dangling reference fall from 6-12% to 0.4-4.6% across the four
+    # evaluation sets, answer recall is equal or up (Text DEV +1.0, HeySQuAD DEV +0.4; no interval excludes 0).
+    anaphoric_context: bool = True
 
 
 @dataclass
@@ -167,6 +178,9 @@ class EngineConfig:
 class LLMConfig:
     provider: str = field(default_factory=lambda: _env_str("LLM_PROVIDER", "fake"))
     model: str = field(default_factory=lambda: _env_str("LLM_MODEL", "fake-model"))
+    # provider="local": base URL of an OpenAI-compatible server for a locally hosted open model (Ollama,
+    # LM Studio, llama.cpp, vLLM, or tools/local_llm_server.py). No key, no cost.
+    base_url: str = field(default_factory=lambda: _env_str("LLM_BASE_URL", "http://127.0.0.1:8000/v1"))
     api_key_env: str = "SECRET_LLM_API_KEY"
     temperature: float = 0.0
     seed: int = 7

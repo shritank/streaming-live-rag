@@ -194,8 +194,61 @@ class GeminiLLM:
         raise last_err
 
 
+class LocalLLM:
+    """OpenAI-compatible HTTP client for a locally hosted open model (provider=='local').
+
+    Talks to `{llm.base_url}/chat/completions` with httpx (already a pinned dependency), so any local server that
+    speaks that format works: Ollama, LM Studio, llama.cpp, vLLM, or tools/local_llm_server.py. No API key and
+    no per-token cost (cost_usd is 0 unless the model is in llm.price_table)."""
+
+    def __init__(self, config: Config, telemetry: Telemetry | None = None, transport=None):
+        import httpx
+        self._config = config
+        self._telemetry = telemetry or NullTelemetry()
+        self._client = httpx.AsyncClient(base_url=config.llm.base_url.rstrip("/"), timeout=config.llm.timeout_s,
+                                         transport=transport)
+
+    async def complete(self, *, purpose: str, system: str, prompt: str,
+                        json_mode: bool = False, max_tokens: int = 512) -> LLMResponse:
+        model = self._config.llm.model
+        attempts = self._config.llm.max_retries + 1
+        payload = {
+            "model": model, "temperature": self._config.llm.temperature, "seed": self._config.llm.seed,
+            "max_tokens": max_tokens,
+            "messages": [{"role": "system", "content": system}, {"role": "user", "content": prompt}],
+        }
+        if json_mode:
+            payload["response_format"] = {"type": "json_object"}
+        for attempt in range(attempts):
+            start = time.perf_counter()
+            try:
+                resp = await self._client.post("/chat/completions", json=payload)
+                resp.raise_for_status()
+                data = resp.json()
+                latency_ms = (time.perf_counter() - start) * 1000
+                text = data["choices"][0]["message"]["content"] or ""
+                usage = data.get("usage") or {}
+                tokens_in = usage.get("prompt_tokens") or _estimate_tokens(system + prompt)
+                tokens_out = usage.get("completion_tokens") or _estimate_tokens(text)
+                price_in, price_out = _price_for(model, self._config.llm.price_table)
+                cost = tokens_in / 1000 * price_in + tokens_out / 1000 * price_out
+                self._telemetry.emit("llm_call", purpose=purpose, model=model, tokens_in=tokens_in,
+                                     tokens_out=tokens_out, latency_ms=latency_ms, cost_usd=cost)
+                return LLMResponse(text=text, model=model, tokens_in=tokens_in, tokens_out=tokens_out,
+                                    latency_ms=latency_ms)
+            except Exception as e:
+                if attempt < attempts - 1:
+                    await asyncio.sleep(0.1)
+                    continue
+                self._telemetry.emit("error", where="llm.local", error_type=type(e).__name__, message=str(e))
+                raise
+        raise RuntimeError("unreachable")
+
+
 def build_llm_client(config: Config, telemetry: Telemetry | None = None):
     provider = config.llm.provider
+    if provider == "local":
+        return LocalLLM(config, telemetry)
     if provider == "fake":
         return FakeLLM(config, telemetry)
     if provider == "openai":

@@ -48,6 +48,12 @@ _RELEVANCE_TAPER_STEP = 0.02     # relaxation per additional content token
 
 
 _ANAPHOR_RE = re.compile(r"^(?:it|its|he|his|she|her|they|their|them|this|these|those)\b", re.IGNORECASE)
+# A sentence that cannot be understood without the one before it: pronoun / demonstrative openers
+# plus "that day"-style deictic references.
+_NEEDS_CONTEXT_RE = re.compile(
+    r"^(?:(?:it|its|he|his|she|her|they|their|them|this|these|those|such)\b"
+    r"|(?:as of|on|in|at|by|since|after|before|until) (?:that|this|those|these|the same)\b"
+    r"|(?:that|the same) (?:day|year|time|month|period)\b|the (?:former|latter)\b)", re.IGNORECASE)
 
 _REFUSAL_MODEL: dict | None = None
 
@@ -133,6 +139,29 @@ class GroundedSynthesizer:
             self._prefetched[dst_query_id] = (id(dst_result), cached[1])
 
     def _gated_claim(self, query: str, result: RetrievalResult) -> Claim | None:
+        claim = self._gated_claim_core(query, result)
+        return self._with_context(claim, result) if claim is not None else None
+
+    def _with_context(self, claim: Claim, result: RetrievalResult) -> Claim:
+        """synthesis.anaphoric_context: if the chosen sentence opens with a
+        dangling reference, put the preceding sentence (same chunk, verbatim)
+        in front of it. Runs after the refusal gate, so refusals are unchanged."""
+        if not self._config.synthesis.anaphoric_context or not _NEEDS_CONTEXT_RE.match(claim.text.lstrip()):
+            return claim
+        citation = claim.citations[0] if claim.citations else None
+        for evidence in result.evidence[:self._config.synthesis.ce_evidence_chunks]:
+            if evidence.chunk.citation != citation:
+                continue
+            sentences = self._evidence_sentences(evidence)
+            if claim.text in sentences:
+                i = sentences.index(claim.text)
+                if i > 0 and sentences[i - 1] not in claim.text:
+                    return Claim(text=f"{sentences[i - 1]} {claim.text}", citations=list(claim.citations),
+                                 supported=claim.supported)
+            break
+        return claim
+
+    def _gated_claim_core(self, query: str, result: RetrievalResult) -> Claim | None:
         learned = self._config.synthesis.refusal_gate == "learned"
         # The gate's reader call does not depend on which sentence is chosen,
         # so it runs concurrently with claim selection instead of after it

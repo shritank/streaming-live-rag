@@ -32,8 +32,12 @@ env:
     description: "where cached corpus embeddings are written"
   - name: STREAMING_RAG_ORT_THREADS
     required: false
-    default: "4"
-    description: "ONNX Runtime intra-op threads for the encoder and cross-encoder"
+    default: ""
+    description: "ONNX Runtime intra-op threads for the encoder and cross-encoder (empty = automatic: all CPU cores on the CPU path)"
+  - name: STREAMING_RAG_ORT_QUANT
+    required: false
+    default: ""
+    description: "CPU path only: int8 | int8:ce | int8:reader to use dynamically quantised models (run `python -m streaming_rag.retrieval.neural --quantize` first); off by default, costs accuracy except int8:ce"
   - name: STREAMING_RAG_ASR_THREADS
     required: false
     default: "6"

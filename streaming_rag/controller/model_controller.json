@@ -1,0 +1,36 @@
+{
+ "features": [
+  "strong_anchor",
+  "topic_anchor",
+  "bigram_anchor",
+  "weak_anchor",
+  "ends_mid_thought",
+  "no_new_content",
+  "n_content",
+  "n_words",
+  "wh_opener",
+  "ends_question"
+ ],
+ "weights": [
+  0.673179,
+  0.779582,
+  0.858823,
+  1.332737,
+  -0.353244,
+  0.905012,
+  1.065148,
+  1.440227,
+  0.542955,
+  5.148515
+ ],
+ "bias": -4.417542,
+ "threshold": 0.39,
+ "label_rule": "gold sub-question content-word coverage >= 0.7",
+ "trained_on": [
+  "eval/scenarios_real_dev",
+  "eval/scenarios_heysquad_dev_clean",
+  "eval/scenarios_heysquad_dev_asr"
+ ],
+ "n_train_chunks": 2651,
+ "l2": 1.0
+}

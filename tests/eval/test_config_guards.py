@@ -10,13 +10,24 @@ from streaming_rag.build import build_components
 from streaming_rag.config import load_config
 
 
-@pytest.mark.parametrize("mode", ["model", "hybrid"])
+@pytest.mark.parametrize("mode", ["hybrid", "llm"])
 def test_unimplemented_controller_modes_are_rejected(mode):
-    """No LLM controller exists; 'model' must not quietly run the rule path."""
+    """No LLM / hybrid controller exists; such a mode must not quietly run the rule path."""
     config = load_config()
     config.controller.mode = mode
     with pytest.raises(ValueError, match="not implemented"):
         build_components(config)
+
+
+def test_model_controller_mode_really_uses_the_learned_scorer():
+    """controller.mode='model' is the learned stability classifier: it must build, and its decisions must come
+    from model_stability (not the rule scorer reported under another name)."""
+    from streaming_rag.controller import model_stability, stability
+    config = load_config()
+    config.controller.mode = "model"
+    build_components(config)                      # builds (weights file present)
+    text = "What came into force after the new constitution was herald?"
+    assert model_stability.score(text, "", False) != stability.score(text, "", False)
 
 
 def test_unknown_synthesis_mode_is_rejected():

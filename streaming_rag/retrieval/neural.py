@@ -79,14 +79,18 @@ def _session(path: str, max_len: int = 512):
     import onnxruntime as ort
 
     from ..gpu import check_ort_session, ort_use_cuda
-    opts = ort.SessionOptions()
-    opts.intra_op_num_threads = int(os.environ.get("STREAMING_RAG_ORT_THREADS", "4"))
-    opts.inter_op_num_threads = 1
+    cuda = ort_use_cuda()
     # auto (default): CUDA, mandatory whenever an NVIDIA GPU is present
     # (streaming_rag/gpu.py); cpu only as an explicit opt-out. The CPU EP stays
     # listed only for the few int64 mask/shape nodes CUDA has no kernel for;
     # the session must still bind CUDA first.
-    cuda = ort_use_cuda()
+    opts = ort.SessionOptions()
+    # CUDA keeps the measured 4. On the CPU the model calls ARE the latency, so use half the logical cores
+    # (about the physical cores), between 4 and 8, unless STREAMING_RAG_ORT_THREADS says otherwise
+    # (CPU micro-benchmark, 20-passage rerank: 823 ms at 4 threads, 550 ms at 8).
+    cpu_threads = max(4, min(8, (os.cpu_count() or 8) // 2))
+    opts.intra_op_num_threads = int(os.environ.get("STREAMING_RAG_ORT_THREADS") or ("4" if cuda else str(cpu_threads)))
+    opts.inter_op_num_threads = 1
     # Sessions per model (each its own CUDA stream). Default 1: a pool of 3
     # halves per-call latency only at >= 4 concurrent callers (micro-benchmark);
     # the real pipeline runs ~2-way and had WORSE tails with 3 (rerank p99
@@ -160,10 +164,22 @@ def _onnx_path(key: str, original: str) -> str:
     weights with ONNX Runtime's transformer fusions (Attention/SkipLayerNorm/
     BiasGelu, fp32), built by `python -m streaming_rag.retrieval.neural
     --fuse`. Far fewer kernel launches per call; answers bit-identical on 618
-    dev scenarios (docs/experiment_log.md, GPU pass). 0 = original graphs."""
+    dev scenarios (docs/experiment_log.md, GPU pass). 0 = original graphs.
+
+    On the CPU, STREAMING_RAG_ORT_QUANT=int8 (explicit opt-in) selects the dynamically int8-quantised
+    cross-encoder / reader built by `python -m streaming_rag.retrieval.neural --quantize`."""
+    from ..gpu import ort_use_cuda
+    quant = os.environ.get("STREAMING_RAG_ORT_QUANT", "")
+    if quant.startswith("int8") and not ort_use_cuda():
+        # "int8" quantises both slow models; "int8:reader" / "int8:ce" just that one
+        which = quant.split(":", 1)[1].split(",") if ":" in quant else ["ce", "reader"]
+        if key in which:
+            q = INT8_DIR / f"{key}.onnx"
+            if not q.exists():
+                raise ModelNotAvailable(f"{q} missing. Run: python -m streaming_rag.retrieval.neural --quantize")
+            return str(q)
     if os.environ.get("STREAMING_RAG_ORT_FUSED", "auto") == "0":
         return original
-    from ..gpu import ort_use_cuda
     if not ort_use_cuda():
         return original
     fused = FUSED_DIR / f"{key}.onnx"
@@ -210,6 +226,29 @@ def fuse() -> None:
         manifest[key] = entry
         print(f"{key}: {src} -> {dst} sha256 {entry['sha256'][:16]} {entry.get('staticize', '')}")
     (FUSED_DIR / "manifest.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+
+
+INT8_DIR = _CACHE_DIR / "models" / "int8"
+
+
+def quantize() -> None:
+    """Build the CPU int8 models: dynamic weight-only int8 quantisation of the cross-encoder and the SQuAD2
+    reader (the two slow models on a CPU; e5 stays fp32 so corpus embeddings are unchanged). Used only when
+    STREAMING_RAG_ORT_QUANT=int8 and no GPU is in use. Writes INT8_DIR/manifest.json with the source and result
+    hashes and sizes."""
+    import json
+
+    from onnxruntime.quantization import QuantType, quantize_dynamic
+    INT8_DIR.mkdir(parents=True, exist_ok=True)
+    manifest = {}
+    for key, src in (("ce", _resolve(MS_MARCO_MINILM_L6, MS_MARCO_MINILM_L6.onnx_file)),
+                     ("reader", str(READER_DIR / "model.onnx"))):
+        dst = INT8_DIR / f"{key}.onnx"
+        quantize_dynamic(str(src), str(dst), weight_type=QuantType.QInt8)
+        manifest[key] = {"source": str(src), "source_sha256": _sha256(str(src)), "sha256": _sha256(str(dst)),
+                         "source_bytes": Path(src).stat().st_size, "int8_bytes": dst.stat().st_size}
+        print(f"{key}: {manifest[key]['source_bytes'] / 1e6:.1f} MB -> {manifest[key]['int8_bytes'] / 1e6:.1f} MB  {dst}")
+    (INT8_DIR / "manifest.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
 
 
 def _tokenizer(path: str, max_length: int):
@@ -425,6 +464,8 @@ if __name__ == "__main__":
         fetch()
     elif "--fuse" in sys.argv:
         fuse()
+    elif "--quantize" in sys.argv:
+        quantize()
     elif "--verify" in sys.argv:
         issues = verify()
         print("\n".join(issues) if issues else "all model files verified against pinned SHA-256")

@@ -35,10 +35,10 @@ The first build downloads the models and takes several minutes; later runs reuse
 
 | | State |
 |---|---|
-| Engine, all four tasks | Complete. 359 tests pass. |
+| Engine, all four tasks | Complete. 373 tests pass. |
 | Official gates G2-G6 | All pass on the legacy, dev and diagnostic suites (audited on an RTX 6000 Ada; re-run on an RTX 4050 laptop, see "Results at a glance"). |
-| Gate G1 (`docker compose up`) | **Passed** (30 Sep - 1 Oct 2026, Docker Desktop / WSL 2): image built, `VERDICT: PASS`, exit 0. Caveat: run from the working tree, not a fresh clone. |
-| Demo video | **Uploaded** - link in `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). Script: `docs/demo_script.md`; every command in it was re-run on the RTX 4050 and matches. |
+| Gate G1 (`docker compose up`) | **Passed** (30 Sep - 1 Oct 2026, Docker Desktop / WSL 2): image built, `VERDICT: PASS`, exit 0. Re-run on 4 Oct 2026 after the default changes below: rebuilt and `VERDICT: PASS` again. Caveat: run from the working tree, not a fresh clone. |
+| Demo video | **Uploaded** - link in `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). The demo commands (`make demo`) were re-run on the RTX 4050 and match. |
 | Presentation | **Done** - `SRMIST_VirtualVanguards_Submission.pptx` (12 slides). |
 | AI disclosure form | **Done and signed** - `LangAI3.0_AI_Disclosure.docx`. |
 | Audio input | Works end to end (`tools/answer_audio.py`), optional, outside the official scope. |
@@ -51,11 +51,11 @@ directory structure.
 
 | # | Deliverable the guide asks for | File(s) | State |
 |---|---|---|---|
-| **D1** | **Reproducible repository**: source, pinned dependency lockfiles, environment template, one-command run | This whole `streaming-live-rag/` folder. One command: `docker compose up --build` (top of this README). Source: `streaming_rag/`. Lockfiles: `requirements.lock`, `requirements-cpu.lock`, `requirements-gpu.txt`, `requirements-gpu.lock`. Environment template: `.env.example`. One-command run: `docker compose up` (`Dockerfile`, `docker-compose.yml`) or the clean CLI runner `python -m eval.run_all` (this README, "Quickstart"). Manifest: `run.yaml`. Tests: `tests/`. | Code complete, 359 tests pass. Not yet committed / pushed. Gate G1 (`docker compose up`) passed (see Status). |
+| **D1** | **Reproducible repository**: source, pinned dependency lockfiles, environment template, one-command run | This whole `streaming-live-rag/` folder. One command: `docker compose up --build` (top of this README). Source: `streaming_rag/`. Lockfiles: `requirements.lock`, `requirements-cpu.lock`, `requirements-gpu.txt`, `requirements-gpu.lock`. Environment template: `.env.example`. One-command run: `docker compose up` (`Dockerfile`, `docker-compose.yml`) or the clean CLI runner `python -m eval.run_all` (this README, "Quickstart"). Manifest: `run.yaml`. Tests: `tests/`. | Code complete, 373 tests pass. Not yet committed / pushed. Gate G1 (`docker compose up`) passed (see Status). |
 | **D2** | **System architecture brief** (<= 6 pages): design rationale, retrieval trigger logic, decomposition strategy, data provenance, trade-offs, failure mitigations | `docs/architecture_brief.docx` (about 1,900 words); diagram as Mermaid code in `docs/architecture_diagram.md` | Done |
 | **D3** | **Benchmarking & evaluation report**: comparison against the baseline, >= 3 analysed edge-case failures, two architectural ablations | `final_report.docx` (authoritative): baseline vs streaming section 5.10, ablations 5.11, edge-case failures 5.12. Summary tables: `docs/benchmark_report.md`. Raw runs behind every number: `eval/results/final_audit/`; reproduction commands: `final_report.docx` section 12 and `handoff/final_audit/run_final_audit.sh` | Done |
 | **D4** | **Telemetry & observability schema**: end-to-end latencies, retrieval trigger events, answer-version updates, inference cost | `docs/telemetry_schema.md` (human-readable) and `streaming_rag/telemetry/schema.json` (machine-readable, every trace line is validated against it). Code: `streaming_rag/telemetry/` (`sinks.py`, `cost.py`, `trace.py`, `report.py`). Example traces: `eval/results/final_audit/demo/demo1_trace.jsonl`, `demo2_trace.jsonl` | Done |
-| **D5** | **System demonstration video** (<= 5 minutes) | Link to the uploaded video: `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). Script, commands and recording procedure: `docs/demo_script.md`. Reference outputs: `eval/results/final_audit/demo/` | Uploaded |
+| **D5** | **System demonstration video** (<= 5 minutes) | Link to the uploaded video: `demo_video.txt` (https://drive.google.com/drive/folders/1LhGSK8NvrYPaHOn5zm-6vZijQDnDRrjQ?usp=sharing). Commands: `make demo`. Reference outputs: `eval/results/final_audit/demo/` | Uploaded |
 | **D6** | **Presentation** (PPT or PDF) | `SRMIST_VirtualVanguards_Submission.pptx` (12 slides, Samsung PRISM template) | Done |
 | **D7** | **AI usage disclosure form** | `LangAI3.0_AI_Disclosure.docx` (signed) | Done |
 
@@ -87,11 +87,12 @@ streaming-live-rag/
 |   |-- retrieval/                 Task 1: ingestion, BM25, e5 dense (ONNX), RRF fusion, cross-encoder rerank,
 |   |                              ONNX session management, CUDA graphs, SQuAD2 reader export
 |   |-- controller/                Task 2: intent stability, decomposition, WAIT / RETRIEVE / SUPPRESS policy
+|   |                              (+ opt-in learned stability classifier, model_stability.py)
 |   |-- session/                   Task 3: session store, extractive synthesis, learned refusal gate
 |   |                              (refusal_gate.json), grounding, refinement deltas; generative/ = opt-in LLM path
 |   |-- telemetry/                 Task 4 [D4]: JSONL sink, schema.json, cost model, trace assembly, text report
 |   `-- asr/                       optional streaming Whisper front end (outside the official scope)
-|-- tests/                         [D1] 359 tests, mirroring the package: asr, contracts, controller, engine,
+|-- tests/                         [D1] 373 tests, mirroring the package: asr, contracts, controller, engine,
 |                                  eval, retrieval, session, plus test_cli.py and test_gpu.py
 |-- eval/                          evaluation harness
 |   |-- run_all.py                 the official gate runner (G2-G6)
@@ -111,7 +112,7 @@ streaming-live-rag/
 |   |-- corpus_miniwiki/           small out-of-domain check corpus
 |   |-- raw/                       downloaded SQuAD / HeySQuAD source files; build_squad_corpus.py rebuilds the corpora from them
 |-- docs/                          architecture_brief.docx [D2, Word, 3 pages], architecture_diagram.md [D2], telemetry_schema.md [D4],
-|                                  benchmark_report [D3], demo_script [D5], experiment_log, generative_synthesis, landscape_audit
+|                                  benchmark_report [D3], experiment_log, generative_synthesis, landscape_audit
 |-- reports/                       default output folder of `eval.edge_cases` / `eval.diagnose` (generated files, git-ignored); the edge-case analysis itself is in final_report.docx 5.12
 |-- handoff/                       tooling and records from the measurement passes
 |   |-- gpu_tools/                 GPU verification and benchmarks (verify_product_gpu.py, fuse_models.py ...)
@@ -120,7 +121,8 @@ streaming-live-rag/
 |   `-- final_audit/               the exact scripts that produced the final-audit results
 |-- tools/                         small standalone helpers
 |   |-- answer_audio.py            WAV file -> Whisper -> engine -> cited answer (guide-format record)
-|   `-- auto_recall_lab.py         answer-recall diagnostics
+|   |-- auto_recall_lab.py         answer-recall diagnostics
+|   `-- local_llm_server.py        OpenAI-compatible server for a locally hosted open model (`llm.provider=local`; needs torch + transformers)
 |-- generated/                     generated practice scenarios (e.g. chit-chat cases)
 |-- final_report.docx              the authoritative, audited benchmarking & evaluation report [D3] (Word, 13 pages)
 |-- README.md                      this file [D1, run instructions]
@@ -165,7 +167,7 @@ python -m venv .venv-local
 python -m pip install -r requirements-gpu.txt
 python -m streaming_rag.retrieval.neural --fetch  :: pinned model revisions, SHA-256 verified
 set STREAMING_RAG_ORT_PROVIDER=cuda               :: PowerShell: $env:STREAMING_RAG_ORT_PROVIDER = "cuda"
-pytest tests -q                                   :: expect: 359 passed
+pytest tests -q                                   :: expect: 373 passed
 ```
 
 Notes:
@@ -228,7 +230,7 @@ python -m streaming_rag.cli replay eval/scenarios/dev_002_late_detail.json --cor
 python -m streaming_rag.telemetry.report trace.jsonl                                       # per-turn timeline: decisions, retrievals, versions, latency, cost
 python -m streaming_rag.cli evidence "cancellation policy pune" --corpus-dir fixtures/dev_corpus   # BM25 / dense ranks + cross-encoder score
 python -m streaming_rag.cli live                     # type or paste text; chunked at speaking speed
-make demo                                            # the <= 5 minute demonstration, docs/demo_script.md (without make: run its commands)
+make demo                                            # the <= 5 minute demonstration (without make: run the commands of the `demo` target in the Makefile)
 
 # official procedure on the GPU: real-time replay, 3 reps, median, gates G1-G6 (make eval-gpu)
 python -m eval.run_all --scenarios eval/scenarios_real_dev --corpus-dir data/corpus --time-scale 1 --reps 3
@@ -311,14 +313,16 @@ streaming_rag/
   contracts.py          shared dataclasses/protocols - the only coupling surface (task brief section 6.1; the briefs are kept outside this repository)
   config.py             every tunable + ablation switch
   gpu.py                GPU selection: CUDA mandatory when an NVIDIA GPU is present, no silent CPU fallback
-  llm.py                async LLMClient: fake (offline, default) | openai | gemini (never used on the default path)
+  llm.py                async LLMClient: fake (offline, default) | openai | gemini | local (any OpenAI-compatible local server;
+                        never used on the default path)
   mocks.py              deterministic mock Controller/Retriever/Synthesizer, with fault injection
   engine.py             Controller -> Retriever -> Synthesizer on one asyncio loop; speculative retrieval, telemetry
   build.py              component factory (real vs mock), used by the CLI and the eval harness alike
   cli.py                `replay` / `live` / `evidence`
   retrieval/            ingest (format-driven), BM25, e5-small-v2 dense (ONNX), RRF fusion, cross-encoder rerank,
                         neural.py (ONNX sessions, warm-up, CUDA graphs), graph_static.py (exact static-shape rewrite)
-  controller/           intent-stability scoring, decomposition, WAIT/RETRIEVE/SUPPRESS policy, preview_final()
+  controller/           intent-stability scoring, decomposition, WAIT/RETRIEVE/SUPPRESS policy, preview_final();
+                        model_stability.py + model_controller.json = the opt-in learned stability classifier
   session/              ephemeral session store, extractive synthesis, refusal gate, grounding, refinement delta engine
                         (session/generative/ = opt-in LLM synthesis, disabled by default, unmeasured)
   telemetry/            JSONL sink, schema, cost model, trace assembler, text dashboard
@@ -359,19 +363,19 @@ G1 (`docker compose up`) **passed** on 30 Sep - 1 Oct 2026 (Docker Desktop, WSL 
 tree rather than a fresh clone; a documented CLI clean-room substitute also passed - see `final_report.docx` sections 0.7 and 5.15.
 
 **Reproduced on a second machine** (RTX 4050 Laptop, 6 GB, 30 Sep 2026): the legacy synthetic suite at 8x gives
-G2-G6 all 100% (47 scenarios, fabricated=0, schema errors=0), **PASS**; the 359 tests pass in ~24-28 s; and the
+G2-G6 all 100% (47 scenarios, fabricated=0, schema errors=0), **PASS**; the test suite passes in ~24-28 s (359 tests then; 373 now); and the
 HeySQuAD DIAG typed set (219 answerable + 219 unanswerable) reproduces the audited row below **exactly**
 (answer recall 168/219 = 76.7%, claim precision 184/258 = 71.3%, abstention 152/219 = 69.4%). The demo
-commands in `docs/demo_script.md` return the same answers, citations and versions.
+commands (`make demo`) return the same answers, citations and versions.
 
 **Answer quality** (gold-referenced, 95 % Wilson intervals; the text sets have only 5 unanswerable questions, the
 HeySQuAD sets ~50 %):
 
 | Set | Answer recall | Citation recall | Claim precision | Abstention | Exact decomp. | Over-split |
 |---|---|---|---|---|---|---|
-| Text DEV (102 Q) | 65.7% [56.1%, 74.2%] | 72.5% [63.2%, 80.3%] | 87.4% [78.8%, 92.8%] | 100.0% [56.6%, 100.0%] | 100.0% [83.9%, 100.0%] | 0.0% [0.0%, 9.9%] |
+| Text DEV (102 Q) | 66.7% [57.1%, 75.1%] | 72.5% [63.2%, 80.3%] | 87.4% [78.8%, 92.8%] | 100.0% [56.6%, 100.0%] | 100.0% [83.9%, 100.0%] | 0.0% [0.0%, 9.9%] |
 | Text DIAG (98 Q) | 78.6% [69.5%, 85.5%] | 84.7% [76.3%, 90.5%] | 94.3% [87.4%, 97.5%] | 100.0% [56.6%, 100.0%] | 100.0% [83.9%, 100.0%] | 0.0% [0.0%, 9.9%] |
-| HeySQuAD DEV typed (279 answerable + 279 unanswerable) | 71.7% [66.1%, 76.6%] | 76.7% [71.4%, 81.3%] | 71.6% [66.3%, 76.3%] | 70.3% [64.6%, 75.3%] | n/a | 0.4% [0.1%, 1.3%] |
+| HeySQuAD DEV typed (279 answerable + 279 unanswerable) | 72.0% [66.5%, 77.0%] | 76.7% [71.4%, 81.3%] | 71.6% [66.3%, 76.3%] | 70.3% [64.6%, 75.3%] | n/a | 0.4% [0.1%, 1.3%] |
 | HeySQuAD DIAG typed (219 + 219) | 76.7% [70.7%, 81.8%] | 83.6% [78.1%, 87.9%] | 71.3% [65.5%, 76.5%] | 69.4% [63.0%, 75.1%] | n/a | 1.4% [0.6%, 3.0%] |
 
 **Latency, real time, GPU only, nothing excluded** (ms; the DEV replay, 90 turns; DIAG in `final_report.docx`
@@ -390,6 +394,23 @@ reranking / claim selection (tens to hundreds of ms, hidden behind the user's sp
 on the 75 paired turns; streaming and deferred give identical answers (`final_report.docx` section 5.10).
 
 
+**Post-audit improvements and switches** (3-4 Oct 2026; GPU numbers on the RTX 4050, CPU on its host CPU; every row below was
+measured with the runs described in `docs/experiment_log.md`, entry SP2):
+
+| Item | Default | Effect (DEV / DIAG, paired 95 % intervals) |
+|---|---|---|
+| `synthesis.anaphoric_context` | **on** | Answer sentences that open with a dangling reference ("It...", "This...") fall from 9.7 / 10.5 % (text) and 12.4 / 6.2 % (HeySQuAD) to 4.4 / 4.4 % and 4.6 / 0.4 %. Answer recall Text DEV +1.0 pt [0.0, +3.1], HeySQuAD DEV +0.3 pt; Text DIAG and HeySQuAD DIAG unchanged. Prepends the previous sentence of the same chunk (verbatim corpus text, after the refusal gate). |
+| `controller.mode=model` | off | Learned stability classifier. Answer recall +0.0 to +0.3 pt, abstention +0.9 to +1.1 pt on HeySQuAD, fewer searches; early retrieval 99.2 % / 99.5 % on HeySQuAD (was 100 %). Not adopted: the 100 % early-retrieval gate is worth more than the gain. |
+| ONNX Runtime threads, CPU path | **automatic** (was 4) | Lossless (bit-identical answers on every set). Real-time CPU post-speech p99 165.5 ms -> 1.4 ms (4 of 90 turns over 5 ms -> 0); retrieval per sub-query p50 506 -> 269 ms. |
+| `STREAMING_RAG_ORT_QUANT=int8:ce` | off | CPU only. Cross-encoder int8: retrieval per sub-query p50 193 ms (-28 %), answer recall within noise on Text DEV and HeySQuAD DIAG and -1.0 pt on Text DIAG (not significant). |
+| `STREAMING_RAG_ORT_QUANT=int8` / `int8:reader` | off | CPU only. Costs answer recall: reader-only -3.9 pts on Text DEV [-8.2, -0.9], both models -1.4 to -3.1 pts. Not recommended. |
+| `llm.provider=local` + generative synthesis | off | Wired (OpenAI-compatible local server, `tools/local_llm_server.py`) but **not measured**: the open-model download was abandoned, so generative mode still has no gold-referenced result. |
+
+Company-style documents (the 47 hand-written and generated scenarios on `fixtures/dev_corpus`): G2-G6 all 100 %, 0 fabricated claims,
+9/9 correct abstentions, over-split 7.4 %; the expected document is cited on 46/49 = 93.9 % and the expected section on 42/49 = 85.7 %
+(one hand-written scenario, `dev_001_multi_intent`, is excluded from that count because its gold labels name documents for a different city).
+Anaphora and the learned controller leave all of these identical.
+
 ## Known weaknesses (stated plainly)
 
 - **Answer recall has a ceiling** set by two stages: the refusal gate withholding a correct claim (11 of 35
@@ -404,13 +425,16 @@ on the 75 paired turns; streaming and deferred give identical answers (`final_re
   (`final_report.docx` section 5.15).
 - **The cost-accuracy check against a real provider** (5 live calls within 2 %, Task 4 section 4.3) was not run:
   no API key, and the default pipeline makes no LLM call.
-- **`controller.mode=model` (rule vs LLM controller) is not implemented**, so that ablation was not run
-  (`eval.ablate` says so); it would need an LLM key.
+- **The controller ablation is rule vs a learned stability classifier, not vs an LLM.** `controller.mode=model` is a logistic
+  model fitted on DEV (`python -m eval.train_model_controller`); an LLM-driven controller (`hybrid`/`llm`) is still not implemented.
+  The learned controller is off by default: it matches the rules on answer recall (+0.0 to +0.3 pts) and abstention (+0.9 to +1.1 pts),
+  and issues fewer searches, but early retrieval falls from 100 % to 99.2 % (HeySQuAD DEV) and 99.5 % (HeySQuAD DIAG).
 - The refusal gate uses a SQuAD2-trained reader on SQuAD-derived corpora (in-domain question style): its
   measured benefit is probably optimistic (`final_report.docx` section 10).
 - The generative synthesis path (`session/generative/`) is wired and tested for structure but has no
   gold-referenced measurement; it is disabled by default.
-- The sealed-test numbers predate the later code changes (GPU layer, speculation, controller fixes); they
+- The sealed-test numbers predate the later code changes (GPU layer, speculation, controller fixes, and the
+  `synthesis.anaphoric_context` default flipped on 4 Oct 2026, worth +0 to +1.0 pts of answer recall on DEV/DIAG); they
   were deliberately not re-run.
 - Latency is sensitive to the machine's power plan (CPU wake-up after idle); see `final_report.docx`.
 
@@ -433,9 +457,8 @@ These need something the machines used so far did not have; nothing below is cla
    `python handoff/final_audit/netcheck.py`).
 2. **Python 3.10 and 3.12**: `pip install -r requirements.lock && pip check && python -c "import streaming_rag"`
    (only 3.11 has been available).
-3. **Check the demo video against the repository**: the video (link in `demo_video.txt`) was made from `docs/demo_script.md`, whose
-   narration names the RTX 6000 Ada and quotes that machine's latencies; if the video says the same, it should say it was
-   recorded from audited figures, or quote the RTX 4050 figures instead (`final_report.docx` section 0.4).
+3. **Check the demo video against the repository**: the video (link in `demo_video.txt`) may name the RTX 6000 Ada and quote that
+   machine's latencies; if it does, it should say it was recorded from audited figures, or quote the RTX 4050 figures instead (`final_report.docx` section 0.4).
 4. **Optional - cost accuracy**: with a provider key in `.env`, run `synthesis.mode=generative` on 5 calls and compare the
    summed `cost_usd` with the provider's usage (Task 4 section 4.3).
 5. **Decision - the refusal-gate default**: it costs answer recall when few questions are unanswerable and is worth it

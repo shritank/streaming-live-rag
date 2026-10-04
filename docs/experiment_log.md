@@ -737,7 +737,7 @@ was not installed on the workstation). Sealed test2 was not read, run or tuned o
 * **Fresh install and reproduction.** A new virtual environment from `requirements-gpu.txt` (the copies of `.venv` /
   `.venv-gpu` that came with the folder point at another user's profile and do not run). Pinned models re-fetched and
   SHA-256 verified; `pytest` 359 passed (23.7-28.0 s); legacy gate suite PASS; HeySQuAD DIAG typed reproduced the audited row
-  exactly (76.7 % / 71.3 % / 69.4 %); every command of `docs/demo_script.md` returned the recorded answers.
+  exactly (76.7 % / 71.3 % / 69.4 %); every demo command (`make demo`) returned the recorded answers.
 * **Audio front end re-measured** (100 dev + 100 diag HeySQuAD clips, hypothesis events kept): Whisper `small.en` beats
   `base.en` on DEV citation recall (+5.0), claim precision (+3.3) and over-split (-7.0), significant; DIAG same direction, not
   significant. On 40 clips, clean text 67.5 %, `base.en` 52.5 %, dataset ASR text 37.5 %. The eight clean-vs-audio losses were
@@ -764,3 +764,20 @@ was not installed on the workstation). Sealed test2 was not read, run or tuned o
   disclosure `LangAI3.0_AI_Disclosure.docx`. `final_report.docx` was condensed from 108 KB to 48 KB (every audited number kept);
   `context.md` was deleted. On 1 Oct 2026 the report and `docs/architecture_brief.docx` were converted from Markdown to Word
   (report 13 pages; brief 3 pages, limit 6) and every reference in the project was updated from `.md` to `.docx`.
+
+## SP2 - Post-audit improvements (3-4 Oct 2026) [DEV decides, DIAG confirms; sealed untouched; RTX 4050 + CPU]
+
+Five low/medium-effort items, each behind a switch, each measured on Text DEV / DIAG and HeySQuAD DEV / DIAG typed (paired bootstrap against the
+unchanged baseline; run files kept in the working notes, not in `eval/results/`). Sealed `test2` was not used.
+
+| # | Item | Result | Decision |
+|---|---|---|---|
+| 1 | `synthesis.anaphoric_context`: prepend the previous same-chunk sentence when the chosen claim opens with a pronoun / deictic reference | Dangling starts 9.7 / 10.5 / 12.4 / 6.2 % -> 4.4 / 4.4 / 4.6 / 0.4 %; answer recall 65.7 -> 66.7 (Text DEV, CI 0.0 to +3.1), 71.7 -> 72.0 (HeySQuAD DEV), DIAG unchanged | **Adopted, default on** |
+| 2 | `controller.mode=model`: logistic stability classifier fitted on DEV (`eval/train_model_controller.py`) vs the hand-weighted rules | Answer recall +0.0 to +0.3, abstention +0.9 to +1.1 (HeySQuAD), fewer searches; early retrieval 99.2 % / 99.5 % (was 100 %) | Not adopted; kept as an option |
+| 3 | CPU path: automatic ORT threads; int8 (both / reader / cross-encoder) | Threads: lossless, real-time post-speech p99 165.5 -> 1.4 ms, retrieval p50 506 -> 269 ms. int8 both: answer recall -1.4 to -3.1 pts; reader only -3.9 (Text DEV, significant); cross-encoder only within noise (-1.0 on Text DIAG, n.s.), retrieval p50 193 ms | Threads adopted (default); int8 opt-in only |
+| 4 | Company-style documents (47 scenarios, `fixtures/dev_corpus`) | G2-G6 100 %, fabricated 0, abstention 9/9, over-split 7.4 %; expected document cited 46/49 = 93.9 %, section 42/49 = 85.7 % (`dev_001` excluded: its gold names documents for another city). Identical with items 1-2 on | Evidence only |
+| 5 | Generative synthesis with a local open model (`llm.provider=local`, `tools/local_llm_server.py`) | **Not measured**: the Qwen2.5-1.5B download failed repeatedly on this connection and was cancelled by decision | Code wired and unit-tested only |
+
+Combined (items 1 + 2 on) vs baseline: answer recall 65.7 -> 66.7, 78.6 -> 78.6, 71.7 -> 72.4, 76.7 -> 76.7; no interval excludes zero. Shipped default (item 1 only):
+65.7 -> 66.7, 78.6 -> 78.6, 71.7 -> 72.0, 76.7 -> 76.7; gates G2-G6 100 %; 373 tests pass; `docker compose up --build` rebuilt and printed `VERDICT: PASS`.
+Reproducibility fix found on the way: an empty `STREAMING_RAG_ORT_THREADS=` crashed `int("")`; empty now means automatic.

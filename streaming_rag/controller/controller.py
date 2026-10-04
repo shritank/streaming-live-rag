@@ -26,7 +26,7 @@ from ..contracts import (
     Telemetry, NullTelemetry, TranscriptChunk, TurnKind,
 )
 from ..retrieval.text import STOPWORDS, content_tokens, jaccard
-from . import stability
+from . import model_stability, stability
 from .decompose import decompose
 
 _WORD_RE = re.compile(r"[a-z0-9']+")
@@ -171,9 +171,15 @@ class RetrievalController:
 
         known_terms = self._corpus_vocab() if self._corpus_vocab is not None else None
         low_df_bigrams = self._corpus_bigrams() if self._corpus_bigrams is not None else None
-        confidence = stability.score(utterance, previous, chunk.is_final, known_terms, low_df_bigrams)
-        threshold = (self._config.controller.min_stability if chunk.is_final
-                      else self._config.controller.provisional_stability)
+        if self._config.controller.mode == "model":
+            confidence = model_stability.score(utterance, previous, chunk.is_final, known_terms, low_df_bigrams)
+            partial_threshold = self._config.controller.model_threshold
+            if partial_threshold is None:
+                partial_threshold = model_stability.load_model()["threshold"]
+        else:
+            confidence = stability.score(utterance, previous, chunk.is_final, known_terms, low_df_bigrams)
+            partial_threshold = self._config.controller.provisional_stability
+        threshold = self._config.controller.min_stability if chunk.is_final else partial_threshold
         if confidence < threshold:
             return ControllerDecision(Decision.WAIT, turn_kind, "intent_unstable", confidence)
 

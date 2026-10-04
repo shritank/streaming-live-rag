@@ -16,11 +16,13 @@ from .session.synthesis import GroundedSynthesizer
 
 def build_real_components(config: Config, telemetry: Telemetry | None = None,
                            session_store: SessionStore | None = None):
-    if config.controller.mode != "rule":
-        # Only the rule-based controller exists. Accepting "model" here would
-        # quietly run the rule path, so a rule-vs-model ablation would report
-        # rule numbers twice under two names.
-        raise ValueError(f"controller.mode={config.controller.mode!r} is not implemented; only 'rule' exists")
+    if config.controller.mode not in ("rule", "model"):
+        # "rule" and "model" (the learned stability classifier) exist; "hybrid" / LLM modes do not. Accepting an
+        # unknown mode here would quietly run the rule path and report rule numbers under another name.
+        raise ValueError(f"controller.mode={config.controller.mode!r} is not implemented; use 'rule' or 'model'")
+    if config.controller.mode == "model":
+        from .controller import model_stability
+        model_stability.load_model()          # fail now, not mid-utterance, if the weights file is missing
     telemetry = telemetry or NullTelemetry()
     session_store = session_store or SessionStore()
     llm = build_llm_client(config, telemetry)

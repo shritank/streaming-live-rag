@@ -349,3 +349,40 @@ async def test_two_sub_queries_selecting_the_same_sentence_yield_one_claim():
                                     [q1, q2], [_result("q1", CHUNKS[1]), _result("q2", CHUNKS[1])])
     assert len(answer.claims) == 1
     assert answer.citations == ["Doc_01 §2"]
+
+
+# ---------- synthesis.anaphoric_context: dangling-reference sentences get their predecessor ----------
+async def _context_setup(flag: bool):
+    synth, store, retriever = await _synth()
+    synth._config.synthesis.anaphoric_context = flag
+    chunk = Chunk(chunk_id="Doc_09 §1 #1", doc_id="Doc_09", section="1",
+                  text="The company was founded in Pune in 1802. It is now based in Mumbai. The venue holds 200 people.")
+    return synth, chunk, _result("q1", chunk)
+
+
+async def test_anaphoric_context_is_on_by_default_and_can_be_switched_off():
+    from streaming_rag.config import SynthesisConfig
+    assert SynthesisConfig().anaphoric_context is True
+    synth, chunk, result = await _context_setup(False)
+    claim = Claim(text="It is now based in Mumbai.", citations=[chunk.citation])
+    assert synth._with_context(claim, result).text == "It is now based in Mumbai."
+
+
+async def test_anaphoric_context_prepends_the_previous_sentence():
+    synth, chunk, result = await _context_setup(True)
+    claim = Claim(text="It is now based in Mumbai.", citations=[chunk.citation])
+    out = synth._with_context(claim, result)
+    assert out.text == "The company was founded in Pune in 1802. It is now based in Mumbai."
+    assert out.citations == [chunk.citation]          # same source, nothing invented
+
+
+async def test_anaphoric_context_leaves_standalone_and_first_sentences_alone():
+    synth, chunk, result = await _context_setup(True)
+    standalone = Claim(text="The venue holds 200 people.", citations=[chunk.citation])
+    assert synth._with_context(standalone, result).text == "The venue holds 200 people."
+    first = Claim(text="The company was founded in Pune in 1802.", citations=[chunk.citation])
+    assert synth._with_context(first, result).text == first.text
+    # a dangling sentence with nothing before it in the chunk cannot be repaired, and must not crash
+    lone = Chunk(chunk_id="Doc_09 §2 #1", doc_id="Doc_09", section="2", text="It is now based in Mumbai.")
+    lone_claim = Claim(text="It is now based in Mumbai.", citations=[lone.citation])
+    assert synth._with_context(lone_claim, _result("q2", lone)).text == "It is now based in Mumbai."
